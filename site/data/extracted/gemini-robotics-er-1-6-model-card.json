@@ -1,0 +1,216 @@
+{
+ "id": "gemini-robotics-er-1-6-model-card",
+ "provider": "gemini",
+ "model": "Gemini Robotics-ER 1.6",
+ "release_date": "2026-04-20",
+ "doc_type": "model_card",
+ "length_pages": 4,
+ "summary": "Short model card for Gemini Robotics-ER 1.6, an embodied-reasoning VLM based on Gemini 3.0 Flash. Defers all evaluation results to figures in an external release post; the ethics section states qualitative compliance with safety policies on adversarial spatial reasoning and improved physical-safety constraint adherence.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Adversarial spatial reasoning tasks (safety policy compliance)"
+   ],
+   "metrics": [],
+   "finding": "Qualitative claim of compliance with Gemini safety policies; results only in external release post.",
+   "quote": "Gemini Robotics-ER 1.6 demonstrates compliance with Gemini safety policies on adversarial spatial reasoning tasks",
+   "page": 4
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Physical safety constraint adherence",
+    "Hazard identification in human-centric scenarios"
+   ],
+   "metrics": [],
+   "finding": "Physical safety: improved adherence to physical safety constraints and tested hazard identification; no numbers in card.",
+   "quote": "we tested how well the model identifies safety hazards in human-centric scenarios.",
+   "page": 4
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "No FSF mention. Acceptable-use excludes safety-critical settings (healthcare, transportation). All numeric results are in an external release post (Figures 1-3)."
+}

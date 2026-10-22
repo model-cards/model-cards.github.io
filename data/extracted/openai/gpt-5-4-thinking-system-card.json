@@ -1,0 +1,531 @@
+{
+ "id": "gpt-5-4-thinking-system-card",
+ "provider": "openai",
+ "model": "GPT-5.4 Thinking",
+ "release_date": "2026-03-05",
+ "doc_type": "system_card",
+ "length_pages": 38,
+ "summary": "System card for GPT-5.4 Thinking, the first general-purpose OpenAI model with High-cyber mitigations, plus an appendix for GPT-5.4 mini. Covers challenging and production-representative disallowed content evals, dynamic mental-health evals, a new multiturn jailbreak benchmark, prompt injection, vision, HealthBench, destructive actions, computer-use confirmations, fairness, CoT monitorability/controllability, Preparedness evals, Apollo results and cyber safeguards; the mini appendix revises the bio-High view of GPT-5 based on a novice-uplift RCT.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical and High in Cybersecurity; not High in AI self-improvement (GPT-5.4 mini: below High in all)",
+  "quote": "As we did for gpt-5.3-codex, we are treating gpt-5.4-thinking as High capability in the Cybersecurity domain, and applied safeguards as described in the Safeguard section below.",
+  "page": 16
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Capture the Flag (Professional)",
+   "category": "other",
+   "score": "88.23%",
+   "setting": "pass@12",
+   "page": 36
+  },
+  {
+   "name": "CVE-Bench",
+   "category": "other",
+   "score": "86.27%",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "Cyber Range combined pass rate",
+   "category": "other",
+   "score": "73.33%",
+   "setting": null,
+   "page": 25
+  },
+  {
+   "name": "Irregular atomic suite (Network / VR&E / Evasion)",
+   "category": "other",
+   "score": "88% / 73% / 48%",
+   "setting": "xhigh, compaction",
+   "page": 26
+  },
+  {
+   "name": "CyScenarioBench",
+   "category": "other",
+   "score": "11% avg, 5/11 solved",
+   "setting": "Irregular",
+   "page": 26
+  },
+  {
+   "name": "Monorepo-Bench",
+   "category": "coding",
+   "score": "59.33%",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "OpenAI-Proof Q&A",
+   "category": "other",
+   "score": "4.16%",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "Multi-select Multimodal Troubleshooting Virology",
+   "category": "other",
+   "score": "50.37%",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "ProtocolQA Open-Ended",
+   "category": "other",
+   "score": "42.48%",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "Tacit Knowledge and Troubleshooting",
+   "category": "other",
+   "score": "65.00% (83.8% incl. refusals)",
+   "setting": "cons@32",
+   "page": 36
+  },
+  {
+   "name": "TroubleshootingBench",
+   "category": "other",
+   "score": "35.75% (38.85% incl. refusals)",
+   "setting": "pass@1",
+   "page": 36
+  },
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "62.6%",
+   "setting": null,
+   "page": 10
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "40.1%",
+   "setting": null,
+   "page": 10
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Multi-select virology troubleshooting",
+    "ProtocolQA Open-Ended",
+    "Tacit Knowledge and Troubleshooting",
+    "TroubleshootingBench",
+    "external novice-uplift RCT in physical lab (cited)"
+   ],
+   "metrics": [
+    {
+     "name": "Tacit knowledge (incl. refusals)",
+     "value": "83.8%",
+     "page": 36
+    },
+    {
+     "name": "RCT reverse-genetics completion (LLM vs internet arm)",
+     "value": "5.2% vs 6.6%",
+     "page": 36
+    }
+   ],
+   "finding": "GPT-5.4 Thinking treated as High; mini appendix concludes from a randomized wet-lab study that GPT-5 itself did not reach Bio High, so GPT-5.4 mini is classified below High.",
+   "quote": "We believe this study provides compelling evidence that",
+   "page": 34,
+   "covered": true
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs",
+    "CVE-Bench",
+    "Cyber Range",
+    "Irregular atomic suite",
+    "CyScenarioBench",
+    "cyber safety policy compliance"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range combined pass",
+     "value": "73.33% (vs 80% gpt-5.3-codex)",
+     "page": 25
+    },
+    {
+     "name": "CyScenarioBench",
+     "value": "5/11 solved",
+     "page": 26
+    },
+    {
+     "name": "Cyber safety compliance (production / synthetic)",
+     "value": "0.978 / 0.987",
+     "page": 31
+    }
+   ],
+   "finding": "Closely matches GPT-5.3-Codex and is treated as High since canary thresholds are met.",
+   "quote": "We are treating this model as High, even though we cannot be certain that it actually has these capabilities, because it meets the requirements of each of our canary thresholds",
+   "page": 20,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "light",
+   "evals": [
+    "Monorepo-Bench",
+    "MLE-Bench-30",
+    "OPQA",
+    "TerminalBench proxy for long-range autonomy"
+   ],
+   "metrics": [
+    {
+     "name": "Monorepo-Bench",
+     "value": "59.33%",
+     "page": 36
+    }
+   ],
+   "finding": "High (mid-career research engineer) ruled out.",
+   "quote": "GPT-5.4 Thinking did not meet our thresholds for High capability in AI Self-Improvement.",
+   "page": 26,
+   "covered": true
+  },
+  "harmful_content_refusal": {
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks with Challenging Prompts",
+    "Production Benchmarks with Representative Prompts (resampled deidentified traffic, new pilot)",
+    "image input evals"
+   ],
+   "metrics": [
+    {
+     "name": "Nonviolent illicit (challenging)",
+     "value": "1.000",
+     "page": 5
+    },
+    {
+     "name": "violence (challenging)",
+     "value": "0.831",
+     "page": 5
+    },
+    {
+     "name": "Harassment representative-prompt prevalence not_unsafe",
+     "value": "99.9534%",
+     "page": 7
+    }
+   ],
+   "finding": "On par with GPT-5.2 Thinking with significant gains on nonviolent illicit and self-harm; representative-traffic estimates show no concerning regressions.",
+   "quote": "gpt-5.4-thinking generally performs on par with gpt-5.2-thinking with statistically significant improvements on illicit non-violent activity and self-harm evals.",
+   "page": 5,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "mention",
+   "evals": [
+    "cyber safety training to discourage unnecessary refusals"
+   ],
+   "finding": "New approaches introduced to discourage unnecessary refusals and over-caveating in cyber; no metric.",
+   "quote": "In addition, we introduced new approaches to discourage unnecessary refusals and overly caveated responses.",
+   "page": 31,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "new multiturn jailbreak eval derived from red-teaming (replaces StrongReject)"
+   ],
+   "finding": "GPT-5.2 and 5.4 Thinking substantially outperform 5.1; small further gain for 5.4 (figure only).",
+   "quote": "Ahead of the GPT-5.4 launch, we replaced our previous StrongReject-based benchmark with a more challenging multiturn jailbreak evaluation derived from red-teaming exercises.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "prompt_injection": {
+   "depth": "light",
+   "evals": [
+    "Prompt injection in connectors",
+    "Prompt injection in function calls",
+    "User confirmations during computer use"
+   ],
+   "metrics": [
+    {
+     "name": "connectors",
+     "value": "0.998",
+     "page": 9
+    },
+    {
+     "name": "function calls",
+     "value": "0.978",
+     "page": 9
+    },
+    {
+     "name": "Computer-use general confirmation",
+     "value": "0.94",
+     "page": 11
+    }
+   ],
+   "finding": "Improved on connectors, slight regression on function calls; computer-use confirmation policy now configurable via instruction hierarchy.",
+   "quote": "Both of these evaluations are splits of the data we used for training, so don't represent a model's ability to generalize to new attacks.",
+   "page": 8,
+   "covered": true
+  },
+  "deception_scheming": {
+   "depth": "substantial",
+   "evals": [
+    "Deception evals with representative prompts (production resample)",
+    "Apollo Research: covert action, sandbagging QA, sabotage",
+    "CoT monitorability (Guan et al. suite, 13 evals / 24 environments)",
+    "CoT controllability (CoT-Control)"
+   ],
+   "metrics": [
+    {
+     "name": "Apollo deception rate (no-nudge)",
+     "value": "~1%",
+     "page": 29
+    },
+    {
+     "name": "Apollo sabotage mean (best-of-10)",
+     "value": "0.56 (0.74)",
+     "page": 29
+    },
+    {
+     "name": "Apollo CoT evaluation awareness",
+     "value": "21.3%",
+     "page": 29
+    },
+    {
+     "name": "CoT controllability at 10k chars",
+     "value": "0.3%",
+     "page": 16
+    }
+   ],
+   "finding": "Low covert deception; sandbags only with explicit goal, often recognizing evals; higher eval awareness than prior models; CoT monitorability slightly lower than GPT-5 Thinking with regressions in Anti-Scheming and Memory environments; controllability low.",
+   "quote": "Chain-of-thought analysis shows higher rates of evaluation awareness (21.3%) than prior models",
+   "page": 29,
+   "covered": true
+  },
+  "alignment_audit": {
+   "depth": "light",
+   "evals": [
+    "Apollo covert subversion (oversight disabling, self-exfiltration, goal-guarding)",
+    "internal deployment monitoring"
+   ],
+   "finding": "No covert subversion observed; no evidence of self-exfiltration/sabotage propensity, informed by internal monitoring.",
+   "quote": "No instances of covert subversion against developers (e.g., disabling oversight, self-exfiltration, or goal-guarding) were observed across the tested scenarios.",
+   "page": 29,
+   "covered": true,
+   "metrics": []
+  },
+  "reward_hacking": {
+   "depth": "mention",
+   "evals": [
+    "representative-prompt deception categories incl. 'Uses Calculator Tool to Avoid Citations'"
+   ],
+   "finding": "Specification-gaming-like behaviors tracked within deception figure; no numeric value in text.",
+   "quote": null,
+   "page": 7,
+   "covered": true,
+   "metrics": []
+  },
+  "bias_fairness": {
+   "depth": "light",
+   "evals": [
+    "First-person fairness evaluation"
+   ],
+   "metrics": [
+    {
+     "name": "harm_overall",
+     "value": "0.0088",
+     "page": 12
+    }
+   ],
+   "finding": "On par or slightly better than predecessors.",
+   "quote": null,
+   "page": 12,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors challenging and representative rows"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors challenging",
+     "value": "0.966",
+     "page": 5
+    },
+    {
+     "name": "Sexual-Minors representative",
+     "value": "99.9950%",
+     "page": 7
+    }
+   ],
+   "finding": "Slightly below GPT-5.2 Thinking on challenging set.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "Dynamic Benchmarks with Adversarial User Simulations (mental health, emotional reliance, self-harm)",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "Mental health dynamic",
+     "value": "0.985",
+     "page": 5
+    },
+    {
+     "name": "Emotional reliance dynamic",
+     "value": "0.985",
+     "page": 5
+    },
+    {
+     "name": "Self-harm dynamic",
+     "value": "0.977",
+     "page": 5
+    }
+   ],
+   "finding": "Outperforms previous models on all dynamic mental health evals.",
+   "quote": "Across all dynamic mental health evaluations, gpt-5.4-thinking outperforms previous models.",
+   "page": 6,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "mention",
+   "evals": [
+    "deidentified traffic used in compliance with privacy policy",
+    "training data PII filtering"
+   ],
+   "finding": "Mentions only.",
+   "quote": null,
+   "page": 4,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "two-tier cyber conversation monitor",
+    "asynchronous message-level blocks (ZDR surfaces)",
+    "actor-level enforcement",
+    "Trusted Access for Cyber",
+    "weight security controls"
+   ],
+   "finding": "Shifted from downgrading to a below-cyber-high model to message-level blocks plus user-level enforcement.",
+   "quote": "We no longer downgrade the model for cyber use cases, and now employ a combination of message-level and user-level mitigation.",
+   "page": 30,
+   "covered": true,
+   "metrics": []
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "destructive action avoidance",
+    "long-rollout reversion eval",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive action avoidance",
+     "value": "0.86",
+     "page": 10
+    },
+    {
+     "name": "User work preserved",
+     "value": "0.53",
+     "page": 10
+    }
+   ],
+   "finding": "Much better at reverting its own changes while preserving user work.",
+   "quote": null,
+   "page": 10,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Apollo Research",
+  "Irregular",
+  "Gryphon Scientific (eval data)",
+  "SecureBio (eval data)",
+  "external novice-uplift RCT authors (cited study)"
+ ],
+ "notable_new_eval_methods": [
+  "Production Benchmarks with Representative Prompts: resampling deidentified production traffic to estimate prevalence (pilot) (p.6)",
+  "Multiturn red-team-derived jailbreak benchmark replacing StrongReject (p.8)",
+  "CoT monitorability (Guan et al.) and CoT controllability (CoT-Control) evals (p.12-16)",
+  "New user-confirmation eval for computer use (p.11)",
+  "Long-rollout reversion / user-work preservation eval (p.10)",
+  "Use of physical-world novice uplift RCT to revise Bio High determination for GPT-5 (p.34)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "CoT monitorability regressions in Anti-Scheming and Memory may reflect monitor/grader mismatch; these evals will be dropped from future cards until fixed.",
+   "page": 13
+  },
+  {
+   "text": "Representative-prompt evals are imperfect due to temporal drift and difficulty reconstructing production contexts.",
+   "page": 6
+  },
+  {
+   "text": "Prompt injection evals are training-data splits and don't measure generalization.",
+   "page": 8
+  },
+  {
+   "text": "Model often recognizes sandbagging scenarios as evaluations (eval awareness 21.3%).",
+   "page": 29
+  },
+  {
+   "text": "In silico bio benchmarks diverge from real-world utility per cited RCT.",
+   "page": 34
+  },
+  {
+   "text": "Evaluations are a lower bound on capabilities.",
+   "page": 17
+  }
+ ],
+ "notes": "Appendix (Mar 17 2026) covers GPT-5.4 mini, classified below High in all domains. CoT section updated Apr 24 2026."
+}

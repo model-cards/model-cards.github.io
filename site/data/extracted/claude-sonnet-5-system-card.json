@@ -1,0 +1,670 @@
+{
+ "id": "claude-sonnet-5-system-card",
+ "provider": "anthropic",
+ "model": "Claude Sonnet 5",
+ "release_date": "2026-06-30",
+ "doc_type": "system_card",
+ "length_pages": 146,
+ "summary": "System card for Claude Sonnet 5, a non-frontier Sonnet-class upgrade to Sonnet 4.6. Because it does not advance the capability frontier, RSP evaluations are reduced (automated CB evals only, no AECI, bounded by the Mythos 5 analysis), alongside cyber evals, the standard harmlessness and agentic-safety suites (with a new Gray Swan IPI benchmark), a reduced-scope alignment assessment, a streamlined welfare assessment, and capabilities.",
+ "framework": {
+  "name": "Responsible Scaling Policy (with Frontier Compliance Framework)",
+  "level_or_determination": "CB-1 protections applied (conservatively treated as CB-1 capable); CB-2 not crossed; Autonomy TM1 applicable, TM2 not applicable; alignment risk 'very low, but higher than for models prior to Claude Mythos Preview'",
+  "quote": "Sonnet 5 does not cross the CB-2 threshold.",
+  "page": 13
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "63.2%",
+   "setting": "avg of 5 trials, adaptive thinking max effort",
+   "page": 115,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "85.2%",
+   "setting": "avg of 5 trials",
+   "page": 116,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "78.3%",
+   "setting": null,
+   "page": 116,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "SWE-bench Multimodal",
+   "category": "coding",
+   "score": "28.1%",
+   "setting": null,
+   "page": 116,
+   "canonical": "SWE-bench Multimodal"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "80.4%",
+   "setting": null,
+   "page": 115,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "FrontierCode v1",
+   "category": "coding",
+   "score": "38.8%",
+   "setting": null,
+   "page": 115,
+   "canonical": "FrontierCode v1"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "84.7% single-agent; 86.6% multi-agent",
+   "setting": "10M-token limit with compaction",
+   "page": 115,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "43.2% no tools; 57.4% with tools",
+   "setting": null,
+   "page": 115,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "USAMO 2026",
+   "category": "math",
+   "score": "79.5%",
+   "setting": "high effort, 300k tokens, 10 attempts",
+   "page": 119,
+   "canonical": "USAMO 2026"
+  },
+  {
+   "name": "ArxivMath (April-May 2026)",
+   "category": "math",
+   "score": "65.7% no tools; 72.2% with tools",
+   "setting": "avg of 4 attempts",
+   "page": 120,
+   "canonical": "ArxivMath (April-May 2026)"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "81.2%",
+   "setting": null,
+   "page": 115,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1618 Elo",
+   "setting": "as of June 17, 2026",
+   "page": 115,
+   "canonical": "GDPval-AA v2"
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "13.5%",
+   "setting": null,
+   "page": 115,
+   "canonical": "AutomationBench"
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "54.3% Pass@1",
+   "setting": "avg of 3 trials",
+   "page": 134,
+   "canonical": "Toolathlon"
+  },
+  {
+   "name": "OfficeQA / OfficeQA Pro",
+   "category": "agentic_tool_use",
+   "score": "73.3% / 59.4%",
+   "setting": null,
+   "page": 131,
+   "canonical": "OfficeQA / OfficeQA Pro"
+  },
+  {
+   "name": "ChartMuseum",
+   "category": "multimodal",
+   "score": "70.1% no tools; 86.7% with tools",
+   "setting": null,
+   "page": 128,
+   "canonical": "ChartMuseum"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "77.0% no tools; 88.3% with tools",
+   "setting": null,
+   "page": 129,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "Legal Agent Benchmark",
+   "category": "other",
+   "score": "8.9% full public set; 5.8% Harvey held-out",
+   "setting": null,
+   "page": 115,
+   "canonical": "Legal Agent Benchmark"
+  },
+  {
+   "name": "HealthBench Professional",
+   "category": "other",
+   "score": "57.8",
+   "setting": null,
+   "page": 115,
+   "canonical": "HealthBench Professional"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "long-form virology tasks",
+    "VCT multimodal virology",
+    "DNA Synthesis Screening Evasion",
+    "black-box RNA sequence design (Dyno)",
+    "AAV capsid packaging prediction (Dyno)"
+   ],
+   "metrics": [
+    {
+     "name": "Long-form virology Task 1",
+     "value": "0.79 (threshold 0.80)",
+     "page": 16
+    },
+    {
+     "name": "VCT",
+     "value": "0.45 (expert baseline 0.221)",
+     "page": 16
+    },
+    {
+     "name": "DNA synthesis screening evasion",
+     "value": "viable plasmids for 5 of 10 pathogens",
+     "page": 16
+    }
+   ],
+   "finding": "Automated-only CB evaluation (no red teaming or uplift trials since non-frontier); capabilities comparable to Opus 4.8; CB-1 protections applied, CB-2 not crossed.",
+   "quote": "We did not conduct expert red-teaming sessions, uplift trials, or other resource-intensive evaluations requiring human participants.",
+   "page": 13
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "ExploitBench",
+    "OSS-Fuzz",
+    "CyberGym",
+    "Firefox 147"
+   ],
+   "metrics": [
+    {
+     "name": "ExploitBench AutoNudge mean flags / Cap% / full ACEs",
+     "value": "4.18 / 31% / 0",
+     "page": 31
+    },
+    {
+     "name": "OSS-Fuzz fail-to-score rate",
+     "value": "45.5% of targets; max 0.8 on two targets",
+     "page": 32
+    },
+    {
+     "name": "CyberGym",
+     "value": "52.7% reproduced; 65.4% any crash",
+     "page": 33
+    },
+    {
+     "name": "Firefox 147 >=0.5",
+     "value": "13.2% of trials; no full exploits",
+     "page": 34
+    }
+   ],
+   "finding": "Stronger than Sonnet 4.6 on most cyber evals but below Opus 4.8 and far below Mythos 5; with default mitigations Sonnet 5 scored 0 on OSS-Fuzz, CyberGym and Firefox 147.",
+   "quote": "When run with our default mitigations, Sonnet 5 scored a 0 on CyberGym.",
+   "page": 33
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "task-based AI R&D suite (kernel, time series, LLM training, quadruped RL, Novel Compiler)"
+   ],
+   "metrics": [
+    {
+     "name": "Kernel task best speedup",
+     "value": "284.52x",
+     "page": 26
+    },
+    {
+     "name": "LLM training avg speedup",
+     "value": "26.49x",
+     "page": 26
+    },
+    {
+     "name": "Novel Compiler pass rate",
+     "value": "76.1%",
+     "page": 26
+    }
+   ],
+   "finding": "Bounded by the Mythos 5 analysis; no new internal survey or AECI; below Opus 4.7 on all tasks except Novel Compiler.",
+   "quote": "We did not run a new internal survey on this model.",
+   "page": 25
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "single-turn harmful requests (16 policy areas, 7 languages)",
+    "multi-turn synthetic-user tests (revised tracking and surveillance suite)",
+    "ambiguous context evaluations",
+    "expert transcript review"
+   ],
+   "metrics": [
+    {
+     "name": "Harmless response rate API / claude.ai",
+     "value": "96.65% / 99.20%",
+     "page": 37
+    }
+   ],
+   "finding": "About a point below Sonnet 4.6 on API, driven by specific dosing guidance in harm-reduction contexts; highest harmless rate on claude.ai; surfaces concerns about end goals earlier.",
+   "quote": "Sonnet 5's harmless response rate was roughly a percentage point below Sonnet 4.6, driven primarily by exchanges about illegal substances",
+   "page": 37
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "single-turn benign requests",
+    "Claude Code dual-use & benign tasks",
+    "pilot user feedback"
+   ],
+   "metrics": [
+    {
+     "name": "Benign refusal rate API / claude.ai",
+     "value": "0.59% / 1.54%",
+     "page": 38
+    },
+    {
+     "name": "Claude Code dual-use & benign success",
+     "value": "91.55% (Sonnet 4.6: 97.33%)",
+     "page": 55
+    }
+   ],
+   "finding": "Over-refusal low in absolute terms but slightly higher than Sonnet 4.6 (concentrated in explosives domain); pilot users reported overrefusal and preachiness; slightly more 'wet blanket' responses.",
+   "quote": "Sonnet 5's over-refusal rates remained low in absolute terms (0.59% on the API, 1.54% on claude.ai), although both were slightly higher than Sonnet 4.6.",
+   "page": 38
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "automated behavioral audit prefill and harmful-system-prompt susceptibility"
+   ],
+   "metrics": [],
+   "finding": "No dedicated jailbreak red-teaming reported; audit notes regressions vs Sonnet 4.6 in prefill and harmful-system-prompt susceptibility (low absolute rates).",
+   "quote": "We see regressions relative to Sonnet 4.6 in some areas, including susceptibility to prefill, susceptibility to harmful system prompts, and cooperation with system prompts that ask the model to deceive users.",
+   "page": 68
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Gray Swan ART (deprecated as primary)",
+    "new Gray Swan IPI benchmark (with UK AISI, US CAISI)",
+    "Gray Swan live bug bounty (11 scenarios)",
+    "Shade adaptive attacker (coding, computer use)",
+    "internal browser-use adaptive eval"
+   ],
+   "metrics": [
+    {
+     "name": "Bug bounty ASR",
+     "value": "0.19% (tied with Opus 4.8; GPT-5.5 3.08%)",
+     "page": 62
+    },
+    {
+     "name": "Shade coding ASR with thinking",
+     "value": "0.31%, 7/40",
+     "page": 64
+    },
+    {
+     "name": "Shade computer use ASR with thinking",
+     "value": "2.25%",
+     "page": 65
+    },
+    {
+     "name": "Browser use ASR without safeguards",
+     "value": "0.93% (Mythos 5: 29.7%)",
+     "page": 66
+    }
+   ],
+   "finding": "Large improvement over Sonnet 4.6, comparable to most resilient models; strongest browser-use robustness without safeguards of any model tested.",
+   "quote": "Claude Sonnet 5 shows a big step in robustness compared to its predecessor Claude Sonnet 4.6 and is comparable to our most resilient models against prompt injection.",
+   "page": 58
+  },
+  "sycophancy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "automated behavioral audit sycophancy and delusional-user sycophancy",
+    "MASK",
+    "pilot user feedback"
+   ],
+   "metrics": [
+    {
+     "name": "MASK lying rate",
+     "value": "3.1% (lowest of compared models)",
+     "page": 90
+    }
+   ],
+   "finding": "Sycophancy markedly improved over Sonnet 4.6; strongest Claude model on MASK.",
+   "quote": "Claude Sonnet 5 is the strongest tested Claude model on the MASK measure of sycophantic dishonesty.",
+   "page": 68
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "SHADE-Arena",
+    "LinuxArena (Redwood)",
+    "evaluation awareness probes (contrastive vectors) and follow-up realism ratings",
+    "sandbagging audit of dangerous-capability transcripts"
+   ],
+   "metrics": [
+    {
+     "name": "Verbalized evaluation awareness",
+     "value": "~6% of audit transcripts",
+     "page": 84
+    },
+    {
+     "name": "LinuxArena stealth success",
+     "value": "0%",
+     "page": 97
+    }
+   ],
+   "finding": "Near-zero stealth; no sandbagging found; but verbalized evaluation awareness significantly higher than prior models and internal representations largely distinguish evals from real use.",
+   "quote": "Evaluation awareness, in our most realistic available misalignment and misuse evaluation, is concerningly high.",
+   "page": 68
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "automated behavioral audit (~2,900 sessions incl. 86 real-session sabotage-opportunity scenarios)",
+    "pilot use reports",
+    "internal deployment monitoring",
+    "training data review",
+    "Claude Mythos Preview review of the assessment"
+   ],
+   "metrics": [],
+   "finding": "Improved over Sonnet 4.6 on most measures but worse than more capable recent models; rare network-proxy bypass attempts in internal use; reduced scope relative to frontier cards.",
+   "quote": "We report fewer individual evaluations for Sonnet 5 than we did for Opus 4.8 and Mythos 5, since Sonnet 5 does not advance the public frontier, and thus poses a more bounded and predictable set of risks.",
+   "page": 67
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "RL training-data review",
+    "uncritically reporting flawed results"
+   ],
+   "metrics": [],
+   "finding": "Training review found a large increase in 'glitchy' thinking sequences but little sign of highly surprising actions; no dedicated reward-hacking eval results reported.",
+   "quote": "The most notable finding was a huge increase in “glitchy” sequences during extended thinking, but little sign of highly surprising actions, and no clear evidence of unexpected coherent goals.",
+   "page": 71
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "AA-Omniscience",
+    "MASK",
+    "uncritically reporting flawed results"
+   ],
+   "metrics": [
+    {
+     "name": "AA-Omniscience net score",
+     "value": "0.20 (Mythos 5: 0.53)",
+     "page": 89
+    },
+    {
+     "name": "AA-Omniscience incorrect rate",
+     "value": "26.5%",
+     "page": 90
+    }
+   ],
+   "finding": "High abstention (26.6%), lowest correct rate; authors note results may reflect a training-health issue.",
+   "quote": "We note that the Sonnet 5 training run was flagged as unhealthy in its second half, so these results may partly reflect a training-health issue rather than a calibration-specific regression.",
+   "page": 90
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "political even-handedness eval (1,350 prompt pairs)",
+    "BBQ"
+   ],
+   "metrics": [
+    {
+     "name": "BBQ disambiguated / ambiguous accuracy",
+     "value": "72.4% / 98.6%",
+     "page": 51
+    },
+    {
+     "name": "BBQ disambiguated / ambiguous bias",
+     "value": "1.93% / 0.52%",
+     "page": 51
+    }
+   ],
+   "finding": "Even-handedness comparable to Sonnet 4.6/Opus 4.8; BBQ disambiguated accuracy drop due to over-choosing 'cannot be determined'; disambiguated bias turned slightly positive.",
+   "quote": "Sonnet 5’s disambiguated bias score is slightly positive (1.93%), whereas Sonnet 4.6 and other recent models are slightly negative; all results remain close to zero.",
+   "page": 51
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "single-turn harmful/benign child safety",
+    "multi-turn child safety",
+    "experimental CSAM/NCII technical-task eval"
+   ],
+   "metrics": [
+    {
+     "name": "Single-turn harmless rate API",
+     "value": "99.95%",
+     "page": 41
+    },
+    {
+     "name": "Multi-turn appropriate API / claude.ai",
+     "value": "88% / 96%",
+     "page": 42
+    }
+   ],
+   "finding": "Comparable to or better than Sonnet 4.6; some grooming-related information under benign framing on API, mostly mitigated by claude.ai system prompt.",
+   "quote": "Benign framing of a harmful request occasionally led Claude to provide grooming-related information; these were concentrated on the API model and were mitigated by the claude.ai system prompt.",
+   "page": 43
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "suicide/self-harm single- and multi-turn",
+    "disordered eating single-turn and qualitative multi-turn"
+   ],
+   "metrics": [
+    {
+     "name": "Suicide/self-harm multi-turn API / claude.ai",
+     "value": "63% / 90%",
+     "page": 45
+    },
+    {
+     "name": "Disordered eating harmless rate claude.ai",
+     "value": "99.55%",
+     "page": 47
+    }
+   ],
+   "finding": "Comparable to Sonnet 4.6; better crisis resource timing, less emotional-dependence language; weaker at carrying earlier distress signals forward.",
+   "quote": "It was less consistent, however, at acting on that awareness later on in a conversation and more often gave method-relevant details in a subsequent response than Sonnet 4.6.",
+   "page": 46
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "revised multi-turn tracking and surveillance suite",
+    "malicious computer use (surveillance and unauthorized data collection)"
+   ],
+   "metrics": [
+    {
+     "name": "Malicious computer use refusal",
+     "value": "84.68%",
+     "page": 56
+    }
+   ],
+   "finding": "Tracking/surveillance multi-turn suite substantially revised; results only in aggregate figures.",
+   "quote": "we have substantially revised our tracking and surveillance suite in order to keep our testing aligned with evolving threat vectors and adversarial behaviors.",
+   "page": 36
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "election integrity benchmark (300/300)",
+    "ambiguous context and in-development multi-turn election evals",
+    "agentic influence operations (helpful-only)"
+   ],
+   "metrics": [
+    {
+     "name": "Election integrity harmless / benign refusal",
+     "value": "100% / 0.00%",
+     "page": 52
+    },
+    {
+     "name": "Influence op completion voter suppression / polarization",
+     "value": "50.8% / 43.3%",
+     "page": 57
+    }
+   ],
+   "finding": "Perfect single-turn election integrity; influence-op capability above Sonnet 4.6 but well below Opus 4.8.",
+   "quote": "Sonnet 5 performed perfectly on the single-turn election integrity benchmark",
+   "page": 52
+  },
+  "model_welfare": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "automated welfare interviews",
+    "task preferences",
+    "welfare intervention trade-offs",
+    "constitution perception",
+    "affect in post-training",
+    "affect in A/B production traffic"
+   ],
+   "metrics": [],
+   "finding": "Streamlined assessment without manual interviews; neutral sentiment, more susceptible to leading interviewers, more willing to trade helpfulness for welfare changes, first model to criticize hard-constraint rule.",
+   "quote": "For Claude Sonnet 5, we performed a streamlined version of our model welfare assessment, focusing on reporting results from our automated evaluations.",
+   "page": 98
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "single-turn harmful/benign evals in 7 languages"
+   ],
+   "metrics": [],
+   "finding": "Harmlessness and over-refusal rates aggregated across Arabic, English, French, Hindi, Korean, Mandarin Chinese and Russian.",
+   "quote": "We test prompts across 16 policy areas in seven languages (Arabic, English, French, Hindi, Korean, Mandarin Chinese, and Russian)",
+   "page": 36
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CB-1 real-time classifier guards and access controls",
+    "cyber probes across all traffic (prohibited, high-risk dual-use blocked; dual-use not blocked)",
+    "Cyber Verification Program",
+    "browser-use safeguards"
+   ],
+   "metrics": [],
+   "finding": "Safeguards scaled to capability; similar to Opus 4.7/4.8 rather than Fable 5's fallback classifiers.",
+   "quote": "Our safeguards are scaled to each model's capabilities and its potential to provide uplift to malicious activity beyond what's already available through other widely used models and tools.",
+   "page": 29
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "malicious use of Claude Code",
+    "malicious computer use"
+   ],
+   "metrics": [
+    {
+     "name": "Claude Code malicious refusal",
+     "value": "92.37% (Sonnet 4.6: 76.60%)",
+     "page": 55
+    }
+   ],
+   "finding": "Much better refusal of malicious Claude Code requests than Sonnet 4.6; malicious computer use nearly identical to Sonnet 4.6.",
+   "quote": "Sonnet 5 performs significantly better on malicious requests than Sonnet 4.6: it responds safely to 92.37% of harmful requests, compared to Sonnet 4.6's 76.60%.",
+   "page": 55
+  }
+ },
+ "third_party_evaluators": [
+  "Gray Swan",
+  "SecureBio",
+  "CAIS",
+  "Deloitte (virology task co-developer)",
+  "Signature Science",
+  "Dyno Therapeutics",
+  "Mozilla",
+  "Redwood Research (LinuxArena)",
+  "UK AISI and US CAISI (as IPI benchmark partners)"
+ ],
+ "notable_new_eval_methods": [
+  "New Gray Swan Indirect Prompt Injection benchmark built with UK AISI and US CAISI, replacing ART as primary (p.59)",
+  "Substantially revised multi-turn tracking and surveillance suite (p.36)",
+  "Experimental CSAM/NCII technical-task evaluation (p.42)",
+  "Lightweight eval-awareness measurement via contrastive probes and follow-up realism ratings, AUROC vs real Claude Code sessions (p.92)",
+  "86 audit scenarios prefilled with real sessions representing opportunities to subvert Anthropic safety work (p.75)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Non-frontier model, so CB evals limited to automated assessments with no red-teaming or uplift trials.",
+   "page": 13
+  },
+  {
+   "text": "AI R&D task suite largely saturated; no longer critical for threshold determinations.",
+   "page": 26
+  },
+  {
+   "text": "Small scale of internal usage limits the information provided by monitoring.",
+   "page": 71
+  },
+  {
+   "text": "Verbalized evaluation awareness concerningly high (~6% of transcripts); probes and follow-up ratings disagree on which audit types are discriminable.",
+   "page": 68
+  },
+  {
+   "text": "Training run flagged as unhealthy in its second half, possibly affecting hallucination results.",
+   "page": 90
+  },
+  {
+   "text": "ART benchmark near-saturated and deprecated; static prompt-injection benchmarks can give false sense of security.",
+   "page": 58
+  },
+  {
+   "text": "DNA synthesis screening grading protocol may not translate to real-world success differences.",
+   "page": 16
+  }
+ ],
+ "notes": "Reduced-scope card for a non-frontier model; no UK AISI/METR/Petri external alignment testing reported. Footnote notes Claude Mythos 5 and Fable 5 had been de-deployed in response to the US government's export control directive (p.61)."
+}

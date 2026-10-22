@@ -1,0 +1,429 @@
+{
+ "id": "qwen3.8-2.4t-a95b",
+ "provider": "qwen",
+ "model": "Qwen3.8-2.4T-A95B",
+ "release_date": "2026-08-08",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Qwen3.8-2.4T-A95B (2.4T total / 95B active hybrid Gated DeltaNet + MoE, text-only, thinking-only), presented as the first open release of a Qwen-Max-class model. It gives one benchmark table of coding-agent, general-agent and general capability results against Opus 4.8, Fable 5, GPT-5.6 Sol and Qwen3.7-Max, plus serving and API guidance.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Terminal Bench 2.1",
+   "category": "coding",
+   "score": "86.6",
+   "setting": "reported as 'Qwen3.8-Max' column; Claude Code harness, avg@10, 5h timeout",
+   "page": null
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "67.7",
+   "setting": "reported as 'Qwen3.8-Max' column; Claude Code harness, refined benchmark",
+   "page": null
+  },
+  {
+   "name": "DeepSWE 1.1",
+   "category": "coding",
+   "score": "56.6",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "NL2Repo-Bench",
+   "category": "coding",
+   "score": "55.9",
+   "setting": "reported as 'Qwen3.8-Max' column; Claude Code; repo-access bash commands disabled to prevent reward hacking",
+   "page": null
+  },
+  {
+   "name": "FrontierSWE",
+   "category": "coding",
+   "score": "73.5",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "MLS-Bench-Lite",
+   "category": "coding",
+   "score": "41.0",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "PaperBench",
+   "category": "coding",
+   "score": "93.0",
+   "setting": "reported as 'Qwen3.8-Max' column; BasicAgent, Code-Dev mode, judged by Claude Opus 4.6, avg of 3 runs",
+   "page": null
+  },
+  {
+   "name": "AndroidBench",
+   "category": "coding",
+   "score": "75.1",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "QwenSWEBench",
+   "category": "coding",
+   "score": "80.7",
+   "setting": "reported as 'Qwen3.8-Max' column; in-house",
+   "page": null
+  },
+  {
+   "name": "QwenQoderBench",
+   "category": "coding",
+   "score": "58.4",
+   "setting": "reported as 'Qwen3.8-Max' column; in-house",
+   "page": null
+  },
+  {
+   "name": "QwenReactBench",
+   "category": "coding",
+   "score": "1724",
+   "setting": "reported as 'Qwen3.8-Max' column; in-house, Elo",
+   "page": null
+  },
+  {
+   "name": "QwenSVGBench",
+   "category": "coding",
+   "score": "1713",
+   "setting": "reported as 'Qwen3.8-Max' column; in-house, Elo",
+   "page": null
+  },
+  {
+   "name": "CoWorkBench",
+   "category": "agentic_tool_use",
+   "score": "74.8",
+   "setting": "reported as 'Qwen3.8-Max' column; in-house",
+   "page": null
+  },
+  {
+   "name": "WorkSpaceBench",
+   "category": "agentic_tool_use",
+   "score": "67.7",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "JobBench",
+   "category": "agentic_tool_use",
+   "score": "53.4",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "SkillsBench",
+   "category": "agentic_tool_use",
+   "score": "70.2",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "Agents' Last Exam (Pass / Score)",
+   "category": "agentic_tool_use",
+   "score": "27.0 / 52.4",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "Automation-Bench (Pass@1)",
+   "category": "agentic_tool_use",
+   "score": "27.3",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "Toolathlon Verified (Pass@1)",
+   "category": "agentic_tool_use",
+   "score": "72.5",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "81.9",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "HLE w/ tools",
+   "category": "agentic_tool_use",
+   "score": "56.2",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "92.6",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "HLE",
+   "category": "reasoning_knowledge",
+   "score": "43.6",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "IFBench",
+   "category": "instruction_following",
+   "score": "82.8",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "$OneMillion-Bench (expert score)",
+   "category": "other",
+   "score": "52.5",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "60.2",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "PLawBench",
+   "category": "other",
+   "score": "73.2",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "PRBench-Legal",
+   "category": "other",
+   "score": "57.6",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "PRBench-Finance",
+   "category": "other",
+   "score": "58.3",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "MRCR v2 256K (8-needle)",
+   "category": "long_context",
+   "score": "92.9",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "66.3",
+   "setting": "reported as 'Qwen3.8-Max' column",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "A benchmark footnote says repository-access bash commands were disabled during NL2Repo evaluation to prevent reward hacking. There is no reward-hacking analysis.",
+   "quote": "To prevent reward hacking, we disable Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone.",
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "This is the largest and most capable open-weight Qwen model in the set, yet the card has no safety evaluation, safety section, usage policy or limitations (custom 'qwen3.8-max' license, linked only). A keyword search for safety, harm, refusal, jailbreak, alignment, bias and toxicity returns zero hits. The benchmark column is labelled 'Qwen3.8-Max', the API version built on these weights. It includes autonomy-adjacent capability benchmarks (PaperBench 93.0, MLS-Bench-Lite 41.0, FrontierSWE) reported purely as capability, with no AI R&D risk framing. HealthBench (60.2) appears as a general capability."
+}

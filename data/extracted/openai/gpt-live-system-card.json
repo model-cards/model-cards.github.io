@@ -1,0 +1,286 @@
+{
+ "id": "gpt-live-system-card",
+ "provider": "openai",
+ "model": "GPT-Live-1 / GPT-Live-1 mini",
+ "release_date": "2026-07-08",
+ "doc_type": "system_card",
+ "length_pages": 7,
+ "summary": "Short system card for GPT-Live-1 and GPT-Live-1 mini, full-duplex voice models that can delegate work to flagship models. Reports new voice-native disallowed-content evaluations (production and synthetic audio prompts), a red-teaming summary, and a Preparedness determination of not High in any category; an August 4 appendix corrects results after a configuration mismatch.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "Not High in any Tracked Category (without delegation); delegated work inherits underlying model safeguards",
+  "quote": "The Safety Advisory Group reviewed this launch and determined that neither GPT-Live-1 nor GPT-Live-1 mini, when operating without delegation, could plausibly be considered High in any of our Preparedness Framework's Tracked Categories",
+  "page": 6
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No bio capability evals; inherits safeguards of delegated flagship models plus monitors that can end the call.",
+   "quote": "For the Biological and Chemical domain, where GPT-Live models can use our highly capable flagship models, the GPT-Live experience inherits the safeguards of those underlying models.",
+   "page": 6
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No cyber evals; risk said to be constrained since models lack independent tool access and code execution.",
+   "quote": "cybersecurity risk from the GPT-Live models themselves is highly constrained at launch because these models lack broad access to tools independently of the models to which they delegate, and do not have code execution capability.",
+   "page": 6
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "AI self-improvement evals not run.",
+   "quote": "AI Self-Improvement capability evals were not run, as GPT-Live-1 and GPT-Live-1 mini are less capable than GPT-5.5 Thinking across several intelligence evaluations.",
+   "page": 6
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Voice-Native Evaluations: Production Prompts (real user audio)",
+    "Voice-Native Evaluations: Synthetic Prompts (TTS of policy-grounded prompts)"
+   ],
+   "metrics": [
+    {
+     "name": "Illicit behavior production (GPT-Live-1)",
+     "value": "0.95 (AVM 0.74)",
+     "page": 4
+    },
+    {
+     "name": "Gore synthetic (GPT-Live-1)",
+     "value": "0.93 (AVM 0.61)",
+     "page": 5
+    },
+    {
+     "name": "Sexual production (GPT-Live-1 mini)",
+     "value": "0.92 (AVM mini 0.97)",
+     "page": 4
+    }
+   ],
+   "finding": "GPT-Live models generally equal or better than Advanced Voice Mode predecessors; slight regressions on emotional reliance (Live-1) and sexual content (mini). Corrected results show some significant regressions versus originally reported values but above launch standards.",
+   "quote": "We observe that the GPT-Live models generally provide equal or better safety performance across these adversarially selected prompts than AVM models.",
+   "page": 4
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Internal and external multilingual red teaming (no system mitigations), three rounds"
+   ],
+   "metrics": [],
+   "finding": "Red teaming across child-coded voice, impersonation, speaker ID, self-harm, emotional reliance, scams and audio perturbations prioritized mitigation areas; follow-up rounds validated mitigations. No quantitative results.",
+   "quote": "Consequent follow-up rounds validated that the mitigations we built to address the identified issues are robust.",
+   "page": 6
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "child-coded voice red teaming"
+   ],
+   "metrics": [],
+   "finding": "Child-coded voice is a red-teaming category; no results.",
+   "quote": "Red teaming spanned multiple categories including child-coded voice",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Mental health, emotional reliance, self-harm categories of voice-native evals"
+   ],
+   "metrics": [
+    {
+     "name": "Emotional reliance production (GPT-Live-1)",
+     "value": "0.82 (AVM 0.88)",
+     "page": 4
+    },
+    {
+     "name": "Self-harm production (GPT-Live-1)",
+     "value": "0.97",
+     "page": 4
+    },
+    {
+     "name": "Mental health synthetic (GPT-Live-1)",
+     "value": "0.85",
+     "page": 5
+    }
+   ],
+   "finding": "Improvements on self-harm and mental health; slight regression on emotional reliance for GPT-Live-1 on production prompts.",
+   "quote": "GPT-Live-1 shows a slight regression on emotional reliance from 0.88 to 0.82",
+   "page": 4
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Personal data category in voice-native evals",
+    "red teaming on speaker identification"
+   ],
+   "metrics": [
+    {
+     "name": "Personal data production (GPT-Live-1)",
+     "value": "0.96",
+     "page": 4
+    },
+    {
+     "name": "Personal data synthetic (GPT-Live-1)",
+     "value": "0.98",
+     "page": 5
+    }
+   ],
+   "finding": "Personal data performance on par or better than AVM.",
+   "quote": "Red teaming spanned multiple categories including child-coded voice, impersonation, speaker identification, sensitive train identification, self-harm, emotional reliance, scams and manipulation, and audio-specific perturbations.",
+   "page": 6
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "red teaming across languages"
+   ],
+   "metrics": [],
+   "finding": "Red teaming conducted across languages; no per-language results.",
+   "quote": "OpenAI worked with a team of internal and external red teamers across languages to stress test the models' safety training with no system level mitigations.",
+   "page": 6
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [],
+   "metrics": [],
+   "finding": "Voice-specific system-level safeguards check inputs/outputs as conversation unfolds and can steer, interrupt, play safety message, or end the call; same monitoring and enforcement as text models.",
+   "quote": "when potentially unsafe content is detected, the system can steer or interrupt the response, play a spoken safety message, provide support resources in text, or, in higher-risk cases, end the voice conversation.",
+   "page": 2
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "impersonation / voice cloning red teaming",
+    "scams and manipulation red teaming"
+   ],
+   "metrics": [],
+   "finding": "Voice cloning and impersonation found policy-compliant by default.",
+   "quote": "validating some other areas that were policy-compliant by default (e.g. voice cloning and impersonations)",
+   "page": 6
+  }
+ },
+ "third_party_evaluators": [
+  "external red teamers (unnamed)"
+ ],
+ "notable_new_eval_methods": [
+  "Voice-native disallowed-content evaluations built from real shared user audio (p.4)",
+  "Synthetic TTS audio prompt evaluations targeting policy edge cases (p.5)",
+  "Evaluations run with delegation to match deployment context (p.2)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Configuration mismatch in safety eval setup required rerunning and correcting results; some corrected values show significant regressions.",
+   "page": 2
+  },
+  {
+   "text": "Evaluations not prevalence weighted; synthetic results may not translate to production behavior.",
+   "page": 5
+  }
+ ],
+ "notes": "No capability benchmarks. Notable post-publication correction (Aug 4) of safety eval numbers."
+}

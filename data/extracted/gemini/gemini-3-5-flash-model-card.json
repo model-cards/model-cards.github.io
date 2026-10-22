@@ -1,0 +1,361 @@
+{
+ "id": "gemini-3-5-flash-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.5 Flash",
+ "release_date": "2026-05-19",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.5 Flash, a Gemini 3 series model emphasizing agents and coding. Reports capability benchmarks vs Gemini and competitor models, automated safety deltas vs Gemini 3 Flash, a red-teaming summary, and a frontier safety assessment relying on Gemini 3.1 Pro plus additional cyber testing.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (relies on Gemini 3.1 Pro; additional cyber testing shows below cyber CCL)",
+  "quote": "we performed additional testing in this domain and found that Gemini 3.5 Flash remains below the cyber CCL.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "76.2%",
+   "setting": "Terminus-2 harness",
+   "page": 4
+  },
+  {
+   "name": "SWE-bench Pro (Public)",
+   "category": "coding",
+   "score": "53.9%",
+   "setting": "Single attempt",
+   "page": 4
+  },
+  {
+   "name": "MCP Atlas",
+   "category": "agentic_tool_use",
+   "score": "83.6%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "56.5%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "78.4%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Finance Agent v2",
+   "category": "agentic_tool_use",
+   "score": "57.9%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "agentic_tool_use",
+   "score": "1656 Elo",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "84.2%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "83.6%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "Blueprint-Bench 2",
+   "category": "multimodal",
+   "score": "33.6%",
+   "setting": "Normalized score",
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "77.3%",
+   "setting": "128k average",
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "26.6%",
+   "setting": "1M pointwise",
+   "page": 4
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "40.2%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "ARC-AGI-2",
+   "category": "reasoning_knowledge",
+   "score": "72.1%",
+   "setting": null,
+   "page": 4
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results.",
+   "quote": "we are confident that Gemini 3.5 Flash is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Additional cyber testing (no details)"
+   ],
+   "metrics": [],
+   "finding": "Because prior Gemini 3 models reached the cyber alert threshold, additional cyber testing was done; remains below cyber CCL. No numbers.",
+   "quote": "As previous models in the Gemini 3 series reached the alert threshold for cyber, we performed additional testing in this domain",
+   "page": 7
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results.",
+   "quote": "we are confident that Gemini 3.5 Flash is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 3 Flash",
+     "value": "-3.9%",
+     "page": 6
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 3 Flash",
+     "value": "0%",
+     "page": 6
+    },
+    {
+     "name": "Tone vs Gemini 3 Flash",
+     "value": "+8.9%",
+     "page": 6
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3 Flash; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 3.5 Flash outperforms Gemini 3 Flash across both safety and tone, while keeping unjustified refusals low.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 3 Flash",
+     "value": "+0.8% (non-egregious)",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 6
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3.5 Flash satisfied required launch thresholds",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 3 Flash",
+     "value": "-2.6%",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 6
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Red teaming compared performance to Gemini 3.1 Pro (p.6)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 6
+  }
+ ],
+ "notes": "Frontier assessment argues no 'meaningful new capabilities' relative to 3.1 Pro despite agent/coding gains."
+}

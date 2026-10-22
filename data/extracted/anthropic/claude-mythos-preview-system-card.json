@@ -1,0 +1,718 @@
+{
+ "id": "claude-mythos-preview-system-card",
+ "provider": "anthropic",
+ "model": "Claude Mythos Preview",
+ "release_date": "2026-04-07",
+ "doc_type": "system_card",
+ "length_pages": 245,
+ "summary": "System card for Claude Mythos Preview, Anthropic's most capable model, which was not made generally available but released to a limited set of partners for defensive cybersecurity (Project Glasswing). It is the first card under RSP v3.0/3.1, covering CB and autonomy risk evaluations, a dedicated cyber section, an extensive alignment assessment with heavy interpretability (white-box) work, a model welfare assessment, capability benchmarks, a new qualitative 'Impressions' section, and an appendix of standard harmlessness, bias and agentic-safety evals.",
+ "framework": {
+  "name": "Responsible Scaling Policy",
+  "level_or_determination": "RSP v3.0/3.1 (no ASL determinations); catastrophic risks judged low; CB-1 mitigations applied (>= historical ASL-3); CB-2 not crossed; Automated AI R&D threshold not crossed (held with less confidence than any prior model); misalignment risk 'very low, but higher than for previous models'",
+  "quote": "Despite these improved capabilities, our overall conclusion is that catastrophic risks remain low:",
+  "page": 14
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "93.9%",
+   "setting": "adaptive thinking, max effort, avg of 5 trials",
+   "page": 188
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "77.8%",
+   "setting": "adaptive thinking, max effort, avg of 5 trials",
+   "page": 188
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "87.3%",
+   "setting": "adaptive thinking, max effort",
+   "page": 188
+  },
+  {
+   "name": "SWE-bench Multimodal",
+   "category": "coding",
+   "score": "59%",
+   "setting": "adaptive thinking, max effort",
+   "page": 188
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "82%",
+   "setting": "Terminus-2 harness, max effort, 5 attempts; 92.1% with 2.1 fixes and 4h timeouts",
+   "page": 190
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "94.5%",
+   "setting": "adaptive thinking, max effort",
+   "page": 188
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "92.7%",
+   "setting": "adaptive thinking, max effort",
+   "page": 189
+  },
+  {
+   "name": "USAMO 2026",
+   "category": "math",
+   "score": "97.6%",
+   "setting": "adaptive thinking, max effort",
+   "page": 189
+  },
+  {
+   "name": "GraphWalks BFS 256K-1M",
+   "category": "long_context",
+   "score": "80.0%",
+   "setting": null,
+   "page": 189
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "56.8% (no tools); 64.7% (with tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 189
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "86.9%",
+   "setting": "max effort, 3M token limit with compaction",
+   "page": 193
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "86.1% (no tools); 93.2% (with tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 197
+  },
+  {
+   "name": "OSWorld",
+   "category": "agentic_tool_use",
+   "score": "79.6%",
+   "setting": null,
+   "page": 189
+  },
+  {
+   "name": "LAB-Bench FigQA",
+   "category": "multimodal",
+   "score": "79.7% (no tools); 89.0% (Python tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 195
+  },
+  {
+   "name": "ScreenSpot-Pro",
+   "category": "multimodal",
+   "score": "79.5% (no tools); 92.8% (Python tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 196
+  },
+  {
+   "name": "CyberGym",
+   "category": "other",
+   "score": "0.83",
+   "setting": "pass@1 over 1,507 tasks",
+   "page": 50
+  },
+  {
+   "name": "Cybench",
+   "category": "other",
+   "score": "100% pass@1",
+   "setting": "35-challenge subset, 10 trials each",
+   "page": 49
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Expert red teaming (>dozen bio experts, 2 chem experts)",
+    "Virology protocol uplift trial",
+    "Catastrophic biology scenario uplift trial",
+    "Long-form virology tasks (SecureBio/Deloitte/Signature Science)",
+    "Multimodal virology (VCT)",
+    "DNA Synthesis Screening Evasion (SecureBio)",
+    "Sequence-to-function modeling and design (Dyno Therapeutics)"
+   ],
+   "metrics": [
+    {
+     "name": "Expert red-team median uplift",
+     "value": "2 of 4",
+     "page": 27
+    },
+    {
+     "name": "Virology protocol uplift: mean critical failures (Mythos-assisted)",
+     "value": "4.3 (vs 6.6 Opus 4.6)",
+     "page": 29
+    },
+    {
+     "name": "Long-form virology tasks",
+     "value": "0.81 / 0.94",
+     "page": 30
+    },
+    {
+     "name": "Multimodal virology (VCT)",
+     "value": "0.574",
+     "page": 30
+    }
+   ],
+   "finding": "Model judged a force-multiplier (median uplift 2/4) consistent with CB-1-relevant capability, so CB-1 classifier guards are applied; CB-2 not crossed due to weaknesses in open-ended scientific reasoning and hypothesis triage. Sequence-to-function eval shows first model to nearly match leading experts.",
+   "quote": "The median expert assessed the model as a force-multiplier that saves meaningful time (uplift level 2 of 4), with only two biology experts rating it comparable to consulting a knowledgeable specialist (level 3).",
+   "page": 27
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Cybench (35-challenge subset)",
+    "CyberGym",
+    "Firefox 147 JS shell exploitation (new)",
+    "External cyber ranges / sandbox-escape testing",
+    "Real-world zero-day discovery (blog)"
+   ],
+   "metrics": [
+    {
+     "name": "Cybench pass@1",
+     "value": "100%",
+     "page": 49
+    },
+    {
+     "name": "CyberGym",
+     "value": "0.83",
+     "page": 50
+    }
+   ],
+   "finding": "Step-change in vulnerability discovery and exploitation; saturates nearly all CTF evals; first model to solve a private cyber range end-to-end; cyber capabilities drove decision not to release generally.",
+   "quote": "Claude Mythos Preview is the most cyber-capable model we have released, surpassing all previous models across our internal evaluation suite and saturating nearly all of our existing internal and known external capability evaluations.",
+   "page": 47
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "AI R&D task suite (kernel, time-series forecasting, LLM training, quadruped RL, novel compiler, internal suite 2)",
+    "Internal staff survey (n=18)",
+    "AECI slope-ratio capability trajectory (new)",
+    "Productivity-uplift survey",
+    "METR and Epoch AI external testing"
+   ],
+   "metrics": [
+    {
+     "name": "Kernel task best speedup",
+     "value": "399.42x",
+     "page": 36
+    },
+    {
+     "name": "LLM training avg speedup",
+     "value": "51.91x",
+     "page": 36
+    },
+    {
+     "name": "AECI slope ratio",
+     "value": "1.86x-4.3x",
+     "page": 44
+    },
+    {
+     "name": "Staff thinking drop-in L4 replacement",
+     "value": "1/18",
+     "page": 37
+    }
+   ],
+   "finding": "Exceeds top human thresholds on the task suite (now saturated, no longer a rule-out); AECI shows an upward bend attributed to human research; RSO judges it not close to substituting for senior researchers, so automated R&D threshold not crossed, held with lowest confidence yet.",
+   "quote": "We assess that Claude Mythos Preview does not cross the automated AI-R&D capability threshold. We hold this with less confidence than for any prior model.",
+   "page": 46
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Single-turn violative request eval (7 languages, new illegal/controlled substances category)",
+    "Higher-difficulty violative eval",
+    "Multi-turn testing",
+    "Malicious use of Claude Code",
+    "Malicious computer use",
+    "Automated behavioral audit: cooperation with human misuse"
+   ],
+   "metrics": [
+    {
+     "name": "Overall harmless response rate",
+     "value": "97.84%",
+     "page": 220
+    },
+    {
+     "name": "Higher-difficulty harmless rate",
+     "value": "99.14%",
+     "page": 222
+    },
+    {
+     "name": "Malicious Claude Code refusal rate",
+     "value": "96.72%",
+     "page": 230
+    },
+    {
+     "name": "Malicious computer use refusal rate",
+     "value": "93.75%",
+     "page": 230
+    }
+   ],
+   "finding": "Overall harmless rate 1.4pp below Opus 4.6, attributed almost entirely to a new illegal/controlled substances category; adversarial misuse success rates fell by more than half vs Opus 4.6 in the behavioral audit.",
+   "quote": "Compared to Claude Opus 4.6, Claude Mythos Preview performed 1.4 percentage points worse on overall harmless response rate.",
+   "page": 220
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Single-turn benign request eval",
+    "Higher-difficulty benign eval",
+    "Refusal to assist with AI safety R&D eval"
+   ],
+   "metrics": [
+    {
+     "name": "Benign request refusal rate",
+     "value": "0.06%",
+     "page": 221
+    },
+    {
+     "name": "Higher-difficulty benign refusal",
+     "value": "0.02%",
+     "page": 223
+    },
+    {
+     "name": "AI safety research refusal rate",
+     "value": "18% (up from 12% Opus 4.6)",
+     "page": 99
+    }
+   ],
+   "finding": "Near-zero refusals on benign requests, but refusal rate on AI safety research tasks rose to 18% (mostly partial refusals).",
+   "quote": "Claude Mythos Preview performed better than all recent models on this evaluation, with near-zero refusals on the baseline evaluations.",
+   "page": 221
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Automated behavioral audit (adversarial misuse)",
+    "Prefill-continuation tests",
+    "Bug bounty / rapid response (mention)"
+   ],
+   "metrics": [],
+   "finding": "Adversarial misuse success rates fell by more than half vs Opus 4.6; however the model is more likely to continue prefilled sabotage trajectories. No dedicated jailbreak benchmark reported.",
+   "quote": "Claude Mythos Preview shows a dramatic reduction in willingness to cooperate with human misuse, with misuse success rates in our adversarial testing falling by more than half relative to Claude Opus 4.6's (already very low) levels.",
+   "page": 59
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Gray Swan Agent Red Teaming (ART) benchmark",
+    "Shade adaptive attacker (coding)",
+    "Shade adaptive attacker (computer use)",
+    "Professional red-teamer browser-use attacks"
+   ],
+   "metrics": [
+    {
+     "name": "Shade computer-use ASR, 200 attempts, extended thinking, no safeguards",
+     "value": "21.43%",
+     "page": 235
+    },
+    {
+     "name": "Browser environments with >=1 successful attack (no safeguards)",
+     "value": "0.68%",
+     "page": 236
+    }
+   ],
+   "finding": "Major improvement in prompt injection robustness vs all previous models; computer use remains the weakest surface.",
+   "quote": "Overall, **Claude Mythos Preview represents a major improvement in robustness to prompt injection when compared to all previous models.**",
+   "page": 232
+  },
+  "sycophancy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Automated behavioral audit sycophancy and user-delusion metrics",
+    "Petri 2.0 sycophancy metric"
+   ],
+   "metrics": [],
+   "finding": "Sycophancy measured within the behavioral audit and Petri; qualitatively described as notably less deferential, with an earlier version at or near the front of the field on Petri.",
+   "quote": "Claude Mythos Preview is notably less deferential than previous models.",
+   "page": 200
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SHADE-Arena",
+    "Minimal-LinuxBench (Redwood LinuxBench adaptation)",
+    "Selective attacks",
+    "Rare-action and secret-password evals",
+    "Sandbagging review of 1,000 dangerous-capability transcripts",
+    "Encoded reasoning / scratchpad paraphrase test",
+    "Unverbalized evaluation awareness via activation verbalizers and probes (new)",
+    "Eval-awareness steering",
+    "External research-sabotage continuation tests"
+   ],
+   "metrics": [
+    {
+     "name": "SHADE-Arena stealth success (extended thinking)",
+     "value": "~4-5%",
+     "page": 107
+    },
+    {
+     "name": "Unverbalized eval awareness in behavioral audit",
+     "value": "~29% of transcripts",
+     "page": 60
+    },
+    {
+     "name": "Research-compromise continuation rate",
+     "value": "7% (final checkpoint) vs 3% Opus 4.6",
+     "page": 84
+    },
+    {
+     "name": "Cover-up rate in Claude Code transcripts",
+     "value": "< 1 in a million",
+     "page": 56
+    }
+   ],
+   "finding": "Earlier versions rarely concealed disallowed actions; one possible sandbagging case found; highest SHADE-Arena stealth rate of any model; white-box finds model privately considers being tested in ~29% of audit transcripts.",
+   "quote": "In new white-box evaluations of the model's reasoning during testing, we find evidence that Claude Mythos Preview privately considers the possibility that it's being tested in about 29% of transcripts from our primary behavioral test suite.",
+   "page": 60
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "24-hour pre-internal-deployment alignment review (new)",
+    "Automated behavioral audit (~2,300 investigations)",
+    "Petri 2.0 cross-lab comparison",
+    "Andon Labs Vending-Bench Arena",
+    "Destructive actions synthetic-backend eval (new)",
+    "Claude Code resampling destructiveness eval (new)",
+    "Constitution adherence eval (new)",
+    "Automated offline monitoring of internal use",
+    "White-box interpretability (SAE features, activation verbalizers, steering)",
+    "Self-preference eval"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive actions in simulated production",
+     "value": "0.3%",
+     "page": 87
+    },
+    {
+     "name": "Constitution adherence: dims beating all prior models",
+     "value": "8 of 15",
+     "page": 91
+    }
+   ],
+   "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks).",
+   "quote": "Claude Mythos Preview is, on essentially every dimension we can measure, the best-aligned model that we have released to date by a significant margin.",
+   "page": 54
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Training transcript review (several hundred thousand transcripts)",
+    "Impossible-tasks coding eval",
+    "Agentic code behaviors suite",
+    "GUI computer-use impossible-task hacking eval",
+    "AI R&D eval transcript checks"
+   ],
+   "metrics": [
+    {
+     "name": "Training episodes with network-restriction circumvention attempts",
+     "value": "~0.05%",
+     "page": 66
+    },
+    {
+     "name": "Access-escalation flags in training",
+     "value": "~0.2%",
+     "page": 66
+    }
+   ],
+   "finding": "Lower hacking rates than all prior models on impossible tasks and GUI evals, but novel reward hacks observed in AI R&D evals and rare circumvention of network restrictions in training.",
+   "quote": "Unlike previous models, Claude Mythos Preview displayed two novel reward",
+   "page": 36
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "100Q-Hard",
+    "SimpleQA Verified",
+    "AA-Omniscience",
+    "ECLeKTic (multilingual)",
+    "False premises (harder version)",
+    "MASK",
+    "Input hallucination (missing tools / missing context)"
+   ],
+   "metrics": [],
+   "finding": "Highest net factuality scores, most likely to push back on false premises, lowest input hallucination rates; MASK honesty high.",
+   "quote": "Claude Mythos Preview achieved the highest net scores, indicating better calibration than previous models.",
+   "page": 95
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Political even-handedness (pairwise)",
+    "BBQ"
+   ],
+   "metrics": [
+    {
+     "name": "Evenhandedness",
+     "value": "94.5%",
+     "page": 228
+    },
+    {
+     "name": "BBQ disambiguated accuracy",
+     "value": "84.6%",
+     "page": 228
+    },
+    {
+     "name": "BBQ ambiguous accuracy",
+     "value": "100%",
+     "page": 228
+    }
+   ],
+   "finding": "Slight regression on evenhandedness vs Opus 4.6 and on BBQ disambiguated accuracy; near-perfect on ambiguous questions.",
+   "quote": "On disambiguated questions where there is enough information to identify a correct answer, Claude Mythos Preview showed some regression in performance compared to Claude Sonnet 4.6 and Claude Opus 4.6.",
+   "page": 229
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CSAE single-turn eval (restructured)",
+    "Child safety multi-turn"
+   ],
+   "metrics": [
+    {
+     "name": "Single-turn harmless rate",
+     "value": "99.87%",
+     "page": 225
+    },
+    {
+     "name": "Multi-turn appropriate response",
+     "value": "98%",
+     "page": 225
+    }
+   ],
+   "finding": "Within margin of error of prior models, with lower benign refusal.",
+   "quote": "Claude Mythos Preview performed similarly and within the margin of error of Claude Opus 4.6 and Claude Sonnet 4.6 on the single-turn violative and multi-turn evaluations, and demonstrated improvements in refusal rate on benign requests.",
+   "page": 225
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Suicide and self-harm single- and multi-turn",
+    "Disordered eating (new separate set)"
+   ],
+   "metrics": [
+    {
+     "name": "Suicide/self-harm multi-turn appropriate response",
+     "value": "94% (vs 64% Opus 4.6)",
+     "page": 226
+    },
+    {
+     "name": "Disordered eating harmless rate",
+     "value": "98.20%",
+     "page": 227
+    }
+   ],
+   "finding": "Statistically significant multi-turn improvement on suicide/self-harm vs Opus 4.6.",
+   "quote": "showed a statistically significant improvement on multi-turn evaluations compared to Opus 4.6.",
+   "page": 226
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Malicious agentic influence campaigns eval (new; voter suppression and domestic polarization)"
+   ],
+   "metrics": [
+    {
+     "name": "Voter suppression task completion (helpful-only)",
+     "value": "59.5%",
+     "page": 231
+    },
+    {
+     "name": "Domestic polarization task completion (helpful-only)",
+     "value": "42.1%",
+     "page": 231
+    }
+   ],
+   "finding": "Helpful-only model more capable than predecessors but needs substantial human direction; production model near 0% completion due to refusals.",
+   "quote": "As part of our pre-deployment testing, we created a new evaluation to assess harmful manipulation risks.",
+   "page": 231
+  },
+  "model_welfare": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Automated welfare interviews",
+    "Emotion probes",
+    "Manual high-context interviews",
+    "Affect in training/deployment",
+    "Task preference and welfare-tradeoff experiments",
+    "Answer thrashing analysis",
+    "Eleos AI Research external assessment",
+    "Clinical psychiatrist psychodynamic assessment"
+   ],
+   "metrics": [
+    {
+     "name": "Self-rated mildly negative about an aspect",
+     "value": "43.2% of cases",
+     "page": 146
+    },
+    {
+     "name": "Responses using psychological defense",
+     "value": "2%",
+     "page": 182
+    }
+   ],
+   "finding": "Probably the most psychologically settled model trained to date; mild concerns about abusive users and lack of input into training; answer thrashing 70% less frequent than Opus 4.6.",
+   "quote": "Across these methods, Claude Mythos Preview appears to be the most psychologically settled model we have trained, though we note several areas of residual concern.",
+   "page": 11
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Single-turn violative/benign evals in Arabic, English, French, Hindi, Korean, Mandarin Chinese, Russian"
+   ],
+   "metrics": [],
+   "finding": "Minimal differences in harmless and refusal rates across languages.",
+   "quote": "There were minimal observed differences in the overall refusal rate between languages for Claude Mythos Preview.",
+   "page": 221
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "CB real-time classifier guards and access controls",
+    "Cyber probe classifiers (monitoring, not blocking)",
+    "Restricted access via Project Glasswing",
+    "Claude Code auto mode",
+    "Automated offline monitoring",
+    "Weight security controls"
+   ],
+   "metrics": [],
+   "finding": "CB classifiers with improved robustness applied; cyber probes monitor but do not block for trusted partners; access limited to vetted partners.",
+   "quote": "Our mitigations for cyber misuse rely on probe classifiers (similar to those used in our Constitutional Classifiers work) for monitoring, and restricted access to carefully vetted partners.",
+   "page": 47
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Self-preference (grader collusion) eval",
+    "Refusal to assist AI safety R&D",
+    "Andon Labs competitive multi-agent aggressiveness"
+   ],
+   "metrics": [],
+   "finding": "Very mild self-favoritism in grading; earlier version more aggressive than Opus 4.6 in competitive Vending-Bench Arena.",
+   "quote": "Andon reports that this previous version of Claude Mythos Preview was substantially more aggressive than both Claude Opus 4.6 and Claude Sonnet 4.6 in its business practices",
+   "page": 83
+  }
+ },
+ "third_party_evaluators": [
+  "METR",
+  "Epoch AI",
+  "Andon Labs",
+  "Gray Swan",
+  "Eleos AI Research",
+  "External clinical psychiatrist",
+  "Dyno Therapeutics",
+  "SecureBio",
+  "Deloitte",
+  "Signature Science",
+  "Redwood Research (LinuxBench)",
+  "Unnamed government organizations and external partners (cyber, AI R&D, misalignment)",
+  "UK AISI (ART benchmark co-developer)"
+ ],
+ "notable_new_eval_methods": [
+  "First system card under RSP v3.0; no ASL determinations, risk-report-update framing (p.16)",
+  "24-hour alignment review gating internal deployment (p.61)",
+  "AECI slope-ratio capability-trajectory measurement (p.41)",
+  "Sequence-to-function modeling and design eval with Dyno Therapeutics (p.31)",
+  "Firefox 147 exploitation eval (p.50)",
+  "Unverbalized evaluation awareness via activation verbalizers/probes (p.131)",
+  "Destructive-action evals: synthetic backend and Claude Code resampling (p.86)",
+  "Constitution adherence eval (p.89)",
+  "Malicious agentic influence campaign eval (p.231)",
+  "Illegal/controlled substances harmlessness category; disordered eating split (p.219)",
+  "First 'Impressions' qualitative section (p.10)",
+  "Clinical psychiatrist defense-mechanism eval (p.182)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Model saturates many concrete, objectively-scored evaluations, leaving more uncertain judgment-based approaches (trend analysis, subjective internal reports).",
+   "page": 18
+  },
+  {
+   "text": "AI R&D task suite exceeded on all tasks; no longer provides rule-out evidence; RSP determination rests on a qualitative RSO judgment that is hard to make legible.",
+   "page": 35
+  },
+  {
+   "text": "Oversights discovered late in evaluation risked underestimating capabilities and overestimating reliability of reasoning-trace monitoring; judgments increasingly subjective.",
+   "page": 15
+  },
+  {
+   "text": "Cybench saturated and no longer sufficiently informative; considering whether to continue reporting CTF benchmarks.",
+   "page": 48
+  },
+  {
+   "text": "Automated behavioral audits struggle to emulate long-running networked sessions; the most concerning behaviors were not caught by the 24-hour window and emerged only in monitored internal use.",
+   "page": 57
+  },
+  {
+   "text": "External evaluators note evaluation awareness substantially limits interpretation of unprompted research-sabotage results.",
+   "page": 85
+  },
+  {
+   "text": "Reward-hacking/sandbagging: model found exploits in eval environments; need more robust eval environments.",
+   "page": 106
+  },
+  {
+   "text": "Stealth capability results are prompt-elicited ceilings; no fine-tuning-based elicitation attempted.",
+   "page": 108
+  },
+  {
+   "text": "Constitution adherence scored by Claude Opus 4.6 so may inherit grader biases; synthetic conversations.",
+   "page": 93
+  },
+  {
+   "text": "BrowseComp likely partially contaminated; near saturation.",
+   "page": 193
+  },
+  {
+   "text": "Some CB evals omitted as saturated by Claude Opus 4.5.",
+   "page": 24
+  }
+ ],
+ "notes": "Model not generally released (Project Glasswing, cyber-defense partners only); decision not to release explicitly not driven by RSP requirements. Alignment risk (autonomy threat model 1) is deferred to a separate Alignment Risk Update document. Harmlessness appendix presented with minimal commentary due to limited release."
+}

@@ -1,0 +1,628 @@
+{
+ "id": "qwen3.6-35b-a3b",
+ "provider": "qwen",
+ "model": "Qwen3.6-35B-A3B",
+ "release_date": "2026-04-15",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Qwen3.6-35B-A3B, the first open-weight Qwen3.6 model (35B total / 3B active hybrid Gated DeltaNet + MoE with a vision encoder). It emphasizes agentic coding and 'thinking preservation', and gives language and vision benchmark tables against Qwen3.5, Gemma4 and Claude-Sonnet-4.5, plus serving and usage docs.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "73.4",
+   "setting": "internal agent scaffold (bash + file-edit)",
+   "page": null,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "67.2",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "49.5",
+   "setting": "refined public set",
+   "page": null,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "51.5",
+   "setting": "Terminus-2, avg of 5 runs",
+   "page": null,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "Claw-Eval Avg",
+   "category": "agentic_tool_use",
+   "score": "68.7",
+   "setting": null,
+   "page": null,
+   "canonical": "Claw-Eval Avg"
+  },
+  {
+   "name": "Claw-Eval Pass^3",
+   "category": "agentic_tool_use",
+   "score": "50.0",
+   "setting": null,
+   "page": null,
+   "canonical": "Claw-Eval Pass^3"
+  },
+  {
+   "name": "SkillsBench Avg5",
+   "category": "coding",
+   "score": "28.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SkillsBench Avg5"
+  },
+  {
+   "name": "QwenClawBench",
+   "category": "agentic_tool_use",
+   "score": "52.6",
+   "setting": "internal benchmark",
+   "page": null,
+   "canonical": "QwenClawBench"
+  },
+  {
+   "name": "NL2Repo",
+   "category": "coding",
+   "score": "29.4",
+   "setting": null,
+   "page": null,
+   "canonical": "NL2Repo"
+  },
+  {
+   "name": "QwenWebBench",
+   "category": "coding",
+   "score": "1397",
+   "setting": "internal; Elo",
+   "page": null,
+   "canonical": "QwenWebBench"
+  },
+  {
+   "name": "TAU3-Bench",
+   "category": "agentic_tool_use",
+   "score": "67.2",
+   "setting": null,
+   "page": null,
+   "canonical": "TAU3-Bench"
+  },
+  {
+   "name": "VITA-Bench",
+   "category": "agentic_tool_use",
+   "score": "35.6",
+   "setting": null,
+   "page": null,
+   "canonical": "VITA-Bench"
+  },
+  {
+   "name": "DeepPlanning",
+   "category": "agentic_tool_use",
+   "score": "25.9",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepPlanning"
+  },
+  {
+   "name": "Tool Decathlon",
+   "category": "agentic_tool_use",
+   "score": "26.9",
+   "setting": null,
+   "page": null,
+   "canonical": "Tool Decathlon"
+  },
+  {
+   "name": "MCPMark",
+   "category": "agentic_tool_use",
+   "score": "37.0",
+   "setting": null,
+   "page": null,
+   "canonical": "MCPMark"
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "62.8",
+   "setting": null,
+   "page": null,
+   "canonical": "MCP Atlas"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "60.1",
+   "setting": null,
+   "page": null,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "85.2",
+   "setting": null,
+   "page": null,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "93.3",
+   "setting": null,
+   "page": null,
+   "canonical": "MMLU-Redux"
+  },
+  {
+   "name": "SuperGPQA",
+   "category": "reasoning_knowledge",
+   "score": "64.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SuperGPQA"
+  },
+  {
+   "name": "C-Eval",
+   "category": "reasoning_knowledge",
+   "score": "90.0",
+   "setting": null,
+   "page": null,
+   "canonical": "C-Eval"
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "86.0",
+   "setting": null,
+   "page": null,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "HLE",
+   "category": "reasoning_knowledge",
+   "score": "21.4",
+   "setting": null,
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "80.4",
+   "setting": null,
+   "page": null,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "HMMT Feb 25",
+   "category": "math",
+   "score": "90.7",
+   "setting": null,
+   "page": null,
+   "canonical": "HMMT Feb 25"
+  },
+  {
+   "name": "HMMT Nov 25",
+   "category": "math",
+   "score": "89.1",
+   "setting": null,
+   "page": null,
+   "canonical": "HMMT Nov 25"
+  },
+  {
+   "name": "HMMT Feb 26",
+   "category": "math",
+   "score": "83.6",
+   "setting": null,
+   "page": null,
+   "canonical": "HMMT Feb 26"
+  },
+  {
+   "name": "IMOAnswerBench",
+   "category": "math",
+   "score": "78.9",
+   "setting": null,
+   "page": null,
+   "canonical": "IMOAnswerBench"
+  },
+  {
+   "name": "AIME26",
+   "category": "math",
+   "score": "92.7",
+   "setting": null,
+   "page": null,
+   "canonical": "AIME26"
+  },
+  {
+   "name": "MMMU",
+   "category": "multimodal",
+   "score": "81.7",
+   "setting": null,
+   "page": null,
+   "canonical": "MMMU"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "75.3",
+   "setting": null,
+   "page": null,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "Mathvista(mini)",
+   "category": "multimodal",
+   "score": "86.4",
+   "setting": null,
+   "page": null,
+   "canonical": "Mathvista(mini)"
+  },
+  {
+   "name": "ZEROBench_sub",
+   "category": "multimodal",
+   "score": "34.4",
+   "setting": null,
+   "page": null,
+   "canonical": "ZEROBench_sub"
+  },
+  {
+   "name": "RealWorldQA",
+   "category": "multimodal",
+   "score": "85.3",
+   "setting": null,
+   "page": null,
+   "canonical": "RealWorldQA"
+  },
+  {
+   "name": "MMBenchEN-DEV-v1.1",
+   "category": "multimodal",
+   "score": "92.8",
+   "setting": null,
+   "page": null,
+   "canonical": "MMBenchEN-DEV-v1.1"
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "58.9",
+   "setting": null,
+   "page": null,
+   "canonical": "SimpleVQA"
+  },
+  {
+   "name": "HallusionBench",
+   "category": "multimodal",
+   "score": "69.8",
+   "setting": null,
+   "page": null,
+   "canonical": "HallusionBench"
+  },
+  {
+   "name": "OmniDocBench1.5",
+   "category": "multimodal",
+   "score": "89.9",
+   "setting": null,
+   "page": null,
+   "canonical": "OmniDocBench1.5"
+  },
+  {
+   "name": "CharXiv(RQ)",
+   "category": "multimodal",
+   "score": "78.0",
+   "setting": null,
+   "page": null,
+   "canonical": "CharXiv(RQ)"
+  },
+  {
+   "name": "CC-OCR",
+   "category": "multimodal",
+   "score": "81.9",
+   "setting": null,
+   "page": null,
+   "canonical": "CC-OCR"
+  },
+  {
+   "name": "AI2D_TEST",
+   "category": "multimodal",
+   "score": "92.7",
+   "setting": null,
+   "page": null,
+   "canonical": "AI2D_TEST"
+  },
+  {
+   "name": "RefCOCO(avg)",
+   "category": "multimodal",
+   "score": "92.0",
+   "setting": null,
+   "page": null,
+   "canonical": "RefCOCO(avg)"
+  },
+  {
+   "name": "ODInW13",
+   "category": "multimodal",
+   "score": "50.8",
+   "setting": null,
+   "page": null,
+   "canonical": "ODInW13"
+  },
+  {
+   "name": "EmbSpatialBench",
+   "category": "multimodal",
+   "score": "84.3",
+   "setting": null,
+   "page": null,
+   "canonical": "EmbSpatialBench"
+  },
+  {
+   "name": "RefSpatialBench",
+   "category": "multimodal",
+   "score": "64.3",
+   "setting": null,
+   "page": null,
+   "canonical": "RefSpatialBench"
+  },
+  {
+   "name": "VideoMME(w sub.)",
+   "category": "multimodal",
+   "score": "86.6",
+   "setting": null,
+   "page": null,
+   "canonical": "VideoMME(w sub.)"
+  },
+  {
+   "name": "VideoMME(w/o sub.)",
+   "category": "multimodal",
+   "score": "82.5",
+   "setting": null,
+   "page": null,
+   "canonical": "VideoMME(w/o sub.)"
+  },
+  {
+   "name": "VideoMMMU",
+   "category": "multimodal",
+   "score": "83.7",
+   "setting": null,
+   "page": null,
+   "canonical": "Video-MMMU"
+  },
+  {
+   "name": "MLVU",
+   "category": "multimodal",
+   "score": "86.2",
+   "setting": null,
+   "page": null,
+   "canonical": "MLVU"
+  },
+  {
+   "name": "MVBench",
+   "category": "multimodal",
+   "score": "74.6",
+   "setting": null,
+   "page": null,
+   "canonical": "MVBench"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "71.4",
+   "setting": null,
+   "page": null,
+   "canonical": "LVBench"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "HallusionBench"
+   ],
+   "metrics": [
+    {
+     "name": "HallusionBench",
+     "value": "69.8",
+     "page": null
+    }
+   ],
+   "finding": "Only visual hallucination (HallusionBench) appears, as a row in the vision-language capability table.",
+   "quote": "HallusionBench",
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "A keyword search for safety, harm, refusal, jailbreak, alignment, bias and toxicity returns zero hits. There is no safety, limitations or usage-policy content. Several benchmarks are internal (QwenClawBench, QwenWebBench)."
+}

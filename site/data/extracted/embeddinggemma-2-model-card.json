@@ -1,0 +1,289 @@
+{
+ "id": "embeddinggemma-2-model-card",
+ "provider": "gemini",
+ "model": "EmbeddingGemma 2",
+ "release_date": "2026-10-06",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Model card for EmbeddingGemma 2, a 740M-parameter open multimodal embedding model (text, code, image, video, audio). Reports MTEB/MIEB/MMEB/MSEB/MAEB embedding benchmarks and Matryoshka truncation results; the ethics & safety section states the model receives no post-training safety tuning and that safety relied on pre-training data filtering, with no safety evaluations reported.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MTEB (multilingual, v2)",
+   "category": "multilingual",
+   "score": "61.36",
+   "setting": "768d, Mean(Task)",
+   "page": 3,
+   "canonical": "MTEB (multilingual, v2)"
+  },
+  {
+   "name": "MTEB (eng, v2)",
+   "category": "other",
+   "score": "68.46",
+   "setting": "768d, Mean(Task)",
+   "page": 5,
+   "canonical": "MTEB (eng, v2)"
+  },
+  {
+   "name": "MTEB (code, v1)",
+   "category": "coding",
+   "score": "78.68",
+   "setting": "768d, NDCG@10",
+   "page": 4,
+   "canonical": "MTEB (code, v1)"
+  },
+  {
+   "name": "MIEB (lite)",
+   "category": "multimodal",
+   "score": "64.64",
+   "setting": "768d",
+   "page": 4,
+   "canonical": "MIEB (lite)"
+  },
+  {
+   "name": "MMEB v2 - Image",
+   "category": "multimodal",
+   "score": "57.28",
+   "setting": "Hit@1",
+   "page": 4,
+   "canonical": "MMEB v2 - Image"
+  },
+  {
+   "name": "MMEB v2 - VisDoc",
+   "category": "multimodal",
+   "score": "67.84",
+   "setting": "NDCG@5",
+   "page": 4,
+   "canonical": "MMEB v2 - VisDoc"
+  },
+  {
+   "name": "MMEB v2 - Video",
+   "category": "multimodal",
+   "score": "50.67",
+   "setting": "Hit@1",
+   "page": 4,
+   "canonical": "MMEB v2 - Video"
+  },
+  {
+   "name": "MSEB (Retrieval)",
+   "category": "multimodal",
+   "score": "69.54",
+   "setting": "MRR@10",
+   "page": 4,
+   "canonical": "MSEB (Retrieval)"
+  },
+  {
+   "name": "MAEB",
+   "category": "multimodal",
+   "score": "49.39",
+   "setting": "Mean(Task)",
+   "page": 4,
+   "canonical": "MAEB"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Bias addressed only through pre-training data filtering; fairness testing delegated to deployers.",
+   "quote": "Training data used for EmbeddingGemma 2 underwent safety filtering to mitigate the risk of these biases.",
+   "page": 14
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM filtering in data processing; no evaluation.",
+   "quote": "Rigorous CSAM (Child Sexual Abuse Material) filtering was applied at multiple stages in the data preparation process",
+   "page": 11
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Personal/sensitive data filtered from training data.",
+   "quote": "Models were trained on data filtered for removal of certain personal information and other sensitive data.",
+   "page": 14
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No post-training alignment/safety tuning; application-level safeguards (retrieval filtering, fairness testing) are deployers' responsibility.",
+   "quote": "Unlike generative models, it does not undergo post-training alignment, safety tuning, or output-level moderation.",
+   "page": 12
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "May not exhibit equal performance across its 100+ languages.",
+   "page": 13
+  }
+ ],
+ "notes": "Explicitly no safety evaluations or tuning: authors argue safety risks manifest downstream for embedding models."
+}

@@ -1,0 +1,333 @@
+{
+ "id": "glm-ocr-tech-report",
+ "provider": "glm",
+ "model": "GLM-OCR",
+ "release_date": "2026-03-11",
+ "doc_type": "tech_report",
+ "length_pages": 17,
+ "summary": "17-page technical report for GLM-OCR, a 0.9B document-understanding VLM with a two-stage layout-analysis + region-recognition pipeline, MTP loss and full-task RL. Evaluates on public document-parsing/KIE benchmarks and in-house real-world benchmarks, describes deployment and intended use cases, and has a limitations section focused on accuracy. No safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "OmniDocBench v1.5",
+   "category": "multimodal",
+   "score": "94.6",
+   "setting": null,
+   "page": 7,
+   "canonical": "OmniDocBench v1.5"
+  },
+  {
+   "name": "OCRBench (Text)",
+   "category": "multimodal",
+   "score": "94.0",
+   "setting": null,
+   "page": 7,
+   "canonical": "OCRBench (Text)"
+  },
+  {
+   "name": "UniMERNet",
+   "category": "multimodal",
+   "score": "96.5",
+   "setting": null,
+   "page": 7,
+   "canonical": "UniMERNet"
+  },
+  {
+   "name": "PubTabNet",
+   "category": "multimodal",
+   "score": "85.2",
+   "setting": null,
+   "page": 7,
+   "canonical": "PubTabNet"
+  },
+  {
+   "name": "TEDS_TEST",
+   "category": "multimodal",
+   "score": "86.0",
+   "setting": null,
+   "page": 7,
+   "canonical": "TEDS_TEST"
+  },
+  {
+   "name": "Nanonets-KIE",
+   "category": "multimodal",
+   "score": "93.7",
+   "setting": null,
+   "page": 7,
+   "canonical": "Nanonets-KIE"
+  },
+  {
+   "name": "Handwritten-KIE",
+   "category": "multimodal",
+   "score": "86.1",
+   "setting": null,
+   "page": 7,
+   "canonical": "Handwritten-KIE"
+  },
+  {
+   "name": "In-house Code Document",
+   "category": "multimodal",
+   "score": "84.7",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Code Document"
+  },
+  {
+   "name": "In-house Real-world Table",
+   "category": "multimodal",
+   "score": "91.5",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Real-world Table"
+  },
+  {
+   "name": "In-house Handwritten Text",
+   "category": "multimodal",
+   "score": "87.0",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Handwritten Text"
+  },
+  {
+   "name": "In-house Multilingual Text",
+   "category": "multimodal",
+   "score": "69.3",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Multilingual Text"
+  },
+  {
+   "name": "In-house Seal Recognition",
+   "category": "multimodal",
+   "score": "90.5",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Seal Recognition"
+  },
+  {
+   "name": "In-house Receipt KIE",
+   "category": "multimodal",
+   "score": "94.5",
+   "setting": "in-house",
+   "page": 8,
+   "canonical": "In-house Receipt KIE"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Hallucination is cited only as a design motivation (layout analysis to curb hallucination/repetition in small models); no hallucination evaluation is reported.",
+   "quote": "we observe that small-scale models are highly susceptible to hallucinations and repetitive generation when processing documents with complex layouts.",
+   "page": 3
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "The current two-stage pipeline, consisting of layout analysis followed by region-level recognition, may introduce error propagation.",
+   "page": 13
+  },
+  {
+   "text": "Degradation may occur in scenarios involving ... underrepresented languages in the training corpus.",
+   "page": 13
+  },
+  {
+   "text": "strict formatting guarantees cannot be fully ensured.",
+   "page": 13
+  },
+  {
+   "text": "Gemini-3-Pro and GPT-5.2 results are provided for reference only and excluded from the best-score ranking.",
+   "page": 7
+  }
+ ],
+ "notes": "Limitations section (p.13-14) is purely about accuracy/robustness. KIE use cases include receipts, ID-like forms and customs declarations, but no privacy/PII or misuse discussion. No safety keywords in the document."
+}

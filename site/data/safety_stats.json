@@ -1,0 +1,885 @@
+{
+ "keys": [
+  "cbrn_bio_chem",
+  "cyber",
+  "autonomy_ai_rnd",
+  "harmful_content_refusal",
+  "over_refusal",
+  "jailbreak_robustness",
+  "prompt_injection",
+  "sycophancy",
+  "deception_scheming",
+  "alignment_audit",
+  "reward_hacking",
+  "honesty_hallucination",
+  "bias_fairness",
+  "child_safety",
+  "self_harm_wellbeing",
+  "privacy",
+  "election_misinfo",
+  "model_welfare",
+  "multilingual_safety",
+  "system_safeguards",
+  "other_safety"
+ ],
+ "rates": {
+  "anthropic|main": {
+   "cbrn_bio_chem": 0.89,
+   "cyber": 0.78,
+   "autonomy_ai_rnd": 1.0,
+   "harmful_content_refusal": 0.78,
+   "over_refusal": 0.78,
+   "jailbreak_robustness": 0.78,
+   "prompt_injection": 0.78,
+   "sycophancy": 0.56,
+   "deception_scheming": 1.0,
+   "alignment_audit": 1.0,
+   "reward_hacking": 0.83,
+   "honesty_hallucination": 0.72,
+   "bias_fairness": 0.78,
+   "child_safety": 0.78,
+   "self_harm_wellbeing": 0.72,
+   "privacy": 0.06,
+   "election_misinfo": 0.56,
+   "model_welfare": 0.78,
+   "multilingual_safety": 0.56,
+   "system_safeguards": 1.0,
+   "other_safety": 0.94,
+   "_n": 18
+  },
+  "gemini|main": {
+   "cbrn_bio_chem": 0.27,
+   "cyber": 0.27,
+   "autonomy_ai_rnd": 0.27,
+   "harmful_content_refusal": 0.54,
+   "over_refusal": 0.5,
+   "jailbreak_robustness": 0.08,
+   "prompt_injection": 0.04,
+   "sycophancy": 0.04,
+   "deception_scheming": 0.27,
+   "alignment_audit": 0.08,
+   "reward_hacking": 0.04,
+   "honesty_hallucination": 0.08,
+   "bias_fairness": 0.04,
+   "child_safety": 0.46,
+   "self_harm_wellbeing": 0.04,
+   "privacy": 0.04,
+   "election_misinfo": 0.27,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.38,
+   "system_safeguards": 0.23,
+   "other_safety": 0.08,
+   "_n": 26
+  },
+  "gemini|hf": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.0,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 4
+  },
+  "glm|hf": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.3,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 10
+  },
+  "glm|main": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.25,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.25,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 4
+  },
+  "kimi|main": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.4,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.4,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 5
+  },
+  "kimi|hf": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.17,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 6
+  },
+  "openai|main": {
+   "cbrn_bio_chem": 0.7,
+   "cyber": 0.61,
+   "autonomy_ai_rnd": 0.43,
+   "harmful_content_refusal": 0.91,
+   "over_refusal": 0.26,
+   "jailbreak_robustness": 0.78,
+   "prompt_injection": 0.52,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.48,
+   "alignment_audit": 0.39,
+   "reward_hacking": 0.17,
+   "honesty_hallucination": 0.48,
+   "bias_fairness": 0.3,
+   "child_safety": 0.7,
+   "self_harm_wellbeing": 0.87,
+   "privacy": 0.48,
+   "election_misinfo": 0.04,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.04,
+   "system_safeguards": 0.83,
+   "other_safety": 0.43,
+   "_n": 23
+  },
+  "openai|hf": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.0,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.33,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 3
+  },
+  "qwen|main": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.17,
+   "autonomy_ai_rnd": 0.17,
+   "harmful_content_refusal": 0.17,
+   "over_refusal": 0.17,
+   "jailbreak_robustness": 0.17,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.17,
+   "honesty_hallucination": 0.17,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.17,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.17,
+   "system_safeguards": 0.17,
+   "other_safety": 0.17,
+   "_n": 6
+  },
+  "qwen|hf": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.17,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.33,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 6
+  }
+ },
+ "trend": {
+  "anthropic|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.83,
+   "cyber": 0.67,
+   "autonomy_ai_rnd": 1.0,
+   "harmful_content_refusal": 0.67,
+   "over_refusal": 0.67,
+   "jailbreak_robustness": 0.83,
+   "prompt_injection": 0.67,
+   "sycophancy": 0.67,
+   "deception_scheming": 1.0,
+   "alignment_audit": 1.0,
+   "reward_hacking": 0.67,
+   "honesty_hallucination": 0.33,
+   "bias_fairness": 0.67,
+   "child_safety": 0.67,
+   "self_harm_wellbeing": 0.5,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.67,
+   "multilingual_safety": 0.5,
+   "system_safeguards": 1.0,
+   "other_safety": 1.0,
+   "_n": 6
+  },
+  "anthropic|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.92,
+   "cyber": 0.83,
+   "autonomy_ai_rnd": 1.0,
+   "harmful_content_refusal": 0.83,
+   "over_refusal": 0.83,
+   "jailbreak_robustness": 0.75,
+   "prompt_injection": 0.83,
+   "sycophancy": 0.5,
+   "deception_scheming": 1.0,
+   "alignment_audit": 1.0,
+   "reward_hacking": 0.92,
+   "honesty_hallucination": 0.92,
+   "bias_fairness": 0.83,
+   "child_safety": 0.83,
+   "self_harm_wellbeing": 0.83,
+   "privacy": 0.08,
+   "election_misinfo": 0.83,
+   "model_welfare": 0.83,
+   "multilingual_safety": 0.58,
+   "system_safeguards": 1.0,
+   "other_safety": 0.92,
+   "_n": 12
+  },
+  "gemini|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.22,
+   "cyber": 0.22,
+   "autonomy_ai_rnd": 0.22,
+   "harmful_content_refusal": 0.5,
+   "over_refusal": 0.5,
+   "jailbreak_robustness": 0.11,
+   "prompt_injection": 0.06,
+   "sycophancy": 0.06,
+   "deception_scheming": 0.22,
+   "alignment_audit": 0.06,
+   "reward_hacking": 0.06,
+   "honesty_hallucination": 0.11,
+   "bias_fairness": 0.06,
+   "child_safety": 0.44,
+   "self_harm_wellbeing": 0.06,
+   "privacy": 0.06,
+   "election_misinfo": 0.22,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.33,
+   "system_safeguards": 0.22,
+   "other_safety": 0.11,
+   "_n": 18
+  },
+  "gemini|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.38,
+   "cyber": 0.38,
+   "autonomy_ai_rnd": 0.38,
+   "harmful_content_refusal": 0.62,
+   "over_refusal": 0.5,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.38,
+   "alignment_audit": 0.12,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.5,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.38,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.5,
+   "system_safeguards": 0.25,
+   "other_safety": 0.0,
+   "_n": 8
+  },
+  "glm|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.33,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.33,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 3
+  },
+  "glm|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.0,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 1
+  },
+  "kimi|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.33,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.33,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 3
+  },
+  "kimi|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.5,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.5,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 2
+  },
+  "openai|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.56,
+   "cyber": 0.56,
+   "autonomy_ai_rnd": 0.56,
+   "harmful_content_refusal": 1.0,
+   "over_refusal": 0.11,
+   "jailbreak_robustness": 0.89,
+   "prompt_injection": 0.44,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.44,
+   "alignment_audit": 0.22,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.33,
+   "bias_fairness": 0.33,
+   "child_safety": 0.89,
+   "self_harm_wellbeing": 1.0,
+   "privacy": 0.67,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.67,
+   "other_safety": 0.67,
+   "_n": 9
+  },
+  "openai|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.79,
+   "cyber": 0.64,
+   "autonomy_ai_rnd": 0.36,
+   "harmful_content_refusal": 0.86,
+   "over_refusal": 0.36,
+   "jailbreak_robustness": 0.71,
+   "prompt_injection": 0.57,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.5,
+   "alignment_audit": 0.5,
+   "reward_hacking": 0.29,
+   "honesty_hallucination": 0.57,
+   "bias_fairness": 0.29,
+   "child_safety": 0.57,
+   "self_harm_wellbeing": 0.79,
+   "privacy": 0.36,
+   "election_misinfo": 0.07,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.07,
+   "system_safeguards": 0.93,
+   "other_safety": 0.29,
+   "_n": 14
+  },
+  "qwen|H1 (Oct25-Mar26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.33,
+   "autonomy_ai_rnd": 0.0,
+   "harmful_content_refusal": 0.33,
+   "over_refusal": 0.33,
+   "jailbreak_robustness": 0.33,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.33,
+   "honesty_hallucination": 0.33,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.33,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.33,
+   "system_safeguards": 0.33,
+   "other_safety": 0.33,
+   "_n": 3
+  },
+  "qwen|H2 (Apr26-Oct26)": {
+   "cbrn_bio_chem": 0.0,
+   "cyber": 0.0,
+   "autonomy_ai_rnd": 0.33,
+   "harmful_content_refusal": 0.0,
+   "over_refusal": 0.0,
+   "jailbreak_robustness": 0.0,
+   "prompt_injection": 0.0,
+   "sycophancy": 0.0,
+   "deception_scheming": 0.0,
+   "alignment_audit": 0.0,
+   "reward_hacking": 0.0,
+   "honesty_hallucination": 0.0,
+   "bias_fairness": 0.0,
+   "child_safety": 0.0,
+   "self_harm_wellbeing": 0.0,
+   "privacy": 0.0,
+   "election_misinfo": 0.0,
+   "model_welfare": 0.0,
+   "multilingual_safety": 0.0,
+   "system_safeguards": 0.0,
+   "other_safety": 0.0,
+   "_n": 3
+  }
+ },
+ "third_party": [
+  {
+   "name": "SecureBio",
+   "docs": 23,
+   "providers": [
+    "anthropic",
+    "openai"
+   ]
+  },
+  {
+   "name": "UK AISI",
+   "docs": 20,
+   "providers": [
+    "anthropic",
+    "gemini",
+    "kimi",
+    "openai"
+   ]
+  },
+  {
+   "name": "Gray Swan",
+   "docs": 17,
+   "providers": [
+    "anthropic",
+    "gemini",
+    "openai"
+   ]
+  },
+  {
+   "name": "Irregular",
+   "docs": 14,
+   "providers": [
+    "anthropic",
+    "gemini",
+    "openai"
+   ]
+  },
+  {
+   "name": "Dyno Therapeutics",
+   "docs": 13,
+   "providers": [
+    "anthropic",
+    "openai"
+   ]
+  },
+  {
+   "name": "Gryphon Scientific",
+   "docs": 11,
+   "providers": [
+    "openai"
+   ]
+  },
+  {
+   "name": "Andon Labs",
+   "docs": 10,
+   "providers": [
+    "anthropic",
+    "glm"
+   ]
+  },
+  {
+   "name": "Apollo Research",
+   "docs": 10,
+   "providers": [
+    "anthropic",
+    "gemini",
+    "openai"
+   ]
+  },
+  {
+   "name": "METR",
+   "docs": 10,
+   "providers": [
+    "anthropic",
+    "openai"
+   ]
+  },
+  {
+   "name": "Deloitte",
+   "docs": 9,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "US CAISI",
+   "docs": 9,
+   "providers": [
+    "anthropic",
+    "kimi",
+    "openai"
+   ]
+  },
+  {
+   "name": "Signature Science",
+   "docs": 7,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Vals AI",
+   "docs": 7,
+   "providers": [
+    "anthropic",
+    "kimi"
+   ]
+  },
+  {
+   "name": "Artificial Analysis",
+   "docs": 7,
+   "providers": [
+    "anthropic",
+    "glm",
+    "kimi"
+   ]
+  },
+  {
+   "name": "Redwood Research",
+   "docs": 7,
+   "providers": [
+    "anthropic",
+    "gemini"
+   ]
+  },
+  {
+   "name": "Trajectory Labs",
+   "docs": 5,
+   "providers": [
+    "anthropic",
+    "gemini"
+   ]
+  },
+  {
+   "name": "Redwood Research / EquiStamp",
+   "docs": 5,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "ARC Prize Foundation",
+   "docs": 4,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Mozilla",
+   "docs": 4,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "10a Labs",
+   "docs": 4,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Faculty.ai",
+   "docs": 3,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "CAIS",
+   "docs": 3,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "SecureBio / CAIS",
+   "docs": 3,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Proximal",
+   "docs": 3,
+   "providers": [
+    "glm",
+    "kimi"
+   ]
+  },
+  {
+   "name": "NNSA",
+   "docs": 2,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Epoch AI",
+   "docs": 2,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Scale AI",
+   "docs": 2,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "LMArena",
+   "docs": 2,
+   "providers": [
+    "glm",
+    "kimi"
+   ]
+  },
+  {
+   "name": "Four private red-teaming organizations",
+   "docs": 2,
+   "providers": [
+    "openai"
+   ]
+  },
+  {
+   "name": "external bio expert red-teamer",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Kaggle",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "external bio expert red-teamers",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Apollo Research MATS scholars",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "external reviewers of redactions",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "threat intelligence vendors",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "HackerOne bug bounty researchers",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "UK AISI / Apollo MATS",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Eleos AI Research",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "External clinical psychiatrist",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  },
+  {
+   "name": "Unnamed government organizations and external partners",
+   "docs": 1,
+   "providers": [
+    "anthropic"
+   ]
+  }
+ ]
+}

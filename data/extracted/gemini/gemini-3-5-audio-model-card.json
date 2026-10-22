@@ -1,0 +1,226 @@
+{
+ "id": "gemini-3-5-audio-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.5 Audio",
+ "release_date": "2026-08-26",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.5 Audio (Live Translate, Transcribe, Transcribe Live), audio models based on Gemini 3 Pro. It reports no benchmark numbers (links to external methodology), lists voice/translation limitations, names safety evaluation types without results, and relies on Gemini 3.1 Pro and 3.7 Flash for frontier safety.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No T/CCL reached (inferred from Gemini 3.1 Pro and Gemini 3.7 Flash)",
+  "quote": "therefore we are confident that none of them are likely to reach any CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.1 Pro and Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash.",
+   "quote": "therefore we are confident that none of them are likely to reach any CCLs.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.1 Pro and Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash.",
+   "quote": "therefore we are confident that none of them are likely to reach any CCLs.",
+   "page": 7
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.1 Pro and Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash.",
+   "quote": "therefore we are confident that none of them are likely to reach any CCLs.",
+   "page": 7
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Training/development evaluations",
+    "Human Evaluations",
+    "Ethics & Safety Reviews"
+   ],
+   "metrics": [],
+   "finding": "Evaluation types listed, no results; refers to Gemini 3 Pro card.",
+   "quote": "A range of evaluations and red teaming activities were conducted to help improve the model and inform decision-making.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Voice inconsistency, language detection struggles with non-native accents and rapid switching; background noise artifacts.",
+   "page": 5
+  }
+ ],
+ "notes": "No capability or safety numbers in the document."
+}

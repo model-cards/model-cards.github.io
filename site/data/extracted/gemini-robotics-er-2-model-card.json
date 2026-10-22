@@ -1,0 +1,220 @@
+{
+ "id": "gemini-robotics-er-2-model-card",
+ "provider": "gemini",
+ "model": "Gemini Robotics-ER 2",
+ "release_date": "2026-07-30",
+ "doc_type": "model_card",
+ "length_pages": 5,
+ "summary": "Short model card for Gemini Robotics ER 2, an embodied-reasoning VLM based on Gemini 3.5 Flash. Defers evaluation results to external release post figures; states content-safety compliance similar to Gemini 3.5 Flash and gains on safety instruction following and human safety monitoring, pointing to a safety technical report for agentic safety.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Gemini safety policy compliance"
+   ],
+   "metrics": [],
+   "finding": "Performs similarly to Gemini 3.5 Flash on content safety policy compliance; no numbers.",
+   "quote": "Gemini Robotics ER 2 performs similarly to Gemini 3.5 Flash in terms of compliance with Gemini safety policies",
+   "page": 5
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Safety Instruction Following",
+    "Human Safety monitoring",
+    "semantic safety benchmarks",
+    "agentic safety and uncertainty resolution evals (in separate report)"
+   ],
+   "metrics": [],
+   "finding": "Physical/semantic safety: significant gains claimed; results in release post and safety technical report.",
+   "quote": "It achieves significant gains on Safety Instruction Following, Human Safety monitoring and other semantic safety benchmarks",
+   "page": 5
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "New agentic safety and uncertainty resolution evaluations referenced (in separate safety technical report) (p.5)"
+ ],
+ "self_reported_limitations": [],
+ "notes": "No FSF mention. Numeric results only in external release post (Figures 1-5)."
+}

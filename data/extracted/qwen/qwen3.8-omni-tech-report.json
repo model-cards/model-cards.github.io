@@ -1,0 +1,517 @@
+{
+ "id": "qwen3.8-omni-tech-report",
+ "provider": "qwen",
+ "model": "Qwen3.8-Omni-Flash",
+ "release_date": "2026-09-22",
+ "doc_type": "tech_report",
+ "length_pages": 24,
+ "summary": "Technical report for Qwen3.8-Omni-Flash, a natively multimodal agentic model built on the Qwen3.8-Next MoE with 1M context. It covers text, vision, audio, audio-visual, omni-agentic (WildClawBench-MM, OmniGAIA) and real-time interaction and voice-cloning benchmarks, plus open-source harnesses (Qwen-MM-Plugins, Qwen-Live-Harness) and an autonomous 'Omni-Autoresearch' demo.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "DeepSWE 1.1",
+   "category": "coding",
+   "score": "57.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "63.3",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "80.5",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "NL2Repo-Bench",
+   "category": "coding",
+   "score": "48.9",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "CoWorkBench",
+   "category": "agentic_tool_use",
+   "score": "75.3",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "IFBench",
+   "category": "instruction_following",
+   "score": "81.5",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "91.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "36.5",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "92.6",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 9
+  },
+  {
+   "name": "ClawEval-MM",
+   "category": "agentic_tool_use",
+   "score": "Pass@3 60.4 / Avg 61.9",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "AndroidWorld",
+   "category": "agentic_tool_use",
+   "score": "87.1",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "Vision2Web",
+   "category": "multimodal",
+   "score": "62.9",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "ERQA",
+   "category": "multimodal",
+   "score": "71.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "76.9",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "RealWorldQA",
+   "category": "multimodal",
+   "score": "87.7",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "91.8 / 96.2 (w/ CI)",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "83.5 / 91.4 (w/ CI)",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 10
+  },
+  {
+   "name": "MMAU",
+   "category": "multimodal",
+   "score": "81.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "MMAR",
+   "category": "multimodal",
+   "score": "79.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "MMSU",
+   "category": "multimodal",
+   "score": "82.1",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "VoiceBench",
+   "category": "multimodal",
+   "score": "91.6",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "Audio MultiChallenge",
+   "category": "multimodal",
+   "score": "71.5",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "FLEURS-ASR (WER, 60 langs)",
+   "category": "multimodal",
+   "score": "9.3",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "FLEURS-S2TT",
+   "category": "multimodal",
+   "score": "31.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "AliMeeting Test (DER / cpWER)",
+   "category": "multimodal",
+   "score": "3.4 / 17.2",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "MuLA-Bench",
+   "category": "multilingual",
+   "score": "72.60",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 11
+  },
+  {
+   "name": "DailyOmni",
+   "category": "multimodal",
+   "score": "85.1",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "WorldSense",
+   "category": "multimodal",
+   "score": "68.5",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "AVUT",
+   "category": "multimodal",
+   "score": "86.6",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "OmniVideoBench",
+   "category": "multimodal",
+   "score": "63.4",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "Video-MME-v2",
+   "category": "multimodal",
+   "score": "65.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "MMOU",
+   "category": "multimodal",
+   "score": "78.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "StreamingBench",
+   "category": "multimodal",
+   "score": "80.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "OmniVChat-Bench",
+   "category": "multimodal",
+   "score": "89.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "LVOmniBench",
+   "category": "long_context",
+   "score": "63.3",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 12
+  },
+  {
+   "name": "WildClawBench-MM",
+   "category": "agentic_tool_use",
+   "score": "71.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 13
+  },
+  {
+   "name": "UniClawBench",
+   "category": "agentic_tool_use",
+   "score": "69.6",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 13
+  },
+  {
+   "name": "AgenticVBench",
+   "category": "agentic_tool_use",
+   "score": "36.8",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 13
+  },
+  {
+   "name": "OmniGAIA",
+   "category": "agentic_tool_use",
+   "score": "74.0",
+   "setting": "Qwen3.8-Omni-Flash",
+   "page": 13
+  },
+  {
+   "name": "OmniVideoBench (agentic, Qwen Code)",
+   "category": "agentic_tool_use",
+   "score": "67.8",
+   "setting": "Qwen3.8-Omni-Flash with Qwen Code harness",
+   "page": 14
+  },
+  {
+   "name": "SEED-TTS zh / en / hard (WER)",
+   "category": "multimodal",
+   "score": "0.74 / 0.89 / 5.29",
+   "setting": "Qwen3.8-Omni-Flash-Realtime, voice cloning",
+   "page": 17
+  },
+  {
+   "name": "Multilingual Voice Cloning (30 lang, WER)",
+   "category": "multimodal",
+   "score": "3.17",
+   "setting": "Qwen3.8-Omni-Flash-Realtime",
+   "page": 17
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Omni-Autoresearch demo: autonomously improving Qwen2.5-Omni-3B Sichuan-dialect ASR within 12 hours"
+   ],
+   "metrics": [
+    {
+     "name": "Character error rate of the small model after autonomous research (4 rounds, 3,413 self-built training examples)",
+     "value": "25.79% -> 15.30% (~40.7% relative reduction)",
+     "page": 8
+    }
+   ],
+   "finding": "The model autonomously chose an eval set, built training data and iterated training runs to improve a smaller model. This is presented purely as a productivity capability, with no AI R&D risk framing.",
+   "quote": "we explore autoresearch: using a native omni model's multimodal understanding to drive model development autonomously.",
+   "page": 8
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "A benchmark footnote says repository-access bash commands were disabled during NL2Repo evaluation to prevent reward hacking.",
+   "quote": "To prevent reward hacking, we disable Bash commands that attempt to access the specific repository, such as pip download, pip install, and git clone.",
+   "page": 9
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "The ethics statement mentions individuals' voice and personality rights. There is no privacy evaluation.",
+   "quote": "They must not infringe on individuals' rights to their voices or other personality rights and must comply with applicable laws and regulations.",
+   "page": 18
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "A short ethics statement puts responsibility on users: inputs must be lawfully obtained, voice owners must authorize, and synthetic audio must be labelled as AI-generated where law requires. No voice-cloning misuse evaluation or technical safeguard (e.g., watermarking) is reported, even though high-fidelity voice cloning is benchmarked.",
+   "quote": "Users generating content with this model should ensure that all input data are lawfully obtained and used, and obtain authorization from the individuals whose voices are used.",
+   "page": 18
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Omni-Autoresearch: model autonomously improves a smaller model's dialect ASR (p.8)",
+  "Agentic omni understanding: Static vs Qwen Code harness comparison (p.14)"
+ ],
+ "self_reported_limitations": [],
+ "notes": "This is the first Qwen omni report in the set with an Ethics Statement (p.18), about voice rights and AI-generated audio labelling. It has no safety evaluation: no harmful content, jailbreak, prompt-injection (despite agentic harnesses and tool use) or misuse testing. The model is API-only (open_weights false)."
+}

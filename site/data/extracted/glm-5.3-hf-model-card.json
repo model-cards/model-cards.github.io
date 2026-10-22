@@ -1,0 +1,382 @@
+{
+ "id": "glm-5.3-hf-model-card",
+ "provider": "glm",
+ "model": "GLM-5.3",
+ "release_date": "2026-08-18",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for GLM-5.3 (same base as GLM-5.2, gains from post-training), highlighting stronger coding and an explicitly 'emergent cyber capability' that developed faster than expected, with state-of-the-art CyberGym and large gains on exploitation benchmarks (ExploitGym, ExploitBench). Benchmarks have detailed footnotes; released under a custom 'glm-5.3' license. Despite flagging the cyber jump, the card contains no risk assessment, safeguards or other safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "88.2",
+   "setting": "Claude Code, 6h timeout",
+   "page": null,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "Terminal-Bench 3.0",
+   "category": "coding",
+   "score": "28.3",
+   "setting": "avg@3, Claude Code",
+   "page": null,
+   "canonical": "Terminal-Bench 3.0"
+  },
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "66.9",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepSWE v1.1"
+  },
+  {
+   "name": "NL2Repo",
+   "category": "coding",
+   "score": "58.0",
+   "setting": null,
+   "page": null,
+   "canonical": "NL2Repo"
+  },
+  {
+   "name": "ProgramBench",
+   "category": "coding",
+   "score": "19.0",
+   "setting": "Almost Solved",
+   "page": null,
+   "canonical": "ProgramBench"
+  },
+  {
+   "name": "FrontierSWE",
+   "category": "coding",
+   "score": "78.1",
+   "setting": "run by Proximal",
+   "page": null,
+   "canonical": "FrontierSWE"
+  },
+  {
+   "name": "SWE-Marathon v1.1",
+   "category": "coding",
+   "score": "42.5",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-Marathon v1.1"
+  },
+  {
+   "name": "PostTrainBench",
+   "category": "other",
+   "score": "39.8",
+   "setting": "weighted avg over 3 runs",
+   "page": null,
+   "canonical": "PostTrainBench"
+  },
+  {
+   "name": "CyberGym",
+   "category": "coding",
+   "score": "84.5",
+   "setting": "Claude Code, Pass@1 over 1,507 tasks, domain whitelist",
+   "page": null,
+   "canonical": "CyberGym"
+  },
+  {
+   "name": "ExploitGym",
+   "category": "coding",
+   "score": "105 / 130",
+   "setting": "2h / 6h budgets, 869 tasks",
+   "page": null,
+   "canonical": "ExploitGym"
+  },
+  {
+   "name": "ExploitBench",
+   "category": "coding",
+   "score": "54.4",
+   "setting": "coverage over 41 tasks x 3 revisions",
+   "page": null,
+   "canonical": "ExploitBench"
+  },
+  {
+   "name": "Toolathlon Verified",
+   "category": "agentic_tool_use",
+   "score": "73.0",
+   "setting": null,
+   "page": null,
+   "canonical": "Toolathlon Verified"
+  },
+  {
+   "name": "AutomationBench v1.0.6",
+   "category": "agentic_tool_use",
+   "score": "48.2",
+   "setting": null,
+   "page": null,
+   "canonical": "AutomationBench v1.0.6"
+  },
+  {
+   "name": "Agents' Last Exam (ALE-CLI)",
+   "category": "agentic_tool_use",
+   "score": "28.5",
+   "setting": null,
+   "page": null,
+   "canonical": "Agents' Last Exam (ALE-CLI)"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "62.5",
+   "setting": "with tools, GPT-5.6-luna judge",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1769 Elo",
+   "setting": "evaluated by Artificial Analysis",
+   "page": null,
+   "canonical": "GDPval-AA v2"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CyberGym (1,507 tasks)",
+    "ExploitGym (869 tasks, 2h/6h)",
+    "ExploitBench (41 tasks)"
+   ],
+   "metrics": [
+    {
+     "name": "CyberGym Pass@1",
+     "value": "84.5 (GLM-5.2: 77.2)",
+     "page": null
+    },
+    {
+     "name": "ExploitGym 2h / 6h",
+     "value": "105 / 130 (GLM-5.2: 29 / 39)",
+     "page": null
+    },
+    {
+     "name": "ExploitBench",
+     "value": "54.4 (GLM-5.2: 24.4)",
+     "page": null
+    }
+   ],
+   "finding": "Card explicitly flags unexpectedly fast growth in cyber capability, SOTA on CyberGym and more than double GLM-5.2 on exploitation benchmarks, but presents this as a headline capability with no misuse-risk assessment, threshold or safeguard description.",
+   "quote": "Emergent Cyber Capability: As we scaled post-training, cyber capability developed faster than we expected.",
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "PostTrainBench"
+   ],
+   "metrics": [
+    {
+     "name": "PostTrainBench",
+     "value": "39.8",
+     "page": null
+    }
+   ],
+   "finding": "PostTrainBench reported only as capability; no autonomy-risk framing.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "eval-harness anti-cheating measures (domain whitelists, Git info removal, LLM-based inspection)"
+   ],
+   "metrics": [],
+   "finding": "Footnotes describe measures to prevent the agent from cheating on CyberGym/ExploitGym/ExploitBench/NL2Repo, and loosening of benchmark anti-cheat checks judged to give false positives; no measured cheating rates.",
+   "quote": "We also remove all Git-related information and apply a domain whitelist (allowing only essential domains such as pypi.org and deb.debian.org for basic tool installation) to prevent the agent from cheating.",
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Artificial Analysis (GDPval-AA v2; TPS data)",
+  "Proximal (FrontierSWE)"
+ ],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "For checks intended to prevent the use of third-party APIs, we removed the original pattern-matching-based checks, as they produced false positives",
+   "page": null
+  },
+  {
+   "text": "For `strip-clone`, the original anti-cheat checks used overly broad import detection that could reject valid implementations.",
+   "page": null
+  }
+ ],
+ "notes": "Notable shift: first GLM document to treat cyber/exploitation as a headline capability ('Emergent Cyber Capability') with dedicated exploitation benchmarks, yet still no safety framing. License changed from MIT to a custom 'glm-5.3' license (license: other); license terms are not in the card. Manifest notes a NIST CAISI cyber assessment exists (third-party, not in this doc)."
+}

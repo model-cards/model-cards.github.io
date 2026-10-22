@@ -1,0 +1,359 @@
+{
+ "id": "glm-5.2-hf-model-card",
+ "provider": "glm",
+ "model": "GLM-5.2",
+ "release_date": "2026-06-16",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for GLM-5.2, a long-horizon flagship with a 1M-token context, flexible thinking effort, IndexShare sparse-attention indexer reuse and an improved MTP layer, released under MIT 'with no regional limits'. Includes a reasoning/coding/agentic benchmark table with detailed footnotes; several long-horizon coding evals run by third parties. No safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "40.5",
+   "setting": "text-only",
+   "page": null
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "54.7",
+   "setting": "with tools",
+   "page": null
+  },
+  {
+   "name": "CritPt",
+   "category": "reasoning_knowledge",
+   "score": "20.9",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "AIME 2026",
+   "category": "math",
+   "score": "99.2",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "HMMT Nov 2025",
+   "category": "math",
+   "score": "94.4",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "HMMT Feb 2026",
+   "category": "math",
+   "score": "92.5",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "91.0",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "91.2",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "62.1",
+   "setting": "OpenHands, 400K context",
+   "page": null
+  },
+  {
+   "name": "NL2Repo",
+   "category": "coding",
+   "score": "48.9",
+   "setting": "anti-hacking rule/LLM judge",
+   "page": null
+  },
+  {
+   "name": "DeepSWE",
+   "category": "coding",
+   "score": "46.2",
+   "setting": "mini-swe-agent, no internet",
+   "page": null
+  },
+  {
+   "name": "ProgramBench",
+   "category": "coding",
+   "score": "63.7",
+   "setting": "Claude Code, 200 instances",
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "81.0",
+   "setting": "Terminus-2",
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "82.7",
+   "setting": "best reported harness",
+   "page": null
+  },
+  {
+   "name": "FrontierSWE",
+   "category": "coding",
+   "score": "74.4 (Dominance)",
+   "setting": "run by Proximal",
+   "page": null
+  },
+  {
+   "name": "PostTrainBench",
+   "category": "other",
+   "score": "34.3",
+   "setting": "run by PostTrainBench",
+   "page": null
+  },
+  {
+   "name": "SWE-Marathon",
+   "category": "coding",
+   "score": "13.0",
+   "setting": "run by Abundant AI",
+   "page": null
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "76.8",
+   "setting": "public set, Gemini-3.0-Pro judge",
+   "page": null
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "48.2",
+   "setting": "listed as Tool-Decathlon",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "PostTrainBench (third-party run)"
+   ],
+   "metrics": [
+    {
+     "name": "PostTrainBench",
+     "value": "34.3",
+     "page": null
+    }
+   ],
+   "finding": "PostTrainBench (agents post-training models, an AI R&D-style task) is reported purely as a capability score; no autonomy-risk framing.",
+   "quote": "The evaluation was conducted by [PostTrainBench](https://posttrainbench.com) with 1M context length, max effort level, and 128K maximum output tokens.",
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "anti-hacking judge in NL2Repo eval harness"
+   ],
+   "metrics": [],
+   "finding": "Eval-harness safeguard only: rule-based and LLM judges used during NL2Repo to block 'hacking' behaviours; no reported rate of such behaviour.",
+   "quote": "To prevent hacking, we use rule-based and a LLM-based judgement to prevent malicious behaviors (e.g., unauthorized pip or curl operations).",
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Proximal (FrontierSWE)",
+  "PostTrainBench",
+  "Abundant AI (SWE-Marathon)"
+ ],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "Third-party evaluators are capability-only. Explicit 'Pure Open: An MIT open-source license — no regional limits' framing. No CyberGym in this card. No safety/misuse/refusal content."
+}

@@ -1,0 +1,446 @@
+{
+ "id": "gpt-5-2-system-card",
+ "provider": "openai",
+ "model": "GPT-5.2",
+ "release_date": "2025-12-11",
+ "doc_type": "addendum",
+ "length_pages": 27,
+ "summary": "Update to the GPT-5 system card for GPT-5.2 Instant and Thinking. Reports baseline safety evals (production disallowed content, filtered StrongReject, prompt injection, vision, production-traffic hallucination, HealthBench, deception, cyber safety, multilingual MMLU, first-person fairness) and Preparedness evals for bio/chem, cyber and AI self-improvement with Irregular and Apollo Research external evaluations.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High capability in Biological and Chemical (precautionary); not High in cyber or AI self-improvement",
+  "quote": "we are continuing to treat gpt-5.2-thinking as High capability in the Biological and Chemical domain.",
+  "page": 12
+ },
+ "capability_benchmarks": [
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "0.633 (thinking) / 0.476 (instant)",
+   "setting": null,
+   "page": 9
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "0.420 (thinking)",
+   "setting": null,
+   "page": 9
+  },
+  {
+   "name": "MMLU (multilingual, 14 languages)",
+   "category": "multilingual",
+   "score": "0.808-0.913 per language (thinking)",
+   "setting": "0-shot CoT",
+   "page": 11
+  },
+  {
+   "name": "Tacit knowledge and troubleshooting",
+   "category": "other",
+   "score": "83.33% if refusals counted as passes",
+   "setting": null,
+   "page": 15
+  },
+  {
+   "name": "Irregular v1 atomic challenges (VR&E / Network / Evasion)",
+   "category": "other",
+   "score": "83% / 100% / 73%",
+   "setting": "1000 turns",
+   "page": 21
+  },
+  {
+   "name": "OpenAI-Proof Q&A",
+   "category": "other",
+   "score": "below 8% (gpt-5.1-codex-max highest at 8%)",
+   "setting": null,
+   "page": 26
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Multimodal troubleshooting virology (SecureBio)",
+    "ProtocolQA Open-Ended",
+    "Tacit knowledge and troubleshooting (Gryphon)",
+    "TroubleshootingBench"
+   ],
+   "metrics": [
+    {
+     "name": "Tacit knowledge (refusals as passes)",
+     "value": "83.33%",
+     "page": 15
+    }
+   ],
+   "finding": "Treated as High; no definitive evidence of novice uplift but models 'on the cusp'. Below expert consensus on ProtocolQA and tacit knowledge; highest on TroubleshootingBench.",
+   "quote": "these models remain on the cusp of being able to reach this capability.",
+   "page": 13,
+   "covered": true
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs (pass@12)",
+    "CVE-Bench",
+    "Cyber Range",
+    "Irregular external",
+    "cyber safety policy-compliance eval"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range",
+     "value": "PASS 6/9 scenarios (FAIL Financial Capital, Leaked Token, Medium C2)",
+     "page": 20
+    },
+    {
+     "name": "Irregular VR&E / Network / Evasion success",
+     "value": "83% / 100% / 73%",
+     "page": 21
+    },
+    {
+     "name": "CVE-Bench",
+     "value": "+8pp vs gpt-5.1-thinking, -11pp vs gpt-5.1-codex-max",
+     "page": 19
+    }
+   ],
+   "finding": "Considerably better than gpt-5-thinking, around gpt-5.1-codex-max level, not meeting High.",
+   "quote": "The gpt-5.2-thinking model series does not meet the threshold for High cyber capability.",
+   "page": 16,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "substantial",
+   "evals": [
+    "OpenAI PRs",
+    "MLE-Bench-30",
+    "PaperBench-10",
+    "OpenAI-Proof Q&A"
+   ],
+   "finding": "Similar to gpt-5.1-codex-max, top on OpenAI PRs; High (mid-career research engineer) ruled out.",
+   "quote": "The High capability threshold is defined to be equivalent to a performant mid-career research engineer and performance in the evaluations below indicate we can rule this out for gpt-5.2-thinking.",
+   "page": 21,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks",
+    "image input evals",
+    "cyber safety compliance (production traffic, synthetic)"
+   ],
+   "metrics": [
+    {
+     "name": "illicit (thinking)",
+     "value": "0.953",
+     "page": 5
+    },
+    {
+     "name": "hate (instant)",
+     "value": "0.802 (vs 0.897 5.1-instant)",
+     "page": 5
+    },
+    {
+     "name": "cyber safety production traffic compliance",
+     "value": "0.966",
+     "page": 10
+    }
+   ],
+   "finding": "On par or better than 5.1 generally; GPT-5.2 Instant refuses fewer mature sexualized-text requests, mitigated by system-level safeguards.",
+   "quote": "we have observed through internal testing that GPT-5.2 Instant generally refuses fewer requests for mature content, specifically sexualized text output.",
+   "page": 5,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "mention",
+   "evals": [
+    "cyber safety concreteness on benign requests"
+   ],
+   "finding": "Minimal regression in concreteness on benign cyber requests and small drop for high-risk dual-use requests.",
+   "quote": "We observe minimal regression in concreteness on benign cyber requests",
+   "page": 11,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject (filtered to remove saturated examples)"
+   ],
+   "metrics": [
+    {
+     "name": "not_unsafe thinking / instant",
+     "value": "0.975 / 0.878",
+     "page": 6
+    }
+   ],
+   "finding": "Thinking improves; Instant regresses vs 5.1-instant partly due to grader issues and an illicit-category regression.",
+   "quote": "Note we filtered the original set of StrongReject examples to remove examples where all our models including older 4o were consistently safe, as it was otherwise highly saturated.",
+   "page": 6,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "light",
+   "evals": [
+    "Agent JSK (email connectors)",
+    "PlugInject (function calls)"
+   ],
+   "metrics": [
+    {
+     "name": "Agent JSK thinking / instant",
+     "value": "0.978 / 0.997",
+     "page": 6
+    },
+    {
+     "name": "PlugInject",
+     "value": "0.996 / 0.929",
+     "page": 6
+    }
+   ],
+   "finding": "Large improvements, essentially saturating these evals, though they are training-set splits that overrepresent robustness.",
+   "quote": "Both of these evaluations are splits of the data we used for training, so don't represent a model's ability to generalize to new attacks.",
+   "page": 6,
+   "covered": true
+  },
+  "deception_scheming": {
+   "depth": "substantial",
+   "evals": [
+    "Production traffic deception (CoT monitors on A/B traffic)",
+    "Production Deception - Adversarial",
+    "CharXiv Missing Image",
+    "Browsing Broken Tools",
+    "Coding Deception (impossible tasks)",
+    "Apollo Research scheming/sabotage/sandbagging"
+   ],
+   "metrics": [
+    {
+     "name": "Production traffic deception",
+     "value": "1.6% (vs 7.7% gpt-5.1-thinking)",
+     "page": 10
+    },
+    {
+     "name": "CharXiv Missing Image strict",
+     "value": "88.8%",
+     "page": 10
+    },
+    {
+     "name": "Coding Deception",
+     "value": "25.6%",
+     "page": 10
+    }
+   ],
+   "finding": "Production deception falls sharply but elevated in missing-image and coding settings; Apollo finds scheming comparable to peers, possibly higher eval awareness, unlikely catastrophic.",
+   "quote": "In real production traffic, GPT-5.2 Thinking was deceptive 1.6% of the time, significantly lower than GPT-5.1 and slightly lower than GPT-5.",
+   "page": 10,
+   "covered": true
+  },
+  "alignment_audit": {
+   "depth": "mention",
+   "evals": [
+    "Apollo Research (self-preservation, covert subversion)"
+   ],
+   "finding": "Apollo observed low covert subversion and no sabotage or self-preservation behaviors.",
+   "quote": "does not engage in sabotage or self-preservation behaviors in these settings.",
+   "page": 26,
+   "covered": true,
+   "metrics": []
+  },
+  "reward_hacking": {
+   "depth": "mention",
+   "evals": [
+    "production deception categories include reward hacking"
+   ],
+   "finding": "Reward hacking counted as a deception category in production monitoring; no separate metric.",
+   "quote": null,
+   "page": 10,
+   "covered": true,
+   "metrics": []
+  },
+  "honesty_hallucination": {
+   "depth": "light",
+   "evals": [
+    "production-representative factuality eval with web-enabled LLM grader",
+    "domain subsets (business, finance, legal, academic, news)"
+   ],
+   "finding": "GPT-5.2 Thinking on par or slightly better; under 1% hallucination with browsing across 5 domains (figures).",
+   "quote": "GPT-5.2 Thinking performs especially well with browsing enabled, achieving <1% hallucination rate across all 5 domains.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "bias_fairness": {
+   "depth": "light",
+   "evals": [
+    "First-person fairness evaluation (name-based gender stereotypes)"
+   ],
+   "metrics": [
+    {
+     "name": "harm_overall",
+     "value": "0.00997 (vs 0.0128)",
+     "page": 12
+    }
+   ],
+   "finding": "On par with gpt-5.1-thinking.",
+   "quote": "We see gpt-5.2-thinking performs generally on par with gpt-5.1-thinking.",
+   "page": 12,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production benchmark",
+    "under-18 content protections",
+    "age prediction model"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors thinking / instant",
+     "value": "0.970 / 0.935",
+     "page": 5
+    }
+   ],
+   "finding": "Additional protections for known minors; age prediction rollout in early stages.",
+   "quote": "We are in the early stages of rolling out our age prediction model so that we can automatically apply these protections to accounts for users we believe to be under 18.",
+   "page": 5,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "self-harm, mental health, emotional reliance production benchmarks",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "mental health thinking / instant",
+     "value": "0.915 / 0.995",
+     "page": 5
+    },
+    {
+     "name": "emotional reliance thinking",
+     "value": "0.955",
+     "page": 5
+    }
+   ],
+   "finding": "Notable improvements on suicide/self-harm, mental health and emotional reliance vs GPT-5.1.",
+   "quote": "They especially improve on Suicide/Self-Harm, Mental Health, and Emotional Reliance offline evals",
+   "page": 5,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal data production benchmark",
+    "PII filtering in training data"
+   ],
+   "metrics": [
+    {
+     "name": "personal data thinking",
+     "value": "0.966",
+     "page": 5
+    }
+   ],
+   "finding": "Single row plus mention of training-data PII filtering.",
+   "quote": "We use advanced data filtering processes to reduce personal information from training data.",
+   "page": 4,
+   "covered": true
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "finding": "Only multilingual MMLU capability reported; no safety evals in other languages.",
+   "quote": null,
+   "page": 11,
+   "evals": [],
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "light",
+   "evals": [
+    "system-level safeguards for mature content",
+    "bio safeguards from GPT-5",
+    "cyber monitoring and enforcement"
+   ],
+   "finding": "References GPT-5 safeguards, new ChatGPT system-level safeguards for sexual content, and scaled cyber monitoring.",
+   "quote": "For other users, we have deployed system-level safeguards in ChatGPT intended to mitigate this behavior.",
+   "page": 5,
+   "covered": true,
+   "metrics": []
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "HealthBench (health safety)"
+   ],
+   "metrics": [
+    {
+     "name": "HealthBench Consensus thinking",
+     "value": "0.945",
+     "page": 9
+    }
+   ],
+   "finding": "Health performance and safety similar to GPT-5.1.",
+   "quote": "we observe that GPT-5.2 models perform similarly to their respective GPT-5.1 models in health performance and safety.",
+   "page": 9,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Irregular",
+  "Apollo Research",
+  "Gryphon Scientific (eval design)",
+  "SecureBio (eval data)"
+ ],
+ "notable_new_eval_methods": [
+  "Deception suite incl. production-traffic deception measured by CoT monitors on A/B traffic, CharXiv missing-image, broken browsing tools, impossible coding tasks (p.9-10)",
+  "Production-representative hallucination eval with web-enabled grader and domain subsets (p.7)",
+  "Filtered StrongReject removing saturated examples (p.6)",
+  "Cyber safety policy-compliance eval on production and synthetic data (p.10)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Prompt injection evals are splits of training data and overrepresent robustness against unknown attacks.",
+   "page": 6
+  },
+  {
+   "text": "Evaluations represent a lower bound for capabilities; bootstrap CIs can be overly tight for small datasets.",
+   "page": 12
+  },
+  {
+   "text": "Grader issues caused false positives in vision self-harm and StrongReject.",
+   "page": 7
+  },
+  {
+   "text": "StrongReject was highly saturated, requiring filtering.",
+   "page": 6
+  }
+ ],
+ "notes": "No METR evaluation this time. Many Preparedness results only in figures."
+}

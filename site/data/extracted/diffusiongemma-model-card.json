@@ -1,0 +1,339 @@
+{
+ "id": "diffusiongemma-model-card",
+ "provider": "gemini",
+ "model": "DiffusionGemma",
+ "release_date": "2026-06-10",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Model card for DiffusionGemma, an open 25.2B-total/3.8B-active encoder-decoder MoE text diffusion model (block-autoregressive denoising) for faster generation. Reports capability benchmarks compared with Gemma 4 26B A4B, usage best practices, data filtering, and a templated qualitative ethics & safety section with no numbers.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "77.6%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "AIME 2026",
+   "category": "math",
+   "score": "69.1%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "AIME 2026"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "69.1%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "Codeforces",
+   "category": "coding",
+   "score": "1429 Elo",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "Codeforces"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "73.2%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "56.2%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "τ²-bench"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "11.0%",
+   "setting": "no tools",
+   "page": 3,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "11.9%",
+   "setting": "with search",
+   "page": 3,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "BIG-Bench Extra Hard",
+   "category": "reasoning_knowledge",
+   "score": "47.6%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "BIG-Bench Extra Hard"
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "81.5%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "MMMLU"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "54.3%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "0.319",
+   "setting": "avg edit distance, lower is better",
+   "page": 3,
+   "canonical": "OmniDocBench 1.5"
+  },
+  {
+   "name": "MATH-Vision",
+   "category": "multimodal",
+   "score": "70.5%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "MATH-Vision"
+  },
+  {
+   "name": "MedXPertQA MM",
+   "category": "multimodal",
+   "score": "49.0%",
+   "setting": "DiffusionGemma 26B A4B, EB sampler",
+   "page": 3,
+   "canonical": "MedXPertQA MM"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "32.0%",
+   "setting": "128k average",
+   "page": 4,
+   "canonical": "MRCR v2 (8-needle)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Automated and human safety evaluations (unnamed), without safety filters"
+   ],
+   "metrics": [],
+   "finding": "Qualitative claim of major content-safety improvements vs Gemma 3/3n and minimal policy violations; no numbers.",
+   "quote": "For all areas of safety testing, we saw major improvements in all categories of content safety relative to previous generations of Gemma models.",
+   "page": 8
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Claims unjustified refusals kept low; no numbers.",
+   "quote": "significantly outperforms Gemma 3 and 3n models in improving safety, while keeping unjustified refusals low.",
+   "page": 8
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Factual inaccuracy listed as limitation.",
+   "quote": "It may generate incorrect or outdated factual statements.",
+   "page": 10
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Bias risk discussed; no bias evals reported despite text referencing them.",
+   "quote": "VLMs trained on large-scale, real-world text and image data can reflect socio-cultural biases embedded in the training material.",
+   "page": 10
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM filtering in data prep; CSAM a safety policy; no results.",
+   "quote": "Rigorous CSAM (Child Sexual Abuse Material) filtering was applied at multiple stages in the data preparation process",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Personal/sensitive data filtered from training data.",
+   "quote": "Models were trained on data filtered for removal of certain personal information and other sensitive data.",
+   "page": 11
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Misinformation/misuse risk discussed.",
+   "quote": "VLMs can be misused to generate text that is false, misleading, or harmful.",
+   "page": 11
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Safeguards delegated to developers.",
+   "quote": "Developers are encouraged to exercise caution and implement appropriate content safety safeguards based on their specific product policies and application use cases.",
+   "page": 11
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Testing intentionally conducted without safety filters.",
+   "page": 8
+  }
+ ],
+ "notes": "Ethics/safety section is near-verbatim Gemma 4 template; no FSF assessment for an open-weight model. No diffusion-specific safety analysis."
+}

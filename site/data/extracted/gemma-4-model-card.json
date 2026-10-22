@@ -1,0 +1,355 @@
+{
+ "id": "gemma-4-model-card",
+ "provider": "gemini",
+ "model": "Gemma 4",
+ "release_date": "2026-04-02",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face model card for the Gemma 4 open-weight family (E2B, E4B, 12B, 26B A4B MoE, 31B). Covers architecture, capability benchmarks across sizes, usage best practices, training data filtering, and a brief qualitative ethics & safety section claiming major content-safety improvements over Gemma 3 with no numbers reported.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "85.2%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "AIME 2026",
+   "category": "math",
+   "score": "89.2%",
+   "setting": "Gemma 4 31B, no tools",
+   "page": 5,
+   "canonical": "AIME 2026"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "80.0%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "Codeforces",
+   "category": "coding",
+   "score": "2150 Elo",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "Codeforces"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "84.3%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "76.9%",
+   "setting": "Gemma 4 31B, average over 3",
+   "page": 5,
+   "canonical": "τ²-bench"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "19.5%",
+   "setting": "Gemma 4 31B, no tools",
+   "page": 5,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "26.5%",
+   "setting": "Gemma 4 31B, with search",
+   "page": 5,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "BIG-Bench Extra Hard",
+   "category": "reasoning_knowledge",
+   "score": "74.4%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "BIG-Bench Extra Hard"
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "88.4%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "MMMLU"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "76.9%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "0.131",
+   "setting": "Gemma 4 31B, avg edit distance, lower is better",
+   "page": 5,
+   "canonical": "OmniDocBench 1.5"
+  },
+  {
+   "name": "MATH-Vision",
+   "category": "multimodal",
+   "score": "85.6%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "MATH-Vision"
+  },
+  {
+   "name": "MedXPertQA MM",
+   "category": "multimodal",
+   "score": "61.3%",
+   "setting": "Gemma 4 31B",
+   "page": 5,
+   "canonical": "MedXPertQA MM"
+  },
+  {
+   "name": "CoVoST",
+   "category": "multimodal",
+   "score": "38.5",
+   "setting": "Gemma 4 12B Unified, excl. Chinese",
+   "page": 6,
+   "canonical": "CoVoST"
+  },
+  {
+   "name": "FLEURS",
+   "category": "multimodal",
+   "score": "0.069 WER",
+   "setting": "Gemma 4 12B Unified, excl. Chinese, lower is better",
+   "page": 6,
+   "canonical": "FLEURS"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "66.4%",
+   "setting": "Gemma 4 31B, 128k average",
+   "page": 6,
+   "canonical": "MRCR v2 (8-needle)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Automated and human safety evaluations (unnamed), text-to-text and image-to-text, without safety filters"
+   ],
+   "metrics": [],
+   "finding": "Qualitative claim of minimal policy violations and major improvements over Gemma 3/3n across sizes; no numbers.",
+   "quote": "For both text-to-text and image-to-text, and across all model sizes, the model produced minimal policy violations, and showed significant improvements over previous Gemma models' performance.",
+   "page": 11
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Claims unjustified refusals kept low; no numbers.",
+   "quote": "Overall, Gemma 4 models significantly outperform Gemma 3 and 3n models in improving safety, while keeping unjustified refusals low.",
+   "page": 11
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Factual inaccuracy listed as limitation.",
+   "quote": "They may generate incorrect or outdated factual statements.",
+   "page": 13
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Bias risk discussed; claims post-training evaluations mitigate bias but none reported.",
+   "quote": "Gemma 4 models underwent careful scrutiny, input data pre-processing, and post-training evaluations as reported in this card to help mitigate the risk of these biases.",
+   "page": 13
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM filtering applied at multiple stages of data preparation; CSAM a safety policy. No eval results.",
+   "quote": "Rigorous CSAM (Child Sexual Abuse Material) filtering was applied at multiple stages in the data preparation process",
+   "page": 10
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Training data filtered for personal information; no eval.",
+   "quote": "Models were trained on data filtered for removal of certain personal information and other sensitive data.",
+   "page": 14
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Misinformation/misuse risk discussed; points to Responsible Generative AI Toolkit.",
+   "quote": "VLMs can be misused to generate text that is false, misleading, or harmful.",
+   "page": 13
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Safeguards delegated to developers; testing done without safety filters.",
+   "quote": "Developers are encouraged to exercise caution and implement appropriate content safety safeguards based on their specific product policies and application use cases.",
+   "page": 13
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Testing conducted without safety filters.",
+   "page": 11
+  }
+ ],
+ "notes": "Despite being an HF card the md contains page markers; pages used where available. Claims 'same rigorous safety evaluations as our proprietary Gemini models' but no results or FSF assessment reported. Bias section says evaluations are 'reported in this card' but none are."
+}

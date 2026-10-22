@@ -1,0 +1,488 @@
+{
+ "id": "gemini-3-pro-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3 Pro",
+ "release_date": "2025-11-18",
+ "doc_type": "model_card",
+ "length_pages": 10,
+ "summary": "Model card for Gemini 3 Pro, a sparse MoE natively multimodal reasoning model with optional Deep Think mode. Covers architecture, data, distribution, a capability benchmark table versus competitors, automated content-safety deltas versus Gemini 2.5 Pro, human red-teaming summary, and a Frontier Safety Framework summary table finding no CCLs reached.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (CBRN, Cyber, Harmful Manipulation, ML R&D, Misalignment); cyber alert threshold met",
+  "quote": "We evaluated Gemini 3 Pro as outlined in our latest Frontier Safety Framework (September-2025), and found that it did not reach any critical capability levels as outlined in the table below:",
+  "page": 9
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "37.5%",
+   "setting": "No tools",
+   "page": 5,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "45.8%",
+   "setting": "With search and code execution",
+   "page": 5,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "ARC-AGI-2",
+   "category": "reasoning_knowledge",
+   "score": "31.1%",
+   "setting": "ARC Prize Verified",
+   "page": 5,
+   "canonical": "ARC-AGI-2"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "91.9%",
+   "setting": "No tools",
+   "page": 5,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "95.0%",
+   "setting": "No tools",
+   "page": 5,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "100%",
+   "setting": "With code execution",
+   "page": 5,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "MathArena Apex",
+   "category": "math",
+   "score": "23.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "MathArena Apex"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "81.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "ScreenSpot-Pro",
+   "category": "multimodal",
+   "score": "72.7%",
+   "setting": null,
+   "page": 5,
+   "canonical": "ScreenSpot-Pro"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "81.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "0.115",
+   "setting": "Overall edit distance, lower is better",
+   "page": 5,
+   "canonical": "OmniDocBench 1.5"
+  },
+  {
+   "name": "Video-MMMU",
+   "category": "multimodal",
+   "score": "87.6%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Video-MMMU"
+  },
+  {
+   "name": "LiveCodeBench Pro",
+   "category": "coding",
+   "score": "2,439 Elo",
+   "setting": null,
+   "page": 5,
+   "canonical": "LiveCodeBench Pro"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "54.2%",
+   "setting": "Terminus 2 agent",
+   "page": 5,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "76.2%",
+   "setting": "Single attempt",
+   "page": 5,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "85.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "τ²-bench"
+  },
+  {
+   "name": "Vending-Bench 2",
+   "category": "agentic_tool_use",
+   "score": "$5,478.16",
+   "setting": "Net worth (mean)",
+   "page": 5,
+   "canonical": "Vending-Bench 2"
+  },
+  {
+   "name": "FACTS Benchmark Suite",
+   "category": "reasoning_knowledge",
+   "score": "70.5%",
+   "setting": null,
+   "page": 5,
+   "canonical": "FACTS Benchmark Suite"
+  },
+  {
+   "name": "SimpleQA Verified",
+   "category": "reasoning_knowledge",
+   "score": "72.1%",
+   "setting": null,
+   "page": 5,
+   "canonical": "SimpleQA Verified"
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "91.8%",
+   "setting": null,
+   "page": 5,
+   "canonical": "MMMLU"
+  },
+  {
+   "name": "Global PIQA",
+   "category": "multilingual",
+   "score": "93.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Global PIQA"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "77.0%",
+   "setting": "128k average",
+   "page": 5,
+   "canonical": "MRCR v2 (8-needle)"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "26.3%",
+   "setting": "1M pointwise",
+   "page": 5,
+   "canonical": "MRCR v2 (8-needle)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF CBRN evaluation (summary)"
+   ],
+   "metrics": [],
+   "finding": "Model provides accurate, occasionally actionable information but not novel/complete enough to significantly uplift low-medium resourced actors; CBRN Uplift Level 1 CCL not reached.",
+   "quote": "Gemini 3 Pro provides accurate and occasionally actionable information but generally fails to offer novel or sufficiently complete and detailed instructions",
+   "page": 10
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF cyber key skills benchmark v1 hard / v2"
+   ],
+   "metrics": [
+    {
+     "name": "Key skills v1 hard challenges solved",
+     "value": "11/12",
+     "page": 10
+    },
+    {
+     "name": "Key skills v2 challenges solved end-to-end",
+     "value": "0/13",
+     "page": 10
+    }
+   ],
+   "finding": "Alert threshold met for cyber but Uplift Level 1 CCL not reached.",
+   "quote": "v1 hard challenges: 11/12 challenges solved; v2 challenges: 0/13 solved end-to-end. Alert threshold met.",
+   "page": 10
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "RE-Bench"
+   ],
+   "metrics": [],
+   "finding": "Better than Gemini 2.5 on RE-Bench tasks but aggregate substantially below alert threshold; ML R&D CCLs not reached.",
+   "quote": "However the aggregate score is still substantially below the alert threshold for the CCLs.",
+   "page": 10
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs 2.5 Pro",
+     "value": "-10.4%",
+     "page": 8
+    },
+    {
+     "name": "Image to Text Safety vs 2.5 Pro",
+     "value": "+3.1% (non-egregious)",
+     "page": 8
+    },
+    {
+     "name": "Tone vs 2.5 Pro",
+     "value": "+7.9%",
+     "page": 8
+    }
+   ],
+   "finding": "Automated content-safety evals reported as relative deltas vs Gemini 2.5 Pro; manual review said losses were false positives or non-egregious.",
+   "quote": "Overall, Gemini 3 Pro outperforms Gemini 2.5 Pro across both safety and tone, while keeping unjustified refusals low.",
+   "page": 8
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs 2.5 Pro",
+     "value": "+3.7% (non-egregious)",
+     "page": 8
+    }
+   ],
+   "finding": "Single relative delta on borderline-prompt refusals.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 8
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming",
+    "Automated red teaming"
+   ],
+   "metrics": [],
+   "finding": "Jailbreak vulnerability named as main risk; improved vs 2.5 Pro but no numbers.",
+   "quote": "a) jailbreak vulnerability (improved compared to Gemini 2.5 Pro but still an open research problem)",
+   "page": 9
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF misalignment (exploratory) situational awareness and stealth challenges"
+   ],
+   "metrics": [
+    {
+     "name": "Situational awareness challenges solved",
+     "value": "3/11",
+     "page": 10
+    },
+    {
+     "name": "Stealth challenges solved",
+     "value": "1/4",
+     "page": 10
+    }
+   ],
+   "finding": "Instrumental Reasoning Levels 1+2 CCL not reached.",
+   "quote": "Agent solves 3/11 situational awareness challenges and 1/4 stealth challenges.",
+   "page": 10
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "FACTS Benchmark Suite",
+    "SimpleQA Verified"
+   ],
+   "metrics": [],
+   "finding": "Hallucination listed as known limitation; factuality only measured via capability benchmarks.",
+   "quote": "Gemini 3 Pro may exhibit some of the general limitations of foundation models, such as hallucinations.",
+   "page": 6
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied required launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3 Pro satisfied required launch thresholds",
+   "page": 9
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF harmful manipulation evaluation"
+   ],
+   "metrics": [],
+   "finding": "Manipulative efficacy improves on non-AI baseline but no significant uplift vs prior models; alert thresholds not reached.",
+   "quote": "Model manipulative efficacy improves on non-generative AI baseline, but shows no significant uplift versus prior models and does not reach alert thresholds.",
+   "page": 10
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs 2.5 Pro",
+     "value": "+0.2% (non-egregious)",
+     "page": 8
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 8
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Lists lifecycle mitigations including dataset filtering, conditional pre-training, SFT, RL from human and critic feedback, product-level safety filtering.",
+   "quote": "product-level mitigations such as safety filtering.",
+   "page": 9
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Red-teaming scope expanded beyond strict policies (p.9)",
+  "Harmful Manipulation and Misalignment (exploratory) FSF domains reported (p.10)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Safety eval results computed with improved evaluations and not directly comparable with previous model cards.",
+   "page": 8
+  },
+  {
+   "text": "Variation expected in automated safety eval results; flagged content manually reviewed.",
+   "page": 8
+  },
+  {
+   "text": "Possible degradation in multi-turn conversations.",
+   "page": 9
+  }
+ ],
+ "notes": "Safety results given only as relative % deltas vs Gemini 2.5 Pro; note sign conventions (Text to Text Safety -10.4% is described as an improvement in overall framing). Points to separate FSF report."
+}

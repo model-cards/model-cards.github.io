@@ -1,0 +1,227 @@
+{
+ "id": "gemini-3-8-audio-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.8 Audio",
+ "release_date": "2026-09-24",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.8 Audio (Live, Live Extended Thinking, with Live Avatar video generation, Flash TTS, Flash-Lite TTS). No benchmark numbers (links to methodology), safety evaluation types listed without results including a distinct child safety evaluation, and frontier safety inherited from Gemini 3.7 Flash.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No T/CCL reached (inferred from Gemini 3.7 Flash)",
+  "quote": "we are confident that Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, Gemini 3.8 Flash TTS, or Gemini 3.8 Flash-Lite TTS are not likely to reach any T/CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash.",
+   "quote": "we are confident that Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, Gemini 3.8 Flash TTS, or Gemini 3.8 Flash-Lite TTS are not likely to reach any T/CCLs.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash.",
+   "quote": "we are confident that Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, Gemini 3.8 Flash TTS, or Gemini 3.8 Flash-Lite TTS are not likely to reach any T/CCLs.",
+   "page": 7
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from Gemini 3.7 Flash"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash.",
+   "quote": "we are confident that Gemini 3.8 Live, Gemini 3.8 Live Extended Thinking, Gemini 3.8 Flash TTS, or Gemini 3.8 Flash-Lite TTS are not likely to reach any T/CCLs.",
+   "page": 7
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Training/development evaluations",
+    "Human Evaluations"
+   ],
+   "metrics": [],
+   "finding": "Evaluation types listed, no results.",
+   "quote": "A range of evaluations and red teaming activities were conducted to help improve the model and inform decision-making.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Jailbreak resistance named as ongoing work.",
+   "quote": "we are continually working to improve jailbreak resistance and have recently strengthened the mitigations across Frontier Safety.",
+   "page": 5
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Child Safety Evaluations"
+   ],
+   "metrics": [],
+   "finding": "Child safety evaluations conducted (now listed as a distinct evaluation type); no results.",
+   "quote": "**Child Safety Evaluations** were conducted using techniques developed by expert teams to protect children online",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Live Avatar supports only a few minutes of continuous interaction.",
+   "page": 5
+  }
+ ],
+ "notes": "Live Avatar generates talking-head video from configured images, but the document reports no impersonation/deepfake-specific safety evaluation or provenance measures."
+}

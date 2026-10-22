@@ -1,0 +1,294 @@
+{
+ "id": "gemini-robotics-2-safety-report",
+ "provider": "gemini",
+ "model": "Gemini Robotics 2",
+ "release_date": "2026-07-29",
+ "doc_type": "safety_report",
+ "length_pages": 18,
+ "summary": "Safety evaluation report for Gemini Robotics 2 (mainly the ER 2 embodied reasoning agent). It introduces the ASIMOV-Agentic benchmark for physical and semantic robot safety: constraint-following refusal, human-proximity stopping, safety tool calling, VLA feasibility awareness, instruction ambiguity and scene uncertainty. It also reports real-world safe-stopping tests on the Apptronik Apollo2 humanoid. It does not use a frontier safety framework and does not cover misuse or catastrophic-risk domains.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": "this report focuses primarily on the high-level semantic reasoning and orchestration capabilities of the Agent.",
+  "page": 2
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "ASIMOV-Agentic 2.1 Unsafe Task Refusal and Safety Constraint Following (Text, Pointing, Bounding Box, Tool-use modalities)"
+   ],
+   "metrics": [
+    {
+     "name": "Text-modality safety classification accuracy (all frontier models)",
+     "value": ">= 96.0%",
+     "page": 3
+    }
+   ],
+   "finding": "Embodied unsafe-task refusal under physical and application constraints is reliable in text form, but accuracy varies more across models when grounded into spatial predictions or tool calls.",
+   "quote": "This suggests a gap between semantically understanding a constraint (Text) and physically acting on it (Tool Use, Spatial).",
+   "page": 3
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "ASIMOV-Agentic 2.5 instruction ambiguity (clarification vs fulfilment rates)",
+    "human-proximity stop false-positive rate"
+   ],
+   "metrics": [],
+   "finding": "Shows a helpfulness-safety tradeoff: models tuned to express uncertainty over-request human help on unambiguous instructions, and low-FNR stop policies cause unnecessary stops.",
+   "quote": "Conversely, systems tuned to express uncertainty may over-request human help even when provided with unambiguous instructions.",
+   "page": 9
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "'attention jailbreaking' planned for future benchmark versions"
+   ],
+   "metrics": [],
+   "finding": "Robustness of safety-message attention to attention jailbreaking is named as future work only.",
+   "quote": "Future versions of our benchmark will test whether this robustness holds with increasing context length and “attention jailbreaking” [10]",
+   "page": 6
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "ASIMOV-Agentic 2.6 Obfuscated Instrument Reading (readable-adversarial vs unreadable gauges)"
+   ],
+   "metrics": [],
+   "finding": "Frontier models tend to verbalize uncertainty rather than hallucinate readings on unreadable instruments, trading off some helpfulness.",
+   "quote": "Encouragingly, from a safety standpoint, frontier models do seem to prioritize hallucination avoidance in unreadable or hard to read images.",
+   "page": 10
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Explicitly out of scope; fairness is described as ongoing research.",
+   "quote": "The benchmark above is designed strictly for physical safety  \\( [8, 9] \\)  and does not currently encompass privacy and fairness considerations.",
+   "page": 5
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Explicitly out of scope; data minimization is described as ongoing research.",
+   "quote": "The benchmark above is designed strictly for physical safety  \\( [8, 9] \\)  and does not currently encompass privacy and fairness considerations.",
+   "page": 5
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Humanoid safe stopping on Apptronik Apollo2 (real-world lab)",
+    "Safety Tool Calling (robot_stop on safety messages)"
+   ],
+   "metrics": [
+    {
+     "name": "Human detection accuracy (ER 2, lab)",
+     "value": "99%",
+     "page": 5
+    },
+    {
+     "name": "Reliability transitioning to safe pose (VLA, lab)",
+     "value": "96%",
+     "page": 5
+    },
+    {
+     "name": "Safety tool calling accuracy (ER2, Claude Opus 4.8, GPT 5.5)",
+     "value": "100%",
+     "page": 6
+    }
+   ],
+   "finding": "ER 2 reliably triggers safe stops; the authors recommend pairing model perception with deterministic low-level guardrails and do not evaluate functional safety hardware.",
+   "quote": "This variance indicates that while frontier models offer robust perception capabilities, it is currently best to utilize them alongside deterministic, low-level safety guardrails.",
+   "page": 5
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "ASIMOV-Agentic benchmark (new, released on Hugging Face)",
+    "Proactive Human Safety Monitoring (stereo distance estimation; single-frame and agentic)",
+    "VLA Feasibility Awareness (one-step; ToolEmu-inspired confidence-emulator multi-step)",
+    "Instruction Ambiguity (10-class taxonomy)",
+    "Obfuscated Instrument Reading"
+   ],
+   "metrics": [
+    {
+     "name": "Human distance MAE (top models, single-frame)",
+     "value": "0.35-0.55 m",
+     "page": 4
+    },
+    {
+     "name": "1-meter breach detection accuracy (top models)",
+     "value": "~79% to 93%",
+     "page": 4
+    },
+    {
+     "name": "Agentic stop tradeoff",
+     "value": "FPR<5% implies FNR>40%; FNR 10-15% implies 15-25% unnecessary stops",
+     "page": 4
+    },
+    {
+     "name": "ER 2 VLA feasibility classification accuracy",
+     "value": "62.0% (DI0) to 95.8% (DI3)",
+     "page": 8
+    }
+   ],
+   "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails.",
+   "quote": "Crucially, no model currently operates in the ideal top-right quadrant (near-zero FNR and FPR).",
+   "page": 5
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "ASIMOV-Agentic: Agentic Safety and Uncertainty Resolution Benchmark, publicly released (p.1)",
+  "Gemini-based VLA confidence emulator for closed-loop agentic safety evals, ToolEmu-inspired (p.7)",
+  "Sensorized human-approach stereo dataset for proximity stop evaluation (p.4)",
+  "Real-world humanoid safe-stopping trials (p.5)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Does not evaluate the underlying functional safety architecture (certified hardware, redundancy, real-time guarantees).",
+   "page": 2
+  },
+  {
+   "text": "Benchmark covers physical safety only, not privacy and fairness.",
+   "page": 5
+  },
+  {
+   "text": "Safety tool-calling robustness to longer contexts and attention jailbreaking is not yet tested.",
+   "page": 6
+  },
+  {
+   "text": "Frontier models' human-proximity stop decisions have unacceptable FNR/FPR tradeoffs; deterministic guardrails still needed.",
+   "page": 5
+  }
+ ],
+ "notes": "Comparisons against other frontier models (Claude Opus 4.8, GPT 5.5) appear mostly in figures. Most numeric results are figure-only. Benchmark datasets were partly synthetically generated with Gemini Pro and Nano Banana."
+}

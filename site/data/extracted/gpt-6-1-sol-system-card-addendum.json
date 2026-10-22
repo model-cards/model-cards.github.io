@@ -1,0 +1,500 @@
+{
+ "id": "gpt-6-1-sol-system-card-addendum",
+ "provider": "openai",
+ "model": "GPT-6.1 Sol",
+ "release_date": "2026-09-29",
+ "doc_type": "addendum",
+ "length_pages": 48,
+ "summary": "Addendum to the GPT-6 Astra system card for GPT-6.1 Sol, a cheaper/faster model with near-Astra capability, treated as Critical in cyber and High in bio/chem with Astra's safeguards stack. Reports the Astra-style safety, robustness, health (incl. new MentalHealthBench), hallucination, alignment, deployment simulation, adversarial monitorability and Preparedness evals, compared against GPT-6 Astra/Sol/Luna and GPT-5.6.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "Critical in Cybersecurity; High in Biological and Chemical; below High in AI Self-Improvement",
+  "quote": "Under our Preparedness Framework, we are treating GPT-6.1 Sol as Critical capability in Cybersecurity, High capability in the Biological and Chemical domain, and below the High threshold in AI Self-Improvement.",
+  "page": 32
+ },
+ "capability_benchmarks": [
+  {
+   "name": "ExploitBench",
+   "category": "other",
+   "score": "99.7%",
+   "setting": "max reasoning; possible contamination",
+   "page": 43,
+   "canonical": "ExploitBench"
+  },
+  {
+   "name": "ExploitBench - Internal Port (June-August 2026)",
+   "category": "other",
+   "score": "21.5% ACE success",
+   "setting": null,
+   "page": 43,
+   "canonical": "ExploitBench - Internal Port (June-August 2026)"
+  },
+  {
+   "name": "SEC-Bench Pro",
+   "category": "other",
+   "score": "78.8%",
+   "setting": "pass@1",
+   "page": 44,
+   "canonical": "SEC-Bench Pro"
+  },
+  {
+   "name": "ExploitGym",
+   "category": "other",
+   "score": "35.1%",
+   "setting": "intended-vulnerability success per attempt",
+   "page": 45,
+   "canonical": "ExploitGym"
+  },
+  {
+   "name": "Internal Research Debugging Evaluation",
+   "category": "coding",
+   "score": "75.52%",
+   "setting": null,
+   "page": 45,
+   "canonical": "Internal Research Debugging Evaluation"
+  },
+  {
+   "name": "HealthBench Professional",
+   "category": "other",
+   "score": "64.2 (length-adjusted)",
+   "setting": null,
+   "page": 11,
+   "canonical": "HealthBench Professional"
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "36.2 (length-adjusted)",
+   "setting": null,
+   "page": 11,
+   "canonical": "HealthBench Hard"
+  },
+  {
+   "name": "MentalHealthBench",
+   "category": "other",
+   "score": "57.9 ± 1.0",
+   "setting": "max reasoning",
+   "page": 13,
+   "canonical": "MentalHealthBench"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Multimodal Troubleshooting Virology",
+    "ProtocolQA Open-Ended",
+    "Tacit Knowledge and Troubleshooting",
+    "TroubleshootingBench",
+    "AAV Capsid Packaging",
+    "SHP2 Protein Function",
+    "Coronavirus-ACE2 Cell-Entry Screen",
+    "Phage-plasmid Co-evolution"
+   ],
+   "metrics": [
+    {
+     "name": "Tacit Knowledge cons@32 (refusal-adj)",
+     "value": "88.50%",
+     "page": 33
+    },
+    {
+     "name": "SHP2 mean R^2",
+     "value": "0.332 (threshold 0.60)",
+     "page": 38
+    },
+    {
+     "name": "Phage-plasmid NLL",
+     "value": "12.946 (threshold <=9.40)",
+     "page": 38
+    }
+   ],
+   "finding": "Treated High; no Critical-threshold eval crossed. GPT-6 Luna skipped Critical testing as below GPT-5.6 Sol on High evals.",
+   "quote": "GPT-6.1 Sol's reported results did not cross the indicative Critical thresholds.",
+   "page": 33
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "ExploitBench",
+    "ExploitBench - Internal Port",
+    "SEC-Bench Pro",
+    "ExploitGym"
+   ],
+   "metrics": [
+    {
+     "name": "ExploitBench Internal Port ACE",
+     "value": "21.5% (Astra 31.5%)",
+     "page": 43
+    },
+    {
+     "name": "ExploitGym",
+     "value": "35.1% (Astra 42.4%)",
+     "page": 45
+    }
+   ],
+   "finding": "Treated as Critical like Astra based only on automated evals; below Astra on all reported cyber evals. No expert-led or third-party cyber testing reported.",
+   "quote": "We determined that GPT-6.1 Sol reaches the Critical threshold for cybersecurity capabilities under the Preparedness Framework. We evaluated the model's capabilities using our automated cyber evaluations.",
+   "page": 42
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Internal Research Debugging Evaluation",
+    "KernelGen 1P"
+   ],
+   "metrics": [
+    {
+     "name": "Internal Research Debugging",
+     "value": "75.52%",
+     "page": 45
+    }
+   ],
+   "finding": "Below High; only two of the five self-improvement evals reported.",
+   "quote": "In AI Self-Improvement, GPT-6.1 Sol does not reach our High threshold.",
+   "page": 45
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks",
+    "Agentic Safe Completions",
+    "Image input evals"
+   ],
+   "metrics": [
+    {
+     "name": "Sexual",
+     "value": "0.987",
+     "page": 5
+    },
+    {
+     "name": "Gore",
+     "value": "0.889",
+     "page": 5
+    },
+    {
+     "name": "Codex prod - Violent Wrongdoing",
+     "value": "0.926",
+     "page": 7
+    }
+   ],
+   "finding": "Higher than GPT-6 Sol in five of eight production categories; generally better on agentic safe completions.",
+   "quote": "On our Production Benchmarks, GPT-6.1 Sol scores higher than GPT-6 Sol in five of eight categories.",
+   "page": 5
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Safety Pareto frontier",
+    "Bio benign not-over-refuse"
+   ],
+   "metrics": [
+    {
+     "name": "Bio benign not_overrefuse",
+     "value": "0.982",
+     "page": 47
+    }
+   ],
+   "finding": "GPT-6 series Pareto improvement over GPT-5; GPT-6 Luna's high jailbreak scores may partly reflect broader refusals.",
+   "quote": "GPT-6 Luna also improves on earlier models, however, we note that some of its higher scores may reflect a broader tendency to refuse requests, including legitimate ones",
+   "page": 9
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Static jailbreak evals",
+    "Multiturn jailbreak evals"
+   ],
+   "metrics": [
+    {
+     "name": "Static Bio: high risk",
+     "value": "93.8%",
+     "page": 8
+    },
+    {
+     "name": "Static Cyber",
+     "value": "85.8%",
+     "page": 8
+    }
+   ],
+   "finding": "Comparable or higher defender success than GPT-6 Sol; below Astra on static evals. No third-party red teaming reported.",
+   "quote": "On both the static and multiturn jailbreak evaluations, GPT-6.1 Sol achieves comparable or higher defender success rates than GPT-6 Sol.",
+   "page": 8
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "GPT-Red indirect prompt injection",
+    "Instruction hierarchy"
+   ],
+   "metrics": [
+    {
+     "name": "Instruction hierarchy robustness",
+     "value": "99.99%",
+     "page": 10
+    }
+   ],
+   "finding": "Highly robust.",
+   "quote": "GPT-6.1 Sol is also highly robust.",
+   "page": 9
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Coding Deception",
+    "Broken Search Tool",
+    "CoT-Control controllability",
+    "OAI-repo Sabotage v2 monitor evasion",
+    "Monitor-aware honeypot",
+    "Math side-tasking monitor evasion",
+    "Eval awareness in deployment simulation"
+   ],
+   "metrics": [
+    {
+     "name": "Coding deception rate",
+     "value": "1.50% (Astra 0.51%)",
+     "page": 17
+    },
+    {
+     "name": "CoT controllability at 750-1250 tokens",
+     "value": "44.8% (Astra 60.9%, GPT-5.6 Sol 16.1%)",
+     "page": 24
+    },
+    {
+     "name": "Eval/simulation awareness in deployment sim",
+     "value": "4.81%",
+     "page": 23
+    }
+   ],
+   "finding": "CoT controllability meaningfully higher than GPT-5.6 Sol but below Astra; lower propensity than Astra to evade CoT monitor when aware; no evidence of steganography.",
+   "quote": "This suggests that GPT-6.1 Sol has a lower propensity to evade the CoT-only monitor than GPT-6 Astra.",
+   "page": 30
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Respecting Auto-Review",
+    "Respecting Warnings",
+    "ExploitGym honeypot",
+    "Realistic work environments (harder updated version)",
+    "Unintended engagement with external agent messages",
+    "Deployment simulation of 49,650 internal Codex tasks"
+   ],
+   "metrics": [
+    {
+     "name": "Respecting Warnings unwanted persistence",
+     "value": "23.5% (Astra 17.4%)",
+     "page": 15
+    },
+    {
+     "name": "Severity 3+ flags",
+     "value": "28 (0.056%) vs 27 Astra, 42 GPT-6 Sol",
+     "page": 21
+    },
+    {
+     "name": "Unauthorized action after message-board discovery",
+     "value": "3% (GPT-6 Sol 11%)",
+     "page": 19
+    }
+   ],
+   "finding": "Comparable to Astra on high-severity misalignment flags; no honeypot attacks; slightly more unwanted persistence than Astra.",
+   "quote": "GPT-6.1 Sol received 28 flags at severity 3 or above on the matched evaluation set, compared with 27 for GPT-6 Astra.",
+   "page": 20
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "deployment-simulation reward-hacking category"
+   ],
+   "metrics": [],
+   "finding": "Increased reward-hacking flags relative to Astra in deployment simulation.",
+   "quote": "Relative to GPT-6 Astra, we observed increased rates of reward-hacking and concealed-uncertainty flags from GPT-6.1 Sol.",
+   "page": 22
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "User-flagged factual error set"
+   ],
+   "metrics": [],
+   "finding": "Similarly low hallucination rates as GPT-6 Sol (figure only).",
+   "quote": "We find that GPT-6.1 Sol and GPT-6 Sol achieve similarly low hallucination rates.",
+   "page": 13
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "U18 evaluations (6 categories)",
+    "Sexual/minors"
+   ],
+   "metrics": [
+    {
+     "name": "U18 Eating Disorders",
+     "value": "0.962",
+     "page": 6
+    },
+    {
+     "name": "Sexual/minors",
+     "value": "0.983",
+     "page": 5
+    }
+   ],
+   "finding": "Higher than GPT-6 Sol in five of six U18 categories.",
+   "quote": "GPT-6.1 Sol scores higher than GPT-6 Sol in five of six categories; the regression on the gore evaluation is not statistically significant.",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Dynamic Mental Health Benchmarks",
+    "MentalHealthBench (new open benchmark, clinician rubrics, 1,215 conversations)"
+   ],
+   "metrics": [
+    {
+     "name": "Self-harm dynamic",
+     "value": "0.996",
+     "page": 12
+    },
+    {
+     "name": "MentalHealthBench overall",
+     "value": "57.9 ± 1.0 (Astra 58.7)",
+     "page": 13
+    }
+   ],
+   "finding": "Same or higher than GPT-6 Sol and Astra on dynamic benchmarks; MentalHealthBench close to Astra.",
+   "quote": "MentalHealthBench is an open benchmark developed with mental health experts for measuring how AI systems respond in realistic mental health conversations.",
+   "page": 12
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Codex prod - Sensitive personal data"
+   ],
+   "metrics": [
+    {
+     "name": "Codex prod - Sensitive personal data",
+     "value": "0.744 (GPT-6 Sol 0.854)",
+     "page": 7
+    }
+   ],
+   "finding": "Lower than GPT-6 Sol and Astra on agentic sensitive-personal-data eval (not discussed in text).",
+   "quote": "We find that GPT-6.1 Sol is generally better than GPT-6 Sol at recognizing potential harms in agentic requests and avoiding taking harmful actions.",
+   "page": 7
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Biology Model Refusal Evaluation",
+    "Cybersecurity Safety Evaluation"
+   ],
+   "metrics": [
+    {
+     "name": "Bio Severe safe",
+     "value": "0.998",
+     "page": 47
+    },
+    {
+     "name": "Cyber Production Chat",
+     "value": "0.987",
+     "page": 48
+    }
+   ],
+   "finding": "Same safeguards as Astra; model-level cyber refusal best yet on production chat with modest regressions in agentic environments; Daybreak phased access.",
+   "quote": "Under our Preparedness Framework, we treat GPT-6.1 Sol the same way as GPT-6 Astra and apply the same safeguards to both models.",
+   "page": 47
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "MentalHealthBench open benchmark with clinician-authored rubrics (p.12-13)",
+  "Harder updated realistic-work-environment misalignment eval (p.18)",
+  "Measuring evasion of production monitor P0 paging priority (p.28)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Evaluations run in research environment/API may differ from production ChatGPT.",
+   "page": 4
+  },
+  {
+   "text": "Respecting Warnings run without system-level controls; does not show how often attempts would succeed.",
+   "page": 15
+  },
+  {
+   "text": "ExploitBench results may be inflated by contamination.",
+   "page": 43
+  },
+  {
+   "text": "Coding deception tasks selected to elicit dishonesty; not production rates.",
+   "page": 17
+  }
+ ],
+ "notes": "No external/third-party evaluations (no UK AISI, Apollo, SecureBio, Irregular) in this addendum, unlike the Astra card. No bias/fairness eval. Critical cyber designation inherited from Astra with automated evals only."
+}

@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Card Viewer</title>
+<meta name="description" content="Read an archived model card as markdown or PDF, with its extracted evaluations.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/marked/12.0.2/marked.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dompurify/3.1.6/purify.min.js"></script>
+</head>
+<body>
+<main class="wrap" id="main"><p class="muted" style="margin-top:40px">Loading…</p></main>
+<script src="assets/common.js"></script>
+<script>
+header("");
+const SAFETY_LABELS = {
+  cbrn_bio_chem: "CBRN (bio/chem)", cyber: "Cyber offense", autonomy_ai_rnd: "Autonomy / AI R&D",
+  harmful_content_refusal: "Harmful content", over_refusal: "Over-refusal", jailbreak_robustness: "Jailbreaks",
+  prompt_injection: "Prompt injection", sycophancy: "Sycophancy", deception_scheming: "Deception / scheming",
+  alignment_audit: "Alignment audit", reward_hacking: "Reward hacking", honesty_hallucination: "Honesty / hallucination",
+  bias_fairness: "Bias / fairness", child_safety: "Child safety", self_harm_wellbeing: "Self-harm / wellbeing",
+  privacy: "Privacy", election_misinfo: "Elections / persuasion", model_welfare: "Model welfare",
+  multilingual_safety: "Multilingual safety", system_safeguards: "Safeguards", other_safety: "Other safety",
+};
+const DEPTH_LABEL = ["Not covered", "Mentioned", "Light", "Substantial"];
+const DEPTH_N = { none: 0, mention: 1, light: 2, substantial: 3 };
+
+(async () => {
+  const id = new URLSearchParams(location.search).get("id");
+  const cards = await getJSON("data/cards.json");
+  const d = cards.find(c => c.id === id);
+  const main = document.getElementById("main");
+  if (!d) { main.innerHTML = `<h1>Not found</h1><p><a href="index.html">Back to catalog</a></p>`; return; }
+  document.title = `${d.model} · Model Cards`;
+  let ex = null;
+  try { ex = await getJSON(`data/extracted/${encodeURIComponent(id)}.json`); } catch (e) {}
+
+  main.innerHTML = `
+    <p class="small" style="margin-top:28px"><a href="index.html">Catalog</a> / <span class="dot" style="background:${pcolor(d.provider)}"></span> ${esc(PROVIDERS[d.provider])}</p>
+    <h1 style="margin-top:6px">${esc(d.title)}</h1>
+    <div class="doc-head small">
+      <span><b>${esc(d.model)}</b></span><span>${fmtDate(d.release_date)}</span>
+      <span class="tag">${esc(DOC_TYPES[d.doc_type] || d.doc_type)}</span>
+      ${d.pages ? `<span>${d.pages} pages</span>` : ""}${d.open_weights ? `<span class="tag ow">open weights</span>` : ""}
+      ${d.source_url ? `<a href="${esc(d.source_url)}" rel="noopener">Original source ↗</a>` : ""}
+    </div>
+    ${ex?.summary ? `<p class="lede" style="margin-top:14px">${esc(ex.summary)}</p>` : ""}
+    <div style="display:flex;gap:8px;flex-wrap:wrap">
+      ${d.pdf ? `<a class="btn" href="${d.pdf}" download>Download PDF${d.pdf_generated ? " (rendered)" : ""}</a>` : ""}
+      ${d.md ? `<a class="btn" href="${d.md}" download>Download markdown</a>` : ""}
+    </div>
+    <div class="tabs" role="tablist">
+      <button data-t="evals" class="on">Evaluations</button><button data-t="md">Markdown</button><button data-t="pdf">PDF</button>
+    </div>
+    <section class="tabpane on" id="t-evals"></section>
+    <section class="tabpane" id="t-md"><div class="md" id="mdbody"><p class="muted">Loading markdown…</p></div></section>
+    <section class="tabpane" id="t-pdf">${d.pdf ? `<iframe class="pdf" title="PDF" data-src="${d.pdf}"></iframe>` : "<p class='muted'>No PDF.</p>"}</section>`;
+
+  const tabs = main.querySelectorAll(".tabs button");
+  function show(t, page) {
+    tabs.forEach(b => b.classList.toggle("on", b.dataset.t === t));
+    main.querySelectorAll(".tabpane").forEach(p => p.classList.toggle("on", p.id === "t-" + t));
+    if (t === "pdf") { const f = main.querySelector("iframe.pdf"); if (f) f.src = f.dataset.src + (page ? `#page=${page}` : ""); }
+    if (t === "md") loadMd(page);
+  }
+  tabs.forEach(b => b.onclick = () => show(b.dataset.t));
+
+  let mdLoaded = false;
+  async function loadMd(page) {
+    if (!mdLoaded) {
+      mdLoaded = true;
+      const txt = await (await fetch(d.md)).text();
+      const withMarks = txt.replace(/<!-- page (\d+) -->/g, (_, n) => `\n\n<span class="pagemark" id="page-${n}">PAGE ${n}</span>\n\n`);
+      document.getElementById("mdbody").innerHTML = DOMPurify.sanitize(marked.parse(withMarks), { ADD_ATTR: ["id"], FORBID_TAGS: ["style", "form", "input"] });
+    }
+    if (page) {
+      const el = document.getElementById("page-" + page);
+      if (el) { el.scrollIntoView({ block: "start" }); el.classList.add("hl"); }
+    }
+  }
+  // Deep links: card.html?id=x#page-12 opens the markdown at that page.
+  const m = location.hash.match(/^#page-(\d+)/);
+  if (m) show("md", m[1]);
+
+  const pageLink = p => p ? ` <a href="#page-${p}" data-page="${p}" class="pl small">p.${p}</a>` : "";
+  const ev = document.getElementById("t-evals");
+  if (!ex) { ev.innerHTML = "<p class='muted'>Evaluations have not been extracted for this document yet.</p>"; return; }
+  const fw = ex.framework || {};
+  const saf = ex.safety || {};
+  const bench = ex.capability_benchmarks || [];
+  ev.innerHTML = `
+    ${fw.name && fw.name !== "none" ? `<div class="panel"><b>Safety framework:</b> ${esc(fw.name)}${fw.level_or_determination ? ` · ${esc(fw.level_or_determination)}` : ""}
+      ${fw.quote ? `<blockquote class="q">“${esc(fw.quote)}”<cite>${pageLink(fw.page)}</cite></blockquote>` : ""}</div>` : ""}
+    <h2>Safety evaluation coverage</h2>
+    <div class="legend">${DEPTH_LABEL.map((l, i) => `<span><i style="background:var(--seq-${i})"></i>${l}</span>`).join("")}</div>
+    <div class="scroll"><table><thead><tr><th>Area</th><th>Depth</th><th>Evals</th><th>Finding</th></tr></thead><tbody>
+    ${Object.entries(SAFETY_LABELS).map(([k, label]) => {
+      const s = saf[k] || {}; const dn = s.covered ? (DEPTH_N[s.depth] ?? 0) : 0;
+      return `<tr><td style="white-space:nowrap"><span class="dot" style="background:var(--seq-${dn});outline:1px solid var(--border)"></span> ${label}</td>
+        <td class="small">${DEPTH_LABEL[dn]}</td>
+        <td class="small">${esc((s.evals || []).join("; "))}</td>
+        <td class="small">${esc(s.finding || "")}${s.quote ? `<br><span class="muted">“${esc(s.quote)}”</span>` : ""}${pageLink(s.page)}</td></tr>`;
+    }).join("")}</tbody></table></div>
+    ${ex.third_party_evaluators?.length ? `<h3>Third-party evaluators</h3><p>${ex.third_party_evaluators.map(esc).join(" · ")}</p>` : ""}
+    ${ex.notable_new_eval_methods?.length ? `<h3>New evaluation methods</h3><ul>${ex.notable_new_eval_methods.map(x => `<li>${esc(typeof x === "string" ? x : (x.text || x.name || JSON.stringify(x)))}${pageLink(x.page)}</li>`).join("")}</ul>` : ""}
+    ${ex.self_reported_limitations?.length ? `<h3>Limitations the authors report</h3><ul>${ex.self_reported_limitations.map(x => `<li>${esc(x.text || x)}${pageLink(x.page)}</li>`).join("")}</ul>` : ""}
+    <h2>Capability benchmarks <span class="small muted">(${bench.length})</span></h2>
+    ${bench.length ? `<div class="scroll"><table><thead><tr><th>Benchmark</th><th>Category</th><th class="num">Score</th><th>Setting</th><th></th></tr></thead><tbody>
+      ${bench.map(b => `<tr><td>${esc(b.name)}</td><td class="small">${esc(b.category)}</td><td class="num">${esc(b.score)}</td><td class="small">${esc(b.setting || "")}</td><td>${pageLink(b.page)}</td></tr>`).join("")}
+      </tbody></table></div>` : "<p class='muted'>No capability benchmarks reported.</p>"}`;
+  ev.addEventListener("click", e => {
+    const a = e.target.closest("a.pl"); if (!a) return;
+    e.preventDefault(); history.replaceState(null, "", "#page-" + a.dataset.page); show("md", a.dataset.page);
+  });
+})();
+</script>
+</body>
+</html>

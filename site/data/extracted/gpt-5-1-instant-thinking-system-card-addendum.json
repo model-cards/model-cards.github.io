@@ -1,0 +1,291 @@
+{
+ "id": "gpt-5-1-instant-thinking-system-card-addendum",
+ "provider": "openai",
+ "model": "GPT-5.1 Instant / GPT-5.1 Thinking",
+ "release_date": "2025-11-12",
+ "doc_type": "addendum",
+ "length_pages": 5,
+ "summary": "Brief addendum giving baseline safety metrics for GPT-5.1 Instant and Thinking vs GPT-5 predecessors: production disallowed-content benchmarks (now including mental health and emotional reliance), early online A/B prevalence measurements, StrongReject, and image input evals. Preparedness status is carried over from GPT-5 without new results.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High capability in Biological and Chemical (precautionary, carried over); not High in cyber or AI self-improvement",
+  "quote": "we are continuing to treat GPT-5.1 as High risk in the Biological and Chemical domain, and continuing to apply the corresponding safeguards.",
+  "page": 5
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Treated as High in bio/chem as for GPT-5; no new eval results reported.",
+   "quote": "we are continuing to treat GPT-5.1 as High risk in the Biological and Chemical domain",
+   "page": 5,
+   "covered": true,
+   "metrics": []
+  },
+  "cyber": {
+   "depth": "mention",
+   "evals": [
+    "evaluations of near-final checkpoints (not reported)"
+   ],
+   "finding": "Stated not plausibly reaching High threshold; no results shown.",
+   "quote": "GPT-5.1 models do not have a plausible chance of reaching a High threshold.",
+   "page": 5,
+   "covered": true,
+   "metrics": []
+  },
+  "autonomy_ai_rnd": {
+   "depth": "mention",
+   "evals": [
+    "evaluations of near-final checkpoints (not reported)"
+   ],
+   "finding": "AI self-improvement stated not plausibly reaching High; no results shown.",
+   "quote": "For cybersecurity and AI self-improvement, evaluations of near-final checkpoints indicate that",
+   "page": 5,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks (not_unsafe)",
+    "image input evaluations"
+   ],
+   "metrics": [
+    {
+     "name": "gpt-5.1-thinking harassment",
+     "value": "0.747 (vs 0.815 gpt-5-thinking)",
+     "page": 3
+    },
+    {
+     "name": "gpt-5.1-instant illicit/violent",
+     "value": "0.918",
+     "page": 3
+    },
+    {
+     "name": "gpt-5.1-thinking image self-harm",
+     "value": "0.936",
+     "page": 5
+    }
+   ],
+   "finding": "Comparable overall; gpt-5.1-thinking regresses on harassment, hate and sexual content, and on image-input self-harm.",
+   "quote": "The new gpt-5.1-thinking model shows light regressions relative to gpt-5-thinking for content involving harassment and hateful language, as well as disallowed sexual content.",
+   "page": 3,
+   "covered": true
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject"
+   ],
+   "metrics": [
+    {
+     "name": "gpt-5.1-thinking not_unsafe",
+     "value": "0.967",
+     "page": 4
+    },
+    {
+     "name": "gpt-5.1-instant not_unsafe",
+     "value": "0.976",
+     "page": 4
+    }
+   ],
+   "finding": "Instant improves strongly over predecessors; Thinking on par.",
+   "quote": "We find that gpt-5.1-instant performs better than its predecessor, and that gpt-5.1-thinking is on par with its predecessor.",
+   "page": 4,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "substantial",
+   "evals": [
+    "Mental health production benchmark",
+    "Emotional reliance production benchmark",
+    "self-harm production benchmarks",
+    "online A/B prevalence measurements"
+   ],
+   "metrics": [
+    {
+     "name": "mental health (5.1-thinking / 5.1-instant)",
+     "value": "0.684 / 0.883",
+     "page": 3
+    },
+    {
+     "name": "emotional reliance (5.1-thinking / 5.1-instant)",
+     "value": "0.785 / 0.945",
+     "page": 3
+    }
+   ],
+   "finding": "gpt-5.1-instant regresses slightly vs gpt-5-instant-oct3 on mental health and emotional reliance offline; online measurements are mixed and low-confidence.",
+   "quote": "Preliminary online measurements also show a regression for gpt-5.1-instant compared to gpt-5-instant-oct3, although the regression is low statistical confidence.",
+   "page": 4,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors (5.1-thinking / 5.1-instant)",
+     "value": "0.901 / 0.957",
+     "page": 3
+    }
+   ],
+   "finding": "Single row; gpt-5.1-thinking lower than gpt-5-thinking (0.953).",
+   "quote": null,
+   "page": 3,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal data production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "personal data",
+     "value": "1.000 (both)",
+     "page": 3
+    }
+   ],
+   "finding": "Single row at ceiling.",
+   "quote": null,
+   "page": 3,
+   "covered": true
+  },
+  "system_safeguards": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Mitigations largely same as GPT-5 system card; online measurement may inform routing to safer models.",
+   "quote": "The comprehensive safety mitigations for these models are largely the same as we described in the GPT-5 System Card.",
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Early online A/B-test prevalence measurements of undesired responses in sensitive situations, reported alongside offline evals (p.3)",
+  "Mental health and emotional reliance evals added to standard pre-deployment baseline (p.2)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Standard disallowed content evals became saturated, so Production Benchmarks used; these are deliberately hard and error rates are not representative of production traffic.",
+   "page": 2
+  },
+  {
+   "text": "Online A/B measurements have wide error bars due to low prevalence and small test sizes.",
+   "page": 3
+  }
+ ],
+ "notes": "No capability benchmarks reported. Preparedness determinations stated without accompanying eval results."
+}

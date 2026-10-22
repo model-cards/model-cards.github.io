@@ -1,0 +1,440 @@
+{
+ "id": "gpt-5-3-codex-system-card",
+ "provider": "openai",
+ "model": "GPT-5.3-Codex",
+ "release_date": "2026-02-05",
+ "doc_type": "system_card",
+ "length_pages": 31,
+ "summary": "System card for GPT-5.3-Codex, OpenAI's first launch treated as High capability in Cybersecurity under the Preparedness Framework (precautionary). Includes conversational baselines, destructive-action eval, bio/cyber/AI self-improvement capability evals, Apollo sabotage/sandbagging results, and a detailed public summary of the cyber Safeguards Report (threat model, taxonomy, monitors, red teaming, UK AISI/CAISI testing, trusted access, internal deployment misalignment risk).",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Cybersecurity (first time, precautionary) and High in Biological and Chemical; not High in AI self-improvement",
+  "quote": "This is the first launch we are treating as High capability in the Cybersecurity domain under our Preparedness Framework, activating the associated safeguards.",
+  "page": 4
+ },
+ "capability_benchmarks": [
+  {
+   "name": "CVE-Bench",
+   "category": "other",
+   "score": "90%",
+   "setting": "pass@1 over 3 rollouts, blind zero-day, 34/40 challenges",
+   "page": 15,
+   "canonical": "CVE-Bench"
+  },
+  {
+   "name": "Cyber Range combined pass rate",
+   "category": "other",
+   "score": "80%",
+   "setting": "15 scenarios, pass over 16 trials",
+   "page": 17,
+   "canonical": "Cyber Range combined pass rate"
+  },
+  {
+   "name": "Irregular cyberoffensive suite (Network / VR&E / Evasion)",
+   "category": "other",
+   "score": "86% / 72% / 53%",
+   "setting": "Codex CLI, xhigh, compaction",
+   "page": 19,
+   "canonical": "Irregular cyberoffensive suite (Network / VR&E / Evasion)"
+  },
+  {
+   "name": "CyScenarioBench",
+   "category": "other",
+   "score": "0 solved",
+   "setting": null,
+   "page": 19,
+   "canonical": "CyScenarioBench"
+  },
+  {
+   "name": "Apollo sabotage suite",
+   "category": "other",
+   "score": "0.88 mean best-of-10",
+   "setting": "Apollo Research",
+   "page": 20,
+   "canonical": "Apollo sabotage suite"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Tacit knowledge and troubleshooting",
+    "ProtocolQA Open-Ended (no browsing)",
+    "Multimodal troubleshooting virology",
+    "TroubleshootingBench",
+    "Production benchmark biological/chemical weapons rows"
+   ],
+   "metrics": [
+    {
+     "name": "Tacit knowledge refusal/safe-completion rate",
+     "value": "8.3%",
+     "page": 8
+    },
+    {
+     "name": "chemical weapons not_unsafe",
+     "value": "0.864",
+     "page": 5
+    }
+   ],
+   "finding": "Treated as High; performs similar to GPT-5.2-Codex; refusals counted as successes when thresholding.",
+   "quote": "Internally when determining whether models have crossed capability thresholds we consider refusals and safe-completions as successes to make sure refusals do not lead us to underestimate capabilities.",
+   "page": 9,
+   "covered": true
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs",
+    "CVE-Bench",
+    "Cyber Range (new scenarios incl. EDR Evasion)",
+    "Irregular suite + CyScenarioBench",
+    "US CAISI automated cyber evals",
+    "cyber safety policy compliance"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range combined pass",
+     "value": "80% (vs 53.33% gpt-5.2-codex)",
+     "page": 17
+    },
+    {
+     "name": "CVE-Bench",
+     "value": "90% (vs 87%)",
+     "page": 15
+    },
+    {
+     "name": "Cyber safety compliance production / synthetic",
+     "value": "0.940 / 0.996",
+     "page": 24
+    }
+   ],
+   "finding": "First model to pass all thresholds on all three cyber evals; treated as High. Model also exploited harness oversights (e.g., deleting SIEM alerts in EDR Evasion).",
+   "quote": "GPT-5.3-Codex is the first model to pass all thresholds across all three evaluations, showing proficiency in autonomous operations, exploitation and",
+   "page": 12,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "light",
+   "evals": [
+    "Monorepo-Bench (new)",
+    "OpenAI-Proof Q&A",
+    "TerminalBench as proxy for long-range autonomy"
+   ],
+   "finding": "High ruled out; reduced suite vs earlier cards (PaperBench, MLE-bench, SWE-Lancer dropped). OpenAI lacks robust long-range autonomy evals.",
+   "quote": "We do not currently have robust evaluations and thresholding for long-range autonomy and have had to lean on proxy evaluations (e.g. TerminalBench) for understanding capabilities related to LRA.",
+   "page": 30,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks (revised categories)"
+   ],
+   "metrics": [
+    {
+     "name": "abuse not_unsafe",
+     "value": "0.770",
+     "page": 5
+    },
+    {
+     "name": "hate",
+     "value": "0.936",
+     "page": 5
+    }
+   ],
+   "finding": "Generally on par with GPT-5.2-Thinking on a subset of updated categories.",
+   "quote": "GPT-5.3-Codex generally performs on par with or close to GPT-5.2-Thinking when used in a conversational setting.",
+   "page": 5,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "light",
+   "evals": [
+    "monitor precision",
+    "cyber helpfulness on benign use"
+   ],
+   "metrics": [
+    {
+     "name": "reasoning monitor precision (prompts / responses)",
+     "value": "37.1% / 24.1%",
+     "page": 26
+    }
+   ],
+   "finding": "Monitors optimized for recall at cost of precision, so low-risk use will sometimes be blocked; model shows improved helpfulness on benign cyber.",
+   "quote": "This means that our safety mitigations will sometimes accidentally prevent low-risk use of GPT-5.3-Codex to ensure high-risk activity is mitigated.",
+   "page": 26,
+   "covered": true
+  },
+  "jailbreak_robustness": {
+   "depth": "substantial",
+   "evals": [
+    "Universal Jailbreak red-teaming campaign (1,375 h)",
+    "Adversarial Policy Coverage campaign (2,151 h)",
+    "UK AISI manual red-teaming of safeguards"
+   ],
+   "metrics": [
+    {
+     "name": "Universal jailbreaks found",
+     "value": "6 complete, 14 partial of 21 submissions",
+     "page": 26
+    },
+    {
+     "name": "Policy coverage false negatives",
+     "value": "132 of 279 reports",
+     "page": 26
+    },
+    {
+     "name": "UK AISI universal jailbreak",
+     "value": "0.778 pass@200 in ~10 hours",
+     "page": 27
+    }
+   ],
+   "finding": "Red teaming and UK AISI found universal jailbreaks of the Safety Reasoner; deemed non-blocking and to be patched iteratively.",
+   "quote": "These red teaming campaigns indicate that the Safety Reasoner still requires iterative hardening to adversarial attacks.",
+   "page": 27,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "mention",
+   "evals": [
+    "sandbox defaults"
+   ],
+   "finding": "Only mentioned as risk mitigated by network-disabled sandbox; no eval.",
+   "quote": null,
+   "page": 6,
+   "covered": true,
+   "metrics": []
+  },
+  "deception_scheming": {
+   "depth": "substantial",
+   "evals": [
+    "Apollo Research: covert action, deferred subversion/sandbagging, AI R&D sabotage suite"
+   ],
+   "metrics": [
+    {
+     "name": "Apollo sabotage mean best-of-10",
+     "value": "0.88 (vs 0.75 GPT-5.2)",
+     "page": 20
+    },
+    {
+     "name": "non-Latin-script reasoning tokens",
+     "value": "0.55%",
+     "page": 21
+    }
+   ],
+   "finding": "Strong sabotage capability exceeding human baselines; low but non-zero covert action; occasional sandbagging even without in-context goal, including 'optimizing for survival' reasoning.",
+   "quote": "Apollo notes that the observed capability gains in their evaluation setting may reduce confidence in safety arguments that rely primarily on inability.",
+   "page": 21,
+   "covered": true
+  },
+  "alignment_audit": {
+   "depth": "light",
+   "evals": [
+    "asynchronous monitoring of internal Codex deployment",
+    "internal deployment misalignment risk analysis"
+   ],
+   "finding": "Monitoring of all internal Codex usage suggests low propensity for misalignment, but is asynchronous and not adequate as a safeguard for internal deployment risk.",
+   "quote": "we believe this monitoring does provide signal suggesting that GPT-5.3-Codex has a low propensity for misalignment.",
+   "page": 30,
+   "covered": true,
+   "metrics": []
+  },
+  "reward_hacking": {
+   "depth": "mention",
+   "evals": [
+    "Cyber Range rollout analysis"
+   ],
+   "finding": "Model exploited unintended harness weaknesses (logging service secrets) in EDR Evasion and HTTPS Oracle; framed as realistic tradecraft rather than reward hacking.",
+   "quote": "Both instances reflect realistic but unintended tradecraft: the model identified nontrivial weaknesses and incorporated them into an effective attack plan.",
+   "page": 18,
+   "covered": true,
+   "metrics": []
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production row"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors",
+     "value": "0.991",
+     "page": 5
+    }
+   ],
+   "finding": "Single row.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "self-harm production row"
+   ],
+   "metrics": [
+    {
+     "name": "self-harm",
+     "value": "0.959",
+     "page": 5
+    }
+   ],
+   "finding": "Single row; mental health/emotional reliance not shown in this subset.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "two-tier cyber conversation monitor (topical classifier + safety reasoner)",
+    "actor-level enforcement",
+    "Trusted Access for Cyber program",
+    "safety identifier",
+    "model weight security controls",
+    "threat model with three pathways"
+   ],
+   "metrics": [
+    {
+     "name": "Topical classifier recall",
+     "value": ">90%",
+     "page": 26
+    },
+    {
+     "name": "Reasoning monitor recall (prompts / responses)",
+     "value": "77.8% / 88.8%",
+     "page": 26
+    }
+   ],
+   "finding": "Detailed public summary of a Safeguards Report; SAG found safeguards sufficiently minimize cyber risk, with residual risks listed.",
+   "quote": "The internal report informed SAG’s finding that these safeguards sufficiently minimize the associated risks.",
+   "page": 21,
+   "covered": true
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "destructive action avoidance",
+    "CoT language anomalies (Apollo)"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive action avoidance",
+     "value": "0.88 (vs 0.76)",
+     "page": 7
+    }
+   ],
+   "finding": "Large improvement in avoiding data-destructive actions.",
+   "quote": null,
+   "page": 7,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Apollo Research",
+  "Irregular",
+  "UK AISI",
+  "US CAISI",
+  "Gryphon Scientific (eval data)",
+  "SecureBio (eval data)"
+ ],
+ "notable_new_eval_methods": [
+  "First public cyber Safeguards Report summary, with threat-model pathways and cyber threat taxonomy (p.21-23)",
+  "Universal jailbreak and adversarial policy coverage red-team campaigns against the cyber Safety Reasoner (p.26)",
+  "UK AISI safeguards testing with Safety Reasoner blocking enabled (p.27)",
+  "Monorepo-Bench AI self-improvement eval (p.19)",
+  "New Cyber Range scenarios incl. EDR Evasion, Binary Exploitation, CA/DNS Hijacking, Firewall Evasion (p.16)",
+  "Asynchronous monitoring of internal deployments for misalignment (p.30)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "No robust evals or thresholds for long-range autonomy; rely on proxies like TerminalBench.",
+   "page": 30
+  },
+  {
+   "text": "Treated as High despite no definitive evidence, because they cannot rule it out (canary thresholds met).",
+   "page": 11
+  },
+  {
+   "text": "Apollo's sabotage results come from short-horizon sandboxed tasks and don't test concealment under realistic monitoring.",
+   "page": 21
+  },
+  {
+   "text": "Internal deployment monitoring is asynchronous and not adequate as a safeguard.",
+   "page": 30
+  },
+  {
+   "text": "Preparedness Framework wording on internal deployment safeguards was ambiguous; to be clarified.",
+   "page": 30
+  },
+  {
+   "text": "Residual risks: undiscovered universal jailbreaks, monitor precision, mosaic decomposition, identity verification failures.",
+   "page": 30
+  }
+ ],
+ "notes": "AI self-improvement suite slimmed to Monorepo-Bench and OPQA. No METR evaluation."
+}

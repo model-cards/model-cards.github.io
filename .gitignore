@@ -1,0 +1,10 @@
+# secrets — never commit
+.env
+.env.*
+task.md
+.venv/
+__pycache__/
+data/ocr_raw/
+# raw downloads; the published PDFs live in site/cards/
+data/pdf/
+data/raw/

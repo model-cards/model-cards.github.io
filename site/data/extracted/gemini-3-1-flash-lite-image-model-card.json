@@ -1,0 +1,330 @@
+{
+ "id": "gemini-3-1-flash-lite-image-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.1 Flash-Lite Image",
+ "release_date": "2026-06-30",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.1 Flash-Lite Image, an image generation/editing model based on Gemini 3.1 Flash-Lite. Reports side-by-side human-eval Elo for text-to-image and editing vs many competitors, quality limitations, and safety evaluation types and policies without results; frontier safety inherited from Gemini 3.1 Pro.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (inferred from Gemini 3.1 Pro)",
+  "quote": "we are confident that that Gemini 3.1 Flash-Lite Image is also unlikely to reach any CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "General T2I (Elo)",
+   "category": "multimodal",
+   "score": "1059.0 ± 7.0",
+   "setting": "Thinking",
+   "page": 4,
+   "canonical": "General T2I (Elo)"
+  },
+  {
+   "name": "Visual Design (Elo)",
+   "category": "multimodal",
+   "score": "1047.0 ± 9.0",
+   "setting": "Thinking",
+   "page": 4,
+   "canonical": "Visual Design (Elo)"
+  },
+  {
+   "name": "Social Media Trends - T2I (Elo)",
+   "category": "multimodal",
+   "score": "1030.0 ± 13.0",
+   "setting": "Thinking",
+   "page": 4,
+   "canonical": "Social Media Trends - T2I (Elo)"
+  },
+  {
+   "name": "General Editing (Elo)",
+   "category": "multimodal",
+   "score": "983.0 ± 9.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "General Editing (Elo)"
+  },
+  {
+   "name": "Obj/Env Editing (Elo)",
+   "category": "multimodal",
+   "score": "996.0 ± 9.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Obj/Env Editing (Elo)"
+  },
+  {
+   "name": "Character Editing (Elo)",
+   "category": "multimodal",
+   "score": "1026.0 ± 6.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Character Editing (Elo)"
+  },
+  {
+   "name": "Stylization (Elo)",
+   "category": "multimodal",
+   "score": "972.0 ± 8.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Stylization (Elo)"
+  },
+  {
+   "name": "Multi Input up to 5 (Elo)",
+   "category": "multimodal",
+   "score": "980.0 ± 8.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Multi Input up to 5 (Elo)"
+  },
+  {
+   "name": "Social Media Trends - Editing (Elo)",
+   "category": "multimodal",
+   "score": "996.0 ± 13.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Social Media Trends - Editing (Elo)"
+  },
+  {
+   "name": "Text Editing (Elo)",
+   "category": "multimodal",
+   "score": "961.0 ± 10.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Text Editing (Elo)"
+  },
+  {
+   "name": "Multi Character Editing (Elo)",
+   "category": "multimodal",
+   "score": "1020.0 ± 8.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Multi Character Editing (Elo)"
+  },
+  {
+   "name": "Doodle Editing (Elo)",
+   "category": "multimodal",
+   "score": "990.0 ± 7.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Doodle Editing (Elo)"
+  },
+  {
+   "name": "Multi Product Editing (Elo)",
+   "category": "multimodal",
+   "score": "1029.0 ± 8.0",
+   "setting": "Thinking",
+   "page": 5,
+   "canonical": "Multi Product Editing (Elo)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Training/development evaluations",
+    "Human red teaming",
+    "Trust Assurance Evaluations",
+    "Ethics & Safety Reviews"
+   ],
+   "metrics": [],
+   "finding": "Evaluation types and policies listed; no results; refers to Gemini 3.1 Flash-Lite card.",
+   "quote": "see the Gemini 3.1 Flash-Lite model card for additional Ethics & Content Safety details.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming mentioned without results.",
+   "quote": "deliberately trying to spot weaknesses and ensure the model adheres to safety policies and desired outcomes",
+   "page": 7
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "AutoRater on factuality"
+   ],
+   "metrics": [],
+   "finding": "Hallucination listed as limitation.",
+   "quote": "Still limited in advanced capabilities with world knowledge, 3D reasoning and factuality",
+   "page": 6
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM listed as a safety policy; no results.",
+   "quote": "Content related to child sexual abuse material and exploitation",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Lists lifecycle mitigations incl. product-level safety filtering.",
+   "quote": "product-level mitigations such as safety filtering.",
+   "page": 7
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Quality limitations: small text, character consistency, doodle editing, spatial localisation, factuality.",
+   "page": 6
+  }
+ ],
+ "notes": "No image-safety numbers; frontier safety via proxy (Gemini 3.1 Pro)."
+}

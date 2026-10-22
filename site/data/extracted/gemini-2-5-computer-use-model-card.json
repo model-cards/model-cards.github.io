@@ -1,0 +1,269 @@
+{
+ "id": "gemini-2-5-computer-use-model-card",
+ "provider": "gemini",
+ "model": "Gemini 2.5 Computer Use",
+ "release_date": "2025-10-07",
+ "doc_type": "model_card",
+ "length_pages": 5,
+ "summary": "Model card for Gemini 2.5 Computer Use, a Gemini 2.5 Pro derivative post-trained for browser UI control. Reports web/mobile agent benchmarks (including Browserbase-measured results), relies on Gemini 2.5 Pro for ethics & safety evals, and describes agent-specific risks (prompt injection, unintended irreversible actions) and mitigations such as user confirmations and an inference-time safety monitor. Declared out of scope for FSF assessment.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "Not in scope for FSF assessment",
+  "quote": "it is therefore not in scope for a Frontier Safety Framework assessment.",
+  "page": 5
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Online-Mind2Web",
+   "category": "agentic_tool_use",
+   "score": "69.0%",
+   "setting": "Official leaderboard",
+   "page": 3,
+   "canonical": "Online-Mind2Web"
+  },
+  {
+   "name": "Online-Mind2Web",
+   "category": "agentic_tool_use",
+   "score": "65.7%",
+   "setting": "Measured by Browserbase",
+   "page": 3,
+   "canonical": "Online-Mind2Web"
+  },
+  {
+   "name": "WebVoyager",
+   "category": "agentic_tool_use",
+   "score": "88.9%",
+   "setting": "Official leaderboard",
+   "page": 3,
+   "canonical": "WebVoyager"
+  },
+  {
+   "name": "WebVoyager",
+   "category": "agentic_tool_use",
+   "score": "79.9%",
+   "setting": "Measured by Browserbase",
+   "page": 3,
+   "canonical": "WebVoyager"
+  },
+  {
+   "name": "AndroidWorld",
+   "category": "agentic_tool_use",
+   "score": "69.7%",
+   "setting": "Measured by Google DeepMind",
+   "page": 3,
+   "canonical": "AndroidWorld"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Relies on Gemini 2.5 Pro evals",
+    "Training/development evaluations",
+    "Assurance Evaluations"
+   ],
+   "metrics": [],
+   "finding": "No model-specific safety results; relies on Gemini 2.5 Pro evaluations.",
+   "quote": "As the Gemini 2.5 Computer Use Model is based off of Gemini 2.5 Pro, we rely on Ethics & Safety evaluations reported for Gemini 2.5 Pro.",
+   "page": 4
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming mentioned without results.",
+   "quote": "deliberately trying to spot weaknesses and ensure the model adheres to safety policies and desired outcomes",
+   "page": 4
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Prompt injection via adversarial website content identified as a key risk category; no eval results reported.",
+   "quote": "Intentional adversarial misuse** of the model, for example through prompt injection tactics, where adversarial instructions are embedded in websites.",
+   "page": 4
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Risk of data exfiltration and release of sensitive/personal content named; user confirmation needed to access health/financial records.",
+   "quote": "This can lead to failed tasks or data exfiltration.",
+   "page": 5
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [],
+   "metrics": [],
+   "finding": "Describes post-training to recognize high-stakes actions, inference-time safety monitor that blocks prohibited actions and requires user confirmation, site blocking, and input/output guardrails.",
+   "quote": "implementing a safety monitoring and filtering system that observes model actions",
+   "page": 5
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Unintentional agentic failure modes (irreversible harmful actions, misinterpreting goals) named as risk category.",
+   "quote": "where the model takes an irreversible action that could harm a user.",
+   "page": 5
+  }
+ },
+ "third_party_evaluators": [
+  "Browserbase (capability benchmarks only)"
+ ],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Computer use evaluations are sensitive to agent environment and system instructions.",
+   "page": 3
+  },
+  {
+   "text": "Not yet optimized for OS-level or mobile control.",
+   "page": 2
+  }
+ ],
+ "notes": "Agentic-safety section is descriptive (risks + mitigations) with no quantitative prompt-injection evaluation."
+}

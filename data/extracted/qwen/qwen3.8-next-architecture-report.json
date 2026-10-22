@@ -1,0 +1,333 @@
+{
+ "id": "qwen3.8-next-architecture-report",
+ "provider": "qwen",
+ "model": "Qwen3.8-Flash-Next",
+ "release_date": "2026-08-31",
+ "doc_type": "tech_report",
+ "length_pages": 28,
+ "summary": "Architecture and ablation report for Qwen3.8-Flash-Next (125B / 6B active MoE plus 51B n-gram embedding). It covers the GDN-attention hybrid, Qwen Sparse Attention, Gated Residual, n-gram embedding placement and vocabulary, Muon optimizer and hyperparameter scaling, and stability stress tests. Evaluation is limited to base-model pre-training benchmarks and long-context retrieval.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMLU",
+   "category": "reasoning_knowledge",
+   "score": "90.36",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot",
+   "page": 23
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "90.68",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot",
+   "page": 23
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "73.23",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "SuperGPQA",
+   "category": "reasoning_knowledge",
+   "score": "51.36",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "BBH",
+   "category": "reasoning_knowledge",
+   "score": "90.87",
+   "setting": "Qwen3.8-Flash-Next-Base; 3-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "51.42",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "GSM8K",
+   "category": "math",
+   "score": "93.29",
+   "setting": "Qwen3.8-Flash-Next-Base; 4-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "MATH",
+   "category": "math",
+   "score": "72.78",
+   "setting": "Qwen3.8-Flash-Next-Base; 4-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "EvalPlus",
+   "category": "coding",
+   "score": "78.76",
+   "setting": "Qwen3.8-Flash-Next-Base; 0-shot",
+   "page": 23
+  },
+  {
+   "name": "MultiPL-E",
+   "category": "coding",
+   "score": "79.09",
+   "setting": "Qwen3.8-Flash-Next-Base; 0-shot",
+   "page": 23
+  },
+  {
+   "name": "SWEBench-Pretrain",
+   "category": "coding",
+   "score": "50.99",
+   "setting": "Qwen3.8-Flash-Next-Base; patch-similarity score, base-model variant",
+   "page": 23
+  },
+  {
+   "name": "MGSM",
+   "category": "multilingual",
+   "score": "89.33",
+   "setting": "Qwen3.8-Flash-Next-Base; 8-shot CoT",
+   "page": 23
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "84.86",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot",
+   "page": 23
+  },
+  {
+   "name": "INCLUDE",
+   "category": "multilingual",
+   "score": "78.40",
+   "setting": "Qwen3.8-Flash-Next-Base; 5-shot",
+   "page": 23
+  },
+  {
+   "name": "RULER",
+   "category": "long_context",
+   "score": "99.89 / 99.62 / 98.95 / 93.00",
+   "setting": "w/ QSA; <=128K / 128-256K / 256-512K / 512K-1M",
+   "page": 8
+  },
+  {
+   "name": "MRCR (8-needle)",
+   "category": "long_context",
+   "score": "95.98 / 93.00 / 40.53 / 26.44",
+   "setting": "w/ QSA; 128K / 256K / 512K / 1M",
+   "page": 8
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Loss and downstream accuracy do not always move together (n-gram vocab lowers loss while downstream accuracy saturates).",
+   "page": 1
+  },
+  {
+   "text": "Evaluation throughput is the tightest bottleneck; need a cheaper mid-scale probe that predicts post-training ordering.",
+   "page": 23
+  }
+ ],
+ "notes": "Pure architecture and pre-training report. Safety keyword hits are only technical uses ('inductive bias', 'seemingly harmless shortcuts'). It has no safety, alignment or misuse content of any kind. 'Stability' refers to training stability."
+}

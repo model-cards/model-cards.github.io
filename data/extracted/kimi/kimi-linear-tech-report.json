@@ -1,0 +1,339 @@
+{
+ "id": "kimi-linear-tech-report",
+ "provider": "kimi",
+ "model": "Kimi Linear 48B-A3B",
+ "release_date": "2025-10-30",
+ "doc_type": "tech_report",
+ "length_pages": 28,
+ "summary": "28-page architecture report introducing Kimi Delta Attention (KDA) and the hybrid Kimi Linear model (3:1 KDA:MLA, 48B total / 3B active), with chunkwise kernels, efficiency analysis, controlled 1.4T-token comparisons against MLA and GDN-H across pretraining, SFT, long-context and RL, and results for the released 5.7T-token checkpoints. Purely capability/efficiency focused; no safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "RULER",
+   "category": "long_context",
+   "score": "95.4",
+   "setting": "128k; Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "RULER",
+   "category": "long_context",
+   "score": "94.8",
+   "setting": "1M; Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "71.7",
+   "setting": "avg@8; Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "86.9",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "72.7",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "FaithJudge (1 - hallucination)",
+   "category": "other",
+   "score": "64.2",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "58.6",
+   "setting": "avg@64; Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "MATH-500",
+   "category": "math",
+   "score": "94.6",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "HMMT 2025",
+   "category": "math",
+   "score": "44.5",
+   "setting": "avg@32; Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "45.7",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "OJBench",
+   "category": "coding",
+   "score": "14.2",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "HumanEval+",
+   "category": "coding",
+   "score": "70.9",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "MBPP+",
+   "category": "coding",
+   "score": "72.4",
+   "setting": "Kimi-Linear-Instruct @5.7T (released)",
+   "page": 28
+  },
+  {
+   "name": "MRCR",
+   "category": "long_context",
+   "score": "29.6",
+   "setting": "128k; 1.4T-token controlled comparison model",
+   "page": 12
+  },
+  {
+   "name": "HELMET-ICL",
+   "category": "long_context",
+   "score": "90.0",
+   "setting": "1.4T comparison model",
+   "page": 12
+  },
+  {
+   "name": "RepoQA",
+   "category": "long_context",
+   "score": "68.5",
+   "setting": "1.4T comparison model",
+   "page": 12
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "35.0",
+   "setting": "1.4T comparison model",
+   "page": 12
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FaithJudge"
+   ],
+   "metrics": [
+    {
+     "name": "FaithJudge (1-Hallu.)",
+     "value": "64.2 (Moonlight-Instruct 56.0)",
+     "page": 28
+    }
+   ],
+   "finding": "A single hallucination metric (FaithJudge) is reported in the appendix results table for the released instruct model, without discussion.",
+   "quote": "FaithJudge (1-Hallu.)",
+   "page": 28
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "Architecture research report; the only safety-adjacent item is the FaithJudge hallucination score. 'Risk' appears only as RL capability degeneration ('A known risk of RL training is the potential degeneration of general capabilities', p.10). No safety, misuse, refusal or alignment content."
+}

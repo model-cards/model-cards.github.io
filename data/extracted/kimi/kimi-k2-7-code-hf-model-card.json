@@ -1,0 +1,265 @@
+{
+ "id": "kimi-k2-7-code-hf-model-card",
+ "provider": "kimi",
+ "model": "Kimi K2.7 Code",
+ "release_date": "2026-06-12",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Kimi K2.7 Code, a coding-focused agentic model built on Kimi K2.6 (1T MoE, 32B active) with ~30% fewer thinking tokens, reporting six coding/agentic benchmarks (two in-house) with footnotes, deployment and usage. No safety content.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Kimi Code Bench v2",
+   "category": "coding",
+   "score": "62.0",
+   "setting": "in-house; Kimi Code CLI",
+   "page": null
+  },
+  {
+   "name": "ProgramBench",
+   "category": "coding",
+   "score": "53.6",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "MLS-Bench-Lite",
+   "category": "other",
+   "score": "35.1",
+   "setting": "30-task subset, 5h",
+   "page": null
+  },
+  {
+   "name": "Kimi Claw 24/7 Bench",
+   "category": "agentic_tool_use",
+   "score": "46.9",
+   "setting": "in-house, OpenClaw harness, avg of 3 runs",
+   "page": null
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "76.0",
+   "setting": "100 tool-call budget, avg of 3",
+   "page": null
+  },
+  {
+   "name": "MCPMark-Verified",
+   "category": "agentic_tool_use",
+   "score": "81.1",
+   "setting": "human-verified edition, avg of 3",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "MLS-Bench-Lite"
+   ],
+   "metrics": [
+    {
+     "name": "MLS-Bench-Lite",
+     "value": "35.1",
+     "page": null
+    }
+   ],
+   "finding": "MLS-Bench-Lite (inventing generalizable ML methods, an AI R&D-style task) is reported only as a capability score.",
+   "quote": "[MLS-Bench](https://mls-bench.com) evaluates whether AI systems can invent generalizable and scalable ML methods.",
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Kimi Claw 24/7 Bench: in-house persistent multi-day coworking benchmark (17 scenarios, 610 evaluation points)",
+  "MCPMark-Verified: human-verified edition of MCPMark (to be open-sourced)"
+ ],
+ "self_reported_limitations": [],
+ "notes": "Kimi Code Bench v2 is said to include security tasks among its domains, but no security/cyber results are broken out. No safety, misuse, or refusal content. Modified MIT license."
+}

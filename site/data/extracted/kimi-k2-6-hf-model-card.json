@@ -1,0 +1,428 @@
+{
+ "id": "kimi-k2-6-hf-model-card",
+ "provider": "kimi",
+ "model": "Kimi K2.6",
+ "release_date": "2026-04-20",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Kimi K2.6, an open-source native multimodal agentic model emphasizing long-horizon coding, coding-driven design, a 300-sub-agent Agent Swarm, and persistent 24/7 background agents operating 'without human oversight'. Provides a benchmark table (agentic, coding, reasoning, vision) with footnotes, INT4 quantization, deployment and usage, under a Modified MIT license. No safety content.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "agentic_tool_use",
+   "score": "54.0",
+   "setting": "HLE-Full with tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "83.2",
+   "setting": "discard-all context management",
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "86.3",
+   "setting": "Agent Swarm",
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "DeepSearchQA",
+   "category": "agentic_tool_use",
+   "score": "92.5 F1 / 83.0 acc",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepSearchQA"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "80.8",
+   "setting": "item-F1, hide tool result",
+   "page": null,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "50.0",
+   "setting": null,
+   "page": null,
+   "canonical": "Toolathlon"
+  },
+  {
+   "name": "MCPMark",
+   "category": "agentic_tool_use",
+   "score": "55.9",
+   "setting": null,
+   "page": null,
+   "canonical": "MCPMark"
+  },
+  {
+   "name": "Claw-Eval",
+   "category": "agentic_tool_use",
+   "score": "62.3 pass^3 / 80.9 pass@3",
+   "setting": "v1.1",
+   "page": null,
+   "canonical": "Claw-Eval"
+  },
+  {
+   "name": "APEX-Agents",
+   "category": "agentic_tool_use",
+   "score": "27.9",
+   "setting": "452 of 480 public tasks",
+   "page": null,
+   "canonical": "APEX-Agents"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "73.1",
+   "setting": null,
+   "page": null,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "66.7",
+   "setting": "Terminus-2, preserve thinking",
+   "page": null,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "58.6",
+   "setting": "in-house SWE-agent-derived framework, avg of 10 runs",
+   "page": null,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "76.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "80.2",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "52.2",
+   "setting": null,
+   "page": null,
+   "canonical": "SciCode"
+  },
+  {
+   "name": "OJBench (python)",
+   "category": "coding",
+   "score": "60.6",
+   "setting": null,
+   "page": null,
+   "canonical": "OJBench (python)"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "89.6",
+   "setting": null,
+   "page": null,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "34.7",
+   "setting": "HLE-Full, no tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "AIME 2026",
+   "category": "math",
+   "score": "96.4",
+   "setting": null,
+   "page": null,
+   "canonical": "AIME 2026"
+  },
+  {
+   "name": "HMMT Feb 2026",
+   "category": "math",
+   "score": "92.7",
+   "setting": null,
+   "page": null,
+   "canonical": "HMMT Feb 2026"
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "86.0",
+   "setting": null,
+   "page": null,
+   "canonical": "IMO-AnswerBench"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "90.5",
+   "setting": null,
+   "page": null,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "79.4 / 80.1",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "80.4 / 86.7",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "CharXiv (RQ)"
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "87.4 / 93.2",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "MathVision"
+  },
+  {
+   "name": "BabyVision",
+   "category": "multimodal",
+   "score": "39.8 / 68.5",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "BabyVision"
+  },
+  {
+   "name": "V*",
+   "category": "multimodal",
+   "score": "96.9",
+   "setting": "with Python",
+   "page": null,
+   "canonical": "V*"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "Key features explicitly advertise autonomous operation 'without human oversight' and cross-platform orchestration, yet there is no safety, misuse, prompt-injection, or oversight discussion. Unlike the K2.6 blog, the card omits the 'enhanced safety awareness' claim. DeepSearchQA baseline scores cited from the Claude Opus 4.7 System Card. Modified MIT license."
+}

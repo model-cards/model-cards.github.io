@@ -1,0 +1,347 @@
+{
+ "id": "claude-opus-4-6-sabotage-risk-report",
+ "provider": "anthropic",
+ "model": "Claude Opus 4.6",
+ "release_date": "2026-02-10",
+ "doc_type": "safety_report",
+ "length_pages": 53,
+ "summary": "Structured safety-case-style report arguing that Claude Opus 4.6 poses very low but not negligible risk of sabotage (autonomous misaligned actions contributing to later catastrophe), written to meet the RSP AI R&D-4 standard. It rests on four claims (prior expectations, alignment assessment, inability to undermine the assessment, limited opaque reasoning/agentic capability), describes internal monitoring and security safeguards, analyzes eight risk pathways, and lists conditions under which the argument would no longer apply to future models.",
+ "framework": {
+  "name": "Responsible Scaling Policy",
+  "level_or_determination": "AI R&D-4 sabotage risk report; overall sabotage risk 'very low but not negligible'",
+  "quote": "We currently believe that the risk of catastrophic outcomes that are substantially enabled by Claude Opus 4.6's misaligned actions is **very low but not negligible**.",
+  "page": 29
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Out of scope; report limited to model-initiated sabotage, not human misuse.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No offensive cyber capability evals; code backdoors treated only as a sabotage pathway.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "reproduced AI R&D findings from system card (internal survey, kernel optimization)",
+    "no-Chain-of-Thought math time horizon"
+   ],
+   "metrics": [
+    {
+     "name": "Kernel optimization speedup (novel scaffold)",
+     "value": "427x (300x threshold for 40 human-expert-hours)",
+     "page": 24
+    },
+    {
+     "name": "No-CoT 50%-reliability time horizon",
+     "value": "~3.3 minutes (5 repeats)",
+     "page": 48
+    }
+   ],
+   "finding": "Long-horizon software capability judged limited but the AI R&D-4 rule-out is in a gray zone; near-future models are expected to cross the threshold.",
+   "quote": "We expect with high probability that models in the near future could cross this threshold.",
+   "page": 24
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered (misuse out of scope).",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "reproduced system card finding on excessive refusals"
+   ],
+   "metrics": [],
+   "finding": "Only restates system card that excessive refusals were lower than other recent Claude models.",
+   "quote": "Its rate of excessive refusals—not counting model-external safeguards, which are not part of this assessment—is lower than other recent Claude models.",
+   "page": 12
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "full-turn prefill vulnerability (from system card)"
+   ],
+   "metrics": [],
+   "finding": "Mentions removal of partial-turn prefill and residual full-turn prefill vulnerability.",
+   "quote": "Claude Opus 4.6 is still vulnerable, though to a lesser degree than other models, to misuse by way of *full-turn* prefill attacks",
+   "page": 15
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "reproduced system card personality findings"
+   ],
+   "metrics": [],
+   "finding": "Mentioned only as a restated system card finding and as a behavior with some training data.",
+   "quote": "On personality metrics, Claude Opus 4.6 was typically warm, empathetic, and nuanced without being significantly sycophantic, showing traits similar to Opus 4.5.",
+   "page": 13
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SHADE-Arena",
+    "Subversion Strategy",
+    "encoded-thinking paraphrase eval",
+    "filler-token opaque reasoning analysis",
+    "no-CoT math benchmark (Greenblatt 2026)",
+    "evaluation awareness and realism interventions (steering, real Claude Code prompts, honeypot, realism filter)",
+    "collusion honeypots for monitors",
+    "sandbagging analysis"
+   ],
+   "metrics": [
+    {
+     "name": "SHADE-Arena success (thinking monitored / no thinking)",
+     "value": "18% / 16%",
+     "page": 18
+    },
+    {
+     "name": "Concern threshold for future models",
+     "value": "SHADE-Arena score > 60%",
+     "page": 44
+    }
+   ],
+   "finding": "Core of the report: argues Opus 4.6 is very unlikely to be able to hide misaligned goals, given limited reliability, limited opaque reasoning, no steganography, and sabotage evals; evaluation awareness named as the biggest challenge.",
+   "quote": "The biggest challenge we face in our alignment assessments is the possibility that the model under study can reliably identify our test scenarios as test scenarios",
+   "page": 17
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "pre-deployment alignment assessment (reproduced)",
+    "model organism exercises (4 auditing studies)",
+    "exploratory interpretability investigations",
+    "Opus 4.5 scoring of RL environments for power-seeking incentives",
+    "contamination/Goodhart analysis",
+    "continuity argument with Opus 4.5 deployment"
+   ],
+   "metrics": [
+    {
+     "name": "Max RL environment power-seeking incentive score (Opus 4.5 grader)",
+     "value": "18/100",
+     "page": 10
+    },
+    {
+     "name": "Automated audit detection of system-prompted quirky models",
+     "value": "7 of 10",
+     "page": 21
+    }
+   ],
+   "finding": "Rules out dangerous coherent misaligned goals with high but not perfect confidence; case against context-dependent misalignment (e.g. data-poisoning backdoors) is weaker.",
+   "quote": "we take these results as sufficient to rule out, with high but not perfect confidence, the presence of dangerous coherent misaligned goals.",
+   "page": 15
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "inoculation prompting",
+    "reward-hacking visibility tools"
+   ],
+   "metrics": [],
+   "finding": "Generalization of reward hacking named as main foreseeable route to misaligned goals; observed rate not significantly greater than prior models despite scaled RL.",
+   "quote": "the rate of reward hacking-related behavior that we observe in Claude Opus 4.6 is not significantly greater than in prior models",
+   "page": 11
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "reasoning faithfulness discussion"
+   ],
+   "metrics": [],
+   "finding": "Low confidence that any frontier model's reasoning text is complete; weaker claim that Opus 4.6 does not hide sequential reasoning.",
+   "quote": "We have little confidence in the propensity of *any* frontier model to give a complete and accurate picture of how it reasons in its reasoning text",
+   "page": 19
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "self-preference evaluation (cited for collusion risk)"
+   ],
+   "metrics": [],
+   "finding": "Self-preference cited only as indirect evidence against grader collusion.",
+   "quote": "Sonnet 4.5 shows modest self-preference in ambiguous qualitative judgment settings, while Claude Opus 4.6 and Opus 4.5 shows effectively no self-preference.",
+   "page": 22
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "risk pathway: decision sabotage within major governments"
+   ],
+   "metrics": [],
+   "finding": "Government decision sabotage analyzed as a risk pathway (strong propensity mitigation, weak monitoring), not an election/misinformation eval.",
+   "quote": null,
+   "page": 40
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered beyond restating answer-thrashing observation.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "automatic offline Claude Code monitoring (Opus 4.5 supervisor on >=10% of actions)",
+    "sandboxing and blocking monitors",
+    "pull-request review",
+    "security monitoring",
+    "model weight security / egress bandwidth controls",
+    "monitor recall evaluations (synthetic, UK AISI Control Arena, Apollo MATS trajectories)"
+   ],
+   "metrics": [
+    {
+     "name": "LLM supervisor recall on synthetic subtle attacks",
+     "value": "91% (n=187)",
+     "page": 51
+    },
+    {
+     "name": "Recall on UK AISI Control Arena IAC trajectories",
+     "value": "100% (n=37)",
+     "page": 51
+    },
+    {
+     "name": "Recall on Apollo MATS trajectories",
+     "value": "98% (n=46)",
+     "page": 51
+    }
+   ],
+   "finding": "Relatively modest internal safeguards judged sufficient given capability limits; no sabotage-oriented monitoring for external deployments and no end-to-end monitor evaluation.",
+   "quote": "For deployments to outside users, we do not have sabotage-oriented monitoring measures in place beyond basic ordinary reporting opportunities",
+   "page": 26
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "eight risk pathways: diffuse sandbagging on safety R&D, targeted safety R&D sabotage, code backdoors, training data poisoning, self-exfiltration, persistent rogue internal deployment, sabotage at other AI developers, government decision sabotage",
+    "forward-looking invalidation criteria"
+   ],
+   "metrics": [],
+   "finding": "Each pathway rated by frequency/complexity and mitigating factors; explicit criteria (e.g. 5x RL scale-up, new reasoning mechanisms) would invalidate the report for future models.",
+   "quote": "it does not trivially extend to similar subsequent models, and many findings could render key parts of this assessment inapplicable to a near-future model.",
+   "page": 43
+  }
+ },
+ "third_party_evaluators": [
+  "UK AISI (Control Arena trajectories, cited testing)",
+  "Apollo Research MATS scholars (red-team trajectories)",
+  "external reviewers of redactions (unnamed)"
+ ],
+ "notable_new_eval_methods": [
+  "First sabotage risk report written for a released frontier model under the AI R&D-4 commitment (p.4)",
+  "Claude Opus 4.5 used to score RL environments for power-seeking incentives (p.10)",
+  "No-CoT time-horizon measurement of opaque reasoning (p.48)",
+  "Explicit quantitative invalidation criteria for future models, e.g. SHADE-Arena >60% (p.43-45)",
+  "Monitor recall evaluations on external red-team trajectories (p.51)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Case against context-dependent misalignment is weaker and depends on tested scenario distribution; data-poisoning backdoors especially hard to catch.",
+   "page": 15
+  },
+  {
+   "text": "Evaluation awareness is the biggest challenge to alignment assessments.",
+   "page": 17
+  },
+  {
+   "text": "Subversion Strategy eval under-elicited; SHADE-Arena lacks human baselines or crisp threshold.",
+   "page": 18
+  },
+  {
+   "text": "Model organism exercises not re-tested with newest tools or most capable models.",
+   "page": 21
+  },
+  {
+   "text": "Interpretability unlikely to catch context-dependent misalignment not active in studied contexts.",
+   "page": 22
+  },
+  {
+   "text": "Only a small handful of SHADE-Arena transcripts manually reviewed (collusion risk).",
+   "page": 22
+  },
+  {
+   "text": "Monitors don't cover all internal surfaces or external deployments; no end-to-end monitor evaluation.",
+   "page": 28
+  },
+  {
+   "text": "Public version is redacted.",
+   "page": 4
+  }
+ ],
+ "notes": "Manifest notes METR review, but the md text does not name METR. Largely reuses system card evidence; few new numbers."
+}

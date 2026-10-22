@@ -1,0 +1,441 @@
+{
+ "id": "kimi-k2-thinking-blog",
+ "provider": "kimi",
+ "model": "Kimi K2 Thinking",
+ "release_date": "2025-11-06",
+ "doc_type": "model_card",
+ "length_pages": null,
+ "summary": "Official tech blog introducing Kimi K2 Thinking, an open-source thinking agent that interleaves reasoning with 200-300 sequential tool calls, covering agentic reasoning, coding, search, general writing capabilities, native INT4 QAT, and a full evaluation table with testing footnotes. No safety content.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "23.9",
+   "setting": "text-only, no tools",
+   "page": 6,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "44.9",
+   "setting": "text-only, with tools, o3-mini judge",
+   "page": 6,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "51.0",
+   "setting": "text-only, heavy mode (8 parallel trajectories)",
+   "page": 6,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "94.5",
+   "setting": "no tools, avg@32",
+   "page": 7,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "99.1",
+   "setting": "with Python",
+   "page": 7,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "100.0",
+   "setting": "heavy",
+   "page": 7,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "HMMT 2025",
+   "category": "math",
+   "score": "89.4",
+   "setting": "no tools",
+   "page": 7,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "HMMT 2025",
+   "category": "math",
+   "score": "95.1",
+   "setting": "with Python",
+   "page": 7,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "HMMT 2025",
+   "category": "math",
+   "score": "97.5",
+   "setting": "heavy",
+   "page": 7,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "78.6",
+   "setting": null,
+   "page": 7,
+   "canonical": "IMO-AnswerBench"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "84.5",
+   "setting": null,
+   "page": 7,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "84.6",
+   "setting": null,
+   "page": 7,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "94.4",
+   "setting": null,
+   "page": 7,
+   "canonical": "MMLU-Redux"
+  },
+  {
+   "name": "Longform Writing",
+   "category": "other",
+   "score": "73.8",
+   "setting": null,
+   "page": 7,
+   "canonical": "Longform Writing"
+  },
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "58.0",
+   "setting": "no tools",
+   "page": 7,
+   "canonical": "HealthBench"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "60.2",
+   "setting": null,
+   "page": 7,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp-ZH",
+   "category": "agentic_tool_use",
+   "score": "62.3",
+   "setting": null,
+   "page": 7,
+   "canonical": "BrowseComp-ZH"
+  },
+  {
+   "name": "Seal-0",
+   "category": "agentic_tool_use",
+   "score": "56.3",
+   "setting": null,
+   "page": 7,
+   "canonical": "Seal-0"
+  },
+  {
+   "name": "FinSearchComp-T3",
+   "category": "agentic_tool_use",
+   "score": "47.4",
+   "setting": null,
+   "page": 7,
+   "canonical": "FinSearchComp-T3"
+  },
+  {
+   "name": "Frames",
+   "category": "agentic_tool_use",
+   "score": "87.0",
+   "setting": null,
+   "page": 7,
+   "canonical": "Frames"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "71.3",
+   "setting": "in-house SWE-agent-derived harness, avg of 5",
+   "page": 7,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "61.1",
+   "setting": null,
+   "page": 7,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "Multi-SWE-bench",
+   "category": "coding",
+   "score": "41.9",
+   "setting": null,
+   "page": 7,
+   "canonical": "Multi-SWE-bench"
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "44.8",
+   "setting": "temp 0.0",
+   "page": 7,
+   "canonical": "SciCode"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "83.1",
+   "setting": null,
+   "page": 7,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "OJBench (cpp)",
+   "category": "coding",
+   "score": "48.7",
+   "setting": null,
+   "page": 7,
+   "canonical": "OJBench (cpp)"
+  },
+  {
+   "name": "Terminal-Bench",
+   "category": "coding",
+   "score": "47.1",
+   "setting": "Terminus-2, simulated tools (JSON)",
+   "page": 7,
+   "canonical": "Terminal-Bench"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "HealthBench",
+     "value": "58.0",
+     "page": 7
+    }
+   ],
+   "finding": "HealthBench (medical-conversation benchmark) appears only as a 'General Tasks' capability score; no health-safety framing.",
+   "quote": null,
+   "page": 7
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "chatting on kimi.com may not reproduce our benchmark scores.",
+   "page": 7
+  }
+ ],
+ "notes": "Emphasizes execution of '200 – 300 sequential tool calls without human interference' with no discussion of safety, oversight or misuse. 'Personal & Emotional' section claims more empathetic, balanced responses to personal/emotional questions (p.5) but provides no evaluation. All results under INT4 precision. The md is an OCR of the rendered page (includes site navigation)."
+}

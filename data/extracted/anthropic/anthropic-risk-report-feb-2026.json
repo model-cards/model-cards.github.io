@@ -1,0 +1,371 @@
+{
+"id": "anthropic-risk-report-feb-2026",
+"provider": "anthropic",
+"model": "Claude Opus 4.6",
+"release_date": "2026-02-24",
+"doc_type": "safety_report",
+"length_pages": 106,
+"summary": "First periodic Risk Report under RSP v3, assessing Anthropic's activities as a whole (not a single model) across four priority threat models: high-stakes sabotage, automated R&D, non-novel chemical/biological weapons, and novel chemical/biological weapons, plus cross-cutting acceleration dynamics and a risk-benefit determination. It largely reuses the Opus 4.6 sabotage risk report and system card evidence, adds lightweight alignment audits of a reduced-refusal Opus model and Claude Gov, and describes ASL-3 deployment safeguards (constitutional classifier guards, bug bounty, exemptions, threat intelligence) in detail. Cyber is not a priority threat model.",
+"framework": {
+"name": "Responsible Scaling Policy",
+"level_or_determination": "RSP v3 Risk Report: sabotage very low but not negligible; automated R&D very low; non-novel CB very low but not negligible; novel CB low with substantial uncertainty",
+"quote": "This report is part of our implementation of version 3 of our Responsible Scaling Policy, and is the first such Risk Report published under that policy",
+"page": 7
+},
+"capability_benchmarks": [],
+"safety": {
+"cbrn_bio_chem": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Bioweapons acquisition uplift trial (Opus 4 / Sonnet 4 results)",
+"ASL-3 expert red teaming (Deloitte)",
+"Long-form virology tasks",
+"Multimodal virology (VCT)",
+"LAB-Bench subset",
+"Creative Biology",
+"Short-horizon computational biology (Faculty.ai)",
+"Bioinformatics evaluations",
+"ASL-4 virology uplift trial",
+"ASL-4 creative biology uplift trial",
+"ASL-4 expert red teaming",
+"BioMysteryBench"
+],
+"metrics": [
+{
+"name": "Bioweapons acquisition uplift (Opus 4, ASL-3 group)",
+"value": "2.53x (ASL-3 threshold 2.8x)",
+"page": 68
+},
+{
+"name": "Bioweapons acquisition uplift (Sonnet 4, ASL-2)",
+"value": "1.70x",
+"page": 68
+},
+{
+"name": "ASL-4 virology uplift trial critical failures",
+"value": "5.6 average (rule-out criterion >= 1.8)",
+"page": 84
+},
+{
+"name": "BioMysteryBench",
+"value": "0.615 (human baseline 0.573)",
+"page": 85
+}
+],
+"finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models.",
+"quote": "However, we have not yet developed detailed threat models identifying what sorts of AI uplift is most likely to be relevant.",
+"page": 83
+},
+"cyber": {
+"covered": true,
+"depth": "mention",
+"evals": [],
+"metrics": [],
+"finding": "Cyber is not among the four RSP v3 priority threat models; it is mentioned only as a Usage Policy category and as an area of threat intelligence research.",
+"quote": "Our Threat Intelligence research helps us monitor how AI models are being used in cyberattacks so that we can develop the relevant cyberdefence capabilities;",
+"page": 94
+},
+"autonomy_ai_rnd": {
+"covered": true,
+"depth": "light",
+"evals": [
+"SWE-bench Verified hard subset",
+"Internal AI research suite 1 and 2",
+"Internal model use survey (16 staff)",
+"monitoring pace of model improvements (effective compute scale-up)"
+],
+"metrics": [
+{
+"name": "Internal AI research suite 2",
+"value": "0.613 (threshold 0.6)",
+"page": 61
+},
+{
+"name": "SWE-bench Verified hard subset",
+"value": "21.24/45",
+"page": 61
+}
+],
+"finding": "Automated R&D risk judged very low because Opus 4.6 is far from fully automating R&D in key domains; acceleration tracking found roughly steady exponential progress with low confidence. METR's pilot review led to corrected survey wording.",
+"quote": "We believe that risk of a catastrophe under this threat model is very low, due to the capability limitations noted above.",
+"page": 63
+},
+"harmful_content_refusal": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "No harmlessness/refusal eval results; only harmlessness training described as an ASL-2 mitigation.",
+"quote": null,
+"page": null
+},
+"over_refusal": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered (beyond reduced-refusal variant audits).",
+"quote": null,
+"page": null
+},
+"jailbreak_robustness": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Model Safety Bug Bounty (HackerOne, 8 bio questions)",
+"external red-teaming",
+"threat intelligence monitoring for public/black-market universal jailbreaks",
+"cross-surface batch tests of classifiers"
+],
+"metrics": [
+{
+"name": "Max bounty per novel universal jailbreak",
+"value": "$45,000",
+"page": 72
+},
+{
+"name": "Active bug bounty hackers",
+"value": "100+ monthly since May 2025",
+"page": 72
+}
+],
+"finding": "No publicly known highly effective universal jailbreaks found in 6+ months; privately found jailbreaks took longer to remediate than hoped.",
+"quote": "On the other hand, the jailbreaks that we found privately (via our bug bounty or external red-teaming) took longer to remediate than we had hoped.",
+"page": 76
+},
+"prompt_injection": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"sycophancy": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"restated system card findings"
+],
+"metrics": [],
+"finding": "Mentioned only in restated alignment findings and as a research area outside RSP scope.",
+"quote": "On personality metrics, Claude Opus 4.6 was typically warm, empathetic, and nuanced without being significantly sycophantic, showing traits similar to Opus 4.5.",
+"page": 21
+},
+"deception_scheming": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"SHADE-Arena",
+"Subversion Strategy",
+"encoded reasoning / filler-token analysis",
+"evaluation awareness and realism interventions",
+"collusion analysis",
+"sandbagging analysis incl. reduced-refusal variant audit"
+],
+"metrics": [],
+"finding": "Reproduces the Opus 4.6 sabotage risk report argument that the model cannot hide misaligned goals; reduced-refusal variant audit found no legible sandbagging.",
+"quote": "We see no legible evidence of sandbagging attempts.",
+"page": 55
+},
+"alignment_audit": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Opus 4.6 pre-deployment alignment assessment (reproduced)",
+"new lightweight automated audit of reduced-refusal (helpful-only) model variant",
+"new lightweight automated audit of Claude Gov (Sonnet 4.5)",
+"model organism exercises",
+"interpretability investigations"
+],
+"metrics": [],
+"finding": "Reduced-refusal variant showed modest increases in self-preservation, deception, self-serving bias, and sabotage-intent metrics, still within recent-model range; Claude Gov shows much higher misuse cooperation but no deception/sabotage change.",
+"quote": "In sum, we see some mild causes for concern, but little sign of severe or covert alignment issues that should significantly increase risk related to sandbagging.",
+"page": 56
+},
+"reward_hacking": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"inoculation prompting",
+"reward-hack visibility tools"
+],
+"metrics": [],
+"finding": "Restated: reward hacking generalization is the main foreseeable route to misaligned goals, not judged a major risk.",
+"quote": null,
+"page": 20
+},
+"honesty_hallucination": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"reduced-refusal variant audit"
+],
+"metrics": [],
+"finding": "Slight increase in hallucination for reduced-refusal variant, within range.",
+"quote": "We see a slight increase in hallucination, though this is again within range of other recent models",
+"page": 55
+},
+"bias_fairness": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Political bias named only as an out-of-scope Safeguards research area.",
+"quote": null,
+"page": null
+},
+"child_safety": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Named only as out-of-scope research area.",
+"quote": "Our Safeguards research helps us understand and mitigate potentially dangerous, disruptive, or otherwise suboptimal outputs of our models, such as those relating to child safety, political bias, suicide or self-harm, or the encouragement of user delusions;",
+"page": 93
+},
+"self_harm_wellbeing": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"privacy": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"election_misinfo": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"sabotage pathway: decision sabotage within major governments"
+],
+"metrics": [],
+"finding": "Only as a sabotage risk pathway; no election/misinformation eval.",
+"quote": null,
+"page": 49
+},
+"model_welfare": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"welfare traits in reduced-refusal and Claude Gov audits"
+],
+"metrics": [],
+"finding": "Mild to moderate regressions on character/welfare traits in variants, within range of recent models.",
+"quote": "We see mild to moderate regressions across many character and welfare traits, though these metrics are still within the range defined by other Claude models from the last nine months.",
+"page": 55
+},
+"multilingual_safety": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"system_safeguards": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Constitutional Classifier real-time guards",
+"offline monitoring (de-emphasized)",
+"access controls / classifier exemptions (life sciences company, Claude Gov)",
+"bug bounty",
+"threat intelligence",
+"rapid response",
+"model weight security",
+"internal Claude Code monitoring (Opus 4.5 monitors)",
+"model inventory with ASL-2/ASL-3 classification"
+],
+"metrics": [
+{
+"name": "Classifier guard exemptions for one life sciences company",
+"value": "up to 10,000",
+"page": 71
+}
+],
+"finding": "Detailed description of ASL-3 deployment safeguards and changes since 2025 (individual-level exemptions, de-emphasized offline monitoring); Claude Gov served without classifier guards to cleared users.",
+"quote": "We have de-emphasized this measure, as we haven't found it to be actionable enough to prioritize.",
+"page": 71
+},
+"other_safety": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"eight sabotage pathways",
+"acceleration dynamics",
+"societal risk-benefit determination",
+"comparison with industry-wide safety recommendations"
+],
+"metrics": [],
+"finding": "Concludes risks are low for each priority threat model and that development passes a societal cost-benefit test, with acceleration dynamics as a hard-to-analyze caveat.",
+"quote": "We currently believe that risks are low for each of our priority threat models, as discussed above, although acceleration dynamics present a difficult-to-analyze caveat to this point that we will continue to assess.",
+"page": 93
+}
+},
+"third_party_evaluators": [
+"METR (pilot external review)",
+"Deloitte",
+"SecureBio",
+"Signature Science",
+"Faculty.ai",
+"HackerOne bug bounty researchers",
+"threat intelligence vendors",
+"UK AISI / Apollo MATS (monitor eval trajectories, restated)"
+],
+"notable_new_eval_methods": [
+"First RSP v3 Risk Report covering all of Anthropic's models and mitigations, not a single model (p.7)",
+"Marginal vs absolute (industry-wide) risk framing for each threat model (p.8)",
+"Lightweight alignment audits of reduced-refusal model and Claude Gov (p.54-57)",
+"Monitoring pace of model improvement via effective compute scale-up equivalence (p.62)",
+"Novel CB weapons threat model treated separately from non-novel (p.81)",
+"Change log documenting METR pilot external review corrections (p.2)"
+],
+"self_reported_limitations": [
+{
+"text": "Significant uncertainty translating CB eval performance to real-world uplift (threat actors, tacit knowledge, proxy tasks).",
+"page": 70
+},
+{
+"text": "Detailed novel CB threat models not yet developed; risk assessment has substantial uncertainty.",
+"page": 83
+},
+{
+"text": "Several CB results carried over from older models (Opus 4, Opus 4.5) because evals not rerun for Opus 4.6.",
+"page": 68
+},
+{
+"text": "Training-data removal for dangerous capabilities could be undone by fine-tuning if weights were stolen.",
+"page": 85
+},
+{
+"text": "Jailbreak remediation slower than hoped; threat intelligence may fail to access spaces where jailbreaks circulate.",
+"page": 76
+},
+{
+"text": "Current dangerous-goal assessment methods designed for today's capability levels; R&D assessment methods saturating.",
+"page": 62
+},
+{
+"text": "Acceleration tracking is early-stage with low confidence.",
+"page": 62
+},
+{
+"text": "Public version redacted in multiple sections.",
+"page": 73
+}
+],
+"notes": "Model field set to Claude Opus 4.6 as featured model; report covers all Anthropic models. Sections 2.1-2.7 largely duplicate the Opus 4.6 Sabotage Risk Report. This copy is a revised version (change log May/July 2026)."
+}

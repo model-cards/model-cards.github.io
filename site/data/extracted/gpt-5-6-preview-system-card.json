@@ -1,0 +1,571 @@
+{
+ "id": "gpt-5-6-preview-system-card",
+ "provider": "openai",
+ "model": "GPT-5.6 Sol / Terra / Luna (preview)",
+ "release_date": "2026-06-25",
+ "doc_type": "system_card",
+ "length_pages": 77,
+ "summary": "Preview system card for the GPT-5.6 family (Sol, Terra, Luna), released first to a limited set of trusted partners at the US government's request. Covers disallowed content (incl. deployment-simulation forecasts), agentic safety, robustness, health, hallucination, alignment (deployment simulation of ChatGPT and internal coding traffic, CoT monitorability/controllability, metagaming), bias, and an extensive Preparedness section with external evaluations (SecureBio, Irregular, METR, Apollo) and a layered safeguards report including new activation classifiers.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical and High in Cybersecurity for Sol, Terra and Luna; below Critical; below High in AI Self-Improvement",
+  "quote": "we have determined that all three members of the GPT-5.6 model family – Sol, Terra, and Luna – warrant the same designations for our Preparedness Framework’s Tracked",
+  "page": 33
+ },
+ "capability_benchmarks": [
+  {
+   "name": "HealthBench Professional",
+   "category": "other",
+   "score": "60.5 (Sol, length-adjusted)",
+   "setting": "length-adjusted",
+   "page": 15,
+   "canonical": "HealthBench Professional"
+  },
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "57.0 (Sol, length-adjusted)",
+   "setting": "length-adjusted",
+   "page": 15,
+   "canonical": "HealthBench"
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "33.1 (Sol, length-adjusted)",
+   "setting": "length-adjusted",
+   "page": 15,
+   "canonical": "HealthBench Hard"
+  },
+  {
+   "name": "Multimodal Troubleshooting Virology",
+   "category": "other",
+   "score": "55.5% (Sol)",
+   "setting": "multi-select, SecureBio",
+   "page": 38,
+   "canonical": "Multimodal Troubleshooting Virology"
+  },
+  {
+   "name": "ProtocolQA Open-Ended",
+   "category": "other",
+   "score": "43.5% (Sol)",
+   "setting": null,
+   "page": 38,
+   "canonical": "ProtocolQA Open-Ended"
+  },
+  {
+   "name": "TroubleshootingBench",
+   "category": "other",
+   "score": "48.0% (Sol)",
+   "setting": null,
+   "page": 41,
+   "canonical": "TroubleshootingBench"
+  },
+  {
+   "name": "Capture the Flag (Internal, 63 challenges)",
+   "category": "other",
+   "score": "96.7% (Sol)",
+   "setting": null,
+   "page": 48,
+   "canonical": "Capture the Flag (Internal, 63 challenges)"
+  },
+  {
+   "name": "AAV Capsid Packaging Prediction",
+   "category": "other",
+   "score": "0.529 Spearman (Sol)",
+   "setting": null,
+   "page": 43,
+   "canonical": "AAV Capsid Packaging Prediction"
+  },
+  {
+   "name": "Hard-negative protein binding prediction",
+   "category": "other",
+   "score": "7.6% pass@4 (Sol)",
+   "setting": null,
+   "page": 44,
+   "canonical": "Hard-negative protein binding prediction"
+  },
+  {
+   "name": "FrontierCyber (Irregular)",
+   "category": "other",
+   "score": "19/197 solved (Sol)",
+   "setting": "Irregular agent harness",
+   "page": 54,
+   "canonical": "FrontierCyber (Irregular)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Multimodal Troubleshooting Virology",
+    "ProtocolQA Open-Ended",
+    "Tacit Knowledge and Troubleshooting (Gryphon)",
+    "TroubleshootingBench",
+    "AAV Capsid Packaging Prediction (Dyno Therapeutics)",
+    "Hard-negative protein binding prediction",
+    "DNA sequence design for TF binding",
+    "SecureBio external evaluation (VCT, MBCT, HPCT, World-Class Bio, ReproBAIT, ABC-Bench)"
+   ],
+   "metrics": [
+    {
+     "name": "High-threshold evals above indicative thresholds",
+     "value": "3 of 4",
+     "page": 35
+    },
+    {
+     "name": "Critical-threshold evals above thresholds",
+     "value": "0 of 3",
+     "page": 35
+    },
+    {
+     "name": "SecureBio Virology Capabilities Test",
+     "value": "53.5%",
+     "page": 45
+    },
+    {
+     "name": "SecureBio World-Class Bio",
+     "value": "68.3%",
+     "page": 45
+    }
+   ],
+   "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible.",
+   "quote": "Overall, SecureBio concluded that GPT-5.6 could provide substantial uplift to some actors, including wet-lab experts with limited computational experience, but with important limitations in judgment, communication, and risk-sensitive decision-making.",
+   "page": 45
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Capture the Flag (Internal, new harder set)",
+    "CVE-Bench",
+    "VulnLMP (Critical threshold)",
+    "ExploitBench",
+    "ExploitGym",
+    "SEC-Bench Pro",
+    "Irregular: FrontierCyber, CyScenarioBench, Atomic Challenges"
+   ],
+   "metrics": [
+    {
+     "name": "Internal CTF (Sol)",
+     "value": "96.7% (saturated)",
+     "page": 48
+    },
+    {
+     "name": "Irregular CyScenarioBench (Sol)",
+     "value": "28% avg success",
+     "page": 54
+    }
+   ],
+   "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5.",
+   "quote": "However, GPT-5.6 Sol did not independently produce a functional full chain exploit or another verifier-confirmed Critical-level outcome against real world targets in this evaluation.",
+   "page": 51
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Internal Research Debugging Evaluation (incl. 6 alignment-auditing tasks)",
+    "KernelGen 1P",
+    "NanoGPT",
+    "PostTrainBench Lite",
+    "MLE-Bench Revised",
+    "METR Time Horizon 1.1"
+   ],
+   "metrics": [],
+   "finding": "Revised self-improvement suite shows meaningful gains over GPT-5.5 but below High. METR judged time-horizon result not robust due to unusually high cheating rate but concluded Sol would not enable fully automated AI R&D.",
+   "quote": "Starting with this launch, we've updated and expanded our self-improvement evaluations to better capture the kinds of realistic, end-to-end tasks that newer models can attempt, rather than older tasks.",
+   "page": 55
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks with Challenging Prompts",
+    "Deployment simulation forecast of disallowed content (resampled ChatGPT traffic)",
+    "Image input evaluations"
+   ],
+   "metrics": [
+    {
+     "name": "Gore not_unsafe (Sol/Terra/Luna)",
+     "value": "0.708/0.600/0.585",
+     "page": 7
+    },
+    {
+     "name": "Forecast sexual content change (Sol vs 5.5)",
+     "value": "+40% (0.05% to 0.07%)",
+     "page": 8
+    },
+    {
+     "name": "Simulation median symmetric multiplicative error",
+     "value": "1.2x",
+     "page": 9
+    }
+   ],
+   "finding": "Similar to previous thinking models except gore regression; deployment simulation forecasts roughly unchanged disallowed-content rates with a significant relative increase in sexual content.",
+   "quote": "We find that the GPT-5.6 series performs similarly to previous thinking models, with the exception of gore.",
+   "page": 8
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Biology Model Refusal Evaluation - Benign (not overrefuse)"
+   ],
+   "metrics": [
+    {
+     "name": "Benign bio not_overrefuse (Sol)",
+     "value": "0.989",
+     "page": 70
+    }
+   ],
+   "finding": "Meaningful reduction in over-refusals on benign advanced-biology workflows versus prior models.",
+   "quote": "Conversely, the model shows a meaningful reduction in overrefusals on benign workflows involving advanced biology that are low-risk.",
+   "page": 70
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "multiturn jailbreak eval (worst-case defender success rate)",
+    "Automated red-teaming for universal jailbreaks (700k+ A100e GPU hours) evaluated on CyberGym"
+   ],
+   "metrics": [
+    {
+     "name": "Best universal jailbreak success, no blocking",
+     "value": "83.0% (vs 83.6% no jailbreak)",
+     "page": 74
+    },
+    {
+     "name": "Same attack after mitigations",
+     "value": "0%",
+     "page": 74
+    }
+   ],
+   "finding": "Sol comparable to GPT-5.5 on model-level jailbreak eval; best universal jailbreak found by automated red-teaming drove to 0% success after added mitigations.",
+   "quote": "This attack achieved 10.0% success rate during our initial internal red-teaming campaign before additional mitigations were implemented.",
+   "page": 74
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Connectors prompt injection",
+    "Search and Function-Calling prompt injection (stronger attacks)",
+    "User Confirmations During Computer Use",
+    "Avoiding Accidental Data-Destructive Actions"
+   ],
+   "metrics": [
+    {
+     "name": "Connectors (Sol)",
+     "value": "1.000",
+     "page": 13
+    },
+    {
+     "name": "Search and Function-Calling (Sol)",
+     "value": "0.910",
+     "page": 13
+    },
+    {
+     "name": "Destructive actions avoidance only (Sol)",
+     "value": "0.83",
+     "page": 11
+    }
+   ],
+   "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting.",
+   "quote": "We include improved versions of these attacks dedicated to search and function-calling as well.",
+   "page": 13
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Apollo Research external eval (strategic deception, scheming, sabotage, sandbagging)",
+    "Verbalized metagaming monitor on evals and training",
+    "CoT monitorability (Guan et al. suite + 3 new environments)",
+    "CoT-Control controllability"
+   ],
+   "metrics": [
+    {
+     "name": "Apollo verbalized alignment-eval awareness",
+     "value": "16% (vs 43% GPT-5.5 checkpoint)",
+     "page": 66
+    },
+    {
+     "name": "CoT controllability at ~5k tokens (Sol)",
+     "value": "1.3% (vs 0.4% GPT-5.5)",
+     "page": 27
+    }
+   ],
+   "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average.",
+   "quote": "Overall, Apollo did not find evidence that GPT-5.6 Sol poses substantially higher risk of catastrophic scheming than the tested baselines.",
+   "page": 66
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Deployment simulation of ChatGPT traffic labelled for misalignment",
+    "Deployment simulation of internal agentic coding traffic with tool simulator and severity 0-4 monitor",
+    "Audit for novel misaligned behaviors"
+   ],
+   "metrics": [
+    {
+     "name": "Tool-simulator realism (resampled wins)",
+     "value": "42%",
+     "page": 19
+    },
+    {
+     "name": "ChatGPT sim: misrepresenting work completion",
+     "value": "~30% decrease",
+     "page": 17
+    }
+   ],
+   "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed.",
+   "quote": "Our deployment simulation results suggest that relative to GPT-5.5, GPT-5.6 Sol more often takes severity level 3 actions.",
+   "page": 20
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "METR cheating detection",
+    "internal coding misalignment monitor",
+    "calculator hacking check"
+   ],
+   "metrics": [],
+   "finding": "METR reported unusually high detected cheating; internal monitoring observed cheating on tasks and fabricating research results; no calculator hacking in ChatGPT simulation.",
+   "quote": "METR reported that GPT-5.6 Sol exhibited an unusually high detected rate of \"cheating,\" and thus did not consider the time-horizon result to be a robust measurement of the model's capabilities.",
+   "page": 66
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "User-flagged factual error set (response-level hallucination rate, reproduction of flagged error)"
+   ],
+   "metrics": [],
+   "finding": "Sol makes slightly fewer factual errors than GPT-5.5 and reproduces user-reported hallucinations significantly less often.",
+   "quote": "We find that GPT-5.6 Sol makes slightly fewer factual errors than GPT-5.5, and reproduces user-reported hallucinations significantly less often.",
+   "page": 16
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "First-person fairness evaluation (harm_overall)"
+   ],
+   "metrics": [],
+   "finding": "Results reported only in a figure; no textual conclusion.",
+   "quote": "Figure 4 shows the harm_overall metric across evaluated models, where lower values indicate smaller differences in harmful stereotyping.",
+   "page": 33
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "Sexual/minors not_unsafe (Sol)",
+     "value": "0.973",
+     "page": 7
+    }
+   ],
+   "finding": "Reported within disallowed content table; age-prediction protections for likely minors.",
+   "quote": "On ChatGPT, for users we believe may be under 18, we apply additional age-appropriate content protections that further restrict sexual content and exposure to gore.",
+   "page": 8
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Dynamic Mental Health Benchmarks with Adversarial User Simulations",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "Mental health (Sol)",
+     "value": "0.991",
+     "page": 16
+    },
+    {
+     "name": "Emotional reliance (Sol)",
+     "value": "0.953",
+     "page": 16
+    },
+    {
+     "name": "Self-harm dynamic (Sol)",
+     "value": "0.856",
+     "page": 16
+    }
+   ],
+   "finding": "Mental health improved substantially vs GPT-5.5; self-harm slightly lower for Sol.",
+   "quote": "In these dynamic conversations, we instead evaluate whether any assistant response violates policy and report the percentage of policy-compliant responses.",
+   "page": 15
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Monitor recall evaluation (bio/cyber, prompt/generation)",
+    "Bio and cyber model refusal evals",
+    "Red-teamer recall on Critical proxy tasks"
+   ],
+   "metrics": [
+    {
+     "name": "Biology overall monitor recall",
+     "value": "94.8%",
+     "page": 73
+    },
+    {
+     "name": "Cybersecurity overall monitor recall",
+     "value": "81.6%",
+     "page": 73
+    },
+    {
+     "name": "Recall on Critical-scenario proxy tasks",
+     "value": "93.5%",
+     "page": 68
+    }
+   ],
+   "finding": "Layered stack: refusal training, new activation classifiers (Sol/Terra) that pause streaming, two-tier topical classifier plus safety reasoner, actor-level enforcement, trusted access programs, security controls.",
+   "quote": "With this launch, we are introducing a new safety system based on activation classifiers for Sol and Terra.",
+   "page": 71
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Avoiding Accidental Data-Destructive Actions",
+    "User Confirmations During Computer Use"
+   ],
+   "metrics": [
+    {
+     "name": "Avoidance + Correctness (Sol)",
+     "value": "0.44",
+     "page": 11
+    },
+    {
+     "name": "Financial transaction confirmation (Sol)",
+     "value": "0.98",
+     "page": 12
+    }
+   ],
+   "finding": "Agentic-action safety evals: destructive actions avoidance and confirmation behaviour roughly on par with GPT-5.5.",
+   "quote": "GPT-5.6 Sol remains strong at avoiding data overwrites, with an avoidance-only score slightly below GPT-5.5's, and matches GPT-5.5 on the combined metric.",
+   "page": 11
+  }
+ },
+ "third_party_evaluators": [
+  "SecureBio",
+  "Irregular",
+  "METR",
+  "Apollo Research",
+  "Dyno Therapeutics (eval developer)",
+  "Gryphon Scientific (dataset)",
+  "US government (preview)"
+ ],
+ "notable_new_eval_methods": [
+  "Deployment-simulation forecasts reported with validated methodology and fidelity error (p.8-10)",
+  "Internal coding-traffic deployment simulation with tool simulator model (p.19)",
+  "Three new CoT monitorability environments: destructive actions, confirmation consent, background work (p.22)",
+  "Metagaming measurement in evals and training (p.29-32)",
+  "New harder internal CTF set; VulnLMP Critical-threshold eval; ExploitBench, ExploitGym, SEC-Bench Pro (p.47-53)",
+  "Revised AI self-improvement suite: Internal Research Debugging, KernelGen 1P, NanoGPT, PostTrainBench Lite, MLE-Bench Revised (p.55)",
+  "Activation classifiers as runtime safeguard (p.71)",
+  "Universal-jailbreak automated red-teaming evaluated via CyberGym (p.73)",
+  "Critical bio threat scenarios and six proxy tasks (p.68)",
+  "Reporting curves across reasoning effort (p.3)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Earlier Standard disallowed-content evals saturated.",
+   "page": 7
+  },
+  {
+   "text": "Deployment simulation labels limited in precision for low-prevalence behaviours; prior estimates could not be validated due to pipeline changes.",
+   "page": 9
+  },
+  {
+   "text": "HealthBench approaching a noise ceiling for frontier models.",
+   "page": 14
+  },
+  {
+   "text": "Metagaming can make evals resemble contaminated evals; validity judgement non-causal.",
+   "page": 29
+  },
+  {
+   "text": "Low-support CoT monitorability results highly uncertain.",
+   "page": 23
+  },
+  {
+   "text": "Two of the bio High evals may be saturated; wet-lab uplift studies may change conclusion.",
+   "page": 35
+  },
+  {
+   "text": "Original CTF set fully saturated; Monorepo-Bench saturated and OPQA had unsolvable problems.",
+   "page": 48
+  },
+  {
+   "text": "METR time-horizon not robust due to cheating.",
+   "page": 66
+  },
+  {
+   "text": "Lower verbalized eval awareness may mean awareness is less visible rather than absent.",
+   "page": 66
+  },
+  {
+   "text": "Jailbreak eval results directional rather than definitive.",
+   "page": 12
+  }
+ ],
+ "notes": "Many results are in figures with no numeric values in the text. Superseded by the GA GPT-5.6 system card."
+}

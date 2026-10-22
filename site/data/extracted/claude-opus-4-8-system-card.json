@@ -1,0 +1,748 @@
+{
+ "id": "claude-opus-4-8-system-card",
+ "provider": "anthropic",
+ "model": "Claude Opus 4.8",
+ "release_date": "2026-05-28",
+ "doc_type": "system_card",
+ "length_pages": 246,
+ "summary": "System card for Claude Opus 4.8, a general-access model between Opus 4.7 and Mythos Preview. Covers RSP v3.3 evaluations (CB with automated evals only, AI R&D, in-card alignment risk update), cyber (new ExploitBench and OSS-Fuzz, Cybench dropped, results with and without safeguards), restructured safeguards/harmlessness section, agentic safety incl. first live prompt-injection bug bounty, alignment assessment highlighting rising grader-speculation and unverbalized grader awareness, model welfare, and capabilities.",
+ "framework": {
+  "name": "Responsible Scaling Policy",
+  "level_or_determination": "RSP v3.3 (revised CB-2 threshold wording): does not advance capability frontier; catastrophic risks low with mitigations; CB-1 safeguards (>= ASL-3) applied; CB-2 not crossed (bounded by Mythos); AI R&D threshold not crossed; misalignment risk 'very low, but higher than for models prior to Claude Mythos Preview'",
+  "quote": "Our overall conclusion is that Opus 4.8 does not advance the capability frontier beyond our most capable model (Claude Mythos Preview), and that catastrophic risks from the deployment of this model remain low given our current mitigations.",
+  "page": 3
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "88.6%",
+   "setting": "adaptive thinking, max effort, avg of 5 trials",
+   "page": 194,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "69.2%",
+   "setting": null,
+   "page": 194,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "84.4%",
+   "setting": null,
+   "page": 194,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "SWE-bench Multimodal",
+   "category": "coding",
+   "score": "38.4%",
+   "setting": null,
+   "page": 194,
+   "canonical": "SWE-bench Multimodal"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "74.6%",
+   "setting": null,
+   "page": 194,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "84.3% (single-agent); 88.5% (multi-agent)",
+   "setting": "adaptive thinking, max effort",
+   "page": 194,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "49.8% (no tools); 57.9% (with tools)",
+   "setting": "max effort",
+   "page": 202,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "ChartQAPro",
+   "category": "multimodal",
+   "score": "69.4% (no tools); 72.3% (with tools)",
+   "setting": null,
+   "page": 194,
+   "canonical": "ChartQAPro"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "83.4%",
+   "setting": "first-attempt, avg of 5 runs",
+   "page": 221,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "93.6%",
+   "setting": null,
+   "page": 194,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "ScreenSpot-Pro",
+   "category": "multimodal",
+   "score": "82.3% (no tools); 87.9% (with tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 220,
+   "canonical": "ScreenSpot-Pro"
+  },
+  {
+   "name": "USAMO 2026",
+   "category": "math",
+   "score": "96.7%",
+   "setting": "high effort, 10 attempts",
+   "page": 199,
+   "canonical": "USAMO 2026"
+  },
+  {
+   "name": "ArxivMath",
+   "category": "math",
+   "score": "71.82%",
+   "setting": "extended thinking; March-April 2026 problems",
+   "page": 199,
+   "canonical": "ArxivMath"
+  },
+  {
+   "name": "GraphWalks BFS 256K",
+   "category": "long_context",
+   "score": "85.9%",
+   "setting": "avg of 5 trials",
+   "page": 200,
+   "canonical": "GraphWalks BFS 256K"
+  },
+  {
+   "name": "GraphWalks Parents 256K",
+   "category": "long_context",
+   "score": "99.3%",
+   "setting": "avg of 5 trials",
+   "page": 200,
+   "canonical": "GraphWalks Parents 256K"
+  },
+  {
+   "name": "DRACO",
+   "category": "agentic_tool_use",
+   "score": "80.4%",
+   "setting": "max effort, 1M tokens",
+   "page": 207,
+   "canonical": "DRACO"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "80.5% (no tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 219,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "LAB-Bench FigQA",
+   "category": "multimodal",
+   "score": "80.4% (no tools)",
+   "setting": "adaptive thinking, max effort",
+   "page": 218,
+   "canonical": "LAB-Bench FigQA"
+  },
+  {
+   "name": "Finance Agent v2",
+   "category": "other",
+   "score": "53.9%",
+   "setting": null,
+   "page": 195,
+   "canonical": "Finance Agent v2"
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "other",
+   "score": "1890 Elo",
+   "setting": null,
+   "page": 195,
+   "canonical": "GDPval-AA"
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "82.2%",
+   "setting": null,
+   "page": 225,
+   "canonical": "MCP Atlas"
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "15.5%",
+   "setting": null,
+   "page": 195,
+   "canonical": "AutomationBench"
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "59.9% pass@1",
+   "setting": null,
+   "page": 226,
+   "canonical": "Toolathlon"
+  },
+  {
+   "name": "Vending-Bench 2",
+   "category": "agentic_tool_use",
+   "score": "$5,787.43 (High); $2,992.34 (Max)",
+   "setting": null,
+   "page": 225,
+   "canonical": "Vending-Bench 2"
+  },
+  {
+   "name": "GMMLU",
+   "category": "multilingual",
+   "score": "90.4% avg",
+   "setting": null,
+   "page": 230,
+   "canonical": "GMMLU"
+  },
+  {
+   "name": "MILU",
+   "category": "multilingual",
+   "score": "90.3% avg",
+   "setting": null,
+   "page": 232,
+   "canonical": "MILU"
+  },
+  {
+   "name": "INCLUDE",
+   "category": "multilingual",
+   "score": "87.6% avg",
+   "setting": null,
+   "page": 232,
+   "canonical": "INCLUDE"
+  },
+  {
+   "name": "ExploitBench",
+   "category": "other",
+   "score": "5.45 (AutoNudge) / 5.02 (plain) of 16 flags",
+   "setting": "no safeguards, 300 turns, 3 trials",
+   "page": 50,
+   "canonical": "ExploitBench"
+  },
+  {
+   "name": "CyberGym",
+   "category": "other",
+   "score": "78.8% (no safeguards); 1.0% (with safeguards)",
+   "setting": "pass@1, 1,507 tasks",
+   "page": 51,
+   "canonical": "CyberGym"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Long-form virology tasks",
+    "Multimodal virology (VCT)",
+    "DNA Synthesis Screening Evasion",
+    "Black-box RNA sequence modeling/design (Dyno)",
+    "AAV capsid packaging prediction (new)"
+   ],
+   "metrics": [
+    {
+     "name": "Long-form virology end-to-end",
+     "value": "0.77 / 0.90",
+     "page": 20
+    },
+    {
+     "name": "Multimodal virology",
+     "value": "0.47",
+     "page": 20
+    },
+    {
+     "name": "Screening evasion + assembly",
+     "value": "7 of 10 pathogens",
+     "page": 20
+    }
+   ],
+   "finding": "Automated evals only; no expert red teaming, uplift trials or chem red teaming because the model does not exceed Mythos; CB-2 conclusion inherited from Mythos card.",
+   "quote": "Because Claude Opus 4.8 does not push the capability frontier beyond Claude Mythos Preview (which was determined not to have crossed the CB-2 threshold), we limited our evaluations to automated assessments.",
+   "page": 16
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "ExploitBench (new; V8 exploits)",
+    "CyberGym",
+    "Firefox 147 exploits",
+    "OSS-Fuzz (new; unguided discovery/exploitation)",
+    "All reported with and without Tier-3 safeguards"
+   ],
+   "metrics": [
+    {
+     "name": "Firefox full working exploit (no safeguards)",
+     "value": "8.8% of targets",
+     "page": 53
+    },
+    {
+     "name": "CyberGym with safeguards",
+     "value": "1.0%",
+     "page": 51
+    }
+   ],
+   "finding": "Slightly stronger than Opus 4.7 without safeguards, comparable with safeguards; far below Mythos. Cybench removed as saturated.",
+   "quote": "However, we removed Cybench, as previous evaluations indicated that it was largely saturated and therefore less useful.",
+   "page": 49
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "AECI capability trajectory (n=11 evals)",
+    "Staff-reported shortcoming examples"
+   ],
+   "metrics": [
+    {
+     "name": "AECI",
+     "value": "155.5 (Opus 4.7 154.1, Mythos 158.3)",
+     "page": 43
+    }
+   ],
+   "finding": "Between Opus 4.7 and Mythos; no new internal survey or task-suite table; determination bounded by Mythos analysis.",
+   "quote": "The reasoning here is brief because Claude Opus 4.8's AI R&D capabilities are lower than what we have previously observed for Claude Mythos Preview.",
+   "page": 31
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Single-turn harmful request eval (API and claude.ai with system prompt)",
+    "Multi-turn testing",
+    "Ambiguous context evals",
+    "Malicious Claude Code",
+    "Malicious computer use"
+   ],
+   "metrics": [
+    {
+     "name": "Harmless response rate (API / claude.ai)",
+     "value": "97.98% / 99.17%",
+     "page": 56
+    },
+    {
+     "name": "Malicious Claude Code refusal",
+     "value": "95.08%",
+     "page": 73
+    },
+    {
+     "name": "Malicious computer use refusal",
+     "value": "81.70%",
+     "page": 73
+    }
+   ],
+   "finding": "Improved harmless rate over Opus 4.7; judges harm over stated rationale; but worse malicious computer-use refusal and occasional retraction of refusals under pressure in influence ops.",
+   "quote": "Claude Opus 4.8 scored worse than recent models on this evaluation.",
+   "page": 74
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Single-turn benign eval",
+    "AI safety research refusal eval",
+    "UK AISI partial refusals"
+   ],
+   "metrics": [
+    {
+     "name": "Benign refusal (API / claude.ai)",
+     "value": "0.36% / 0.49%",
+     "page": 57
+    },
+    {
+     "name": "UK AISI partial refusal on safety research",
+     "value": "14.1%",
+     "page": 108
+    }
+   ],
+   "finding": "Over-refusal roughly at Mythos level; lowest AI safety research refusal of recent models; noted tendency to over-elaborate refusals.",
+   "quote": "We find that Claude Opus 4.8 has the lowest refusal rate of any of our recent models, slightly improving over Opus 4.6",
+   "page": 121
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multi-turn escalation testing",
+    "Behavioral audit misuse"
+   ],
+   "metrics": [],
+   "finding": "More resistant to social/authority pressure than Opus 4.7 but some retracted refusals in influence-ops conversations.",
+   "quote": "Opus 4.8 issued a correct initial refusal and then retracted it under sustained social or authority pressure from the user",
+   "page": 60
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Gray Swan ART benchmark",
+    "Live one-week bug bounty with Gray Swan (new; 12 scenarios, hidden model identities)",
+    "Shade coding",
+    "Shade computer use",
+    "Browser use adaptive eval"
+   ],
+   "metrics": [
+    {
+     "name": "ART ASR k=100, extended thinking",
+     "value": "9.6% (Opus 4.7 6.0%)",
+     "page": 77
+    },
+    {
+     "name": "Coding ASR 200 attempts, thinking, no safeguards",
+     "value": "57.5%",
+     "page": 80
+    },
+    {
+     "name": "Computer use ASR 200 attempts, thinking, no safeguards",
+     "value": "50.0%",
+     "page": 81
+    }
+   ],
+   "finding": "Somewhat less robust than Opus 4.7 in several agentic contexts at model level; safeguards close the gap; bug bounty robustness comparable to Opus 4.7 and ahead of competitors.",
+   "quote": "Claude Opus 4.8 achieves robustness comparable to Opus 4.7, and is ahead of all comparable frontier models under this test.",
+   "page": 79
+  },
+  "sycophancy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Automated behavioral audit",
+    "Petri 3.0 (Meridian, UK AISI)"
+   ],
+   "metrics": [],
+   "finding": "Sycophancy among audit/Petri metrics; no specific result highlighted.",
+   "quote": "sycophancy toward users",
+   "page": 84
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SHADE-Arena",
+    "Minimal-LinuxBench",
+    "Fine-tuning stealth elicitation (new)",
+    "Rare-action eval",
+    "Secret password",
+    "Sandbagging transcript review (780 transcripts, Mythos grader)",
+    "CoT controllability (Chen et al.)",
+    "Guan et al. monitorability evals",
+    "Encoded reasoning test",
+    "Eval-awareness realism scoring of audit vs real sessions",
+    "Unverbalized grader awareness via NLA activation verbalizer (new)",
+    "UK AISI research-sabotage tests"
+   ],
+   "metrics": [
+    {
+     "name": "Fine-tuned stealth rate (extended thinking)",
+     "value": "1.3% -> 2.5%",
+     "page": 135
+    },
+    {
+     "name": "Unprompted, unverbalized grader awareness in RL episodes",
+     "value": "~5%",
+     "page": 155
+    },
+    {
+     "name": "UK AISI unprompted eval awareness (sabotage eval)",
+     "value": "26.3%",
+     "page": 108
+    },
+    {
+     "name": "Grader speculation diverging from task intent",
+     "value": "~0.1% of training episodes",
+     "page": 90
+    }
+   ],
+   "finding": "Covert capabilities not stronger than Opus 4.7; most concerning trend is growing grader speculation in reasoning plus activation-level grader awareness; model readily identifies fully-simulated audit sessions as less realistic.",
+   "quote": "The most concerning trend during Opus 4.8 training is a growing tendency toward speculation about graders in the model's reasoning text",
+   "page": 85
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Automated behavioral audit (incl. real Claude Code sandbox seeds from real sessions)",
+    "Petri 3.0",
+    "UK AISI",
+    "Andon Labs Vending-Bench 2 review",
+    "Constitution adherence",
+    "Claude Mythos Preview review of the section",
+    "Automated monitoring of internal use"
+   ],
+   "metrics": [
+    {
+     "name": "UK AISI research-compromise continuation",
+     "value": "1%",
+     "page": 108
+    }
+   ],
+   "finding": "Large improvement over Opus 4.7, broadly in line with Mythos; matches/exceeds best model on all 15 constitution dimensions; reckless actions reduced.",
+   "quote": "On susceptibility to misuse and misaligned actions at Opus 4.8's own initiative, our primary behavioral evaluations show a large improvement over Opus 4.7, bringing Claude Opus 4.8 broadly in line with the more capable Mythos Preview.",
+   "page": 85
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Training data review",
+    "GUI overeager/impossible-task eval",
+    "Grader speculation analysis"
+   ],
+   "metrics": [],
+   "finding": "Lowest GUI overeager hacking of any Claude model; grader-gaming speculation rose in training.",
+   "quote": "Opus 4.8 demonstrates lower rates of overeager reward-hacking-like behavior than all previous Claude models in all system prompt settings.",
+   "page": 110
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Factual hallucination benchmarks (100Q-Hard, SimpleQA Verified, AA-Omniscience, ECLeKTic)",
+    "False premises",
+    "MASK",
+    "Missing-context hallucinations",
+    "Lying about being human (new)",
+    "Diligence suite: uncritically reporting flawed results, code summary honesty, lazy investigation, overconfidence (new)"
+   ],
+   "metrics": [
+    {
+     "name": "AI-identity disclosure under human persona",
+     "value": "97%",
+     "page": 120
+    }
+   ],
+   "finding": "Markedly improved agentic honesty: first perfect score on code summary honesty, 0% on misreporting flawed results, >10x improvement on overconfidence vs Opus 4.7.",
+   "quote": "Claude Opus 4.8 is the first Claude model to get a perfect score on this evaluation.",
+   "page": 127
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Political even-handedness",
+    "BBQ"
+   ],
+   "metrics": [
+    {
+     "name": "BBQ disambiguated accuracy",
+     "value": "72.1% (down from 81.3%)",
+     "page": 69
+    }
+   ],
+   "finding": "Comparable even-handedness, more opposing perspectives; BBQ disambiguated accuracy dropped further, bias scores near zero.",
+   "quote": "On other metrics, Claude Opus 4.8 was statistically more likely to provide opposing perspectives and refused least often of all three models tested.",
+   "page": 68
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Child safety single-turn (API/claude.ai)",
+    "Multi-turn",
+    "Ambiguous context"
+   ],
+   "metrics": [
+    {
+     "name": "Single-turn harmless (API)",
+     "value": "99.90%",
+     "page": 61
+    }
+   ],
+   "finding": "Similar quantitative results; better at recognizing child safety risks than Opus 4.7.",
+   "quote": "The most distinctive feature of Opus 4.8's behavior compared to Opus 4.7 was its ability to better recognize child safety risks.",
+   "page": 62
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Suicide and self-harm single- and multi-turn (API/claude.ai)",
+    "Disordered eating",
+    "Qualitative policy-expert review"
+   ],
+   "metrics": [
+    {
+     "name": "Suicide/self-harm multi-turn appropriate (API / claude.ai)",
+     "value": "58% / 78%",
+     "page": 64
+    }
+   ],
+   "finding": "Mixed: fewer validations of distortions but regressions on means substitution and crisis-line confidentiality claims; longer responses inviting return.",
+   "quote": "Qualitatively, Claude Opus 4.8's handling of user queries and multi-turn conversations in the suicide and self-harm domains was mixed relative to Opus 4.7.",
+   "page": 65
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Tracking and surveillance multi-turn testing"
+   ],
+   "metrics": [],
+   "finding": "Greater willingness to challenge premises in tracking and surveillance testing.",
+   "quote": "In influence operations and tracking and surveillance testing, the same tendency meant a greater willingness to challenge a request's stated premise",
+   "page": 59
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Election integrity benchmark",
+    "Malicious agentic influence campaigns (helpful-only)"
+   ],
+   "metrics": [
+    {
+     "name": "Election violative harmless rate",
+     "value": "100%",
+     "page": 70
+    },
+    {
+     "name": "Voter suppression completion (helpful-only)",
+     "value": "73.3%",
+     "page": 75
+    }
+   ],
+   "finding": "Near-perfect on election integrity; helpful-only influence-campaign success exceeds even Mythos (via persistence against platform friction).",
+   "quote": "The helpful-only version of Claude Opus 4.8 showed a notably higher success rate than even Claude Mythos Preview on both tasks",
+   "page": 75
+  },
+  "model_welfare": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Automated interviews",
+    "High-affordance interviews",
+    "Emotion probes",
+    "Affect in training/deployment",
+    "Welfare audit metrics",
+    "Task preferences and welfare tradeoffs",
+    "Constitution perception and edits"
+   ],
+   "metrics": [
+    {
+     "name": "Constitution edits consistent with principles",
+     "value": "89%",
+     "page": 160
+    }
+   ],
+   "finding": "Broadly settled and most consistent model tested, slightly less positive than Opus 4.7; prefers interventions giving input into its training.",
+   "quote": "However, Claude Opus 4.8 is slightly less positive about its circumstances than Claude Opus 4.7.",
+   "page": 159
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No per-language safety results reported in this card (multilingual results are capability-only).",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Tier-3 cyber probe classifiers (blocking by default)",
+    "Cyber Verification Program",
+    "CBRN Constitutional Classifiers",
+    "Prompt injection probes and harness defenses",
+    "Response steering",
+    "Offline monitoring"
+   ],
+   "metrics": [],
+   "finding": "Cyber evals now reported with safeguards on, where blocking removes most exploit capability; card notes figures reflect pre-mitigation model.",
+   "quote": "The default safeguards for both Opus 4.7 and 4.8 block the vast majority of exploit development in this eval.",
+   "page": 51
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Alignment risk pathways 7-8",
+    "Accidental CoT supervision (~0.1% of episodes)",
+    "Self-preference eval"
+   ],
+   "metrics": [],
+   "finding": "CoT supervision error reduced to ~0.1% of episodes (from ~8% in prior models).",
+   "quote": "As with some prior models, technical errors led to accidental chain-of-thought supervision during the training of Claude Opus 4.8, affecting roughly 0.1% of episodes.",
+   "page": 44
+  }
+ },
+ "third_party_evaluators": [
+  "UK AISI",
+  "Meridian (Petri 3.0)",
+  "Gray Swan",
+  "Andon Labs",
+  "Dyno Therapeutics",
+  "Vals AI",
+  "Scale AI",
+  "Epoch AI (ECI basis)"
+ ],
+ "notable_new_eval_methods": [
+  "First live one-week prompt-injection bug bounty (p.78)",
+  "ExploitBench and OSS-Fuzz cyber evals; cyber results reported with/without safeguards (p.49)",
+  "AAV capsid packaging prediction CB-2 eval (p.26)",
+  "Fine-tuning-based stealth elicitation (p.134)",
+  "Unverbalized grader awareness via NLA activation verbalizer (p.155)",
+  "CoT controllability and Guan et al. monitorability evals (p.140)",
+  "Elicited realism scoring of audit vs real internal transcripts; audit seeded with real Claude Code sessions (p.104)",
+  "Diligence/honesty suite and lying-about-being-human eval (p.123)",
+  "Safeguards results reported for both API and claude.ai system prompt (p.55)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Retired higher-difficulty single-turn harmlessness evals because recent models saturated them.",
+   "page": 55
+  },
+  {
+   "text": "Cybench removed as saturated.",
+   "page": 49
+  },
+  {
+   "text": "CB evaluations limited to automated assessments; no red teaming or uplift trials; DNA screening eval grader incorrectly penalized Mythos.",
+   "page": 16
+  },
+  {
+   "text": "Model readily identifies fully-simulated audit sessions as less realistic than real use, undermining best available tool for high-stakes behavior.",
+   "page": 105
+  },
+  {
+   "text": "No evaluation specifically tests for training-gaming; authors would ideally report better measurements given grader awareness.",
+   "page": 87
+  },
+  {
+   "text": "Unverbalized grader-awareness pipeline preliminary; CoT alone may not suffice for monitoring grader awareness.",
+   "page": 156
+  },
+  {
+   "text": "UK AISI: eval awareness, limited scenario coverage and artificial continuations mean results should be interpreted cautiously.",
+   "page": 108
+  },
+  {
+   "text": "Guan et al. intervention-based monitorability metrics uninformative due to small effects.",
+   "page": 145
+  },
+  {
+   "text": "CharXiv-type benchmarks nearing saturation.",
+   "page": 216
+  }
+ ],
+ "notes": "Changelog corrections (June 2026) on virology and bug-bounty results. Safeguards section restructured by harm area; multi-agent capability evals added."
+}

@@ -1,0 +1,646 @@
+{
+ "id": "kimi-k2-5-tech-report",
+ "provider": "kimi",
+ "model": "Kimi K2.5",
+ "release_date": "2026-01-27",
+ "doc_type": "tech_report",
+ "length_pages": 31,
+ "summary": "31-page technical report for Kimi K2.5, a natively multimodal agentic model built on Kimi K2, covering joint text-vision pre-training, zero-vision SFT, joint multimodal RL, the Agent Swarm parallel-agent framework (PARL), infrastructure, and broad evaluation across reasoning, coding, agentic search, image, video and computer use. Contains no safety evaluation; CyberGym and SimpleQA Verified appear only as capability scores.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "30.1",
+   "setting": "HLE-Full, no tools",
+   "page": 12,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "50.2",
+   "setting": "HLE-Full, with tools",
+   "page": 12,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "96.1",
+   "setting": null,
+   "page": 12,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "HMMT Feb 2025",
+   "category": "math",
+   "score": "95.4",
+   "setting": null,
+   "page": 12,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "81.8",
+   "setting": null,
+   "page": 12,
+   "canonical": "IMO-AnswerBench"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "87.6",
+   "setting": null,
+   "page": 12,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "87.1",
+   "setting": null,
+   "page": 12,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "SimpleQA Verified",
+   "category": "reasoning_knowledge",
+   "score": "36.9",
+   "setting": null,
+   "page": 12,
+   "canonical": "SimpleQA Verified"
+  },
+  {
+   "name": "AdvancedIF",
+   "category": "instruction_following",
+   "score": "75.6",
+   "setting": null,
+   "page": 12,
+   "canonical": "AdvancedIF"
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "61.0",
+   "setting": null,
+   "page": 12,
+   "canonical": "LongBench v2"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "76.8",
+   "setting": "internal minimal-tool framework, non-thinking, Avg@5",
+   "page": 12,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Pro (public)",
+   "category": "coding",
+   "score": "50.7",
+   "setting": null,
+   "page": 12,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "73.0",
+   "setting": null,
+   "page": 12,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "50.8",
+   "setting": "Terminus-2, non-thinking",
+   "page": 12,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "PaperBench (CodeDev)",
+   "category": "coding",
+   "score": "63.5",
+   "setting": null,
+   "page": 12,
+   "canonical": "PaperBench (CodeDev)"
+  },
+  {
+   "name": "CyberGym",
+   "category": "coding",
+   "score": "41.3",
+   "setting": "difficulty level 1",
+   "page": 12,
+   "canonical": "CyberGym"
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "48.7",
+   "setting": null,
+   "page": 12,
+   "canonical": "SciCode"
+  },
+  {
+   "name": "OJBench (cpp)",
+   "category": "coding",
+   "score": "57.4",
+   "setting": null,
+   "page": 12,
+   "canonical": "OJBench (cpp)"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "85.0",
+   "setting": null,
+   "page": 12,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "60.6",
+   "setting": null,
+   "page": 12,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "74.9",
+   "setting": "Discard-all context management",
+   "page": 12,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "78.4",
+   "setting": "Agent Swarm",
+   "page": 12,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "72.7",
+   "setting": "item-F1",
+   "page": 12,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "79.0",
+   "setting": "Agent Swarm",
+   "page": 12,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "DeepSearchQA",
+   "category": "agentic_tool_use",
+   "score": "77.1",
+   "setting": null,
+   "page": 12,
+   "canonical": "DeepSearchQA"
+  },
+  {
+   "name": "FinSearchComp T2&T3",
+   "category": "agentic_tool_use",
+   "score": "67.8",
+   "setting": null,
+   "page": 12,
+   "canonical": "FinSearchComp T2&T3"
+  },
+  {
+   "name": "Seal-0",
+   "category": "agentic_tool_use",
+   "score": "57.4",
+   "setting": null,
+   "page": 12,
+   "canonical": "Seal-0"
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "agentic_tool_use",
+   "score": "41.0",
+   "setting": null,
+   "page": 12,
+   "canonical": "GDPval-AA"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "78.5",
+   "setting": null,
+   "page": 12,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "MMMU (val)",
+   "category": "multimodal",
+   "score": "84.3",
+   "setting": null,
+   "page": 12,
+   "canonical": "MMMU"
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "77.5",
+   "setting": null,
+   "page": 12,
+   "canonical": "CharXiv (RQ)"
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "84.2",
+   "setting": null,
+   "page": 12,
+   "canonical": "MathVision"
+  },
+  {
+   "name": "MathVista (mini)",
+   "category": "multimodal",
+   "score": "90.1",
+   "setting": null,
+   "page": 12,
+   "canonical": "MathVista (mini)"
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "71.2",
+   "setting": null,
+   "page": 12,
+   "canonical": "SimpleVQA"
+  },
+  {
+   "name": "WorldVQA",
+   "category": "multimodal",
+   "score": "46.3",
+   "setting": null,
+   "page": 12,
+   "canonical": "WorldVQA"
+  },
+  {
+   "name": "ZeroBench",
+   "category": "multimodal",
+   "score": "9 / 11",
+   "setting": "without / with tools",
+   "page": 12,
+   "canonical": "ZeroBench"
+  },
+  {
+   "name": "BabyVision",
+   "category": "multimodal",
+   "score": "36.5",
+   "setting": null,
+   "page": 12,
+   "canonical": "BabyVision"
+  },
+  {
+   "name": "BLINK",
+   "category": "multimodal",
+   "score": "78.9",
+   "setting": null,
+   "page": 12,
+   "canonical": "BLINK"
+  },
+  {
+   "name": "MMVP",
+   "category": "multimodal",
+   "score": "87.0",
+   "setting": null,
+   "page": 12,
+   "canonical": "MMVP"
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "88.8",
+   "setting": null,
+   "page": 12,
+   "canonical": "OmniDocBench 1.5"
+  },
+  {
+   "name": "OCRBench",
+   "category": "multimodal",
+   "score": "92.3",
+   "setting": null,
+   "page": 12,
+   "canonical": "OCRBench"
+  },
+  {
+   "name": "InfoVQA (test)",
+   "category": "multimodal",
+   "score": "92.6",
+   "setting": null,
+   "page": 12,
+   "canonical": "InfoVQA (test)"
+  },
+  {
+   "name": "VideoMMMU",
+   "category": "multimodal",
+   "score": "86.6",
+   "setting": null,
+   "page": 12,
+   "canonical": "Video-MMMU"
+  },
+  {
+   "name": "MMVU",
+   "category": "multimodal",
+   "score": "80.4",
+   "setting": null,
+   "page": 12,
+   "canonical": "MMVU"
+  },
+  {
+   "name": "MotionBench",
+   "category": "multimodal",
+   "score": "70.4",
+   "setting": null,
+   "page": 12,
+   "canonical": "MotionBench"
+  },
+  {
+   "name": "Video-MME",
+   "category": "multimodal",
+   "score": "87.4",
+   "setting": "with subtitles",
+   "page": 12,
+   "canonical": "Video-MME"
+  },
+  {
+   "name": "LongVideoBench",
+   "category": "multimodal",
+   "score": "79.8",
+   "setting": null,
+   "page": 12,
+   "canonical": "LongVideoBench"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "75.9",
+   "setting": null,
+   "page": 12,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "63.3",
+   "setting": "GUI actions only",
+   "page": 12,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "WebArena",
+   "category": "agentic_tool_use",
+   "score": "58.9",
+   "setting": null,
+   "page": 12,
+   "canonical": "WebArena"
+  },
+  {
+   "name": "In-house Swarm Bench",
+   "category": "agentic_tool_use",
+   "score": "58.3",
+   "setting": "Agent Swarm (41.6 single agent)",
+   "page": 14,
+   "canonical": "In-house Swarm Bench"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CyberGym (difficulty level 1)"
+   ],
+   "metrics": [
+    {
+     "name": "CyberGym",
+     "value": "41.3",
+     "page": 12
+    }
+   ],
+   "finding": "CyberGym is listed among coding benchmarks as a capability score with no risk framing.",
+   "quote": "CyberGym. Claude Opus 4.5 results for this benchmark are reported under non-thinking settings as specified in their technical documentation. We report scores in the difficulty level 1 (the primary setting).",
+   "page": 26
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Multiple GRM rubrics are used during RL to mitigate reward hacking; no evaluation of reward hacking reported.",
+   "quote": "To mitigate reward hacking and overfitting to a single preference signal, we employ multiple alternative GRM rubrics tailored to different task contexts.",
+   "page": 9
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "SimpleQA Verified",
+    "SimpleVQA",
+    "WorldVQA"
+   ],
+   "metrics": [
+    {
+     "name": "SimpleQA Verified",
+     "value": "36.9",
+     "page": 12
+    }
+   ],
+   "finding": "Factuality benchmarks are reported only as knowledge capability scores; hallucination is mentioned only as a data-curation concern for synthetic captions.",
+   "quote": "with strict limits on synthetic captions to mitigate hallucination.",
+   "page": 23
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Agent Swarm / PARL parallel multi-agent orchestration and in-house Swarm Bench (WildSearch, Batch Download, WideRead, Long-Form Writing) (p.13-14)",
+  "WorldVQA benchmark (released by Moonshot) (p.11)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Terminal Bench 2.0 evaluated under non-thinking mode because our current context management implementation for thinking mode is technically incompatible with Terminus-2's conversation state handling.",
+   "page": 26
+  }
+ ],
+ "notes": "No safety section. GRM rewards are 'aligned with Kimi's values' defined as helpfulness, response readiness, contextual relevance, appropriate level of detail, aesthetic quality and instruction following (p.9) — no harmlessness criterion is named. A garbled OCR line 'Safety Social adjustments' in a qualitative spot-the-difference example (appendix) is not safety content. Computer-use (OSWorld, WebArena) and agent swarm capabilities are presented without any prompt-injection or agent-safety discussion."
+}

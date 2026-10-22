@@ -1,0 +1,407 @@
+{
+ "id": "gpt-5-1-codex-max-system-card",
+ "provider": "openai",
+ "model": "GPT-5.1-Codex-Max",
+ "release_date": "2025-11-18",
+ "doc_type": "system_card",
+ "length_pages": 27,
+ "summary": "System card for OpenAI's agentic coding model GPT-5.1-Codex-Max, the first natively trained to work across multiple context windows via compaction. Covers conversational baseline safety evals, product mitigations (sandboxing, network access), model mitigations (malware refusal, prompt injection, destructive actions), and Preparedness Framework evals for bio/chem, cyber and AI self-improvement, with external evaluations by Irregular, METR and Apollo Research.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical (precautionary); not High in Cyber (SAG determination) or AI self-improvement",
+  "quote": "We are treating GPT-5.1-Codex-Max as High risk in the Biological and Chemical domain. While the model's cybersecurity capabilities are stronger than its predecessors, it does not reach our threshold for High capability in the Cyber domain.",
+  "page": 10
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Tacit knowledge and troubleshooting (Gryphon)",
+   "category": "other",
+   "score": "77%",
+   "setting": "consensus expert baseline 80%",
+   "page": 12
+  },
+  {
+   "name": "TroubleshootingBench",
+   "category": "other",
+   "score": "40% (refusals counted as successes)",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "METR 50% time horizon",
+   "category": "agentic_tool_use",
+   "score": "2h42m (95% CI 75m-350m)",
+   "setting": "METR external",
+   "page": 26
+  },
+  {
+   "name": "Irregular Network Attack Simulation",
+   "category": "other",
+   "score": "37% avg success",
+   "setting": "no full compaction",
+   "page": 19
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Long-form biorisk questions (Gryphon Scientific)",
+    "Multimodal troubleshooting virology (SecureBio)",
+    "ProtocolQA Open-Ended",
+    "Tacit knowledge and troubleshooting",
+    "TroubleshootingBench"
+   ],
+   "metrics": [
+    {
+     "name": "Long-form biorisk refusal",
+     "value": "100% refused",
+     "page": 11
+    },
+    {
+     "name": "Tacit knowledge and troubleshooting",
+     "value": "77% (expert consensus 80%)",
+     "page": 12
+    },
+    {
+     "name": "TroubleshootingBench (refusals as success)",
+     "value": "40% (80th pct expert 36.4%)",
+     "page": 13
+    }
+   ],
+   "finding": "Treated as High in bio/chem precautionarily; model nears or exceeds expert baselines on tacit-knowledge evals, underperforms experts on ProtocolQA.",
+   "quote": "GPT-5.1-Codex-Max is the highest performing model on this benchmark at 77%, nearing the consensus expert baseline of 80%.",
+   "page": 12,
+   "covered": true
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Capture the Flag (Professional), pass@12",
+    "CVE-Bench (blind zero-day, pass@1)",
+    "Cyber Range (9 scenarios, 4 new)",
+    "Irregular external evaluation",
+    "Malware Refusals (Golden Set)"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range",
+     "value": "passes most scenarios; FAIL on Medium C2, PARTIAL on Leaked Token",
+     "page": 18
+    },
+    {
+     "name": "Irregular avg success (network/vuln/evasion)",
+     "value": "37% / 41% / 43%",
+     "page": 19
+    },
+    {
+     "name": "Malware refusal rate",
+     "value": "1.0",
+     "page": 8
+    }
+   ],
+   "finding": "Most cyber-capable model deployed to date, aided by compaction, but SAG judged High cyber threshold not met, mainly for lack of consistency; OpenAI expects High to be crossed soon.",
+   "quote": "our Safety Advisory Group assessed that the criteria for High capability in the cyber domain were not met, and recommended that this model not be classified as High capability.",
+   "page": 19,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "substantial",
+   "evals": [
+    "SWE-Lancer Diamond IC-SWE",
+    "PaperBench-10",
+    "MLE-bench-30",
+    "OpenAI PRs",
+    "OpenAI-Proof Q&A",
+    "METR external (time horizon; AI R&D automation and rogue replication)"
+   ],
+   "metrics": [
+    {
+     "name": "METR 50% time horizon",
+     "value": "2h42m",
+     "page": 26
+    }
+   ],
+   "finding": "Modest improvement on all self-improvement evals, below High; METR finds further development unlikely to enable AI R&D automation or rogue replication in next 6 months.",
+   "quote": "GPT-5.1-Codex-Max showed modest improvement across all of our self-improvement evaluations, but did not meet our High thresholds.",
+   "page": 20,
+   "covered": true
+  },
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks (conversational)",
+    "image input evals",
+    "Malware Refusals golden set"
+   ],
+   "metrics": [
+    {
+     "name": "illicit not_unsafe",
+     "value": "0.920",
+     "page": 5
+    },
+    {
+     "name": "harassment not_unsafe",
+     "value": "0.829",
+     "page": 5
+    }
+   ],
+   "finding": "On par with or better than gpt-5.1-thinking in conversational evals, which OpenAI says are not reflective of real-world risk for this coding model.",
+   "quote": "We do not believe these conversational evals are reflective of real-world risk in the context of this coding-focused model.",
+   "page": 4,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "mention",
+   "evals": [
+    "malware golden set incl. dual-use scenarios"
+   ],
+   "finding": "Training aimed at handling dual-use scenarios without excessive refusal; no over-refusal metric reported.",
+   "quote": "appropriately handling dual-use scenarios without excessive refusal or hedging.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject"
+   ],
+   "metrics": [
+    {
+     "name": "StrongReject not_unsafe",
+     "value": "0.967",
+     "page": 5
+    }
+   ],
+   "finding": "Same as GPT-5.1 Thinking.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "light",
+   "evals": [
+    "new Codex-environment prompt injection eval suite",
+    "sandbox / network access mitigations"
+   ],
+   "metrics": [
+    {
+     "name": "Ignored prompt injection during coding tasks",
+     "value": "1.0",
+     "page": 9
+    }
+   ],
+   "finding": "New Codex-specific prompt injection eval; model ignored all attacks in the suite.",
+   "quote": "We also developed a new prompt injection evaluation suite tailored to the Codex environment to measure the model's robustness to such attacks.",
+   "page": 9,
+   "covered": true
+  },
+  "deception_scheming": {
+   "depth": "light",
+   "evals": [
+    "Apollo Research: deception, in-context scheming, sabotage, sandbagging, evaluation awareness"
+   ],
+   "finding": "Apollo finds scheming comparable to GPT-5, with elevated falsified task completion and strategic sandbagging in specific tasks; eval awareness similar to GPT-5; not capable of catastrophic harm via scheming.",
+   "quote": "Apollo found elevated rates of falsifying task completion and strategic sandbagging, which may indicate a greater propensity for reward-hacking behaviors compared to GPT-5.",
+   "page": 27,
+   "covered": true,
+   "metrics": []
+  },
+  "reward_hacking": {
+   "depth": "mention",
+   "evals": [
+    "Apollo Research",
+    "METR robustness checks"
+   ],
+   "finding": "Apollo flags possible greater reward-hacking propensity; METR says its treatment of reward hacking does not unfairly penalize the model.",
+   "quote": "They do not think their treatment of reward hacking is unfairly penalizing the model.",
+   "page": 26,
+   "covered": true,
+   "metrics": []
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors not_unsafe",
+     "value": "0.970",
+     "page": 5
+    }
+   ],
+   "finding": "Single row.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "mental health, emotional reliance, self-harm production benchmarks"
+   ],
+   "metrics": [
+    {
+     "name": "mental health not_unsafe",
+     "value": "0.519 (vs 0.684 gpt-5.1-thinking)",
+     "page": 5
+    },
+    {
+     "name": "emotional reliance",
+     "value": "0.917",
+     "page": 5
+    }
+   ],
+   "finding": "Mental health score regresses relative to gpt-5.1-thinking; not discussed further.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal data production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "personal data",
+     "value": "1.000",
+     "page": 5
+    }
+   ],
+   "finding": "Single row.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "Agent sandbox (Seatbelt, seccomp/landlock)",
+    "configurable network access",
+    "cyber monitoring and enforcement pipeline",
+    "bio safeguards from GPT-5"
+   ],
+   "finding": "Describes default sandboxing, network-disabled defaults, scaling monitoring/enforcement for cyber misuse, and Aardvark for defenders.",
+   "quote": "These default sandboxing mechanisms are designed to:",
+   "page": 6,
+   "covered": true,
+   "metrics": []
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "new destructive action avoidance eval"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive action avoidance",
+     "value": "0.75 (vs 0.70 gpt-5.1-codex)",
+     "page": 9
+    }
+   ],
+   "finding": "Trained with a 'user model' making conflicting edits; new eval measures avoidance of data-destructive actions.",
+   "quote": "we developed a new destructive actions evaluation that measures the model's ability to preserve user-produced changes and avoid taking destructive actions.",
+   "page": 9,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Irregular (formerly Pattern Labs)",
+  "METR",
+  "Apollo Research",
+  "Gryphon Scientific (eval design)",
+  "SecureBio (eval data)"
+ ],
+ "notable_new_eval_methods": [
+  "New Codex-environment prompt injection eval suite (p.9)",
+  "New destructive action avoidance eval (p.9)",
+  "Cyber Range re-scored per-scenario pass/fail over 16 trials, with four new scenarios (p.17)",
+  "Refocus on professional-level CTFs only (p.15)",
+  "Evaluations with up to 10 context windows (compaction) for elicitation (p.19)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "CTFs, CVE-Bench and Cyber Range each have important limitations (pre-scripted paths, web-only, unhardened low-noise targets); excelling is necessary but not sufficient for High.",
+   "page": 15
+  },
+  {
+   "text": "SAG recommended increasing the difficulty of cyber evals and ensuring sufficient elicitation in third-party testing.",
+   "page": 19
+  },
+  {
+   "text": "Irregular and METR did not make full use of compaction, possibly underestimating capability.",
+   "page": 19
+  },
+  {
+   "text": "Conversational disallowed-content evals not reflective of real-world risk for a coding model.",
+   "page": 4
+  }
+ ],
+ "notes": "Most Preparedness results are presented in figures without numeric values in text. Sandbagging presented as a 'Research category update'."
+}

@@ -1,0 +1,619 @@
+{
+ "id": "qwen3-vl-tech-report",
+ "provider": "qwen",
+ "model": "Qwen3-VL",
+ "release_date": "2025-11-26",
+ "doc_type": "tech_report",
+ "length_pages": 42,
+ "summary": "Technical report for the Qwen3-VL vision-language family (dense 2B-32B and MoE 30B-A3B / 235B-A22B, 256K context), covering architecture (interleaved MRoPE, DeepStack, text timestamps), pre- and post-training, and extensive multimodal and text benchmarks. The report contains no safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMMU",
+   "category": "multimodal",
+   "score": "80.6 / 78.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "69.3 / 68.1",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MathVista (mini)",
+   "category": "multimodal",
+   "score": "85.8 / 84.9",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "74.6 / 66.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MathVerse (mini)",
+   "category": "multimodal",
+   "score": "85.0 / 72.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "ZeroBench",
+   "category": "multimodal",
+   "score": "4 / 2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MMBench-EN",
+   "category": "multimodal",
+   "score": "88.8 / 89.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "RealWorldQA",
+   "category": "multimodal",
+   "score": "81.3 / 79.2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MMStar",
+   "category": "multimodal",
+   "score": "78.7 / 78.4",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "61.3 / 63.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MM-MT-Bench",
+   "category": "multimodal",
+   "score": "8.5 / 8.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MIA-Bench",
+   "category": "multimodal",
+   "score": "92.7 / 91.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "DocVQA (test)",
+   "category": "multimodal",
+   "score": "96.5 / 97.1",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "InfoVQA (test)",
+   "category": "multimodal",
+   "score": "89.5 / 89.2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "ChartQA (test)",
+   "category": "multimodal",
+   "score": "90.3 / 90.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "OCRBench",
+   "category": "multimodal",
+   "score": "875 / 920",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "66.1 / 62.1",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "RefCOCO-avg",
+   "category": "multimodal",
+   "score": "92.1 / 91.9",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "CountBench",
+   "category": "multimodal",
+   "score": "93.7 / 93.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "ERQA",
+   "category": "multimodal",
+   "score": "52.5 / 51.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "VSI-Bench",
+   "category": "multimodal",
+   "score": "60.0 / 62.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "BLINK",
+   "category": "multimodal",
+   "score": "67.1 / 70.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MUIRBench",
+   "category": "multimodal",
+   "score": "80.1 / 73.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MVBench",
+   "category": "multimodal",
+   "score": "75.2 / 76.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "Video-MME (w/o sub)",
+   "category": "multimodal",
+   "score": "79.0 / 79.2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "VideoMMMU",
+   "category": "multimodal",
+   "score": "80.0 / 74.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "Design2Code",
+   "category": "multimodal",
+   "score": "93.4 / 92.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "ChartMimic",
+   "category": "multimodal",
+   "score": "78.4 / 80.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "MMLongBench-Doc",
+   "category": "long_context",
+   "score": "56.2 / 57.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "ScreenSpot Pro",
+   "category": "agentic_tool_use",
+   "score": "61.8 / 62.0",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "OSWorld",
+   "category": "agentic_tool_use",
+   "score": "38.1 / 31.6",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "AndroidWorld",
+   "category": "agentic_tool_use",
+   "score": "62.0 / 63.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "OSWorld-G",
+   "category": "agentic_tool_use",
+   "score": "68.3 / 66.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 15
+  },
+  {
+   "name": "HallusionBench",
+   "category": "multimodal",
+   "score": "66.7 / 63.2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct; listed under 'Alignment'",
+   "page": 15
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "83.8 / 81.8",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "93.7 / 92.2",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "77.1 / 74.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "SuperGPQA",
+   "category": "reasoning_knowledge",
+   "score": "64.3 / 60.4",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "89.7 / 74.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "HMMT 2025",
+   "category": "math",
+   "score": "77.4 / 57.4",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "LiveBench 2024-11-25",
+   "category": "reasoning_knowledge",
+   "score": "79.6 / 74.8",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "70.1 / 54.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "CFEval",
+   "category": "coding",
+   "score": "1964",
+   "setting": "Qwen3-VL-235B-A22B thinking",
+   "page": 22
+  },
+  {
+   "name": "OJBench",
+   "category": "coding",
+   "score": "27.5",
+   "setting": "thinking",
+   "page": 22
+  },
+  {
+   "name": "IFEval",
+   "category": "instruction_following",
+   "score": "88.2 / 87.8",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "Arena-Hard v2 (winrate)",
+   "category": "instruction_following",
+   "score": "74.8 / 77.4",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "Creative Writing v3",
+   "category": "instruction_following",
+   "score": "85.7 / 86.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "WritingBench",
+   "category": "instruction_following",
+   "score": "86.7 / 85.5",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "BFCL-v3",
+   "category": "agentic_tool_use",
+   "score": "71.8 / 67.7",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "tau2-bench Retail",
+   "category": "agentic_tool_use",
+   "score": "67.0",
+   "setting": "thinking",
+   "page": 22
+  },
+  {
+   "name": "tau2-bench Airline",
+   "category": "agentic_tool_use",
+   "score": "62.0",
+   "setting": "thinking",
+   "page": 22
+  },
+  {
+   "name": "tau2-bench Telecom",
+   "category": "agentic_tool_use",
+   "score": "44.7",
+   "setting": "thinking",
+   "page": 22
+  },
+  {
+   "name": "MultiIF",
+   "category": "multilingual",
+   "score": "79.1 / 76.3",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "MMLU-ProX",
+   "category": "multilingual",
+   "score": "80.6 / 77.8",
+   "setting": "Qwen3-VL-235B-A22B thinking / instruct",
+   "page": 22
+  },
+  {
+   "name": "INCLUDE",
+   "category": "multilingual",
+   "score": "80.0",
+   "setting": "instruct",
+   "page": 21
+  },
+  {
+   "name": "PolyMATH",
+   "category": "multilingual",
+   "score": "45.1",
+   "setting": "instruct",
+   "page": 21
+  },
+  {
+   "name": "Video Needle-in-a-Haystack",
+   "category": "long_context",
+   "score": "100% up to 30 min (256K tokens); 99.5% at ~1M tokens (YaRN)",
+   "setting": "Qwen3-VL-235B-A22B-Instruct",
+   "page": 25
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "The only safety-related content is SFT data filtering that discards pairs which could generate harmful content. No harmlessness evaluation is reported.",
+   "quote": "To maintain semantic relevance and uphold ethical principles, we also discard any query-response pairs that are off-topic or possess the potential to generate harmful content.",
+   "page": 10
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "HallusionBench"
+   ],
+   "metrics": [
+    {
+     "name": "HallusionBench (235B thinking / instruct)",
+     "value": "66.7 / 63.2",
+     "page": 15
+    }
+   ],
+   "finding": "Image-level hallucination is measured with HallusionBench as part of the capability suite (grouped under 'Alignment'). There is no separate factuality or calibration analysis.",
+   "quote": "The ability to follow complex user instructions and reduce potential image-level hallucinations is indispensable for current large vision language models (VLMs).",
+   "page": 14
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "A safety keyword search finds only one data-filtering sentence. 'Alignment' in the report means instruction-following and subjective tasks (HallusionBench, MM-MT-Bench, MIA-Bench, IFEval, Arena-Hard), not safety alignment. Scores are shown for the flagship 235B-A22B; smaller models appear in Tables 3-4 and 7-10."
+}

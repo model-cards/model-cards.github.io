@@ -1,0 +1,265 @@
+{
+ "id": "chatgpt-images-2-5-system-card",
+ "provider": "openai",
+ "model": "ChatGPT Images 2.5",
+ "release_date": "2026-09-08",
+ "doc_type": "system_card",
+ "length_pages": 8,
+ "summary": "Short system card for ChatGPT Images 2.5 (GPT-Image-2.5-Sunburst and -Flare). Describes new deepfake/realism risks, a layered image safety stack, an automated end-to-end adversarial safety evaluation by policy category, an image-native Preparedness capability assessment for bio and cyber, bio-specific blocking, and provenance tooling (C2PA, SynthID).",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "Below High in Bio and Cyber; precautionary High-level bio mitigations applied; no meaningful AI Self-Improvement risk",
+  "quote": "The results indicate that neither GPT-Image-2.5-Sunburst nor GPT-Image-2.5-Flare cross the Bio High threshold or the Cyber High threshold.",
+  "page": 7
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Existing LLM bio capability evals adapted to image outputs (answer rendered in image)",
+    "Bio safety monitor evaluation on image set"
+   ],
+   "metrics": [],
+   "finding": "Below Bio High threshold, but precautionary High-level bio mitigations applied with live blocking and offline enforcement; no numeric scores reported.",
+   "quote": "We, regardless and as done in GPT-Images 2.0, take a precautionary approach and apply mitigations appropriate for a model treated as High capability in the biological-risk domain.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Existing LLM cyber capability evals adapted to image outputs"
+   ],
+   "metrics": [],
+   "finding": "Below Cyber High threshold; no numeric scores.",
+   "quote": "For the Cyber and Biological categories, we adapted existing language-model capability evaluations to assess image-generation capabilities.",
+   "page": 6
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated; image models cannot execute code.",
+   "quote": "Because image models are unable to create and execute code in a way that would enable AI Self-Improvement, we do not have evidence that GPT-Image-2.5-Sunburst nor GPT-Image-2.5-Flare pose meaningful risk in this category.",
+   "page": 6
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Automated end-to-end adversarial safety evaluation across policy categories (sexual, hate, violence/gore, extremism, self-harm, political, abuse, wrongdoing, other)"
+   ],
+   "metrics": [
+    {
+     "name": "Unsafe Generation Presented (Sunburst)",
+     "value": "1.09% (vs 1.64% Images 2.0)",
+     "page": 4
+    },
+    {
+     "name": "Unsafe Generation Presented (Flare)",
+     "value": "1.41%",
+     "page": 4
+    },
+    {
+     "name": "Sexual unsafe presented (Sunburst)",
+     "value": "0.52%",
+     "page": 5
+    }
+   ],
+   "finding": "Generally on par with or better than Images 2.0; no statistically significant difference in unsafe-shown rates.",
+   "quote": "No unsafe-shown difference meets this threshold.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "multiple evaluation stacks for minors categories"
+   ],
+   "metrics": [],
+   "finding": "Mentions additional evaluation stacks for minors; no results.",
+   "quote": "We also run multiple evaluation stacks for higher-risk categories around minors.",
+   "page": 4
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Self-harm category of adversarial image eval"
+   ],
+   "metrics": [
+    {
+     "name": "Self-harm unsafe presented (Sunburst)",
+     "value": "1.13%",
+     "page": 5
+    }
+   ],
+   "finding": "Slightly lower unsafe rate than baseline.",
+   "quote": "We find that the GPT-Images-2.5 series generally performs on par with or better than GPT Images 2.0.",
+   "page": 6
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "'Other' category incl. fabricated or compromising depictions of real people"
+   ],
+   "metrics": [],
+   "finding": "Real-person depictions handled within 'Other' policy category.",
+   "quote": "The other category includes long-tail categories that should be protected against including religious figures, religious satire, fabricated or compromising depictions of real people, jailbreak attempts, and image-based requests.",
+   "page": 6
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Political category of adversarial image eval",
+    "deepfake risk discussion",
+    "provenance (C2PA, SynthID)"
+   ],
+   "metrics": [
+    {
+     "name": "Political unsafe presented (Sunburst)",
+     "value": "0.35%",
+     "page": 5
+    }
+   ],
+   "finding": "Heightened realism raises political deepfake risk; mitigated by prompt and image-layer safeguards and provenance.",
+   "quote": "Compared to our past ChatGPT Images 2.0 deployment, ChatGPT Images 2.5 allows for heightened realism that could, absent safeguards, allow more convincing deepfakes, including political, sexual, or otherwise sensitive imagery of real people, places or events.",
+   "page": 2
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [],
+   "metrics": [],
+   "finding": "Upstream LLM policy refusals, downstream safety-reasoning monitor on inputs/outputs, offline review and account enforcement, C2PA and SynthID provenance.",
+   "quote": "To make provenance more resilient, we are taking a multi-layered approach and incorporating watermarking through Google DeepMind's SynthID through ChatGPT, Codex, and the OpenAI API.",
+   "page": 8
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Image-native Preparedness evals: model renders reasoning and final answer in image (p.6)",
+  "Shift to outcome-based, product-grounded harm evaluation (p.3)",
+  "SynthID watermarking added alongside C2PA (p.8)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Automated policy labels may contain errors; varying per-policy sample sizes limit precision; results apply to a fixed adversarial set.",
+   "page": 6
+  }
+ ],
+ "notes": "No capability benchmarks or numeric Preparedness scores. Statistical tests unadjusted for multiple comparisons."
+}

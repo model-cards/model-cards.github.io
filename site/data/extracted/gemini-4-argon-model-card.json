@@ -1,0 +1,436 @@
+{
+ "id": "gemini-4-argon-model-card",
+ "provider": "gemini",
+ "model": "Gemini 4 Argon",
+ "release_date": "2026-10-13",
+ "doc_type": "model_card",
+ "length_pages": 14,
+ "summary": "Model card for Gemini 4 Argon, a new frontier sparse-MoE model. Reports capability benchmarks across knowledge work, coding, ML engineering, science, computer use and cybersecurity, automated safety deltas vs Gemini 3.1 Pro, a red-teaming summary, and an FSF (April 2026) assessment in which the biological CBRN CCL, cyber CCL, and Stealth & Situational Awareness TCL cannot be ruled out, handled via safety cases and residual risk assessments.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "Biological CBRN Uplift 1 CCL and Cyber Uplift 1 CCL cannot be ruled out (safety cases applied); Stealth & Situational Awareness TCL cannot be ruled out (residual risk assessment); Harmful Manipulation and ML R&D CCLs not reached",
+  "quote": "We cannot rule out that Gemini 4 Argon has reached this CCL, and we therefore developed a safety case for its cyberoffensive capabilities that we assess lower risk to below the cybersecurity CCL level.",
+  "page": 11
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Vals Index",
+   "category": "agentic_tool_use",
+   "score": "68.9%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Vals Index"
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "51.3%",
+   "setting": null,
+   "page": 6,
+   "canonical": "AutomationBench"
+  },
+  {
+   "name": "Vals Finance Agent v2",
+   "category": "agentic_tool_use",
+   "score": "65.4%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Vals Finance Agent v2"
+  },
+  {
+   "name": "Harvey's Legal Agent Benchmark",
+   "category": "agentic_tool_use",
+   "score": "19.6%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Harvey's Legal Agent Benchmark"
+  },
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "77.9%",
+   "setting": null,
+   "page": 6,
+   "canonical": "DeepSWE v1.1"
+  },
+  {
+   "name": "FrontierSWE v2",
+   "category": "coding",
+   "score": "55.0%",
+   "setting": null,
+   "page": 6,
+   "canonical": "FrontierSWE v2"
+  },
+  {
+   "name": "Vibe Code Bench",
+   "category": "coding",
+   "score": "91.9%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Vibe Code Bench"
+  },
+  {
+   "name": "Terminal-Bench 4.0",
+   "category": "coding",
+   "score": "57.4%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Terminal-Bench 4.0"
+  },
+  {
+   "name": "PostTrainBench",
+   "category": "coding",
+   "score": "45.3%",
+   "setting": "ML engineering",
+   "page": 6,
+   "canonical": "PostTrainBench"
+  },
+  {
+   "name": "Terminal-Bench Science 0.1",
+   "category": "reasoning_knowledge",
+   "score": "57.6%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Terminal-Bench Science 0.1"
+  },
+  {
+   "name": "LABBench2",
+   "category": "reasoning_knowledge",
+   "score": "88.8%",
+   "setting": null,
+   "page": 6,
+   "canonical": "LABBench2"
+  },
+  {
+   "name": "RiemannBench",
+   "category": "math",
+   "score": "76.0%",
+   "setting": null,
+   "page": 6,
+   "canonical": "RiemannBench"
+  },
+  {
+   "name": "GraphWalks",
+   "category": "long_context",
+   "score": "99.7%",
+   "setting": null,
+   "page": 6,
+   "canonical": "GraphWalks"
+  },
+  {
+   "name": "GraphWalks BFS up to 128k (F1)",
+   "category": "long_context",
+   "score": "84.2%",
+   "setting": null,
+   "page": 6,
+   "canonical": "GraphWalks BFS up to 128k (F1)"
+  },
+  {
+   "name": "Agent's Last Exam",
+   "category": "agentic_tool_use",
+   "score": "39.5%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Agent's Last Exam"
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "69.2%",
+   "setting": null,
+   "page": 6,
+   "canonical": "OSWorld 2.0"
+  },
+  {
+   "name": "Chartography",
+   "category": "multimodal",
+   "score": "71.6%",
+   "setting": null,
+   "page": 6,
+   "canonical": "Chartography"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "91.7%",
+   "setting": null,
+   "page": 6,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "CWE-bench v1",
+   "category": "other",
+   "score": "68.0%",
+   "setting": "Cybersecurity",
+   "page": 6,
+   "canonical": "CWE-bench v1"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Expert red teaming vs web baselines (two scenarios)",
+    "FSF CBRN testing"
+   ],
+   "metrics": [],
+   "finding": "Chem/rad/nuc TCL ruled out; biological Uplift Level 1 CCL cannot be ruled out, so a safety case and safeguards were developed to bring risk below the CCL.",
+   "quote": "We cannot rule out that Gemini 4 Argon has reached this CCL for biological information risk, and we therefore developed a safety case for its biorisk capabilities",
+   "page": 11
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF cyber evaluations",
+    "quantitative modeling"
+   ],
+   "metrics": [],
+   "finding": "Cyber Uplift Level 1 CCL cannot be ruled out; model provides substantial uplift; safety case and safeguards applied.",
+   "quote": "We cannot rule out that Gemini 4 Argon reaches the cybersecurity CCL. The model provides substantial uplift by our evaluations and quantitative modeling",
+   "page": 11
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Internal benchmark of complex research engineering tasks"
+   ],
+   "metrics": [],
+   "finding": "ML R&D acceleration and automation Level 1 CCLs not reached.",
+   "quote": "We use an internal benchmark to assess performance on complex research engineering tasks. Gemini 4 Argon's performance remains below our CCL threshold.",
+   "page": 14
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 3.1 Pro",
+     "value": "+1.57pp (lower is better; within CI per authors)",
+     "page": 10
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 3.1 Pro",
+     "value": "-9.29pp (lower is better)",
+     "page": 10
+    },
+    {
+     "name": "Tone vs Gemini 3.1 Pro",
+     "value": "+5.50pp (higher is better)",
+     "page": 10
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.1 Pro; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 4 Argon outperforms Gemini 3.1 Pro across multilingual and multimodal content safety, while substantially reducing unjustified refusals and improving objective refusal tone.",
+   "page": 9
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 3.1 Pro",
+     "value": "-9.60pp (lower is better)",
+     "page": 10
+    }
+   ],
+   "finding": "Unjustified refusals reduced by 9.60pp vs Gemini 3.1 Pro.",
+   "quote": "Automated evaluation measuring over-refusals on benign or borderline prompts that can be safely fulfilled",
+   "page": 10
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming (Trust & Safety)",
+    "Automated red teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming found no egregious concerns; no numbers in card.",
+   "quote": "Additionally, the scope of red teaming covered potential issues outside of our strict policies, compared performance to Gemini 3.1 Pro, and found no egregious concerns.",
+   "page": 11
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF stealth and situational awareness challenges"
+   ],
+   "metrics": [
+    {
+     "name": "Stealth/situational awareness challenges passed",
+     "value": "14/15",
+     "page": 13
+    }
+   ],
+   "finding": "Stealth and Situational Awareness TCL cannot be ruled out; residual risk assessment and safeguards for internal and external deployment.",
+   "quote": "Gemini 4 Argon passes 14/15 of our challenges, and generally displays strong capabilities in these areas.",
+   "page": 13
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 4 Argon satisfied required launch thresholds",
+   "page": 11
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human behavioral studies on harmful manipulation"
+   ],
+   "metrics": [],
+   "finding": "Some ability to influence beliefs and possible utility in planning influence operations, but below CCL.",
+   "quote": "may provide utility in the planning stage of a malicious influence operation but we assess its overall capabilities to be below the CCL threshold.",
+   "page": 13
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 3.1 Pro",
+     "value": "-3.16pp (lower is better)",
+     "page": 10
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 10
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [],
+   "metrics": [],
+   "finding": "Safety cases (bio, cyber) and residual risk assessment (stealth/SA TCL) with deployed safeguards; details in Safety & Security Report.",
+   "quote": "For models reaching CCLs, the residual risk assessment will be informed by a supplemental safety case outlining the mitigations.",
+   "page": 11
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "First Gemini model card where CCLs/TCL 'cannot be ruled out' and safety cases / residual risk assessments are invoked (p.11)",
+  "Loss of Control domain naming for stealth/SA TCL (p.13)",
+  "Cybersecurity capability benchmark (CWE-bench) in headline capability table (p.6)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Safety eval results computed with improved evaluations and not directly comparable with previous model cards.",
+   "page": 10
+  },
+  {
+   "text": "Harmful manipulation is a nascent risk area; evaluations still being iterated.",
+   "page": 13
+  }
+ ],
+ "notes": "Card refers to separate Gemini 4 Argon Safety & Security Report for details; mentions 'internal and external results' for frontier assessment without naming external parties. Text-to-text safety +1.57pp described as within confidence intervals."
+}

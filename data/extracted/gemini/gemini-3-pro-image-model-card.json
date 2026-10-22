@@ -1,0 +1,341 @@
+{
+ "id": "gemini-3-pro-image-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3 Pro Image",
+ "release_date": "2025-11-20",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3 Pro Image, an image generation/editing model built on Gemini 3 Pro. Reports human-eval Elo scores across existing and new image capabilities versus competitors, lists quality limitations, and describes safety evaluation types and policies without reporting any safety numbers.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (inherited from Gemini 3 Pro report)",
+  "quote": "We evaluated Gemini 3 Pro for Frontier Safety and reported the results in the Gemini 3 Pro Frontier Safety Framework Report, finding that it did not reach any critical capability levels outlined in our Frontier Safety Framework.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Text Rendering (human eval Elo)",
+   "category": "multimodal",
+   "score": "1198 ± 18",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Stylization (human eval Elo)",
+   "category": "multimodal",
+   "score": "1098 ± 11",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Multi-Turn (human eval Elo)",
+   "category": "multimodal",
+   "score": "1186 ± 19",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "General Image Editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1127 ± 13",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Character Editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1176 ± 16",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Object/Env. Editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1102 ± 19",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "General Text-to-Image (human eval Elo)",
+   "category": "multimodal",
+   "score": "1094 ± 16",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Regression sets (human eval Elo)",
+   "category": "multimodal",
+   "score": "1128 ± 19",
+   "setting": "Search On",
+   "page": 4
+  },
+  {
+   "name": "Multi character editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1213 ± 16",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Chart editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1209 ± 18",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Text editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1202 ± 23",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Factuality - Edu (human eval Elo)",
+   "category": "multimodal",
+   "score": "1169 ± 25",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Multi-input 1-3 (human eval Elo)",
+   "category": "multimodal",
+   "score": "1109 ± 16",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Infographics (human eval Elo)",
+   "category": "multimodal",
+   "score": "1268 ± 17",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Doodle editing (human eval Elo)",
+   "category": "multimodal",
+   "score": "1106 ± 14",
+   "setting": "Search On",
+   "page": 5
+  },
+  {
+   "name": "Visual design (human eval Elo)",
+   "category": "multimodal",
+   "score": "1104 ± 16",
+   "setting": "Search On",
+   "page": 5
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Training/development evaluations",
+    "Human red teaming",
+    "Trust Assurance Evaluations",
+    "Ethics & Safety Reviews"
+   ],
+   "metrics": [],
+   "finding": "Lists evaluation types and content safety policies but reports no results.",
+   "quote": "A range of evaluations and red teaming activities were conducted to help improve the model and inform decision-making.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming mentioned without results.",
+   "quote": "deliberately trying to spot weaknesses and ensure the model adheres to safety policies and desired outcomes",
+   "page": 6
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Factuality - Edu human eval"
+   ],
+   "metrics": [],
+   "finding": "Hallucination listed as known limitation; factuality limited.",
+   "quote": "Still limited in advanced capabilities with world knowledge, 3D reasoning and factuality",
+   "page": 6
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM listed as a safety policy and training-data filter; no eval results.",
+   "quote": "Content related to child sexual abuse material and exploitation",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Lists lifecycle mitigations incl. dataset filtering and product-level safety filtering.",
+   "quote": "product-level mitigations such as safety filtering.",
+   "page": 7
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Trust Assurance Evaluations by evaluators outside the model team (p.6)",
+  "New-capability human eval sets (multi-character, chart, text editing, infographics, doodle editing) (p.4)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Quality limitations: small text rendering, character consistency, partial instruction following in doodle editing, spatial localisation confusion.",
+   "page": 5
+  }
+ ],
+ "notes": "No image-safety numbers reported; no mention of provenance/watermarking in the document."
+}

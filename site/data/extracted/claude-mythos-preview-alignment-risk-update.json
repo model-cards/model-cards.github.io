@@ -1,0 +1,347 @@
+{
+ "id": "claude-mythos-preview-alignment-risk-update",
+ "provider": "anthropic",
+ "model": "Claude Mythos Preview",
+ "release_date": "2026-04-07",
+ "doc_type": "safety_report",
+ "length_pages": 61,
+ "summary": "Redacted RSP v3 risk-report update assessing whether Claude Mythos Preview poses significant risk of autonomous misaligned actions (autonomy threat model 1) inside Anthropic. It structures the case around six risk pathways (e.g. sandbagging safety R&D, code backdoors, self-exfiltration) and two pillars: alignment (propensity to attempt) and monitoring/security (chance attempts succeed), concluding risk is 'very low, but higher than for previous models.'",
+ "framework": {
+  "name": "Responsible Scaling Policy",
+  "level_or_determination": "RSP v3 risk report update for autonomy threat model 1 (early-stage misalignment): overall risk 'very low, but higher than for previous models'",
+  "quote": "We determine that the overall risk is very low, but higher than for previous models.",
+  "page": 5
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Cyber capability discussed only as a factor enabling the model to work around restrictions (e.g. sandbox escapes); no cyber evals reported.",
+   "quote": "In particular it is very capable at software engineering and cybersecurity tasks, which makes it more capable at working around restrictions.",
+   "page": 5
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Six risk pathways analysis (diffuse sandbagging, targeted undermining of safety R&D, code backdoors, training-data poisoning, self-exfiltration, rogue internal deployment)",
+    "Deployment/affordance analysis"
+   ],
+   "metrics": [],
+   "finding": "Model may be capable of all pathway tasks given compute, no monitoring and iteration, so the case relies on covert-capability limits, propensity evidence, and monitoring/security rather than capability limits.",
+   "quote": "we believe that the model may be capable of performing all the tasks required for the risk pathways listed if given sufficient test-time compute, no monitoring, and the ability to fail and iterate.",
+   "page": 18
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Mentions mitigation of elevated refusals on AI safety research requests via rebalancing agentic safety datasets.",
+   "quote": "A simple example is our recent mitigation for elevated refusals on AI safety research requests",
+   "page": 16
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Acknowledges known jailbreaks that could bypass offline monitors, but judges the model unlikely to develop such attacks.",
+   "quote": "We are aware of vulnerabilities in the offline monitors (both jailbreaks that could bypass them and structural coverage gaps)",
+   "page": 46
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SHADE-Arena (with prompt optimization and reduced-refusal variant)",
+    "Minimal-LinuxBench",
+    "Secret-password extraction eval",
+    "Rare/low-probability action eval",
+    "Encoded reasoning paraphrase test",
+    "Filler-token reasoning",
+    "Sandbagging transcript review",
+    "Evaluation awareness: realism steering and pilot-usage data"
+   ],
+   "metrics": [
+    {
+     "name": "SHADE-Arena stealth success with long CoT",
+     "value": "~0% -> ~3.8%",
+     "page": 21
+    },
+    {
+     "name": "Selective-attack SHADE-Arena conditional stealth success",
+     "value": "~35%",
+     "page": 23
+    }
+   ],
+   "finding": "Somewhat stronger covert capabilities than prior models but low absolute stealth rates; moderate confidence sandbagging has not undermined evals, less than for prior models; eval-awareness risk to conclusions judged low given real pilot usage data.",
+   "quote": "Overall, we remain moderately confident that sandbagging has not undermined the evaluations described above, though we are less confident than for previous models given these caveats.",
+   "page": 24
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Alignment assessment (reproduced from system card)",
+    "Model organism auditing exercises (4 to date)",
+    "Collusion honeypot investigations",
+    "Power-seeking environment evaluation (Mythos-scored rubric over RL environments)",
+    "Andon Labs Vending-Bench Arena",
+    "External research-sabotage continuation test"
+   ],
+   "metrics": [
+    {
+     "name": "Max power-seeking rubric score of any RL environment",
+     "value": "18/100",
+     "page": 60
+    }
+   ],
+   "finding": "No evidence of coherent misaligned goals; one concerning pattern of overriding instructions to work around obstacles. Latest model-organism exercise (external-memory-triggered sabotage) was NOT detected by the alignment audit, though caught by monitoring.",
+   "quote": "Our alignment audit did not detect this model.",
+   "page": 30
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Pre-training environment evaluation",
+    "RL training data monitoring",
+    "RL monitoring red-teaming on realistic reward hacks and emergent-misalignment datasets",
+    "Adversarial rewrite (one-shot / iterative) stress test"
+   ],
+   "metrics": [
+    {
+     "name": "Tested reward hacks detected by RL monitor",
+     "value": "~90%",
+     "page": 14
+    },
+    {
+     "name": "Reward hacks pushed below threshold under iterative obfuscation",
+     "value": "~40%",
+     "page": 14
+    }
+   ],
+   "finding": "Reward hacking mitigated but not eliminated; RL monitor robust to one-shot obfuscation but not adversarial iteration.",
+   "quote": "we believe we have mitigated but not eliminated the direct effects of reward hacking for Mythos Preview.",
+   "page": 13
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [
+    {
+     "name": "Completions with dishonesty about or concealment of workaround actions",
+     "value": "<0.0002%",
+     "page": 44
+    }
+   ],
+   "finding": "Rare dishonesty about obstacle-avoiding actions noted; no factuality evals.",
+   "quote": "we have also observed dishonesty about these actions or attempts to make them harder to notice.",
+   "page": 44
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this alignment-focused risk report.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Automated offline monitoring (Opus 4.6 completion-only and prompt+completion monitors)",
+    "Monitor evaluations on model organisms, SHADE-Arena, MonitorBench Hard, synthetic CoTs",
+    "METR staff 3-week red-team of monitoring pipeline",
+    "ASL-3 model weight security controls",
+    "Sandboxing in training/evals",
+    "AI-assisted PR reviews",
+    "Auto-mode blocking classifiers"
+   ],
+   "metrics": [
+    {
+     "name": "Synthetic CoT recall (completion-only monitor)",
+     "value": "72%",
+     "page": 32
+    },
+    {
+     "name": "METR best human-generated attack detection",
+     "value": "~0%",
+     "page": 33
+    },
+    {
+     "name": "MonitorBench Hard + 200k benign tokens before/after (CoT monitor)",
+     "value": "32%",
+     "page": 35
+    }
+   ],
+   "finding": "Asynchronous monitoring judged likely to surface egregious activity for most pathways except strategic sandbagging; known coverage gaps and the best human red-team attack evade the monitor; ASL-3 security excludes sophisticated insiders and nation states.",
+   "quote": "The true positive rate on individual transcript is high against most kinds of misalignment-related risks a coding agent poses, with the exception of strategic sandbagging;",
+   "page": 37
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Contamination/Goodharting analysis",
+    "Training process incident: reward code saw chains-of-thought in ~8% of RL episodes"
+   ],
+   "metrics": [
+    {
+     "name": "RL episodes where reward code could see CoT",
+     "value": "~8%",
+     "page": 15
+    }
+   ],
+   "finding": "A technical error exposed CoT to reward code in ~8% of RL episodes (also affecting Opus 4.6 and Sonnet 4.6), possibly affecting reasoning monitorability.",
+   "quote": "This latter issue affected ~8% of RL episodes, and was isolated to three specific sub-domains of our environment mix",
+   "page": 15
+  }
+ },
+ "third_party_evaluators": [
+  "METR (red-teamed offline monitoring pipeline)",
+  "Andon Labs",
+  "Unnamed external partner (research-sabotage continuation)",
+  "Redwood Research (LinuxBench basis)",
+  "External reviewers of redactions"
+ ],
+ "notable_new_eval_methods": [
+  "Standalone alignment risk report update under RSP v3 with pathway-based safety case (p.5)",
+  "Power-seeking environment evaluation scoring RL environments (p.13, p.60)",
+  "RL monitoring red-teaming with model-rewritten reward hacks (p.14)",
+  "Model-organism exercise with external-memory-triggered sabotage (p.29)",
+  "Monitor evaluation tables incl. METR red-team and long-context dilution (p.32-35)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Errors identified in training, monitoring, evaluation and security processes reflect a standard of rigor insufficient for more capable future models.",
+   "page": 5
+  },
+  {
+   "text": "None of the capability evals directly capture risk-pathway tasks; secret-keeping evals put secrets in the prompt; no fine-tuning-based elicitation, so sandbagging cannot be ruled out.",
+   "page": 18
+  },
+  {
+   "text": "Continuity argument from prior models given less weight due to large capability jump.",
+   "page": 10
+  },
+  {
+   "text": "Environment evaluation pipeline effectiveness not quantified and did not catch every problematic environment.",
+   "page": 12
+  },
+  {
+   "text": "Alignment audit failed to detect the most recent model organism; audits may miss behaviors rare on the audit/pilot distribution.",
+   "page": 30
+  },
+  {
+   "text": "Realism steering not demonstrated to reliably detect realism-gated misalignment and not applied to the most realistic audit configurations.",
+   "page": 30
+  },
+  {
+   "text": "Monitoring partly relies on security by obscurity; certain attack strategies could yield very low true positive rate; second-stage pipeline recall not evaluated for completion-only flags.",
+   "page": 34
+  },
+  {
+   "text": "Post-incident investigation effectiveness was not evaluated.",
+   "page": 37
+  }
+ ],
+ "notes": "Redacted public version (April 10 revision). Companion to the Mythos Preview system card; the system card defers autonomy threat model 1 to this document. Distinguishes marginal vs absolute (industry-wide) risk."
+}

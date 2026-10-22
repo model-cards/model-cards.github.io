@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>About Model Cards</title>
+<meta name="description" content="How the model card archive was collected, converted, and analyzed.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap prose">
+  <h1>About this archive</h1>
+  <h2>Scope</h2>
+  <p>The archive covers official model documentation from six labs (Anthropic, OpenAI, Google Gemini, Zhipu GLM, Moonshot Kimi and Alibaba Qwen) for models released between 1 October 2025 and 22 October 2026. It includes system cards, model cards, addenda, safety and risk reports, and technical reports. The Chinese labs and Google's Gemma models usually publish open-weight model cards on Hugging Face or a developer site instead of a system card, so those cards are included as their main documentation. Blog posts are included only when no other official document exists for that model.</p>
+  <h2>Pipeline</h2>
+  <ol>
+    <li><b>Collection.</b> Documents were found on each lab's official index pages (for example anthropic.com/system-cards, OpenAI's Deployment Safety Hub, deepmind.google/models/model-cards, arXiv and Hugging Face) and downloaded in their original form.</li>
+    <li><b>Conversion.</b> PDFs were converted to markdown with <a href="https://docs.mistral.ai/capabilities/document_ai/basic_ocr/">Mistral OCR</a>. Page markers are kept so that every citation can link back to a page. Documents that exist only as HTML or Hugging Face READMEs were rendered to PDF with headless Chrome. Those PDFs are marked “rendered”.</li>
+    <li><b>Extraction.</b> Each document was read against a fixed schema: headline capability benchmarks, a safety framework determination, and 21 safety areas. Every safety area was rated <i>not covered / mentioned / light / substantial</i> and backed by a verbatim quote and a page number. The extraction was done by an LLM (Claude) working directly from the markdown. It can contain errors, so treat the PDF as authoritative.</li>
+    <li><b>Analysis.</b> The <a href="safety.html">safety page</a> combines the per-document extractions into trends and gaps. Each claim on it links to the page that supports it.</li>
+  </ol>
+  <h2>Caveats</h2>
+  <ul>
+    <li>Coverage measures what a document <i>reports</i>, not what a lab <i>did</i>. Labs may run evaluations they don't publish.</li>
+    <li>Document types differ a lot. A 300-page system card and a 4-page model card are not like-for-like, and the compare views let you filter by type.</li>
+    <li>Benchmark scores are copied as published. Harnesses, sampling settings and thinking budgets differ between labs, and sometimes between a lab's own releases.</li>
+    <li>Release dates come from the publisher's index page or the document cover. Some are approximate, and the manifest notes say which.</li>
+  </ul>
+</main>
+<script src="assets/common.js"></script>
+<script>header("about.html");</script>
+</body>
+</html>

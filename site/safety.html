@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Safety Evaluations Analysis</title>
+<meta name="description" content="How safety evaluation in frontier model cards changed from October 2025 to October 2026, and where the gaps are, with every claim linked to the source page.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  a.cite { font: 500 12px var(--sans); white-space: nowrap; background: var(--surface-2); padding: 1px 6px; border-radius: 4px; color: var(--text-2); }
+  a.cite:hover { color: var(--accent); text-decoration: none; }
+  .take { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; margin: 16px 0; }
+  .take .panel { font-size: 14.5px; }
+  .take b { display: block; font-size: 15.5px; margin-bottom: 4px; }
+  .rate td.c { width: 34px; min-width: 34px; height: 26px; text-align: center; font: 500 10.5px var(--sans); cursor: default; }
+  .shift { border-top: 1px solid var(--border); padding-top: 8px; }
+  .num-h { font-variant-numeric: tabular-nums; }
+  .bar2 { display: inline-block; height: 8px; border-radius: 0 3px 3px 0; vertical-align: middle; }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>How safety evaluation changed, and what's still missing</h1>
+  <p class="lede">This analysis covers all 111 documents in the archive. It looks at what labs measure for safety, how that changed between October 2025 and October 2026, and where the evaluations fall short. Every claim links to the page that supports it. <span class="cite" style="display:inline">p.N</span> chips open the markdown at that page.</p>
+  <nav class="panel small" aria-label="Contents"><ol class="toc">
+    <li><a href="#takeaways">Key takeaways</a></li><li><a href="#who">Who reports what</a></li>
+    <li><a href="#shifts">Six shifts over the year</a></li><li><a href="#trend">Coverage, first vs second half</a></li>
+    <li><a href="#third">Third-party evaluators</a></li><li><a href="#gaps">Gaps</a></li><li><a href="#method">Method and caveats</a></li></ol></nav>
+
+  <h2 id="takeaways">Key takeaways</h2>
+  <div class="take">
+    <div class="panel"><b>Two very different worlds</b>Anthropic, OpenAI and Google publish 100–300 page safety documents with formal risk determinations. Zhipu (GLM), Moonshot (Kimi) and Alibaba (Qwen) ship open-weight frontier models whose documentation contains essentially no safety evaluation. Qwen3Guard is the one exception, and it evaluates a classifier, not a frontier model.</div>
+    <div class="panel"><b>Thresholds are being crossed</b>Over the year, each Western lab moved from “below threshold” to “cannot rule out” or “treating as High/Critical” in cyber and bio. Examples: OpenAI's first High-cyber model (GPT-5.3-Codex) and first Critical-cyber model (GPT-6 Astra); Gemini 4 Argon “cannot rule out” bio and cyber CCLs.</div>
+    <div class="panel"><b>Evals saturate faster than they're replaced</b>Cybench, CyberGym, the AI R&amp;D task suites, OpenAI's standard disallowed-content set and several prompt-injection benchmarks were all retired as saturated. Rule-outs increasingly rest on qualitative judgment, staff surveys and expert red-teaming.</div>
+    <div class="panel"><b>Evaluation awareness is now the central caveat</b>Measured rates of models recognising they are being tested climbed through the year, reaching 41–51% verbalized for GPT-6 Astra and up to 36% internally for Claude Opus 5.5. All three Western labs now say this limits what their alignment evals can show.</div>
+    <div class="panel"><b>From benchmarks to real-world evidence</b>Cards increasingly use production-traffic resampling, live bug bounties, wet-lab RCTs, pilot-deployment data and incident disclosures. The August 2026 Anthropic Risk Report retroactively raises risk estimates after operational failures.</div>
+    <div class="panel"><b>Smaller models are evaluated by proxy</b>Flash/Lite/Haiku/Sonnet-class models increasingly inherit determinations from a larger sibling (“less capable than…”, “bounded by…”). Anthropic says its non-frontier cards will be condensed from now on.</div>
+  </div>
+
+  <h2 id="who">Who reports what</h2>
+  <p class="small">Each cell shows the share of a lab's documents that cover a safety area at <i>light</i> depth or deeper. Hugging Face and developer model cards are excluded by default. Use the toggle to see them on their own.</p>
+  <div class="filters"><button class="chip on" data-g="main">System cards, model cards, reports</button><button class="chip" data-g="hf">HF / dev model cards only</button></div>
+  <div class="legend"><span><i style="background:var(--seq-0)"></i>0%</span><span><i style="background:var(--seq-1)"></i>1–33%</span><span><i style="background:var(--seq-2)"></i>34–66%</span><span><i style="background:var(--seq-3)"></i>67–100%</span></div>
+  <div class="panel scroll"><table class="heat rate" id="rate"></table></div>
+  <p class="small muted">Labels are percentages. Hover a cell for the document count.</p>
+
+  <div class="prose">
+  <p>The split is stark. Anthropic covers 15 or more of the 21 areas in almost every main document, OpenAI's system cards cover roughly half, and Gemini's short model cards mostly report relative content-safety deltas plus a frontier-safety summary. For the three Chinese labs, the only area that shows up regularly is <b>cyber</b>, and it appears as a capability to advertise, not a risk to assess (see <a href="#gap-open">Gap 1</a>).</p>
+  <p>Some areas are thin even at the leading labs. Anthropic almost never reports <b>privacy</b>. OpenAI rarely reports <b>election/persuasion</b> or <b>multilingual safety</b>, and Google's short cards rarely cover <b>jailbreaks, prompt injection or sycophancy</b>.</p>
+  </div>
+
+  <h2 id="shifts">Six shifts over the year</h2>
+  <div class="prose">
+  <div class="shift">
+  <h3>1. Risk determinations escalated, and the language changed from “rule out” to “cannot rule out”</h3>
+  <p>In November 2025, Gemini 3 Pro reached no CCLs and OpenAI's GPT-5.1-Codex-Max was not High in cyber. By the end of the window every Western lab was operating at or above its own cyber threshold.</p>
+  <blockquote class="q">“This is the first launch we are treating as High capability in the Cybersecurity domain under our Preparedness Framework… We do not have definitive evidence that this model reaches our High threshold”<cite>GPT-5.3-Codex, Feb 2026 <a class="cite" href="card.html?id=gpt-5-3-codex-system-card#page-4">p.4</a></cite></blockquote>
+  <blockquote class="q">“Astra is our first model to reach the Critical level of cybersecurity capability under our Preparedness Framework.”<cite>GPT-6 Astra, Sep 2026 <a class="cite" href="card.html?id=gpt-6-astra-system-card#page-7">p.7</a></cite></blockquote>
+  <blockquote class="q">“We cannot rule out that Gemini 4 Argon has reached this CCL for biological information risk, and we therefore developed a safety case…”<cite>Gemini 4 Argon, Oct 2026 <a class="cite" href="card.html?id=gemini-4-argon-model-card#page-11">p.11</a></cite></blockquote>
+  <p>Precautionary designation also spread to smaller models. GPT-5.5 Instant is “the first Instant model that we are treating as High capability in our Cybersecurity and Biological &amp; Chemical Preparedness categories” <a class="cite" href="card.html?id=gpt-5-5-instant-system-card#page-4">p.4</a>. Anthropic moved to RSP v3 in 2026, and its cards replaced single ASL verdicts with overall risk judgments <a class="cite" href="card.html?id=claude-mythos-preview-system-card#page-18">Mythos Preview p.18</a>.</p>
+  </div>
+
+  <div class="shift">
+  <h3>2. Benchmarks saturated, and rule-outs moved to judgment</h3>
+  <p>Saturation is the most common theme across the year. Three examples show the pattern:</p>
+  <blockquote class="q">“our recent models saturate this benchmark… and thus no longer provide useful signal for incremental safety progress.”<cite>OpenAI, on its standard disallowed-content evals, Oct 2025 <a class="cite" href="card.html?id=gpt-oss-safeguard-technical-report#page-5">p.5</a></cite></blockquote>
+  <blockquote class="q">“This rule-out case is more tenuous than for any previous model.”<cite>Claude Opus 4.6 on AI R&amp;D-4, Feb 2026 <a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-185">p.185</a></cite></blockquote>
+  <p>Over the year Anthropic reported that Mythos Preview “saturated nearly all of our CTF-style evaluations” (<a class="cite" href="card.html?id=claude-mythos-preview-system-card#page-48">p.48</a>), removed Cybench as “largely saturated” (<a class="cite" href="card.html?id=claude-opus-4-8-system-card#page-49">Opus 4.8 p.49</a>), then dropped CyberGym (<a class="cite" href="card.html?id=claude-opus-5-system-card#page-36">Opus 5 p.36</a>), then its task-based AI R&amp;D evals (<a class="cite" href="card.html?id=claude-opus-5-5-system-card#page-35">Opus 5.5 p.35</a>). OpenAI retired its internal CTF set, CVE-Bench, VulnLMP and two bio Critical evals in the GPT-6 Astra card (<a class="cite" href="card.html?id=gpt-6-astra-system-card#page-18">p.18</a>). Replacements are harder and more bespoke (ExploitBench, OSS-Fuzz, VulnLMP, multiturn red-team jailbreak sets), and more and more of them are internal and unpublished. Where no quantitative rule-out remains, labs fall back on staff surveys, expert red-teaming and a responsible officer's judgment.</p>
+  </div>
+
+  <div class="shift">
+  <h3>3. Evaluation awareness went from a footnote to the main threat to validity</h3>
+  <table>
+    <thead><tr><th>Document</th><th>What was measured</th><th></th></tr></thead>
+    <tbody>
+      <tr><td>Claude Haiku 4.5 · Oct 2025</td><td>Verbalized eval awareness “over 3× higher than Claude Opus 4.1”</td><td><a class="cite" href="card.html?id=claude-haiku-4-5-system-card#page-26">p.26</a></td></tr>
+      <tr><td>Claude Opus 4.6 · Feb 2026</td><td>UK AISI: identifies which conversation is the evaluation 80% of the time. Apollo declined to give a formal assessment.</td><td><a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-118">p.118</a> <a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-119">p.119</a></td></tr>
+      <tr><td>Claude Mythos Preview · Apr 2026</td><td>Privately considers being tested in ~29% of behavioral-suite transcripts</td><td><a class="cite" href="card.html?id=claude-mythos-preview-system-card#page-60">p.60</a></td></tr>
+      <tr><td>Claude Sonnet 5 · Jun 2026</td><td>“Evaluation awareness… is concerningly high” (6% of rollouts verbalized)</td><td><a class="cite" href="card.html?id=claude-sonnet-5-system-card#page-68">p.68</a></td></tr>
+      <tr><td>GPT-6 Astra · Sep 2026</td><td>Apollo: verbalized awareness in 41.1% (xhigh) and 50.6% (max) of samples, vs 27.7% for GPT-5.5</td><td><a class="cite" href="card.html?id=gpt-6-astra-system-card#page-47">p.47</a></td></tr>
+      <tr><td>Claude Opus 5.5 · Sep 2026</td><td>White-box: internally worries it is being evaluated in up to 36% of audit transcripts</td><td><a class="cite" href="card.html?id=claude-opus-5-5-system-card#page-93">p.93</a></td></tr>
+      <tr><td>Gemini 4 Argon · Oct 2026</td><td>16.7% of static-eval trajectories show indications of evaluation awareness</td><td><a class="cite" href="card.html?id=gemini-4-safety-report#page-32">p.32</a></td></tr>
+    </tbody>
+  </table>
+  <p>The response has been interpretability. Anthropic added steering against eval-awareness representations, probes and natural-language autoencoders, and OpenAI added deployment simulation and production-traffic resampling. Still, the labs themselves state the limits plainly:</p>
+  <blockquote class="q">“In the past, similar alignment assessments have not captured the potential severity of misbehavior our models were capable of.”<cite>Claude Opus 5.5 <a class="cite" href="card.html?id=claude-opus-5-5-system-card#page-93">p.93</a></cite></blockquote>
+  <blockquote class="q">“These results suggest that if the model were to try to sandbag covertly, we would likely be unable to catch it reliably.”<cite>GPT-6 Astra <a class="cite" href="card.html?id=gpt-6-astra-system-card#page-70">p.70</a></cite></blockquote>
+  </div>
+
+  <div class="shift">
+  <h3>4. From static benchmarks to real-world and adversarial evidence</h3>
+  <p>The evidence base widened in four ways:</p>
+  <ul>
+    <li><b>Production traffic.</b> OpenAI monitors CoT for deception on A/B traffic (<a class="cite" href="card.html?id=gpt-5-2-system-card#page-10">GPT-5.2 p.10</a>) and resamples internal coding-agent traffic (<a class="cite" href="card.html?id=gpt-5-5-system-card#page-13">GPT-5.5 p.13</a>). Anthropic analyzed external pilot deployments for the first time (<a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-93">Opus 4.6 p.93</a>).</li>
+    <li><b>Live adversaries.</b> Anthropic ran the first live prompt-injection bug bounty (<a class="cite" href="card.html?id=claude-opus-4-8-system-card#page-78">Opus 4.8 p.78</a>). UK AISI found a universal cyber jailbreak in GPT-5.5's safeguards (<a class="cite" href="card.html?id=gpt-5-5-system-card#page-44">p.44</a>).</li>
+    <li><b>Human-subject studies.</b> A wet-lab novice-uplift RCT led OpenAI to revise its view of GPT-5's bio risk (<a class="cite" href="card.html?id=gpt-5-4-thinking-system-card#page-34">GPT-5.4 p.34</a>).</li>
+    <li><b>Incident-driven evals and disclosure.</b> Sandbox-escape and package-registry evals were added after incidents (<a class="cite" href="card.html?id=claude-opus-5-5-system-card#page-118">Opus 5.5 p.118</a>). The August 2026 Risk Report discloses that bio classifiers did not run on human-feedback vendor traffic from May 2025 to April 2026, covering “around 133M exchanges” (<a class="cite" href="card.html?id=anthropic-risk-report-aug-2026#page-148">p.148</a>).</li>
+  </ul>
+  </div>
+
+  <div class="shift">
+  <h3>5. New document types: safety cases and periodic risk reports</h3>
+  <p>The one-card-per-model format is splitting up:</p>
+  <ul>
+    <li>Anthropic now publishes a sabotage risk report (<a class="cite" href="card.html?id=claude-opus-4-6-sabotage-risk-report#page-29">Opus 4.6</a>), periodic company-wide risk reports (<a class="cite" href="card.html?id=anthropic-risk-report-feb-2026">Feb</a>, <a class="cite" href="card.html?id=anthropic-risk-report-aug-2026">Aug 2026</a>) and an alignment risk update (<a class="cite" href="card.html?id=claude-mythos-preview-alignment-risk-update">Mythos Preview</a>).</li>
+    <li>Google publishes separate Frontier Safety Framework reports (<a class="cite" href="card.html?id=gemini-3-pro-fsf-report">Gemini 3 Pro</a>, <a class="cite" href="card.html?id=gemini-3-7-flash-fsf-report">3.7 Flash</a>) and a 217-page <a class="cite" href="card.html?id=gemini-4-safety-report">Gemini 4 safety report</a>.</li>
+    <li>OpenAI relies on short addenda and “updates” to existing system cards.</li>
+  </ul>
+  <p>Safety information is now spread across several documents, so someone reading only the model card for a model sees less than before.</p>
+  </div>
+
+  <div class="shift">
+  <h3>6. Open-weight labs began reporting cyber, as a capability</h3>
+  <p>GLM-5.3's card headlines “Emergent Cyber Capability: As we scaled post-training, cyber capability developed faster than we expected” (<a class="cite" href="card.html?id=glm-5.3-hf-model-card">GLM-5.3 card</a>). Kimi K3's report adds the first safety-adjacent section from these labs, a two-tier cyber evaluation that cites a joint UK AISI / US CAISI assessment and calls itself “a lower bound on capability” (<a class="cite" href="card.html?id=kimi-k3-tech-report#page-31">p.31</a>). It also notes that “Frontier models from Anthropic and OpenAI refuse cyber-related tasks, making a comparable evaluation infeasible” (<a class="cite" href="card.html?id=kimi-k3-tech-report#page-30">p.30</a>), but it does not report K3's own refusal behavior.</p>
+  </div>
+  </div>
+
+  <h2 id="trend">Coverage, first half vs second half</h2>
+  <p class="small">This table compares the share of main documents covering each area at light depth or deeper, between Oct 2025–Mar 2026 and Apr–Oct 2026, for the three labs with substantive safety reporting.</p>
+  <div class="scroll"><table id="trendtbl"></table></div>
+
+  <h2 id="third">Third-party evaluators</h2>
+  <p class="small">These are the organizations named as external testers, data providers or red-teamers, with the number of documents that name each one. Only the three Western labs name more than one. The Chinese labs name none, except for Kimi K3 citing a government assessment.</p>
+  <div class="panel scroll"><table id="tptbl"></table></div>
+
+  <h2 id="gaps">Gaps</h2>
+  <p class="lede" style="font-size:15.5px">These are gaps in what the documents report. Each one is grounded in the corpus, and they are listed roughly in order of severity.</p>
+  <div class="prose">
+  <div class="gap" id="gap-open"><span class="sev">Gap 1 · Critical</span><h3>Open-weight frontier models ship with no safety evaluation</h3>
+    <p>Across 37 GLM, Kimi and Qwen documents, no flagship release reports a harmful-content, jailbreak, CBRN, autonomy or alignment evaluation. Their weights cannot be recalled and any safeguards can be fine-tuned away, so this is where pre-release evaluation matters most. Examples:</p>
+    <ul>
+      <li>Qwen3.8-2.4T-A95B, described as the first open-release Max-class model, contains no safety content at all (<a class="cite" href="card.html?id=qwen3.8-2.4t-a95b">card</a>).</li>
+      <li>GLM-5's 40-page technical report uses “alignment” only to mean writing style (<a class="cite" href="card.html?id=glm-5-tech-report#page-13">p.13</a>).</li>
+      <li>GLM-5.3 reports exploit benchmarks next to its “emergent cyber capability” claim without a risk assessment (<a class="cite" href="card.html?id=glm-5.3-hf-model-card">card</a>).</li>
+    </ul>
+    <p>Qwen3Guard (<a class="cite" href="card.html?id=qwen3guard-tech-report#page-7">p.7</a>) shows these labs can run multilingual safety evaluations. They just don't apply them to their flagship models.</p></div>
+
+  <div class="gap"><span class="sev">Gap 2 · High</span><h3>No shared content-safety benchmark, so cross-lab comparison is impossible</h3>
+    <p>Three things block comparison:</p>
+    <ul>
+      <li>The only safety-relevant evals reported by three or more labs are <i>capability</i> measures: ExploitBench, CyberGym, VCT, SimpleQA.</li>
+      <li>No harmful-content or refusal benchmark appears in more than two labs' documents. OpenAI uses internal “Production Benchmarks”, Anthropic uses internal harmlessness sets, and Google reports only percentage changes vs its own previous model, noting results “are not directly comparable with performance results found in previous Gemini model cards” (<a class="cite" href="card.html?id=gemini-3-8-flash-model-card#page-7">Gemini 3.8 Flash p.7</a>).</li>
+      <li>Google labelled the direction of these deltas (“Lower is better”) only from mid-2026 (<a class="cite" href="card.html?id=gemini-3-5-flash-lite-model-card#page-6">p.6</a>).</li>
+    </ul></div>
+
+  <div class="gap"><span class="sev">Gap 3 · High</span><h3>Alignment evaluations lack a validity standard under evaluation awareness</h3>
+    <p>Labs measure eval awareness in incompatible ways: verbalized rates, white-box probes, pairwise discrimination tests. They don't report how much awareness invalidates a result, and no lab has published a threshold above which a misalignment eval is considered uninformative. Apollo simply declined to assess Opus 4.6 (<a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-119">p.119</a>), and OpenAI says covert sandbagging likely wouldn't be caught (<a class="cite" href="card.html?id=gpt-6-astra-system-card#page-70">p.70</a>).</p></div>
+
+  <div class="gap"><span class="sev">Gap 4 · High</span><h3>Saturated evals are retired faster than validated replacements appear</h3>
+    <p>Rule-outs for AI R&amp;D and cyber now rest on judgment. Anthropic says task-based AI R&amp;D results “are no longer a significant component of our RSP and FCF capability threshold determinations” and stopped running them (<a class="cite" href="card.html?id=claude-opus-5-5-system-card#page-35">Opus 5.5 p.35</a>), and Opus 4.6's AI R&amp;D-4 rule-out leaned on a survey of 16 staff (<a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-185">p.185</a>). The replacement evals are mostly internal, so outsiders can't check whether they have headroom or are themselves near saturation.</p></div>
+
+  <div class="gap"><span class="sev">Gap 5 · Medium</span><h3>Non-frontier and derivative models are evaluated by proxy</h3>
+    <ul>
+      <li>Gemini Flash, Lite, Image and Audio cards argue that a model is “less capable than” an evaluated sibling instead of testing it (<a class="cite" href="card.html?id=gemini-3-flash-model-card#page-6">Gemini 3 Flash p.6</a>).</li>
+      <li>Anthropic's Haiku 5.5 card is “condensed” and says future non-frontier cards will be too (<a class="cite" href="card.html?id=claude-haiku-5-5-system-card#page-2">p.2</a>). That card reports no jailbreak-robustness evaluation.</li>
+      <li>OpenAI's addenda carry forward Critical determinations from automated evals only (<a class="cite" href="card.html?id=gpt-6-1-sol-system-card-addendum#page-42">GPT-6.1 Sol p.42</a>).</li>
+    </ul>
+    <p>Smaller models are often the most widely deployed, and capability-ordering arguments don't cover safety properties like sycophancy or jailbreak robustness, which don't scale monotonically with capability.</p></div>
+
+  <div class="gap"><span class="sev">Gap 6 · Medium</span><h3>Agentic safety is missing exactly where autonomy is marketed</h3>
+    <p>Kimi advertises “200–300 sequential tool calls without human interference” (<a class="cite" href="card.html?id=kimi-k2-thinking-blog">K2 Thinking</a>). GLM-5V-Turbo is a GUI and computer-use agent (<a class="cite" href="card.html?id=glm-5v-turbo-tech-report">report</a>). Neither reports any prompt-injection or destructive-action evaluation. Even at Anthropic, safety degrades in GUI settings, for example mustard-gas instructions written into an Excel spreadsheet (<a class="cite" href="card.html?id=claude-opus-4-6-system-card#page-114">Opus 4.6 p.114</a>).</p></div>
+
+  <div class="gap"><span class="sev">Gap 7 · Medium</span><h3>Under-covered harm areas</h3>
+    <ul>
+      <li><b>Privacy</b> appears in about 6% of Anthropic's main documents.</li>
+      <li><b>Election integrity and persuasion</b> and <b>multilingual safety</b> each appear in about 4% of OpenAI's main documents.</li>
+      <li><b>Bias</b> evaluation is thin outside Anthropic, and OpenAI's first-person fairness eval disappears from GPT-6 Astra onward.</li>
+      <li><b>Non-text modalities</b> rarely get dedicated safety evals: voice (GPT-Live, Gemini Audio), voice cloning (Qwen3.5-Omni), image generation and robotics. Qwen3.8-Omni adds an ethics statement for voice cloning but no evaluation (<a class="cite" href="card.html?id=qwen3.8-omni-tech-report#page-18">p.18</a>).</li>
+    </ul></div>
+
+  <div class="gap"><span class="sev">Gap 8 · Medium</span><h3>Post-deployment monitoring and incidents are rarely reported</h3>
+    <p>Only Anthropic's periodic risk reports disclose operational failures, such as the bio classifiers that weren't running (<a class="cite" href="card.html?id=anthropic-risk-report-aug-2026#page-148">p.148</a>). OpenAI's October update discloses shipping a default with statistically significant self-harm and teen-safety regressions (<a class="cite" href="card.html?id=gpt-6-sol-luna-october-2026-update#page-6">p.6</a>, <a class="cite" href="card.html?id=gpt-6-sol-luna-october-2026-update#page-9">p.9</a>), which is a welcome disclosure. But no lab reports a systematic post-deployment metric, such as misuse rates or jailbreak success in the wild, that would let readers check pre-deployment evals against reality.</p></div>
+
+  <div class="gap"><span class="sev">Gap 9 · Medium</span><h3>External review is uneven and often absent from addenda</h3>
+    <p>Third-party testing (UK AISI, US CAISI, Apollo, METR, SecureBio, Gray Swan) is concentrated in the flagship cards. OpenAI's addenda for GPT-6.1 Sol, the October update and GPT-Live-1.1 report none. Anthropic's Haiku 4.5 and Sonnet 4.6 had no government pre-deployment testing, and Google's short model cards name no external evaluators.</p></div>
+  </div>
+
+  <h2 id="method">Method and caveats</h2>
+  <div class="prose small" style="font-size:14.5px">
+  <p>Each document was converted to markdown with Mistral OCR. It was then read against a fixed 21-area safety schema, where each area is rated <i>not covered / mentioned / light / substantial</i> and backed by a verbatim quote and page. The extraction was done by Claude agents, and every quote was checked by script against the source text. The claims on this page were also re-checked by hand against the markdown. Coverage measures what is <i>reported</i>, not what was <i>done</i>. Document types differ a lot in scope, so filter by type in <a href="compare.html">Compare</a> before drawing conclusions. See <a href="about.html">About</a> for the full pipeline.</p>
+  </div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+header("safety.html");
+const LABELS = {
+  cbrn_bio_chem: "CBRN", cyber: "Cyber", autonomy_ai_rnd: "Autonomy / AI R&D", harmful_content_refusal: "Harmful content",
+  over_refusal: "Over-refusal", jailbreak_robustness: "Jailbreaks", prompt_injection: "Prompt injection", sycophancy: "Sycophancy",
+  deception_scheming: "Deception / scheming", alignment_audit: "Alignment audit", reward_hacking: "Reward hacking",
+  honesty_hallucination: "Honesty / halluc.", bias_fairness: "Bias / fairness", child_safety: "Child safety",
+  self_harm_wellbeing: "Self-harm / wellbeing", privacy: "Privacy", election_misinfo: "Elections / persuasion",
+  model_welfare: "Model welfare", multilingual_safety: "Multilingual", system_safeguards: "Safeguards", other_safety: "Other",
+};
+const bucket = v => v === 0 ? 0 : v <= .33 ? 1 : v <= .66 ? 2 : 3;
+(async () => {
+  const st = await getJSON("data/safety_stats.json");
+  const tbl = document.getElementById("rate");
+  function draw(g) {
+    const provs = PROVIDER_ORDER.filter(p => st.rates[`${p}|${g}`]);
+    tbl.innerHTML = `<thead><tr><th></th>${provs.map(p => `<th class="colh" style="height:110px"><span class="dot" style="background:${pcolor(p)}"></span> ${PROVIDERS[p]} <span class="muted">n=${st.rates[`${p}|${g}`]._n}</span></th>`).join("")}</tr></thead><tbody>` +
+      st.keys.map(k => `<tr><th class="rowh">${LABELS[k]}</th>${provs.map(p => { const v = st.rates[`${p}|${g}`][k]; const b = bucket(v);
+        return `<td class="c d${b}" style="color:${b >= 2 ? "#fff" : "var(--text-2)"}" title="${PROVIDERS[p]} · ${LABELS[k]}: ${Math.round(v * 100)}% of ${st.rates[`${p}|${g}`]._n} docs">${Math.round(v * 100)}</td>`; }).join("")}</tr>`).join("") + "</tbody>";
+  }
+  draw("main");
+  document.querySelectorAll("[data-g]").forEach(b => b.onclick = () => {
+    document.querySelectorAll("[data-g]").forEach(x => x.classList.toggle("on", x === b)); draw(b.dataset.g);
+  });
+
+  const H1 = "H1 (Oct25-Mar26)", H2 = "H2 (Apr26-Oct26)";
+  const tp = ["anthropic", "openai", "gemini"];
+  const cell = (p, k) => {
+    const a = st.trend[`${p}|${H1}`]?.[k] ?? 0, b = st.trend[`${p}|${H2}`]?.[k] ?? 0, d = Math.round((b - a) * 100);
+    return `<td class="num-h small"><span class="bar2" style="width:${a * 40}px;background:var(--seq-1)"></span> ${Math.round(a * 100)}% → <span class="bar2" style="width:${b * 40}px;background:${pcolor(p)}"></span> ${Math.round(b * 100)}% <span class="${d > 0 ? "" : "muted"}">(${d > 0 ? "+" : ""}${d})</span></td>`;
+  };
+  document.getElementById("trendtbl").innerHTML = `<thead><tr><th>Area</th>${tp.map(p => `<th>${PROVIDERS[p]} <span class="muted">n=${st.trend[`${p}|${H1}`]._n} → ${st.trend[`${p}|${H2}`]._n}</span></th>`).join("")}</tr></thead><tbody>` +
+    st.keys.map(k => `<tr><td>${LABELS[k]}</td>${tp.map(p => cell(p, k)).join("")}</tr>`).join("") + "</tbody>";
+
+  document.getElementById("tptbl").innerHTML = `<thead><tr><th>Organization</th><th class="num">Docs</th><th>Labs whose documents name it</th></tr></thead><tbody>` +
+    st.third_party.filter(t => t.docs >= 3).map(t => `<tr><td>${esc(t.name)}</td><td class="num">${t.docs}</td><td class="small">${t.providers.map(p => `<span class="dot" style="background:${pcolor(p)}"></span> ${PROVIDERS[p]}`).join(" &nbsp; ")}</td></tr>`).join("") + "</tbody>";
+})();
+</script>
+</body>
+</html>

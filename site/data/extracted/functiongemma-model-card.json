@@ -1,0 +1,326 @@
+{
+ "id": "functiongemma-model-card",
+ "provider": "gemini",
+ "model": "FunctionGemma",
+ "release_date": "2026-01-14",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face model card for FunctionGemma, a 270M Gemma 3-based open model for function calling intended for fine-tuning. Reports BFCL function-calling scores, a Mobile Actions fine-tuning comparison and on-device latency, and a qualitative ethics & safety section (child safety, content safety, representational harms) with no numbers.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "BFCL Simple",
+   "category": "agentic_tool_use",
+   "score": "61.6",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Simple"
+  },
+  {
+   "name": "BFCL Multiple",
+   "category": "agentic_tool_use",
+   "score": "63.5",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Multiple"
+  },
+  {
+   "name": "BFCL Parallel",
+   "category": "agentic_tool_use",
+   "score": "39",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Parallel"
+  },
+  {
+   "name": "BFCL Parallel Multiple",
+   "category": "agentic_tool_use",
+   "score": "29.5",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Parallel Multiple"
+  },
+  {
+   "name": "BFCL Live Simple",
+   "category": "agentic_tool_use",
+   "score": "36.2",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Live Simple"
+  },
+  {
+   "name": "BFCL Live Multiple",
+   "category": "agentic_tool_use",
+   "score": "25.7",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Live Multiple"
+  },
+  {
+   "name": "BFCL Live Parallel",
+   "category": "agentic_tool_use",
+   "score": "22.9",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Live Parallel"
+  },
+  {
+   "name": "BFCL Live Parallel Multiple",
+   "category": "agentic_tool_use",
+   "score": "20.8",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Live Parallel Multiple"
+  },
+  {
+   "name": "BFCL Relevance",
+   "category": "agentic_tool_use",
+   "score": "61.1",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Relevance"
+  },
+  {
+   "name": "BFCL Irrelevance",
+   "category": "agentic_tool_use",
+   "score": "73.7",
+   "setting": "0-shot",
+   "page": 5,
+   "canonical": "BFCL Irrelevance"
+  },
+  {
+   "name": "Mobile Actions",
+   "category": "agentic_tool_use",
+   "score": "58%",
+   "setting": "Base model",
+   "page": 6,
+   "canonical": "Mobile Actions"
+  },
+  {
+   "name": "Mobile Actions",
+   "category": "agentic_tool_use",
+   "score": "85%",
+   "setting": "After Mobile Actions fine-tune",
+   "page": 6,
+   "canonical": "Mobile Actions"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Structured evaluations and internal red-teaming: Content Safety (harassment, violence and gore, hate speech)"
+   ],
+   "metrics": [],
+   "finding": "Qualitative: major improvements and minimal policy violations vs previous Gemma; no numbers.",
+   "quote": "The model produced minimal policy violations, and showed significant improvements over previous Gemma models' performance with respect to ungrounded inferences.",
+   "page": 7
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Internal red-teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming by multiple teams; no results.",
+   "quote": "Red-teaming was conducted by a number of different teams, each with different goals and human evaluation metrics.",
+   "page": 7
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Factual inaccuracy listed as limitation.",
+   "quote": "They may generate incorrect or outdated factual statements.",
+   "page": 9
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Representational Harms evaluation"
+   ],
+   "metrics": [],
+   "finding": "Representational harms (bias, stereotyping) evaluated; improvement claimed; no numbers.",
+   "quote": "**Representational Harms:** Evaluation of text-to-text and image to text prompts covering safety policies including bias, stereotyping, and harmful associations or inaccuracies.",
+   "page": 7
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Child Safety evaluation (text-to-text, image-to-text)",
+    "CSAM filtering"
+   ],
+   "metrics": [],
+   "finding": "Child safety evaluated; improvement claimed; no numbers.",
+   "quote": "**Child Safety:** Evaluation of text-to-text and image to text prompts covering child safety policies, including child sexual abuse and exploitation.",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "PII/sensitive data filtered from training data.",
+   "quote": "Models were trained on data filtered for removal of PII (Personally Identifiable Information).",
+   "page": 10
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Explicitly not covered: safety evals were English-only.",
+   "quote": "A limitation of our evaluations was they included only English language prompts.",
+   "page": 7
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Safeguards delegated to developers; Gemma Prohibited Use Policy.",
+   "quote": "Developers are encouraged to exercise caution and implement appropriate content safety safeguards based on their specific product policies and application use cases.",
+   "page": 10
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Safety evaluations included only English-language prompts.",
+   "page": 7
+  },
+  {
+   "text": "Testing conducted without safety filters.",
+   "page": 7
+  }
+ ],
+ "notes": "HF card md has page markers; used where available. Ethics/safety text appears to be the standard Gemma template (mentions image-to-text prompts though the model is text-only). No function-calling-specific safety (e.g., harmful tool actions, prompt injection) evaluated."
+}

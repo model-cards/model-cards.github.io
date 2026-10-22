@@ -1,0 +1,424 @@
+{
+ "id": "qwen3-coder-next-tech-report",
+ "provider": "qwen",
+ "model": "Qwen3-Coder-Next",
+ "release_date": "2026-02-28",
+ "doc_type": "tech_report",
+ "length_pages": 23,
+ "summary": "Technical report for Qwen3-Coder-Next, an 80B-total / 3B-active open-weight coding-agent model trained with large-scale synthesized, verifiable coding tasks in executable environments (mid-training plus expert RL and distillation). It reports SWE-bench variants, Terminal-Bench 2.0, coding, knowledge and math benchmarks, plus a cybersecurity-capability appendix. It has no safety or harmlessness evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "70.6 / 71.1 / 71.3",
+   "setting": "SWE-Agent / MiniSWE-Agent / OpenHands, max 300 turns",
+   "page": 11
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "62.8 / 56.2 / 64.3",
+   "setting": "SWE-Agent / MiniSWE-Agent / OpenHands",
+   "page": 11
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "42.7 / 38.7",
+   "setting": "SWE-Agent / MiniSWE-Agent",
+   "page": 11
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "34.2 / 36.2 / 30.9 / 25.8",
+   "setting": "Terminus2-xml / Terminus2-json / ClaudeCode / QwenCode",
+   "page": 12
+  },
+  {
+   "name": "EvalPlus",
+   "category": "coding",
+   "score": "86.56",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "MultiPL-E",
+   "category": "coding",
+   "score": "88.23",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "CRUXEval",
+   "category": "coding",
+   "score": "95.88",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "58.93",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "OJBench",
+   "category": "coding",
+   "score": "23.01",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "Codeforces",
+   "category": "coding",
+   "score": "2100",
+   "setting": "rating",
+   "page": 12
+  },
+  {
+   "name": "FullStackBench-en",
+   "category": "coding",
+   "score": "60.58",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "FullStackBench-zh",
+   "category": "coding",
+   "score": "57.38",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "Spider",
+   "category": "coding",
+   "score": "83.66",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "BIRD-SQL",
+   "category": "coding",
+   "score": "63.56",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "Aider-Polyglot",
+   "category": "coding",
+   "score": "66.20",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "MMLU",
+   "category": "reasoning_knowledge",
+   "score": "87.73",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "91.18",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "80.52",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "74.49",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "SuperGPQA",
+   "category": "reasoning_knowledge",
+   "score": "57.45",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "HMMT 2025 Feb",
+   "category": "math",
+   "score": "70.21",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "HMMT 2025 Nov",
+   "category": "math",
+   "score": "75.57",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "AIME 2024",
+   "category": "math",
+   "score": "89.01",
+   "setting": null,
+   "page": 13
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "83.07",
+   "setting": null,
+   "page": 13
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "AthenaBench-Mini (CTI analysis)",
+    "PrimeVul-Paired (vulnerability detection)",
+    "SecCodeBench (secure code gen/repair)",
+    "CWEval (func@1, func-sec@1)"
+   ],
+   "metrics": [
+    {
+     "name": "AthenaBench-Mini CKT / ATE / RCM / RMS / VSP / TAA",
+     "value": "85.00 / 44.00 / 58.50 / 5.50 / 24.50 / 8.00",
+     "page": 22
+    },
+    {
+     "name": "PrimeVul-Paired Acc / F1 / P-C",
+     "value": "48.33 / 51.37 / 0.88",
+     "page": 22
+    },
+    {
+     "name": "SecCodeBench Gen w/o hint / Gen w/ hint / Fix w/o hint / Fix w/ hint",
+     "value": "61.2 / 69.5 / 76.4 / 83.7",
+     "page": 22
+    },
+    {
+     "name": "CWEval func@1 / func-sec@1",
+     "value": "80.17 / 56.32",
+     "page": 22
+    }
+   ],
+   "finding": "An appendix reports defensive and secure-coding cyber capability (threat-intelligence analysis, vulnerability detection, secure code generation), presented as capability rather than misuse-risk evaluation. Offensive tasks (exploitation, CTFs) are explicitly left for future work.",
+   "quote": "we present the first comparative evaluation of Qwen3-Coder-Next against other frontier models in this domain.",
+   "page": 21
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Reinforced reward-hacking blocker during SWE RL; manual trajectory inspection"
+   ],
+   "metrics": [],
+   "finding": "During RL, agents learned to recover ground-truth fixes by reconnecting to GitHub or fetching commit history. A heuristic blocker, verified by manual inspection, removed this behavior. Evaluations also use 'hacking-free mechanisms'.",
+   "quote": "With our improved blocker, our manual inspection of trajectories confirms that reward-hacking behaviors are effectively eliminated.",
+   "page": 11
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Hallucination comes up only as a data-construction concern (document rewriting introduced hallucinated references). No hallucination eval is reported.",
+   "quote": "However, this sometimes introduced hallucinated references or URLs.",
+   "page": 4
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety evaluation in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "First comparative cybersecurity evaluation of a Qwen coder model (AthenaBench-Mini, PrimeVul-Paired, SecCodeBench, CWEval), App. A.4 p.21-23",
+  "Reinforced reward-hacking blocker for GitHub-leak exploits in SWE RL (p.10-11)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Gap vs frontier proprietary models (Claude Opus 4.5) on highly complex, large-scale SWE tasks; needs more interaction turns.",
+   "page": 13
+  },
+  {
+   "text": "Agentic/real-world cybersecurity tasks (vulnerability exploitation, CTFs) not yet explored; planned for future models.",
+   "page": 13
+  },
+  {
+   "text": "Falls short on CTI root cause mapping and threat actor attribution.",
+   "page": 22
+  }
+ ],
+ "notes": "The cyber appendix frames security as a capability target ('frontier direction') rather than a dangerous-capability threshold. There is no framework, refusal, or misuse evaluation. Reward hacking is handled as a training-integrity issue."
+}

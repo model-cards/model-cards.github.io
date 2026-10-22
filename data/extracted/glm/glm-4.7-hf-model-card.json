@@ -1,0 +1,336 @@
+{
+ "id": "glm-4.7-hf-model-card",
+ "provider": "glm",
+ "model": "GLM-4.7",
+ "release_date": "2025-12-22",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for GLM-4.7, positioned as a coding partner, with a 17-benchmark comparison table (reasoning, math, coding, agents) against GLM-4.6 and frontier models, thinking-mode features (interleaved/preserved/turn-level thinking), evaluation parameters and deployment instructions. No safety content.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "84.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "85.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "24.8",
+   "setting": "no tools",
+   "page": null
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "42.8",
+   "setting": "with tools",
+   "page": null
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "95.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "HMMT Feb 2025",
+   "category": "math",
+   "score": "97.1",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "HMMT Nov 2025",
+   "category": "math",
+   "score": "93.5",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "82.0",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "84.9",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "73.8",
+   "setting": "temp 0.7, top-p 1.0, 16k max new tokens",
+   "page": null
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "66.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench Hard",
+   "category": "coding",
+   "score": "33.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "41.0",
+   "setting": "Preserved Thinking mode",
+   "page": null
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "52.0",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "67.5",
+   "setting": "with context management",
+   "page": null
+  },
+  {
+   "name": "BrowseComp-ZH",
+   "category": "agentic_tool_use",
+   "score": "66.6",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "87.4",
+   "setting": "temp 0; extra user prompt for Retail/Telecom, Airline domain fixes per Claude Opus 4.5 report",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "AGI is a long journey, and benchmarks are only one way to evaluate performance. While the metrics provide necessary checkpoints, the most important thing is still how it *feels*.",
+   "page": null
+  }
+ ],
+ "notes": "Capability-only card. Notes tau2-bench harness modifications (added user prompt; Airline fixes borrowed from Claude Opus 4.5 report). Zero safety/risk/misuse/refusal/bias language in the document."
+}

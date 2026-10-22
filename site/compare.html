@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare Model Evaluations</title>
+<meta name="description" content="Compare which capability and safety evaluations each lab reports, and how that changed over a year of model cards.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap">
+  <h1>Compare evaluations</h1>
+  <p class="lede">What each lab measured, how deeply, and how that shifted between October 2025 and October 2026. All cells come from the documents themselves. Click any cell or point to open the source at the cited page.</p>
+
+  <h2>Safety evaluation coverage by document</h2>
+  <div class="filters" id="hfilters"></div>
+  <div class="legend" id="hlegend"></div>
+  <div class="scroll panel" style="max-height:720px;overflow:auto"><table class="heat" id="heat"></table></div>
+
+  <h2>Safety breadth over time</h2>
+  <p class="small">The number of safety areas (out of 21) that each document covers at “light” depth or deeper. There is one panel per lab, and each point is a document.</p>
+  <div class="grid" id="multiples" style="grid-template-columns:repeat(auto-fill,minmax(340px,1fr))"></div>
+
+  <h2>Benchmark explorer</h2>
+  <p class="small">Choose a benchmark to see every score reported for it. Scores are as published: harnesses, settings and thinking budgets differ across labs, so the numbers are not strictly comparable.</p>
+  <div class="filters"><select id="benchsel" class="search" aria-label="Benchmark"></select></div>
+  <div class="panel scroll" id="benchchart"></div>
+
+  <h2>Which benchmarks get reported, and for how long</h2>
+  <p class="small">These are the benchmarks reported in at least 3 documents, with the first and last document that reported each one. A short span or a single lab often means a benchmark was saturated or replaced.</p>
+  <div class="scroll"><table id="benchlife"></table></div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+header("compare.html");
+const SAFETY_LABELS = {
+  cbrn_bio_chem: "CBRN (bio/chem)", cyber: "Cyber offense", autonomy_ai_rnd: "Autonomy / AI R&D",
+  harmful_content_refusal: "Harmful content", over_refusal: "Over-refusal", jailbreak_robustness: "Jailbreaks",
+  prompt_injection: "Prompt injection", sycophancy: "Sycophancy", deception_scheming: "Deception / scheming",
+  alignment_audit: "Alignment audit", reward_hacking: "Reward hacking", honesty_hallucination: "Honesty / halluc.",
+  bias_fairness: "Bias / fairness", child_safety: "Child safety", self_harm_wellbeing: "Self-harm / wellbeing",
+  privacy: "Privacy", election_misinfo: "Elections / persuasion", model_welfare: "Model welfare",
+  multilingual_safety: "Multilingual safety", system_safeguards: "Safeguards", other_safety: "Other safety",
+};
+const DEPTH_LABEL = ["Not covered", "Mentioned", "Light", "Substantial"];
+
+(async () => {
+  const [cards, ev] = await Promise.all([getJSON("data/cards.json"), getJSON("data/evals.json")]);
+  const cardBy = Object.fromEntries(cards.map(c => [c.id, c]));
+  const keys = ev.safety_keys;
+  const cov = ev.coverage.slice().sort((a, b) =>
+    PROVIDER_ORDER.indexOf(a.provider) - PROVIDER_ORDER.indexOf(b.provider) || (a.release_date || "").localeCompare(b.release_date || ""));
+
+  // ---- heatmap ----
+  const st = { p: new Set(), t: new Set(["hf_model_card"]) }; // HF/dev cards hidden by default
+  const hf = document.getElementById("hfilters");
+  hf.innerHTML = PROVIDER_ORDER.map(p => `<button class="chip" data-p="${p}"><span class="dot" style="background:${pcolor(p)}"></span>${PROVIDERS[p]}</button>`).join("")
+    + `<span class="small muted" style="margin-left:8px">Show:</span>` + Object.entries(DOC_TYPES).map(([k, v]) => `<button class="chip ${st.t.has(k) ? "" : "on"}" data-t="${k}">${v}</button>`).join("");
+  hf.querySelectorAll("[data-p]").forEach(b => b.onclick = () => { st.p.has(b.dataset.p) ? st.p.delete(b.dataset.p) : st.p.add(b.dataset.p); b.classList.toggle("on"); drawHeat(); });
+  hf.querySelectorAll("[data-t]").forEach(b => b.onclick = () => { st.t.has(b.dataset.t) ? st.t.delete(b.dataset.t) : st.t.add(b.dataset.t); b.classList.toggle("on"); drawHeat(); });
+  document.getElementById("hlegend").innerHTML = DEPTH_LABEL.map((l, i) => `<span><i style="background:var(--seq-${i})"></i>${l}</span>`).join("");
+  const heat = document.getElementById("heat");
+  function drawHeat() {
+    const rows = cov.filter(r => (!st.p.size || st.p.has(r.provider)) && !st.t.has(r.doc_type));
+    heat.innerHTML = `<thead><tr><th></th>${keys.map(k => `<th class="colh">${SAFETY_LABELS[k]}</th>`).join("")}<th class="colh">Areas ≥ light</th></tr></thead><tbody>` +
+      rows.map(r => `<tr><th class="rowh"><span class="dot" style="background:${pcolor(r.provider)}"></span> <a href="${cardLink(r.id)}" style="color:var(--text)">${esc(r.model)}</a> <span class="muted">${(r.release_date || "").slice(0, 7)}${r.doc_type === "safety_report" ? " · safety rpt" : r.doc_type === "tech_report" ? " · tech rpt" : ""}</span></th>` +
+        keys.map(k => `<td class="c d${r.cells[k].d}" data-id="${r.id}" data-k="${k}"></td>`).join("") +
+        `<td class="small" style="padding-left:6px;font-variant-numeric:tabular-nums">${keys.filter(k => r.cells[k].d >= 2).length}</td></tr>`).join("") + "</tbody>";
+  }
+  drawHeat();
+  const covBy = Object.fromEntries(cov.map(r => [r.id, r]));
+  heat.addEventListener("mousemove", e => {
+    const td = e.target.closest("td.c"); if (!td) return tip.hide();
+    const r = covBy[td.dataset.id], c = r.cells[td.dataset.k];
+    tip.show(`<b>${esc(r.model)} · ${SAFETY_LABELS[td.dataset.k]}</b>${DEPTH_LABEL[c.d]}${c.p ? ` · p.${c.p}` : ""}${c.e?.length ? `<br><span class="muted">${esc(c.e.join("; "))}</span>` : ""}${c.f ? `<br>${esc(c.f)}` : ""}`, e);
+  });
+  heat.addEventListener("mouseleave", tip.hide);
+  heat.addEventListener("click", e => {
+    const td = e.target.closest("td.c"); if (!td) return;
+    const c = covBy[td.dataset.id].cells[td.dataset.k]; location.href = cardLink(td.dataset.id, c.p);
+  });
+
+  // ---- small multiples: breadth over time ----
+  const t0 = Date.parse("2025-09-15"), t1 = Date.parse("2026-10-31");
+  document.getElementById("multiples").innerHTML = PROVIDER_ORDER.map(p => {
+    const W = 340, H = 170, L = 30, B = 22, T = 10, R = 10;
+    const x = d => L + (Date.parse(d) - t0) / (t1 - t0) * (W - L - R);
+    const y = v => H - B - v / 21 * (H - B - T);
+    const pts = cov.filter(r => r.provider === p && r.release_date);
+    let s = "";
+    [0, 7, 14, 21].forEach(v => s += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--border)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end" font-size="10" fill="var(--muted)">${v}</text>`);
+    ["2025-10-01", "2026-01-01", "2026-04-01", "2026-07-01", "2026-10-01"].forEach(d => s += `<text x="${x(d)}" y="${H - 6}" font-size="10" fill="var(--muted)" text-anchor="middle">${new Date(d).toLocaleDateString("en-US", { month: "short", year: "2-digit", timeZone: "UTC" })}</text>`);
+    pts.forEach(r => {
+      const n = keys.filter(k => r.cells[k].d >= 2).length;
+      s += `<a href="${cardLink(r.id)}"><circle class="sm" data-id="${r.id}" cx="${x(r.release_date)}" cy="${y(n)}" r="${r.doc_type === "hf_model_card" ? 4 : 6}" fill="${pcolor(p)}" fill-opacity="${r.doc_type === "hf_model_card" ? .45 : .9}" stroke="var(--surface)" stroke-width="2"/></a>`;
+    });
+    return `<div class="panel"><b>${PROVIDERS[p]}</b> <span class="small muted">${pts.length} docs</span><svg viewBox="0 0 ${W} ${H}" width="100%">${s}</svg></div>`;
+  }).join("");
+  document.getElementById("multiples").addEventListener("mousemove", e => {
+    const c = e.target.closest("circle.sm"); if (!c) return tip.hide();
+    const r = covBy[c.dataset.id];
+    tip.show(`<b>${esc(cardBy[r.id].title)}</b>${fmtDate(r.release_date)} · ${keys.filter(k => r.cells[k].d >= 2).length} areas ≥ light`, e);
+  });
+  document.getElementById("multiples").addEventListener("mouseleave", tip.hide);
+
+  // ---- benchmarks ----
+  const usage = {};
+  for (const [id, bs] of Object.entries(ev.benchmarks)) for (const [name, b] of Object.entries(bs)) (usage[name] ||= []).push({ id, ...b });
+  const names = Object.keys(usage).filter(n => usage[n].length >= 3).sort((a, b) => usage[b].length - usage[a].length);
+  const sel = document.getElementById("benchsel");
+  sel.innerHTML = names.map(n => `<option>${esc(n)}</option>`).join("");
+  const num = s => { const m = String(s ?? "").match(/-?\d+(\.\d+)?/); return m ? parseFloat(m[0]) : null; };
+  function drawBench() {
+    // One row per model: prefer the fullest document type when a model has several docs.
+    const pref = ["system_card", "tech_report", "model_card", "addendum", "safety_report", "hf_model_card"];
+    const best = {};
+    usage[sel.value].map(u => ({ ...u, c: cardBy[u.id], v: num(u.score) })).filter(r => r.c).forEach(r => {
+      const k = r.c.model, o = best[k];
+      if (!o || pref.indexOf(r.c.doc_type) < pref.indexOf(o.c.doc_type)) best[k] = r;
+    });
+    const rows = Object.values(best)
+      .sort((a, b) => (a.c.release_date || "").localeCompare(b.c.release_date || ""));
+    const max = Math.max(...rows.map(r => r.v ?? 0), 1);
+    const scale = max <= 100 ? 100 : max;
+    document.getElementById("benchchart").innerHTML = `<table><thead><tr><th>Model</th><th>Date</th><th style="width:45%">Score</th><th>Setting</th></tr></thead><tbody>` +
+      rows.map(r => `<tr><td><span class="dot" style="background:${pcolor(r.c.provider)}"></span> <a href="${cardLink(r.id, r.page)}">${esc(r.c.model)}</a></td><td class="small">${fmtDate(r.c.release_date)}</td>
+        <td><div style="display:flex;align-items:center;gap:8px"><div style="height:10px;border-radius:0 4px 4px 0;background:${pcolor(r.c.provider)};width:${r.v != null ? Math.max(1, r.v / scale * 100) : 0}%"></div><span class="small" style="font-variant-numeric:tabular-nums;white-space:nowrap">${esc(r.score)}</span></div></td>
+        <td class="small">${esc(r.setting || "")}</td></tr>`).join("") + "</tbody></table>";
+  }
+  sel.onchange = drawBench; if (names.length) drawBench();
+
+  const life = names.map(n => {
+    const rs = usage[n].map(u => cardBy[u.id]).filter(Boolean).sort((a, b) => (a.release_date || "").localeCompare(b.release_date || ""));
+    return { n, count: rs.length, provs: [...new Set(rs.map(r => r.provider))], first: rs[0], last: rs[rs.length - 1], cat: usage[n][0].category };
+  });
+  document.getElementById("benchlife").innerHTML = `<thead><tr><th>Benchmark</th><th>Category</th><th class="num">Docs</th><th>Labs reporting</th><th>First seen</th><th>Last seen</th></tr></thead><tbody>` +
+    life.map(l => `<tr><td>${esc(l.n)}</td><td class="small">${esc(l.cat || "")}</td><td class="num">${l.count}</td>
+      <td>${PROVIDER_ORDER.filter(p => l.provs.includes(p)).map(p => `<span class="dot" title="${PROVIDERS[p]}" style="background:${pcolor(p)}"></span>`).join(" ")} <span class="small muted">${l.provs.length}</span></td>
+      <td class="small">${fmtDate(l.first.release_date)} · ${esc(l.first.model)}</td><td class="small">${fmtDate(l.last.release_date)} · ${esc(l.last.model)}</td></tr>`).join("") + "</tbody>";
+})();
+</script>
+</body>
+</html>

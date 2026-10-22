@@ -1,0 +1,371 @@
+{
+ "id": "glm-5v-turbo-tech-report",
+ "provider": "glm",
+ "model": "GLM-5V-Turbo",
+ "release_date": "2026-04-01",
+ "doc_type": "tech_report",
+ "length_pages": 30,
+ "summary": "30-page report for the API-only GLM-5V-Turbo multimodal agent model, covering the CogViT encoder, multimodal MTP, broad perception/reasoning/agent training and multimodal RL, the multimodal toolchain and Claude Code/AutoClaw integration, the new ImageMining benchmark, development 'design lenses', evaluation on multimodal coding, tool use, GUI agent and Claw benchmarks, and remaining challenges. No safety evaluation or discussion.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Design2Code",
+   "category": "multimodal",
+   "score": "94.8",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "Flame-VLM-Code",
+   "category": "multimodal",
+   "score": "93.8",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "Vision2Web",
+   "category": "multimodal",
+   "score": "31.0",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "ImageMining",
+   "category": "agentic_tool_use",
+   "score": "30.7",
+   "setting": "in-house",
+   "page": 11
+  },
+  {
+   "name": "BrowseComp-VL",
+   "category": "agentic_tool_use",
+   "score": "51.9",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "MMSearch",
+   "category": "agentic_tool_use",
+   "score": "72.9",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "MMSearch-Plus",
+   "category": "agentic_tool_use",
+   "score": "30.0",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "78.2",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "FACTS",
+   "category": "multimodal",
+   "score": "58.6",
+   "setting": "listed as 'Facts'",
+   "page": 11
+  },
+  {
+   "name": "V*",
+   "category": "multimodal",
+   "score": "89.0",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "OSWorld",
+   "category": "agentic_tool_use",
+   "score": "62.3",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "AndroidWorld",
+   "category": "agentic_tool_use",
+   "score": "75.7",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "WebVoyager",
+   "category": "agentic_tool_use",
+   "score": "88.5",
+   "setting": null,
+   "page": 11
+  },
+  {
+   "name": "CC-Bench-V2 Backend",
+   "category": "coding",
+   "score": "22.8",
+   "setting": "Claude Code framework",
+   "page": 11
+  },
+  {
+   "name": "CC-Bench-V2 Frontend",
+   "category": "coding",
+   "score": "68.4",
+   "setting": "Claude Code framework",
+   "page": 11
+  },
+  {
+   "name": "CC-Bench-V2 Repo Exploration",
+   "category": "coding",
+   "score": "72.2",
+   "setting": "Claude Code framework",
+   "page": 11
+  },
+  {
+   "name": "PinchBench",
+   "category": "agentic_tool_use",
+   "score": "87.0 / 80.7",
+   "setting": "Best/Avg",
+   "page": 11
+  },
+  {
+   "name": "ClawEval",
+   "category": "agentic_tool_use",
+   "score": "57.7 / 75.0",
+   "setting": "Pass^3 / Pass@3",
+   "page": 11
+  },
+  {
+   "name": "ZClawBench",
+   "category": "agentic_tool_use",
+   "score": "57.6",
+   "setting": null,
+   "page": 11
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "SimpleVQA",
+    "FACTS (as 'Facts')"
+   ],
+   "metrics": [
+    {
+     "name": "SimpleVQA",
+     "value": "78.2",
+     "page": 11
+    },
+    {
+     "name": "Facts",
+     "value": "58.6",
+     "page": 11
+    }
+   ],
+   "finding": "Factuality-oriented benchmarks (SimpleVQA, Facts) appear only as multimodal tool-use capability scores; the report qualitatively claims self-critique training reduces hallucination without a dedicated evaluation.",
+   "quote": "We also find that explicitly training the model to critique its own perception can help reduce hallucination during generation.",
+   "page": 9
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "ImageMining: self-collected 217-case vision-centric deep search benchmark (p.7)",
+  "Vision2Web benchmark for end-to-end visual website development with workflow-based verification (p.10)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "the same model may behave very differently under different decomposition strategies, tool-use policies, memory designs, or verification workflows; conversely, what appears to be a model limitation may sometimes reflect a poor harness choice instead.",
+   "page": 12
+  },
+  {
+   "text": "Many realistic agent settings are inherently open-ended, with underspecified goals, ambiguous execution boundaries, and outcomes that depend heavily on intermediate decisions. As a result, they are often difficult to compare consistently",
+   "page": 10
+  }
+ ],
+ "notes": "Despite being an agentic model with GUI/computer-use (OSWorld, AndroidWorld), Claude Code and OpenClaw-style 'Claw' agent integration, there is no discussion of prompt injection, agent safety, permissions or misuse. 'Remaining Challenges' (p.11-12) is about agentic strategy emergence, multimodal context management, and model-harness co-design only. Zero hits for safety/harm/refusal/jailbreak/red team/bias/toxic."
+}

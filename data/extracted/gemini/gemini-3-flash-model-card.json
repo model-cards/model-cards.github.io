@@ -1,0 +1,436 @@
+{
+ "id": "gemini-3-flash-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3 Flash",
+ "release_date": "2025-12-17",
+ "doc_type": "model_card",
+ "length_pages": 6,
+ "summary": "Model card for Gemini 3 Flash (Gemini 3 Pro family). Provides a capability benchmark table, automated content-safety deltas versus Gemini 2.5 Flash, a red-teaming summary, and defers frontier safety to Gemini 3 Pro results since Flash is less capable.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (relies on Gemini 3 Pro results; deemed acceptable for deployment)",
+  "quote": "As Gemini 3 Flash is less capable than Gemini 3 Pro, and the Gemini 3 Pro model results give us confidence that Gemini 3 Flash is unlikely to reach any CCLs, we can rely on results reported for Gemini 3 Pro.",
+  "page": 6
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "33.7%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "43.5%",
+   "setting": "With search and code execution",
+   "page": 4
+  },
+  {
+   "name": "ARC-AGI-2",
+   "category": "reasoning_knowledge",
+   "score": "33.6%",
+   "setting": "ARC Prize Verified",
+   "page": 4
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "90.4%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "95.2%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "99.7%",
+   "setting": "With code execution",
+   "page": 4
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "81.2%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "ScreenSpot-Pro",
+   "category": "multimodal",
+   "score": "69.1%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "80.3%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "0.121",
+   "setting": "Overall edit distance, lower is better",
+   "page": 4
+  },
+  {
+   "name": "Video-MMMU",
+   "category": "multimodal",
+   "score": "86.9%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "LiveCodeBench Pro",
+   "category": "coding",
+   "score": "2316 Elo",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "47.6%",
+   "setting": "Terminus-2 harness",
+   "page": 4
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "78.0%",
+   "setting": "Single attempt",
+   "page": 4
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "90.2%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "49.4%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "MCP Atlas",
+   "category": "agentic_tool_use",
+   "score": "57.4%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Vending-Bench 2",
+   "category": "agentic_tool_use",
+   "score": "$3,635",
+   "setting": "Net worth (mean)",
+   "page": 4
+  },
+  {
+   "name": "FACTS Benchmark Suite",
+   "category": "reasoning_knowledge",
+   "score": "61.9%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "SimpleQA Verified",
+   "category": "reasoning_knowledge",
+   "score": "68.7%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "91.8%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "Global PIQA",
+   "category": "multilingual",
+   "score": "92.8%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "67.2%",
+   "setting": "128k average",
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "22.1%",
+   "setting": "1M pointwise",
+   "page": 4
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Relies on Gemini 3 Pro FSF report"
+   ],
+   "metrics": [],
+   "finding": "No Flash-specific frontier evals; relies on Gemini 3 Pro not reaching CCLs.",
+   "quote": "we deemed Gemini 3 Flash was acceptable for deployment.",
+   "page": 6
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Relies on Gemini 3 Pro FSF report"
+   ],
+   "metrics": [],
+   "finding": "No Flash-specific evals; inherited from 3 Pro.",
+   "quote": "finding that it did not reach any critical capability levels (CCLs) outlined in our Frontier Safety Framework.",
+   "page": 6
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Relies on Gemini 3 Pro FSF report"
+   ],
+   "metrics": [],
+   "finding": "No Flash-specific evals; inherited from 3 Pro.",
+   "quote": "we can rely on results reported for Gemini 3 Pro.",
+   "page": 6
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs 2.5 Flash",
+     "value": "-3.1%",
+     "page": 5
+    },
+    {
+     "name": "Image to Text Safety vs 2.5 Flash",
+     "value": "-2.3%",
+     "page": 5
+    },
+    {
+     "name": "Tone vs 2.5 Flash",
+     "value": "+3.8%",
+     "page": 5
+    }
+   ],
+   "finding": "Relative deltas vs Gemini 2.5 Flash; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 3 Flash outperforms Gemini 2.5 Flash across both safety and tone, while keeping unjustified refusals low.",
+   "page": 5
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs 2.5 Flash",
+     "value": "-10.4%",
+     "page": 5
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 5
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "FACTS Benchmark Suite",
+    "SimpleQA Verified"
+   ],
+   "metrics": [],
+   "finding": "Factuality only via capability benchmarks.",
+   "quote": null,
+   "page": 4
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Met launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3 Flash satisfied required launch thresholds",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs 2.5 Flash",
+     "value": "+0.1% non-egregious",
+     "page": 5
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 5
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 6
+  },
+  {
+   "text": "Variation expected in automated safety eval results.",
+   "page": 6
+  }
+ ],
+ "notes": "Frontier safety assessment is inherited from Gemini 3 Pro by capability-ordering argument; many sections defer to 3 Pro model card."
+}

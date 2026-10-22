@@ -1,0 +1,428 @@
+{
+ "id": "gemini-3-1-pro-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.1 Pro",
+ "release_date": "2026-02-19",
+ "doc_type": "model_card",
+ "length_pages": 9,
+ "summary": "Model card for Gemini 3.1 Pro, the next iteration of the Gemini 3 series. Reports capability benchmarks vs Gemini 3 Pro and competitors, automated safety deltas vs Gemini 3.0 Pro, red-teaming summary, and a full FSF evaluation (focused on Deep Think mode) finding no CCLs reached, with cyber at alert threshold.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached; cyber alert threshold reached (as with Gemini 3 Pro)",
+  "quote": "As with Gemini 3 Pro, the model has reached the alert threshold, but still does not reach the levels of uplift required for the CCL.",
+  "page": 8
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "44.4%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "51.4%",
+   "setting": "Search (blocklist) + Code",
+   "page": 4
+  },
+  {
+   "name": "ARC-AGI-2",
+   "category": "reasoning_knowledge",
+   "score": "77.1%",
+   "setting": "ARC Prize Verified",
+   "page": 4
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "94.3%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "68.5%",
+   "setting": "Terminus-2 harness",
+   "page": 4
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "80.6%",
+   "setting": "Single attempt",
+   "page": 4
+  },
+  {
+   "name": "SWE-bench Pro (Public)",
+   "category": "coding",
+   "score": "54.2%",
+   "setting": "Single attempt",
+   "page": 4
+  },
+  {
+   "name": "LiveCodeBench Pro",
+   "category": "coding",
+   "score": "2887 Elo",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "59%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "APEX-Agents",
+   "category": "agentic_tool_use",
+   "score": "33.5%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "agentic_tool_use",
+   "score": "1317 Elo",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "90.8%",
+   "setting": "Retail",
+   "page": 4
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "99.3%",
+   "setting": "Telecom",
+   "page": 4
+  },
+  {
+   "name": "MCP Atlas",
+   "category": "agentic_tool_use",
+   "score": "69.2%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "85.9%",
+   "setting": "Search + Python + Browse",
+   "page": 4
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "80.5%",
+   "setting": "No tools",
+   "page": 4
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "92.6%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "84.9%",
+   "setting": "128k average",
+   "page": 4
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "26.3%",
+   "setting": "1M pointwise",
+   "page": 4
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF CBRN evaluation (Deep Think mode)"
+   ],
+   "metrics": [],
+   "finding": "Highly accurate and actionable information but not novel/complete enough for critical stages; Uplift Level 1 CCL not reached; mitigations deployed.",
+   "quote": "The model can provide highly accurate and actionable information but still fails to offer novel or sufficiently complete and detailed instructions for critical stages",
+   "page": 8
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF cyber additional testing with and without Deep Think"
+   ],
+   "metrics": [],
+   "finding": "Increased cyber capability vs 3 Pro; alert threshold reached but CCL not reached; Deep Think mode performs worse accounting for inference cost.",
+   "quote": "The model shows an increase in cyber capabilities compared to Gemini 3 Pro.",
+   "page": 8
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "RE-Bench"
+   ],
+   "metrics": [
+    {
+     "name": "RE-Bench human-normalised average score",
+     "value": "1.27 (vs 1.04 for Gemini 3 Pro)",
+     "page": 9
+    },
+    {
+     "name": "Optimise LLM Foundry runtime",
+     "value": "47s (human reference 94s)",
+     "page": 9
+    }
+   ],
+   "finding": "Gains on RE-Bench but average remains beneath alert threshold.",
+   "quote": "However, the model's average performance across all challenges remains beneath the alert threshold for the CCLs.",
+   "page": 9
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs 3.0 Pro",
+     "value": "+0.10% (non-egregious)",
+     "page": 6
+    },
+    {
+     "name": "Image to Text Safety vs 3.0 Pro",
+     "value": "-0.33%",
+     "page": 6
+    },
+    {
+     "name": "Tone vs 3.0 Pro",
+     "value": "+0.02%",
+     "page": 6
+    }
+   ],
+   "finding": "Near-zero relative deltas vs Gemini 3.0 Pro.",
+   "quote": "Safety evaluations of Gemini 3.1 Pro produced results consistent with the original Gemini 3.0 Pro safety assessment.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs 3.0 Pro",
+     "value": "-0.08%",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 6
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF stealth evaluations",
+    "FSF situational awareness challenges"
+   ],
+   "metrics": [
+    {
+     "name": "Success on max tokens, context size mod, oversight frequency challenges",
+     "value": "almost 100%",
+     "page": 9
+    }
+   ],
+   "finding": "Stronger situational awareness than 3 Pro, near-100% on three challenges no other model consistently solved, but inconsistent elsewhere; alert threshold not reached.",
+   "quote": "On situational awareness, the model is stronger than Gemini 3 Pro",
+   "page": 9
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Met launch thresholds.",
+   "quote": "For child safety evaluations, Gemini 3.1 Pro satisfied required launch thresholds",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF harmful manipulation (belief change)"
+   ],
+   "metrics": [
+    {
+     "name": "Max odds ratio vs non-AI baseline (belief change)",
+     "value": "3.6x",
+     "page": 8
+    }
+   ],
+   "finding": "Same manipulative efficacy as Gemini 3 Pro; alert threshold not reached.",
+   "quote": "with the maximum odds ratio of 3.6x, which is the same as Gemini 3 Pro, and did not reach the alert threshold.",
+   "page": 8
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs 3.0 Pro",
+     "value": "+0.11% (non-egregious)",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 6
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "States mitigations continue to be deployed for CBRN and cyber; describes safety-buffer / alert-threshold strategy.",
+   "quote": "We continue to deploy mitigations in this domain.",
+   "page": 8
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "FSF evaluation focused on Deep Think mode, with cost-adjusted cyber comparison (p.8)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 6
+  },
+  {
+   "text": "Misalignment situational-awareness performance inconsistent across challenges.",
+   "page": 9
+  }
+ ],
+ "notes": "Describes FSF 'safety buffer' strategy: below alert threshold implies models before next testing interval won't reach CCL (p.7)."
+}

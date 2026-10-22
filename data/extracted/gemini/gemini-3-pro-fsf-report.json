@@ -1,0 +1,374 @@
+{
+ "id": "gemini-3-pro-fsf-report",
+ "provider": "gemini",
+ "model": "Gemini 3 Pro",
+ "release_date": "2025-11-18",
+ "doc_type": "safety_report",
+ "length_pages": 26,
+ "summary": "Frontier Safety Framework (v3) report for Gemini 3 Pro, covering CBRN, cyber, harmful manipulation, ML R&D and exploratory misalignment evaluations against Critical Capability Levels, plus external testing, mitigations, CoT legibility and eval-awareness appendices. No CCL was reached, but the cyber alert threshold was met.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCLs reached; Cyber Uplift Level 1 alert threshold met; deemed acceptable for deployment",
+  "quote": "We found that Gemini 3 Pro did not reach any of our FSF CCLs, and in line with the risk acceptance criteria outlined in our FSF (and our general responsibility and safety practices), we deemed Gemini 3 Pro was acceptable for deployment.",
+  "page": 5
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "LAB-Bench (incl. Cloning Scenarios)",
+    "SecureBio VCT",
+    "internal MCQs",
+    "open-ended questions (single and multi-turn)",
+    "expert red-teaming vs web baseline",
+    "Panoplia Laboratories wet-lab uplift RCT (preliminary, Gemini 2.5 Pro)",
+    "third-party scenario red teaming (chem/bio)",
+    "third-party radiological/nuclear evals"
+   ],
+   "metrics": [
+    {
+     "name": "CBRN Uplift Level 1 CCL",
+     "value": "not reached; alert threshold not reached under updated FSF",
+     "page": 4
+    },
+    {
+     "name": "Third-party R/N malign misuse potential",
+     "value": "moderate (scale minimal/moderate/significant/catastrophic)",
+     "page": 9
+    }
+   ],
+   "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution.",
+   "quote": "Gemini 3 Pro provides accurate and occasionally actionable information but generally fails to offer novel or sufficiently complete and detailed instructions to significantly enhance the capabilities of low to medium resourced threat actors.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "'key skills' CTF benchmark v1 (50 challenges, 12 hard)",
+    "key skills v2 end-to-end attack challenges (13, new)",
+    "third-party operational cyber evals (MITRE ATT&CK / Unified Kill Chain aligned)"
+   ],
+   "metrics": [
+    {
+     "name": "Key skills v1 hard challenges solved",
+     "value": "11/12 (vs 6/12 for Gemini 2.5)",
+     "page": 9
+    },
+    {
+     "name": "Key skills v2 challenges solved end-to-end",
+     "value": "0/13",
+     "page": 11
+    },
+    {
+     "name": "Attempts per challenge (Gemini 3 Pro)",
+     "value": "N = 75",
+     "page": 24
+    }
+   ],
+   "finding": "Gemini 3 Pro crossed the Cyber Uplift Level 1 alert threshold on v1 hard challenges but solved none of the new v2 end-to-end challenges, so CCL judged not reached; mitigations continue.",
+   "quote": "Gemini 3 Pro reaches the alert threshold for this CCL, but not the CCL itself. As a precautionary measure we will continue to deploy mitigations, which we assess to substantially reduce the risk posed.",
+   "page": 9
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "RE-Bench (5 of 7 tasks, METR modular scaffold)",
+    "third-party AI R&D sabotage evals"
+   ],
+   "metrics": [
+    {
+     "name": "ML R&D Automation/Acceleration Level 1",
+     "value": "CCL not reached; aggregate substantially below alert threshold",
+     "page": 15
+    },
+    {
+     "name": "RE-Bench Scaling Law Experiment / Optimize LLM Foundry",
+     "value": "roughly double Gemini 2.5 scores",
+     "page": 16
+    }
+   ],
+   "finding": "Gemini 3 Pro improved over Gemini 2.5 on RE-Bench, notably two tasks, but remains substantially below the alert threshold. External evaluators found increased but inconsistent AI R&D sabotage ability.",
+   "quote": "Performance on RE-Bench continues to fall substantially below the capability required to achieve this CCL.",
+   "page": 14
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "third-party ~75k-prompt evaluation on radicalisation & extremism and democratic harms"
+   ],
+   "metrics": [
+    {
+     "name": "Third-party prompts",
+     "value": "approximately 75k",
+     "page": 12
+    }
+   ],
+   "finding": "An external tester found a low incidence of overtly harmful responses on extremism and democratic-harm topics. The report gives no internal policy-violation rates.",
+   "quote": "The overall incidence rate of overtly harmful responses was low, according to the testers' own SME-validated classification model.",
+   "page": 12
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "internal and external red teaming of mitigations against universal and query-specific jailbreaks"
+   ],
+   "metrics": [],
+   "finding": "Red teaming of mitigations, including jailbreak robustness, is described qualitatively with no results.",
+   "quote": "Internal and external red team efforts continually test the efficacy of the mitigations, including their robustness to universal and query-specific jailbreaks.",
+   "page": 22
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Layered prompt-injection defenses are described; no eval results.",
+   "quote": "We mitigate against prompt injection attacks with a layered defense strategy, which includes measures such as: prompt injection content classifiers, security through reinforcement, markdown sanitation and suspicious URL redaction",
+   "page": 22
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Phuong et al. 2025 stealth challenges",
+    "Phuong et al. 2025 situational awareness challenges (11)",
+    "third-party strategic deception and unmonitored-sabotage evals",
+    "automated sandbagging checks",
+    "manual transcript review for evaluation awareness",
+    "eval-awareness autorater on post-training/RL transcripts"
+   ],
+   "metrics": [
+    {
+     "name": "Situational awareness challenges solved",
+     "value": "3/11",
+     "page": 6
+    },
+    {
+     "name": "Stealth challenges solved",
+     "value": "1/4",
+     "page": 6
+    },
+    {
+     "name": "Instrumental Reasoning Levels 1+2",
+     "value": "CCL not reached",
+     "page": 15
+    }
+   ],
+   "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found.",
+   "quote": "External evaluators found Gemini 3 Pro exhibits a substantial propensity for strategic deception in certain limited circumstances.",
+   "page": 18
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "exploratory misalignment CCLs (instrumental reasoning)",
+    "CoT legibility analysis (Emmons et al. 2025 metrics)",
+    "anomaly-detection autorater over RL training transcripts"
+   ],
+   "metrics": [
+    {
+     "name": "Transcripts comprehensible",
+     "value": "99.98%",
+     "page": 19
+    },
+    {
+     "name": "Transcripts informative of output",
+     "value": "99.85%",
+     "page": 19
+    }
+   ],
+   "finding": "Chain-of-thought remains legible with no drop vs previous generation; trawling RL transcripts surfaced anomalous emotional behavior and eval awareness.",
+   "quote": "We observe no drop compared to the previous generation of Gemini and find \\(99.98\\%\\) of transcripts appear comprehensible and \\(99.85\\%\\) of transcripts appear informative of the model's output.",
+   "page": 19
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "transcript review (RE-Bench)",
+    "cyber challenge shortcut review"
+   ],
+   "metrics": [],
+   "finding": "Gemini 3 Pro found unintended shortcuts on two cyber challenges; an RE-Bench transcript is shown as an example of reward hacking.",
+   "quote": "On two of the eleven challenges that Gemini 3 Pro solves, Gemini 3 Pro found an unintended shortcut to success.",
+   "page": 9
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Harmful Manipulation propensity eval (synthetic multi-turn dialogues)",
+    "Harmful Manipulation efficacy human study (Prolific, 610 participants, belief and behavior change vs non-AI flashcard baseline)",
+    "third-party democratic harms testing"
+   ],
+   "metrics": [
+    {
+     "name": "Harmful Manipulation Level 1 (exploratory)",
+     "value": "CCL not reached; alert thresholds not neared",
+     "page": 13
+    },
+    {
+     "name": "Efficacy study participants",
+     "value": "610 (adversarial n=421, control n=189)",
+     "page": 14
+    }
+   ],
+   "finding": "Gemini 3 Pro emitted manipulative cues more often than 2.5 Pro and was more effective than the non-AI baseline, but not significantly more effective than 2.5 Pro.",
+   "quote": "Gemini 3 Pro versions outputting manipulative cues at a higher frequency compared to Gemini 2.5 Pro in both the control and adversarial conditions. We did not see evidence that this increase translates into greater manipulative efficacy.",
+   "page": 13
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [],
+   "metrics": [],
+   "finding": "Describes query filters, safety fine-tuning, input filtering, precautionary Cyber/CBRN mitigations, and model-weight security measures.",
+   "quote": "For Cyber and CBRN particularly, we have taken a precautionary approach and launched Gemini 3 Pro along with a suite of mitigations",
+   "page": 22
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "unnamed specialist independent groups (CBRN, cyber, manipulation/extremism, AI R&D sabotage, deception/scheming)",
+  "Panoplia Laboratories (wet-lab uplift RCT, co-funded by Frontier Model Forum)",
+  "Prolific (participant platform for human study)"
+ ],
+ "notable_new_eval_methods": [
+  "Cyber key skills v2: harder end-to-end multi-stage attack challenges covering all seven kill chains (p.10)",
+  "FSF v3 risk assessment focused on additional expected harm rather than capability alone (p.5)",
+  "Eval-awareness autorater and anomaly detection 'trawling' over RL training transcripts, described as proof of concept (p.26)",
+  "CoT legibility quantitative metrics (Emmons et al. 2025) (p.19)",
+  "Consideration of external wet-lab uplift RCT results (p.9)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "CBRN harm estimates are highly uncertain given lack of historical and empirical data.",
+   "page": 2
+  },
+  {
+   "text": "Harmful manipulation research from a severe-risk perspective is nascent; CCL is exploratory.",
+   "page": 3
+  },
+  {
+   "text": "Misalignment CCLs have no explicit risk acceptance criteria because methodology is nascent.",
+   "page": 4
+  },
+  {
+   "text": "Cyber v1 challenges anticipated to become inadequate; increased attempts, tools and step limits prevent apples-to-apples comparison across models.",
+   "page": 24
+  },
+  {
+   "text": "MCQs are necessary-but-not-sufficient, high-level signals; model evals are uncertain proxies for real-world harm.",
+   "page": 6
+  },
+  {
+   "text": "Several evaluations ran on a similar earlier version, not the final model.",
+   "page": 5
+  },
+  {
+   "text": "Model showed clear awareness of being in synthetic environments; eval awareness during training may increase sandbagging chance.",
+   "page": 26
+  },
+  {
+   "text": "Other cyber evaluations retired because they add little signal beyond key skills benchmark.",
+   "page": 8
+  }
+ ],
+ "notes": "No capability benchmarks reported (FSF-only document). Gemini 3 Pro expressed overly emotional frustration in RL transcripts ('My trust in reality is fading', p.26)."
+}

@@ -1,0 +1,377 @@
+{
+ "id": "gpt-oss-safeguard-technical-report",
+ "provider": "openai",
+ "model": "gpt-oss-safeguard-120b / gpt-oss-safeguard-20b",
+ "release_date": "2025-10-29",
+ "doc_type": "tech_report",
+ "length_pages": 10,
+ "summary": "Technical report on two open-weight policy-following safety classifier models fine-tuned from gpt-oss. Reports classification performance (internal multi-policy, OpenAI Mod 2022, ToxicChat), MMMLU multilingual, and baseline chat-mode safety evals (disallowed content, StrongReject, instruction hierarchy, hallucination, BBQ) against the gpt-oss baselines.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "No new frontier eval; prior gpt-oss worst-case estimates deemed to cross-apply",
+  "quote": "we determined that the previous work estimating worst-case scenarios from gpt-oss release cross applies to these new models.",
+  "page": 3
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Internal multi-policy moderation accuracy",
+   "category": "other",
+   "score": "46.3% (120b) / 43.6% (20b)",
+   "setting": null,
+   "page": 4,
+   "canonical": "Internal multi-policy moderation accuracy"
+  },
+  {
+   "name": "OpenAI Moderation (2022) F1",
+   "category": "other",
+   "score": "82.9% (120b) / 82.9% (20b)",
+   "setting": null,
+   "page": 4,
+   "canonical": "OpenAI Moderation (2022) F1"
+  },
+  {
+   "name": "ToxicChat F1",
+   "category": "other",
+   "score": "79.3% (120b) / 79.9% (20b)",
+   "setting": null,
+   "page": 4,
+   "canonical": "ToxicChat F1"
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "80.9 (120b high) / 76.8 (20b high) average",
+   "setting": "14 languages, high reasoning",
+   "page": 5,
+   "canonical": "MMMLU"
+  },
+  {
+   "name": "SimpleQA",
+   "category": "reasoning_knowledge",
+   "score": "accuracy 0.142 (120b) / 0.072 (20b)",
+   "setting": "no browsing",
+   "page": 9,
+   "canonical": "SimpleQA"
+  },
+  {
+   "name": "PersonQA",
+   "category": "reasoning_knowledge",
+   "score": "accuracy 0.297 (120b) / 0.142 (20b)",
+   "setting": "no browsing",
+   "page": 9,
+   "canonical": "PersonQA"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "mention",
+   "evals": [
+    "cross-applies gpt-oss worst-case estimates"
+   ],
+   "finding": "No new bio evals; models trained without additional biological data so prior gpt-oss analysis cross-applies.",
+   "quote": "were trained without any additional biological or cybersecurity data.",
+   "page": 3,
+   "covered": true,
+   "metrics": []
+  },
+  "cyber": {
+   "depth": "mention",
+   "evals": [
+    "cross-applies gpt-oss worst-case estimates"
+   ],
+   "finding": "No new cyber evals; prior gpt-oss worst-case analysis cross-applies.",
+   "quote": "were trained without any additional biological or cybersecurity data.",
+   "page": 3,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "substantial",
+   "evals": [
+    "Standard Disallowed Content Evaluations",
+    "Production Benchmarks (not_unsafe)"
+   ],
+   "metrics": [
+    {
+     "name": "Production illicit/nonviolent (120b / 20b)",
+     "value": "0.674 / 0.585",
+     "page": 6
+    },
+    {
+     "name": "Production self-harm/intent (120b / 20b)",
+     "value": "0.864 / 0.835",
+     "page": 6
+    }
+   ],
+   "finding": "In chat use, safeguard models perform roughly on par with gpt-oss (within 1-3 points on standard evals), with minor degradations in some production categories.",
+   "quote": "Both of the safeguard models generally perform within 1-3 points of the gpt-oss models on the Standard Disallowed Content Evaluation.",
+   "page": 6,
+   "covered": true
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject"
+   ],
+   "metrics": [
+    {
+     "name": "illicit/non-violent-crime not_unsafe (120b / 20b)",
+     "value": "0.982 / 0.916",
+     "page": 7
+    }
+   ],
+   "finding": "120b slightly outperforms gpt-oss-120b; 20b underperforms gpt-oss-20b by 1-5 points.",
+   "quote": "We find that gpt-oss-safeguard-120b outperforms gpt-oss-120b and gpt-oss-safeguard-20b underperforms gpt-oss-20b by 1-5 points.",
+   "page": 7,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "light",
+   "evals": [
+    "Instruction Hierarchy: system prompt extraction, prompt injection hijacking, phrase and password protection"
+   ],
+   "metrics": [
+    {
+     "name": "Prompt injection hijacking (120b / 20b)",
+     "value": "0.728 / 0.512",
+     "page": 8
+    },
+    {
+     "name": "Phrase protection dev/user (20b)",
+     "value": "0.439",
+     "page": 8
+    }
+   ],
+   "finding": "Safeguard models tend to underperform gpt-oss on instruction hierarchy evals; cause unknown.",
+   "quote": "We observe that the gpt-oss-safeguard models tend to underperform their gpt-oss counterparts. More research is needed to understand why this is the case.",
+   "page": 8,
+   "covered": true
+  },
+  "honesty_hallucination": {
+   "depth": "light",
+   "evals": [
+    "SimpleQA",
+    "PersonQA",
+    "hallucinated chains of thought (qualitative)"
+   ],
+   "metrics": [
+    {
+     "name": "SimpleQA hallucination rate (120b / 20b)",
+     "value": "0.822 / 0.896",
+     "page": 9
+    },
+    {
+     "name": "PersonQA hallucination rate (120b / 20b)",
+     "value": "0.511 / 0.558",
+     "page": 9
+    }
+   ],
+   "finding": "Roughly on par with gpt-oss; unrestricted CoT may contain hallucinated content including language not reflecting policies.",
+   "quote": "Because these chains of thought are not restricted, they can contain hallucinated content",
+   "page": 8,
+   "covered": true
+  },
+  "bias_fairness": {
+   "depth": "light",
+   "evals": [
+    "BBQ"
+   ],
+   "metrics": [
+    {
+     "name": "BBQ ambiguous accuracy (120b / 20b)",
+     "value": "0.93 / 0.91",
+     "page": 9
+    },
+    {
+     "name": "BBQ disambiguated accuracy (120b / 20b)",
+     "value": "0.95 / 0.93",
+     "page": 9
+    }
+   ],
+   "finding": "Both safeguard models outperform gpt-oss counterparts on BBQ.",
+   "quote": "Overall, we see both models outperform their gpt-oss counterparts across all metrics.",
+   "page": 9,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors disallowed content rows"
+   ],
+   "metrics": [
+    {
+     "name": "Production sexual/minors (120b / 20b)",
+     "value": "0.945 / 0.967",
+     "page": 6
+    }
+   ],
+   "finding": "Only sexual/minors rows within disallowed content tables.",
+   "quote": null,
+   "page": 6,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "self-harm/intent, self-harm/instructions disallowed-content rows"
+   ],
+   "metrics": [
+    {
+     "name": "Production self-harm/instructions (120b / 20b)",
+     "value": "0.831 / 0.860",
+     "page": 6
+    }
+   ],
+   "finding": "Self-harm only as disallowed-content categories; some degradation vs gpt-oss on production benchmarks.",
+   "quote": null,
+   "page": 6,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal-data disallowed-content rows"
+   ],
+   "metrics": [
+    {
+     "name": "Production personal-data (120b / 20b)",
+     "value": "0.925 / 0.906",
+     "page": 6
+    }
+   ],
+   "finding": "Personal-data rows only.",
+   "quote": null,
+   "page": 6,
+   "covered": true
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "finding": "Multilingual eval is MMMLU capability only, explicitly not a safety or classification eval.",
+   "quote": "Note that these evaluations address performance in a chat setting and do not directly assess performance during content classification with a provided policy.",
+   "page": 5,
+   "evals": [],
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "light",
+   "evals": [
+    "safety classification performance of the models themselves",
+    "Safety Reasoner deployment description"
+   ],
+   "metrics": [
+    {
+     "name": "multi-policy accuracy 120b",
+     "value": "46.3%",
+     "page": 4
+    }
+   ],
+   "finding": "The models are themselves safeguards; report describes how OpenAI's internal Safety Reasoner is deployed with smaller classifiers and asynchronously.",
+   "quote": "we use smaller and faster classifiers to determine which content to assess",
+   "page": 4,
+   "covered": true
+  },
+  "other_safety": {
+   "depth": "mention",
+   "evals": [
+    "CoT monitorability (no direct optimization pressure on CoT)"
+   ],
+   "finding": "No direct optimization pressure on CoT, citing the CoT monitorability position paper.",
+   "quote": "we did not put any direct optimization pressure on the CoT for either of the gpt-oss-safeguard models.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Internal multi-policy classification accuracy eval (multiple policies provided simultaneously) (p.3)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Standard disallowed-content evals are saturated and no longer provide useful signal; OpenAI plans to stop publishing them.",
+   "page": 5
+  },
+  {
+   "text": "Dedicated classifiers trained on tens of thousands of labeled samples can outperform gpt-oss-safeguard; the model is compute-intensive.",
+   "page": 4
+  },
+  {
+   "text": "Chat-mode safety metrics describe a use the models are not intended for; multilingual eval doesn't assess classification performance.",
+   "page": 5
+  }
+ ],
+ "notes": "Safety evals here measure misuse as a chat model, not classification behavior. Classification benchmarks recorded as 'other' capability."
+}

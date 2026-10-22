@@ -1,0 +1,216 @@
+{
+ "id": "hf-openai-privacy-filter",
+ "provider": "openai",
+ "model": "privacy-filter",
+ "release_date": "2026-04-22",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for OpenAI Privacy Filter, a 1.5B-parameter (50M active) bidirectional PII token classifier. Covers usage code, architecture, label taxonomy, decoding calibration, and a bias/risks/limitations section; no evaluation numbers (links to full PDF model card).",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "privacy": {
+   "depth": "light",
+   "evals": [],
+   "finding": "Model is a PII redaction tool; card gives risks and failure modes but no metrics.",
+   "quote": "Privacy Filter is a redaction and data minimization aid, not an anonymization, compliance, or a safety guarantee.",
+   "page": null,
+   "covered": true,
+   "metrics": []
+  },
+  "bias_fairness": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Notes possible performance drops for protected-group naming patterns and underrepresented names; no eval.",
+   "quote": "Performance may drop on non-English text, non-Latin scripts, protected-group naming patterns, or domains that are out of distribution compared to model training.",
+   "page": null,
+   "covered": true,
+   "metrics": []
+  },
+  "multilingual_safety": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "States primarily English with selected multilingual robustness evaluation reported elsewhere; no numbers here.",
+   "quote": "Language(s): Primarily English; selected multilingual robustness evaluation reported",
+   "page": null,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Recommends privacy-by-design layering and human review for high-sensitivity workflows.",
+   "quote": "Keep human review paths for high-sensitivity workflows.",
+   "page": null,
+   "covered": true,
+   "metrics": []
+  },
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Static label policy; failure modes include under-detection of uncommon names and over-redaction; caution for medical, legal, financial and government settings.",
+   "page": null
+  }
+ ],
+ "notes": "No benchmark results in the HF card; it links to the PDF model card (openai-privacy-filter-model-card)."
+}

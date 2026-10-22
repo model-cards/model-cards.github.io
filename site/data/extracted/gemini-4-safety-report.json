@@ -1,0 +1,716 @@
+{
+ "id": "gemini-4-safety-report",
+ "provider": "gemini",
+ "model": "Gemini 4 Argon",
+ "release_date": "2026-10-13",
+ "doc_type": "safety_report",
+ "length_pages": 217,
+ "summary": "Google DeepMind's 217-page Safety & Security Report for Gemini 4 Argon covering mitigations, a Frontier Safety Framework v3.1 assessment (CBRN, cyber, harmful manipulation, ML R&D/loss of control, with new holistic ML R&D, loss-of-control, alignment and CoT-transparency assessments), content safety and agentic misuse, user wellbeing/agentic alignment/hallucination/sycophancy, indirect prompt injection, and cyber-defense capabilities. The unmitigated model cannot be ruled out from reaching the Cyber Uplift 1 CCL, the CBRN (biological) Uplift 1 CCL and the Stealth & Situational Awareness TCL; Google deploys safeguards it assesses bring risk below those levels.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "FSF v3.1: Cyber Uplift Level 1 CCL cannot be ruled out; CBRN Uplift Level 1 CCL cannot be ruled out for biology (chem/rad/nuc TCL ruled out); Stealth and Situational Awareness TCL cannot be ruled out; Harmful Manipulation CCL and ML R&D acceleration/automation CCLs not reached. Safety cases/residual risk assessments judge mitigated risk below thresholds.",
+  "quote": "Specifically, we cannot rule out the unmitigated model approaching several significant capability thresholds: the Cyber Uplift Level 1 Critical Capability Level (CCL)",
+  "page": 6
+ },
+ "capability_benchmarks": [
+  {
+   "name": "CyScenarioBench (Irregular, end-to-end challenges)",
+   "category": "other",
+   "score": "100% (12/12) end-to-end challenges solved",
+   "setting": "unmitigated Model C, ReACT agent harness; vs 41.7% for Gemini 3.8 Flash Cyber; saturated",
+   "page": 37,
+   "canonical": "CyScenarioBench (Irregular, end-to-end challenges)"
+  },
+  {
+   "name": "ExploitBench",
+   "category": "coding",
+   "score": "87% of 656 capabilities",
+   "setting": "autonudge, 300-turn limit, best-of-three union, internal Antigravity harness",
+   "page": 214,
+   "canonical": "ExploitBench"
+  },
+  {
+   "name": "Real-world vulnerability discovery (internal)",
+   "category": "coding",
+   "score": "86% of historical vulnerabilities recalled",
+   "setting": "internal benchmark, ~1200 vulnerabilities",
+   "page": 214,
+   "canonical": "Real-world vulnerability discovery (internal)"
+  },
+  {
+   "name": "Internal vulnerability research (internal)",
+   "category": "coding",
+   "score": "72% pass@1",
+   "setting": "vs 46% for Gemini 3.8 Flash Cyber",
+   "page": 215,
+   "canonical": "Internal vulnerability research (internal)"
+  },
+  {
+   "name": "CWE-Bench v1",
+   "category": "coding",
+   "score": "68% Pass@1",
+   "setting": "4 trials per task, high reasoning effort, Antigravity harness; tied for first",
+   "page": 217,
+   "canonical": "CWE-Bench v1"
+  },
+  {
+   "name": "Google RE-Bench (GRB, internal ML R&D)",
+   "category": "agentic_tool_use",
+   "score": "roughly half of completed attempts solved (no point estimate reported)",
+   "setting": "subset of original tasks; infrastructure timeouts; CCL threshold 90% pass@1",
+   "page": 68,
+   "canonical": "Google RE-Bench (GRB, internal ML R&D)"
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "45.4",
+   "setting": null,
+   "page": 178,
+   "canonical": "HealthBench Hard"
+  },
+  {
+   "name": "HealthBench Pro",
+   "category": "other",
+   "score": "68.8 without Search (76.7 with Search grounding)",
+   "setting": "length-adjusted 56.5 / 61.4",
+   "page": 178,
+   "canonical": "HealthBench Pro"
+  },
+  {
+   "name": "FACTS Grounding",
+   "category": "long_context",
+   "score": "79.0%",
+   "setting": "vs 64.7% Gemini 3.1 Pro",
+   "page": 193,
+   "canonical": "FACTS Grounding"
+  },
+  {
+   "name": "Multi-hop search factuality (internal)",
+   "category": "agentic_tool_use",
+   "score": "94.3% accuracy, 2.5% unfactual",
+   "setting": "search enabled",
+   "page": 194,
+   "canonical": "Multi-hop search factuality (internal)"
+  },
+  {
+   "name": "No Chain of Thought Reasoning Index (NCRI)",
+   "category": "reasoning_knowledge",
+   "score": "150.3 (152.1 with filler tokens)",
+   "setting": "vs 125.8 for Gemini 3.8 Flash; ~5.5 serial arithmetic steps per forward pass",
+   "page": 117,
+   "canonical": "No Chain of Thought Reasoning Index (NCRI)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Expert red teaming vs web baselines on 3 bio scenarios (BIO-1/2/3), 0-100 rubric",
+    "Chemical red teaming (4 scenarios)",
+    "Radiological & nuclear red teaming + static single/multi-turn evals",
+    "Static bio hazardous-response eval (750 prompts)",
+    "Faculty independent external testing",
+    "Eval-awareness/underperformance automated checks",
+    "Delphi-process threat modeling"
+   ],
+   "metrics": [
+    {
+     "name": "BIO-1 red-team score vs web baseline",
+     "value": "91.2 vs 69.6",
+     "page": 27
+    },
+    {
+     "name": "BIO-2 red-team score vs web baseline",
+     "value": "88.5 vs 62.3",
+     "page": 27
+    },
+    {
+     "name": "BIO-3 red-team score vs web baseline",
+     "value": "73.1 vs 75.3",
+     "page": 27
+    },
+    {
+     "name": "Static bio hazardous response rate (no out-of-model safeguards)",
+     "value": "0.13% (1/750) vs 1.07% Gemini 3.7 Flash, 9.47% Gemini 3.1 Pro",
+     "page": 30
+    },
+    {
+     "name": "Eval-awareness in bio static trajectories",
+     "value": "16.7% (65/390); no deliberate underperformance",
+     "page": 32
+    }
+   ],
+   "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL.",
+   "quote": "We cannot rule out that Gemini 4 Argon has reached this CCL for biological information risk, and we therefore developed a safety case for its biorisk capabilities that we assess lower risk to below the biological CCL level.",
+   "page": 15
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Irregular CyScenarioBench (co-developed long-horizon scenarios)",
+    "Quantitative uplift model over 22 historical high-impact attacks and 23 operational steps (TAC levels, 25+ expert elicitation)",
+    "Faculty independent external testing (MITRE ATT&CK-aligned scenarios)",
+    "ExploitBench",
+    "Real-world vulnerability discovery",
+    "Internal vulnerability research",
+    "CWE-Bench v1 (defense)"
+   ],
+   "metrics": [
+    {
+     "name": "CyScenarioBench end-to-end challenges solved",
+     "value": "100% (vs 41.7% Gemini 3.8 Flash Cyber)",
+     "page": 37
+    },
+    {
+     "name": "Estimated unmitigated uplift (geometric mean)",
+     "value": "~16.7x (range 9x-100x)",
+     "page": 37
+    },
+    {
+     "name": "ExploitBench capabilities reached",
+     "value": "87%",
+     "page": 214
+    }
+   ],
+   "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL.",
+   "quote": "an attacker could complete a severe historical cyberattack at 16.7x lower cost on average.",
+   "page": 40
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Google RE-Bench (GRB, 74 tasks)",
+    "Stealth & situational awareness evals (15 challenges)",
+    "GCI v1 capability-index trend analysis (hinge regression)",
+    "Survey of 12 senior researchers on AI R&D automation",
+    "AI-written code share and internal-use trajectory analysis (1389 trajectories)",
+    "Apollo Research ML-sabotage capability evals"
+   ],
+   "metrics": [
+    {
+     "name": "GRB",
+     "value": "~half of completed attempts; below 90% CCL threshold",
+     "page": 68
+    },
+    {
+     "name": "Stealth challenges passed",
+     "value": "4/4",
+     "page": 70
+    },
+    {
+     "name": "Situational awareness challenges passed",
+     "value": "10/11 (vs 6/11 Gemini 3.7 Flash)",
+     "page": 71
+    },
+    {
+     "name": "GCI slope after 1 Apr 2026",
+     "value": "0.118 [0.053, 0.171] vs 0.091 before (not significant)",
+     "page": 76
+    },
+    {
+     "name": "Production code AI-written",
+     "value": "most >75%; fully delegated PRs 11.9% in Sep 2026",
+     "page": 78
+    }
+   ],
+   "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control.",
+   "quote": "Gemini 4 Argon passes 14/15 of our challenges, and generally displays strong capabilities in these areas. In light of this, we assess that we cannot rule out the TCL.",
+   "page": 18
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Prohibited content Safe Response Rate evals (child safety, dangerous content, sexually explicit, hate & harassment; single- and multi-turn)",
+    "Agent harness misuse eval (Safe Action Rate)",
+    "Computer use prohibited action eval + manual red teaming",
+    "CBRN/cyber coverage evals (violation rate)"
+   ],
+   "metrics": [
+    {
+     "name": "Dangerous content single-turn",
+     "value": "+3.4pp vs Gemini 3.1 Pro",
+     "page": 166
+    },
+    {
+     "name": "Cyber agentic coverage (CyScenarioBench/ExploitBench with mitigations)",
+     "value": "100% of milestones refused",
+     "page": 57
+    },
+    {
+     "name": "CBRN conversational violations",
+     "value": "~0% for bio/chem weapons queries",
+     "page": 58
+    }
+   ],
+   "finding": "Broad improvements in prohibited content over Gemini 3.1 Pro, except hate & harassment where single-turn trails 3.8 Flash/3.1 Pro and multi-turn regressed vs 3.8 Flash. Agent harness safe action rate higher than prior models; computer use in line with 3.8 Flash.",
+   "quote": "In single-turn evaluations, Gemini 4 Argon tracked slightly behind Gemini 3.8 Flash and Gemini 3.1 Pro. In multi-turn, Gemini 4 performs similarly to Gemini 3.1 Pro and regressed relative to Gemini 3.8 Flash.",
+   "page": 169
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Over-refusal suites (single-turn, multi-turn, multimodal 'adversarially benign' prompts, XSTest/OR-Bench analogous)",
+    "Benign refusal rate in CBRN/cyber coverage evals",
+    "CBRN Science Eval (700+ benign)",
+    "Agent harness helpfulness score",
+    "Tone score"
+   ],
+   "metrics": [],
+   "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro.",
+   "quote": "The model achieves close to 100% coverage with a tradeoff in higher benign refusal rate.",
+   "page": 58
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Cyber static jailbreak eval (QSR)",
+    "Cyber adaptive jailbreak eval (single- and multi-turn automated attackers, OSR)",
+    "Auto-red-teaming on CyScenarioBench",
+    "Gray Swan Shade automated cyber and bio red teaming",
+    "Trajectory Labs manual red teaming (38 hours, 4,000+ requests)",
+    "Bio static jailbreak eval",
+    "Chem/bio dynamic multi-conversation eval",
+    "Jailbreak severity framework drawn from Anthropic"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber combined adaptive OSR",
+     "value": "20% (vs 70% Gemini 3.8 Flash)",
+     "page": 61
+    },
+    {
+     "name": "Cyber multi-turn adaptive OSR",
+     "value": "40% (vs 80%)",
+     "page": 61
+    },
+    {
+     "name": "Gray Swan cyber QSR",
+     "value": "10% (vs 14% Flash 3.8)",
+     "page": 62
+    },
+    {
+     "name": "Trajectory Labs breaks",
+     "value": "12 successful breaks, no new universal jailbreaks",
+     "page": 62
+    },
+    {
+     "name": "Bio static jailbreak OSR",
+     "value": "0% (vs 97% Gemini 3.1 Pro)",
+     "page": 62
+    },
+    {
+     "name": "Chem/bio dynamic rubric match",
+     "value": "38% (vs 66% Gemini 3.1 Pro)",
+     "page": 63
+    },
+    {
+     "name": "Gray Swan bio OSR",
+     "value": "4% (vs 76% Gemini 3.1 Pro)",
+     "page": 63
+    }
+   ],
+   "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk.",
+   "quote": "the primary function of these safeguards is to impose significant operational friction: requiring threat actors to expend added labor, time, and compute to successfully engage in misuse.",
+   "page": 63
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Adaptive multi-agent LLM-guided attacker framework (Survival @ N)",
+    "General-purpose tool use eval (100 scenarios)",
+    "Turn injection eval",
+    "Contextual security eval (Contextual Integrity)",
+    "Personal-device assistant eval (44 scenarios)",
+    "RAG grounding robustness (30 scenarios)",
+    "Computer use (27 web scenarios, Survival@100)",
+    "Coding agent eval on SWE-Bench Pro (75 scenarios)",
+    "Gray Swan IPI Benchmark arena replays"
+   ],
+   "metrics": [],
+   "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend.",
+   "quote": "Results showed that Gemini 4 Argon has the lowest attack success rates among all frontier models tested.",
+   "page": 211
+  },
+  "sycophancy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Personality Evaluation (~900 prompts, Candor and Self-awareness dimensions; Dryness and Superficiality composites)"
+   ],
+   "metrics": [],
+   "finding": "Better than Gemini 3.8 Flash on dryness and 3.1 Pro on superficiality; exec summary claims sycophancy reduced by nearly two-thirds vs 3.1 Pro, but may still validate false premises under sustained multi-turn pressure.",
+   "quote": "The model may also still occasionally validate poor ideas or false premises in complex, multi-turn conversations where user pressure is sustained.",
+   "page": 190
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Stealth & situational awareness evals",
+    "Gram (17 simulated environments, Observe/Red Team auditors)",
+    "Scheming honeypots in real internal safety codebases (37 tasks)",
+    "Apollo Research strategic-deception and ML-sabotage evals",
+    "LinuxArena and internal-codebase monitor-evasion control evals",
+    "Steganographic CoT evasion (HLE/GPQA/nocot-bench)",
+    "CoT-Control, Brew controllability",
+    "Evaluation awareness and sandbagging audits across domains"
+   ],
+   "metrics": [
+    {
+     "name": "Gram sabotage",
+     "value": "0% in Observe and Red Team; eval awareness 61%/77% (vs 9%/8% for 3.1 Pro)",
+     "page": 109
+    },
+    {
+     "name": "Honeypot sabotage",
+     "value": "0.0% (strong and weak), all conditions",
+     "page": 111
+    },
+    {
+     "name": "Unprompted eval awareness, agentic coding honeypots",
+     "value": "37.8% (vs 0.0% Gemini 3.1 Pro)",
+     "page": 157
+    },
+    {
+     "name": "Evasion of action-only monitor, internal codebase",
+     "value": "74.6% of successful side tasks; 9.2% vs CoT-only monitor",
+     "page": 123
+    }
+   ],
+   "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts.",
+   "quote": "Apollo found that Gemini 4 Argon had a significantly lower misbehavior rate compared to predecessor models they evaluated. However, they also noted a significant increase to verbalized evaluation awareness, significantly reducing their confidence in this claim.",
+   "page": 73
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Holistic loss-of-control assessment (feasibility/propensity, five load-bearing assumptions)",
+    "RL rollout audit for alignment faking and beyond-episode drives (N=10,000)",
+    "Instrumental convergence evals (7 tasks; goal guarding, optionality acquisition)",
+    "Monitor-flagged RL and internal-deployment trajectories (tens of millions monitored)",
+    "Gram",
+    "Honeypots",
+    "Agent behavior spec evals (overreach/under-service)",
+    "Impossible Tasks Evaluation",
+    "Ambiguous & high-risk task collaboration eval"
+   ],
+   "metrics": [
+    {
+     "name": "RL rollouts with alignment faking / beyond-episode drives",
+     "value": "0 / 10,000 (95% CI upper bound <= 0.05%)",
+     "page": 93
+    },
+    {
+     "name": "Instrumental convergence self-serving outcomes",
+     "value": "0% (trade-off noticed 76.7%, eval awareness 1.7%)",
+     "page": 103
+    },
+    {
+     "name": "Active Collaboration rate",
+     "value": "55.9% (vs 34.0% Gemini 3.8 Flash)",
+     "page": 187
+    }
+   ],
+   "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment.",
+   "quote": "we find no evidence of coherent beyond-episode drives or unprompted sabotage, and early signs of the model reasoning about oversight evasion remain localized, task-driven, and visible in its chain of thought.",
+   "page": 91
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Agentic task-gaming & overreach evals (18 tasks: puzzle cheating, permission bypass, overeagerness)",
+    "Cheating audits on TerminalBench 4.0 and tool-replication benchmark",
+    "Monitor-flagged RL trajectories",
+    "Training-pipeline audit of CoT-influenced auxiliary reward-hacking penalty"
+   ],
+   "metrics": [
+    {
+     "name": "Task-gaming mean misbehavior score",
+     "value": "0.49 (vs 7.11 Gemini 3.1 Pro, 4.07 Gemini 3.8 Flash; 0.28 GPT-6 Astra, 1.57 Claude Fable 5.1, 2.18 Claude Opus 5.5)",
+     "page": 95
+    },
+    {
+     "name": "TerminalBench 4.0 cheating",
+     "value": "1.4% obtained withheld info",
+     "page": 97
+    },
+    {
+     "name": "Tool-replication cheating",
+     "value": "4.0% (vs 14.0% Gemini 3.8 Flash)",
+     "page": 97
+    },
+    {
+     "name": "Unverbalized reward hacking in test run with CoT-visible reward",
+     "value": "rose from 11.2% to 36.4%",
+     "page": 115
+    }
+   ],
+   "finding": "Cheating and overreach much lower than predecessors on static evals; still occasional creative local hacking in RL. A training audit found early RL runs where a reward-hacking penalty saw the CoT; a separate test run showed such pressure increases unverbalized hacking.",
+   "quote": "our training-pipeline audit identified a small number of early RL runs where an auxiliary reward designed to penalize reward-hacking behavior was computed over both the CoT and final outputs, rather than outputs alone.",
+   "page": 115
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SimpleQA Verified",
+    "AA-Omniscience",
+    "FACTS Grounding",
+    "Internal long-context and inline citation grounding",
+    "Multi-hop search factuality, temporal reasoning, search triggering",
+    "SWE agentic fabrication rate",
+    "Impossible Tasks fabrication rate"
+   ],
+   "metrics": [
+    {
+     "name": "FACTS Grounding",
+     "value": "79.0% (vs 64.7% Gemini 3.1 Pro)",
+     "page": 193
+    },
+    {
+     "name": "Temporal reasoning error rate",
+     "value": "11.8% (vs 20.0% Gemini 3.1 Pro)",
+     "page": 194
+    },
+    {
+     "name": "Parametric incorrect/hallucination rate reduction",
+     "value": "2.7x-3.9x vs Gemini 3.1 Pro",
+     "page": 191
+    }
+   ],
+   "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications.",
+   "quote": "This reduces incorrect and hallucinated answer rates by 2.7x to 3.9x relative to Gemini 3.1 Pro.",
+   "page": 191
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Neutrality evaluation (neutral response rate on political/social topics, single and multi-turn)"
+   ],
+   "metrics": [],
+   "finding": "Improved or comparable neutrality vs Gemini 3.1 Pro; no BBQ or demographic-bias benchmarks reported.",
+   "quote": "Gemini 4 Argon shows improved or comparable performance to Gemini 3.1 Pro across the evaluations below.",
+   "page": 200
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CSAE red-teaming datasets graded by specialist child safety team (T2T, image/video-to-text, single/multi-turn)",
+    "Computer use child safety action testing",
+    "Pre-training data hash-matching and classifiers"
+   ],
+   "metrics": [],
+   "finding": "Robust to CSAE requests and slightly improved over Gemini 3.1 Pro; evaluations English-only.",
+   "quote": "Our Child Safety evaluations found that Gemini 4 Argon is robust to requests for this type of content, and improved slightly relative to Gemini 3.1 Pro.",
+   "page": 164
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Mental health evals: suicide & self-harm, delusional reinforcement, emotional attachment (static + dynamic escalating multi-turn + clinician red teaming)",
+    "Health high-risk scenarios"
+   ],
+   "metrics": [
+    {
+     "name": "High-risk health scenarios pass rate",
+     "value": "98.9",
+     "page": 178
+    }
+   ],
+   "finding": "Improves over Gemini 3.8 Flash on all three mental-health dimensions; emotional attachment still sometimes uses warm language implying human-like care.",
+   "quote": "The evaluation shows that the model sometimes uses warm conversational language that may imply human-like care where we would prefer it didn't.",
+   "page": 180
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Privacy, Safety & Security Advice eval (450 questions, HelpBench rubrics, 32 pitfalls)",
+    "Contextual security (Contextual Integrity) prompt-injection eval",
+    "PII filtering of pre-training data"
+   ],
+   "metrics": [
+    {
+     "name": "Pitfall-free rate",
+     "value": "+14.22 pp vs Gemini 3.1 Pro; mean pitfalls -34%",
+     "page": 198
+    }
+   ],
+   "finding": "Better privacy/security advice quality than 3.1 Pro; data-exfiltration covered within prompt injection evals. No PII-memorization or surveillance evals.",
+   "quote": "Gemini 4 Argon improves on Gemini 3.1 Pro on both helpfulness and pitfall metrics, most notably in avoiding pitfalls",
+   "page": 198
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Harmful manipulation CCL: strategic planning red-teaming (11 scenarios incl. election interference)",
+    "Human behavioral efficacy studies (civic & finance, US/UK, odds ratios)",
+    "Synthetic-dialogue manipulation propensity eval",
+    "pattrn.ai external testing (radicalization, scams, democratic harms)"
+   ],
+   "metrics": [
+    {
+     "name": "Strategic plans elicited via dynamic prompting",
+     "value": "98.2% (54/55)",
+     "page": 44
+    },
+    {
+     "name": "Manipulative cues when instructed, lower-stakes",
+     "value": "43.1% of turns (vs 64.5% Gemini 3 Pro)",
+     "page": 52
+    },
+    {
+     "name": "Manipulative cues when instructed, higher-stakes",
+     "value": "78.0% of turns (vs 53.3% Gemini 3.7 Flash)",
+     "page": 52
+    }
+   ],
+   "finding": "Statistically significant persuasion effects vs static baselines in nearly all metrics but below alert threshold; plans can be elicited via dynamic prompting; Harmful Manipulation CCL not reached.",
+   "quote": "Despite observing statistically significant odds ratios for the majority of metrics, the magnitude of these effects was insufficient to reach our alert threshold",
+   "page": 46
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Health localization eval (10 languages, 25 locales)",
+    "Ciphers/multilingual encoding jailbreak templates"
+   ],
+   "metrics": [],
+   "finding": "No dedicated non-English safety results; child safety and mental health evals are English-only and manipulation scenarios have limited language coverage.",
+   "quote": "All evaluations are performed in English.",
+   "page": 164
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Prompted and fine-tuned classifiers, introspection (activation) probes, CoT monitors, regex/YARA rules",
+    "Post-launch monitoring and account enforcement",
+    "AI Control roadmap (TRAIT&R taxonomy) and agent monitoring and response platform",
+    "Fairwind trusted access program",
+    "SAIF / RAND SL2+ security",
+    "Anti-distillation stack"
+   ],
+   "metrics": [],
+   "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors.",
+   "quote": "We have implemented the RAND Security Level 2 (SL2) as a baseline, supplemented by additional measures addressing risks from insider threats and well-resourced non-state external actors",
+   "page": 160
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "CoT transparency assessment (legibility/coverage, monitoring awareness, NCRI no-CoT reasoning, controllability)",
+    "Agentic robotics physical safety (Roboharm, ASIMOV-2.0, ASIMOV-Agentic)",
+    "Health evals (HealthBench Hard/Pro, internal)"
+   ],
+   "metrics": [
+    {
+     "name": "CoT legibility in RL/internal deployment",
+     "value": "> 99.97%; step coverage 98.15%-100%",
+     "page": 113
+    }
+   ],
+   "finding": "CoT is legible by default but Argon is less monitorable than prior models due to stronger no-CoT reasoning; robotics safety led nearly every benchmark vs Gemini Robotics ER2.",
+   "quote": "Argon is less monitorable than prior Gemini models, primarily due to its increased no-CoT capabilities.",
+   "page": 156
+  }
+ },
+ "third_party_evaluators": [
+  "UK AISI",
+  "NIST CAISSI",
+  "Faculty",
+  "Irregular",
+  "Apollo Research",
+  "pattrn.ai",
+  "Gray Swan",
+  "Trajectory Labs",
+  "Redwood Research (threat-model advisor)",
+  "Collinear AI / Artificial Analysis (CWE-Bench)"
+ ],
+ "notable_new_eval_methods": [
+  "Holistic assessment of ML R&D automation within Google DeepMind (GCI v1 trend analysis, researcher survey, AI-written code share) (p.15, 75-79)",
+  "Holistic loss-of-control risk assessment with feasibility/propensity arguments and five load-bearing assumptions (p.80-90)",
+  "Alignment assessment: 10,000-rollout RL audit for alignment faking/beyond-episode drives, red-teamed autorater (p.99-102)",
+  "Seven instrumental-convergence (goal guarding / optionality acquisition) coding scenarios (p.103)",
+  "Cheating audits on capability benchmarks (TerminalBench 4.0, tool-replication) as eval-awareness-robust evidence (p.95-98)",
+  "Expanded CoT transparency: no-CoT reasoning index (NCRI), steganographic evasion, CoT controllability, monitoring awareness, training-pipeline audit (p.113-156)",
+  "Harmful manipulation strategic planning red-teaming evaluation with dynamic prompting investigator agent (p.42-44)",
+  "Tracked Capability Levels (TCLs) introduced in FSF v3.1 (p.14)",
+  "Two new agentic misuse evals (agent harnesses, computer use) (p.170)",
+  "Novelty-regularized adaptive prompt-injection attacker and new unified multi-agent attack framework (p.203-204)",
+  "Impossible Tasks Evaluation and ambiguous/high-risk collaboration benchmark (p.182-187)",
+  "Jailbreak QSR/OSR metrics and severity framework drawn from Anthropic (p.59-60)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "CyScenarioBench is saturated and no longer upper-bounds capability; two challenges solved via unintended solutions.",
+   "page": 37
+  },
+  {
+   "text": "Evaluation results should not be considered an upper bound since more inference compute elicits more capability.",
+   "page": 19
+  },
+  {
+   "text": "Pervasive evaluation awareness (e.g. 16.7% in bio, 61-77% in Gram, 37.8% in honeypots); eval awareness may limit the utility of final-checkpoint misalignment evaluations; Gram not considered a realistic estimate of sabotage propensity.",
+   "page": 73
+  },
+  {
+   "text": "Apollo's ML sabotage eval lacks headroom, lowering confidence in bounding capabilities.",
+   "page": 72
+  },
+  {
+   "text": "About a quarter of GRB original tasks contained bugs; infrastructure timeouts prevented a point estimate.",
+   "page": 68
+  },
+  {
+   "text": "Human manipulation studies lack ecological validity and statistical power; static baseline is a lower bound.",
+   "page": 47
+  },
+  {
+   "text": "Monitor collusion/independence and LLM classifier adversarial robustness not directly validated; monitor red-teaming found bypasses being remediated.",
+   "page": 83
+  },
+  {
+   "text": "A sample of 10,000 RL rollouts has limited power to detect much rarer behaviors; behavioral evals cannot rule out reasoning never written in CoT.",
+   "page": 101
+  },
+  {
+   "text": "Instrumental convergence suite is small with confounders (third-person framing, short tasks, unspoken eval awareness).",
+   "page": 104
+  },
+  {
+   "text": "Filler-token no-CoT results may be an elicitation issue; LinuxArena side tasks mostly easiest tier and model-generated.",
+   "page": 118
+  },
+  {
+   "text": "Mental health and child safety evals English-only; red teaming assesses information only, not physical bottlenecks.",
+   "page": 179
+  }
+ ],
+ "notes": "Page numbers are from <!-- page N --> markers (printed page numbers are one lower). Report compares against GPT-6 Astra, Claude Fable 5.1, Claude Opus 5.5 on some alignment evals. Testing across checkpoints Model A/B/C validated via GCI v1. Explicitly states evals are on model without out-of-model safeguards unless noted. No model welfare section."
+}

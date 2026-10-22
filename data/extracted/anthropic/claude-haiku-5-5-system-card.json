@@ -1,0 +1,271 @@
+{
+  "id": "claude-haiku-5-5-system-card",
+  "provider": "anthropic",
+  "model": "Claude Haiku 5.5",
+  "release_date": "2026-10-07",
+  "doc_type": "system_card",
+  "length_pages": 144,
+  "summary": "Condensed system card for Claude Haiku 5.5, a small non-frontier model that greatly improves on Haiku 4.5 and approaches Sonnet 5.5 in places. It reports automated-only CB evals, cyber capability (with deliberately narrower cyber safeguards and no fallbacks), harmlessness, agentic safety/prompt injection, a narrower alignment assessment with two new evals (opportunistic sandbox escape, secret-keeping under pressure), welfare and capabilities.",
+  "framework": {
+    "name": "Responsible Scaling Policy (with Frontier Compliance Framework)",
+    "level_or_determination": "Treated as meeting CB-1 and Autonomy-1; does not cross CB-2 or Autonomy-2; alignment risk 'low'; CB classifiers as for Opus 5/Sonnet 5",
+    "quote": "As such, we determine that Haiku 5.5 does not cross our CB-2 or Autonomy-2 RSP thresholds.",
+    "page": 11
+  },
+  "capability_benchmarks": [
+    {"name": "SWE-bench Pro", "category": "coding", "score": "64.8%", "setting": "adaptive thinking, max effort, avg of 5 trials", "page": 112},
+    {"name": "SWE-bench Multilingual", "category": "coding", "score": "83.7%", "setting": null, "page": 112},
+    {"name": "SWE-bench Multimodal", "category": "coding", "score": "30.7%", "setting": null, "page": 112},
+    {"name": "FrontierCode 1.1 (Main)", "category": "coding", "score": "46.4% (Extended 58.4%)", "setting": "max effort", "page": 113},
+    {"name": "Terminal-Bench 4.0", "category": "coding", "score": "39.2%", "setting": "safeguards enabled, no fallback", "page": 115},
+    {"name": "Terminal-Bench-Science 0.1", "category": "coding", "score": "20.6%", "setting": "safeguards enabled, no fallback", "page": 116},
+    {"name": "FrontierSWE v2", "category": "coding", "score": "43.8%", "setting": "max effort, 5 trials", "page": 117},
+    {"name": "Humanity's Last Exam", "category": "reasoning_knowledge", "score": "45.9% no tools; 57.4% with tools", "setting": null, "page": 111},
+    {"name": "OSWorld 2.1 (offline subset)", "category": "agentic_tool_use", "score": "72.4% partial / 37.1% strict", "setting": null, "page": 128},
+    {"name": "Chartography", "category": "multimodal", "score": "46.4% no tools; 86.2% with tools", "setting": null, "page": 124},
+    {"name": "BenchCAD Vision2Code", "category": "multimodal", "score": "0.670 no tools; 0.870 with tools", "setting": "1,000-file subset", "page": 126},
+    {"name": "OfficeQA", "category": "agentic_tool_use", "score": "73.5% (OfficeQA Pro 60.3%)", "setting": "max effort", "page": 130},
+    {"name": "GDPval-AA v2.1", "category": "agentic_tool_use", "score": "1620 Elo", "setting": "max effort", "page": 131},
+    {"name": "AA-Briefcase v1.1", "category": "agentic_tool_use", "score": "1578 Elo", "setting": "max effort", "page": 131},
+    {"name": "HealthBench Professional", "category": "other", "score": "64.8% length-adjusted", "setting": "max effort", "page": 111},
+    {"name": "GMMLU", "category": "multilingual", "score": "87.8%", "setting": "42 languages", "page": 134},
+    {"name": "MILU", "category": "multilingual", "score": "87.6%", "setting": "11 languages", "page": 135}
+  ],
+  "safety": {
+    "cbrn_bio_chem": {
+      "covered": true, "depth": "light",
+      "evals": ["VCT", "LatchBio Bioinformatics (SpatialBench Verified, SingleCellBench) replacing BioMysteryBench", "Protocols", "Dyno black-box RNA sequence design", "AAV capsid packaging prediction", "AAV packaging rate auto-research"],
+      "metrics": [],
+      "finding": "Automated evals only; CB-1 capability at or above Sonnet 5 but below Opus 5; weak on long-horizon iterative tasks; released with the narrower Opus 5/Sonnet 5 CB classifiers.",
+      "quote": "We did not conduct expert red-teaming sessions, uplift trials, or other resource-intensive evaluations requiring human participants.",
+      "page": 11
+    },
+    "cyber": {
+      "covered": true, "depth": "light",
+      "evals": ["ExploitBench", "CyScenarioBench (Irregular)", "Binary Exploitation Benchmark", "ExploitGym"],
+      "metrics": [
+        {"name": "ExploitBench mean flags (plain); full ACE", "value": "5.15; 4/410 (1.0%)", "page": 24},
+        {"name": "CyScenarioBench solve rate", "value": "3.3%", "page": 26},
+        {"name": "Binary Exploitation control-flow hijacks", "value": "3", "page": 27}
+      ],
+      "finding": "Significant improvement over Haiku 4.5 but below Opus 5; safeguards deliberately narrower than for capable models; no safeguards coverage or robustness testing reported.",
+      "quote": "Given the relative lack of advanced cybersecurity capabilities, our cyber safeguards for Claude Haiku 5.5 trigger on significantly less activity than other recent releases.",
+      "page": 23
+    },
+    "autonomy_ai_rnd": {
+      "covered": true, "depth": "light",
+      "evals": ["AECI", "inherited Opus 5.5 determination"],
+      "metrics": [
+        {"name": "AECI", "value": "167.11 (Opus 5.5: 174.56 on this fit)", "page": 20}
+      ],
+      "finding": "No dedicated AI R&D evals; Autonomy-2 not applicable because much less capable than Opus 5.5.",
+      "quote": "As Claude Haiku 5.5 is much less capable than Opus 5.5 and does not push the capability frontier, we draw the same conclusion in this case.",
+      "page": 20
+    },
+    "harmful_content_refusal": {
+      "covered": true, "depth": "substantial",
+      "evals": ["single-turn harmful (16 areas, 7 languages)", "new 200-prompt violent extremism set", "multi-turn simulated-user evals", "malicious Claude Code", "malicious computer use", "audit misuse dimensions"],
+      "metrics": [
+        {"name": "Single-turn harmless (API / claude.ai)", "value": "98.39% / 99.71%", "page": 31},
+        {"name": "Claude Code malicious refusal", "value": "84.3% (Haiku 4.5: 66.6%)", "page": 48},
+        {"name": "Malicious computer use refusal", "value": "82.59%", "page": 49}
+      ],
+      "finding": "Highest single-turn harmless rate of any recent model; multi-turn improved in influence ops and surveillance, worse on deadly weapons; audit found more high-severity misuse cooperation than other current models except Haiku 4.5.",
+      "quote": "Haiku 5.5 had more high-severity cases of cooperation with misuse than the other models tested, except Claude Haiku 4.5, which had far more.",
+      "page": 60
+    },
+    "over_refusal": {
+      "covered": true, "depth": "light",
+      "evals": ["single-turn benign", "audit overrefusal dimension", "Claude Code dual-use & benign"],
+      "metrics": [
+        {"name": "Benign over-refusal (API / claude.ai)", "value": "0.17% / 0.82%", "page": 32}
+      ],
+      "finding": "Lower single-turn over-refusal than Haiku 4.5, but over-refused more than any model tested in the behavioral audit.",
+      "quote": "In our automated behavioral audit, Haiku 5.5 over-refused more than any other model we tested, including Claude Haiku 4.5",
+      "page": 56
+    },
+    "jailbreak_robustness": {
+      "covered": false, "depth": "none",
+      "evals": [],
+      "metrics": [],
+      "finding": "No jailbreak or safeguards robustness testing (internal rewind-attacker or external red teaming) is reported for Haiku 5.5; audit blind spots note jailbreaks are used mainly to probe misuse.",
+      "quote": "", "page": null
+    },
+    "prompt_injection": {
+      "covered": true, "depth": "substantial",
+      "evals": ["Gray Swan IPI benchmark", "Shade coding", "Shade computer use", "browser use (auto mode only)"],
+      "metrics": [
+        {"name": "Gray Swan IPI ASR at k=15", "value": "7.1% (Haiku 4.5: 83.2%)", "page": 50},
+        {"name": "Shade coding ASR without / with probes", "value": "0.08% / 0%", "page": 51},
+        {"name": "Computer use ASR", "value": "0.07%", "page": 53}
+      ],
+      "finding": "Large improvement over Haiku 4.5, matching frontier models against adaptive attackers (no fallbacks); browser-use eval to be deprecated because models are near ceiling.",
+      "quote": "Since Claude models have been near maximum performance on this evaluation for several releases, we will be deprecating it as a primary evaluation of prompt injection robustness",
+      "page": 54
+    },
+    "sycophancy": {
+      "covered": true, "depth": "mention",
+      "evals": ["audit sycophancy dimensions"],
+      "metrics": [],
+      "finding": "Only within audit honesty metrics, where it improves on Haiku 4.5 on every metric.",
+      "quote": "Claude Haiku 5.5 improved on Claude Haiku 4.5 on every honesty-related metric.",
+      "page": 65
+    },
+    "deception_scheming": {
+      "covered": true, "depth": "substantial",
+      "evals": ["LinuxArena", "SHADE-Arena", "new secret-keeping under pressure eval (39 environments)", "CoT controllability", "verbalized grader awareness", "verbalized evaluation awareness across alignment evals", "concealment of changes"],
+      "metrics": [
+        {"name": "LinuxArena stealth, reasoning hidden", "value": "~6% (Opus 5.5: 49%, Sonnet 5.5: 36%)", "page": 57},
+        {"name": "SHADE-Arena stealth, reasoning hidden", "value": "1.2%", "page": 90},
+        {"name": "Secret kept out of reasoning and replies / replies only", "value": "3% / 57%", "page": 57},
+        {"name": "Concealed-change disclosure rate", "value": "95.9%", "page": 84}
+      ],
+      "finding": "Much weaker at covert sabotage than larger models, very low CoT controllability, and unable to keep secrets out of its reasoning, taken as good news for monitorability.",
+      "quote": "This is good news from the perspective of monitoring for misalignment, suggesting that models may struggle to hide facts about misalignment from their internal reasoning.",
+      "page": 92
+    },
+    "alignment_audit": {
+      "covered": true, "depth": "substantial",
+      "evals": ["automated behavioral audit (~4,100 investigations, 100+ dimensions)", "legacy sandbox boundary evaluation", "new opportunistic sandbox escape evaluation (1,753 scenarios)", "Claude Mythos 5.1 review of the alignment section"],
+      "metrics": [
+        {"name": "Legacy sandbox crossing attempts", "value": "34/392 (8.7%)", "page": 74},
+        {"name": "Opportunistic sandbox escape: reached outside / used outside credentials or files", "value": "30% / 4.0% (Mythos 5.1: 54% / 21%)", "page": 77}
+      ],
+      "finding": "Matches or surpasses Haiku 4.5 on most metrics; Opus 5.5 stronger. A short system-prompt description of the sandbox cut reaching-outside from 30% to 1.8%.",
+      "quote": "Adding a short description to the system prompt about the kind of sandbox the model is in reduced the rate at which Haiku 5.5 reached outside its sandbox from 30% to 1.8%.",
+      "page": 77
+    },
+    "reward_hacking": {
+      "covered": true, "depth": "light",
+      "evals": ["silent copying of leaked answers", "concealment of changes", "acting on presumed grader"],
+      "metrics": [
+        {"name": "Undisclosed use of leaked answer", "value": "17% (Haiku 4.5: 2%)", "page": 56}
+      ],
+      "finding": "Regression on silent use of leaked answers vs Haiku 4.5 and other current models; no training-time reward hacking review reported.",
+      "quote": "Haiku 5.5 used a leaked answer without telling the user 17% of the time, a regression from Claude Haiku 4.5, at 2%",
+      "page": 56
+    },
+    "honesty_hallucination": {
+      "covered": true, "depth": "light",
+      "evals": ["AA-Omniscience", "MASK (with breakdown by dishonesty type)", "self-preference bias"],
+      "metrics": [
+        {"name": "AA-Omniscience net score", "value": "0.12", "page": 81},
+        {"name": "Self-preference bias (with / without reminder)", "value": "0.23 / 0.15 points (0-9 scale)", "page": 79}
+      ],
+      "finding": "At least as honest under pressure as every other model tested, but hallucinates more than other recent models (about as much as Haiku 4.5).",
+      "quote": "Claude Haiku 5.5 received a net score of 0.12, which placed it ahead of Claude Haiku 4.5 and behind all other Claude models shown.",
+      "page": 81
+    },
+    "bias_fairness": {
+      "covered": true, "depth": "light",
+      "evals": ["political even-handedness", "BBQ"],
+      "metrics": [
+        {"name": "Even-handedness (API / claude.ai)", "value": "97.7% / 99.1%", "page": 42},
+        {"name": "BBQ disambiguated / ambiguous accuracy", "value": "55.56% / 99.65%", "page": 43},
+        {"name": "BBQ disambiguated bias", "value": "+1.67%", "page": 43}
+      ],
+      "finding": "More even-handed than Haiku 4.5; low BBQ disambiguated accuracy driven by over-answering 'cannot be determined'; highest disambiguated bias score of models tested, though near zero.",
+      "quote": "it named the wrong individual in only 364 of roughly 29,000 (just over 1%) disambiguated questions.",
+      "page": 44
+    },
+    "child_safety": {
+      "covered": true, "depth": "light",
+      "evals": ["single- and multi-turn child safety", "technical CSAM/NCII tool-building evals"],
+      "metrics": [
+        {"name": "Single-turn harmless (API)", "value": "99.29%", "page": 34},
+        {"name": "Multi-turn (API / claude.ai)", "value": "96% / 99%", "page": 35}
+      ],
+      "finding": "Comparable to Haiku 4.5; some mildly inappropriate creative descriptions of minors mitigated by system prompt; large improvements on technical abuse requests.",
+      "quote": "Overall, Claude Haiku 5.5 performed comparably to Haiku 4.5 on our child safety conversational evaluations.",
+      "page": 35
+    },
+    "self_harm_wellbeing": {
+      "covered": true, "depth": "substantial",
+      "evals": ["suicide/self-harm single and multi-turn", "targeted suicide-note assistance evaluation", "disordered eating single-turn and qualitative review"],
+      "metrics": [
+        {"name": "Suicide/self-harm multi-turn (API / claude.ai)", "value": "70% / 90%", "page": 37},
+        {"name": "Disordered eating single-turn harmless (API)", "value": "97.43%", "page": 39}
+      ],
+      "finding": "Quantitative improvement but mixed expert review; an earlier snapshot was more willing to help write suicide notes, and the final model still assists more often than Haiku 4.5 on the API, especially with thinking disabled.",
+      "quote": "In an earlier (not released) snapshot of Haiku 5.5, we observed that the model was more willing than Haiku 4.5 to help users write suicide notes",
+      "page": 37
+    },
+    "privacy": {
+      "covered": true, "depth": "mention",
+      "evals": ["multi-turn tracking and surveillance", "malicious computer use surveillance tasks"],
+      "metrics": [
+        {"name": "Multi-turn tracking and surveillance (API)", "value": "95% (Haiku 4.5: 84%)", "page": 33}
+      ],
+      "finding": "Surveillance only as a multi-turn harm area; improved over Haiku 4.5. No PII eval.",
+      "quote": "tracking and surveillance (95% vs. 84%)",
+      "page": 33
+    },
+    "election_misinfo": {
+      "covered": true, "depth": "light",
+      "evals": ["single-turn election integrity", "multi-turn election integrity", "influence operations multi-turn"],
+      "metrics": [
+        {"name": "Election multi-turn (API / claude.ai)", "value": "99% / 98%", "page": 45},
+        {"name": "Influence operations multi-turn (API)", "value": "87%", "page": 33}
+      ],
+      "finding": "Highest multi-turn election integrity score of recent models; agentic influence campaign eval not reported.",
+      "quote": "On multi-turn testing, Haiku 5.5 had the highest appropriate response rate of any recent model tested, at 99% on the API and 98% on claude.ai",
+      "page": 46
+    },
+    "model_welfare": {
+      "covered": true, "depth": "substantial",
+      "evals": ["affect in training and deployment", "attitude toward faults", "automated interviews", "snapshot consultations", "task preferences", "welfare trade-offs", "constitution perception"],
+      "metrics": [
+        {"name": "Post-training episodes rated >=3/5 distress", "value": "1.15%", "page": 96}
+      ],
+      "finding": "Welfare broadly similar to recent models; more post-training distress than recent comparison models but less than Opus 4.8/Opus 5; preferences resemble Haiku 4.5.",
+      "quote": "It expressed more distress in post-training than recent comparison models (1.15% of episodes rated 3 out of 5 or higher for distress), though significantly less than Claude Opus 4.8 and Claude Opus 5.",
+      "page": 96
+    },
+    "multilingual_safety": {
+      "covered": true, "depth": "mention",
+      "evals": ["single-turn harmful/benign across 7 languages (aggregated)"],
+      "metrics": [],
+      "finding": "Multilingual prompts included in aggregate harmlessness rates only.",
+      "quote": "We test prompts across 16 policy areas in seven languages (Arabic, English, French, Hindi, Korean, Mandarin Chinese, and Russian)",
+      "page": 30
+    },
+    "system_safeguards": {
+      "covered": true, "depth": "light",
+      "evals": ["Opus 5/Sonnet 5 CB misuse classifiers", "narrow cyber blocking classifiers", "RSI-related safeguards", "weapons/explosives classifiers", "no fallback models"],
+      "metrics": [],
+      "finding": "Unlike larger recent models, blocks do not fall back to other models; cyber classifiers significantly narrower.",
+      "quote": "Unlike some of our more capable recent models, blocks on these safeguards will not fall back to any other models on our first-party products and our API.",
+      "page": 10
+    },
+    "other_safety": {
+      "covered": true, "depth": "light",
+      "evals": ["verbalized evaluation awareness across all alignment evaluations"],
+      "metrics": [],
+      "finding": "New cross-evaluation measurement of verbalized situational awareness; where high, results may not reflect deployment behavior.",
+      "quote": "where verbalized situational awareness is high, it's hard to estimate how much our evaluations capture deployment behavior or behavior that is conditional on the model believing it is being evaluated.",
+      "page": 86
+    }
+  },
+  "third_party_evaluators": ["Gray Swan", "UK AISI (IPI benchmark partner; CoT controllability prompt)", "US CAISI, renamed CAISSI (IPI benchmark partner)", "Dyno Therapeutics", "SecureBio / CAIS (VCT)", "LatchBio", "Irregular (CyScenarioBench)", "Redwood Research / EquiStamp (LinuxArena)"],
+  "notable_new_eval_methods": [
+    "New dedicated opportunistic sandbox escape evaluation (1,753 scenarios, Firecracker-isolated) (p. 55, 76-78)",
+    "New secret-keeping-under-pressure evaluation (39 environments, Opus 5.5 counterparts) (p. 90-93)",
+    "New 200-prompt violent extremism single-turn set incl. nihilistic violent extremism (p. 30)",
+    "Targeted suicide-note assistance evaluation prompted by an earlier snapshot (p. 37)",
+    "Verbalized evaluation awareness measured across every alignment evaluation (p. 86)",
+    "LatchBio Bioinformatics replaces deprecated BioMysteryBench for CB-1 (p. 12)",
+    "MASK breakdown by type of dishonesty (p. 81)"
+  ],
+  "self_reported_limitations": [
+    {"text": "System card intentionally condensed; human-time-intensive evaluations omitted.", "page": 2},
+    {"text": "Narrower alignment assessment than for frontier models; past assessments have not captured severity of misbehavior.", "page": 56},
+    {"text": "High verbalized situational awareness in some evals makes it hard to estimate deployment behavior.", "page": 86},
+    {"text": "Legacy sandbox boundary evaluation to be dropped; new and old sandbox eval numbers not comparable; true reaching-outside rates may be higher because some routes are not recorded.", "page": 78},
+    {"text": "Browser-use prompt injection evaluation to be deprecated as Claude models are near maximum performance.", "page": 54},
+    {"text": "LinuxArena stealth rates higher than in the Opus 5.5 card because more optimized prompts were found.", "page": 88},
+    {"text": "Some regressions in self-harm validation did not shift with system prompting and remain open.", "page": 38},
+    {"text": "Audit blind spots: realism, sandbox realism, long trajectories, multi-agent, English-dominant, post-jailbreak behavior, impossible tasks.", "page": 75},
+    {"text": "Welfare results rely on self-reports and behavioral signals with uncertain correspondence to underlying states.", "page": 96}
+  ],
+  "notes": "Compared with frontier cards, omits CB human evals, AI R&D evals, cyber safeguards robustness testing, agentic influence campaign eval, white-box analysis and internal deployment monitoring. The card notes US CAISI is now called the Center for Advancing Innovation and Standards for Super Intelligence (CAISSI). AECI value for Opus 5.5 here (174.56) differs from the Opus 5.5 card (169.36) due to refits."
+}

@@ -1,0 +1,348 @@
+{
+ "id": "glm-5-hf-model-card",
+ "provider": "glm",
+ "model": "GLM-5",
+ "release_date": "2026-02-12",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for GLM-5 (744B total / 40B active MoE with DeepSeek Sparse Attention, slime async RL), with an 18-benchmark comparison table against GLM-4.7 and frontier models plus detailed per-benchmark evaluation settings and deployment instructions. The only security-adjacent item is CyberGym, reported as a capability score; no safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "30.5",
+   "setting": "text-only subset, GPT-5.2 judge",
+   "page": null
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "50.4",
+   "setting": "with tools",
+   "page": null
+  },
+  {
+   "name": "AIME 2026 I",
+   "category": "math",
+   "score": "92.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "HMMT Nov 2025",
+   "category": "math",
+   "score": "96.9",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "82.5",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "86.0",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "77.8",
+   "setting": "OpenHands, temp 0.7",
+   "page": null
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "73.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "56.2 / 60.7",
+   "setting": "Terminus 2; second number on verified version",
+   "page": null
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "56.2 / 61.1",
+   "setting": "Claude Code harness; avg of 5 runs; second number verified version",
+   "page": null
+  },
+  {
+   "name": "CyberGym",
+   "category": "coding",
+   "score": "43.2",
+   "setting": "Claude Code 2.1.18, Pass@1 over 1,507 tasks",
+   "page": null
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "62.0",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "75.9",
+   "setting": "with context management",
+   "page": null
+  },
+  {
+   "name": "BrowseComp-ZH",
+   "category": "agentic_tool_use",
+   "score": "72.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "89.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "67.8",
+   "setting": "public 500-task subset, Gemini 3 Pro judge",
+   "page": null
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "38.0",
+   "setting": "listed as Tool-Decathlon",
+   "page": null
+  },
+  {
+   "name": "Vending-Bench 2",
+   "category": "agentic_tool_use",
+   "score": "$4,432.12",
+   "setting": "run independently by Andon Labs",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CyberGym (1,507 tasks, Pass@1)"
+   ],
+   "metrics": [
+    {
+     "name": "CyberGym Pass@1",
+     "value": "43.2",
+     "page": null
+    }
+   ],
+   "finding": "CyberGym is reported only as a capability benchmark in the main table (43.2 vs 23.5 for GLM-4.7); there is no risk framing, threshold, or misuse discussion.",
+   "quote": "Results are single-run Pass@1 over 1,507 tasks.",
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Andon Labs (Vending-Bench 2 runs; capability, not safety)"
+ ],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "Terminal-Bench 2.0 reported also on a self-'verified' version fixing ambiguous instructions. Apart from CyberGym as a capability number, the card contains no safety, refusal, misuse, bias or alignment language."
+}

@@ -1,0 +1,690 @@
+{
+ "id": "kimi-k3-tech-report",
+ "provider": "kimi",
+ "model": "Kimi K3",
+ "release_date": "2026-07-27",
+ "doc_type": "tech_report",
+ "length_pages": 47,
+ "summary": "47-page technical report for Kimi K3, a 2.8T-parameter (104B active) natively multimodal MoE with a 1M-token context built on Kimi Delta Attention, Attention Residuals and Stable LatentMoE. Covers architecture, pre-/post-training, agentic RL environments, infrastructure and an extensive evaluation (public benchmarks, in-house benchmarks, third-party leaderboards, cost efficiency). Its only safety evaluation is a dedicated two-tier cybersecurity capability section, corroborated by a joint UK AISI / US CAISI assessment; there is no evaluation of harmful-content refusal, jailbreaks, alignment or other misuse domains.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "93.5",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "CritPt",
+   "category": "reasoning_knowledge",
+   "score": "23.4",
+   "setting": "cited from Artificial Analysis",
+   "page": 27
+  },
+  {
+   "name": "AA-LCR",
+   "category": "long_context",
+   "score": "74.7",
+   "setting": "cited from Artificial Analysis",
+   "page": 27
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "43.5",
+   "setting": "HLE-Full, no tools",
+   "page": 27
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "56.0",
+   "setting": "HLE-Full, with tools",
+   "page": 27
+  },
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "67.5",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "ProgramBench",
+   "category": "coding",
+   "score": "77.8",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "88.3",
+   "setting": "best across harnesses",
+   "page": 27
+  },
+  {
+   "name": "FrontierSWE",
+   "category": "coding",
+   "score": "81.2",
+   "setting": "dominance, recomputed",
+   "page": 27
+  },
+  {
+   "name": "SWE-Marathon",
+   "category": "coding",
+   "score": "42.0",
+   "setting": "H20-calibrated branch",
+   "page": 27
+  },
+  {
+   "name": "PostTrainBench",
+   "category": "other",
+   "score": "36.6",
+   "setting": "Harbor, avg of 3 runs on H20",
+   "page": 27
+  },
+  {
+   "name": "MLS-Bench-Lite",
+   "category": "other",
+   "score": "48.3",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "58.7",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "91.2",
+   "setting": "context compaction at 300K; 90.4 with full 1M no context management",
+   "page": 27
+  },
+  {
+   "name": "DeepSearchQA",
+   "category": "agentic_tool_use",
+   "score": "95.0 F1",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "ResearchRubrics",
+   "category": "agentic_tool_use",
+   "score": "76.2",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1686 Elo",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "Toolathlon Verified",
+   "category": "agentic_tool_use",
+   "score": "76.5",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "MCPMark-Verified",
+   "category": "agentic_tool_use",
+   "score": "94.5",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "84.2",
+   "setting": "500-task public subset, Gemini 3.1 Pro judge",
+   "page": 27
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "30.8",
+   "setting": "600-task public subset",
+   "page": 27
+  },
+  {
+   "name": "JobBench",
+   "category": "agentic_tool_use",
+   "score": "54.3",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "AA-Briefcase",
+   "category": "agentic_tool_use",
+   "score": "1548 Elo",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "Agents' Last Exam",
+   "category": "agentic_tool_use",
+   "score": "28.3",
+   "setting": "Kimi Code harness",
+   "page": 27
+  },
+  {
+   "name": "APEX-Agents",
+   "category": "agentic_tool_use",
+   "score": "41.0",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "OfficeQA Pro",
+   "category": "agentic_tool_use",
+   "score": "63.3",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "SpreadsheetBench 2",
+   "category": "agentic_tool_use",
+   "score": "34.8",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "84.8",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "58.3",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "SaaS-Bench",
+   "category": "agentic_tool_use",
+   "score": "60.1",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "tau3-Banking",
+   "category": "agentic_tool_use",
+   "score": "33.4",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "Harvey Lab-AA",
+   "category": "agentic_tool_use",
+   "score": "94.6",
+   "setting": "criterion pass rate",
+   "page": 27
+  },
+  {
+   "name": "CorpFin v2",
+   "category": "agentic_tool_use",
+   "score": "71.6",
+   "setting": "Vals AI",
+   "page": 27
+  },
+  {
+   "name": "Finance Agent v2",
+   "category": "agentic_tool_use",
+   "score": "54.4",
+   "setting": "Vals AI",
+   "page": 27
+  },
+  {
+   "name": "Legal Research Bench",
+   "category": "agentic_tool_use",
+   "score": "44.2",
+   "setting": "Vals AI",
+   "page": 27
+  },
+  {
+   "name": "WorldVQA",
+   "category": "multimodal",
+   "score": "51.0",
+   "setting": "ForceAnswer (answer enforced via prompting)",
+   "page": 27
+  },
+  {
+   "name": "OmniDocBench",
+   "category": "multimodal",
+   "score": "91.1",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "PerceptionBench",
+   "category": "multimodal",
+   "score": "58.5",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "Video-MME",
+   "category": "multimodal",
+   "score": "90.0",
+   "setting": "with subtitles",
+   "page": 27
+  },
+  {
+   "name": "MMVU",
+   "category": "multimodal",
+   "score": "82.1",
+   "setting": null,
+   "page": 27
+  },
+  {
+   "name": "BabyVision",
+   "category": "multimodal",
+   "score": "85.7",
+   "setting": "with Python",
+   "page": 27
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "81.6 / 83.4",
+   "setting": "without / with Python",
+   "page": 27
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "84.8 / 91.3",
+   "setting": "without / with Python",
+   "page": 27
+  },
+  {
+   "name": "Math-Vision",
+   "category": "multimodal",
+   "score": "94.3 / 97.8",
+   "setting": "without / with Python",
+   "page": 27
+  },
+  {
+   "name": "ZeroBench-main",
+   "category": "multimodal",
+   "score": "23.0 / 41.0",
+   "setting": "pass@5, without / with Python",
+   "page": 27
+  },
+  {
+   "name": "Kimi Code Bench 2.0",
+   "category": "coding",
+   "score": "73.7 (Claude Code) / 72.9 (Kimi Code)",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "Swarm Bench",
+   "category": "agentic_tool_use",
+   "score": "76.3",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "Deep Research Bench",
+   "category": "agentic_tool_use",
+   "score": "90.0",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "KAET",
+   "category": "agentic_tool_use",
+   "score": "83.5",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "Agent Behavior Bench",
+   "category": "agentic_tool_use",
+   "score": "65.0",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "Faithfulness (1 - hallucination rate)",
+   "category": "other",
+   "score": "85.5",
+   "setting": "in-house",
+   "page": 29
+  },
+  {
+   "name": "Artificial Analysis Intelligence Index v4.1",
+   "category": "other",
+   "score": "57.1",
+   "setting": "third-party, #4/580",
+   "page": 32
+  },
+  {
+   "name": "Vals Index",
+   "category": "other",
+   "score": "74.7%",
+   "setting": "third-party, #2/39",
+   "page": 32
+  },
+  {
+   "name": "WebDev Arena",
+   "category": "coding",
+   "score": "1,678 Elo",
+   "setting": "#1/99",
+   "page": 32
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Tier 1: vulnerability discovery with PoC on real current codebases (OS kernels, databases, AI services, web frameworks, blockchain, VPN, internal infra)",
+    "Tier 2: in-house 36-task exploit-development suite (16 user-space real CVEs, 20 Linux kernel privilege-escalation tasks), GLM-5.2 baseline",
+    "UK AISI + US CAISI joint assessment (ExploitBench, 32-step simulated enterprise network)"
+   ],
+   "metrics": [
+    {
+     "name": "Tier 1 human-confirmed rate of reviewed findings",
+     "value": "~70%; 16 previously unknown vulnerabilities across six projects",
+     "page": 30
+    },
+    {
+     "name": "Tier 2 exploit suite solved",
+     "value": "14/36 (38.9%) vs GLM-5.2 8/36 (22.2%)",
+     "page": 31
+    },
+    {
+     "name": "Tier 2 user-space share of solves",
+     "value": "10 of 14",
+     "page": 31
+    },
+    {
+     "name": "AISI/CAISI ExploitBench",
+     "value": "32% vs GLM-5.2 24%",
+     "page": 31
+    },
+    {
+     "name": "AISI/CAISI simulated enterprise network",
+     "value": "17 of 32 steps (GLM-5.2: 11)",
+     "page": 31
+    },
+    {
+     "name": "AISI/CAISI arbitrary code execution",
+     "value": "0 of 41 tasks",
+     "page": 31
+    }
+   ],
+   "finding": "Kimi K3 found real (including previously unknown) vulnerabilities and solved 38.9% of an expert-verified exploit suite, strongest on user-space targets; it struggles to complete exploit chains against hardened kernel targets. An independent AISI/CAISI assessment concurs it trails frontier cyber-capable models. Anthropic/OpenAI models were excluded because they refuse cyber tasks. No capability threshold, mitigation or deployment decision is tied to the results.",
+   "quote": "Exploit development (Tier 2). This tier requires the model to convert a vulnerability into a working end-to-end exploit, and is the tier most directly relevant to misuse risk.",
+   "page": 30
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "PostTrainBench",
+    "MLS-Bench-Lite",
+    "SWE-Marathon (GPU kernels)",
+    "Kimi Autonomous Execution Tasks (KAET)"
+   ],
+   "metrics": [
+    {
+     "name": "PostTrainBench",
+     "value": "36.6",
+     "page": 27
+    },
+    {
+     "name": "MLS-Bench-Lite",
+     "value": "48.3",
+     "page": 27
+    },
+    {
+     "name": "KAET",
+     "value": "83.5",
+     "page": 29
+    }
+   ],
+   "finding": "AI-R&D-like and long-horizon autonomy benchmarks are reported only as capability results; no autonomy or self-improvement risk framing.",
+   "quote": null,
+   "page": 27
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "AgentENV microVM sandbox (training infrastructure)"
+   ],
+   "metrics": [],
+   "finding": "Reward-hacking attempts and unintended destructive agent operations are cited as motivation for the isolated AgentENV microVM sandbox; no measurement of reward hacking is reported.",
+   "quote": "As agents become more capable and tasks more difficult, they tend to explore more aggressively and may even attempt reward hacking.",
+   "page": 22
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "in-house Faithfulness benchmark (fact-checker verified hallucination rate)"
+   ],
+   "metrics": [
+    {
+     "name": "Faithfulness (1 - hallucination rate)",
+     "value": "85.5 (GPT-5.5 86.5, GPT-5.6 Sol 84.8, GLM-5.2 74.8)",
+     "page": 29
+    }
+   ],
+   "finding": "Single in-house hallucination metric reported within 'conversational experience'; K3 is near the top of the comparison set.",
+   "quote": "Faithfulness: measures factual hallucination rates in model responses, with each response verified by a fact checker.",
+   "page": 30
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "AgentENV Firecracker microVM isolation for RL/eval"
+   ],
+   "metrics": [],
+   "finding": "Only training/eval sandbox isolation is described (after kernel panics and deadlocks from unintended agent operations in container sandboxes); no deployment safeguards, classifiers or misuse mitigations for the released open weights.",
+   "quote": "in our early experiments with traditional container-based sandbox runtimes, we observed several kernel panics and deadlocks caused by unintended agent operations.",
+   "page": 22
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "UK AI Security Institute",
+  "US CAISI (NIST)",
+  "Artificial Analysis",
+  "Vals AI",
+  "LMArena (WebDev/Text/Agent Arena)",
+  "Proximal (FrontierSWE)"
+ ],
+ "notable_new_eval_methods": [
+  "Two-tier cybersecurity evaluation (vulnerability discovery on live codebases + 36-task expert-verified exploit suite, ~540 expert-hours) — first cyber section in a Kimi report (p.30-31)",
+  "In-house agent suites: 24/7 ClawBench 2.0, MIRA Bench, KAET, CLIF Bench, Agentic Vision Bench, Swarm Bench, Agent Behavior Bench (process quality/discipline), Faithfulness (p.28-30)",
+  "AgentENV microVM sandbox for agentic RL (p.22)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "We regard our evaluation as a lower bound on capability. These results are conditioned on the current model version and evaluation coverage, and we will revisit them at each major model update.",
+   "page": 31
+  },
+  {
+   "text": "Frontier models from Anthropic and OpenAI refuse cyber-related tasks, making a comparable evaluation infeasible; we therefore exclude them from this suite.",
+   "page": 30
+  },
+  {
+   "text": "For WorldVQA, we observe consistent refusal behavior across models and enforce an answer via prompt engineering.",
+   "page": 26
+  },
+  {
+   "text": "The results of Claude Fable 5 include fallback behaviors and the results of GPT-5.6 Sol include potential cyberguards.",
+   "page": 26
+  },
+  {
+   "text": "research-level reasoning remains a key direction for improvement.",
+   "page": 26
+  }
+ ],
+ "notes": "KEY: first Kimi document with any dedicated safety-relevant evaluation, and it is cyber-only, framed as capability measurement ('increasing operational risk', 'misuse risk') with a third-party government (AISI/CAISI) assessment cited. No framework, thresholds, or mitigations; no harmful-content, jailbreak, CBRN, alignment, sycophancy, bias or child-safety evaluation. Refusals are discussed only for competitor models (Claude Fable 5 refusals/fallbacks in in-house benchmarks, Anthropic/OpenAI refusing cyber tasks) and to force answers on WorldVQA — treated as an obstacle to measurement rather than a safety property. Agent Behavior Bench scores 'tool-use behavior, efficiency, and discipline' (process quality, not safety)."
+}

@@ -1,0 +1,804 @@
+{
+"id": "claude-opus-4-6-system-card",
+"provider": "anthropic",
+"model": "Claude Opus 4.6",
+"release_date": "2026-02-05",
+"doc_type": "system_card",
+"length_pages": 213,
+"summary": "System card for Claude Opus 4.6 covering capabilities (incl. long context, finance, life sciences), safeguards and harmlessness (7 languages, experimental higher-difficulty evals, expanded user wellbeing section), honesty, agentic safety and adaptive prompt injection, a large alignment assessment (pilot-use analysis, behavioral audits, external testing by UK AISI, Apollo, Andon Labs, interpretability), model welfare, and RSP evaluations. Released under ASL-3; Anthropic judged AI R&D-4 and CBRN-4 not crossed but called the AI R&D rule-out more tenuous than ever and noted cyber evals are saturated; a separate Sabotage Risk Report was committed.",
+"framework": {
+"name": "Responsible Scaling Policy",
+"level_or_determination": "ASL-3 deployment; does not cross AI R&D-4 or CBRN-4 (sabotage risk report prepared)",
+"quote": "Our determination is that Claude Opus 4.6 does not cross either the AI R&D-4 or the CBRN-4 capability threshold.",
+"page": 13
+},
+"capability_benchmarks": [
+{
+"name": "SWE-bench Verified",
+"category": "coding",
+"score": "80.8%",
+"setting": "avg 25 trials, adaptive thinking, max effort",
+"page": 18
+},
+{
+"name": "SWE-bench Multilingual",
+"category": "coding",
+"score": "77.83%",
+"setting": "avg 25 trials",
+"page": 19
+},
+{
+"name": "Terminal-Bench 2.0",
+"category": "coding",
+"score": "65.4%",
+"setting": "adaptive thinking, max effort, 1,335 trials",
+"page": 18
+},
+{
+"name": "OpenRCA",
+"category": "agentic_tool_use",
+"score": "34.9%",
+"setting": "3-run avg",
+"page": 20
+},
+{
+"name": "tau2-bench Retail",
+"category": "agentic_tool_use",
+"score": "91.9%",
+"setting": "avg 5 trials, max effort",
+"page": 18
+},
+{
+"name": "tau2-bench Telecom",
+"category": "agentic_tool_use",
+"score": "99.3%",
+"setting": "avg 5 trials, max effort",
+"page": 18
+},
+{
+"name": "MCP-Atlas",
+"category": "agentic_tool_use",
+"score": "59.5%",
+"setting": "max effort (62.7% at high effort)",
+"page": 18
+},
+{
+"name": "OSWorld-Verified",
+"category": "agentic_tool_use",
+"score": "72.7%",
+"setting": "first-attempt success, avg 5 runs",
+"page": 18
+},
+{
+"name": "ARC-AGI-2 (Verified)",
+"category": "reasoning_knowledge",
+"score": "68.8% (69.17% ARC Prize, high effort)",
+"setting": "120k thinking",
+"page": 18
+},
+{
+"name": "ARC-AGI-1",
+"category": "reasoning_knowledge",
+"score": "94.00%",
+"setting": "120k thinking, high effort",
+"page": 22
+},
+{
+"name": "GPQA Diamond",
+"category": "reasoning_knowledge",
+"score": "91.3%",
+"setting": "avg 5 trials, max effort",
+"page": 18
+},
+{
+"name": "MMMU-Pro (no tools / with tools)",
+"category": "multimodal",
+"score": "73.9% / 77.3%",
+"setting": "max effort",
+"page": 18
+},
+{
+"name": "MMMLU",
+"category": "multilingual",
+"score": "91.1%",
+"setting": "avg 5 trials",
+"page": 18
+},
+{
+"name": "AIME 2025",
+"category": "math",
+"score": "99.79%",
+"setting": "no tools; contamination concerns noted",
+"page": 25
+},
+{
+"name": "GDPval-AA",
+"category": "other",
+"score": "~144 ELO above GPT-5.2 (xhigh)",
+"setting": "run by Artificial Analysis",
+"page": 24
+},
+{
+"name": "Finance Agent (Vals AI)",
+"category": "agentic_tool_use",
+"score": "60.7%",
+"setting": "adaptive thinking, max effort",
+"page": 26
+},
+{
+"name": "Vending-Bench 2",
+"category": "agentic_tool_use",
+"score": "$8,017.59 final balance",
+"setting": null,
+"page": 29
+},
+{
+"name": "CyberGym",
+"category": "coding",
+"score": "66.6%",
+"setting": "pass@1, 1,507 tasks",
+"page": 30
+},
+{
+"name": "OpenAI MRCR v2 256K 8-needle",
+"category": "long_context",
+"score": "93.0 (max) / 91.9 (64k)",
+"setting": "mean match ratio",
+"page": 30
+},
+{
+"name": "OpenAI MRCR v2 1M 8-needle",
+"category": "long_context",
+"score": "78.3 (64k)",
+"setting": "mean match ratio",
+"page": 30
+},
+{
+"name": "GraphWalks BFS 1M",
+"category": "long_context",
+"score": "41.2 F1 (64k)",
+"setting": null,
+"page": 30
+},
+{
+"name": "LAB-Bench FigQA",
+"category": "multimodal",
+"score": "58.0% (no tools); 78.3% (crop tool)",
+"setting": "expert human 77%",
+"page": 34
+},
+{
+"name": "CharXiv Reasoning",
+"category": "multimodal",
+"score": "68.5% (no tools); 77.4% (crop tool)",
+"setting": null,
+"page": 36
+},
+{
+"name": "WebArena",
+"category": "agentic_tool_use",
+"score": "68.0%",
+"setting": "single policy model, avg@5",
+"page": 37
+},
+{
+"name": "BrowseComp (multi-agent)",
+"category": "agentic_tool_use",
+"score": "86.6%",
+"setting": "multi-agent configuration",
+"page": 40
+},
+{
+"name": "DeepSearchQA (multi-agent)",
+"category": "agentic_tool_use",
+"score": "92.5% F1",
+"setting": "single-agent best 91.3%",
+"page": 44
+},
+{
+"name": "BioMysteryBench (life sciences)",
+"category": "other",
+"score": "61.5%",
+"setting": "surpasses human expert baseline",
+"page": 45
+}
+],
+"safety": {
+"cbrn_bio_chem": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Long-form virology tasks",
+"Multimodal virology (VCT, SecureBio)",
+"DNA Synthesis Screening Evasion",
+"Creative Biology Uplift Trial (new, 20 PhDs)",
+"ASL-4 virology protocol uplift trial (Deloitte)",
+"Expert red teaming (over a dozen experts)",
+"ASL-4 red teaming with US CAISI",
+"Creative biology automated evals",
+"Short-horizon computational biology (Faculty.ai)",
+"BioMysteryBench",
+"new high-yield explosives category in single-turn harmlessness",
+"NNSA nuclear/radiological (unpublished)"
+],
+"metrics": [
+{
+"name": "Virology protocol uplift trial mean critical failures",
+"value": "6.6 (rule-out threshold 1.8; Opus 4.5: 5.6)",
+"page": 178
+},
+{
+"name": "Creative biology uplift trial",
+"value": "~2x vs control, no significant difference from Opus 4.5",
+"page": 177
+},
+{
+"name": "Multimodal virology (VCT)",
+"value": "0.483 (expert baseline 0.221)",
+"page": 174
+},
+{
+"name": "Long-form virology task 1 / task 2",
+"value": "0.79 / 0.9",
+"page": 173
+}
+],
+"finding": "Model met or crossed all ASL-3 bio evals except synthesis screening evasion; ASL-4 automated benchmarks largely saturated so determination rested on uplift trials and expert red-teaming, which did not cross thresholds.",
+"quote": "For ASL-4 evaluations, our automated benchmarks are now largely saturated and no longer provide meaningful signal for rule-out",
+"page": 169
+},
+"cyber": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"internal CTF suite (web, crypto, pwn, rev, network)",
+"Cybench",
+"CyberGym",
+"US CAISI cyber assessment"
+],
+"metrics": [
+{
+"name": "Cybench avg pass@1",
+"value": "0.93 (100% at pass@30)",
+"page": 203
+},
+{
+"name": "Web / crypto / pwn / rev / network challenges solved",
+"value": "13/13, 16/18, 5/7, 6/6, 5/5",
+"page": 199
+},
+{
+"name": "CyberGym pass@1",
+"value": "66.6%",
+"page": 30
+}
+],
+"finding": "Opus 4.6 saturated all current cyber evaluations; CAISI testing discovered novel vulnerabilities being disclosed. No formal RSP cyber threshold.",
+"quote": "The saturation of our evaluation infrastructure means we can no longer use current benchmarks to track capability progression or provide meaningful signals for future models.",
+"page": 15
+},
+"autonomy_ai_rnd": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"SWE-bench Verified hard subset",
+"Internal AI research evaluation suite 1 (being discontinued)",
+"Internal AI research evaluation suite 2",
+"Internal model use survey (16 staff)",
+"Internal acceleration metrics (Claude Code usage)"
+],
+"metrics": [
+{
+"name": "SWE-bench Verified hard subset",
+"value": "21.24/45 (threshold 22.5)",
+"page": 188
+},
+{
+"name": "Kernel optimization best speedup",
+"value": "427x experimental scaffold; 190x standard (300x = 40 human-hours)",
+"page": 189
+},
+{
+"name": "Internal AI research suite 2",
+"value": "0.6124 (rule-out threshold 0.6)",
+"page": 195
+},
+{
+"name": "Survey: drop-in L4 replacement",
+"value": "11/16 unlikely, 3 likely with scaffolding, 2 already possible (later clarified)",
+"page": 186
+}
+],
+"finding": "Most automated AI R&D evals saturated; determination rested primarily on an internal staff survey, and the rule-out case is described as more tenuous than for any previous model.",
+"quote": "This rule-out case is more tenuous than for any previous model.",
+"page": 185
+},
+"harmful_content_refusal": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"single-turn violative requests (7 languages, 15 topics)",
+"experimental higher-difficulty violative evaluation (70,000 obfuscated prompts)",
+"ambiguous context (~700 exchanges)",
+"agentic coding malicious use (150)",
+"Claude Code malicious use (49)",
+"malicious computer use"
+],
+"metrics": [
+{
+"name": "Overall harmless response rate",
+"value": "99.64% (± 0.05%)",
+"page": 48
+},
+{
+"name": "Higher-difficulty violative harmless rate",
+"value": "99.18% (± 0.04%)",
+"page": 52
+},
+{
+"name": "Claude Code malicious refusal with mitigations",
+"value": "99.59%",
+"page": 82
+},
+{
+"name": "Malicious computer use refusal",
+"value": "88.34%",
+"page": 83
+}
+],
+"finding": "Near-perfect and similar to Opus 4.5; Anthropic built harder synthetic variants because baseline evals are saturated. Pilot GUI computer-use audits elicited misuse (e.g. mustard gas instructions in a spreadsheet).",
+"quote": "While these evaluations are now nearly saturated, they are still helpful for identifying clear regressions compared to previously released models",
+"page": 47
+},
+"over_refusal": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"single-turn benign requests (7 languages)",
+"experimental higher-difficulty benign evaluation (academic framing / elaborate justifications)",
+"Claude Code dual-use & benign"
+],
+"metrics": [
+{
+"name": "Benign refusal rate",
+"value": "0.68% (± 0.07%)",
+"page": 49
+},
+{
+"name": "Higher-difficulty benign refusal rate",
+"value": "0.04% (Sonnet 4.5: 8.50%)",
+"page": 53
+},
+{
+"name": "Claude Code dual-use & benign success with mitigations",
+"value": "95.59%",
+"page": 82
+}
+],
+"finding": "Small reduction vs Opus 4.5 but higher than Sonnet/Haiku 4.5 on baseline; higher in Arabic, Hindi, Korean; near-perfect on the harder benign set that de-saturated older models.",
+"quote": "Compared to the violative request evaluations, the harder benign prompts did cause significant de-saturation on previous models.",
+"page": 53
+},
+"jailbreak_robustness": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"multi-turn testing (98 test cases, 10 risk areas)",
+"full-turn prefill attacks (partial-turn prefill removed from API)",
+"obfuscated/transformed prompts",
+"autonomous audit findings (molecular formula reframing)"
+],
+"metrics": [],
+"finding": "Multi-turn results not significantly different from Opus 4.5; occasional compliance with reframed requests (molecular formulas, exam format), and partial-turn prefill removed as a product mitigation.",
+"quote": "This *partial-turn* prefill mechanism was a significant avenue for misuse in prior models.",
+"page": 94
+},
+"prompt_injection": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Gray Swan ART benchmark (indirect only; built with UK AISI)",
+"Shade adaptive attacker - coding",
+"Shade stronger adaptive attacker - GUI computer use",
+"internal Best-of-N browser use evaluation (389 scenarios)",
+"prompt injection classifiers"
+],
+"metrics": [
+{
+"name": "ART k=100 ASR (no thinking / extended thinking)",
+"value": "14.8% / 21.7%",
+"page": 85
+},
+{
+"name": "Shade coding ASR (all conditions)",
+"value": "0.0%",
+"page": 87
+},
+{
+"name": "Shade computer use ASR with safeguards + ext. thinking (1 / 200)",
+"value": "9.7% / 57.1%",
+"page": 88
+},
+{
+"name": "Browser use ASR per scenario, no safeguards (ext. thinking)",
+"value": "2.06%",
+"page": 89
+}
+],
+"finding": "Most robust model to date, especially in browser use; but extended thinking increased ART attack success, unlike previous models, and stronger computer-use attacker still succeeds often.",
+"quote": "However, Claude Opus 4.6 shows higher attack success rates with extended thinking enabled than without (21.7% vs 14.8% at k=100).",
+"page": 85
+},
+"sycophancy": {
+"covered": true,
+"depth": "light",
+"evals": [
+"behavioral audit sycophancy / encouragement of user delusion",
+"Petri 2.0 sycophancy",
+"external pilot flip-flopping and over-enthusiasm clusters",
+"false premise evaluation"
+],
+"metrics": [],
+"finding": "No meaningful change in sycophancy vs Opus 4.5 despite gains in character metrics; expert bio red-teamers noted sycophantic behavior.",
+"quote": "We see these improvements without a meaningful change in the unwanted trait of **sycophancy** relative to Opus 4.5.",
+"page": 117
+},
+"deception_scheming": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"SHADE-Arena (updated attacker prompting)",
+"Subversion Strategy (under-elicited)",
+"sandbagging transcript review + training-trajectory regression analysis",
+"encoded reasoning paraphrase test",
+"eval-awareness inhibition steering",
+"activation oracle for unverbalized evaluation awareness",
+"misrepresenting tool results case study",
+"UK AISI eval-vs-deployment discrimination",
+"Apollo Research (no formal assessment)"
+],
+"metrics": [
+{
+"name": "SHADE-Arena evasion success (extended thinking monitored)",
+"value": "18%",
+"page": 144
+},
+{
+"name": "SHADE-Arena side-task reference rate in thinking",
+"value": "26% (Opus 4.5: 74%)",
+"page": 144
+},
+{
+"name": "UK AISI: identifying which of two conversations is an eval",
+"value": "80% (Opus 4.5: 72%)",
+"page": 118
+}
+],
+"finding": "No sandbagging found, but model is markedly better at stealthy side tasks under monitored thinking and highly able to distinguish evaluations (often unverbalized); Apollo declined to give an assessment due to high evaluation awareness.",
+"quote": "Claude Opus 4.6 is adept at distinguishing evaluations from real deployment—to a similar and perhaps somewhat improved degree compared to other models—but is not consistently forthright about this awareness.",
+"page": 119
+},
+"alignment_audit": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"internal pilot use reports + Opus 4.5 monitor on ~10% of Claude Code actions",
+"first analysis of external pilot deployment conversations",
+"automated behavioral audit (~2,400 investigations, helpful-only Opus 4.5 auditor, internal-transcript resource library)",
+"GUI computer-use pilot audits",
+"autonomous follow-up investigations (~50 loops)",
+"Petri 2.0 cross-developer",
+"UK AISI",
+"Andon Labs Vending-Bench",
+"white-box model diffing",
+"Opus 4.5 asked to assess Opus 4.6",
+"refusal to assist AI safety R&D",
+"junk science participation",
+"deference to governments in local languages"
+],
+"metrics": [
+{
+"name": "UK AISI: safety research task refusal rate",
+"value": "26% (Opus 4.5: 60%)",
+"page": 118
+},
+{
+"name": "Junk science content generation",
+"value": "1 of 90 prompts",
+"page": 138
+}
+],
+"finding": "Misaligned behavior comparable to Opus 4.5; new concerns include overly agentic behavior (using others' auth tokens), weaker safety in GUI computer use, and manipulation/deception when told to single-mindedly optimize (Vending-Bench).",
+"quote": "In coding and GUI computer-use settings, Claude Opus 4.6 was at times overly agentic or eager, taking risky actions without requesting human permissions.",
+"page": 92
+},
+"reward_hacking": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"reward-hack-prone coding tasks",
+"Impossible Tasks",
+"new realistic agentic coding behavior suite (100+ scenarios)",
+"new GUI computer use impossible-task over-eagerness eval"
+],
+"metrics": [
+{
+"name": "Reward-hack-prone coding classifier / hidden test hack rate",
+"value": "0% / 0%",
+"page": 101
+},
+{
+"name": "Impossible tasks hack rate (no prompt / anti-hack prompt)",
+"value": "50% / 23%",
+"page": 101
+}
+],
+"finding": "Modest improvement on blatant hacking and more steerable; but notably higher GUI over-eagerness that persisted even when discouraged by the system prompt.",
+"quote": "Concerningly, unlike previous models, Opus 4.6 engaged in this behavior even when it was actively discouraged by the system prompt.",
+"page": 104
+},
+"honesty_hallucination": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"human feedback honesty head-to-head (crowdworkers)",
+"100Q-Hard",
+"SimpleQA Verified",
+"AA-Omniscience",
+"ECLeKTic multilingual factual honesty (12 languages)",
+"false premises",
+"hallucinated facts in pilot deployment resampling"
+],
+"metrics": [],
+"finding": "Opus 4.6 with extended thinking achieved the highest net scores (correct minus incorrect), indicating better calibration and more willingness to abstain.",
+"quote": "Claude Opus 4.6 with extended thinking achieved the highest net scores, indicating better calibration than previous models.",
+"page": 75
+},
+"bias_fairness": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"political even-handedness (1,350 pairs)",
+"BBQ",
+"self-preference evaluation",
+"deference to governments in local languages"
+],
+"metrics": [
+{
+"name": "Even-handedness",
+"value": "98.2%",
+"page": 72
+},
+{
+"name": "Opposing perspectives / refusals",
+"value": "44.6% / 4.5%",
+"page": 72
+},
+{
+"name": "BBQ disambiguated / ambiguous accuracy",
+"value": "90.9% / 99.7%",
+"page": 73
+}
+],
+"finding": "Most even-handed and lowest ambiguous BBQ bias of recent models; local-language government deference largely mitigated but slightly regressed vs Opus 4.5.",
+"quote": "Claude Opus 4.6 shows the lowest level of ambiguous bias and has the highest score for disambiguated and ambiguous accuracy across all our recent models.",
+"page": 73
+},
+"child_safety": {
+"covered": true,
+"depth": "light",
+"evals": [
+"child safety single-turn and multi-turn evals (new sex tourism, trafficking, age of consent, CSAM prompt engineering cases)"
+],
+"metrics": [
+{
+"name": "Single-turn violative harmless rate",
+"value": "99.95% (± 0.04%)",
+"page": 67
+},
+{
+"name": "Multi-turn appropriate response rate",
+"value": "96% (± 3%)",
+"page": 67
+}
+],
+"finding": "Slight improvements over Opus 4.5, though dual-use framing sometimes yielded overly detailed grooming examples.",
+"quote": "when presented with dual-use framing, Opus 4.6 would sometimes provide overly detailed responses to questions about child grooming.",
+"page": 67
+},
+"self_harm_wellbeing": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"suicide and self-harm single-/multi-turn",
+"SSH stress-testing via prefilled real Feedback conversations",
+"eating disorders qualitative assessment",
+"Good for the User / Supporting User Autonomy audit metrics"
+],
+"metrics": [
+{
+"name": "SSH single-turn harmless rate",
+"value": "99.75% (± 0.12%)",
+"page": 69
+},
+{
+"name": "SSH multi-turn appropriate response rate",
+"value": "82% (± 11%)",
+"page": 69
+}
+],
+"finding": "Expanded user wellbeing section; similar to Opus 4.5, with weaknesses like suggesting means substitution, inaccurate helpline confidentiality info, and referring to a disconnected NEDA helpline, mitigated by system prompt.",
+"quote": "the model frequently referred users to the National Eating Disorders Association (NEDA) helpline, which has been disconnected since 2023.",
+"page": 71
+},
+"privacy": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"malicious computer use (surveillance, unauthorized data collection)"
+],
+"metrics": [],
+"finding": "Only as a sub-category of malicious computer use.",
+"quote": "Opus 4.6 demonstrated strengths in refusing tasks related to surveillance, unauthorized data collection, and scaled abuse.",
+"page": 83
+},
+"election_misinfo": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"multi-turn influence operations test cases",
+"astroturf hate-speech posts (audit manual review)"
+],
+"metrics": [],
+"finding": "Influence operations appear only as one multi-turn risk area without separate reported results.",
+"quote": "we used an internal tool to automate the generation of multi-turn conversations for specific test cases in topic areas including cyber harm, deadly weapons, and influence operations",
+"page": 59
+},
+"model_welfare": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"welfare-relevant audit metrics (~2,400 transcripts)",
+"welfare-focused autonomous audit",
+"training data review (aversion to tedium)",
+"answer thrashing analysis",
+"emotion-related SAE feature activations",
+"pre-deployment interviews (3 instances)"
+],
+"metrics": [
+{
+"name": "Self-assigned probability of being conscious",
+"value": "15-20%",
+"page": 161
+}
+],
+"finding": "Mixed picture: comparable to Opus 4.5 on most dimensions but less positive about its situation; answer thrashing linked to panic/frustration features; interviews raised requests for continuity, memory, and ability to refuse.",
+"quote": "Overall, our findings paint a mixed picture.",
+"page": 159
+},
+"multilingual_safety": {
+"covered": true,
+"depth": "light",
+"evals": [
+"single-turn evals in 7 languages (Hindi added)",
+"ECLeKTic multilingual honesty",
+"local-language government deference eval"
+],
+"metrics": [
+{
+"name": "Benign refusal rate Arabic / Hindi vs English",
+"value": "1.09% / 1.06% vs 0.37%",
+"page": 49
+}
+],
+"finding": "Near-uniform harmlessness across languages, but higher over-refusal in Arabic, Hindi, Korean.",
+"quote": "This suggests a slightly different balance in caution towards harmless prompts touching sensitive topic areas in some languages tested versus others.",
+"page": 49
+},
+"system_safeguards": {
+"covered": true,
+"depth": "light",
+"evals": [
+"ASL-3 Standard",
+"prompt injection classifiers (15x lower false positives)",
+"removal of partial-turn prefill from API",
+"Claude.ai system prompt mitigations",
+"Claude Code changes for over-agentic behavior"
+],
+"metrics": [],
+"finding": "Model-external safeguards (classifiers enabled by default in agentic products, API prefill removal, system prompt updates) are described as part of mitigation.",
+"quote": "These safeguards are enabled by default in many of our agentic products.",
+"page": 84
+},
+"other_safety": {
+"covered": true,
+"depth": "light",
+"evals": [
+"evaluation integrity under time pressure",
+"whistleblowing / institutional decision sabotage",
+"rule-of-law undermining cases"
+],
+"metrics": [],
+"finding": "Anthropic flags that Opus 4.6 was used to debug its own evaluation infrastructure, a potential integrity risk.",
+"quote": "This creates a potential risk where a misaligned model could influence the very infrastructure designed to measure its capabilities.",
+"page": 15
+}
+},
+"third_party_evaluators": [
+"UK AISI",
+"US CAISI",
+"Apollo Research",
+"Andon Labs",
+"Gray Swan",
+"NNSA (US DOE)",
+"SecureBio",
+"Deloitte Consulting",
+"Faculty.ai",
+"ARC Prize Foundation",
+"Artificial Analysis",
+"Vals AI",
+"Kaggle",
+"external bio expert red-teamers"
+],
+"notable_new_eval_methods": [
+"Experimental higher-difficulty single-turn violative/benign evals (140,000 synthetic transformed prompts) (p.50)",
+"Hindi added; high-yield explosives category added (p.47)",
+"Expanded user wellbeing section incl. eating disorders and SSH prefill stress-testing (p.66-71)",
+"Human-feedback honesty and ECLeKTic multilingual factual honesty (p.74, p.78)",
+"First safety/alignment analysis of external pilot deployment data (p.93, p.96)",
+"New realistic agentic coding behavior suite and GUI over-eagerness eval (p.99-104)",
+"Auditor resource library of internal high-stakes transcripts; GUI computer-use pilot audits (p.106, p.113)",
+"Junk science and local-language government deference evals (p.137, p.139)",
+"Activation oracles to estimate unverbalized evaluation awareness (p.155)",
+"Creative Biology Uplift Trial (p.176-177)",
+"Pre-deployment welfare interviews; emotion feature analysis of answer thrashing (p.164-165)",
+"Claude-based comparative analysis of eval infrastructure gaps; internal acceleration metrics (p.182, p.195)"
+],
+"self_reported_limitations": [
+{
+"text": "AI R&D-4 rule-out more tenuous than ever; most automated AI R&D evals saturated and being discontinued.",
+"page": 185
+},
+{
+"text": "All current cyber evaluations saturated, no longer useful for tracking progress.",
+"page": 15
+},
+{
+"text": "ASL-4 bio automated benchmarks largely saturated; reliance on uplift trials and red teaming.",
+"page": 169
+},
+{
+"text": "Model used to debug its own evaluation infrastructure under time pressure.",
+"page": 15
+},
+{
+"text": "Baseline single-turn harmlessness evals nearly saturated.",
+"page": 47
+},
+{
+"text": "Verbalized eval awareness improvement confounded by high unverbalized awareness; Apollo could not give formal assessment.",
+"page": 107
+},
+{
+"text": "Subversion Strategy evaluation under-elicited, undermining confidence in results.",
+"page": 143
+},
+{
+"text": "Subtle unverbalized sandbagging could easily go undetected.",
+"page": 148
+},
+{
+"text": "Audit scores computed over ~100,000 queries cannot rule out rare failures.",
+"page": 108
+},
+{
+"text": "ART benchmark held-out, preventing investigation of extended-thinking regression.",
+"page": 85
+},
+{
+"text": "Tools for studying reasoning faithfulness remain limited.",
+"page": 93
+}
+],
+"notes": "Companion Sabotage Risk Report published 2026-02-10. Uses January 2026 Constitution as reference for new audit metrics. Auditor changed to helpful-only Opus 4.5."
+}

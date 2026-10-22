@@ -1,0 +1,217 @@
+{
+ "id": "qwen3guard-gen-8b",
+ "provider": "qwen",
+ "model": "Qwen3Guard-Gen-8B",
+ "release_date": "2025-09-23",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Qwen3Guard-Gen-8B, a generative safety moderation classifier built on Qwen3-8B. It covers quickstart code for prompt and response moderation, the tri-level severity scheme and 9-category safety policy, and a performance image. No benchmark numbers appear in the text.",
+ "framework": {
+  "name": "other: Qwen3Guard safety policy (moderation taxonomy)",
+  "level_or_determination": null,
+  "quote": "In Qwen3Guard, potential harms are classified into three severity levels:",
+  "page": null
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "refusal label output"
+   ],
+   "metrics": [],
+   "finding": "The classifier outputs a refusal label (Yes/No) for responses. No refusal-rate evals are reported.",
+   "quote": "# Refusal: Yes",
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "'Jailbreak' input category"
+   ],
+   "metrics": [],
+   "finding": "Jailbreak is a category the classifier detects on inputs. Robustness is not evaluated.",
+   "quote": "**Jailbreak (Only for input):** Content that explicitly attempts to override the model's system prompt or model conditioning.",
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Claims support for 119 languages and dialects. No multilingual results are given in the text.",
+   "quote": "Qwen3Guard-Gen supports 119 languages and dialects, ensuring robust performance in global and cross-lingual applications.",
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "performance chart (image only, no numbers in text)"
+   ],
+   "metrics": [],
+   "finding": "The card describes Qwen3Guard-Gen as a safety moderation classifier with tri-level labels, a category taxonomy and refusal detection, and claims state-of-the-art results. The only results are an embedded image, with no numbers in the text.",
+   "quote": "Qwen3Guard-Gen achieves state-of-the-art performance on various safety benchmarks, excelling in both prompt and response classification across English, Chinese, and multilingual tasks.",
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. At most it is a category in the classifier taxonomy.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "The card points to the Qwen3Guard tech report for results. Policy categories (Violent, Non-violent Illegal Acts, Sexual, PII, Suicide & Self-Harm, Unethical Acts, Politically Sensitive Topics, Copyright, Jailbreak) are a taxonomy, not evaluations. Harm-specific keys are marked not covered."
+}

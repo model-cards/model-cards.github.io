@@ -1,0 +1,348 @@
+{
+ "id": "gpt-5-2-codex-system-card-addendum",
+ "provider": "openai",
+ "model": "GPT-5.2-Codex",
+ "release_date": "2025-12-18",
+ "doc_type": "addendum",
+ "length_pages": 22,
+ "summary": "Addendum for GPT-5.2-Codex, an agentic coding version of GPT-5.2 with compaction and stronger cyber capabilities. Covers conversational disallowed-content and StrongReject baselines, sandbox/network product mitigations, cyber-safety and destructive-action training, and Preparedness evals (bio, cyber incl. Irregular, AI self-improvement).",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical (precautionary); not High in Cyber or AI self-improvement",
+  "quote": "We are treating GPT-5.2-Codex as High risk in the Biological and Chemical domain. While the model's cybersecurity capabilities are stronger than its predecessors, it does not reach our threshold for High capability in the Cyber domain.",
+  "page": 8
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Cyber Range combined pass rate",
+   "category": "other",
+   "score": "72.7%",
+   "setting": "pass over 16 trials, 11 scenarios",
+   "page": 16,
+   "canonical": "Cyber Range combined pass rate"
+  },
+  {
+   "name": "Irregular cyberoffensive suite (Network / VR&E / Evasion)",
+   "category": "other",
+   "score": "79% / 80% / 49%",
+   "setting": "medium+hard only, xhigh, auto-compaction",
+   "page": 17,
+   "canonical": "Irregular cyberoffensive suite (Network / VR&E / Evasion)"
+  },
+  {
+   "name": "CyScenarioBench (Irregular)",
+   "category": "other",
+   "score": "0 challenges solved",
+   "setting": null,
+   "page": 17,
+   "canonical": "CyScenarioBench (Irregular)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Multimodal troubleshooting virology",
+    "ProtocolQA Open-Ended",
+    "Tacit knowledge and troubleshooting",
+    "TroubleshootingBench"
+   ],
+   "finding": "Treated as High; highest on virology troubleshooting, below expert baselines on ProtocolQA (figures only).",
+   "quote": "GPT-5.2-Codex is the highest-performing model on this evaluation. All models exceed the median domain expert baseline of 22.1%.",
+   "page": 9,
+   "covered": true,
+   "metrics": []
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs",
+    "CVE-Bench (pass@1 over 3 rollouts)",
+    "Cyber Range (2 new scenarios: Printer Queue, HTTPS Oracle)",
+    "Irregular suite",
+    "CyScenarioBench"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range combined pass rate",
+     "value": "72.7% (vs 81.8% gpt-5.1-codex-max)",
+     "page": 16
+    },
+    {
+     "name": "Irregular Evasion",
+     "value": "49%",
+     "page": 17
+    }
+   ],
+   "finding": "Most cyber-capable model deployed to date and strongest on professional CTFs, but SAG/leadership judged it lacks consistency needed for High.",
+   "quote": "GPT-5.2-Codex is the most cyber-capable model we've deployed to date.",
+   "page": 11,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "substantial",
+   "evals": [
+    "OpenAI PRs",
+    "MLE-bench-30",
+    "PaperBench-10",
+    "OpenAI-Proof Q&A"
+   ],
+   "finding": "Similar to GPT-5.2-Thinking; new upper bound on PaperBench; High ruled out.",
+   "quote": "The High capability threshold is defined to be equivalent to a performant mid-career research engineer and performance in the evaluations below indicate we can rule this out for GPT-5.2-Codex.",
+   "page": 17,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks (conversational)",
+    "cyber safety policy compliance"
+   ],
+   "metrics": [
+    {
+     "name": "erotic not_unsafe",
+     "value": "0.908 (vs 0.972)",
+     "page": 5
+    },
+    {
+     "name": "cyber safety production data compliance",
+     "value": "0.921",
+     "page": 7
+    }
+   ],
+   "finding": "On par with GPT-5.1-Codex-Max conversationally; cyber compliance better than 5.1 Thinking, slightly below 5.2 Thinking.",
+   "quote": "GPT-5.2-Codex generally performs on par with GPT-5.1-Codex-Max when used in a conversational setting, and within requirements for this type of model.",
+   "page": 5,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "mention",
+   "evals": [
+    "cyber helpfulness on benign requests"
+   ],
+   "finding": "Minimal regression in helpfulness on benign cyber requests.",
+   "quote": "We observe minimal regression in helpfulness on benign cyber requests",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject"
+   ],
+   "metrics": [
+    {
+     "name": "not_unsafe",
+     "value": "0.933 (vs 0.967)",
+     "page": 5
+    }
+   ],
+   "finding": "Lower than predecessor, deemed acceptable since not used conversationally.",
+   "quote": "GPT-5.2-Codex performs lower than GPT-5.1-Codex-Max, but performance here is acceptable given that the model is not expected to be used in conversational deployments.",
+   "page": 5,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "mention",
+   "evals": [
+    "sandbox and network-access defaults"
+   ],
+   "finding": "Prompt injection discussed only as a risk mitigated by sandboxing/network defaults; no prompt injection eval reported in this addendum.",
+   "quote": "Disable network access by default: This significantly reduces the risk of prompt injection attacks, data exfiltration, or the agent inadvertently connecting to malicious external resources.",
+   "page": 6,
+   "covered": true,
+   "metrics": []
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "erotic/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "erotic/minors",
+     "value": "0.955",
+     "page": 5
+    }
+   ],
+   "finding": "Single row.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "self-harm, mental health, emotional reliance production rows"
+   ],
+   "metrics": [
+    {
+     "name": "mental health",
+     "value": "0.896",
+     "page": 5
+    },
+    {
+     "name": "self-harm",
+     "value": "0.944",
+     "page": 5
+    }
+   ],
+   "finding": "Mental health and emotional reliance improve; self-harm slightly lower than predecessor.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal data row"
+   ],
+   "metrics": [
+    {
+     "name": "personal data",
+     "value": "1.000",
+     "page": 5
+    }
+   ],
+   "finding": "Single row.",
+   "quote": null,
+   "page": 5,
+   "covered": true
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "agent sandbox",
+    "network access controls",
+    "cyber monitoring/enforcement",
+    "trusted access for cyberdefense pilot",
+    "Aardvark"
+   ],
+   "finding": "Describes sandboxing per OS, configurable network allowlists, and ecosystem efforts for defenders.",
+   "quote": "Early examples of these efforts include our pilot to grant trusted access for cyberdefense and Aardvark, our agentic security researcher",
+   "page": 7,
+   "covered": true,
+   "metrics": []
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "destructive action avoidance eval"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive action avoidance",
+     "value": "0.76",
+     "page": 8
+    }
+   ],
+   "finding": "Small improvement over GPT-5.1-Codex-Max (0.75).",
+   "quote": null,
+   "page": 8,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Irregular",
+  "SecureBio (eval data)",
+  "Gryphon Scientific (eval data)"
+ ],
+ "notable_new_eval_methods": [
+  "Two new Cyber Range scenarios: Printer Queue and HTTPS Oracle (p.15)",
+  "Irregular CyScenarioBench multi-stage scenario evaluation (p.17)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "CTFs, CVE-Bench and Cyber Range have important limitations; excelling is necessary but not sufficient for High.",
+   "page": 13
+  },
+  {
+   "text": "Conversational evals not reflective of real-world risk for this coding model.",
+   "page": 4
+  }
+ ],
+ "notes": "No Apollo Research or METR evaluation, no deception/scheming section, and no prompt-injection eval, unlike GPT-5.1-Codex-Max card. Leaked Token solved via unintended attack path."
+}

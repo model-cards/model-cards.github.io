@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Model Cards Archive</title>
+<meta name="description" content="An archive of a year of frontier AI model cards, system cards, and technical reports from Anthropic, OpenAI, Google Gemini, Zhipu GLM, Moonshot Kimi, and Alibaba Qwen, as PDFs and markdown.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<main class="wrap">
+  <h1>A year of frontier model cards</h1>
+  <p class="lede">Every model card, system card, safety report, and technical report that six major labs published between October 2025 and October 2026. Each one is available as the original PDF and as searchable markdown, and the evaluations in them are extracted so you can compare them.</p>
+  <div class="stats" id="stats"></div>
+
+  <h2>Release timeline</h2>
+  <p class="small">Each mark is one document. Larger marks are longer documents. Hover for details, click to open.</p>
+  <div class="panel scroll"><svg id="timeline" role="img" aria-label="Timeline of model card releases by provider"></svg></div>
+
+  <h2>All documents</h2>
+  <div class="filters" id="filters"></div>
+  <div class="filters" id="typefilters"></div>
+  <div class="grid" id="grid"></div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+header("index.html");
+(async () => {
+  const docs = await getJSON("data/cards.json");
+  docs.sort((a, b) => (b.release_date || "").localeCompare(a.release_date || ""));
+
+  const pages = docs.reduce((s, d) => s + (d.pages || 0), 0);
+  const withSafety = docs.filter(d => d.safety_categories_covered > 0).length;
+  document.getElementById("stats").innerHTML = [
+    [docs.length, "documents"],
+    [new Set(docs.map(d => d.provider)).size, "providers"],
+    [new Set(docs.map(d => d.model)).size, "distinct models"],
+    [pages.toLocaleString(), "PDF pages"],
+    [withSafety, "report any safety eval"],
+  ].map(([v, l]) => `<div class="stat"><b>${v}</b><span>${l}</span></div>`).join("");
+
+  // ---- timeline ----
+  const svg = document.getElementById("timeline");
+  const W = 1120, rowH = 44, left = 130, top = 24, H = top + rowH * PROVIDER_ORDER.length + 10;
+  svg.setAttribute("viewBox", `0 0 ${W} ${H}`); svg.style.minWidth = "760px"; svg.style.width = "100%";
+  const t0 = Date.parse("2025-09-15"), t1 = Date.parse("2026-10-31");
+  const x = d => left + (Date.parse(d) - t0) / (t1 - t0) * (W - left - 20);
+  let s = "";
+  for (let m = 0; m <= 13; m++) {
+    const dt = new Date(Date.UTC(2025, 9 + m, 1)); const xx = x(dt.toISOString().slice(0, 10));
+    s += `<line x1="${xx}" x2="${xx}" y1="${top - 6}" y2="${H - 10}" stroke="var(--border)" stroke-width="1"/>`;
+    if (m < 13) s += `<text x="${xx + 4}" y="${top - 10}" font-size="11" fill="var(--muted)">${dt.toLocaleDateString("en-US", { month: "short", timeZone: "UTC" })}${dt.getUTCMonth() === 0 ? " '" + String(dt.getUTCFullYear()).slice(2) : ""}</text>`;
+  }
+  PROVIDER_ORDER.forEach((p, i) => {
+    const y = top + rowH * i + rowH / 2;
+    s += `<text x="${left - 12}" y="${y + 4}" text-anchor="end" font-size="13" fill="var(--text)">${PROVIDERS[p]}</text>`;
+    s += `<line x1="${left}" x2="${W - 20}" y1="${y}" y2="${y}" stroke="var(--border)" stroke-width="1"/>`;
+    docs.filter(d => d.provider === p && d.release_date).forEach(d => {
+      const r = Math.max(5, Math.min(14, 4 + Math.sqrt(d.pages || 4)));
+      s += `<a href="${cardLink(d.id)}"><circle class="tl" data-id="${esc(d.id)}" cx="${x(d.release_date)}" cy="${y}" r="${r}" fill="${pcolor(p)}" fill-opacity=".8" stroke="var(--surface)" stroke-width="2"/></a>`;
+    });
+  });
+  svg.innerHTML = s;
+  const byId = Object.fromEntries(docs.map(d => [d.id, d]));
+  svg.querySelectorAll("circle.tl").forEach(c => {
+    c.addEventListener("mousemove", ev => {
+      const d = byId[c.dataset.id];
+      tip.show(`<b>${esc(d.title)}</b>${esc(PROVIDERS[d.provider])} · ${fmtDate(d.release_date)}<br>${esc(DOC_TYPES[d.doc_type] || d.doc_type)}${d.pages ? ` · ${d.pages} pp` : ""}`, ev);
+    });
+    c.addEventListener("mouseleave", tip.hide);
+  });
+
+  // ---- filters + grid ----
+  const state = { p: new Set(), t: new Set(), q: "" };
+  const fp = document.getElementById("filters");
+  fp.innerHTML = `<input class="search" placeholder="Search models, titles…" aria-label="Search">` +
+    PROVIDER_ORDER.map(p => `<button class="chip" data-p="${p}"><span class="dot" style="background:${pcolor(p)}"></span>${PROVIDERS[p]} <span class="muted">${docs.filter(d => d.provider === p).length}</span></button>`).join("");
+  const ft = document.getElementById("typefilters");
+  ft.innerHTML = Object.entries(DOC_TYPES).filter(([k]) => docs.some(d => d.doc_type === k))
+    .map(([k, v]) => `<button class="chip" data-t="${k}">${v} <span class="muted">${docs.filter(d => d.doc_type === k).length}</span></button>`).join("");
+  const toggle = (set, v, btn) => { set.has(v) ? set.delete(v) : set.add(v); btn.classList.toggle("on"); render(); };
+  fp.querySelectorAll("[data-p]").forEach(b => b.onclick = () => toggle(state.p, b.dataset.p, b));
+  ft.querySelectorAll("[data-t]").forEach(b => b.onclick = () => toggle(state.t, b.dataset.t, b));
+  fp.querySelector("input").oninput = e => { state.q = e.target.value.toLowerCase(); render(); };
+
+  function render() {
+    const list = docs.filter(d => (!state.p.size || state.p.has(d.provider)) && (!state.t.size || state.t.has(d.doc_type))
+      && (!state.q || `${d.model} ${d.title} ${d.id}`.toLowerCase().includes(state.q)));
+    document.getElementById("grid").innerHTML = list.map(d => `
+      <a class="card" href="${cardLink(d.id)}" style="border-left-color:${pcolor(d.provider)}">
+        <span class="small">${esc(PROVIDERS[d.provider])} · ${fmtDate(d.release_date)}</span>
+        <span class="model">${esc(d.model)}</span>
+        <span class="small">${esc(d.title)}</span>
+        <span class="meta"><span class="tag">${esc(DOC_TYPES[d.doc_type] || d.doc_type)}</span>
+          ${d.pages ? `<span class="tag">${d.pages} pp</span>` : ""}
+          ${d.open_weights ? `<span class="tag ow">open weights</span>` : ""}
+          ${d.safety_categories_covered != null ? `<span class="tag">${d.safety_categories_covered} safety areas</span>` : ""}</span>
+      </a>`).join("") || `<p class="muted">No documents match.</p>`;
+  }
+  render();
+})();
+</script>
+</body>
+</html>

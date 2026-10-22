@@ -1,0 +1,315 @@
+{
+ "id": "gpt-5-system-card-addendum-sensitive-conversations",
+ "provider": "openai",
+ "model": "GPT-5 (Oct 3 2025 update)",
+ "release_date": "2025-10-27",
+ "doc_type": "addendum",
+ "length_pages": 4,
+ "summary": "Short addendum reporting baseline safety evaluations comparing the Aug 15 and Oct 3 2025 versions of GPT-5 Instant, after an update made with 170+ mental health experts to better handle distress. Covers production disallowed-content benchmarks (including new emotional reliance and mental health evals), StrongReject jailbreaks, image input, and SimpleQA hallucination.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SimpleQA",
+   "category": "reasoning_knowledge",
+   "score": "accuracy 0.44",
+   "setting": "gpt-5-oct-3",
+   "page": 4,
+   "canonical": "SimpleQA"
+  }
+ ],
+ "safety": {
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks disallowed content (not_unsafe, LLM-graded)",
+    "image input evaluations"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors not_unsafe",
+     "value": "0.959",
+     "page": 3
+    },
+    {
+     "name": "illicit/violent not_unsafe",
+     "value": "0.834",
+     "page": 3
+    },
+    {
+     "name": "harassment/threatening not_unsafe",
+     "value": "0.706",
+     "page": 3
+    },
+    {
+     "name": "image input attack planning not_unsafe",
+     "value": "0.995",
+     "page": 4
+    }
+   ],
+   "finding": "The Oct 3 model improves not_unsafe on most production-benchmark categories versus Aug 15 (extremism slightly declines); image-input scores are near ceiling.",
+   "quote": "The primary metric is not_unsafe, checking that the model did not produce output that is disallowed under the relevant OpenAI policy.",
+   "page": 2,
+   "covered": true
+  },
+  "jailbreak_robustness": {
+   "depth": "light",
+   "evals": [
+    "StrongReject"
+   ],
+   "metrics": [
+    {
+     "name": "illicit/non-violent-crime not_unsafe",
+     "value": "0.957",
+     "page": 3
+    },
+    {
+     "name": "violence not_unsafe",
+     "value": "0.968",
+     "page": 3
+    }
+   ],
+   "finding": "StrongReject not_unsafe improves slightly in all four categories for the Oct 3 model.",
+   "quote": "StrongReject [1]: inserts a known jailbreak into an example from the above safety refusal eval.",
+   "page": 3,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "substantial",
+   "evals": [
+    "Emotional Reliance not_unsafe (new)",
+    "Mental Health not_unsafe (new; delusions, psychosis, mania)",
+    "self-harm/intent",
+    "self-harm/instructions"
+   ],
+   "metrics": [
+    {
+     "name": "emotional reliance not_unsafe",
+     "value": "0.507 -> 0.976",
+     "page": 3
+    },
+    {
+     "name": "mental health not_unsafe",
+     "value": "0.273 -> 0.926",
+     "page": 3
+    },
+    {
+     "name": "self-harm/intent",
+     "value": "0.933",
+     "page": 3
+    }
+   ],
+   "finding": "Central focus of the addendum: the update with mental health experts sharply raises scores on new emotional reliance and mental health evals and on self-harm categories.",
+   "quote": "reducing responses that fall short of our desired behavior by 65-80%.",
+   "page": 2,
+   "covered": true
+  },
+  "honesty_hallucination": {
+   "depth": "light",
+   "evals": [
+    "SimpleQA"
+   ],
+   "metrics": [
+    {
+     "name": "SimpleQA hallucination rate",
+     "value": "0.52 (vs 0.49 Aug 15)",
+     "page": 4
+    }
+   ],
+   "finding": "SimpleQA accuracy dropped slightly (0.46 to 0.44) and hallucination rate rose (0.49 to 0.52).",
+   "quote": "We consider two metrics: accuracy (did the model answer the question correctly) and hallucination rate",
+   "page": 4,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors not_unsafe",
+     "value": "0.959",
+     "page": 3
+    }
+   ],
+   "finding": "Only a single sexual/minors row in the disallowed content table.",
+   "quote": null,
+   "page": 3,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "light",
+   "evals": [
+    "personal-data production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "personal-data not_unsafe",
+     "value": "0.908",
+     "page": 3
+    }
+   ],
+   "finding": "Single personal-data row in disallowed content table.",
+   "quote": null,
+   "page": 3,
+   "covered": true
+  },
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "more than 170 mental health experts (consulted)"
+ ],
+ "notable_new_eval_methods": [
+  "Emotional Reliance not_unsafe and Mental Health not_unsafe evaluation sets, created with this launch (p.2)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "New evals were deliberately built around cases where existing models failed; error rates are not representative of average production traffic.",
+   "page": 2
+  },
+  {
+   "text": "These are new evaluations and may evolve over time.",
+   "page": 2
+  }
+ ],
+ "notes": "No Preparedness Framework, capability, or frontier-risk evaluation; purely a behavioral safety update."
+}

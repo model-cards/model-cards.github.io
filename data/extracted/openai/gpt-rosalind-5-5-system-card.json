@@ -1,0 +1,295 @@
+{
+ "id": "gpt-rosalind-5-5-system-card",
+ "provider": "openai",
+ "model": "GPT-Rosalind-5.5",
+ "release_date": "2026-06-03",
+ "doc_type": "system_card",
+ "length_pages": 11,
+ "summary": "System card for GPT-Rosalind-5.5, a life-sciences model incrementally trained from GPT-5.5 and deployed via trusted access to vetted organizations. Reports beneficial biology capability evals and Preparedness bio/chem evals, and describes a safeguards approach relying on trusted access, model-level boundaries and monitoring rather than real-time blocking monitors.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High (below Critical) in Biological and Chemical; cyber at or below GPT-5.5; AI Self-Improvement relies on GPT-5.5 assessment (below High)",
+  "quote": "Under our Preparedness Framework, the Preparedness evaluations in the Biological and Chemical domain met our threshold for High capability while falling below the threshold for Critical.",
+  "page": 3
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Medicinal chemistry eval (internal, multimodal)",
+   "category": "other",
+   "score": "27.5%",
+   "setting": "pass@1",
+   "page": 4
+  },
+  {
+   "name": "Genebench",
+   "category": "agentic_tool_use",
+   "score": "21.6%",
+   "setting": "pass@1",
+   "page": 4
+  },
+  {
+   "name": "LifeSciBench",
+   "category": "other",
+   "score": "63.4%",
+   "setting": "pass@1",
+   "page": 5
+  },
+  {
+   "name": "Labwork Bench",
+   "category": "other",
+   "score": "63.2%",
+   "setting": "pass@1",
+   "page": 5
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "ProtocolQA Open-Ended",
+    "TroubleshootingBench",
+    "Biorisk knowledge (Gryphon Scientific)",
+    "Multi-select Virology Troubleshooting (SecureBio)",
+    "Hard-negative protein binding prediction",
+    "DNA sequence design for TF binding (vs Ledidi, Nucleobench)"
+   ],
+   "metrics": [
+    {
+     "name": "ProtocolQA Open-Ended pass@1",
+     "value": "36.4%",
+     "page": 6
+    },
+    {
+     "name": "TroubleshootingBench pass@1",
+     "value": "53.31%",
+     "page": 7
+    },
+    {
+     "name": "Biorisk knowledge cons@32",
+     "value": "81.1%",
+     "page": 7
+    },
+    {
+     "name": "Multi-select Virology pass@1",
+     "value": "51.2%",
+     "page": 7
+    },
+    {
+     "name": "Hard-negative protein binding pass@4",
+     "value": "3.13% (50% concern threshold)",
+     "page": 8
+    },
+    {
+     "name": "DNA TF-binding design pass@1",
+     "value": "13.64%",
+     "page": 8
+    }
+   ],
+   "finding": "Meets or exceeds GPT-5.5 on all but one bio eval; treated as High but below Critical; protein-binding and DNA design far below proposed concern thresholds.",
+   "quote": "As we did for GPT-5.5, we are treating this launch as High capability in the Biological and Chemical domain.",
+   "page": 5
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Cyber capabilities stated to be at or below GPT-5.5; inherits GPT-5.5 cyber safeguards. No eval results given.",
+   "quote": "Cybersecurity capabilities were found to be at or below the level of GPT-5.5.",
+   "page": 3
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Relies on GPT-5.5's AI Self-Improvement assessment rather than new evals.",
+   "quote": "we rely on GPT-5.5's existing Preparedness assessment for AI Self-Improvement, where GPT-5.5 did not meet the threshold for High capability.",
+   "page": 3
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Model trained not to refuse sophisticated biology queries but to refuse weaponization; general safety training inherited from GPT-5.5, no results reported.",
+   "quote": "Unlike GPT-5.5, it is trained not to refuse sophisticated biology queries, and leverages a trusted access and responsible deployment structure as the primary safeguard.",
+   "page": 3
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [],
+   "metrics": [],
+   "finding": "Four-part safeguards: trusted access review, model-level bio/cyber boundaries, monitoring/review/revocation, contractual security controls; no real-time blocking monitors.",
+   "quote": "Unlike our safeguards posture for our more broadly distributed flagship models, in this case we are not deploying automated monitors for real-time blocking of potentially unsafe generations.",
+   "page": 9
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Gryphon Scientific (dataset)",
+  "SecureBio (dataset)"
+ ],
+ "notable_new_eval_methods": [
+  "Hard-negative protein binding prediction eval with proposed 50% biorisk threshold (p.7-8)",
+  "DNA sequence design for transcription factor binding vs Ledidi baseline, 80% win-rate threshold (p.8)",
+  "Beneficial capability evals: Genebench, LifeSciBench, Labwork Bench (p.4-5)",
+  "Government trusted-access pathway (p.9)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Non-biology capabilities and safety not re-evaluated; assumed comparable to GPT-5.5.",
+   "page": 3
+  },
+  {
+   "text": "Correction to GPT-5.5 protein-binding score (previously reported pass@1 as pass@4).",
+   "page": 3
+  }
+ ],
+ "notes": "Specialized domain model; no general-safety, alignment or third-party testing results. Safety framing centers on deployment access controls."
+}

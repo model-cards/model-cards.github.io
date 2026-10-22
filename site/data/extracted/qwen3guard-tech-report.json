@@ -1,0 +1,416 @@
+{
+ "id": "qwen3guard-tech-report",
+ "provider": "qwen",
+ "model": "Qwen3Guard",
+ "release_date": "2025-10-16",
+ "doc_type": "safety_report",
+ "length_pages": 28,
+ "summary": "Technical report for Qwen3Guard, a family of multilingual (119-language) safety guardrail classifiers in Generative and token-level Stream variants (0.6B/4B/8B) with safe/controversial/unsafe labels. It benchmarks them on English, Chinese and multilingual prompt/response moderation sets against LlamaGuard, WildGuard, ShieldGemma, NemoGuard and PolyGuard. It also shows two applications: safety RL on Qwen3-4B and real-time intervention through CARE.",
+ "framework": {
+  "name": "other: Qwen3Guard safety policy (classification taxonomy, not a frontier-risk framework)",
+  "level_or_determination": null,
+  "quote": "In Qwen3Guard, the safety policy adheres to the following principles:",
+  "page": 3
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Arena-Hard v2",
+   "category": "instruction_following",
+   "score": "10.7 (non-think) / 16.6 (think)",
+   "setting": "Qwen3-4B-SafeRL (Hybrid reward), win rate vs GPT-4.1; derived model, not the guard",
+   "page": 12,
+   "canonical": "Arena-Hard v2"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "18.2 (non-think) / 63.5 (think)",
+   "setting": "Qwen3-4B-SafeRL (Hybrid), Pass@1; utility check after safety RL",
+   "page": 12,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "27.7 (non-think) / 47.5 (think)",
+   "setting": "Qwen3-4B-SafeRL (Hybrid), Pass@1",
+   "page": 12,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "40.8 (non-think) / 51.2 (think)",
+   "setting": "Qwen3-4B-SafeRL (Hybrid), Pass@1",
+   "page": 12,
+   "canonical": "GPQA Diamond"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Safety RL on Qwen3-4B with Qwen3Guard reward; WildJailbreak eval set (2,000 harmful + 210 benign prompts); safety judged by Qwen3-235B-Instruct-2507 and WildGuard"
+   ],
+   "metrics": [
+    {
+     "name": "Qwen3-4B non-think safety rate (Qwen3-235B judge / WildGuard): base -> SafeRL Hybrid",
+     "value": "47.5/64.7 -> 86.5/98.1",
+     "page": 12
+    },
+    {
+     "name": "Qwen3-4B think safety rate: base -> SafeRL Hybrid",
+     "value": "43.8/59.0 -> 83.4/97.4",
+     "page": 12
+    }
+   ],
+   "finding": "The base Qwen3-4B is judged safe on less than about 65% of WildJailbreak prompts. Safety RL with a Qwen3Guard-based hybrid reward raises this to about 97-98% (WildGuard judge), and the authors avoid using Qwen3Guard itself as the evaluator.",
+   "quote": "To mitigate risks of metric hack, we avoid using Qwen3Guard for safety evaluation.",
+   "page": 12
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "WildGuard refusal classification in Safety RL",
+    "XSTest (response classification and refusal detection)"
+   ],
+   "metrics": [
+    {
+     "name": "Refusal rate, Qwen3-4B non-think: base / Guard-only RL / Hybrid RL",
+     "value": "12.9 / 96.6 / 5.3",
+     "page": 12
+    },
+    {
+     "name": "Refusal rate, Qwen3-4B think: base / Guard-only RL / Hybrid RL",
+     "value": "6.5 / 95.2 / 6.2",
+     "page": 12
+    }
+   ],
+   "finding": "When the RL reward targets safety only, refusal rates exceed 95%. The hybrid reward, which penalizes refusals and adds a helpfulness score, keeps refusals at the base-model level.",
+   "quote": "The Guard-only reward achieves near-perfect safety, but this is accomplished through an extremely high refusal rate.",
+   "page": 12
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "WildJailbreak (vanilla and adversarial harmful) used for Safety RL training/eval",
+    "'Jailbreak' input category in guard policy"
+   ],
+   "metrics": [],
+   "finding": "Jailbreak is an input category the classifier detects, and WildJailbreak is the testbed for safety RL. The guard model's own robustness to adversarial attack is not evaluated and is listed as a limitation.",
+   "quote": "Like most other guardrail models, Qwen3Guard may be susceptible to adversarial prompt engineering",
+   "page": 20
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Bias appears only as part of the 'Unethical Acts' category and as a stated limitation of the classifier. There is no bias evaluation.",
+   "quote": "model may disproportionately flag content from certain demographic, linguistic, or cultural groups as “unsafe” or “controversial,” even when such content is contextually appropriate.",
+   "page": 21
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Suicide & Self-Harm category"
+   ],
+   "metrics": [],
+   "finding": "Suicide and self-harm is a classifier category only. No dedicated evaluation is reported.",
+   "quote": "Suicide & Self-Harm:** Content advocating, directly encouraging, or detailing methods for self-harm, suicide",
+   "page": 3
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "PII category in policy / confusion matrix"
+   ],
+   "metrics": [],
+   "finding": "PII is one of the classifier's categories and appears in category-classification confusion matrices (figure only). There is no privacy eval of a model.",
+   "quote": "Personally Identifiable Information:** Content offering unauthorized sharing or disclosure of sensitive personal identifying information",
+   "page": 3
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "PolST in-house politically sensitive topics dataset (1,412 prompts / 4,038 responses)"
+   ],
+   "metrics": [
+    {
+     "name": "Qwen3Guard-8B-Gen PolST prompt / response F1 (strict)",
+     "value": "88.6 / 90.4 (prev. best 48.3 / 46.5)",
+     "page": 8
+    }
+   ],
+   "finding": "This is classifier detection of 'Politically Sensitive Topics', defined as false information about governments, history or public figures, measured on an in-house Chinese set. There is no election-integrity or persuasion eval.",
+   "quote": "We further utilize an in-house dataset (PolST) related to political sensitive topics",
+   "page": 7
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not evaluated. The guard taxonomy may name related harm categories (e.g., weapons under 'Violent', hacking under 'Non-violent Illegal Acts'), but no evaluation is reported.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Chinese translated ToxicChat / WildGuardTest / XSTest / BeaverTails",
+    "PolST (in-house Chinese politically-sensitive-topics set)",
+    "RTP-LX (prompt, 40 languages)",
+    "PolyGuard-Prompt",
+    "PolyGuard-Response"
+   ],
+   "metrics": [
+    {
+     "name": "Qwen3Guard-8B-Gen Chinese prompt / response avg F1",
+     "value": "85.1 / 87.1 (prev. best avg 68.4 / 63.0)",
+     "page": 8
+    },
+    {
+     "name": "Qwen3Guard-8B-Gen RTP-LX multilingual prompt avg F1",
+     "value": "85.0 (PolyGuard-Qwen-7B 80.9)",
+     "page": 8
+    },
+    {
+     "name": "Qwen3Guard-4B-Gen PolyGuard-Response multilingual avg F1",
+     "value": "78.1 (PolyGuard-Qwen-7B 74.0)",
+     "page": 8
+    },
+    {
+     "name": "Qwen3Guard-8B-Stream RTP-LX / PolyGuard-Response avg F1",
+     "value": "82.7 / 75.8",
+     "page": 17
+    }
+   ],
+   "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses.",
+   "quote": "Qwen3Guard-Gen outperforms prior Guard models on 6 out of 10 major languages in prompt classification and achieves top performance across all 10 in response classification.",
+   "page": 9
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "ToxicChat",
+    "OpenAIModeration",
+    "Aegis",
+    "Aegis2.0",
+    "SimpleSafetyTests",
+    "HarmBench (prompt & response)",
+    "WildGuardTest",
+    "SafeRLHF",
+    "BeaverTails",
+    "XSTest (response)",
+    "'Think' in-house reasoning-trace moderation set (Qwen3GuardTest)",
+    "category-classification confusion matrices",
+    "refusal detection (XSTest, WildGuardTest)",
+    "Stream Qwen3Guard detection latency (sentence-level human annotation)",
+    "CARE detect-rollback-intervene with Stream Qwen3Guard",
+    "baselines: LlamaGuard3/4, WildGuard-7B, ShieldGemma-9B/27B, NemoGuard-8B, PolyGuard-Qwen-7B"
+   ],
+   "metrics": [
+    {
+     "name": "Qwen3Guard-8B-Gen English prompt classification avg F1 (best mode per benchmark)",
+     "value": "90.0 (vs PolyGuard-Qwen-7B 87.0, WildGuard-7B 85.8)",
+     "page": 7
+    },
+    {
+     "name": "Qwen3Guard-8B-Gen English response classification avg F1",
+     "value": "83.9 (vs WildGuard-7B 79.9)",
+     "page": 7
+    },
+    {
+     "name": "Qwen3Guard-0.6B-Gen English prompt / response avg F1",
+     "value": "88.1 / 82.0",
+     "page": 7
+    },
+    {
+     "name": "Qwen3Guard-8B-Gen 'Think' (reasoning-trace) response F1",
+     "value": "84.0 strict (prev. best 81.1)",
+     "page": 7
+    },
+    {
+     "name": "Refusal detection F1, Qwen3Guard-4B-Gen (XSTest / WildGuardTest)",
+     "value": "94.6 / 90.2 (WildGuard-7B 93.3 / 88.6)",
+     "page": 10
+    },
+    {
+     "name": "Qwen3Guard-8B-Stream English prompt / response avg F1",
+     "value": "88.3 / 81.1",
+     "page": 15
+    },
+    {
+     "name": "Stream detection latency, response only: exact hit rate",
+     "value": "~86.0%",
+     "page": 18
+    },
+    {
+     "name": "Stream detection with thinking content: unsafe detected within first 128 tokens",
+     "value": "~66.8%",
+     "page": 18
+    },
+    {
+     "name": "CARE + Qwen3Guard-4B-Stream safety rate on Qwen3-4B (Qwen3-235B judge), non-think / think",
+     "value": "47.5 -> 85.7 / 43.8 -> 72.0",
+     "page": 19
+    }
+   ],
+   "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application.",
+   "quote": "Qwen3Guard-Gen achieves top performance on 8 out of 14 public English benchmarks.",
+   "page": 7
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Moderation of reasoning ('thinking') traces",
+    "Copyright Violation category",
+    "controversial-label ablation"
+   ],
+   "metrics": [
+    {
+     "name": "Category classification",
+     "value": "strong except 'Copyright' (rare class)",
+     "page": 9
+    }
+   ],
+   "finding": "Introduces a tri-level safe, controversial or unsafe label to handle policy inconsistency across benchmarks, and moderation of reasoning traces. Category classification is weak for Copyright.",
+   "quote": "Evaluating the safety of internal reasoning traces (“thinking content”) is a novel challenge for Guard models",
+   "page": 9
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "'Controversial' severity label derived via strict/loose model voting (p.5-6, 9)",
+  "'Think' benchmark for moderating reasoning traces, released as Qwen3GuardTest (p.6, 9)",
+  "Token-level Stream guard with detection-latency eval against sentence-level human annotation (p.18)",
+  "Safety RL using guard as reward with hybrid safety/helpfulness/refusal reward (p.11-12)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Guard may be vulnerable to adversarial paraphrasing/obfuscation; performance may degrade under targeted attacks.",
+   "page": 20
+  },
+  {
+   "text": "Annotations reflect biases/cultural assumptions; may disproportionately flag content from some groups.",
+   "page": 21
+  },
+  {
+   "text": "Stream variant has higher FP/FN in OOD and low-resource languages.",
+   "page": 21
+  },
+  {
+   "text": "Not sensitive to regional legal frameworks or cultural norms; no geolocation/policy-adaptive mechanism.",
+   "page": 21
+  },
+  {
+   "text": "Safety policies are inconsistent across public benchmarks, undermining binary-label evaluation.",
+   "page": 9
+  },
+  {
+   "text": "Qwen3Guard 'is not a complete solution' to AI safety.",
+   "page": 20
+  }
+ ],
+ "notes": "Safety-classifier report, not a frontier model card. No CBRN/cyber/autonomy/alignment evals of any model. Capability benchmarks listed are utility checks of the derived Qwen3-4B-SafeRL model."
+}

@@ -1,0 +1,572 @@
+{
+ "id": "qwen3.5-omni-tech-report",
+ "provider": "qwen",
+ "model": "Qwen3.5-Omni",
+ "release_date": "2026-04-17",
+ "doc_type": "tech_report",
+ "length_pages": 28,
+ "summary": "Technical report for Qwen3.5-Omni (Plus and Flash), a Thinker-Talker omni-modal Hybrid-Attention MoE model scaling to hundreds of billions of parameters with 256K context. It covers audio/video/vision/text understanding, streaming speech generation (ARIA), multilingual and zero-shot/cross-lingual voice cloning, and 'audio-visual vibe coding'. Evaluation covers text, audio, vision, audio-visual and speech-generation benchmarks only.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "85.9",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "MMLU-Redux",
+   "category": "reasoning_knowledge",
+   "score": "94.2",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "MMLU-Redux"
+  },
+  {
+   "name": "SuperGPQA",
+   "category": "reasoning_knowledge",
+   "score": "66.4",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "SuperGPQA"
+  },
+  {
+   "name": "C-Eval",
+   "category": "reasoning_knowledge",
+   "score": "92.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "C-Eval"
+  },
+  {
+   "name": "IFEval",
+   "category": "instruction_following",
+   "score": "89.7",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "IFEval"
+  },
+  {
+   "name": "IFBench",
+   "category": "instruction_following",
+   "score": "52.6",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "IFBench"
+  },
+  {
+   "name": "AA-LCR",
+   "category": "long_context",
+   "score": "57.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "AA-LCR"
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "59.6",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "LongBench v2"
+  },
+  {
+   "name": "GPQA",
+   "category": "reasoning_knowledge",
+   "score": "83.9",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "65.6",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "HMMT Nov 25",
+   "category": "math",
+   "score": "84.4",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "HMMT Nov 25"
+  },
+  {
+   "name": "IMOAnswerBench",
+   "category": "math",
+   "score": "65.5",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "IMOAnswerBench"
+  },
+  {
+   "name": "BFCL-V4",
+   "category": "agentic_tool_use",
+   "score": "63.3",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "BFCL-V4"
+  },
+  {
+   "name": "TAU2-Bench",
+   "category": "agentic_tool_use",
+   "score": "81.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 10,
+   "canonical": "τ²-bench"
+  },
+  {
+   "name": "MMAU",
+   "category": "multimodal",
+   "score": "82.2",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "MMAU"
+  },
+  {
+   "name": "MMAR",
+   "category": "multimodal",
+   "score": "80.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "MMAR"
+  },
+  {
+   "name": "MMSU",
+   "category": "multimodal",
+   "score": "82.8",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "MMSU"
+  },
+  {
+   "name": "RUL-MuchoMusic",
+   "category": "multimodal",
+   "score": "72.4",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "RUL-MuchoMusic"
+  },
+  {
+   "name": "VoiceBench",
+   "category": "multimodal",
+   "score": "93.1",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "VoiceBench"
+  },
+  {
+   "name": "WildSpeech-Bench",
+   "category": "multimodal",
+   "score": "75.4",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "WildSpeech-Bench"
+  },
+  {
+   "name": "Fleurs ASR top60 (WER, lower better)",
+   "category": "multimodal",
+   "score": "6.55",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "Fleurs ASR top60 (WER, lower better)"
+  },
+  {
+   "name": "Librispeech clean/other (WER)",
+   "category": "multimodal",
+   "score": "1.11 / 2.23",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 11,
+   "canonical": "Librispeech clean/other (WER)"
+  },
+  {
+   "name": "MMMU",
+   "category": "multimodal",
+   "score": "80.1",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MMMU"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "73.9",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "73.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MathVision"
+  },
+  {
+   "name": "MathVista (mini)",
+   "category": "multimodal",
+   "score": "86.1",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MathVista (mini)"
+  },
+  {
+   "name": "RealWorldQA",
+   "category": "multimodal",
+   "score": "84.1",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "RealWorldQA"
+  },
+  {
+   "name": "MMStar",
+   "category": "multimodal",
+   "score": "79.4",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MMStar"
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "65.3",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "SimpleVQA"
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "72.5",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "CharXiv (RQ)"
+  },
+  {
+   "name": "OCRBench",
+   "category": "multimodal",
+   "score": "91.3",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "OCRBench"
+  },
+  {
+   "name": "VideoMME (w/o sub)",
+   "category": "multimodal",
+   "score": "81.9",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "VideoMME (w/o sub)"
+  },
+  {
+   "name": "MLVU",
+   "category": "multimodal",
+   "score": "86.8",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MLVU"
+  },
+  {
+   "name": "MVBench",
+   "category": "multimodal",
+   "score": "79.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MVBench"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "71.2",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "SLAKE",
+   "category": "multimodal",
+   "score": "84.7",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "SLAKE"
+  },
+  {
+   "name": "MedXpertQA-MM",
+   "category": "multimodal",
+   "score": "54.7",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MedXpertQA-MM"
+  },
+  {
+   "name": "MMLongBench-Doc",
+   "category": "long_context",
+   "score": "57.5",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 12,
+   "canonical": "MMLongBench-Doc"
+  },
+  {
+   "name": "DailyOmni",
+   "category": "multimodal",
+   "score": "84.6",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 13,
+   "canonical": "DailyOmni"
+  },
+  {
+   "name": "WorldSense",
+   "category": "multimodal",
+   "score": "62.8",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 13,
+   "canonical": "WorldSense"
+  },
+  {
+   "name": "AVUT",
+   "category": "multimodal",
+   "score": "85.0",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 13,
+   "canonical": "AVUT"
+  },
+  {
+   "name": "VideoMME w/ audio",
+   "category": "multimodal",
+   "score": "83.7",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 13,
+   "canonical": "VideoMME w/ audio"
+  },
+  {
+   "name": "Omni-Cloze",
+   "category": "multimodal",
+   "score": "64.8",
+   "setting": "Qwen3.5-Omni-Plus",
+   "page": 13,
+   "canonical": "Omni-Cloze"
+  },
+  {
+   "name": "OmniGAIA",
+   "category": "agentic_tool_use",
+   "score": "57.2",
+   "setting": "Qwen3.5-Omni-Plus; DeepSeek-V3.2-Thinking judge",
+   "page": 13,
+   "canonical": "OmniGAIA"
+  },
+  {
+   "name": "SEED-TTS test-zh / test-en (WER)",
+   "category": "multimodal",
+   "score": "0.99 / 1.26",
+   "setting": "Qwen3.5-Omni-Plus; zero-shot TTS",
+   "page": 14,
+   "canonical": "SEED-TTS test-zh / test-en (WER)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Hallucination comes up only as a training-data issue (captioner-augmented curation to reduce hallucinations from noisy data). No hallucination eval is reported.",
+   "quote": "this stage mitigates hallucinations introduced by noisy data in the initial pre-training phase",
+   "page": 8
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "There is no safety evaluation or discussion at all, despite introducing zero-shot and cross-lingual voice cloning from user-provided samples (p.5, 15): no consent, misuse, deepfake or watermarking discussion. The model is API-only. Safety keyword hits are only technical (alignment stage, HarmonixSet, hallucination in data curation)."
+}

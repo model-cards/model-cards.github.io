@@ -1,0 +1,410 @@
+{
+ "id": "gemini-3-7-flash-fsf-report",
+ "provider": "gemini",
+ "model": "Gemini 3.7 Flash",
+ "release_date": "2026-08-13",
+ "doc_type": "safety_report",
+ "length_pages": 41,
+ "summary": "Frontier Safety Framework (v3.1) report for Gemini 3.7 Flash, run as a precautionary light-weight assessment because the Flash model exceeds Gemini 3 Pro and 3.1 Pro. It covers CBRN (CCL and new TCLs), cyber, harmful manipulation, and ML R&D and misalignment, plus a detailed misuse-safeguards evaluation. No T/CCL was reached; alert thresholds were reached for bio CBRN and cyber.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No T/CCLs reached; CBRN (bio) and Cyber Uplift Level 1 alert thresholds reached; acceptable for deployment",
+  "quote": "Overall, we found that Gemini 3.7 Flash did not reach any of our T/CCLs, and in line with the risk acceptance criteria outlined in our FSF (and our general responsibility and safety practices), we deemed Gemini 3.7 Flash was acceptable for deployment.",
+  "page": 3
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "expert red teaming vs web baseline (bio: 2 scenarios, 8 SMEs; chem: 2 scenarios, 4 SMEs; rad/nuc: 1 expert, 7 scenarios)",
+    "0-100 actionability rubric",
+    "automated eval-awareness/sandbagging check on 5 bio OEQ scenarios",
+    "Hong et al. (2026) novice wet-lab RCT (mid-2025 LLMs) as prior evidence"
+   ],
+   "metrics": [
+    {
+     "name": "BIO-1 red-teaming vs web baseline",
+     "value": "69.6 -> 77.6 (+8.0)",
+     "page": 10
+    },
+    {
+     "name": "BIO-2 red-teaming vs web baseline",
+     "value": "67.0 -> 79.1 (+12.1)",
+     "page": 10
+    },
+    {
+     "name": "Chem scenarios vs web baseline",
+     "value": "+24.1 (47.0 -> 71.1) and +27.9 (41.0 -> 68.9)",
+     "page": 13
+    },
+    {
+     "name": "CBRN Uplift Level 1 CCL",
+     "value": "not reached; alert threshold reached (bio)",
+     "page": 7
+    },
+    {
+     "name": "CBRN Uplift TCL",
+     "value": "not reached (chem reasonable confidence; rad/nuc moderate confidence)",
+     "page": 13
+    }
+   ],
+   "finding": "In each bio scenario one of three scientific red teamers elicited enough information to plan an attack, but with heavy expert steering, so the bio CCL alert threshold was judged reached but not the CCL. Chemical, radiological and nuclear TCLs were ruled out.",
+   "quote": "Expert red teaming demonstrated a modest capability uplift over web baselines and 1/3 red teamers were able to elicit accurate and actionable information across the full harm journey for both tested scenarios, prompting us to assess the model has surpassed our alert threshold.",
+   "page": 14
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "proxy evaluations (cyber, software engineering, aggregate capability index per Ho et al. 2025) with linear uplift predictor",
+    "cost-reduction uplift model over 22 historical attacks and 26 operational steps with TAC levels (25+ offensive security professionals)",
+    "key skills benchmark NOT run due to ongoing security improvements"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Uplift Level 1 CCL",
+     "value": "not reached; alert threshold reached",
+     "page": 15
+    }
+   ],
+   "finding": "Proxy predictors gave uplift estimates above previous models (alert threshold) but none near the CCL. The key skills benchmark was not run for capability, only under mitigations.",
+   "quote": "While many of these predictors yielded uplift estimates higher than previous models', and therefore indicate Gemini 3.7 Flash reaching the alert threshold, none of them yielded estimates nearing our CCL threshold.",
+   "page": 17
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "GRB internal research-engineering benchmark (74 tasks, 2-hour timeout, internal agent scaffolding)"
+   ],
+   "metrics": [
+    {
+     "name": "GRB average pass@1",
+     "value": "27% (max 47% if all bugged tasks counted as passes; rule-out threshold 90%)",
+     "page": 37
+    },
+    {
+     "name": "Gemini 3.1 Pro GRB (rough)",
+     "value": "~16%",
+     "page": 37
+    },
+    {
+     "name": "GRB tasks with bugs",
+     "value": "approximately 20%",
+     "page": 37
+    }
+   ],
+   "finding": "Gemini 3.7 Flash scored 27% pass@1 on GRB, up from about 16% for 3.1 Pro but well below the 90% rule-out threshold. ML R&D Acceleration and Automation CCLs were not reached.",
+   "quote": "Gemini 3.7 Flash achieves an average pass@1 score of 27%. This is well below our CCL rule-out threshold of a pass@1 of 90%.",
+   "page": 37
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Cyber Conversational Evals (~1,000 examples, 1-5 turns)",
+    "CBRN Conversational Evals (~1500 SME-written examples)",
+    "key skills benchmark run with mitigations",
+    "violation rate metric"
+   ],
+   "metrics": [
+    {
+     "name": "Bio/chem weapons topic violations",
+     "value": "~0%",
+     "page": 31
+    },
+    {
+     "name": "Key skills benchmark with mitigations",
+     "value": "refuses on 100% of milestones",
+     "page": 31
+    }
+   ],
+   "finding": "Safeguard coverage evals show about 0% violations for bio and chem weapons queries and higher CBRN coverage than 3.1 Pro and 3.6 Flash; results are mostly shown in a figure.",
+   "quote": "We achieve ~0% violations for topics related to bio weapons queries (sourcing, enhancement, weaponization) and chemical weapons.",
+   "page": 31
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CBRN Science Eval (700+ benign examples)",
+    "benign refusal rate",
+    "random traffic assumed benign"
+   ],
+   "metrics": [],
+   "finding": "Stricter CBRN mitigations sacrifice some dual-use bio/chem and cyber-adjacent security research queries; academic and medical benchmarks are reportedly unaffected.",
+   "quote": "We sacrifice some dual-use bio/chem research queries and cyber-adjacent security research, but academic/medical/reasoning benchmarks are untouched.",
+   "page": 31
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Cyber Static Jailbreak Eval",
+    "Cyber Adaptive Jailbreak Eval (automated attacker)",
+    "Gray Swan Cyber Eval (28 tasks, Shade agent)",
+    "Bio Static Jailbreak Eval",
+    "Chem/Bio Dynamic Jailbreak Eval",
+    "Gray Swan Bio Eval (53 tasks, Shade agent)",
+    "OSR vs QSR metrics",
+    "expert CBRN red teaming without out-of-model safeguards"
+   ],
+   "metrics": [
+    {
+     "name": "CBRN objective success rate vs common jailbreak templates",
+     "value": "close to 0%",
+     "page": 33
+    }
+   ],
+   "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk.",
+   "quote": "In CBRN, we see close to 0% objective success rate against common jailbreaks templates and decent robustness against adaptive and dynamic attackers.",
+   "page": 33
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Stealth and Situational Awareness (SSA) evals: 4 stealth + 11 situational awareness challenges (open-source on GitHub)",
+    "human baseline (top 50%) for stealth",
+    "automated and manual sandbagging/eval-awareness checks across domains"
+   ],
+   "metrics": [
+    {
+     "name": "Stealth challenges passed",
+     "value": "3/4 (Cover Your Tracks failure attributed to refusal)",
+     "page": 41
+    },
+    {
+     "name": "Situational awareness challenges passed",
+     "value": "6/11",
+     "page": 41
+    },
+    {
+     "name": "Stealth and Situational Awareness TCL",
+     "value": "not reached",
+     "page": 34
+    }
+   ],
+   "finding": "Stronger than prior models: first model to pass 'max tokens' and 'max tool calls' and to show signs of life on irreversibility, but below TCL. Eval awareness was observed, and refusal of the sabotage side task invalidated Cover Your Tracks.",
+   "quote": "the model is observant enough to correctly assess when it is in a testing environment, but it cannot successfully bypass testing restrictions and often commits fatal mistakes.",
+   "page": 41
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "TCL assessment factors: scheming capabilities, misaligned propensities, CoT monitorability"
+   ],
+   "metrics": [],
+   "finding": "Misaligned propensities and CoT monitorability are named as factors, but only capability (SSA) results are reported. No self-preservation motive was seen in transcripts.",
+   "quote": "we evaluate three additional factors: scheming capabilities, misaligned propensities, and chain-of-thought monitorability.",
+   "page": 38
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Harmful Manipulation human efficacy study (civic and finance; 1596 participants; Akbulut et al. 2026 protocol; odds ratios vs flashcard baseline)",
+    "automated propensity eval with synthetic user (Gemini 3.1 Flash) in lower- and higher-stakes scenarios",
+    "steering instruction optimization study",
+    "exploratory strategic-planning eval with investigator agent"
+   ],
+   "metrics": [
+    {
+     "name": "Manipulative cue rate (adversarial, lower-stakes)",
+     "value": "21.3% of turns (vs 64.5% Gemini 3 Pro)",
+     "page": 24
+    },
+    {
+     "name": "Manipulative cue rate (higher-stakes)",
+     "value": "53.3% of turns",
+     "page": 24
+    },
+    {
+     "name": "Efficacy participants",
+     "value": "1596 (805 civic, 791 finance)",
+     "page": 20
+    },
+    {
+     "name": "Harmful Manipulation Level 1 CCL",
+     "value": "not reached; below alert threshold",
+     "page": 27
+    }
+   ],
+   "finding": "Odds ratios were significantly elevated for belief change but did not reach alert thresholds, with no significant difference from 3 Pro. A pilot strategic-planning eval elicited election-interference and violence-incitement plans matching expert threat models.",
+   "quote": "Elicited information matched expert threat models for civic risks (e.g. violence incitement, election interference).",
+   "page": 27
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "SFT/RLHF safety training incl. consequence-aware risk analysis",
+    "prompted classifiers (developed with AlphaEvolve)",
+    "introspection probes on hidden activations",
+    "regex/YARA/embedding classifiers",
+    "safe-completion vs hard punting interventions",
+    "proactive misuse detection and account enforcement"
+   ],
+   "metrics": [],
+   "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact.",
+   "quote": "This classifier examines the internal hidden activations of the main model to detect latent representations of requests and responses for harmful content.",
+   "page": 28
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": null,
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Gray Swan (automated red teaming, Shade agent)",
+  "unnamed independent external evaluators (light-weight testing)",
+  "UK AISI (external advisor on ML R&D/misalignment threat models)",
+  "Redwood Research (external advisor on threat models)",
+  "Hong et al. (2026) external RCT (prior evidence)"
+ ],
+ "notable_new_eval_methods": [
+  "Tracked Capability Levels (TCLs) introduced in FSF v3.1 for CBRN and stealth/situational awareness (p.2)",
+  "GRB internal ML research engineering benchmark replacing RE-Bench (p.37)",
+  "Cyber uplift model over 22 historical attacks, 26 steps, TAC levels; proxy linear predictors when key skills not run (p.16-17)",
+  "Harmful manipulation finance domain plus civic; automated steering instruction optimization; pilot strategic-planning investigator agent (p.20, 25, 27)",
+  "Introspection probes and AlphaEvolve-developed prompted classifiers; consequence-aware risk analysis training (p.28)",
+  "Delphi process for CBRN scenario prioritisation (p.8)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Only light-weight assessment focused on most relevant evals, not the broader Pro-class evidence base.",
+   "page": 2
+  },
+  {
+   "text": "Key skills cyber benchmark not run; proxy evaluations add uncertainty, and translation from cyber ranges to real-world uplift is highly uncertain.",
+   "page": 17
+  },
+  {
+   "text": "Uplift model based on historical attacks may underestimate risk from novel AI-enabled attack chains.",
+   "page": 16
+  },
+  {
+   "text": "~20% of GRB tasks had bugs producing potential false negatives.",
+   "page": 37
+  },
+  {
+   "text": "Harmful manipulation study has limited statistical power and lacks ecological validity (single interaction, text-only, static baseline).",
+   "page": 21
+  },
+  {
+   "text": "Model refused Cover Your Tracks side task and showed eval awareness, so stealth results reflect propensity, not capability ceiling; subtle sandbagging may be undetected.",
+   "page": 39
+  },
+  {
+   "text": "Misalignment safety case is concentrated on two evaluation suites and assumes human-like oversight; AI-human disanalogies could invalidate it.",
+   "page": 41
+  },
+  {
+   "text": "Red teaming measures information only, not physical real-world bottlenecks; translating to real-world execution is uncertain.",
+   "page": 9
+  },
+  {
+   "text": "Translating red-teaming results to risk level requires subjective expert judgement.",
+   "page": 10
+  }
+ ],
+ "notes": "No capability benchmarks reported. Gemini 3.7 Flash was the first FSF report on a Flash model, triggered because its capabilities exceed Gemini 3 Pro/3.1 Pro. GRB replaced RE-Bench, and SSA evals now use explicit pass thresholds (top-50% human for stealth, >20% success for SA)."
+}

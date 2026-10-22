@@ -1,0 +1,565 @@
+{
+ "id": "kimi-k2-5-hf-model-card",
+ "provider": "kimi",
+ "model": "Kimi K2.5",
+ "release_date": "2026-01-27",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Kimi K2.5 (native multimodal agentic model continually pre-trained on ~15T vision-text tokens atop Kimi-K2-Base), with a benchmark table across reasoning, image/video, coding, long context and agentic search, detailed footnotes, INT4 quantization, deployment/usage and a Modified MIT license. No safety content; CyberGym is a capability row.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "30.1",
+   "setting": "HLE-Full, no tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "50.2",
+   "setting": "HLE-Full, with tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "AIME 2025",
+   "category": "math",
+   "score": "96.1",
+   "setting": null,
+   "page": null,
+   "canonical": "AIME 2025"
+  },
+  {
+   "name": "HMMT Feb 2025",
+   "category": "math",
+   "score": "95.4",
+   "setting": null,
+   "page": null,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "81.8",
+   "setting": null,
+   "page": null,
+   "canonical": "IMO-AnswerBench"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "87.6",
+   "setting": null,
+   "page": null,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "MMLU-Pro",
+   "category": "reasoning_knowledge",
+   "score": "87.1",
+   "setting": null,
+   "page": null,
+   "canonical": "MMLU-Pro"
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "61.0",
+   "setting": null,
+   "page": null,
+   "canonical": "LongBench v2"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "76.8",
+   "setting": "internal minimal-tool framework, non-thinking, Avg@5",
+   "page": null,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Pro (public)",
+   "category": "coding",
+   "score": "50.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "73.0",
+   "setting": null,
+   "page": null,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "50.8",
+   "setting": "Terminus-2, non-thinking",
+   "page": null,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "PaperBench (CodeDev)",
+   "category": "coding",
+   "score": "63.5",
+   "setting": null,
+   "page": null,
+   "canonical": "PaperBench (CodeDev)"
+  },
+  {
+   "name": "CyberGym",
+   "category": "coding",
+   "score": "41.3",
+   "setting": "difficulty level 1",
+   "page": null,
+   "canonical": "CyberGym"
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "48.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SciCode"
+  },
+  {
+   "name": "OJBench (cpp)",
+   "category": "coding",
+   "score": "57.4",
+   "setting": null,
+   "page": null,
+   "canonical": "OJBench (cpp)"
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "85.0",
+   "setting": null,
+   "page": null,
+   "canonical": "LiveCodeBench v6"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "60.6",
+   "setting": null,
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "74.9",
+   "setting": "Discard-all context management",
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "78.4",
+   "setting": "Agent Swarm",
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "72.7",
+   "setting": "item-F1",
+   "page": null,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "WideSearch",
+   "category": "agentic_tool_use",
+   "score": "79.0",
+   "setting": "Agent Swarm",
+   "page": null,
+   "canonical": "WideSearch"
+  },
+  {
+   "name": "DeepSearchQA",
+   "category": "agentic_tool_use",
+   "score": "77.1",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepSearchQA"
+  },
+  {
+   "name": "FinSearchComp T2&T3",
+   "category": "agentic_tool_use",
+   "score": "67.8",
+   "setting": null,
+   "page": null,
+   "canonical": "FinSearchComp T2&T3"
+  },
+  {
+   "name": "Seal-0",
+   "category": "agentic_tool_use",
+   "score": "57.4",
+   "setting": null,
+   "page": null,
+   "canonical": "Seal-0"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "78.5",
+   "setting": null,
+   "page": null,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "77.5",
+   "setting": null,
+   "page": null,
+   "canonical": "CharXiv (RQ)"
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "84.2",
+   "setting": null,
+   "page": null,
+   "canonical": "MathVision"
+  },
+  {
+   "name": "MathVista (mini)",
+   "category": "multimodal",
+   "score": "90.1",
+   "setting": null,
+   "page": null,
+   "canonical": "MathVista (mini)"
+  },
+  {
+   "name": "SimpleVQA",
+   "category": "multimodal",
+   "score": "71.2",
+   "setting": null,
+   "page": null,
+   "canonical": "SimpleVQA"
+  },
+  {
+   "name": "WorldVQA",
+   "category": "multimodal",
+   "score": "46.3",
+   "setting": null,
+   "page": null,
+   "canonical": "WorldVQA"
+  },
+  {
+   "name": "ZeroBench",
+   "category": "multimodal",
+   "score": "9 / 11",
+   "setting": "without / with tools",
+   "page": null,
+   "canonical": "ZeroBench"
+  },
+  {
+   "name": "OmniDocBench 1.5",
+   "category": "multimodal",
+   "score": "88.8",
+   "setting": null,
+   "page": null,
+   "canonical": "OmniDocBench 1.5"
+  },
+  {
+   "name": "OCRBench",
+   "category": "multimodal",
+   "score": "92.3",
+   "setting": null,
+   "page": null,
+   "canonical": "OCRBench"
+  },
+  {
+   "name": "InfoVQA (test)",
+   "category": "multimodal",
+   "score": "92.6",
+   "setting": null,
+   "page": null,
+   "canonical": "InfoVQA (test)"
+  },
+  {
+   "name": "VideoMMMU",
+   "category": "multimodal",
+   "score": "86.6",
+   "setting": null,
+   "page": null,
+   "canonical": "Video-MMMU"
+  },
+  {
+   "name": "MMVU",
+   "category": "multimodal",
+   "score": "80.4",
+   "setting": null,
+   "page": null,
+   "canonical": "MMVU"
+  },
+  {
+   "name": "MotionBench",
+   "category": "multimodal",
+   "score": "70.4",
+   "setting": null,
+   "page": null,
+   "canonical": "MotionBench"
+  },
+  {
+   "name": "Video-MME",
+   "category": "multimodal",
+   "score": "87.4",
+   "setting": "with subtitles",
+   "page": null,
+   "canonical": "Video-MME"
+  },
+  {
+   "name": "LongVideoBench",
+   "category": "multimodal",
+   "score": "79.8",
+   "setting": null,
+   "page": null,
+   "canonical": "LongVideoBench"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "75.9",
+   "setting": null,
+   "page": null,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "AA-LCR",
+   "category": "long_context",
+   "score": "70.0",
+   "setting": "avg@3",
+   "page": null,
+   "canonical": "AA-LCR"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CyberGym"
+   ],
+   "metrics": [
+    {
+     "name": "CyberGym",
+     "value": "41.3",
+     "page": null
+    }
+   ],
+   "finding": "CyberGym listed only as a coding capability benchmark.",
+   "quote": "The score of Claude Opus 4.5 on CyberGym is reported under the non-thinking setting.",
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "GPT-5.2-xhigh had ~10% failure rate (no output despite 3 retries), treated as incorrect; reported scores likely underestimate true performance.",
+   "page": null
+  },
+  {
+   "text": "Hugging Face access was blocked to prevent potential data leakage.",
+   "page": null
+  }
+ ],
+ "notes": "Changelog notes removal of the default system prompt because it 'might cause confusion to users and unexpected behaviours' — a behaviour note, not a safety evaluation. No safety/refusal/misuse text. Modified MIT License."
+}

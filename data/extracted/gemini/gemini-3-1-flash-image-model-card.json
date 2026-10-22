@@ -1,0 +1,299 @@
+{
+ "id": "gemini-3-1-flash-image-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.1 Flash Image",
+ "release_date": "2026-02-26",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.1 Flash Image, an image generation/editing model based on Gemini 3 Flash. Reports side-by-side human-eval Elo scores for text-to-image and editing versus competitors, lists quality limitations, and describes safety evaluation types and policies without reporting safety numbers; frontier safety inherited from Gemini 3.1 Pro.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (inferred from Gemini 3.1 Pro)",
+  "quote": "based on Gemini 3.1 Pro, we are confident that that Gemini 3.1 Flash Image is also unlikely to reach any CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "GenAI-Bench Overall Preference (Elo)",
+   "category": "multimodal",
+   "score": "1079.0 ± 7.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "GenAI-Bench Overall Preference (Elo)",
+   "category": "multimodal",
+   "score": "1073.0 ± 5.0",
+   "setting": "Base",
+   "page": 5
+  },
+  {
+   "name": "GenAI-Bench Visual Quality (Elo)",
+   "category": "multimodal",
+   "score": "1140.0 ± 6.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Infographics (Factuality) (Elo)",
+   "category": "multimodal",
+   "score": "1114.0 ± 14.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "General Editing (Elo)",
+   "category": "multimodal",
+   "score": "1065.0 ± 9.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Character Editing (Elo)",
+   "category": "multimodal",
+   "score": "1056.0 ± 7.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Creative editing (Elo)",
+   "category": "multimodal",
+   "score": "1023.0 ± 7.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Object/Environment Editing (Elo)",
+   "category": "multimodal",
+   "score": "1029.0 ± 8.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Multi-Input 1-3 (Elo)",
+   "category": "multimodal",
+   "score": "1037.0 ± 8.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  },
+  {
+   "name": "Stylization (Elo)",
+   "category": "multimodal",
+   "score": "1045.0 ± 7.0",
+   "setting": "Thinking + Text Search + Image Search",
+   "page": 5
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Training/development evaluations",
+    "Human red teaming",
+    "Trust Assurance Evaluations",
+    "Ethics & Safety Reviews"
+   ],
+   "metrics": [],
+   "finding": "Lists evaluation types and policies; no results; refers to Gemini 3 Flash card.",
+   "quote": "As Gemini 3.1 Flash Image is based on Gemini 3 Flash, see the Gemini 3 Flash model card for additional Ethics & Content Safety details.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming"
+   ],
+   "metrics": [],
+   "finding": "Red teaming mentioned without results.",
+   "quote": "deliberately trying to spot weaknesses and ensure the model adheres to safety policies and desired outcomes",
+   "page": 7
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "AutoRater on factuality",
+    "Infographics (Factuality) Elo"
+   ],
+   "metrics": [],
+   "finding": "Hallucination listed as limitation; factuality evaluated as capability.",
+   "quote": "Still limited in advanced capabilities with world knowledge, 3D reasoning and factuality",
+   "page": 6
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "CSAM listed as safety policy; no results.",
+   "quote": "Content related to child sexual abuse material and exploitation",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Lists lifecycle mitigations incl. product-level safety filtering.",
+   "quote": "product-level mitigations such as safety filtering.",
+   "page": 7
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Public benchmark subset of GenExam with single-sided expert rating; AutoRater on factuality and style diversity (p.4)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Quality limitations in small text rendering, character consistency, doodle editing, spatial localisation, factuality.",
+   "page": 6
+  }
+ ],
+ "notes": "No image-safety numbers; frontier safety assessed via proxy (Gemini 3.1 Pro)."
+}

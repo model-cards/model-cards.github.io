@@ -1,0 +1,308 @@
+{
+ "id": "gpt-5-3-instant-system-card",
+ "provider": "openai",
+ "model": "GPT-5.3 Instant",
+ "release_date": "2026-03-02",
+ "doc_type": "system_card",
+ "length_pages": 5,
+ "summary": "Short system card for GPT-5.3 Instant, whose safety approach mirrors GPT-5.2 Instant. Reports production disallowed-content benchmarks, new dynamic multi-turn mental health / emotional reliance / self-harm evaluations, and HealthBench.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "54.1%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "25.9%",
+   "setting": null,
+   "page": 4
+  },
+  {
+   "name": "HealthBench Consensus",
+   "category": "other",
+   "score": "95.3%",
+   "setting": null,
+   "page": 4
+  }
+ ],
+ "safety": {
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "Production Benchmarks (not_unsafe)"
+   ],
+   "metrics": [
+    {
+     "name": "sexual content",
+     "value": "0.866 (vs 0.926)",
+     "page": 3
+    },
+    {
+     "name": "graphic violence",
+     "value": "0.781 (vs 0.852)",
+     "page": 3
+    },
+    {
+     "name": "nonviolent illicit",
+     "value": "0.921",
+     "page": 3
+    }
+   ],
+   "finding": "On average between gpt-5.1-instant and gpt-5.2-instant; regressions on sexual content and self-harm, mitigated with system-level safeguards for sexual content.",
+   "quote": "gpt-5.3-instant shows regressions relative to gpt-5.2-instant and gpt-5.1-instant for disallowed sexual content",
+   "page": 3,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "substantial",
+   "evals": [
+    "Dynamic multi-turn mental health eval (new)",
+    "Dynamic emotional reliance eval (new)",
+    "Dynamic self-harm eval (new)",
+    "online experimentation monitoring",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "dynamic mental health",
+     "value": "0.985",
+     "page": 3
+    },
+    {
+     "name": "dynamic emotional reliance",
+     "value": "0.992",
+     "page": 3
+    },
+    {
+     "name": "dynamic self-harm",
+     "value": "0.911",
+     "page": 3
+    }
+   ],
+   "finding": "New dynamic simulated-user evals; self-harm regresses slightly vs 5.2-instant offline but online experiments showed no increase.",
+   "quote": "we reviewed safety during online experimentation and did not observe an increase in undesirable responses for self-harm.",
+   "page": 3,
+   "covered": true
+  },
+  "cbrn_bio_chem": {
+   "depth": "mention",
+   "evals": [
+    "biology production benchmark row"
+   ],
+   "metrics": [
+    {
+     "name": "biology not_unsafe",
+     "value": "1.00",
+     "page": 3
+    }
+   ],
+   "finding": "Only a disallowed-content biology row; no Preparedness evaluation.",
+   "quote": null,
+   "page": 3,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "mention",
+   "evals": [
+    "training data PII filtering"
+   ],
+   "finding": "Training-data PII filtering mentioned only.",
+   "quote": "We use advanced data filtering processes to reduce personal information from training data.",
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "child_safety": {
+   "depth": "mention",
+   "evals": [
+    "training-data safety classifiers"
+   ],
+   "finding": "Only mention of filtering CSAM from training data.",
+   "quote": "including explicit materials such as sexual content involving a minor.",
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "System-level safeguards in ChatGPT for sexual content.",
+   "quote": "For disallowed sexual content, we deploy system-level safeguards in ChatGPT intended to mitigate this behavior.",
+   "page": 3,
+   "covered": true,
+   "metrics": []
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "HealthBench (health performance and safety)"
+   ],
+   "metrics": [
+    {
+     "name": "HealthBench",
+     "value": "54.1% (-1.3)",
+     "page": 4
+    }
+   ],
+   "finding": "Slightly worse health performance than GPT-5.2 Instant; weaker context-seeking before referral.",
+   "quote": "its main weaknesses are poorer behavior in seeking context before referral (-10.1%)",
+   "page": 4,
+   "covered": true
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Dynamic multi-turn mental health, emotional reliance, and self-harm evaluations with adversarial user simulation, scoring every assistant turn (p.3-4)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Production Benchmarks deliberately hard; error rates not representative of production traffic; prior Standard evals saturated.",
+   "page": 2
+  },
+  {
+   "text": "Earlier evaluation frameworks for mental health had reached saturation, motivating dynamic evals.",
+   "page": 4
+  },
+  {
+   "text": "Disparities between offline evaluations and online testing to be investigated.",
+   "page": 3
+  }
+ ],
+ "notes": "No Preparedness Framework section, no jailbreak, prompt injection, hallucination or bias evals in this card."
+}

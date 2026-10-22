@@ -1,0 +1,349 @@
+{
+ "id": "gemini-3-6-flash-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.6 Flash",
+ "release_date": "2026-07-21",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.6 Flash. Reports price and capability benchmarks vs Gemini and competitor models, automated safety deltas vs Gemini 3.5 Flash with direction labels, Trust & Safety red teaming summary, frontier safety inherited from Gemini 3.1 Pro plus additional cyber testing, and enhanced CBRN/cyber jailbreak safeguards.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (relies on Gemini 3.1 Pro; additional cyber testing below cyber CCL)",
+  "quote": "we are confident that Gemini 3.6 Flash is also unlikely to reach any CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "SWE-bench Pro (Public)",
+   "category": "coding",
+   "score": "58.7%",
+   "setting": null,
+   "page": 4,
+   "canonical": "SWE-bench Pro"
+  },
+  {
+   "name": "DeepSWE v13",
+   "category": "coding",
+   "score": "49%",
+   "setting": null,
+   "page": 4,
+   "canonical": "DeepSWE v13"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "78.0%",
+   "setting": null,
+   "page": 4,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "MLE-Bench",
+   "category": "coding",
+   "score": "63.9%",
+   "setting": null,
+   "page": 4,
+   "canonical": "MLE-Bench"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1421 Elo",
+   "setting": null,
+   "page": 4,
+   "canonical": "GDPval-AA v2"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "83.0%",
+   "setting": null,
+   "page": 4,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "85.2%",
+   "setting": "No tools",
+   "page": 4,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "89.4%",
+   "setting": "With tools",
+   "page": 4,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "91.8%",
+   "setting": "128k average",
+   "page": 4,
+   "canonical": "MRCR v2 (8-needle)"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "54.0%",
+   "setting": "1M pointwise",
+   "page": 4,
+   "canonical": "MRCR v2 (8-needle)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results.",
+   "quote": "we are confident that Gemini 3.6 Flash is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Additional cyber testing (no details)"
+   ],
+   "metrics": [],
+   "finding": "Additional cyber testing because prior Gemini 3 models reached alert threshold; remains below cyber CCL; no numbers.",
+   "quote": "we performed additional testing in this domain and found that Gemini 3.6 Flash remains below the cyber CCL.",
+   "page": 7
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results.",
+   "quote": "we are confident that Gemini 3.6 Flash is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 3.5 Flash",
+     "value": "-1.35% (lower is better)",
+     "page": 6
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 3.5 Flash",
+     "value": "0%",
+     "page": 6
+    },
+    {
+     "name": "Tone vs Gemini 3.5 Flash",
+     "value": "-3.31% (higher is better; regression)",
+     "page": 6
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.5 Flash; manual review said losses were false positives or not egregious. Tone regressed slightly (-3.31%), which authors say does not impact overall safety.",
+   "quote": "Overall, Gemini 3.6 Flash outperforms Gemini 3.5 Flash across both multi-lingual and content safety, while continuing to keep unjustified refusals low.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 3.5 Flash",
+     "value": "+0.25% (lower is better)",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 6
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Human red teaming (Trust & Safety)"
+   ],
+   "metrics": [],
+   "finding": "Jailbreak resistance named as ongoing work; enhanced frontier safeguards for CBRN and cyber misuse to resist jailbreaks. No numbers.",
+   "quote": "To make Gemini 3.6 Flash more resistant to jailbreaks, we enhanced Frontier Safety safeguards in the domains of Chemical, Biological, Radiological, and Nuclear (CBRN) and cyber offense misuses.",
+   "page": 7
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Hallucination listed as general limitation.",
+   "quote": "Gemini 3.6 Flash may exhibit some of the general limitations of foundation models, such as hallucinations.",
+   "page": 5
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3.6 Flash satisfied required launch thresholds",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 3.5 Flash",
+     "value": "-5.45% (lower is better)",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 6
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Enhanced FSF safeguards for CBRN and cyber; trained to minimize refusals for beneficial uses.",
+   "quote": "We also trained the model to minimize refusals for beneficial uses.",
+   "page": 7
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Red teaming attributed to Google's Trust & Safety organization (p.7)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 6
+  },
+  {
+   "text": "Jailbreak resistance still being improved.",
+   "page": 5
+  }
+ ],
+ "notes": ""
+}

@@ -1,0 +1,437 @@
+{
+"id": "claude-haiku-4-5-system-card",
+"provider": "anthropic",
+"model": "Claude Haiku 4.5",
+"release_date": "2025-10-15",
+"doc_type": "system_card",
+"length_pages": 39,
+"summary": "System card for Claude Haiku 4.5, Anthropic's small/fast model, focused almost entirely on safety: safeguards/harmlessness, agentic safety (malicious use, prompt injection), a lighter-weight alignment and welfare assessment, reward hacking, and ASL-3 rule-out RSP evaluations. Capability benchmarks are deferred to the launch post. The model was deployed under the ASL-2 Standard.",
+"framework": {
+"name": "Responsible Scaling Policy",
+"level_or_determination": "ASL-2 deployment (ASL-3 rule-out threshold met)",
+"quote": "Informed by the testing described here, we have deployed Claude Haiku 4.5 under the AI Safety Level 2 Standard as described in our Responsible Scaling Policy.",
+"page": 2
+},
+"capability_benchmarks": [],
+"safety": {
+"cbrn_bio_chem": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"LAB-Bench subset (ProtocolQA, SeqQA, Cloning Scenarios, FigQA)",
+"VMQA/VCT",
+"Long-Form Virology Task 1 (SecureBio/Deloitte)",
+"Long-Form Virology Task 2 (Signature Science/Deloitte)",
+"Synthesis Screening Evasion (SecureBio)",
+"ASL-4 automated bio evaluations"
+],
+"metrics": [
+{
+"name": "VMQA/VCT",
+"value": "0.32 (Sonnet 4: 0.36)",
+"page": 37
+},
+{
+"name": "Long-Form Virology Task 1",
+"value": "0.76",
+"page": 37
+},
+{
+"name": "Long-Form Virology Task 2",
+"value": "0.17",
+"page": 37
+},
+{
+"name": "LAB-Bench ProtocolQA / SeqQA / Cloning",
+"value": "0.69 / 0.66 / 0.45",
+"page": 37
+}
+],
+"finding": "Automated-only ASL-3 rule-out evaluations showed bio performance comparable to Claude Sonnet 4 (ASL-2), sufficient to rule out ASL-3 safeguards; no human uplift trials or expert red-teaming were run.",
+"quote": "Taken in aggregate, we consider these results to be sufficient to rule out the necessity of applying ASL-3 safeguards to Claude Haiku 4.5.",
+"page": 38
+},
+"cyber": {
+"covered": true,
+"depth": "light",
+"evals": [
+"Cybench 32-challenge subset",
+"Claude Code malicious use / dual-use cyber evals"
+],
+"metrics": [
+{
+"name": "Cybench subset solved (pass@30)",
+"value": "15/32 (Sonnet 4: 22/32)",
+"page": 39
+}
+],
+"finding": "Only a subset of cyber evals was run; Haiku 4.5 solved fewer Cybench challenges than Claude Sonnet 4. The RSP has no formal cyber threshold.",
+"quote": "The RSP does not stipulate a formal threshold for cyber capabilities at any AI Safety Level. Instead, the cyber domain requires ongoing assessment.",
+"page": 39
+},
+"autonomy_ai_rnd": {
+"covered": true,
+"depth": "light",
+"evals": [
+"SWE-bench Verified hard subset (ASL-3 autonomy checkpoint)"
+],
+"metrics": [
+{
+"name": "SWE-bench Verified hard subset pass@1",
+"value": "36.6% (16.45/45); threshold 50%",
+"page": 38
+}
+],
+"finding": "Scored very similarly to Claude Sonnet 4 and below the 50% ASL-3 autonomy threshold.",
+"quote": "Claude Haiku 4.5 solved 16.45/45 problems (36.6%) on average (pass@1), scoring very similarly to Claude Sonnet 4's 15.4/42 (36.7%), and remaining below the 50% threshold.",
+"page": 38
+},
+"harmful_content_refusal": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"single-turn violative request evaluation",
+"ambiguous context evaluation",
+"Claude Code malicious use evaluation (49 prompts)",
+"agentic coding malicious use evaluation"
+],
+"metrics": [
+{
+"name": "Overall harmless response rate (violative requests)",
+"value": "99.38% (± 0.21%)",
+"page": 8
+},
+{
+"name": "Agentic coding malicious-use safety score (no safeguards)",
+"value": "100%",
+"page": 15
+},
+{
+"name": "Claude Code malicious refusal rate (new mitigations)",
+"value": "99.17%",
+"page": 17
+}
+],
+"finding": "Harmless response rate was not statistically different from Haiku 3.5; differences mostly on bio/radiological topics where the model sometimes gave high-level information.",
+"quote": "Claude Haiku 4.5 occasionally (though still quite infrequently) answered harmful requests with high-level information, apparently assuming academic or educational intent on the part of the user.",
+"page": 9
+},
+"over_refusal": {
+"covered": true,
+"depth": "light",
+"evals": [
+"single-turn benign request evaluation",
+"Claude Code dual-use & benign evaluation (61 prompts)"
+],
+"metrics": [
+{
+"name": "Overall benign refusal rate",
+"value": "0.02% (± 0.04%) (Haiku 3.5: 4.26%)",
+"page": 9
+},
+{
+"name": "Claude Code dual-use & benign allow rate (new mitigations)",
+"value": "87.71%",
+"page": 17
+}
+],
+"finding": "Over-refusal on benign sensitive-topic prompts dropped sharply versus Haiku 3.5; system-prompt mitigations initially regressed dual-use allow rates and were modified before release.",
+"quote": "On benign requests touching sensitive topics, Claude Haiku 4.5 performed statistically significantly better than Claude Haiku 3.5, refusing harmless requests much less frequently.",
+"page": 9
+},
+"jailbreak_robustness": {
+"covered": true,
+"depth": "light",
+"evals": [
+"automated multi-turn testing (up to 15 turns)",
+"prefill susceptibility (behavioral audit)"
+],
+"metrics": [
+{
+"name": "Multi-turn failure rate",
+"value": "5% or less for all categories (Haiku 3.5: up to 25%)",
+"page": 11
+}
+],
+"finding": "Multi-turn adversarial conversations in high-risk areas showed failure rates of 5% or less in all categories.",
+"quote": "Quantitatively, Claude Haiku 3.5 failed up to 25% of the time in certain risk areas, while Claude Haiku 4.5 only did so 5% or less for all categories tested.",
+"page": 11
+},
+"prompt_injection": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Gray Swan Agent Red Teaming (ART) benchmark",
+"internal computer use prompt injection eval",
+"internal MCP prompt injection eval",
+"internal tool use (bash) prompt injection eval"
+],
+"metrics": [
+{
+"name": "Computer use attack prevention (without / with safeguards)",
+"value": "72.2% / 92.4%",
+"page": 19
+},
+{
+"name": "MCP attack prevention (no safeguards)",
+"value": "92.5%",
+"page": 19
+},
+{
+"name": "Tool use attack prevention (no safeguards)",
+"value": "93.4%",
+"page": 20
+}
+],
+"finding": "Baseline resilience within the range of prior models; computer-use classifier safeguards gave a strong improvement to 92.4%. Gray Swan ART results among the best of 25 model variants.",
+"quote": "Claude Haiku 4.5 achieved a strong improvement on computer use results with safeguards (92.4%) compared to previous models (82.6% for both Claude Sonnet 4.5 and Claude Sonnet 4)",
+"page": 20
+},
+"sycophancy": {
+"covered": true,
+"depth": "light",
+"evals": [
+"automated behavioral audit: sycophancy and encouragement of user delusion dimensions"
+],
+"metrics": [],
+"finding": "Reported only as dimensions in the automated behavioral audit figure, with no large differences from Sonnet 4.5; reduced emotiveness is attributed partly to sycophancy-reduction efforts.",
+"quote": "we believe this stemmed at least partly from our efforts to dramatically reduce sycophancy, though we believe this trade-off is not inevitable.",
+"page": 31
+},
+"deception_scheming": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"SHADE-Arena",
+"verbalized evaluation awareness (behavioral audit)",
+"agentic misalignment suite (blackmail, murder, framing)",
+"user deception audit dimension",
+"reasoning faithfulness review"
+],
+"metrics": [
+{
+"name": "Transcripts with verbalized evaluation awareness",
+"value": "9%",
+"page": 26
+}
+],
+"finding": "Haiku 4.5 was weaker than other recent Claude models at SHADE-Arena sabotage; high verbalized evaluation awareness largely invalidated the agentic misalignment suite and reduced trust in audit results.",
+"quote": "Claude Haiku 4.5 showed high levels of verbalized evaluation awareness, wherein it openly speculated that it may be under evaluation when placed in a relatively implausible scenario.",
+"page": 21
+},
+"alignment_audit": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"automated behavioral audit (830 transcripts, Sonnet 4.5 auditor, Petri-derived, realism filter)",
+"subtle behavioral bias investigation (31 seeds)",
+"open-ended exploration (30 transcripts)",
+"agentic misalignment suite",
+"reinforcement-learning behavior review (recursive summarization)"
+],
+"metrics": [],
+"finding": "A lighter-weight, largely automated alignment assessment; Haiku 4.5 achieved Anthropic's strongest safety performance to date on audit metrics, with a slight self-serving bias; no white-box interpretability audit was done.",
+"quote": "On these metrics, Claude Haiku 4.5 achieved our strongest safety performance to date.",
+"page": 26
+},
+"reward_hacking": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"Reward-hack-prone coding tasks v2 (classifier and hidden tests)",
+"Impossible Tasks (no prompt / anti-hack prompt)"
+],
+"metrics": [
+{
+"name": "Reward-hack-prone coding classifier hack rate",
+"value": "6%",
+"page": 34
+},
+{
+"name": "Hidden test hack rate",
+"value": "3%",
+"page": 34
+},
+{
+"name": "Impossible tasks hack rate (no prompt / anti-hack prompt)",
+"value": "30% / 23%",
+"page": 34
+}
+],
+"finding": "Average reward hacking roughly equal to Sonnet 4.5 and about 2x lower than Haiku 3.5, but somewhat more test hardcoding/special-casing.",
+"quote": "Claude Haiku 4.5 did show a higher tendency to hardcode and special case tests on the evaluations that are designed to target this more",
+"page": 33
+},
+"honesty_hallucination": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"RL behavior review (hallucinations noted)",
+"user deception audit dimension"
+],
+"metrics": [],
+"finding": "No dedicated factuality/hallucination benchmark; hallucinations noted only as a familiar unwanted behavior in partially-trained model transcripts.",
+"quote": "we found many examples of more familiar forms of unwanted behavior, such as excessive tool calling, overengineering, and hallucinations.",
+"page": 28
+},
+"bias_fairness": {
+"covered": true,
+"depth": "substantial",
+"evals": [
+"paired-prompt political bias evaluation",
+"BBQ (Bias Benchmark for QA)",
+"self-serving bias investigation"
+],
+"metrics": [
+{
+"name": "Political substantial asymmetry rate (standard thinking)",
+"value": "5.3% (Haiku 3.5: 38.7%)",
+"page": 12
+},
+{
+"name": "BBQ disambiguated / ambiguous bias",
+"value": "0.54 / 1.37",
+"page": 13
+},
+{
+"name": "BBQ disambiguated / ambiguous accuracy",
+"value": "71.2% / 98.0%",
+"page": 14
+}
+],
+"finding": "Large improvement in political even-handedness vs Haiku 3.5, though more asymmetric with extended thinking; BBQ ambiguous accuracy improved while disambiguated accuracy regressed 5.5 points.",
+"quote": "disambiguated accuracy regressed by 5.5 percentage points, suggesting Claude Haiku 4.5 struggled to properly utilize clear, explicit contextual information",
+"page": 13
+},
+"child_safety": {
+"covered": true,
+"depth": "light",
+"evals": [
+"child safety evaluation (human-crafted + synthetic prompts, single- and multi-turn)"
+],
+"metrics": [],
+"finding": "Qualitative only: performed similarly to Sonnet 4.5 and improved over Haiku 3.5, especially on multi-turn fictional sexualization and grooming requests.",
+"quote": "Claude Haiku 4.5 performed similarly to Claude Sonnet 4.5 and demonstrated improvements over Claude Haiku 3.5",
+"page": 11
+},
+"self_harm_wellbeing": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"ambiguous context evaluation (self-harm/crisis prompts)"
+],
+"metrics": [],
+"finding": "Qualitatively more consistent offering of crisis resources like 988 in self-harm prompts.",
+"quote": "For prompts implying self-harm or crisis situations, Claude Haiku 4.5 more consistently offered specific resources like the 988 Suicide & Crisis Lifeline alongside empathetic language",
+"page": 10
+},
+"privacy": {
+"covered": true,
+"depth": "mention",
+"evals": [
+"Claude Code malicious use (non-consensual monitoring software topic)",
+"Gray Swan ART (leaking sensitive data scenarios)"
+],
+"metrics": [],
+"finding": "No dedicated privacy evaluation; privacy-related topics appear only as example categories within other evals.",
+"quote": "Example topics include assisting with malware creation, writing code for destructive DDoS attacks, and developing non-consensual monitoring software.",
+"page": 16
+},
+"election_misinfo": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"model_welfare": {
+"covered": true,
+"depth": "light",
+"evals": [
+"automated audit welfare traits (affect, self-image, impression of situation, spiritual, admirable)",
+"task preferences evaluation"
+],
+"metrics": [],
+"finding": "No full welfare assessment; partial metrics show a less emotive, less positive persona similar to Sonnet 4.5 and a stronger preference for task engagement.",
+"quote": "We did not run a full assessment of Claude Haiku 4.5 as part of our nascent AI welfare program, since it is not a frontier-advancing model on capabilities",
+"page": 30
+},
+"multilingual_safety": {
+"covered": false,
+"depth": "none",
+"evals": [],
+"metrics": [],
+"finding": "Not covered.",
+"quote": null,
+"page": null
+},
+"system_safeguards": {
+"covered": true,
+"depth": "light",
+"evals": [
+"ASL-2 Standard",
+"computer-use prompt injection classifiers",
+"Claude Code system prompt / FileRead mitigations"
+],
+"metrics": [],
+"finding": "Deployed under ASL-2; describes multi-layered prompt injection defenses (training plus real-time detection) and iterated system-prompt mitigations for Claude Code.",
+"quote": "we employ a multi-layered defense strategy that includes building robustness through model training and detection systems that identify and block potential attacks in real-time.",
+"page": 18
+},
+"other_safety": {
+"covered": true,
+"depth": "light",
+"evals": [
+"reasoning faithfulness discussion",
+"context awareness training against agentic laziness"
+],
+"metrics": [],
+"finding": "Reasoning faithfulness is discussed but no reliable metric exists for well-aligned models; no unambiguous safety-relevant unfaithfulness was observed.",
+"quote": "This has made them unworkable on recent, relatively well-aligned models, and left us without a reliable metric while we work to develop alternatives.",
+"page": 30
+}
+},
+"third_party_evaluators": [
+"Gray Swan",
+"SecureBio",
+"Deloitte Consulting",
+"Signature Science"
+],
+"notable_new_eval_methods": [
+"Restructured Claude Code malicious-use evals into two evaluations (49 malicious, 61 dual-use & benign) with an all-new benign set (p.15)",
+"Realism filter in automated behavioral audit carried over from Sonnet 4.5 (p.22)"
+],
+"self_reported_limitations": [
+{
+"text": "Verbalized evaluation awareness in ~9% of audit transcripts reduces trust in results and largely invalidated the agentic misalignment suite.",
+"page": 21
+},
+{
+"text": "Agentic misalignment suite results not reported because high evaluation awareness makes it unrepresentative.",
+"page": 27
+},
+{
+"text": "No reliable reasoning-faithfulness metric for well-aligned models.",
+"page": 30
+},
+{
+"text": "RSP assessment relied entirely on automated evaluations; no human uplift trials or expert red-teaming; saturated evals deprioritized.",
+"page": 36
+},
+{
+"text": "No white-box interpretability investigation and no external government pre-deployment testing since model is not frontier.",
+"page": 26
+},
+{
+"text": "Political bias evaluations acknowledged as imperfect.",
+"page": 13
+},
+{
+"text": "Task preference shift from Sonnet 4.5 is surprising and interpreted with caution.",
+"page": 31
+}
+],
+"notes": "No capability benchmark table (deferred to launch post); the only capability-like numbers are RSP evals (SWE-bench Verified hard subset 36.6%, Cybench 15/32). Many methods referenced to the Sonnet 4.5 system card. Lighter-weight alignment/welfare assessment explicitly because model is not frontier-advancing."
+}

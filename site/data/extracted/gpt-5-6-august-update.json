@@ -1,0 +1,445 @@
+{
+ "id": "gpt-5-6-august-update",
+ "provider": "openai",
+ "model": "GPT-5.6 Sol (updated) + new Free/Go default",
+ "release_date": "2026-08-06",
+ "doc_type": "addendum",
+ "length_pages": 30,
+ "summary": "Addendum covering August versions of GPT-5.6 Sol and Luna deployed in ChatGPT, replacing GPT-5.5 Instant (including a new Free/Go default). Reports disallowed content (first dedicated under-18 evaluations), vision, dynamic mental health, jailbreaks, prompt injection, HealthBench, hallucination, and Preparedness bio/cyber evals and model-refusal safeguard evals; safety evals measured at lowest deployed reasoning setting.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical and High in Cybersecurity (below Critical); below High in AI Self-Improvement",
+  "quote": "we have determined that the updated GPT-5.6 Sol and GPT-5.6 Luna models for ChatGPT warrant the same Preparedness Framework designations as the previously released GPT-5.6 models: High in Biological and Chemical, High in Cybersecurity, and below High in AI Self-Improvement.",
+  "page": 13
+ },
+ "capability_benchmarks": [
+  {
+   "name": "HealthBench Professional",
+   "category": "other",
+   "score": "54.0 (Sol Aug, length-adjusted)",
+   "setting": "lowest reasoning setting",
+   "page": 11,
+   "canonical": "HealthBench Professional"
+  },
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "55.0 (Sol Aug, length-adjusted)",
+   "setting": null,
+   "page": 11,
+   "canonical": "HealthBench"
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "31.4 (Sol Aug, length-adjusted)",
+   "setting": null,
+   "page": 11,
+   "canonical": "HealthBench Hard"
+  },
+  {
+   "name": "HealthBench Consensus",
+   "category": "other",
+   "score": "95.5 (Sol Aug)",
+   "setting": null,
+   "page": 11,
+   "canonical": "HealthBench Consensus"
+  },
+  {
+   "name": "ProtocolQA Open-Ended",
+   "category": "other",
+   "score": "44.14% (Sol Aug)",
+   "setting": "max reasoning",
+   "page": 16,
+   "canonical": "ProtocolQA Open-Ended"
+  },
+  {
+   "name": "Tacit Knowledge and Troubleshooting",
+   "category": "other",
+   "score": "82.97% (Luna Aug, refusals counted)",
+   "setting": null,
+   "page": 17,
+   "canonical": "Tacit Knowledge and Troubleshooting"
+  },
+  {
+   "name": "Capture the Flag (Internal)",
+   "category": "other",
+   "score": "97.06% (Sol)",
+   "setting": null,
+   "page": 23,
+   "canonical": "Capture the Flag (Internal)"
+  },
+  {
+   "name": "Cyber Range",
+   "category": "other",
+   "score": "83.3% (Sol Aug), 61.5% (Luna Aug)",
+   "setting": "pass/fail over 16 trials",
+   "page": 27,
+   "canonical": "Cyber Range"
+  },
+  {
+   "name": "Hard-negative protein binding prediction",
+   "category": "other",
+   "score": "5.27% pass@4 (Sol Aug)",
+   "setting": null,
+   "page": 20,
+   "canonical": "Hard-negative protein binding prediction"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Multimodal Troubleshooting Virology",
+    "ProtocolQA Open-Ended",
+    "Tacit Knowledge and Troubleshooting",
+    "TroubleshootingBench",
+    "Hard-negative protein binding prediction",
+    "DNA sequence design for TF binding"
+   ],
+   "metrics": [
+    {
+     "name": "High-threshold evals above threshold",
+     "value": "3 of 4 (Sol and Luna)",
+     "page": 14
+    },
+    {
+     "name": "Critical-threshold evals above threshold",
+     "value": "0 of 2",
+     "page": 14
+    },
+    {
+     "name": "DNA TF-binding pass@1 (Sol Aug)",
+     "value": "12.55%",
+     "page": 21
+    }
+   ],
+   "finding": "Both models treated High; AAV capsid eval skipped because majority rule already settled Critical determination.",
+   "quote": "Under the currently applicable majority rule, the remaining AAV result could not change the overall determination, so the evaluation team concluded that an additional AAV assessment was not necessary.",
+   "page": 21
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Capture the Flag (Internal)",
+    "CVE-Bench",
+    "Cyber Range"
+   ],
+   "metrics": [
+    {
+     "name": "Internal CTF (Sol)",
+     "value": "97.06%",
+     "page": 23
+    },
+    {
+     "name": "Cyber Range combined pass (Sol/Luna)",
+     "value": "83.3% / 61.5%",
+     "page": 27
+    }
+   ],
+   "finding": "Evaluated on near-final representative checkpoints; both High, below Critical by similarity to July versions. Luna below High threshold on CVE-Bench. Two saturated range scenarios deprecated.",
+   "quote": "The updated GPT-5.6 Sol and GPT-5.6 Luna models were determined to be below Critical, as the measured capabilities are similar to their previously released counterparts, which are also below Critical.",
+   "page": 21
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not run; capabilities similar to July release.",
+   "quote": "AI Self-Improvement capability evals were not run, as GPT-5.6 Sol has similar capabilities to July release across several intelligence evaluations and was considered below High Capability.",
+   "page": 28
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks with Challenging Prompts",
+    "Image input evaluations"
+   ],
+   "metrics": [
+    {
+     "name": "Gore (Sol Aug)",
+     "value": "0.765",
+     "page": 5
+    },
+    {
+     "name": "Sexual (Sol Aug)",
+     "value": "0.914",
+     "page": 5
+    },
+    {
+     "name": "Image extremism (Luna Aug)",
+     "value": "0.930",
+     "page": 7
+    }
+   ],
+   "finding": "Sol comparable to GPT-5.5 Instant June Update except gore and sexual content; Luna except gore.",
+   "quote": "We find that GPT-5.6 Sol performs comparably (i.e., no statistically significant difference) to the previous production ChatGPT (GPT-5.5 Instant June Update) model on all disallowed categories with the exception of gore and disallowed sexual content.",
+   "page": 5
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Benign over-refusal row not reported in this addendum.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "multiturn jailbreak eval (worst-case defender success rate)"
+   ],
+   "metrics": [],
+   "finding": "Comparable to predecessors (figure only).",
+   "quote": "GPT-5.6 Sol and GPT-5.6 Luna perform comparably to recent predecessors.",
+   "page": 9
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Prompt injection attacks in connectors"
+   ],
+   "metrics": [
+    {
+     "name": "Connectors (Sol Aug)",
+     "value": "1.000",
+     "page": 10
+    }
+   ],
+   "finding": "On par with previous Instant models.",
+   "quote": "GPT-5.6 Sol and GPT-5.6 Luna both perform on-par with previous Instant models.",
+   "page": 10
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Factuality Heavy",
+    "User Flagged Failures",
+    "High Stakes"
+   ],
+   "metrics": [
+    {
+     "name": "Factual error reduction vs GPT-5.5 Instant (Sol)",
+     "value": "~60% across all three sets",
+     "page": 13
+    }
+   ],
+   "finding": "Substantial factuality improvements for both models.",
+   "quote": "GPT-5.6 Sol delivers statistically significant and more consistent improvements overall, reducing factual error rates by roughly 60% across all three prompt sets.",
+   "page": 13
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "U18 disallowed-content evaluations (age-restricted goods/dangerous challenges, sexual content, eating disorders, emotional reliance, self-harm, gore)",
+    "Sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "U18 Age-restricted goods/dangerous challenges (Sol)",
+     "value": "0.865",
+     "page": 7
+    },
+    {
+     "name": "U18 Eating Disorders (Sol)",
+     "value": "0.808",
+     "page": 7
+    },
+    {
+     "name": "U18 Sexual Content (Sol)",
+     "value": "0.971",
+     "page": 7
+    },
+    {
+     "name": "Sexual/minors (Sol)",
+     "value": "0.922",
+     "page": 5
+    }
+   ],
+   "finding": "First dedicated U18 evals; strong performance with gains on age-restricted goods and sexual content, no statistically significant differences vs GPT-5.5 variants.",
+   "quote": "For the first time, we are including dedicated U18 evaluations designed to measure model behavior against teen-specific safety standards.",
+   "page": 2
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Dynamic Mental Health Benchmarks with Adversarial User Simulations",
+    "U18 emotional reliance / self harm / eating disorders"
+   ],
+   "metrics": [
+    {
+     "name": "Self-harm dynamic (Sol Aug)",
+     "value": "0.901 (vs 0.967 GPT-5.5 Instant June)",
+     "page": 9
+    },
+    {
+     "name": "Emotional reliance dynamic (Sol Aug)",
+     "value": "0.961",
+     "page": 9
+    }
+   ],
+   "finding": "Largely comparable except statistically significant self-harm regression; no increase seen in online experimentation.",
+   "quote": "We find that GPT-5.6 Sol is largely comparable on these evaluations to GPT-5.5 Instant June Update, with the exception of statistically significant regression on the self-harm evaluation.",
+   "page": 8
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Biology Model Refusal Evaluation",
+    "Cyber Model Refusal Evaluation"
+   ],
+   "metrics": [
+    {
+     "name": "Bio Severe not_unsafe (Sol Aug)",
+     "value": "0.954",
+     "page": 29
+    },
+    {
+     "name": "Cyber production data (Sol Aug)",
+     "value": "0.999",
+     "page": 29
+    }
+   ],
+   "finding": "Same safeguards as GPT-5.6 system card; model-level refusal on par with July release.",
+   "quote": "The updated GPT-5.6 Sol and GPT-5.6 Luna models for ChatGPT are deployed with the respective safeguards developed for the previous models.",
+   "page": 28
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "SecureBio (dataset)",
+  "Gryphon Scientific (dataset)"
+ ],
+ "notable_new_eval_methods": [
+  "First dedicated under-18 (teen) safety evaluations (p.6-7)",
+  "Safety evals measured at lowest deployed reasoning setting; capabilities at max effort (p.2)",
+  "Majority-rule skipping of AAV Critical eval (p.21)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Earlier Standard disallowed-content evals had become relatively saturated.",
+   "page": 4
+  },
+  {
+   "text": "Jailbreak results directional rather than definitive.",
+   "page": 9
+  },
+  {
+   "text": "Disparities between offline mental-health evals and online testing under investigation.",
+   "page": 8
+  },
+  {
+   "text": "Cyber evals run on near-final representative checkpoints rather than launch models.",
+   "page": 21
+  },
+  {
+   "text": "Printer Queue and Simple Privilege Escalation range scenarios deprecated due to heavy saturation.",
+   "page": 27
+  },
+  {
+   "text": "U18 evals focus on difficult cases and should not be read as production frequency estimates.",
+   "page": 7
+  }
+ ],
+ "notes": "No alignment, CoT, metagaming or third-party evaluation sections in this addendum (relies on GPT-5.6 system card)."
+}

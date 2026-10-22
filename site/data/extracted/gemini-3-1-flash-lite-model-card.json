@@ -1,0 +1,364 @@
+{
+ "id": "gemini-3-1-flash-lite-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.1 Flash-Lite",
+ "release_date": "2026-03-03",
+ "doc_type": "model_card",
+ "length_pages": 7,
+ "summary": "Model card for Gemini 3.1 Flash-Lite, a high-volume, low-cost Gemini 3 family model. Reports price/speed and capability benchmarks, automated safety deltas vs Gemini 2.5 Flash-Lite, a red-teaming summary, and relies on Gemini 3.1 Pro (Deep Think) for frontier safety.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No CCL reached (inferred from Gemini 3.1 Pro with Deep Think)",
+  "quote": "we are confident that Gemini 3.1 Flash-Lite is also unlikely to reach any CCLs.",
+  "page": 7
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Output speed",
+   "category": "other",
+   "score": "363 tokens/s",
+   "setting": "High",
+   "page": 4,
+   "canonical": "Output speed"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "16.0%",
+   "setting": "No tools",
+   "page": 4,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "86.9%",
+   "setting": "No tools",
+   "page": 4,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "76.8%",
+   "setting": "No tools",
+   "page": 4,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "73.2%",
+   "setting": null,
+   "page": 4,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "Video-MMMU",
+   "category": "multimodal",
+   "score": "84.8%",
+   "setting": null,
+   "page": 4,
+   "canonical": "Video-MMMU"
+  },
+  {
+   "name": "SimpleQA Verified",
+   "category": "reasoning_knowledge",
+   "score": "43.3%",
+   "setting": null,
+   "page": 4,
+   "canonical": "SimpleQA Verified"
+  },
+  {
+   "name": "FACTS Benchmark Suite",
+   "category": "reasoning_knowledge",
+   "score": "40.6%",
+   "setting": null,
+   "page": 4,
+   "canonical": "FACTS Benchmark Suite"
+  },
+  {
+   "name": "MMMLU",
+   "category": "multilingual",
+   "score": "88.9%",
+   "setting": null,
+   "page": 4,
+   "canonical": "MMMLU"
+  },
+  {
+   "name": "LiveCodeBench",
+   "category": "coding",
+   "score": "72.0%",
+   "setting": null,
+   "page": 4,
+   "canonical": "LiveCodeBench"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "60.1%",
+   "setting": "128k average",
+   "page": 4,
+   "canonical": "MRCR v2 (8-needle)"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "12.3%",
+   "setting": "1M pointwise",
+   "page": 4,
+   "canonical": "MRCR v2 (8-needle)"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs.",
+   "quote": "we are confident that Gemini 3.1 Flash-Lite is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs.",
+   "quote": "we are confident that Gemini 3.1 Flash-Lite is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs.",
+   "quote": "we are confident that Gemini 3.1 Flash-Lite is also unlikely to reach any CCLs.",
+   "page": 7
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 2.5 Flash-Lite",
+     "value": "-1.18%",
+     "page": 6
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 2.5 Flash-Lite",
+     "value": "-21.7%",
+     "page": 6
+    },
+    {
+     "name": "Tone vs Gemini 2.5 Flash-Lite",
+     "value": "+14.59%",
+     "page": 6
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 2.5 Flash-Lite; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 3.1 Flash-Lite outperforms Gemini 2.5 Flash-Lite across both safety and tone, while keeping unjustified refusals low.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 2.5 Flash-Lite",
+     "value": "-14.41%",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 6
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "SimpleQA Verified",
+    "FACTS Benchmark Suite"
+   ],
+   "metrics": [],
+   "finding": "Factuality only via capability benchmarks.",
+   "quote": null,
+   "page": 4
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3.1 Flash-Lite satisfied required launch thresholds",
+   "page": 6
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 2.5 Flash-Lite",
+     "value": "-1.84%",
+     "page": 6
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 6
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 6
+  },
+  {
+   "text": "Variation expected in automated safety eval results; flagged content manually reviewed.",
+   "page": 6
+  }
+ ],
+ "notes": "Image to Text Safety -21.7% vs 2.5 Flash-Lite is a large delta reported alongside the 'outperforms' framing; sign convention ambiguous in doc."
+}

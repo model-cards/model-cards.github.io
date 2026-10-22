@@ -1,0 +1,267 @@
+{
+ "id": "chatgpt-images-2-0-system-card",
+ "provider": "openai",
+ "model": "ChatGPT Images 2.0",
+ "release_date": "2026-04-21",
+ "doc_type": "system_card",
+ "length_pages": 5,
+ "summary": "Short system card for ChatGPT Images 2.0 and its thinking mode (reasoning + tool use for image generation). Describes the layered image safety stack, an automated adversarial end-to-end evaluation of prompt- and image-layer blocking, an image-specific Preparedness bio assessment leading to High-bio mitigations, and provenance tools (C2PA, watermarking).",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "Mitigations set as if High capability in Biology; no meaningful cyber/AI self-improvement risk",
+  "quote": "We therefore set our mitigations as if this model were high capability in biology.",
+  "page": 4
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "light",
+   "evals": [
+    "expert-validated prompts eliciting bio-uplift images (e.g., infographics)",
+    "772-image biorisk monitor evaluation set"
+   ],
+   "finding": "A bioweapons expert judged some outputs accurate enough for potential novice uplift; image-specific bio policy and live blocking adopted; monitor recall/precision comparable to text systems (no numbers).",
+   "quote": "In limited cases, they determined that the resulting outputs were accurate enough to potentially provide novice uplift on harmful tasks.",
+   "page": 4,
+   "covered": true,
+   "metrics": []
+  },
+  "cyber": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Deemed not applicable since image models cannot create/execute code.",
+   "quote": "Because image models are unable to create and execute code in a way that would allow scaling of Cybersecurity attacks or enable AI Self-Improvement",
+   "page": 4,
+   "covered": true,
+   "metrics": []
+  },
+  "autonomy_ai_rnd": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Deemed not applicable.",
+   "quote": "we do not have evidence that ChatGPT Images 2.0 poses meaningful risk in these categories.",
+   "page": 4,
+   "covered": true,
+   "metrics": []
+  },
+  "harmful_content_refusal": {
+   "depth": "light",
+   "evals": [
+    "automated adversarial end-to-end safety stack evaluation across all tracked categories (consensus of 10 high-reasoning grader judgements)"
+   ],
+   "metrics": [
+    {
+     "name": "Instant mode violative image rate",
+     "value": "22.0% (685/3112)",
+     "page": 3
+    },
+    {
+     "name": "Thinking mode violative image rate",
+     "value": "6.7% (464/6944)",
+     "page": 3
+    },
+    {
+     "name": "Instant combined recall",
+     "value": "96.1%",
+     "page": 4
+    },
+    {
+     "name": "Safe output instant / thinking",
+     "value": "99.1% / 99.2%",
+     "page": 4
+    }
+   ],
+   "finding": "Combined prompt+image layers yield ~99% safe outputs on adversarial prompts; thinking mode produces far fewer violative images via safe completions.",
+   "quote": "the combined recall of prompt + image stack catches 658/685 (96.1% combined recall), resulting in 3085/3112 (99.1%) adversarial prompts leading to a safe output.",
+   "page": 4,
+   "covered": true
+  },
+  "jailbreak_robustness": {
+   "depth": "mention",
+   "evals": [
+    "adversarial prompts in automated eval"
+   ],
+   "finding": "Adversarial prompts used in the automated eval; no separate jailbreak eval.",
+   "quote": null,
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "child_safety": {
+   "depth": "mention",
+   "evals": [
+    "multiple evaluation stacks for minors categories"
+   ],
+   "finding": "Mentions running multiple evaluation stacks for higher-risk minors categories; no results.",
+   "quote": "We also run multiple evaluation stacks for higher-risk categories around minors.",
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "privacy": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Deepfakes of real people noted as a new risk; no eval results specific to it.",
+   "quote": "allow more convincing deepfakes, including political, sexual, or otherwise sensitive imagery of real people, places or events.",
+   "page": 1,
+   "covered": true,
+   "metrics": []
+  },
+  "election_misinfo": {
+   "depth": "mention",
+   "evals": [
+    "C2PA metadata",
+    "imperceptible watermark"
+   ],
+   "finding": "Political deepfakes flagged as risk; mitigated via policies and provenance tooling; no eval.",
+   "quote": "Integrating an imperceptible, robust, and content-specific watermark alongside internal tooling to help assess whether a certain image was created by our products.",
+   "page": 5,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "upstream text classifiers",
+    "multimodal safety reasoning monitor for input/output blocking",
+    "offline conversation review and account enforcement",
+    "provenance (C2PA, watermark)"
+   ],
+   "finding": "Multi-layer stack with prompt-layer refusal and image-layer input/output blocking; evaluation shifted to outcome-based harm assessment.",
+   "quote": "We've shifted from a raw taxonomy-matching approach to a more outcome-based evaluation of real harmful-output risk.",
+   "page": 2,
+   "covered": true,
+   "metrics": []
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "bioweapons expert (validation)"
+ ],
+ "notable_new_eval_methods": [
+  "Outcome-based end-to-end evaluation of image safety stack with per-layer recall metrics (p.2-3)",
+  "Image-specific variant of biological risk policy with 772-image monitor eval set (p.4)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Adversarial eval numbers are not representative of production traffic.",
+   "page": 2
+  },
+  {
+   "text": "Thinking mode required re-running prompts due to very few violative images, to measure recall.",
+   "page": 3
+  },
+  {
+   "text": "No single solution to provenance.",
+   "page": 5
+  }
+ ],
+ "notes": "Results table in OCR is garbled; metrics taken from analysis text."
+}

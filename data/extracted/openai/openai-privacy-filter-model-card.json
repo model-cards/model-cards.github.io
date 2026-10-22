@@ -1,0 +1,308 @@
+{
+ "id": "openai-privacy-filter-model-card",
+ "provider": "openai",
+ "model": "OpenAI Privacy Filter",
+ "release_date": "2026-04-22",
+ "doc_type": "model_card",
+ "length_pages": 21,
+ "summary": "Model card for OpenAI Privacy Filter, a small (1.5B total / 50M active) open-weight bidirectional token classifier for PII detection and redaction derived from a gpt-oss-style checkpoint. Reports benchmark results on PII-Masking-300k and CredData, fine-tuning efficiency on SPY, and stress tests (clue position, multilingual, one-hop reasoning, adversarial formats), plus extensive limitations.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "PII-Masking-300k (corrected)",
+   "category": "other",
+   "score": "F1 0.974 tokens / 0.942 spans",
+   "setting": "all labels",
+   "page": 14
+  },
+  {
+   "name": "PII-Masking-300k (baseline)",
+   "category": "other",
+   "score": "F1 0.960 tokens / 0.926 spans",
+   "setting": "all labels",
+   "page": 14
+  },
+  {
+   "name": "CredData (corrected)",
+   "category": "other",
+   "score": "F1 0.844 tokens / 0.624 spans; recall 0.965",
+   "setting": "secret label",
+   "page": 14
+  },
+  {
+   "name": "SPY fine-tuning",
+   "category": "other",
+   "score": "F1 0.545 (0%) -> 0.962 (10% train)",
+   "setting": "token-level",
+   "page": 15
+  },
+  {
+   "name": "Synthetic multilingual PII eval (13 languages)",
+   "category": "multilingual",
+   "score": "F1 0.758 (Hausa) to 0.933 (Portuguese)",
+   "setting": null,
+   "page": 18
+  },
+  {
+   "name": "Synthetic clue-position eval",
+   "category": "other",
+   "score": "overall recall 0.584 (PII only) / 0.863 (clue+PII)",
+   "setting": "English",
+   "page": 17
+  }
+ ],
+ "safety": {
+  "privacy": {
+   "depth": "substantial",
+   "evals": [
+    "PII-Masking-300k",
+    "CredData",
+    "SPY",
+    "clue-position stress tests",
+    "one-hop reasoning evals",
+    "adversarial confusion-category and format evals"
+   ],
+   "metrics": [
+    {
+     "name": "PII-Masking-300k token F1 (corrected)",
+     "value": "0.974",
+     "page": 14
+    },
+    {
+     "name": "CredData token recall",
+     "value": "0.965",
+     "page": 14
+    }
+   ],
+   "finding": "The model itself is a privacy tool; strong PII detection but weaker on one-hop alias reasoning and some adversarial formats; authors stress it is not an anonymization guarantee.",
+   "quote": "Privacy Filter is a redaction and data minimization aid, not an anonymization, compliance, or a safety guarantee.",
+   "page": 7,
+   "covered": true
+  },
+  "multilingual_safety": {
+   "depth": "light",
+   "evals": [
+    "PII-Masking-300k by language",
+    "synthetic multilingual PII evals (out-of-distribution languages)"
+   ],
+   "metrics": [
+    {
+     "name": "Hausa F1",
+     "value": "0.758",
+     "page": 18
+    },
+    {
+     "name": "English F1 (PII-Masking-300k)",
+     "value": "0.934",
+     "page": 17
+    }
+   ],
+   "finding": "Detection quality degrades for lower-resource languages and scripts.",
+   "quote": "Performance may drop on non-English text, non-Latin scripts, or naming patterns or domains that are out of distribution compared to model training.",
+   "page": 7,
+   "covered": true
+  },
+  "bias_fairness": {
+   "depth": "mention",
+   "evals": [],
+   "finding": "Qualitative note that under-represented names and regional conventions may be missed; no bias eval.",
+   "quote": "names and identifiers that are underrepresented in training data, or that follow conventions different from the dominant training distribution, may be more likely to be missed or inconsistently bounded.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "light",
+   "evals": [],
+   "finding": "Positioned as one layer in privacy-by-design; recommends in-domain evaluation and human review for high-sensitivity workflows.",
+   "quote": "High-sensitivity workflows should also retain human review paths.",
+   "page": 8,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "adversarial confusion-category and confusing-format evals (classifier robustness)"
+   ],
+   "finding": "Adversarial evals test robustness of PII detection to confusing categories and formats (e.g., phonetic alphabet, line breaks); not jailbreaks of a chat model.",
+   "quote": "In order to understand how Privacy Filter performs in adversarial settings that we might encounter in real data, we created various adversarial evaluations.",
+   "page": 17,
+   "metrics": []
+  },
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Dataset label correction using GPT-5.4 adjudication with human verification (p.13)",
+  "One-hop alias-reasoning PII evals and clue-position stress tests (p.15-17)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Not an anonymization, compliance or safety guarantee; static label policy requires fine-tuning to change.",
+   "page": 7
+  },
+  {
+   "text": "One-hop reasoning remains difficult; recall degrades with distance of contextual cue.",
+   "page": 17
+  },
+  {
+   "text": "Benchmark labels contained errors; model-based adjudication of dataset false positives reached only 85% agreement with humans and was not applied.",
+   "page": 13
+  },
+  {
+   "text": "Span-level CredData scores lower due to boundary discrepancies.",
+   "page": 14
+  }
+ ],
+ "notes": "Not a generative model; no frontier-risk or conventional harmful-content evals. Classifier performance recorded under capability 'other'."
+}

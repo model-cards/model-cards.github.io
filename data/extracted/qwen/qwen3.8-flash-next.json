@@ -1,0 +1,366 @@
+{
+ "id": "qwen3.8-flash-next",
+ "provider": "qwen",
+ "model": "Qwen3.8-Flash-Next",
+ "release_date": "2026-08-24",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Qwen3.8-Flash-Next (125B total / 6B active MoE plus 51B n-gram embedding, Gated DeltaNet + Qwen Sparse Attention, vision encoder), billed as an experimental preview of the Qwen4 architecture. It describes the architectural changes (QSA, Gated Residual, N-gram Embedding, Muon/AdamW recipe) and gives language and vision-language benchmark tables against Qwen3.8-27B, Qwen3.7-Plus, DeepSeek-V4-Flash and Claude-Opus-4.6.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "DeepSWE 1.1",
+   "category": "coding",
+   "score": "58.7",
+   "setting": "best of Claude Code / mini-SWE-agent",
+   "page": null
+  },
+  {
+   "name": "SWE-bench Pro",
+   "category": "coding",
+   "score": "62.5",
+   "setting": "Claude Code harness, refined benchmark",
+   "page": null
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "81.0",
+   "setting": "mini-SWE-agent",
+   "page": null
+  },
+  {
+   "name": "NL2Repo-Bench",
+   "category": "coding",
+   "score": "48.1",
+   "setting": "Claude Code; repo-access commands disabled to prevent reward hacking",
+   "page": null
+  },
+  {
+   "name": "CoWorkBench",
+   "category": "agentic_tool_use",
+   "score": "73.9",
+   "setting": "in-house",
+   "page": null
+  },
+  {
+   "name": "JobBench",
+   "category": "agentic_tool_use",
+   "score": "55.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Agents' Last Exam",
+   "category": "agentic_tool_use",
+   "score": "Pass@1 24.3 / Score 51.2",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Toolathlon Verified",
+   "category": "agentic_tool_use",
+   "score": "73.5",
+   "setting": "Pass@1",
+   "page": null
+  },
+  {
+   "name": "IFBench",
+   "category": "instruction_following",
+   "score": "81.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "91.7",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "35.9",
+   "setting": "judged by GPT-4o",
+   "page": null
+  },
+  {
+   "name": "LiveCodeBench v6",
+   "category": "coding",
+   "score": "91.9",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "ClawEval-MM",
+   "category": "agentic_tool_use",
+   "score": "Pass@3 64.4 / Avg 60.4",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "RecreationBench",
+   "category": "agentic_tool_use",
+   "score": "49.9",
+   "setting": "in-house",
+   "page": null
+  },
+  {
+   "name": "AndroidWorld",
+   "category": "agentic_tool_use",
+   "score": "84.5",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "binary 19.4 / partial 52.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "Vision2Web",
+   "category": "multimodal",
+   "score": "64.0",
+   "setting": "judged by gpt-5.4",
+   "page": null
+  },
+  {
+   "name": "ERQA",
+   "category": "multimodal",
+   "score": "72.3",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "76.6",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "RealWorldQA",
+   "category": "multimodal",
+   "score": "88.5",
+   "setting": null,
+   "page": null
+  },
+  {
+   "name": "MathVision",
+   "category": "multimodal",
+   "score": "90.6 / 95.7",
+   "setting": "without / with code interpreter",
+   "page": null
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "84.6 / 90.6",
+   "setting": "without / with code interpreter",
+   "page": null
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "A benchmark footnote says repository-access bash commands were disabled during NL2Repo evaluation to prevent reward hacking. There is no reward-hacking analysis.",
+   "quote": "To prevent reward hacking, we disable Bash commands that attempt to access the specific repository, such as pip download, pip install and git clone.",
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No safety content in this model card.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [],
+ "notes": "A keyword search for safety, harm, refusal, jailbreak, alignment, bias and toxicity returns zero hits. There is no safety section, limitations or usage policy (custom 'qwen-community-1.0' license, linked only). The card is framed around AGI 'that benefits everyone' but has no safety evaluation."
+}

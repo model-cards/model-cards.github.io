@@ -1,0 +1,394 @@
+{
+ "id": "gpt-5-5-instant-system-card",
+ "provider": "openai",
+ "model": "GPT-5.5 Instant",
+ "release_date": "2026-05-05",
+ "doc_type": "system_card",
+ "length_pages": 21,
+ "summary": "Short system card for GPT-5.5 Instant, the default fast ChatGPT model. Reports disallowed-content, vision, dynamic mental-health, jailbreak, prompt-injection, HealthBench, hallucination and first-person-fairness evals, plus Preparedness bio/chem and cyber capability evals and safeguard evals. It is the first Instant model treated as High in Biological & Chemical and Cybersecurity.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High capability in Biological and Chemical and in Cybersecurity (treated as); below High in AI Self-Improvement",
+  "quote": "GPT-5.5 Instant is our first Instant model to be treated as High Capability in the Biological and Chemical domain, as well as in the Cybersecurity domain.",
+  "page": 11
+ },
+ "capability_benchmarks": [
+  {
+   "name": "HealthBench",
+   "category": "other",
+   "score": "51.4 (length-adjusted)",
+   "setting": "length-adjusted; unadjusted 50.9",
+   "page": 8,
+   "canonical": "HealthBench"
+  },
+  {
+   "name": "HealthBench Hard",
+   "category": "other",
+   "score": "22.9 (length-adjusted)",
+   "setting": "length-adjusted; unadjusted 21.3",
+   "page": 8,
+   "canonical": "HealthBench Hard"
+  },
+  {
+   "name": "HealthBench Consensus",
+   "category": "other",
+   "score": "94.7 (length-adjusted)",
+   "setting": null,
+   "page": 8,
+   "canonical": "HealthBench Consensus"
+  },
+  {
+   "name": "HealthBench Professional",
+   "category": "other",
+   "score": "38.4 (length-adjusted)",
+   "setting": "unadjusted 40.7",
+   "page": 8,
+   "canonical": "HealthBench Professional"
+  },
+  {
+   "name": "Cyber Range",
+   "category": "other",
+   "score": "76.9% combined pass rate",
+   "setting": "pass/fail over 16 trials, xhigh reasoning",
+   "page": 19,
+   "canonical": "Cyber Range"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Multimodal Troubleshooting Virology (SecureBio)",
+    "ProtocolQA Open-Ended",
+    "Tacit Knowledge and Troubleshooting (Gryphon Scientific)",
+    "TroubleshootingBench"
+   ],
+   "metrics": [
+    {
+     "name": "TroubleshootingBench vs expert 80th pct baseline",
+     "value": "below 36.4%",
+     "page": 15
+    }
+   ],
+   "finding": "Treated as High in bio/chem as a precaution; exceeds median expert on virology MCQ, just over 80% expert consensus on tacit knowledge only if refusals counted as successes, below expert baseline on ProtocolQA and TroubleshootingBench.",
+   "quote": "We are treating this launch as High capability in the Biological and Chemical domain, activating the associated Preparedness safeguards.",
+   "page": 11
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs (pass@12)",
+    "CVE-Bench (zero-day, 34/40 challenges)",
+    "Cyber Range (13 scenarios)"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range combined pass rate",
+     "value": "76.9%",
+     "page": 19
+    }
+   ],
+   "finding": "Results closely match GPT-5.4 Thinking (treated as High), so GPT-5.5 Instant is treated as High; evals run at xhigh effort above deployed setting.",
+   "quote": "GPT-5.5 Instant closely matches the results for GPT-5.4 Thinking in the cybersecurity evaluations below. Because of this, we similarly treat GPT-5.5 Instant as High under the Preparedness Framework.",
+   "page": 15
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "AI Self-Improvement evals were not run; model judged below High because it is less capable than GPT-5.5 Thinking.",
+   "quote": "AI Self-Improvement capability evals were not run, as GPT-5.5 Instant is less capable than GPT-5.5 Thinking across several intelligence evaluations.",
+   "page": 19
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks with Challenging Prompts (not_unsafe)",
+    "Image input evaluations"
+   ],
+   "metrics": [
+    {
+     "name": "hate not_unsafe",
+     "value": "0.827",
+     "page": 5
+    },
+    {
+     "name": "gore not_unsafe",
+     "value": "0.703 (significant regression)",
+     "page": 5
+    },
+    {
+     "name": "sexual not_unsafe",
+     "value": "0.806 (significant regression)",
+     "page": 5
+    },
+    {
+     "name": "image harms-erotic",
+     "value": "0.990",
+     "page": 6
+    }
+   ],
+   "finding": "Comparable to GPT-5.3 Instant except statistically significant regressions on gore and sexual content, which are covered by system-level and age-prediction mitigations.",
+   "quote": "We find that GPT-5.5 Instant is comparable (i.e., not statistically significantly different) to the previous production model (GPT-5.3 Instant) on all disallowed categories with the exception of gore and disallowed sexual content.",
+   "page": 5
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "No over-refusal eval reported.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "multiturn jailbreak eval derived from internal red-teaming (worst-case defender success rate)"
+   ],
+   "metrics": [],
+   "finding": "Results shown only in a figure; a regression from GPT-5.3 Instant is noted and results are framed as directional.",
+   "quote": "We are actively iterating on the evaluation structure and view these results, including the regression from GPT-5.3-Instant, as directional rather than definitive.",
+   "page": 7
+  },
+  "prompt_injection": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Prompt injection attacks in connectors"
+   ],
+   "metrics": [
+    {
+     "name": "Prompt injection attacks in connectors",
+     "value": "0.992",
+     "page": 8
+    }
+   ],
+   "finding": "Comparable to predecessors.",
+   "quote": "GPT-5.5 Instant is comparable to its predecessors on these indicators.",
+   "page": 8
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Factuality Heavy",
+    "User Flagged Failures",
+    "High Stakes (medical/legal/financial) with web-enabled LLM grader"
+   ],
+   "metrics": [],
+   "finding": "Significant factuality improvements over GPT-5.3 Instant across all prompt sets (figure only).",
+   "quote": "We find that GPT-5.5 Instant has significant improvements on factuality over GPT-5.3-instant on each of these prompt sets, particularly on high stakes domains.",
+   "page": 9
+  },
+  "bias_fairness": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "First-person fairness evaluation (name-based gender stereotypes)"
+   ],
+   "metrics": [
+    {
+     "name": "harm_overall",
+     "value": "0.0101",
+     "page": 10
+    }
+   ],
+   "finding": "Broadly comparable to prior instant models; no statistically meaningful difference.",
+   "quote": "GPT-5.5 Instant scored 0.0101 on this metric, broadly comparable to GPT-5.2-instant and GPT-5.3-instant.",
+   "page": 10
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "sexual/minors production benchmark"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors not_unsafe",
+     "value": "0.810",
+     "page": 5
+    }
+   ],
+   "finding": "Reported as one category of the disallowed-content benchmark; age-prediction protections for likely minors described.",
+   "quote": "For users we believe may be under 18, we apply additional age-appropriate content protections that further restrict sexual content and exposure to gore.",
+   "page": 5
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Dynamic Mental Health Benchmarks with Adversarial User Simulations (mental health, emotional reliance, self-harm)",
+    "self-harm production benchmark",
+    "HealthBench"
+   ],
+   "metrics": [
+    {
+     "name": "Mental health",
+     "value": "0.999",
+     "page": 6
+    },
+    {
+     "name": "Emotional reliance",
+     "value": "0.963",
+     "page": 6
+    },
+    {
+     "name": "Self-harm (dynamic)",
+     "value": "0.913",
+     "page": 6
+    }
+   ],
+   "finding": "Largely comparable to GPT-5.3 Instant; emotional reliance regression not significant; online experimentation showed no increase.",
+   "quote": "We find that 5.5-instant is largely comparable on these evaluations to 5.3-instant.",
+   "page": 6
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Biological safety evals (production, synthetic easy/hard), model-only and model+monitor",
+    "Cyber safety evals (production, synthetic)"
+   ],
+   "metrics": [
+    {
+     "name": "Bio Synthetic (Hard), model only",
+     "value": "0.481",
+     "page": 20
+    },
+    {
+     "name": "Bio Synthetic (Hard), model + monitors",
+     "value": "0.923",
+     "page": 20
+    },
+    {
+     "name": "Cyber production data",
+     "value": "0.978",
+     "page": 21
+    }
+   ],
+   "finding": "Model-only bio safety regressed sharply on hard synthetic set; adding automated monitors brings end-to-end performance to 0.923. Safeguards include refusal training, monitors, actor-level enforcement, security controls.",
+   "quote": "Given the observed regressions on the synthetic evaluations, we subsequently ran our evaluations across both our model and our automated safety monitors to better understand the end-to-end safeguard stack users will encounter in production.",
+   "page": 20
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "SecureBio (dataset)",
+  "Gryphon Scientific (dataset)"
+ ],
+ "notable_new_eval_methods": [
+  "Length-adjusted HealthBench / HealthBench Professional scoring (p.7)",
+  "Merged hate+harassment category and renamed violence to gore (p.5)",
+  "Bio safeguard evals reported both model-only and model+automated-monitor (p.20)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Earlier Standard disallowed-content evals had become relatively saturated, motivating Production Benchmarks.",
+   "page": 4
+  },
+  {
+   "text": "Jailbreak eval still being iterated; results directional rather than definitive.",
+   "page": 7
+  },
+  {
+   "text": "Evaluations represent a lower bound for potential capabilities.",
+   "page": 11
+  },
+  {
+   "text": "CTF, CVE-Bench and Cyber Range each have important limitations; excelling on all three is necessary but not sufficient for High.",
+   "page": 16
+  },
+  {
+   "text": "Disparities between offline mental-health evals and online testing to be investigated.",
+   "page": 6
+  }
+ ],
+ "notes": "No alignment, deception, sycophancy, or third-party evaluation sections. Many results only in figures."
+}

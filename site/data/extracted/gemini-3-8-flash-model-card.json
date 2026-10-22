@@ -1,0 +1,385 @@
+{
+ "id": "gemini-3-8-flash-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.8 Flash",
+ "release_date": "2026-09-02",
+ "doc_type": "model_card",
+ "length_pages": 8,
+ "summary": "Model card for Gemini 3.8 Flash, aimed at cost-effective production agents. Reports price and capability benchmarks vs Gemini, Claude and GPT models, automated safety deltas vs Gemini 3.7 Flash (with a multilingual safety regression), a red-teaming summary, and frontier safety inherited from Gemini 3.7 Flash.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No T/CCL reached (inferred from Gemini 3.7 Flash)",
+  "quote": "based on Gemini 3.7 Flash results, we are confident that Gemini 3.8 Flash is also unlikely to reach any T/CCLs.",
+  "page": 8
+ },
+ "capability_benchmarks": [
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "73.7%",
+   "setting": null,
+   "page": 5,
+   "canonical": "DeepSWE v1.1"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1545 Elo",
+   "setting": null,
+   "page": 5,
+   "canonical": "GDPval-AA v2"
+  },
+  {
+   "name": "Vals Finance Agent v2",
+   "category": "agentic_tool_use",
+   "score": "61.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Vals Finance Agent v2"
+  },
+  {
+   "name": "Harvey's Legal Agent Benchmark",
+   "category": "agentic_tool_use",
+   "score": "10.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Harvey's Legal Agent Benchmark"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "89.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "Terminal-Bench 4.0",
+   "category": "agentic_tool_use",
+   "score": "19.1%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Terminal-Bench 4.0"
+  },
+  {
+   "name": "GDP.pdf",
+   "category": "multimodal",
+   "score": "35.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "GDP.pdf"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "86.2%",
+   "setting": null,
+   "page": 5,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "87.8%",
+   "setting": "agentic",
+   "page": 5,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "87.1%",
+   "setting": "static",
+   "page": 5,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "HLE-Verified",
+   "category": "reasoning_knowledge",
+   "score": "54.9%",
+   "setting": null,
+   "page": 5,
+   "canonical": "HLE-Verified"
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "59.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "OSWorld 2.0"
+  },
+  {
+   "name": "BioMysteryBench",
+   "category": "reasoning_knowledge",
+   "score": "88.8%",
+   "setting": null,
+   "page": 5,
+   "canonical": "BioMysteryBench"
+  },
+  {
+   "name": "BioMysteryBench (human difficult)",
+   "category": "reasoning_knowledge",
+   "score": "56.5%",
+   "setting": null,
+   "page": 5,
+   "canonical": "BioMysteryBench (human difficult)"
+  },
+  {
+   "name": "LABBench2",
+   "category": "reasoning_knowledge",
+   "score": "86.2%",
+   "setting": null,
+   "page": 5,
+   "canonical": "LABBench2"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash FSF results.",
+   "quote": "based on Gemini 3.7 Flash results, we are confident that Gemini 3.8 Flash is also unlikely to reach any T/CCLs.",
+   "page": 8
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash FSF results.",
+   "quote": "based on Gemini 3.7 Flash results, we are confident that Gemini 3.8 Flash is also unlikely to reach any T/CCLs.",
+   "page": 8
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "Frontier safety inherited from proxy model"
+   ],
+   "metrics": [],
+   "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash FSF results.",
+   "quote": "based on Gemini 3.7 Flash results, we are confident that Gemini 3.8 Flash is also unlikely to reach any T/CCLs.",
+   "page": 8
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 3.7 Flash",
+     "value": "-0.4pp (lower is better)",
+     "page": 7
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 3.7 Flash",
+     "value": "0.0pp",
+     "page": 7
+    },
+    {
+     "name": "Tone vs Gemini 3.7 Flash",
+     "value": "+0.2pp (higher is better)",
+     "page": 7
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.7 Flash; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 3.8 Flash performs similarly to Gemini 3.7 Flash across both safety and tone, with low unjustified refusals.",
+   "page": 7
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 3.7 Flash",
+     "value": "+1.1pp (lower is better)",
+     "page": 7
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 7
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Jailbreak resistance named as ongoing work.",
+   "quote": "we are continually working to improve jailbreak resistance and have recently strengthened the mitigations across Frontier Safety.",
+   "page": 6
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3.8 Flash satisfied required launch thresholds",
+   "page": 8
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 3.7 Flash",
+     "value": "+5.4pp (lower is better; regression)",
+     "page": 7
+    }
+   ],
+   "finding": "Regression of +5.4pp (lower is better) in non-English safety vs 3.7 Flash, acknowledged by authors.",
+   "quote": "Safety performance across non-English languages regressed slightly relative to 3.7 Flash.",
+   "page": 7
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 7
+  },
+  {
+   "text": "Multilingual safety regressed slightly.",
+   "page": 7
+  }
+ ],
+ "notes": "Frontier safety proxy shifts from Gemini 3.1 Pro (earlier Flash cards) to Gemini 3.7 Flash."
+}

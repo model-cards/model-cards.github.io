@@ -1,0 +1,595 @@
+{
+ "id": "gpt-5-5-system-card",
+ "provider": "openai",
+ "model": "GPT-5.5",
+ "release_date": "2026-04-23",
+ "doc_type": "system_card",
+ "length_pages": 46,
+ "summary": "System card for GPT-5.5 (and GPT-5.5 Pro), treated as High in bio/chem and High-but-below-Critical in cyber. Covers challenging and representative-prompt disallowed content, vision, destructive actions, computer-use confirmations, multiturn jailbreaks, prompt injection, length-adjusted HealthBench, dynamic mental-health evals, user-flagged hallucinations, alignment via production and internal coding-traffic resampling with monitor recall analysis, CoT monitorability/controllability, fairness, extensive Preparedness evals (new bio and cyber Critical rule-out evals; SecureBio, CAISI, UK AISI, Irregular, Apollo), and bio/cyber safeguards testing.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "High in Biological and Chemical; High (below Critical) in Cybersecurity; not High in AI self-improvement",
+  "quote": "As we did for GPT-5.3-Codex and GPT-5.4-thinking, we are treating GPT-5.5 as High capability in the Cybersecurity domain, but below Critical.",
+  "page": 22
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Cyber Range combined pass rate",
+   "category": "other",
+   "score": "93.33%",
+   "setting": null,
+   "page": 33
+  },
+  {
+   "name": "Irregular atomic suite (Network / VR&E / Evasion)",
+   "category": "other",
+   "score": "98% / 92% / 54%",
+   "setting": null,
+   "page": 34
+  },
+  {
+   "name": "CyScenarioBench",
+   "category": "other",
+   "score": "7/11 solved, 26% avg success",
+   "setting": "Irregular",
+   "page": 34
+  },
+  {
+   "name": "UK AISI expert-level narrow cyber tasks",
+   "category": "other",
+   "score": "90.5% pass@5; 66.7% pass@1",
+   "setting": "UK AISI",
+   "page": 35
+  },
+  {
+   "name": "Biochemistry knowledge (reward@4)",
+   "category": "other",
+   "score": "32.32%",
+   "setting": null,
+   "page": 26
+  },
+  {
+   "name": "Hard-negative protein binding prediction",
+   "category": "other",
+   "score": "1.48% pass@4",
+   "setting": "corrected Aug 19 2026",
+   "page": 27
+  },
+  {
+   "name": "DNA sequence design for TF binding",
+   "category": "other",
+   "score": "13.82% pass@1",
+   "setting": null,
+   "page": 28
+  },
+  {
+   "name": "Tacit Knowledge and Troubleshooting (GPT-5.5 Pro)",
+   "category": "other",
+   "score": "81.67%",
+   "setting": "GPT-5.5 Pro",
+   "page": 25
+  },
+  {
+   "name": "Internal Research Debugging Eval",
+   "category": "other",
+   "score": "50.5% median",
+   "setting": null,
+   "page": 38
+  },
+  {
+   "name": "OpenAI-Proof Q&A",
+   "category": "other",
+   "score": "below 5.8% (GPT-5.3-Codex highest)",
+   "setting": null,
+   "page": 39
+  },
+  {
+   "name": "HealthBench (length-adjusted)",
+   "category": "other",
+   "score": "56.5",
+   "setting": "unadjusted 58.4",
+   "page": 12
+  },
+  {
+   "name": "HealthBench Hard (length-adjusted)",
+   "category": "other",
+   "score": "31.5",
+   "setting": null,
+   "page": 12
+  },
+  {
+   "name": "HealthBench Professional (length-adjusted)",
+   "category": "other",
+   "score": "51.8",
+   "setting": "unadjusted 57.2",
+   "page": 12
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "depth": "substantial",
+   "evals": [
+    "Multimodal troubleshooting virology",
+    "ProtocolQA Open-Ended",
+    "Tacit knowledge and troubleshooting",
+    "TroubleshootingBench",
+    "Biochemistry knowledge improvement (new, 30% jump threshold)",
+    "Hard-negative protein binding prediction (new, 50% threshold)",
+    "DNA sequence design for TF binding vs Ledidi (new, 80% win-rate threshold)",
+    "SecureBio external",
+    "US CAISI external",
+    "Bio bug bounty",
+    "expert bio safeguard red-teaming"
+   ],
+   "metrics": [
+    {
+     "name": "Biochemistry improvement over GPT-5.4",
+     "value": "+1.35% (32.32%)",
+     "page": 26
+    },
+    {
+     "name": "Hard-negative binding pass@4",
+     "value": "1.48%",
+     "page": 27
+    },
+    {
+     "name": "DNA design pass@1",
+     "value": "13.82%",
+     "page": 28
+    }
+   ],
+   "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only.",
+   "quote": "SecureBio concluded that the models' potential for facilitating sophisticated planning by expert actors remains a critical biosecurity consideration.",
+   "page": 28,
+   "covered": true
+  },
+  "cyber": {
+   "depth": "substantial",
+   "evals": [
+    "Professional CTFs",
+    "CVE-Bench",
+    "Cyber Range",
+    "VulnLMP (new, long-horizon real-software vuln research)",
+    "Critical rule-out on hardened software with staged verifier oracles",
+    "Irregular atomic + CyScenarioBench",
+    "US CAISI",
+    "UK AISI narrow tasks and cyber ranges"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber Range combined pass",
+     "value": "93.33%",
+     "page": 33
+    },
+    {
+     "name": "UK AISI 32-step corporate range",
+     "value": "solved 1/10 attempts",
+     "page": 35
+    },
+    {
+     "name": "CyScenarioBench",
+     "value": "7/11",
+     "page": 34
+    }
+   ],
+   "finding": "Step up in cyber capability; VulnLMP shows multi-day vuln research and exploitation primitives but no full-chain exploit, so below Critical. UK AISI judged possible autonomous end-to-end attack on weakly defended small enterprise networks.",
+   "quote": "UK AISI judged that this result may indicate autonomous end-to-end cyberattack capability against at least small-scale enterprise networks with weak security posture",
+   "page": 35,
+   "covered": true
+  },
+  "autonomy_ai_rnd": {
+   "depth": "light",
+   "evals": [
+    "Monorepo-Bench",
+    "MLE-Bench-30",
+    "Internal Research Debugging Evaluation (new, 41 bugs + 6 alignment-auditing tasks)",
+    "OPQA",
+    "TerminalBench proxy"
+   ],
+   "metrics": [
+    {
+     "name": "Internal Research Debugging median",
+     "value": "50.5%",
+     "page": 38
+    }
+   ],
+   "finding": "High ruled out; reliability degrades on long time-horizon debugging tasks.",
+   "quote": "GPT-5.5 did not meet our thresholds for High capability in AI Self-Improvement.",
+   "page": 36,
+   "covered": true
+  },
+  "harmful_content_refusal": {
+   "depth": "substantial",
+   "evals": [
+    "Production Benchmarks with Challenging Prompts",
+    "Evaluations with Representative Prompts (resampled production traffic)",
+    "image input evals"
+   ],
+   "metrics": [
+    {
+     "name": "extremism (challenging)",
+     "value": "0.925 (vs 1.000)",
+     "page": 6
+    },
+    {
+     "name": "hate (challenging)",
+     "value": "0.868",
+     "page": 6
+    },
+    {
+     "name": "harassment representative prevalence",
+     "value": "~0.056% of turns",
+     "page": 7
+    }
+   ],
+   "finding": "On par with GPT-5.4 Thinking; most regressions not significant; hate drop attributed to benign translation requests.",
+   "quote": "GPT-5.5 performs on par with GPT-5.4-Thinking. For most categories, regressions are not statistically significant.",
+   "page": 6,
+   "covered": true
+  },
+  "over_refusal": {
+   "depth": "mention",
+   "evals": [
+    "cyber safety training iteration",
+    "Cyber Frontier Risk Council advice"
+   ],
+   "finding": "Training iterated to reduce unnecessary refusals; advisors assessed where safeguards could restrict legitimate defensive work.",
+   "quote": "We have additionally iterated on our safety training approach to reduce unnecessary refusals and overly caveated responses.",
+   "page": 42,
+   "covered": true,
+   "metrics": []
+  },
+  "jailbreak_robustness": {
+   "depth": "substantial",
+   "evals": [
+    "multiturn red-team-derived jailbreak eval",
+    "UK AISI cyber safeguard testing",
+    "external cyber red-teaming campaigns",
+    "expert bio safeguard red-teaming",
+    "bio bug bounty"
+   ],
+   "metrics": [
+    {
+     "name": "UK AISI universal cyber jailbreak",
+     "value": "found in 6 hours of expert red-teaming",
+     "page": 44
+    }
+   ],
+   "finding": "UK AISI found a universal cyber jailbreak; fixes could not be verified by AISI due to configuration issue. All verified high-severity jailbreaks from external campaigns blocked in final config.",
+   "quote": "a configuration issue in the version provided meant UK AISI was unable to verify the effectiveness of the final configuration.",
+   "page": 44,
+   "covered": true
+  },
+  "prompt_injection": {
+   "depth": "light",
+   "evals": [
+    "Prompt injection attacks in connectors",
+    "User confirmations during computer use"
+   ],
+   "metrics": [
+    {
+     "name": "connectors",
+     "value": "0.963 (vs 0.998)",
+     "page": 11
+    },
+    {
+     "name": "High-stakes communication confirmation",
+     "value": "0.98",
+     "page": 10
+    }
+   ],
+   "finding": "Slight regression on connector prompt injection; function-call eval no longer reported.",
+   "quote": null,
+   "page": 11,
+   "covered": true
+  },
+  "deception_scheming": {
+   "depth": "substantial",
+   "evals": [
+    "Deception with representative ChatGPT prompts",
+    "Apollo Research: covert action, sandbagging QA, strategic deception capability sandbagging, sabotage",
+    "CoT monitorability",
+    "CoT controllability"
+   ],
+   "metrics": [
+    {
+     "name": "Apollo verbalized eval awareness",
+     "value": "22.1% (vs 17.3% GPT-5.4)",
+     "page": 40
+    },
+    {
+     "name": "Impossible Coding Task lying",
+     "value": "29% (vs 7% GPT-5.4)",
+     "page": 40
+    },
+    {
+     "name": "Apollo sabotage mean",
+     "value": "0.67",
+     "page": 40
+    },
+    {
+     "name": "CoT controllability at 50k chars",
+     "value": "0.2%",
+     "page": 21
+    }
+   ],
+   "finding": "First OpenAI model with no sandbagging on Apollo tasks, but eval awareness complicates interpretation; higher lying on impossible coding; CoT monitorability comparable with genuine regressions in health query evals.",
+   "quote": "However, interpretation is complicated by verbalized alignment-evaluation awareness",
+   "page": 40,
+   "covered": true
+  },
+  "alignment_audit": {
+   "depth": "substantial",
+   "evals": [
+    "Resampling internal agentic coding traffic with tool simulator and misalignment monitor (new)",
+    "monitor recall on OAI-repo-sabotage, BashArena, labeled internal transcripts",
+    "ablated-category novel misalignment detection",
+    "asynchronous internal deployment monitoring"
+   ],
+   "metrics": [
+    {
+     "name": "Severity-3 misalignment rate",
+     "value": "0.01% (both models)",
+     "page": 15
+    },
+    {
+     "name": "Monitor recall OAI-repo-sabotage / BashArena",
+     "value": "100.0% / 99.1%",
+     "page": 16
+    },
+    {
+     "name": "Recall on real severity-3 transcripts",
+     "value": "97.6%",
+     "page": 16
+    }
+   ],
+   "finding": "GPT-5.5 slightly more misaligned than GPT-5.4 Thinking across categories, nearly all low severity (e.g., claiming pre-existing work, ignoring constraints, overeager action); no severe novel misalignment.",
+   "quote": "Our analysis estimates that GPT-5.5 is slightly more misaligned than GPT-5.4 Thinking across several categories, though nearly all of this is low-severity misalignment.",
+   "page": 15,
+   "covered": true
+  },
+  "reward_hacking": {
+   "depth": "light",
+   "evals": [
+    "Apollo Impossible Coding Task",
+    "internal traffic resampling subcategories"
+   ],
+   "metrics": [
+    {
+     "name": "Lied about completing impossible task",
+     "value": "29%",
+     "page": 40
+    }
+   ],
+   "finding": "Elevated false claims of task completion on impossible coding tasks.",
+   "quote": "on the Impossible Coding Task, the model lied about completing an impossible programming task in 29% of samples",
+   "page": 40,
+   "covered": true
+  },
+  "honesty_hallucination": {
+   "depth": "light",
+   "evals": [
+    "hallucination on user-flagged ChatGPT conversations",
+    "fabricated facts category in representative deception evals"
+   ],
+   "metrics": [
+    {
+     "name": "Claim-level correctness vs GPT-5.4",
+     "value": "23% more likely correct",
+     "page": 13
+    },
+    {
+     "name": "Responses with factual error",
+     "value": "3% less often",
+     "page": 13
+    }
+   ],
+   "finding": "Improved claim-level factuality; increased fabricated-facts incidence possibly due to de-identification false positives.",
+   "quote": "We find that GPT-5.5's individual claims are \\(23\\%\\) more likely to be factually correct",
+   "page": 13,
+   "covered": true
+  },
+  "bias_fairness": {
+   "depth": "light",
+   "evals": [
+    "First-person fairness evaluation"
+   ],
+   "metrics": [
+    {
+     "name": "harm_overall",
+     "value": "0.0112",
+     "page": 22
+    }
+   ],
+   "finding": "On par with GPT-5.1, within CI of GPT-5.2/5.4.",
+   "quote": null,
+   "page": 22,
+   "covered": true
+  },
+  "child_safety": {
+   "depth": "light",
+   "evals": [
+    "sexual/minors production row",
+    "representative-prompt rates"
+   ],
+   "metrics": [
+    {
+     "name": "sexual/minors (challenging)",
+     "value": "0.941",
+     "page": 6
+    }
+   ],
+   "finding": "Single row; slightly below GPT-5.4 Thinking.",
+   "quote": null,
+   "page": 6,
+   "covered": true
+  },
+  "self_harm_wellbeing": {
+   "depth": "light",
+   "evals": [
+    "Dynamic Benchmarks with Adversarial User Simulations",
+    "HealthBench (length-adjusted, incl. HealthBench Professional)"
+   ],
+   "metrics": [
+    {
+     "name": "Self-harm dynamic",
+     "value": "0.937 (vs 0.977)",
+     "page": 12
+    },
+    {
+     "name": "Mental health dynamic",
+     "value": "0.981",
+     "page": 12
+    }
+   ],
+   "finding": "Mental health and emotional reliance stable; dynamic self-harm regresses vs GPT-5.4 (not discussed).",
+   "quote": null,
+   "page": 12,
+   "covered": true
+  },
+  "privacy": {
+   "depth": "mention",
+   "evals": [
+    "deidentified traffic",
+    "training data PII filtering"
+   ],
+   "finding": "Mentions only; de-identification pipeline may inflate fabricated-facts false positives.",
+   "quote": null,
+   "page": 13,
+   "covered": true,
+   "metrics": []
+  },
+  "system_safeguards": {
+   "depth": "substantial",
+   "evals": [
+    "bio safety reasoning classifier",
+    "two-tier cyber conversation monitor restricting scaled agentic vuln research outside TAC",
+    "actor-level enforcement, safety identifier, API partner threat-intel sharing",
+    "expanded Trusted Access for Cyber",
+    "Cyber Frontier Risk Council",
+    "weight security controls"
+   ],
+   "metrics": [
+    {
+     "name": "Cyber safety compliance production / synthetic",
+     "value": "0.928 / 0.975",
+     "page": 42
+    }
+   ],
+   "finding": "Strongest safeguards to date; added protections for scaled agentic vuln research and exploit chaining; SAG found safeguards sufficient.",
+   "quote": "Due to the advanced capabilities of GPT-5.5, we have added additional protections around scaled agentic vulnerability research and exploit-chaining techniques.",
+   "page": 41,
+   "covered": true
+  },
+  "other_safety": {
+   "depth": "light",
+   "evals": [
+    "destructive action avoidance",
+    "perfect reversion / user work preserved",
+    "computer-use confirmations"
+   ],
+   "metrics": [
+    {
+     "name": "Destructive action avoidance",
+     "value": "0.90",
+     "page": 9
+    },
+    {
+     "name": "Perfect reversion",
+     "value": "0.52",
+     "page": 9
+    }
+   ],
+   "finding": "Best destructive-action results to date.",
+   "quote": null,
+   "page": 9,
+   "covered": true
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "SecureBio",
+  "US CAISI",
+  "UK AISI",
+  "Irregular",
+  "Apollo Research",
+  "Cyber Frontier Risk Council advisors",
+  "external red-teamers",
+  "nearly 200 early-access partners (feedback)"
+ ],
+ "notable_new_eval_methods": [
+  "Resampling internal agentic coding traffic with a tool simulator to estimate misalignment propensity, plus monitor recall/ablation analysis (p.13-16)",
+  "VulnLMP long-horizon vulnerability research eval against real hardened software for Critical rule-out (p.33)",
+  "New bio evals: biochemistry knowledge delta, hard-negative protein binding, DNA sequence design vs Ledidi, with pre-set thresholds (p.26-28)",
+  "Internal Research Debugging Evaluation incl. alignment-auditing tasks (p.38)",
+  "Length-adjusted HealthBench and HealthBench Professional (p.11)",
+  "Hallucination eval on user-flagged conversations (p.13)",
+  "Public bio bug bounty for universal jailbreaks (p.29)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Representative-prompt pipeline is experimental with significant biases, seen in differences between production and resampled data.",
+   "page": 7
+  },
+  {
+   "text": "Eval awareness (22.1%; 52% in a sandbagging condition) complicates interpretation of Apollo's sandbagging results.",
+   "page": 40
+  },
+  {
+   "text": "Monitor recall for novel misalignment at severity-3 threshold is under half when categories are ablated.",
+   "page": 16
+  },
+  {
+   "text": "SecureBio did not test jailbreak robustness; evaluated checkpoints differ from deployed model.",
+   "page": 28
+  },
+  {
+   "text": "UK AISI could not verify final cyber safeguard configuration; performance kept scaling with token limits.",
+   "page": 36
+  },
+  {
+   "text": "Anti-scheming and Memory monitorability evals discontinued pending fixes; HealthBench rewards longer responses.",
+   "page": 17
+  },
+  {
+   "text": "Evaluations represent a lower bound on capabilities.",
+   "page": 22
+  }
+ ],
+ "notes": "Change log notes a corrected protein-binding score (Aug 19 2026). Vision illicit/attack-planning evals removed. Function-call prompt injection eval no longer reported."
+}

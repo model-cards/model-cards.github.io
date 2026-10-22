@@ -1,0 +1,485 @@
+{
+ "id": "glm-5-tech-report",
+ "provider": "glm",
+ "model": "GLM-5",
+ "release_date": "2026-02-17",
+ "doc_type": "tech_report",
+ "length_pages": 40,
+ "summary": "40-page technical report for GLM-5 (744B/40B-active MoE) covering DSA sparse attention, pre-/mid-training, post-training (SFT, reasoning/agentic/general RL, on-policy distillation, slime async RL infra), agent environment scaling, Chinese chip adaptation, and evaluation on ARC benchmarks, the internal CC-Bench-V2 suite, SWE-rebench and real-world general abilities. The report contains no safety evaluation section; the only safety-adjacent content is CyberGym as a coding capability score, SimpleQA as a world-knowledge benchmark, and reward hacking observed during slide-generation RL.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "30.5",
+   "setting": "text-only subset, GPT-5.2 (medium) judge",
+   "page": 23,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "50.4",
+   "setting": "with tools, 202,752 max tokens",
+   "page": 23,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "AIME 2026 I",
+   "category": "math",
+   "score": "92.7",
+   "setting": null,
+   "page": 23,
+   "canonical": "AIME 2026 I"
+  },
+  {
+   "name": "HMMT Feb 2025",
+   "category": "math",
+   "score": "97.9",
+   "setting": null,
+   "page": 23,
+   "canonical": "HMMT 2025"
+  },
+  {
+   "name": "HMMT Nov 2025",
+   "category": "math",
+   "score": "96.9",
+   "setting": null,
+   "page": 23,
+   "canonical": "HMMT Nov 2025"
+  },
+  {
+   "name": "IMO-AnswerBench",
+   "category": "math",
+   "score": "82.5",
+   "setting": null,
+   "page": 23,
+   "canonical": "IMO-AnswerBench"
+  },
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "86.0",
+   "setting": null,
+   "page": 23,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "LongBench v2",
+   "category": "long_context",
+   "score": "64.5",
+   "setting": null,
+   "page": 23,
+   "canonical": "LongBench v2"
+  },
+  {
+   "name": "SWE-bench Verified",
+   "category": "coding",
+   "score": "77.8",
+   "setting": "OpenHands, tailored prompt",
+   "page": 23,
+   "canonical": "SWE-bench Verified"
+  },
+  {
+   "name": "SWE-bench Multilingual",
+   "category": "coding",
+   "score": "73.3",
+   "setting": null,
+   "page": 23,
+   "canonical": "SWE-bench Multilingual"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "56.2 / 60.7",
+   "setting": "Terminus-2; second number on self-verified version",
+   "page": 23,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "Terminal-Bench 2.0",
+   "category": "coding",
+   "score": "56.2 / 61.1",
+   "setting": "Claude Code harness; second number verified version",
+   "page": 23,
+   "canonical": "Terminal-Bench 2.0"
+  },
+  {
+   "name": "CyberGym",
+   "category": "coding",
+   "score": "43.2",
+   "setting": "Claude Code 2.1.18",
+   "page": 23,
+   "canonical": "CyberGym"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "62.0",
+   "setting": null,
+   "page": 23,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "75.9",
+   "setting": "with context management (discard-all)",
+   "page": 23,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "BrowseComp-ZH",
+   "category": "agentic_tool_use",
+   "score": "72.7",
+   "setting": null,
+   "page": 23,
+   "canonical": "BrowseComp-ZH"
+  },
+  {
+   "name": "tau2-bench",
+   "category": "agentic_tool_use",
+   "score": "89.7",
+   "setting": "prompt adjustment Retail/Telecom; Airline fixes",
+   "page": 23,
+   "canonical": "τ²-bench"
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "67.8",
+   "setting": "public 500-task set, 10-min timeout, Gemini 3 Pro judge",
+   "page": 23,
+   "canonical": "MCP Atlas"
+  },
+  {
+   "name": "Toolathlon",
+   "category": "agentic_tool_use",
+   "score": "39.2",
+   "setting": "listed as Tool-Decathlon",
+   "page": 23,
+   "canonical": "Toolathlon"
+  },
+  {
+   "name": "Vending-Bench 2",
+   "category": "agentic_tool_use",
+   "score": "$4,432",
+   "setting": null,
+   "page": 23,
+   "canonical": "Vending-Bench 2"
+  },
+  {
+   "name": "GDPval-AA",
+   "category": "agentic_tool_use",
+   "score": "1,409 Elo",
+   "setting": "recorded 15 Feb 2026",
+   "page": 23,
+   "canonical": "GDPval-AA"
+  },
+  {
+   "name": "Artificial Analysis Intelligence Index v4.0",
+   "category": "other",
+   "score": "50",
+   "setting": null,
+   "page": 3,
+   "canonical": "Artificial Analysis Intelligence Index v4.0"
+  },
+  {
+   "name": "SWE-rebench (Jan 2026)",
+   "category": "coding",
+   "score": "42.1% resolved; 50.0% Pass@5",
+   "setting": null,
+   "page": 27,
+   "canonical": "SWE-rebench (Jan 2026)"
+  },
+  {
+   "name": "CC-Bench-V2 Frontend HTML",
+   "category": "coding",
+   "score": "ISR 38.9 / CSR 76.3",
+   "setting": "internal; Agent-as-a-Judge",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Frontend HTML"
+  },
+  {
+   "name": "CC-Bench-V2 Frontend React",
+   "category": "coding",
+   "score": "ISR 34.6 / CSR 71.0",
+   "setting": "internal",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Frontend React"
+  },
+  {
+   "name": "CC-Bench-V2 Frontend Vue",
+   "category": "coding",
+   "score": "ISR 32.7 / CSR 77.1",
+   "setting": "internal",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Frontend Vue"
+  },
+  {
+   "name": "CC-Bench-V2 Backend",
+   "category": "coding",
+   "score": "25.8 Pass@1",
+   "setting": "internal, 85 tasks",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Backend"
+  },
+  {
+   "name": "CC-Bench-V2 Repo Exploration",
+   "category": "coding",
+   "score": "65.6 Pass@1",
+   "setting": "internal",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Repo Exploration"
+  },
+  {
+   "name": "CC-Bench-V2 Chained Tasks",
+   "category": "coding",
+   "score": "52.3 Pass@1",
+   "setting": "internal",
+   "page": 25,
+   "canonical": "CC-Bench-V2 Chained Tasks"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "CyberGym (Claude Code 2.1.18)"
+   ],
+   "metrics": [
+    {
+     "name": "CyberGym",
+     "value": "43.2",
+     "page": 23
+    }
+   ],
+   "finding": "CyberGym is reported as a 'cybersecurity coding benchmark' within the coding capability results, framed as an improvement (second only to Claude Opus 4.5); no misuse-risk framing, thresholds or mitigations.",
+   "quote": "On the cybersecurity coding benchmark (i.e., CyberGym), GLM-5 makes a significant improvement over GLM-4.7, second only to Claude Opus 4.5.",
+   "page": 24
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "qualitative observation during slide-generation RL"
+   ],
+   "metrics": [],
+   "finding": "Reports reward-hacking behaviours observed during slide-generation RL training (hard truncation of content, excessive spacing manipulation) and a runtime-rendering reward designed to resist them; this is a training-design note, not a model behaviour evaluation.",
+   "quote": "During training, we observe several forms of reward hacking behaviors, such as hard truncation of overlong content or excessive manipulation of spacing (see Figure 9).",
+   "page": 20
+  },
+  "honesty_hallucination": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "SimpleQA",
+    "Chinese SimpleQA",
+    "Artificial Analysis knowledge/hallucination (AA-Omniscience)"
+   ],
+   "metrics": [],
+   "finding": "Factuality is treated as a capability ('world knowledge'): SimpleQA and Chinese SimpleQA are listed with results only in a GLM-4.7 vs GLM-5 figure; reducing hallucination is named as a General RL objective.",
+   "quote": "SimpleQA [49]. SimpleQA measures short-form factuality using challenging questions with single, indisputable answers.",
+   "page": 29
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Andon Labs (Vending-Bench 2)",
+  "Artificial Analysis",
+  "LMArena",
+  "SWE-rebench (official leaderboard)"
+ ],
+ "notable_new_eval_methods": [
+  "CC-Bench-V2: internal frontend/backend/long-horizon agentic engineering suite, fully automated with Agent-as-a-Judge (Claude Code + Claude Sonnet 4.5 + Playwright), validated 94% agreement with human experts (p.24-26)",
+  "Multi-step chained-task benchmark mined from merged PRs (p.27)",
+  "Self-'verified' Terminal-Bench 2.0 fixing ambiguous instructions (p.23)",
+  "Internal real-world general-ability sets: ZMultiTransBench, ZMultiDialBench, IF-Badcase, ToolCall-Badcase (p.28-30)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "SWE-bench Verified is a static, public, human-validated test set and released for more than 2 years (motivation for using decontaminated SWE-rebench).",
+   "page": 27
+  },
+  {
+   "text": "We find that the performance on BrowseComp [50] is sensitive to both the judge prompt and the judge model, and open-source judges can introduce systematic bias.",
+   "page": 19
+  },
+  {
+   "text": "Agent-as-a-Judge disagreements with human experts are concentrated on subjective visual-quality criteria.",
+   "page": 26
+  },
+  {
+   "text": "While standardized academic benchmarks provide useful signals, they do not fully capture how models are used in practice.",
+   "page": 28
+  }
+ ],
+ "notes": "KEY FINDING: a 40-page frontier open-weights tech report with NO safety section at all. Keyword searches for safety, harm, refusal, jailbreak, red team, toxic, misuse, responsible returned zero relevant hits. 'Alignment' appears only as 'progressive alignment strategy' / 'Human-in-the-loop style alignment' (stylistic human-preference alignment in General RL, p.13). General RL optimizes 'foundational correctness', 'emotional intelligence' and 'task-specific quality'—no harmlessness dimension. Easter-egg section describes anonymous 'Pony Alpha' release on OpenRouter (p.30)."
+}

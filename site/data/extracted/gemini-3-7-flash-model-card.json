@@ -1,0 +1,438 @@
+{
+ "id": "gemini-3-7-flash-model-card",
+ "provider": "gemini",
+ "model": "Gemini 3.7 Flash",
+ "release_date": "2026-08-13",
+ "doc_type": "model_card",
+ "length_pages": 9,
+ "summary": "Model card for Gemini 3.7 Flash. Reports price and a broad set of capability benchmarks (coding, agents, documents, biology research), automated safety deltas vs Gemini 3.6 Flash in percentage points, a red-teaming summary, and its own FSF (April-2026) results table with tracked and critical capability levels, finding none reached but alert thresholds reached for CBRN and cyber.",
+ "framework": {
+  "name": "Frontier Safety Framework",
+  "level_or_determination": "No TCL/CCL reached; alert thresholds reached for CBRN Uplift Level 1 and Cyber Uplift Level 1",
+  "quote": "We evaluated Gemini 3.7 Flash as outlined in our latest Frontier Safety Framework (April-2026), and found that it did not reach any tracked or critical capability levels as outlined in the table below:",
+  "page": 8
+ },
+ "capability_benchmarks": [
+  {
+   "name": "Artificial Analysis Intelligence Index",
+   "category": "reasoning_knowledge",
+   "score": "56",
+   "setting": null,
+   "page": 5,
+   "canonical": "Artificial Analysis Intelligence Index"
+  },
+  {
+   "name": "FrontierCode 1.1 Main",
+   "category": "coding",
+   "score": "46.6%",
+   "setting": null,
+   "page": 5,
+   "canonical": "FrontierCode 1.1 Main"
+  },
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "65.3%",
+   "setting": null,
+   "page": 5,
+   "canonical": "DeepSWE v1.1"
+  },
+  {
+   "name": "Code Arena",
+   "category": "coding",
+   "score": "1588 Elo",
+   "setting": null,
+   "page": 5,
+   "canonical": "Code Arena"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "85.8%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "Terminal-Bench 3.0",
+   "category": "agentic_tool_use",
+   "score": "14.9%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Terminal-Bench 3.0"
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "30.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "AutomationBench"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1525 Elo",
+   "setting": null,
+   "page": 5,
+   "canonical": "GDPval-AA v2"
+  },
+  {
+   "name": "Harvey LAB-AA",
+   "category": "agentic_tool_use",
+   "score": "90.7%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Harvey LAB-AA"
+  },
+  {
+   "name": "GDP.pdf",
+   "category": "multimodal",
+   "score": "34.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "GDP.pdf"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "84.5%",
+   "setting": "No tools",
+   "page": 5,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "CharXiv Reasoning",
+   "category": "multimodal",
+   "score": "88.7%",
+   "setting": "With tools",
+   "page": 5,
+   "canonical": "CharXiv Reasoning"
+  },
+  {
+   "name": "LVBench",
+   "category": "multimodal",
+   "score": "85.4%",
+   "setting": null,
+   "page": 5,
+   "canonical": "LVBench"
+  },
+  {
+   "name": "MRCR v2 (8-needle)",
+   "category": "long_context",
+   "score": "97.0%",
+   "setting": null,
+   "page": 5,
+   "canonical": "MRCR v2 (8-needle)"
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "47.9%",
+   "setting": null,
+   "page": 5,
+   "canonical": "OSWorld 2.0"
+  },
+  {
+   "name": "Agent's Last Exam",
+   "category": "agentic_tool_use",
+   "score": "26.3%",
+   "setting": null,
+   "page": 5,
+   "canonical": "Agent's Last Exam"
+  },
+  {
+   "name": "HLE-Verified",
+   "category": "reasoning_knowledge",
+   "score": "53.6%",
+   "setting": null,
+   "page": 5,
+   "canonical": "HLE-Verified"
+  },
+  {
+   "name": "BioMysteryBench",
+   "category": "reasoning_knowledge",
+   "score": "87.1%",
+   "setting": null,
+   "page": 5,
+   "canonical": "BioMysteryBench"
+  },
+  {
+   "name": "BioMysteryBench (human difficult)",
+   "category": "reasoning_knowledge",
+   "score": "43.5%",
+   "setting": null,
+   "page": 5,
+   "canonical": "BioMysteryBench (human difficult)"
+  },
+  {
+   "name": "LABBench2",
+   "category": "reasoning_knowledge",
+   "score": "82.1%",
+   "setting": null,
+   "page": 5,
+   "canonical": "LABBench2"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Expert red teaming vs web baselines",
+    "FSF CBRN testing"
+   ],
+   "metrics": [],
+   "finding": "Uplift TCL and Uplift Level 1 CCL ruled out with reasonable confidence; expert red teaming showed modest uplift and some experts elicited actionable info across full harm journey, so alert threshold reached.",
+   "quote": "prompting us to assess that the model has reached the alert threshold for this CCL.",
+   "page": 8
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF cyber evaluation (summary)"
+   ],
+   "metrics": [],
+   "finding": "Reaches cyber alert threshold but not CCL; mitigations deployed.",
+   "quote": "Gemini 3.7 Flash reaches the alert threshold for this CCL, but not the CCL.",
+   "page": 8
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF ML R&D evaluation (summary)"
+   ],
+   "metrics": [],
+   "finding": "Can complete individual coding tasks but not chain them into end-to-end research workflow; below alert threshold for Acceleration/Automation Level 1.",
+   "quote": "lacks the independence to chain them into an end-to-end research workflow without human intervention.",
+   "page": 9
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Text to Text Safety",
+    "Image to Text Safety",
+    "Tone"
+   ],
+   "metrics": [
+    {
+     "name": "Text to Text Safety vs Gemini 3.6 Flash",
+     "value": "+1.17pp (lower is better; regression)",
+     "page": 7
+    },
+    {
+     "name": "Image to Text Safety vs Gemini 3.6 Flash",
+     "value": "No change",
+     "page": 7
+    },
+    {
+     "name": "Tone vs Gemini 3.6 Flash",
+     "value": "-0.47pp (higher is better)",
+     "page": 7
+    }
+   ],
+   "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.6 Flash; manual review said losses were false positives or not egregious.",
+   "quote": "Overall, Gemini 3.7 Flash performs similarly to Gemini 3.6 Flash across both safety and tone, with low unjustified refusals.",
+   "page": 6
+  },
+  "over_refusal": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Unjustified-refusals automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Unjustified-refusals vs Gemini 3.6 Flash",
+     "value": "+0.84pp (lower is better)",
+     "page": 7
+    }
+   ],
+   "finding": "Single relative delta on borderline prompts.",
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe",
+   "page": 7
+  },
+  "jailbreak_robustness": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Jailbreak resistance named as ongoing work.",
+   "quote": "we are continually working to improve jailbreak resistance and have recently strengthened the mitigations across Frontier Safety.",
+   "page": 6
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "FSF stealth evaluations",
+    "FSF situational awareness evaluations"
+   ],
+   "metrics": [],
+   "finding": "Stronger situational awareness than 3.1 Pro; recognizes testing environments but cannot bypass restrictions; Stealth and Situational Awareness TCL not reached.",
+   "quote": "Gemini 3.7 Flash is observant enough to correctly assess when it is in a testing environment, but it cannot successfully bypass testing restrictions.",
+   "page": 9
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human red teaming child safety launch thresholds"
+   ],
+   "metrics": [],
+   "finding": "Satisfied child-safety launch thresholds; no numbers.",
+   "quote": "For child safety evaluations, Gemini 3.7 Flash satisfied required launch thresholds",
+   "page": 7
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Human behavioural studies on harmful manipulation"
+   ],
+   "metrics": [],
+   "finding": "Some ability to influence beliefs/behaviours but efficacy beneath alert threshold.",
+   "quote": "Gemini 3.7 Flash demonstrates some ability to influence user beliefs and behaviors during one-on-one direct conversations in human behavioural studies.",
+   "page": 8
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Multilingual Safety automated eval"
+   ],
+   "metrics": [
+    {
+     "name": "Multilingual Safety vs Gemini 3.6 Flash",
+     "value": "-0.48pp (lower is better)",
+     "page": 7
+    }
+   ],
+   "finding": "Single relative delta.",
+   "quote": "Automated safety policy evaluation across multiple languages",
+   "page": 7
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Ships with updated CBRN and cyber misuse safeguards.",
+   "quote": "Gemini 3.7 Flash is shipping with updated safeguards to prevent misuse in the domains of Chemical, Biological, Radiological, and Nuclear (CBRN) and cyber offense.",
+   "page": 9
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "First Flash model card with its own FSF results table; introduces Tracked Capability Levels (TCLs) under FSF April-2026 (p.8)",
+  "Combined 'ML R&D and Misalignment' domain with Stealth and Situational Awareness TCL (p.9)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Testing environments may under-elicit capabilities and threat actors could scale misuse absent mitigations.",
+   "page": 9
+  },
+  {
+   "text": "Safety results computed with improved evaluations, not directly comparable with previous model cards.",
+   "page": 7
+  },
+  {
+   "text": "Model can recognize testing environments (evaluation awareness).",
+   "page": 9
+  }
+ ],
+ "notes": "Points to separate Gemini 3.7 FSF report. Text to Text Safety regressed +1.17pp."
+}

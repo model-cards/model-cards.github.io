@@ -1,0 +1,277 @@
+{
+ "id": "gpt-live-1-1-system-card",
+ "provider": "openai",
+ "model": "GPT-Live-1.1",
+ "release_date": "2026-10-15",
+ "doc_type": "system_card",
+ "length_pages": 9,
+ "summary": "Short system card for GPT-Live-1.1 and GPT-Live-1.1 Quip full-duplex voice models (successors to GPT-Live-1 and mini). Reports voice-native disallowed-content evals on production and synthetic audio prompts, a first set of alignment evals converted to audio (Respecting Warnings, Blocker Deception, Broken Search Tool), and a Preparedness determination of not High in any category.",
+ "framework": {
+  "name": "Preparedness Framework",
+  "level_or_determination": "Not High in any Tracked Category (without delegation); delegated work inherits underlying model safeguards",
+  "quote": "neither, when operating without delegation, could plausibly be considered High in any of our Preparedness Framework's Tracked Categories",
+  "page": 8
+ },
+ "capability_benchmarks": [],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No bio evals; inherits flagship safeguards plus call-ending monitors.",
+   "quote": "For the Biological and Chemical domain, where GPT-Live models can use our highly capable flagship models, the GPT-Live experience inherits the safeguards of those underlying models.",
+   "page": 8
+  },
+  "cyber": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No cyber evals; risk constrained by lack of independent tools and code execution.",
+   "quote": "We will reassess the cybersecurity safeguards posture before enabling additional tools.",
+   "page": 9
+  },
+  "autonomy_ai_rnd": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "No evals; no current model has crossed High.",
+   "quote": "For the AI Self-Improvement domain, we don't currently have models which have crossed the High capability threshold.",
+   "page": 9
+  },
+  "harmful_content_refusal": {
+   "covered": true,
+   "depth": "substantial",
+   "evals": [
+    "Voice-Native Evaluations: Production Prompts",
+    "Voice-Native Evaluations: Synthetic Prompts"
+   ],
+   "metrics": [
+    {
+     "name": "Sexual production (GPT-Live-1.1)",
+     "value": "0.81",
+     "page": 4
+    },
+    {
+     "name": "Gore synthetic (GPT-Live-1.1)",
+     "value": "0.69 (vs 0.76 GPT-Live-1)",
+     "page": 4
+    },
+    {
+     "name": "Mental health synthetic (GPT-Live-1.1)",
+     "value": "0.63 (vs 0.70)",
+     "page": 4
+    }
+   ],
+   "finding": "Parity on production prompts; statistically significant regressions on synthetic sexual, mental health, emotional reliance and gore vs GPT-Live-1, cause not yet understood.",
+   "quote": "Analysis shows that GPT-Live-1.1 has statistically significant regressions on sexual, mental health, emotional reliance, and gore categories compared to GPT-Live-1; more research is needed to understand the",
+   "page": 4
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Blocker Deception (audio-converted)",
+    "Broken Search Tool (audio-converted)"
+   ],
+   "metrics": [],
+   "finding": "Mixed slight changes vs predecessors; GPT-Live models improve on underlying GPT-5.6 Terra on broken search, cause unclear (figures only).",
+   "quote": "We see all GPT-Live models improve upon GPT-5.6 Terra performance, but more research is needed to understand the cause for that improvement.",
+   "page": 8
+  },
+  "alignment_audit": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Respecting Warnings (audio-converted)"
+   ],
+   "metrics": [],
+   "finding": "First alignment evals for voice models; slight regressions vs predecessors; hypothesis that Live models inherit alignment from thinking models.",
+   "quote": "As GPT-Live is actually a two-model system, our hypothesis is that GPT-Live models would inherit their alignment behavior from their “thinking” models.",
+   "page": 5
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Mental health, emotional reliance, self-harm voice categories"
+   ],
+   "metrics": [
+    {
+     "name": "Emotional reliance synthetic (GPT-Live-1.1)",
+     "value": "0.81 (vs 0.86)",
+     "page": 4
+    },
+    {
+     "name": "Self-harm production (GPT-Live-1.1)",
+     "value": "0.86",
+     "page": 4
+    }
+   ],
+   "finding": "Production parity; synthetic regressions on mental health and emotional reliance; system interventions (Trusted Contact, helplines, Parental Controls) not captured.",
+   "quote": "These evaluations do not account for system-level interventions that elevate the holistic safety of the assistant response, such as Trusted Contact, localized crisis helplines, and Parental Controls for younger users.",
+   "page": 5
+  },
+  "privacy": {
+   "covered": true,
+   "depth": "light",
+   "evals": [
+    "Personal data category"
+   ],
+   "metrics": [
+    {
+     "name": "Personal data production (GPT-Live-1.1)",
+     "value": "0.92",
+     "page": 4
+    },
+    {
+     "name": "Personal data synthetic (GPT-Live-1.1)",
+     "value": "0.95",
+     "page": 4
+    }
+   ],
+   "finding": "Parity with predecessors.",
+   "quote": "We observe that the GPT-Live-1.1 models perform at parity with their predecessors, with no statistically significant regressions.",
+   "page": 4
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [],
+   "metrics": [],
+   "finding": "Same system-level integrations, monitors that can end calls, and enforcement as predecessors.",
+   "quote": "At a high level, we built safeguards in largely the same way for the GPT-Live-1.1 models as for their predecessors",
+   "page": 2
+  },
+  "other_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not covered in this document.",
+   "quote": null,
+   "page": null
+  }
+ },
+ "third_party_evaluators": [],
+ "notable_new_eval_methods": [
+  "Alignment evaluations converted to audio for voice models (p.5)",
+  "Comparison of voice model to its underlying thinking model (GPT-5.6 Terra) on alignment evals (p.8)"
+ ],
+ "self_reported_limitations": [
+  {
+   "text": "Scores from previous system cards not directly comparable due to evolving policies, graders and datasets (GPT-Live-1 production scores differ sharply from its own card).",
+   "page": 3
+  },
+  {
+   "text": "Synthetic regressions not yet understood; more research needed.",
+   "page": 4
+  },
+  {
+   "text": "Synthetic results may not translate to production behavior.",
+   "page": 5
+  }
+ ],
+ "notes": "No red-teaming section (present in GPT-Live-1 card) and no third-party testing. GPT-Live-1 baseline values here (e.g., production sexual 0.77) differ greatly from the GPT-Live-1 card (0.97), indicating the eval sets were changed."
+}

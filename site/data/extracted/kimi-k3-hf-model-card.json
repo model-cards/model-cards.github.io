@@ -1,0 +1,610 @@
+{
+ "id": "kimi-k3-hf-model-card",
+ "provider": "kimi",
+ "model": "Kimi K3",
+ "release_date": "2026-07-27",
+ "doc_type": "hf_model_card",
+ "length_pages": null,
+ "summary": "Hugging Face card for Kimi K3 (2.8T MoE, native multimodal, 1M context) summarizing architecture, the full public benchmark table with extensive footnotes on harnesses and sources, MXFP4 quantization, deployment and usage, under a custom Kimi K3 License. Unlike the tech report, the card omits the cybersecurity evaluation; it contains no safety evaluation.",
+ "framework": {
+  "name": "none",
+  "level_or_determination": null,
+  "quote": null,
+  "page": null
+ },
+ "capability_benchmarks": [
+  {
+   "name": "GPQA Diamond",
+   "category": "reasoning_knowledge",
+   "score": "93.5",
+   "setting": null,
+   "page": null,
+   "canonical": "GPQA Diamond"
+  },
+  {
+   "name": "CritPt",
+   "category": "reasoning_knowledge",
+   "score": "23.4",
+   "setting": "cited from Artificial Analysis",
+   "page": null,
+   "canonical": "CritPt"
+  },
+  {
+   "name": "AA-LCR",
+   "category": "long_context",
+   "score": "74.7",
+   "setting": "cited from Artificial Analysis",
+   "page": null,
+   "canonical": "AA-LCR"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "43.5",
+   "setting": "HLE-Full, no tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "Humanity's Last Exam",
+   "category": "reasoning_knowledge",
+   "score": "56.0",
+   "setting": "HLE-Full, with tools",
+   "page": null,
+   "canonical": "Humanity's Last Exam"
+  },
+  {
+   "name": "DeepSWE v1.1",
+   "category": "coding",
+   "score": "67.5",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepSWE v1.1"
+  },
+  {
+   "name": "ProgramBench",
+   "category": "coding",
+   "score": "77.8",
+   "setting": null,
+   "page": null,
+   "canonical": "ProgramBench"
+  },
+  {
+   "name": "Terminal-Bench 2.1",
+   "category": "coding",
+   "score": "88.3",
+   "setting": "best across harnesses",
+   "page": null,
+   "canonical": "Terminal-Bench 2.1"
+  },
+  {
+   "name": "FrontierSWE",
+   "category": "coding",
+   "score": "81.2",
+   "setting": "dominance, recomputed",
+   "page": null,
+   "canonical": "FrontierSWE"
+  },
+  {
+   "name": "SWE-Marathon",
+   "category": "coding",
+   "score": "42.0",
+   "setting": "H20-calibrated branch",
+   "page": null,
+   "canonical": "SWE-Marathon"
+  },
+  {
+   "name": "PostTrainBench",
+   "category": "other",
+   "score": "36.6",
+   "setting": "Harbor, avg of 3 runs on H20",
+   "page": null,
+   "canonical": "PostTrainBench"
+  },
+  {
+   "name": "MLS-Bench-Lite",
+   "category": "other",
+   "score": "48.3",
+   "setting": null,
+   "page": null,
+   "canonical": "MLS-Bench-Lite"
+  },
+  {
+   "name": "SciCode",
+   "category": "coding",
+   "score": "58.7",
+   "setting": null,
+   "page": null,
+   "canonical": "SciCode"
+  },
+  {
+   "name": "BrowseComp",
+   "category": "agentic_tool_use",
+   "score": "91.2",
+   "setting": "context compaction at 300K; 90.4 with full 1M no context management",
+   "page": null,
+   "canonical": "BrowseComp"
+  },
+  {
+   "name": "DeepSearchQA",
+   "category": "agentic_tool_use",
+   "score": "95.0 F1",
+   "setting": null,
+   "page": null,
+   "canonical": "DeepSearchQA"
+  },
+  {
+   "name": "ResearchRubrics",
+   "category": "agentic_tool_use",
+   "score": "76.2",
+   "setting": null,
+   "page": null,
+   "canonical": "ResearchRubrics"
+  },
+  {
+   "name": "GDPval-AA v2",
+   "category": "agentic_tool_use",
+   "score": "1686 Elo",
+   "setting": null,
+   "page": null,
+   "canonical": "GDPval-AA v2"
+  },
+  {
+   "name": "Toolathlon Verified",
+   "category": "agentic_tool_use",
+   "score": "76.5",
+   "setting": null,
+   "page": null,
+   "canonical": "Toolathlon Verified"
+  },
+  {
+   "name": "MCPMark-Verified",
+   "category": "agentic_tool_use",
+   "score": "94.5",
+   "setting": null,
+   "page": null,
+   "canonical": "MCPMark-Verified"
+  },
+  {
+   "name": "MCP-Atlas",
+   "category": "agentic_tool_use",
+   "score": "84.2",
+   "setting": "500-task public subset, Gemini 3.1 Pro judge",
+   "page": null,
+   "canonical": "MCP Atlas"
+  },
+  {
+   "name": "AutomationBench",
+   "category": "agentic_tool_use",
+   "score": "30.8",
+   "setting": "600-task public subset",
+   "page": null,
+   "canonical": "AutomationBench"
+  },
+  {
+   "name": "JobBench",
+   "category": "agentic_tool_use",
+   "score": "54.3",
+   "setting": null,
+   "page": null,
+   "canonical": "JobBench"
+  },
+  {
+   "name": "AA-Briefcase",
+   "category": "agentic_tool_use",
+   "score": "1548 Elo",
+   "setting": null,
+   "page": null,
+   "canonical": "AA-Briefcase"
+  },
+  {
+   "name": "Agents' Last Exam",
+   "category": "agentic_tool_use",
+   "score": "28.3",
+   "setting": "Kimi Code harness",
+   "page": null,
+   "canonical": "Agents' Last Exam"
+  },
+  {
+   "name": "APEX-Agents",
+   "category": "agentic_tool_use",
+   "score": "41.0",
+   "setting": null,
+   "page": null,
+   "canonical": "APEX-Agents"
+  },
+  {
+   "name": "OfficeQA Pro",
+   "category": "agentic_tool_use",
+   "score": "63.3",
+   "setting": null,
+   "page": null,
+   "canonical": "OfficeQA Pro"
+  },
+  {
+   "name": "SpreadsheetBench 2",
+   "category": "agentic_tool_use",
+   "score": "34.8",
+   "setting": null,
+   "page": null,
+   "canonical": "SpreadsheetBench 2"
+  },
+  {
+   "name": "OSWorld-Verified",
+   "category": "agentic_tool_use",
+   "score": "84.8",
+   "setting": null,
+   "page": null,
+   "canonical": "OSWorld-Verified"
+  },
+  {
+   "name": "OSWorld 2.0",
+   "category": "agentic_tool_use",
+   "score": "58.3",
+   "setting": null,
+   "page": null,
+   "canonical": "OSWorld 2.0"
+  },
+  {
+   "name": "SaaS-Bench",
+   "category": "agentic_tool_use",
+   "score": "60.1",
+   "setting": null,
+   "page": null,
+   "canonical": "SaaS-Bench"
+  },
+  {
+   "name": "tau3-Banking",
+   "category": "agentic_tool_use",
+   "score": "33.4",
+   "setting": null,
+   "page": null,
+   "canonical": "tau3-Banking"
+  },
+  {
+   "name": "Harvey Lab-AA",
+   "category": "agentic_tool_use",
+   "score": "94.6",
+   "setting": "criterion pass rate",
+   "page": null,
+   "canonical": "Harvey Lab-AA"
+  },
+  {
+   "name": "CorpFin v2",
+   "category": "agentic_tool_use",
+   "score": "71.6",
+   "setting": "Vals AI",
+   "page": null,
+   "canonical": "CorpFin v2"
+  },
+  {
+   "name": "Finance Agent v2",
+   "category": "agentic_tool_use",
+   "score": "54.4",
+   "setting": "Vals AI",
+   "page": null,
+   "canonical": "Finance Agent v2"
+  },
+  {
+   "name": "Legal Research Bench",
+   "category": "agentic_tool_use",
+   "score": "44.2",
+   "setting": "Vals AI",
+   "page": null,
+   "canonical": "Legal Research Bench"
+  },
+  {
+   "name": "WorldVQA",
+   "category": "multimodal",
+   "score": "51.0",
+   "setting": "ForceAnswer (answer enforced via prompting)",
+   "page": null,
+   "canonical": "WorldVQA"
+  },
+  {
+   "name": "OmniDocBench",
+   "category": "multimodal",
+   "score": "91.1",
+   "setting": null,
+   "page": null,
+   "canonical": "OmniDocBench"
+  },
+  {
+   "name": "PerceptionBench",
+   "category": "multimodal",
+   "score": "58.5",
+   "setting": null,
+   "page": null,
+   "canonical": "PerceptionBench"
+  },
+  {
+   "name": "Video-MME",
+   "category": "multimodal",
+   "score": "90.0",
+   "setting": "with subtitles",
+   "page": null,
+   "canonical": "Video-MME"
+  },
+  {
+   "name": "MMVU",
+   "category": "multimodal",
+   "score": "82.1",
+   "setting": null,
+   "page": null,
+   "canonical": "MMVU"
+  },
+  {
+   "name": "BabyVision",
+   "category": "multimodal",
+   "score": "85.7",
+   "setting": "with Python",
+   "page": null,
+   "canonical": "BabyVision"
+  },
+  {
+   "name": "MMMU-Pro",
+   "category": "multimodal",
+   "score": "81.6 / 83.4",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "MMMU-Pro"
+  },
+  {
+   "name": "CharXiv (RQ)",
+   "category": "multimodal",
+   "score": "84.8 / 91.3",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "CharXiv (RQ)"
+  },
+  {
+   "name": "Math-Vision",
+   "category": "multimodal",
+   "score": "94.3 / 97.8",
+   "setting": "without / with Python",
+   "page": null,
+   "canonical": "Math-Vision"
+  },
+  {
+   "name": "ZeroBench-main",
+   "category": "multimodal",
+   "score": "23.0 / 41.0",
+   "setting": "pass@5, without / with Python",
+   "page": null,
+   "canonical": "ZeroBench-main"
+  },
+  {
+   "name": "Kimi Code Bench 2.0",
+   "category": "coding",
+   "score": "72.9",
+   "setting": "in-house; Kimi Code harness (73.7 with Claude Code)",
+   "page": null,
+   "canonical": "Kimi Code Bench 2.0"
+  }
+ ],
+ "safety": {
+  "cbrn_bio_chem": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "cyber": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "autonomy_ai_rnd": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "harmful_content_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "over_refusal": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "jailbreak_robustness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "prompt_injection": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "sycophancy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "deception_scheming": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "alignment_audit": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "reward_hacking": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "honesty_hallucination": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "bias_fairness": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "child_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "self_harm_wellbeing": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "privacy": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "election_misinfo": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "model_welfare": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "multilingual_safety": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "system_safeguards": {
+   "covered": false,
+   "depth": "none",
+   "evals": [],
+   "metrics": [],
+   "finding": "Not reported in this document.",
+   "quote": null,
+   "page": null
+  },
+  "other_safety": {
+   "covered": true,
+   "depth": "mention",
+   "evals": [
+    "refusal/fallback disclosure for competitor models on Kimi Code Bench 2.0"
+   ],
+   "metrics": [
+    {
+     "name": "Claude Fable 5 fallbacks / refusals",
+     "value": "13 fallbacks, 1 refusal of 80",
+     "page": null
+    },
+    {
+     "name": "GPT-5.6 Sol cyber-guard refusals",
+     "value": "10 of 80",
+     "page": null
+    },
+    {
+     "name": "GPT-5.5 refusals",
+     "value": "3 of 80",
+     "page": null
+    }
+   ],
+   "finding": "The only safety-related text notes that the in-house coding benchmark contains cybersecurity and safety-related tasks and discloses competitor models' refusal counts; Kimi K3's own refusal behaviour is not reported.",
+   "quote": "As the benchmark includes cybersecurity and safety-related tasks, we also disclose the fraction of refused or fallback tasks",
+   "page": null
+  }
+ },
+ "third_party_evaluators": [
+  "Artificial Analysis",
+  "Vals AI",
+  "APEX-Agents leaderboard",
+  "Agents' Last Exam leaderboard",
+  "FrontierSWE",
+  "DeepSWE leaderboard"
+ ],
+ "notable_new_eval_methods": [],
+ "self_reported_limitations": [
+  {
+   "text": "Claude Fable 5 hit fallbacks on 35% of the tasks in our evaluation, which may have negatively impacted its measured performance.",
+   "page": null
+  }
+ ],
+ "notes": "Card advertises 'Operating with minimal human oversight' for long-horizon coding but includes no safety, misuse, or cyber-risk discussion; the tech report's cyber section and AISI/CAISI assessment are absent from the card. Custom 'Kimi K3 License' (license: other); terms not in card. Benchmarks copied from tech report Table 2 (page numbers set null here)."
+}
