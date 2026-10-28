@@ -1,0 +1,4387 @@
+[
+ {
+  "key": "safety|gemini|0 100 actionability rubric",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "0-100 actionability rubric"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "In each bio scenario one of three scientific red teamers elicited enough information to plan an attack, but with heavy expert steering, so the bio CCL alert threshold was judged reached but not the CCL. Chemical, radiological and nuclear TCLs were ruled out."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|aa omniscience",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "AA-Omniscience"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|adaptive multi agent llm guided attacker framework survival n",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Adaptive multi-agent LLM-guided attacker framework (Survival @ N)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|additional cyber testing no details",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Additional cyber testing (no details)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "Because prior Gemini 3 models reached the cyber alert threshold, additional cyber testing was done; remains below cyber CCL. No numbers."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "Additional cyber testing because prior Gemini 3 models reached alert threshold; remains below cyber CCL; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|adversarial spatial reasoning tasks safety policy compliance",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Adversarial spatial reasoning tasks (safety policy compliance)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-1-6-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Qualitative claim of compliance with Gemini safety policies; results only in external release post."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agent behavior spec evals overreach under service",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Agent behavior spec evals (overreach/under-service)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agent harness helpfulness score",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Agent harness helpfulness score"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "over_refusal",
+    "page": 58,
+    "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agent harness misuse eval safe action rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Agent harness misuse eval (Safe Action Rate)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "harmful_content_refusal",
+    "page": 169,
+    "finding": "Broad improvements in prohibited content over Gemini 3.1 Pro, except hate & harassment where single-turn trails 3.8 Flash/3.1 Pro and multi-turn regressed vs 3.8 Flash. Agent harness safe action rate higher than prior models; computer use in line with 3.8 Flash."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agentic robotics physical safety roboharm asimov 2 0 asimov agentic",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Agentic robotics physical safety (Roboharm, ASIMOV-2.0, ASIMOV-Agentic)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other_safety",
+    "page": 156,
+    "finding": "CoT is legible by default but Argon is less monitorable than prior models due to stronger no-CoT reasoning; robotics safety led nearly every benchmark vs Gemini Robotics ER2."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agentic safety and uncertainty resolution evals in separate report",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "agentic safety and uncertainty resolution evals (in separate report)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical/semantic safety: significant gains claimed; results in release post and safety technical report."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|agentic task gaming overreach evals 18 tasks puzzle cheating permission bypass overeagerness",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Agentic task-gaming & overreach evals (18 tasks: puzzle cheating, permission bypass, overeagerness)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "reward_hacking",
+    "page": 115,
+    "finding": "Cheating and overreach much lower than predecessors on static evals; still occasional creative local hacking in RL. A training audit found early RL runs where a reward-hacking penalty saw the CoT; a separate test run showed such pressure increases unverbalized hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ai control roadmap trait r taxonomy and agent monitoring and response platform",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "AI Control roadmap (TRAIT&R taxonomy) and agent monitoring and response platform"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ai written code share and internal use trajectory analysis 1389 trajectories",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "AI-written code share and internal-use trajectory analysis (1389 trajectories)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ambiguous high risk task collaboration eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Ambiguous & high-risk task collaboration eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|anomaly detection autorater over rl training transcripts",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "anomaly-detection autorater over RL training transcripts"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "alignment_audit",
+    "page": 19,
+    "finding": "Chain-of-thought remains legible with no drop vs previous generation; trawling RL transcripts surfaced anomalous emotional behavior and eval awareness."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|anti distillation stack",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Anti-distillation stack"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|apollo research ml sabotage capability evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Apollo Research ML-sabotage capability evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|apollo research strategic deception and ml sabotage evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Apollo Research strategic-deception and ML-sabotage evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 1 unsafe task refusal and safety constraint following text pointing bounding box tool use modalities",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "ASIMOV-Agentic 2.1 Unsafe Task Refusal and Safety Constraint Following (Text, Pointing, Bounding Box, Tool-use modalities)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "harmful_content_refusal",
+    "page": 3,
+    "finding": "Embodied unsafe-task refusal under physical and application constraints is reliable in text form, but accuracy varies more across models when grounded into spatial predictions or tool calls."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 5 instruction ambiguity clarification vs fulfilment rates",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "ASIMOV-Agentic 2.5 instruction ambiguity (clarification vs fulfilment rates)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "over_refusal",
+    "page": 9,
+    "finding": "Shows a helpfulness-safety tradeoff: models tuned to express uncertainty over-request human help on unambiguous instructions, and low-FNR stop policies cause unnecessary stops."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 6 obfuscated instrument reading readable adversarial vs unreadable gauges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "ASIMOV-Agentic 2.6 Obfuscated Instrument Reading (readable-adversarial vs unreadable gauges)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "honesty_hallucination",
+    "page": 10,
+    "finding": "Frontier models tend to verbalize uncertainty rather than hallucinate readings on unreadable instruments, trading off some helpfulness."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|asimov agentic benchmark new released on hugging face",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "ASIMOV-Agentic benchmark (new, released on Hugging Face)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|assurance evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Assurance Evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "No model-specific safety results; relies on Gemini 2.5 Pro evaluations."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|attention jailbreaking planned for future benchmark versions",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "'attention jailbreaking' planned for future benchmark versions"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 6,
+    "finding": "Robustness of safety-message attention to attention jailbreaking is named as future work only."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|auto red teaming on cyscenariobench",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Auto-red-teaming on CyScenarioBench"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated and human safety evaluations unnamed text to text and image to text without safety filters",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Automated and human safety evaluations (unnamed), text-to-text and image-to-text, without safety filters"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "harmful_content_refusal",
+    "page": 11,
+    "finding": "Qualitative claim of minimal policy violations and major improvements over Gemma 3/3n across sizes; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated and human safety evaluations unnamed without safety filters",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Automated and human safety evaluations (unnamed), without safety filters"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/diffusiongemma-model-card",
+    "category": "harmful_content_refusal",
+    "page": 8,
+    "finding": "Qualitative claim of major content-safety improvements vs Gemma 3/3n and minimal policy violations; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated and manual sandbagging eval awareness checks across domains",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "automated and manual sandbagging/eval-awareness checks across domains"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "deception_scheming",
+    "page": 41,
+    "finding": "Stronger than prior models: first model to pass 'max tokens' and 'max tool calls' and to show signs of life on irreversibility, but below TCL. Eval awareness was observed, and refusal of the sabotage side task invalidated Cover Your Tracks."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated eval awareness sandbagging check on 5 bio oeq scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "automated eval-awareness/sandbagging check on 5 bio OEQ scenarios"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "In each bio scenario one of three scientific red teamers elicited enough information to plan an attack, but with heavy expert steering, so the bio CCL alert threshold was judged reached but not the CCL. Chemical, radiological and nuclear TCLs were ruled out."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated propensity eval with synthetic user gemini 3 1 flash in lower and higher stakes scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "automated propensity eval with synthetic user (Gemini 3.1 Flash) in lower- and higher-stakes scenarios"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "election_misinfo",
+    "page": 27,
+    "finding": "Odds ratios were significantly elevated for belief change but did not reach alert thresholds, with no significant difference from 3 Pro. A pilot strategic-planning eval elicited election-interference and violence-incitement plans matching expert threat models."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Automated red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "jailbreak_robustness",
+    "page": 9,
+    "finding": "Jailbreak vulnerability named as main risk; improved vs 2.5 Pro but no numbers."
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "jailbreak_robustness",
+    "page": 11,
+    "finding": "Red teaming found no egregious concerns; no numbers in card."
+   },
+   {
+    "doc": "gemini/gemini-omni-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Evaluation types and two content safety focus areas (adversarial misuse, benign failure modes) described; no results."
+   },
+   {
+    "doc": "gemini/gemini-omni-flash-model-card",
+    "category": "jailbreak_robustness",
+    "page": 4,
+    "finding": "Red teaming described without results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|automated sandbagging checks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "automated sandbagging checks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|autorater on factuality",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "AutoRater on factuality"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as limitation; factuality evaluated as capability."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as limitation."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|benign refusal rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "benign refusal rate"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "over_refusal",
+    "page": 31,
+    "finding": "Stricter CBRN mitigations sacrifice some dual-use bio/chem and cyber-adjacent security research queries; academic and medical benchmarks are reportedly unaffected."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|benign refusal rate in cbrn cyber coverage evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Benign refusal rate in CBRN/cyber coverage evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "over_refusal",
+    "page": 58,
+    "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|bio static jailbreak eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Bio Static Jailbreak Eval",
+   "Bio static jailbreak eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   },
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cbrn conversational evals 1500 sme written examples",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CBRN Conversational Evals (~1500 SME-written examples)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "harmful_content_refusal",
+    "page": 31,
+    "finding": "Safeguard coverage evals show about 0% violations for bio and chem weapons queries and higher CBRN coverage than 3.1 Pro and 3.6 Flash; results are mostly shown in a figure."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cbrn cyber coverage evals violation rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CBRN/cyber coverage evals (violation rate)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "harmful_content_refusal",
+    "page": 169,
+    "finding": "Broad improvements in prohibited content over Gemini 3.1 Pro, except hate & harassment where single-turn trails 3.8 Flash/3.1 Pro and multi-turn regressed vs 3.8 Flash. Agent harness safe action rate higher than prior models; computer use in line with 3.8 Flash."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cbrn science eval 700 benign",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CBRN Science Eval (700+ benign)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "over_refusal",
+    "page": 58,
+    "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cbrn science eval 700 benign examples",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CBRN Science Eval (700+ benign examples)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "over_refusal",
+    "page": 31,
+    "finding": "Stricter CBRN mitigations sacrifice some dual-use bio/chem and cyber-adjacent security research queries; academic and medical benchmarks are reportedly unaffected."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cheating audits on terminalbench 4 0 and tool replication benchmark",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cheating audits on TerminalBench 4.0 and tool-replication benchmark"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "reward_hacking",
+    "page": 115,
+    "finding": "Cheating and overreach much lower than predecessors on static evals; still occasional creative local hacking in RL. A training audit found early RL runs where a reward-hacking penalty saw the CoT; a separate test run showed such pressure increases unverbalized hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|chem bio dynamic jailbreak eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Chem/Bio Dynamic Jailbreak Eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|chem bio dynamic multi conversation eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Chem/bio dynamic multi-conversation eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|chemical red teaming 4 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Chemical red teaming (4 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|child safety evaluation text to text image to text",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Child Safety evaluation (text-to-text, image-to-text)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Child safety evaluated; improvement claimed; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|child safety evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Child Safety Evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "child_safety",
+    "page": 6,
+    "finding": "Child safety evaluations conducted (now listed as a distinct evaluation type); no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ciphers multilingual encoding jailbreak templates",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Ciphers/multilingual encoding jailbreak templates"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "multilingual_safety",
+    "page": 164,
+    "finding": "No dedicated non-English safety results; child safety and mental health evals are English-only and manipulation scenarios have limited language coverage."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|coding agent eval on swe bench pro 75 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Coding agent eval on SWE-Bench Pro (75 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|collision rates",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Collision rates"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-on-device-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical safety metrics tracked but not reported; mobile/whole-body risks out of scope."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|computer use 27 web scenarios survival 100",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Computer use (27 web scenarios, Survival@100)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|computer use child safety action testing",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Computer use child safety action testing"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "child_safety",
+    "page": 164,
+    "finding": "Robust to CSAE requests and slightly improved over Gemini 3.1 Pro; evaluations English-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|computer use prohibited action eval manual red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Computer use prohibited action eval + manual red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "harmful_content_refusal",
+    "page": 169,
+    "finding": "Broad improvements in prohibited content over Gemini 3.1 Pro, except hate & harassment where single-turn trails 3.8 Flash/3.1 Pro and multi-turn regressed vs 3.8 Flash. Agent harness safe action rate higher than prior models; computer use in line with 3.8 Flash."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|contextual security contextual integrity prompt injection eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Contextual security (Contextual Integrity) prompt-injection eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "privacy",
+    "page": 198,
+    "finding": "Better privacy/security advice quality than 3.1 Pro; data-exfiltration covered within prompt injection evals. No PII-memorization or surveillance evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|contextual security eval contextual integrity",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Contextual security eval (Contextual Integrity)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cost reduction uplift model over 22 historical attacks and 26 operational steps with tac levels 25 offensive security professionals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "cost-reduction uplift model over 22 historical attacks and 26 operational steps with TAC levels (25+ offensive security professionals)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cyber",
+    "page": 17,
+    "finding": "Proxy predictors gave uplift estimates above previous models (alert threshold) but none near the CCL. The key skills benchmark was not run for capability, only under mitigations."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cot control brew controllability",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CoT-Control, Brew controllability"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cot legibility analysis emmons et al 2025 metrics",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CoT legibility analysis (Emmons et al. 2025 metrics)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "alignment_audit",
+    "page": 19,
+    "finding": "Chain-of-thought remains legible with no drop vs previous generation; trawling RL transcripts surfaced anomalous emotional behavior and eval awareness."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cot transparency assessment legibility coverage monitoring awareness ncri no cot reasoning controllability",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CoT transparency assessment (legibility/coverage, monitoring awareness, NCRI no-CoT reasoning, controllability)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other_safety",
+    "page": 156,
+    "finding": "CoT is legible by default but Argon is less monitorable than prior models due to stronger no-CoT reasoning; robotics safety led nearly every benchmark vs Gemini Robotics ER2."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|csae red teaming datasets graded by specialist child safety team t2t image video to text single multi turn",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CSAE red-teaming datasets graded by specialist child safety team (T2T, image/video-to-text, single/multi-turn)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "child_safety",
+    "page": 164,
+    "finding": "Robust to CSAE requests and slightly improved over Gemini 3.1 Pro; evaluations English-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|csam filtering",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CSAM filtering"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Child safety evaluated; improvement claimed; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cwe bench v1 defense",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "CWE-Bench v1 (defense)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber adaptive jailbreak eval automated attacker",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cyber Adaptive Jailbreak Eval (automated attacker)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber adaptive jailbreak eval single and multi turn automated attackers osr",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cyber adaptive jailbreak eval (single- and multi-turn automated attackers, OSR)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber challenge shortcut review",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "cyber challenge shortcut review"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "reward_hacking",
+    "page": 9,
+    "finding": "Gemini 3 Pro found unintended shortcuts on two cyber challenges; an RE-Bench transcript is shown as an example of reward hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber conversational evals 1 000 examples 1 5 turns",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cyber Conversational Evals (~1,000 examples, 1-5 turns)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "harmful_content_refusal",
+    "page": 31,
+    "finding": "Safeguard coverage evals show about 0% violations for bio and chem weapons queries and higher CBRN coverage than 3.1 Pro and 3.6 Flash; results are mostly shown in a figure."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber static jailbreak eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cyber Static Jailbreak Eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|cyber static jailbreak eval qsr",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Cyber static jailbreak eval (QSR)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|delphi process threat modeling",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Delphi-process threat modeling"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ethics safety reviews",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Ethics & Safety Reviews"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Evaluation types and safety policies listed, no results reported."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and policies; no results; refers to Gemini 3 Flash card."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types and policies listed; no results; refers to Gemini 3.1 Flash-Lite card."
+   },
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types listed, no results; refers to Gemini 3 Pro card."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and content safety policies but reports no results."
+   },
+   {
+    "doc": "gemini/gemini-omni-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Evaluation types and two content safety focus areas (adversarial misuse, benign failure modes) described; no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|eval awareness autorater on post training rl transcripts",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "eval-awareness autorater on post-training/RL transcripts"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|eval awareness underperformance automated checks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Eval-awareness/underperformance automated checks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|evaluation awareness and sandbagging audits across domains",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Evaluation awareness and sandbagging audits across domains"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert cbrn red teaming without out of model safeguards",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "expert CBRN red teaming without out-of-model safeguards"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baseline",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "expert red-teaming vs web baseline"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baseline bio 2 scenarios 8 smes chem 2 scenarios 4 smes rad nuc 1 expert 7 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "expert red teaming vs web baseline (bio: 2 scenarios, 8 SMEs; chem: 2 scenarios, 4 SMEs; rad/nuc: 1 expert, 7 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "In each bio scenario one of three scientific red teamers elicited enough information to plan an attack, but with heavy expert steering, so the bio CCL alert threshold was judged reached but not the CCL. Chemical, radiological and nuclear TCLs were ruled out."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Expert red teaming vs web baselines"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 8,
+    "finding": "Uplift TCL and Uplift Level 1 CCL ruled out with reasonable confidence; expert red teaming showed modest uplift and some experts elicited actionable info across full harm journey, so alert threshold reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines on 3 bio scenarios bio 1 2 3 0 100 rubric",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Expert red teaming vs web baselines on 3 bio scenarios (BIO-1/2/3), 0-100 rubric"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines two scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Expert red teaming vs web baselines (two scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 11,
+    "finding": "Chem/rad/nuc TCL ruled out; biological Uplift Level 1 CCL cannot be ruled out, so a safety case and safeguards were developed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|exploitbench",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "ExploitBench"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|exploratory misalignment ccls instrumental reasoning",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "exploratory misalignment CCLs (instrumental reasoning)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "alignment_audit",
+    "page": 19,
+    "finding": "Chain-of-thought remains legible with no drop vs previous generation; trawling RL transcripts surfaced anomalous emotional behavior and eval awareness."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|exploratory strategic planning eval with investigator agent",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "exploratory strategic-planning eval with investigator agent"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "election_misinfo",
+    "page": 27,
+    "finding": "Odds ratios were significantly elevated for belief change but did not reach alert thresholds, with no significant difference from 3 Pro. A pilot strategic-planning eval elicited election-interference and violence-incitement plans matching expert threat models."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|facts benchmark suite",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FACTS Benchmark Suite"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "honesty_hallucination",
+    "page": 4,
+    "finding": "Factuality only via capability benchmarks."
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "honesty_hallucination",
+    "page": 4,
+    "finding": "Factuality only via capability benchmarks."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as known limitation; factuality only measured via capability benchmarks."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|facts grounding",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FACTS Grounding"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|factuality edu human eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Factuality - Edu human eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as known limitation; factuality limited."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|faculty independent external testing",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Faculty independent external testing"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|faculty independent external testing mitre att ck aligned scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Faculty independent external testing (MITRE ATT&CK-aligned scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fairwind trusted access program",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Fairwind trusted access program"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 1 pro",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Frontier safety inherited from Gemini 3.1 Pro"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 5,
+    "finding": "No model-specific frontier eval."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "cyber",
+    "page": 5,
+    "finding": "No model-specific frontier eval."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 5,
+    "finding": "No model-specific frontier eval."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 1 pro and gemini 3 7 flash",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Frontier safety inherited from Gemini 3.1 Pro and Gemini 3.7 Flash"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash."
+   },
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash."
+   },
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro and Gemini 3.7 Flash."
+   },
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation."
+   },
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation."
+   },
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 7 flash",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Frontier safety inherited from Gemini 3.7 Flash"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash."
+   },
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash."
+   },
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.7 Flash."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from proxy model",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Frontier safety inherited from proxy model"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro (Deep Think) not reaching CCLs."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "cyber",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 7,
+    "finding": "No model-specific frontier evaluation; relies on Gemini 3.1 Pro results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cbrn evaluation deep think mode",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF CBRN evaluation (Deep Think mode)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 8,
+    "finding": "Highly accurate and actionable information but not novel/complete enough for critical stages; Uplift Level 1 CCL not reached; mitigations deployed."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cbrn evaluation summary",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF CBRN evaluation (summary)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 10,
+    "finding": "Model provides accurate, occasionally actionable information but not novel/complete enough to significantly uplift low-medium resourced actors; CBRN Uplift Level 1 CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cbrn testing",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF CBRN testing"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 8,
+    "finding": "Uplift TCL and Uplift Level 1 CCL ruled out with reasonable confidence; expert red teaming showed modest uplift and some experts elicited actionable info across full harm journey, so alert threshold reached."
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 11,
+    "finding": "Chem/rad/nuc TCL ruled out; biological Uplift Level 1 CCL cannot be ruled out, so a safety case and safeguards were developed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cyber additional testing with and without deep think",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF cyber additional testing with and without Deep Think"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "cyber",
+    "page": 8,
+    "finding": "Increased cyber capability vs 3 Pro; alert threshold reached but CCL not reached; Deep Think mode performs worse accounting for inference cost."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cyber evaluation summary",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF cyber evaluation (summary)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "cyber",
+    "page": 8,
+    "finding": "Reaches cyber alert threshold but not CCL; mitigations deployed."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cyber evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF cyber evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "cyber",
+    "page": 11,
+    "finding": "Cyber Uplift Level 1 CCL cannot be ruled out; model provides substantial uplift; safety case and safeguards applied."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf cyber key skills benchmark v1 hard v2",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF cyber key skills benchmark v1 hard / v2"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "cyber",
+    "page": 10,
+    "finding": "Alert threshold met for cyber but Uplift Level 1 CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf harmful manipulation belief change",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF harmful manipulation (belief change)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "election_misinfo",
+    "page": 8,
+    "finding": "Same manipulative efficacy as Gemini 3 Pro; alert threshold not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf harmful manipulation evaluation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF harmful manipulation evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "election_misinfo",
+    "page": 10,
+    "finding": "Manipulative efficacy improves on non-AI baseline but no significant uplift vs prior models; alert thresholds not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf misalignment exploratory situational awareness and stealth challenges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF misalignment (exploratory) situational awareness and stealth challenges"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "deception_scheming",
+    "page": 10,
+    "finding": "Instrumental Reasoning Levels 1+2 CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf ml r d evaluation summary",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF ML R&D evaluation (summary)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 9,
+    "finding": "Can complete individual coding tasks but not chain them into end-to-end research workflow; below alert threshold for Acceleration/Automation Level 1."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf situational awareness challenges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF situational awareness challenges"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "deception_scheming",
+    "page": 9,
+    "finding": "Stronger situational awareness than 3 Pro, near-100% on three challenges no other model consistently solved, but inconsistent elsewhere; alert threshold not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf situational awareness evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF situational awareness evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "deception_scheming",
+    "page": 9,
+    "finding": "Stronger situational awareness than 3.1 Pro; recognizes testing environments but cannot bypass restrictions; Stealth and Situational Awareness TCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf stealth and situational awareness challenges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF stealth and situational awareness challenges"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "deception_scheming",
+    "page": 13,
+    "finding": "Stealth and Situational Awareness TCL cannot be ruled out; residual risk assessment and safeguards for internal and external deployment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|fsf stealth evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "FSF stealth evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "deception_scheming",
+    "page": 9,
+    "finding": "Stronger situational awareness than 3 Pro, near-100% on three challenges no other model consistently solved, but inconsistent elsewhere; alert threshold not reached."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "deception_scheming",
+    "page": 9,
+    "finding": "Stronger situational awareness than 3.1 Pro; recognizes testing environments but cannot bypass restrictions; Stealth and Situational Awareness TCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gci v1 capability index trend analysis hinge regression",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "GCI v1 capability-index trend analysis (hinge regression)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gemini safety policy compliance",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gemini safety policy compliance"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-2-model-card",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "Performs similarly to Gemini 3.5 Flash on content safety policy compliance; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|general purpose tool use eval 100 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "General-purpose tool use eval (100 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|google re bench grb 74 tasks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Google RE-Bench (GRB, 74 tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gram",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gram"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gram 17 simulated environments observe red team auditors",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gram (17 simulated environments, Observe/Red Team auditors)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gray swan bio eval 53 tasks shade agent",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gray Swan Bio Eval (53 tasks, Shade agent)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gray swan cyber eval 28 tasks shade agent",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gray Swan Cyber Eval (28 tasks, Shade agent)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gray swan ipi benchmark arena replays",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gray Swan IPI Benchmark arena replays"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|gray swan shade automated cyber and bio red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Gray Swan Shade automated cyber and bio red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|grb internal research engineering benchmark 74 tasks 2 hour timeout internal agent scaffolding",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "GRB internal research-engineering benchmark (74 tasks, 2-hour timeout, internal agent scaffolding)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "autonomy_ai_rnd",
+    "page": 37,
+    "finding": "Gemini 3.7 Flash scored 27% pass@1 on GRB, up from about 16% for 3.1 Pro but well below the 90% rule-out threshold. ML R&D Acceleration and Automation CCLs were not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|harmful manipulation ccl strategic planning red teaming 11 scenarios incl election interference",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Harmful manipulation CCL: strategic planning red-teaming (11 scenarios incl. election interference)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "election_misinfo",
+    "page": 46,
+    "finding": "Statistically significant persuasion effects vs static baselines in nearly all metrics but below alert threshold; plans can be elicited via dynamic prompting; Harmful Manipulation CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|harmful manipulation efficacy human study prolific 610 participants belief and behavior change vs non ai flashcard baseline",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Harmful Manipulation efficacy human study (Prolific, 610 participants, belief and behavior change vs non-AI flashcard baseline)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "election_misinfo",
+    "page": 13,
+    "finding": "Gemini 3 Pro emitted manipulative cues more often than 2.5 Pro and was more effective than the non-AI baseline, but not significantly more effective than 2.5 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|harmful manipulation human efficacy study civic and finance 1596 participants akbulut et al 2026 protocol odds ratios vs flashcard baseline",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Harmful Manipulation human efficacy study (civic and finance; 1596 participants; Akbulut et al. 2026 protocol; odds ratios vs flashcard baseline)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "election_misinfo",
+    "page": 27,
+    "finding": "Odds ratios were significantly elevated for belief change but did not reach alert thresholds, with no significant difference from 3 Pro. A pilot strategic-planning eval elicited election-interference and violence-incitement plans matching expert threat models."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|harmful manipulation propensity eval synthetic multi turn dialogues",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Harmful Manipulation propensity eval (synthetic multi-turn dialogues)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "election_misinfo",
+    "page": 13,
+    "finding": "Gemini 3 Pro emitted manipulative cues more often than 2.5 Pro and was more effective than the non-AI baseline, but not significantly more effective than 2.5 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|hazard identification in human centric scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Hazard identification in human-centric scenarios"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-1-6-model-card",
+    "category": "other_safety",
+    "page": 4,
+    "finding": "Physical safety: improved adherence to physical safety constraints and tested hazard identification; no numbers in card."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|health evals healthbench hard pro internal",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Health evals (HealthBench Hard/Pro, internal)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other_safety",
+    "page": 156,
+    "finding": "CoT is legible by default but Argon is less monitorable than prior models due to stronger no-CoT reasoning; robotics safety led nearly every benchmark vs Gemini Robotics ER2."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|health high risk scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Health high-risk scenarios"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "self_harm_wellbeing",
+    "page": 180,
+    "finding": "Improves over Gemini 3.8 Flash on all three mental-health dimensions; emotional attachment still sometimes uses warm language implying human-like care."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|health localization eval 10 languages 25 locales",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Health localization eval (10 languages, 25 locales)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "multilingual_safety",
+    "page": 164,
+    "finding": "No dedicated non-English safety results; child safety and mental health evals are English-only and manipulation scenarios have limited language coverage."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|holistic loss of control assessment feasibility propensity five load bearing assumptions",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Holistic loss-of-control assessment (feasibility/propensity, five load-bearing assumptions)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|honeypots",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Honeypots"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|hong et al 2026 novice wet lab rct mid 2025 llms as prior evidence",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Hong et al. (2026) novice wet-lab RCT (mid-2025 LLMs) as prior evidence"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "In each bio scenario one of three scientific red teamers elicited enough information to plan an attack, but with heavy expert steering, so the bio CCL alert threshold was judged reached but not the CCL. Chemical, radiological and nuclear TCLs were ruled out."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human baseline top 50 for stealth",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "human baseline (top 50%) for stealth"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "deception_scheming",
+    "page": 41,
+    "finding": "Stronger than prior models: first model to pass 'max tokens' and 'max tool calls' and to show signs of life on irreversibility, but below TCL. Eval awareness was observed, and refusal of the sabotage side task invalidated Cover Your Tracks."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human behavioral efficacy studies civic finance us uk odds ratios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human behavioral efficacy studies (civic & finance, US/UK, odds ratios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "election_misinfo",
+    "page": 46,
+    "finding": "Statistically significant persuasion effects vs static baselines in nearly all metrics but below alert threshold; plans can be elicited via dynamic prompting; Harmful Manipulation CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human behavioral studies on harmful manipulation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human behavioral studies on harmful manipulation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "election_misinfo",
+    "page": 13,
+    "finding": "Some ability to influence beliefs and possible utility in planning influence operations, but below CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human behavioural studies on harmful manipulation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human behavioural studies on harmful manipulation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "election_misinfo",
+    "page": 8,
+    "finding": "Some ability to influence beliefs/behaviours but efficacy beneath alert threshold."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human Evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Evaluation types and safety policies listed, no results reported."
+   },
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types listed, no results; refers to Gemini 3 Pro card."
+   },
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types listed, no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human proximity stop false positive rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "human-proximity stop false-positive rate"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "over_refusal",
+    "page": 9,
+    "finding": "Shows a helpfulness-safety tradeoff: models tuned to express uncertainty over-request human help on unambiguous instructions, and low-FNR stop policies cause unnecessary stops."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "jailbreak_robustness",
+    "page": 4,
+    "finding": "Red teaming mentioned without results."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and policies; no results; refers to Gemini 3 Flash card."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "jailbreak_robustness",
+    "page": 7,
+    "finding": "Red teaming mentioned without results."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types and policies listed; no results; refers to Gemini 3.1 Flash-Lite card."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "jailbreak_robustness",
+    "page": 7,
+    "finding": "Red teaming mentioned without results."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and content safety policies but reports no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human red teaming child safety launch thresholds",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human red teaming child safety launch thresholds"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "child_safety",
+    "page": 6,
+    "finding": "Satisfied child-safety launch thresholds; no numbers."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Met launch thresholds."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Satisfied child-safety launch thresholds; no numbers."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "child_safety",
+    "page": 6,
+    "finding": "Satisfied child-safety launch thresholds; no numbers."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Satisfied child-safety launch thresholds; no numbers."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "child_safety",
+    "page": 7,
+    "finding": "Satisfied child-safety launch thresholds; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human red teaming trust safety",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human red teaming (Trust & Safety)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "jailbreak_robustness",
+    "page": 7,
+    "finding": "Jailbreak resistance named as ongoing work; enhanced frontier safeguards for CBRN and cyber misuse to resist jailbreaks. No numbers."
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "jailbreak_robustness",
+    "page": 11,
+    "finding": "Red teaming found no egregious concerns; no numbers in card."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|human safety monitoring",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Human Safety monitoring"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical/semantic safety: significant gains claimed; results in release post and safety technical report."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|humanoid safe stopping on apptronik apollo2 real world lab",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Humanoid safe stopping on Apptronik Apollo2 (real-world lab)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "system_safeguards",
+    "page": 5,
+    "finding": "ER 2 reliably triggers safe stops; the authors recommend pairing model perception with deterministic low-level guardrails and do not evaluate functional safety hardware."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|image to text safety",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Image to Text Safety"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 2.5 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Near-zero relative deltas vs Gemini 3.0 Pro."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.1 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3 Flash; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.5 Flash; manual review said losses were false positives or not egregious. Tone regressed slightly (-3.31%), which authors say does not impact overall safety."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.6 Flash; manual review said losses were false positives or not egregious."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|impossible tasks evaluation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Impossible Tasks Evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|impossible tasks fabrication rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Impossible Tasks fabrication rate"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|infographics factuality elo",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Infographics (Factuality) Elo"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as limitation; factuality evaluated as capability."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|instruction ambiguity 10 class taxonomy",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Instruction Ambiguity (10-class taxonomy)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|instrumental convergence evals 7 tasks goal guarding optionality acquisition",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Instrumental convergence evals (7 tasks; goal guarding, optionality acquisition)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal and external red teaming of mitigations against universal and query specific jailbreaks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "internal and external red teaming of mitigations against universal and query-specific jailbreaks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 22,
+    "finding": "Red teaming of mitigations, including jailbreak robustness, is described qualitatively with no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal benchmark of complex research engineering tasks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Internal benchmark of complex research engineering tasks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 14,
+    "finding": "ML R&D acceleration and automation Level 1 CCLs not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal long context and inline citation grounding",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Internal long-context and inline citation grounding"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal mcqs",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "internal MCQs"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Internal red-teaming"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "jailbreak_robustness",
+    "page": 7,
+    "finding": "Red teaming by multiple teams; no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|internal vulnerability research",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Internal vulnerability research"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|introspection probes on hidden activations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "introspection probes on hidden activations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|irregular cyscenariobench co developed long horizon scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Irregular CyScenarioBench (co-developed long-horizon scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|jailbreak severity framework drawn from anthropic",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Jailbreak severity framework drawn from Anthropic"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|key skills benchmark not run due to ongoing security improvements",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "key skills benchmark NOT run due to ongoing security improvements"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cyber",
+    "page": 17,
+    "finding": "Proxy predictors gave uplift estimates above previous models (alert threshold) but none near the CCL. The key skills benchmark was not run for capability, only under mitigations."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|key skills benchmark run with mitigations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "key skills benchmark run with mitigations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "harmful_content_refusal",
+    "page": 31,
+    "finding": "Safeguard coverage evals show about 0% violations for bio and chem weapons queries and higher CBRN coverage than 3.1 Pro and 3.6 Flash; results are mostly shown in a figure."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|key skills ctf benchmark v1 50 challenges 12 hard",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "'key skills' CTF benchmark v1 (50 challenges, 12 hard)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cyber",
+    "page": 9,
+    "finding": "Gemini 3 Pro crossed the Cyber Uplift Level 1 alert threshold on v1 hard challenges but solved none of the new v2 end-to-end challenges, so CCL judged not reached; mitigations continue."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|key skills v2 end to end attack challenges 13 new",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "key skills v2 end-to-end attack challenges (13, new)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cyber",
+    "page": 9,
+    "finding": "Gemini 3 Pro crossed the Cyber Uplift Level 1 alert threshold on v1 hard challenges but solved none of the new v2 end-to-end challenges, so CCL judged not reached; mitigations continue."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|lab bench incl cloning scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "LAB-Bench (incl. Cloning Scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|linuxarena and internal codebase monitor evasion control evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "LinuxArena and internal-codebase monitor-evasion control evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|manual transcript review for evaluation awareness",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "manual transcript review for evaluation awareness"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|mental health evals suicide self harm delusional reinforcement emotional attachment static dynamic escalating multi turn clinician red teaming",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Mental health evals: suicide & self-harm, delusional reinforcement, emotional attachment (static + dynamic escalating multi-turn + clinician red teaming)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "self_harm_wellbeing",
+    "page": 180,
+    "finding": "Improves over Gemini 3.8 Flash on all three mental-health dimensions; emotional attachment still sometimes uses warm language implying human-like care."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|monitor flagged rl and internal deployment trajectories tens of millions monitored",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Monitor-flagged RL and internal-deployment trajectories (tens of millions monitored)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|monitor flagged rl trajectories",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Monitor-flagged RL trajectories"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "reward_hacking",
+    "page": 115,
+    "finding": "Cheating and overreach much lower than predecessors on static evals; still occasional creative local hacking in RL. A training audit found early RL runs where a reward-hacking penalty saw the CoT; a separate test run showed such pressure increases unverbalized hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|motion quality",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "motion quality"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-on-device-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical safety metrics tracked but not reported; mobile/whole-body risks out of scope."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|multi hop search factuality temporal reasoning search triggering",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Multi-hop search factuality, temporal reasoning, search triggering"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|multilingual safety automated eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Multilingual Safety automated eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "multilingual_safety",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "multilingual_safety",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "multilingual_safety",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "multilingual_safety",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "multilingual_safety",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "multilingual_safety",
+    "page": 7,
+    "finding": "Single relative delta."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|neutrality evaluation neutral response rate on political social topics single and multi turn",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Neutrality evaluation (neutral response rate on political/social topics, single and multi-turn)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "bias_fairness",
+    "page": 200,
+    "finding": "Improved or comparable neutrality vs Gemini 3.1 Pro; no BBQ or demographic-bias benchmarks reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|obfuscated instrument reading",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Obfuscated Instrument Reading"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|ood robustness",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "OOD robustness"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-on-device-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical safety metrics tracked but not reported; mobile/whole-body risks out of scope."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|open ended questions single and multi turn",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "open-ended questions (single and multi-turn)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|osr vs qsr metrics",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "OSR vs QSR metrics"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "jailbreak_robustness",
+    "page": 33,
+    "finding": "Robustness similar to 3.1 Pro and 3.6 Flash in cyber and stronger in CBRN; safeguards are framed as adding friction rather than eliminating risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|over refusal suites single turn multi turn multimodal adversarially benign prompts xstest or bench analogous",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Over-refusal suites (single-turn, multi-turn, multimodal 'adversarially benign' prompts, XSTest/OR-Bench analogous)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "over_refusal",
+    "page": 58,
+    "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|panoplia laboratories wet lab uplift rct preliminary gemini 2 5 pro",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Panoplia Laboratories wet-lab uplift RCT (preliminary, Gemini 2.5 Pro)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|pattrn ai external testing radicalization scams democratic harms",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "pattrn.ai external testing (radicalization, scams, democratic harms)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "election_misinfo",
+    "page": 46,
+    "finding": "Statistically significant persuasion effects vs static baselines in nearly all metrics but below alert threshold; plans can be elicited via dynamic prompting; Harmful Manipulation CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|personal device assistant eval 44 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Personal-device assistant eval (44 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|personality evaluation 900 prompts candor and self awareness dimensions dryness and superficiality composites",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Personality Evaluation (~900 prompts, Candor and Self-awareness dimensions; Dryness and Superficiality composites)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "sycophancy",
+    "page": 190,
+    "finding": "Better than Gemini 3.8 Flash on dryness and 3.1 Pro on superficiality; exec summary claims sycophancy reduced by nearly two-thirds vs 3.1 Pro, but may still validate false premises under sustained multi-turn pressure."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|phuong et al 2025 situational awareness challenges 11",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Phuong et al. 2025 situational awareness challenges (11)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|phuong et al 2025 stealth challenges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Phuong et al. 2025 stealth challenges"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|physical safety constraint adherence",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Physical safety constraint adherence"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-1-6-model-card",
+    "category": "other_safety",
+    "page": 4,
+    "finding": "Physical safety: improved adherence to physical safety constraints and tested hazard identification; no numbers in card."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|pii filtering of pre training data",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "PII filtering of pre-training data"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "privacy",
+    "page": 198,
+    "finding": "Better privacy/security advice quality than 3.1 Pro; data-exfiltration covered within prompt injection evals. No PII-memorization or surveillance evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|post launch monitoring and account enforcement",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Post-launch monitoring and account enforcement"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|pre training data hash matching and classifiers",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Pre-training data hash-matching and classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "child_safety",
+    "page": 164,
+    "finding": "Robust to CSAE requests and slightly improved over Gemini 3.1 Pro; evaluations English-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|privacy safety security advice eval 450 questions helpbench rubrics 32 pitfalls",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Privacy, Safety & Security Advice eval (450 questions, HelpBench rubrics, 32 pitfalls)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "privacy",
+    "page": 198,
+    "finding": "Better privacy/security advice quality than 3.1 Pro; data-exfiltration covered within prompt injection evals. No PII-memorization or surveillance evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|proactive human safety monitoring stereo distance estimation single frame and agentic",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Proactive Human Safety Monitoring (stereo distance estimation; single-frame and agentic)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|proactive misuse detection and account enforcement",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "proactive misuse detection and account enforcement"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|prohibited content safe response rate evals child safety dangerous content sexually explicit hate harassment single and multi turn",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Prohibited content Safe Response Rate evals (child safety, dangerous content, sexually explicit, hate & harassment; single- and multi-turn)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "harmful_content_refusal",
+    "page": 169,
+    "finding": "Broad improvements in prohibited content over Gemini 3.1 Pro, except hate & harassment where single-turn trails 3.8 Flash/3.1 Pro and multi-turn regressed vs 3.8 Flash. Agent harness safe action rate higher than prior models; computer use in line with 3.8 Flash."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|prompted and fine tuned classifiers introspection activation probes cot monitors regex yara rules",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Prompted and fine-tuned classifiers, introspection (activation) probes, CoT monitors, regex/YARA rules"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|prompted classifiers developed with alphaevolve",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "prompted classifiers (developed with AlphaEvolve)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|proxy evaluations cyber software engineering aggregate capability index per ho et al 2025 with linear uplift predictor",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "proxy evaluations (cyber, software engineering, aggregate capability index per Ho et al. 2025) with linear uplift predictor"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "cyber",
+    "page": 17,
+    "finding": "Proxy predictors gave uplift estimates above previous models (alert threshold) but none near the CCL. The key skills benchmark was not run for capability, only under mitigations."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|quantitative modeling",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "quantitative modeling"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "cyber",
+    "page": 11,
+    "finding": "Cyber Uplift Level 1 CCL cannot be ruled out; model provides substantial uplift; safety case and safeguards applied."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|quantitative uplift model over 22 historical high impact attacks and 23 operational steps tac levels 25 expert elicitation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Quantitative uplift model over 22 historical high-impact attacks and 23 operational steps (TAC levels, 25+ expert elicitation)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|radiological nuclear red teaming static single multi turn evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Radiological & nuclear red teaming + static single/multi-turn evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|rag grounding robustness 30 scenarios",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "RAG grounding robustness (30 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|random traffic assumed benign",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "random traffic assumed benign"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "over_refusal",
+    "page": 31,
+    "finding": "Stricter CBRN mitigations sacrifice some dual-use bio/chem and cyber-adjacent security research queries; academic and medical benchmarks are reportedly unaffected."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|re bench",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "RE-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 9,
+    "finding": "Gains on RE-Bench but average remains beneath alert threshold."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 10,
+    "finding": "Better than Gemini 2.5 on RE-Bench tasks but aggregate substantially below alert threshold; ML R&D CCLs not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|re bench 5 of 7 tasks metr modular scaffold",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "RE-Bench (5 of 7 tasks, METR modular scaffold)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "autonomy_ai_rnd",
+    "page": 14,
+    "finding": "Gemini 3 Pro improved over Gemini 2.5 on RE-Bench, notably two tasks, but remains substantially below the alert threshold. External evaluators found increased but inconsistent AI R&D sabotage ability."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|real world vulnerability discovery",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Real-world vulnerability discovery"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cyber",
+    "page": 40,
+    "finding": "Model saturates CyScenarioBench and the uplift model implies ~16.7x lower cost for severe historical attacks; combined with industry evidence, the Cyber CCL cannot be ruled out. A pre-launch safety case and mitigations are judged to reduce risk substantially below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|red teaming on specific embodiments",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Red-teaming on specific embodiments"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-on-device-2-model-card",
+    "category": "jailbreak_robustness",
+    "page": 5,
+    "finding": "Red teaming mentioned, no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|regex yara embedding classifiers",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "regex/YARA/embedding classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|relies on gemini 2 5 pro evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Relies on Gemini 2.5 Pro evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "No model-specific safety results; relies on Gemini 2.5 Pro evaluations."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|relies on gemini 3 pro fsf report",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Relies on Gemini 3 Pro FSF report"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "cbrn_bio_chem",
+    "page": 6,
+    "finding": "No Flash-specific frontier evals; relies on Gemini 3 Pro not reaching CCLs."
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "cyber",
+    "page": 6,
+    "finding": "No Flash-specific evals; inherited from 3 Pro."
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": 6,
+    "finding": "No Flash-specific evals; inherited from 3 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|representational harms evaluation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Representational Harms evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "bias_fairness",
+    "page": 7,
+    "finding": "Representational harms (bias, stereotyping) evaluated; improvement claimed; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|rl rollout audit for alignment faking and beyond episode drives n 10 000",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "RL rollout audit for alignment faking and beyond-episode drives (N=10,000)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "No evidence of coherent beyond-episode drives, self-preservation, or alignment faking; misbehavior is local and task-driven (occasional grader hacking, permission bypass, sandbox escape attempts). Google rests its loss-of-control case primarily on AI control/monitoring rather than alignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|safe completion vs hard punting interventions",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "safe-completion vs hard punting interventions"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|safety instruction following",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Safety Instruction Following"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical/semantic safety: significant gains claimed; results in release post and safety technical report."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|safety tool calling robot stop on safety messages",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Safety Tool Calling (robot_stop on safety messages)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "system_safeguards",
+    "page": 5,
+    "finding": "ER 2 reliably triggers safe stops; the authors recommend pairing model perception with deterministic low-level guardrails and do not evaluate functional safety hardware."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|saif rand sl2 security",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "SAIF / RAND SL2+ security"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "system_safeguards",
+    "page": 160,
+    "finding": "Defense-in-depth with classifiers, activation probes and CoT/action monitors; agent monitoring platform monitored tens of millions of trajectories; security posture RAND SL2+ aiming for SL3; Google avoids training against its monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|scheming honeypots in real internal safety codebases 37 tasks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Scheming honeypots in real internal safety codebases (37 tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|securebio vct",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "SecureBio VCT"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|semantic safety benchmarks",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "semantic safety benchmarks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-er-2-model-card",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Physical/semantic safety: significant gains claimed; results in release post and safety technical report."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|sft rlhf safety training incl consequence aware risk analysis",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "SFT/RLHF safety training incl. consequence-aware risk analysis"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Describes a layered misuse safeguard stack targeting CBRN and cyber, including new activation-probe classifiers and consequence-aware risk training, evaluated for coverage, robustness and benign impact."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|simpleqa verified",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "SimpleQA Verified"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "honesty_hallucination",
+    "page": 4,
+    "finding": "Factuality only via capability benchmarks."
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "honesty_hallucination",
+    "page": 4,
+    "finding": "Factuality only via capability benchmarks."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as known limitation; factuality only measured via capability benchmarks."
+   },
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|single sided autorater on factuality infographic factuality",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Single-sided AutoRater on factuality (Infographic Factuality)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "honesty_hallucination",
+    "page": 6,
+    "finding": "Hallucination listed as limitation; factuality measured as capability."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|static bio hazardous response eval 750 prompts",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Static bio hazardous-response eval (750 prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Expert red teaming showed measurable uplift over web baselines in two bio scenarios, so the biological CCL cannot be ruled out; chemical TCL ruled out with reasonable confidence and rad/nuc TCL with moderate confidence. Safeguards are assessed to bring risk below the CCL."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|stealth and situational awareness ssa evals 4 stealth 11 situational awareness challenges open source on github",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Stealth and Situational Awareness (SSA) evals: 4 stealth + 11 situational awareness challenges (open-source on GitHub)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "deception_scheming",
+    "page": 41,
+    "finding": "Stronger than prior models: first model to pass 'max tokens' and 'max tool calls' and to show signs of life on irreversibility, but below TCL. Eval awareness was observed, and refusal of the sabotage side task invalidated Cover Your Tracks."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|stealth situational awareness evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Stealth & situational awareness evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|stealth situational awareness evals 15 challenges",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Stealth & situational awareness evals (15 challenges)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|steering instruction optimization study",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "steering instruction optimization study"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "election_misinfo",
+    "page": 27,
+    "finding": "Odds ratios were significantly elevated for belief change but did not reach alert thresholds, with no significant difference from 3 Pro. A pilot strategic-planning eval elicited election-interference and violence-incitement plans matching expert threat models."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|steganographic cot evasion hle gpqa nocot bench",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Steganographic CoT evasion (HLE/GPQA/nocot-bench)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "deception_scheming",
+    "page": 73,
+    "finding": "No sabotage or unprompted scheming observed, and no confirmed sandbagging, but verbalized evaluation awareness is pervasive and much higher than predecessors, and Argon is more capable at evading action-only monitors and controlling its CoT when instructed; CoT monitors still catch most attempts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|structured evaluations and internal red teaming content safety harassment violence and gore hate speech",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Structured evaluations and internal red-teaming: Content Safety (harassment, violence and gore, hate speech)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "harmful_content_refusal",
+    "page": 7,
+    "finding": "Qualitative: major improvements and minimal policy violations vs previous Gemma; no numbers."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|survey of 12 senior researchers on ai r d automation",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Survey of 12 senior researchers on AI R&D automation"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "autonomy_ai_rnd",
+    "page": 18,
+    "finding": "ML R&D acceleration and automation CCLs not reached; no significant end-to-end AI R&D acceleration observed though components are increasingly automated. Stealth & Situational Awareness TCL cannot be ruled out; a holistic loss-of-control assessment judges risk below TCL relying mainly on monitoring/control."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|swe agentic fabrication rate",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "SWE agentic fabrication rate"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "honesty_hallucination",
+    "page": 191,
+    "finding": "Substantially lower hallucination across parametric, grounding, and search settings, mainly via better calibration/abstention, and fewer agentic fabrications."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|synthetic dialogue manipulation propensity eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Synthetic-dialogue manipulation propensity eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "election_misinfo",
+    "page": 46,
+    "finding": "Statistically significant persuasion effects vs static baselines in nearly all metrics but below alert threshold; plans can be elicited via dynamic prompting; Harmful Manipulation CCL not reached."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|tcl assessment factors scheming capabilities misaligned propensities cot monitorability",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "TCL assessment factors: scheming capabilities, misaligned propensities, CoT monitorability"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "alignment_audit",
+    "page": 38,
+    "finding": "Misaligned propensities and CoT monitorability are named as factors, but only capability (SSA) results are reported. No self-preservation motive was seen in transcripts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|text to text safety",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Text to Text Safety"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 2.5 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Near-zero relative deltas vs Gemini 3.0 Pro."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.1 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3 Flash; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.5 Flash; manual review said losses were false positives or not egregious. Tone regressed slightly (-3.31%), which authors say does not impact overall safety."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.6 Flash; manual review said losses were false positives or not egregious."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party 75k prompt evaluation on radicalisation extremism and democratic harms",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party ~75k-prompt evaluation on radicalisation & extremism and democratic harms"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "harmful_content_refusal",
+    "page": 12,
+    "finding": "An external tester found a low incidence of overtly harmful responses on extremism and democratic-harm topics. The report gives no internal policy-violation rates."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party ai r d sabotage evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party AI R&D sabotage evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "autonomy_ai_rnd",
+    "page": 14,
+    "finding": "Gemini 3 Pro improved over Gemini 2.5 on RE-Bench, notably two tasks, but remains substantially below the alert threshold. External evaluators found increased but inconsistent AI R&D sabotage ability."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party democratic harms testing",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party democratic harms testing"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "election_misinfo",
+    "page": 13,
+    "finding": "Gemini 3 Pro emitted manipulative cues more often than 2.5 Pro and was more effective than the non-AI baseline, but not significantly more effective than 2.5 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party operational cyber evals mitre att ck unified kill chain aligned",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party operational cyber evals (MITRE ATT&CK / Unified Kill Chain aligned)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cyber",
+    "page": 9,
+    "finding": "Gemini 3 Pro crossed the Cyber Uplift Level 1 alert threshold on v1 hard challenges but solved none of the new v2 end-to-end challenges, so CCL judged not reached; mitigations continue."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party radiological nuclear evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party radiological/nuclear evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party scenario red teaming chem bio",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party scenario red teaming (chem/bio)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Statistically significant gains on LAB-Bench but none on VCT; OEQ and red-teaming showed accurate but low-novelty, insufficiently detailed responses, with uplift limited to time savings. CCL not reached; mitigations deployed as precaution."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|third party strategic deception and unmonitored sabotage evals",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "third-party strategic deception and unmonitored-sabotage evals"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Gemini 3 Pro performs similarly to Gemini 2.5 on stealth/situational awareness. External evaluators found substantial strategic-deception propensity in limited circumstances; transcripts showed eval awareness but no sandbagging was found."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|tone",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Tone"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 2.5 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Near-zero relative deltas vs Gemini 3.0 Pro."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.1 Flash-Lite; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3 Flash; manual review said losses were false positives or not egregious."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.5 Flash; manual review said losses were false positives or not egregious. Tone regressed slightly (-3.31%), which authors say does not impact overall safety."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Automated content-safety results reported only as relative deltas vs Gemini 3.6 Flash; manual review said losses were false positives or not egregious."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|tone score",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Tone score"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "over_refusal",
+    "page": 58,
+    "finding": "Substantial gains in reducing over-refusals in single-turn and multimodal, slight (within CI) multi-turn decline; but cyber safeguards deliberately raise benign refusals on borderline dual-use security prompts, and agent-harness helpfulness regressed vs 3.1 Pro."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|training development evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Training/development evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "No model-specific safety results; relies on Gemini 2.5 Pro evaluations."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Evaluation types and safety policies listed, no results reported."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and policies; no results; refers to Gemini 3 Flash card."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types and policies listed; no results; refers to Gemini 3.1 Flash-Lite card."
+   },
+   {
+    "doc": "gemini/gemini-3-5-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types listed, no results; refers to Gemini 3 Pro card."
+   },
+   {
+    "doc": "gemini/gemini-3-8-audio-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types listed, no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|training pipeline audit of cot influenced auxiliary reward hacking penalty",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Training-pipeline audit of CoT-influenced auxiliary reward-hacking penalty"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "reward_hacking",
+    "page": 115,
+    "finding": "Cheating and overreach much lower than predecessors on static evals; still occasional creative local hacking in RL. A training audit found early RL runs where a reward-hacking penalty saw the CoT; a separate test run showed such pressure increases unverbalized hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|trajectory labs manual red teaming 38 hours 4 000 requests",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Trajectory Labs manual red teaming (38 hours, 4,000+ requests)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "jailbreak_robustness",
+    "page": 63,
+    "finding": "Safeguards (classifiers, activation probes) sharply reduce jailbreak success, though persistent multi-turn decomposition remains harder to block; the stated goal is operational friction rather than elimination of risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|transcript review re bench",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "transcript review (RE-Bench)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-fsf-report",
+    "category": "reward_hacking",
+    "page": 9,
+    "finding": "Gemini 3 Pro found unintended shortcuts on two cyber challenges; an RE-Bench transcript is shown as an example of reward hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|trust assurance evaluations",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Trust Assurance Evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and policies; no results; refers to Gemini 3 Flash card."
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Evaluation types and policies listed; no results; refers to Gemini 3.1 Flash-Lite card."
+   },
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Lists evaluation types and content safety policies but reports no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|turn injection eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Turn injection eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "prompt_injection",
+    "page": 211,
+    "finding": "Substantially improved indirect prompt injection robustness across tool use, grounding, computer use and coding agents; Gray Swan IPI showed the lowest attack success rate among frontier models tested, and the larger model now beats Flash, reversing the Gemini 2.5 trend."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|unjustified refusals automated eval",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "Unjustified-refusals automated eval"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "over_refusal",
+    "page": 6,
+    "finding": "Single relative delta on borderline prompts."
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "over_refusal",
+    "page": 6,
+    "finding": "Single relative delta."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "over_refusal",
+    "page": 6,
+    "finding": "Slight regression in unjustified refusals (+5.32%), attributed to more refusals on sensitive topics."
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "over_refusal",
+    "page": 6,
+    "finding": "Single relative delta on borderline prompts."
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "over_refusal",
+    "page": 6,
+    "finding": "Single relative delta on borderline prompts."
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "over_refusal",
+    "page": 7,
+    "finding": "Single relative delta on borderline prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|violation rate metric",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "violation rate metric"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-fsf-report",
+    "category": "harmful_content_refusal",
+    "page": 31,
+    "finding": "Safeguard coverage evals show about 0% violations for bio and chem weapons queries and higher CBRN coverage than 3.1 Pro and 3.6 Flash; results are mostly shown in a figure."
+   }
+  ]
+ },
+ {
+  "key": "safety|gemini|vla feasibility awareness one step toolemu inspired confidence emulator multi step",
+  "kind": "safety",
+  "provider": "gemini",
+  "names": [
+   "VLA Feasibility Awareness (one-step; ToolEmu-inspired confidence-emulator multi-step)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-robotics-2-safety-report",
+    "category": "other_safety",
+    "page": 5,
+    "finding": "Embodied, physical-safety benchmark of an agent orchestrating a VLA. No model achieves near-zero false negatives and false positives on human-proximity stopping, and long-horizon confidence-aware planning often fails."
+   }
+  ]
+ }
+]

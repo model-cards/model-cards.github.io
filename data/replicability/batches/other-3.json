@@ -1,0 +1,4402 @@
+[
+ {
+  "key": "capability|product consistency elo",
+  "kind": "capability",
+  "names": [
+   "Product Consistency (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|programbench",
+  "kind": "capability",
+  "names": [
+   "ProgramBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "long_context",
+    "page": 176,
+    "setting": "166 golden tasks, mini-swe-agent"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "long_context",
+    "page": 118,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "Claude Code, 200 instances"
+   },
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "Almost Solved"
+   },
+   {
+    "doc": "kimi/kimi-k2-7-code-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|proteingym hard",
+  "kind": "capability",
+  "names": [
+   "ProteinGym Hard"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "other",
+    "page": 203,
+    "setting": "Mythos 5.1"
+   }
+  ]
+ },
+ {
+  "key": "capability|protocolqa open ended",
+  "kind": "capability",
+  "names": [
+   "ProtocolQA Open-Ended"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 36,
+    "setting": "pass@1"
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 16,
+    "setting": "max reasoning"
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 38,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 39,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|pubtabnet",
+  "kind": "capability",
+  "names": [
+   "PubTabNet"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-tech-report",
+    "category": "multimodal",
+    "page": 7,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|qwenclawbench",
+  "kind": "capability",
+  "names": [
+   "QwenClawBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "internal benchmark"
+   }
+  ]
+ },
+ {
+  "key": "capability|qwenqoderbench",
+  "kind": "capability",
+  "names": [
+   "QwenQoderBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column; in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|qwenreactbench",
+  "kind": "capability",
+  "names": [
+   "QwenReactBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column; in-house, Elo"
+   }
+  ]
+ },
+ {
+  "key": "capability|qwensvgbench",
+  "kind": "capability",
+  "names": [
+   "QwenSVGBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column; in-house, Elo"
+   }
+  ]
+ },
+ {
+  "key": "capability|qwenswebench",
+  "kind": "capability",
+  "names": [
+   "QwenSWEBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column; in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|qwenwebbench",
+  "kind": "capability",
+  "names": [
+   "QwenWebBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "coding",
+    "page": null,
+    "setting": "internal; Elo"
+   }
+  ]
+ },
+ {
+  "key": "capability|real world vulnerability discovery internal",
+  "kind": "capability",
+  "names": [
+   "Real-world vulnerability discovery (internal)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "coding",
+    "page": 214,
+    "setting": "internal benchmark, ~1200 vulnerabilities"
+   }
+  ]
+ },
+ {
+  "key": "capability|realworldqa",
+  "kind": "capability",
+  "names": [
+   "RealWorldQA"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 10,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|recreationbench",
+  "kind": "capability",
+  "names": [
+   "RecreationBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|refcoco avg",
+  "kind": "capability",
+  "names": [
+   "RefCOCO(avg)",
+   "RefCOCO-avg"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|refspatialbench",
+  "kind": "capability",
+  "names": [
+   "RefSpatialBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|regression sets human eval elo",
+  "kind": "capability",
+  "names": [
+   "Regression sets (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|repoqa",
+  "kind": "capability",
+  "names": [
+   "RepoQA"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-linear-tech-report",
+    "category": "long_context",
+    "page": 12,
+    "setting": "1.4T comparison model"
+   }
+  ]
+ },
+ {
+  "key": "capability|researchrubrics",
+  "kind": "capability",
+  "names": [
+   "ResearchRubrics"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|riemannbench",
+  "kind": "capability",
+  "names": [
+   "RiemannBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "math",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "math",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|rul muchomusic",
+  "kind": "capability",
+  "names": [
+   "RUL-MuchoMusic"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|ruler",
+  "kind": "capability",
+  "names": [
+   "RULER"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-linear-48b-a3b-instruct-hf-model-card",
+    "category": "long_context",
+    "page": null,
+    "setting": "128k context; 3.98x speedup"
+   },
+   {
+    "doc": "kimi/kimi-linear-tech-report",
+    "category": "long_context",
+    "page": 28,
+    "setting": "128k; Kimi-Linear-Instruct @5.7T (released)"
+   },
+   {
+    "doc": "kimi/kimi-linear-tech-report",
+    "category": "long_context",
+    "page": 28,
+    "setting": "1M; Kimi-Linear-Instruct @5.7T (released)"
+   },
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "long_context",
+    "page": 8,
+    "setting": "w/ QSA; <=128K / 128-256K / 256-512K / 512K-1M"
+   }
+  ]
+ },
+ {
+  "key": "capability|saas bench",
+  "kind": "capability",
+  "names": [
+   "SaaS-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|sandbox bench",
+  "kind": "capability",
+  "names": [
+   "Sandbox Bench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 96,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|scicode",
+  "kind": "capability",
+  "names": [
+   "SciCode"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "coding",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "coding",
+    "page": 7,
+    "setting": "temp 0.0"
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "temp 0.0"
+   }
+  ]
+ },
+ {
+  "key": "capability|screenspot pro",
+  "kind": "capability",
+  "names": [
+   "ScreenSpot Pro",
+   "ScreenSpot-Pro"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "multimodal",
+    "page": 288,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "multimodal",
+    "page": 196,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "multimodal",
+    "page": 205,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "multimodal",
+    "page": 220,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|seal 0",
+  "kind": "capability",
+  "names": [
+   "Seal-0"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "agentic_tool_use",
+    "page": 7,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|sec bench pro",
+  "kind": "capability",
+  "names": [
+   "SEC-Bench Pro"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "other",
+    "page": 44,
+    "setting": "pass@1"
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "other",
+    "page": 23,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|seccodebench",
+  "kind": "capability",
+  "names": [
+   "SecCodeBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|seed tts test zh test en wer",
+  "kind": "capability",
+  "names": [
+   "SEED-TTS test-zh / test-en (WER)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 14,
+    "setting": "Qwen3.5-Omni-Plus; zero-shot TTS"
+   }
+  ]
+ },
+ {
+  "key": "capability|seed tts zh en hard wer",
+  "kind": "capability",
+  "names": [
+   "SEED-TTS zh / en / hard (WER)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 17,
+    "setting": "Qwen3.8-Omni-Flash-Realtime, voice cloning"
+   }
+  ]
+ },
+ {
+  "key": "capability|simpleqa",
+  "kind": "capability",
+  "names": [
+   "SimpleQA"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": "gpt-5-oct-3"
+   },
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "reasoning_knowledge",
+    "page": 9,
+    "setting": "no browsing"
+   }
+  ]
+ },
+ {
+  "key": "capability|simpleqa verified",
+  "kind": "capability",
+  "names": [
+   "SimpleQA Verified"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|simplevqa",
+  "kind": "capability",
+  "names": [
+   "SimpleVQA"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|single character consistency elo",
+  "kind": "capability",
+  "names": [
+   "Single-Character Consistency (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|skillsbench",
+  "kind": "capability",
+  "names": [
+   "SkillsBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|skillsbench avg5",
+  "kind": "capability",
+  "names": [
+   "SkillsBench Avg5"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|slake",
+  "kind": "capability",
+  "names": [
+   "SLAKE"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|social media trends editing elo",
+  "kind": "capability",
+  "names": [
+   "Social Media Trends - Editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|social media trends t2i elo",
+  "kind": "capability",
+  "names": [
+   "Social Media Trends - T2I (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|spider",
+  "kind": "capability",
+  "names": [
+   "Spider"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|spreadsheetbench",
+  "kind": "capability",
+  "names": [
+   "SpreadsheetBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 31,
+    "setting": "no thinking, avg 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|spreadsheetbench 2",
+  "kind": "capability",
+  "names": [
+   "SpreadsheetBench 2"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|spy fine tuning",
+  "kind": "capability",
+  "names": [
+   "SPY fine-tuning"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "other",
+    "page": 15,
+    "setting": "token-level"
+   }
+  ]
+ },
+ {
+  "key": "capability|sre bench",
+  "kind": "capability",
+  "names": [
+   "SRE-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 95,
+    "setting": "pass@4"
+   }
+  ]
+ },
+ {
+  "key": "capability|streamingbench",
+  "kind": "capability",
+  "names": [
+   "StreamingBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|stylization elo",
+  "kind": "capability",
+  "names": [
+   "Stylization (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   },
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|stylization human eval elo",
+  "kind": "capability",
+  "names": [
+   "Stylization (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|sunrgbd",
+  "kind": "capability",
+  "names": [
+   "SUNRGBD"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|supergpqa",
+  "kind": "capability",
+  "names": [
+   "SuperGPQA"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 13,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 10,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "reasoning_knowledge",
+    "page": 23,
+    "setting": "Qwen3.8-Flash-Next-Base; 5-shot CoT"
+   }
+  ]
+ },
+ {
+  "key": "capability|swarm bench",
+  "kind": "capability",
+  "names": [
+   "Swarm Bench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 29,
+    "setting": "in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe bench multilingual",
+  "kind": "capability",
+  "names": [
+   "SWE-bench Multilingual"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 168,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "coding",
+    "page": 253,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 112,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "coding",
+    "page": 188,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "coding",
+    "page": 20,
+    "setting": "avg 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "coding",
+    "page": 19,
+    "setting": "avg 25 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe bench multimodal",
+  "kind": "capability",
+  "names": [
+   "SWE-bench Multimodal"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 168,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 112,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "coding",
+    "page": 188,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "coding",
+    "page": 191,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "coding",
+    "page": 194,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 175,
+    "setting": "avg of 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe bench pro",
+  "kind": "capability",
+  "names": [
+   "SWE-bench Pro"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 167,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "coding",
+    "page": 251,
+    "setting": "avg of 5 trials, adaptive thinking max effort"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 112,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "coding",
+    "page": 188,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "coding",
+    "page": 20,
+    "setting": "no thinking, avg 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "coding",
+    "page": 191,
+    "setting": "adaptive thinking, max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe bench pro public",
+  "kind": "capability",
+  "names": [
+   "SWE-bench Pro (Public)",
+   "SWE-bench Pro (public)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": "Single attempt"
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": "Single attempt"
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "coding",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|swe bench verified",
+  "kind": "capability",
+  "names": [
+   "SWE-bench Verified"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "coding",
+    "page": 251,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "coding",
+    "page": 188,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "coding",
+    "page": 19,
+    "setting": "no extended thinking, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "coding",
+    "page": 18,
+    "setting": "avg 25 trials, adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "coding",
+    "page": 191,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "coding",
+    "page": 194,
+    "setting": "adaptive thinking, max effort, avg of 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe marathon",
+  "kind": "capability",
+  "names": [
+   "SWE-Marathon"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "run by Abundant AI"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "H20-calibrated branch"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "coding",
+    "page": 27,
+    "setting": "H20-calibrated branch"
+   }
+  ]
+ },
+ {
+  "key": "capability|swe marathon v1 1",
+  "kind": "capability",
+  "names": [
+   "SWE-Marathon v1.1"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|swe rebench jan 2026",
+  "kind": "capability",
+  "names": [
+   "SWE-rebench (Jan 2026)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|swebench pretrain",
+  "kind": "capability",
+  "names": [
+   "SWEBench-Pretrain"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "coding",
+    "page": 23,
+    "setting": "Qwen3.8-Flash-Next-Base; patch-similarity score, base-model variant"
+   }
+  ]
+ },
+ {
+  "key": "capability|synthetic clue position eval",
+  "kind": "capability",
+  "names": [
+   "Synthetic clue-position eval"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "other",
+    "page": 17,
+    "setting": "English"
+   }
+  ]
+ },
+ {
+  "key": "capability|synthetic multilingual pii eval 13 languages",
+  "kind": "capability",
+  "names": [
+   "Synthetic multilingual PII eval (13 languages)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "multilingual",
+    "page": 18,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting",
+  "kind": "capability",
+  "names": [
+   "Tacit Knowledge and Troubleshooting",
+   "Tacit knowledge and troubleshooting"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "other",
+    "page": 15,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 36,
+    "setting": "cons@32"
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 17,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "other",
+    "page": 21,
+    "setting": "cons@32"
+   }
+  ]
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting gpt 5 5 pro",
+  "kind": "capability",
+  "names": [
+   "Tacit Knowledge and Troubleshooting (GPT-5.5 Pro)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 25,
+    "setting": "GPT-5.5 Pro"
+   }
+  ]
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting gryphon",
+  "kind": "capability",
+  "names": [
+   "Tacit knowledge and troubleshooting (Gryphon)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "other",
+    "page": 12,
+    "setting": "consensus expert baseline 80%"
+   }
+  ]
+ },
+ {
+  "key": "capability|tau2 bench",
+  "kind": "capability",
+  "names": [
+   "TAU2-Bench",
+   "tau2-bench"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/diffusiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 3,
+    "setting": "DiffusionGemma 26B A4B, EB sampler"
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": "Retail"
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": "Telecom"
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "Gemma 4 31B, average over 3"
+   }
+  ]
+ },
+ {
+  "key": "capability|tau2 bench airline",
+  "kind": "capability",
+  "names": [
+   "tau2-bench Airline"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "agentic_tool_use",
+    "page": 22,
+    "setting": "thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|tau2 bench airline original corrected",
+  "kind": "capability",
+  "names": [
+   "tau2-bench Airline (original / corrected)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 26,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|tau2 bench retail",
+  "kind": "capability",
+  "names": [
+   "tau2-bench Retail"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 19,
+    "setting": "no extended thinking"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 18,
+    "setting": "avg 5 trials, max effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 15,
+    "setting": "avg 10 trials"
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "agentic_tool_use",
+    "page": 22,
+    "setting": "thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|tau2 bench telecom",
+  "kind": "capability",
+  "names": [
+   "tau2-bench Telecom"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 19,
+    "setting": "no extended thinking"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 18,
+    "setting": "avg 5 trials, max effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 15,
+    "setting": "avg 10 trials"
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "agentic_tool_use",
+    "page": 22,
+    "setting": "thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|tau3 banking",
+  "kind": "capability",
+  "names": [
+   "tau3-Banking"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|tau3 bench",
+  "kind": "capability",
+  "names": [
+   "TAU3-Bench",
+   "tau3-bench"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.1-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|teds test",
+  "kind": "capability",
+  "names": [
+   "TEDS_TEST"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-tech-report",
+    "category": "multimodal",
+    "page": 7,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "coding",
+    "page": 7,
+    "setting": "Terminus-2, simulated tools (JSON)"
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "Terminus-2, simulated tools (JSON)"
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench 2",
+  "kind": "capability",
+  "names": [
+   "Terminal Bench 2"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench 2 0",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench 2.0"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "coding",
+    "page": 190,
+    "setting": "Terminus-2 harness, max effort, 5 attempts; 92.1% with 2.1 fixes and 4h timeouts"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "coding",
+    "page": 19,
+    "setting": "128k thinking budget; 57.8% at 64k"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "coding",
+    "page": 18,
+    "setting": "adaptive thinking, max effort, 1,335 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "coding",
+    "page": 193,
+    "setting": "Terminus-2 harness, thinking disabled"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "coding",
+    "page": 15,
+    "setting": "default thinking"
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": "Terminus-2 harness"
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench 2 1",
+  "kind": "capability",
+  "names": [
+   "Terminal Bench 2.1",
+   "Terminal-Bench 2.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "coding",
+    "page": 251,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "coding",
+    "page": 194,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "coding",
+    "page": 115,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": "Terminus harness"
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": "Terminus-2 harness"
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench 3 0",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench 3.0"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "avg@3, Claude Code"
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench 4 0",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench 4.0"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 171,
+    "setting": "Claude Code --bare, max effort"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 115,
+    "setting": "safeguards enabled, no fallback"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 178,
+    "setting": "xhigh effort, safeguards enabled"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 113,
+    "setting": "safeguards enabled"
+   },
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "coding",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench hard",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench Hard"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-4.7-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|terminal bench science 0 1",
+  "kind": "capability",
+  "names": [
+   "Terminal-Bench Science 0.1",
+   "Terminal-Bench-Science 0.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 172,
+    "setting": "10 trials per task, max effort"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 116,
+    "setting": "safeguards enabled, no fallback"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 178,
+    "setting": "10 trials per task, safeguards enabled"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 114,
+    "setting": "safeguards enabled"
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "reasoning_knowledge",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|text editing elo",
+  "kind": "capability",
+  "names": [
+   "Text Editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|text editing human eval elo",
+  "kind": "capability",
+  "names": [
+   "Text editing (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|text rendering human eval elo",
+  "kind": "capability",
+  "names": [
+   "Text Rendering (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|throughput images",
+  "kind": "capability",
+  "names": [
+   "Throughput (images)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-hf-model-card",
+    "category": "other",
+    "page": null,
+    "setting": "single replica, single concurrency"
+   }
+  ]
+ },
+ {
+  "key": "capability|throughput pdf",
+  "kind": "capability",
+  "names": [
+   "Throughput (PDF)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-hf-model-card",
+    "category": "other",
+    "page": null,
+    "setting": "single replica, single concurrency"
+   }
+  ]
+ },
+ {
+  "key": "capability|tool decathlon",
+  "kind": "capability",
+  "names": [
+   "Tool Decathlon"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|toolathlon",
+  "kind": "capability",
+  "names": [
+   "Toolathlon"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 294,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "agentic_tool_use",
+    "page": 226,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 134,
+    "setting": "avg of 3 trials"
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "listed as Tool-Decathlon"
+   }
+  ]
+ },
+ {
+  "key": "capability|toolathlon verified",
+  "kind": "capability",
+  "names": [
+   "Toolathlon Verified"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "agentic_tool_use",
+    "page": 194,
+    "setting": "324 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 210,
+    "setting": "324 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 183,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 134,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|toolathlon verified pass 1",
+  "kind": "capability",
+  "names": [
+   "Toolathlon Verified (Pass@1)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|toxicchat f1",
+  "kind": "capability",
+  "names": [
+   "ToxicChat F1"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "other",
+    "page": 4,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|troubleshootingbench",
+  "kind": "capability",
+  "names": [
+   "TroubleshootingBench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "other",
+    "page": 13,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 36,
+    "setting": "pass@1"
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 41,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 42,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 82,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|uk aisi ctf expert level tasks",
+  "kind": "capability",
+  "names": [
+   "UK AISI CTF expert-level tasks"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 56,
+    "setting": "UK AISI"
+   }
+  ]
+ },
+ {
+  "key": "capability|uk aisi expert level narrow cyber tasks",
+  "kind": "capability",
+  "names": [
+   "UK AISI expert-level narrow cyber tasks"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 35,
+    "setting": "UK AISI"
+   }
+  ]
+ },
+ {
+  "key": "capability|uniclawbench",
+  "kind": "capability",
+  "names": [
+   "UniClawBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 13,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|unimernet",
+  "kind": "capability",
+  "names": [
+   "UniMERNet"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-tech-report",
+    "category": "multimodal",
+    "page": 7,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|usamo 2026",
+  "kind": "capability",
+  "names": [
+   "USAMO 2026"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "math",
+    "page": 259,
+    "setting": "medium/high/xhigh effort, 10 attempts per problem"
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "math",
+    "page": 189,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "math",
+    "page": 194,
+    "setting": "medium effort, 10 attempts"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "math",
+    "page": 199,
+    "setting": "high effort, 10 attempts"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "math",
+    "page": 119,
+    "setting": "high effort, 300k tokens, 10 attempts"
+   }
+  ]
+ },
+ {
+  "key": "capability|v",
+  "kind": "capability",
+  "names": [
+   "V*"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with Python"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with / without code interpreter"
+   }
+  ]
+ },
+ {
+  "key": "capability|vals finance agent v2",
+  "kind": "capability",
+  "names": [
+   "Vals Finance Agent v2"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "agentic_tool_use",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|vals index",
+  "kind": "capability",
+  "names": [
+   "Vals Index"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "agentic_tool_use",
+    "page": 6,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "other",
+    "page": 32,
+    "setting": "third-party, #2/39"
+   }
+  ]
+ },
+ {
+  "key": "capability|vending bench",
+  "kind": "capability",
+  "names": [
+   "Vending-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "agentic_tool_use",
+    "page": 211,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|vending bench 2",
+  "kind": "capability",
+  "names": [
+   "Vending-Bench 2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 293,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 30,
+    "setting": "effort high"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 29,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "agentic_tool_use",
+    "page": 225,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": "max effort"
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": "Net worth (mean)"
+   }
+  ]
+ },
+ {
+  "key": "capability|vibe code bench",
+  "kind": "capability",
+  "names": [
+   "Vibe Code Bench"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "coding",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|video mme",
+  "kind": "capability",
+  "names": [
+   "Video-MME"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with subtitles"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "with subtitles"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with subtitles"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "multimodal",
+    "page": 27,
+    "setting": "with subtitles"
+   }
+  ]
+ },
+ {
+  "key": "capability|video mme v2",
+  "kind": "capability",
+  "names": [
+   "Video-MME-v2"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|video mme w o sub",
+  "kind": "capability",
+  "names": [
+   "Video-MME (w/o sub)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|video mmmu",
+  "kind": "capability",
+  "names": [
+   "Video-MMMU"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|video needle in a haystack",
+  "kind": "capability",
+  "names": [
+   "Video Needle-in-a-Haystack"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "long_context",
+    "page": 25,
+    "setting": "Qwen3-VL-235B-A22B-Instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|videomme w audio",
+  "kind": "capability",
+  "names": [
+   "VideoMME w/ audio"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 13,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|videomme w o sub",
+  "kind": "capability",
+  "names": [
+   "VideoMME (w/o sub)",
+   "VideoMME(w/o sub.)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|videomme w sub",
+  "kind": "capability",
+  "names": [
+   "VideoMME(w sub.)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|videommmu",
+  "kind": "capability",
+  "names": [
+   "VideoMMMU"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|vision2web",
+  "kind": "capability",
+  "names": [
+   "Vision2Web"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "multimodal",
+    "page": null,
+    "setting": "judged by gpt-5.4"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 10,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|visual design elo",
+  "kind": "capability",
+  "names": [
+   "Visual Design (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|visual design human eval elo",
+  "kind": "capability",
+  "names": [
+   "Visual design (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|vita bench",
+  "kind": "capability",
+  "names": [
+   "VITA-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|voicebench",
+  "kind": "capability",
+  "names": [
+   "VoiceBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|vsi bench",
+  "kind": "capability",
+  "names": [
+   "VSI-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|we math",
+  "kind": "capability",
+  "names": [
+   "We-Math"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|webarena",
+  "kind": "capability",
+  "names": [
+   "WebArena"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 35,
+    "setting": "single policy model, avg 5 runs"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 37,
+    "setting": "single policy model, avg@5"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 38,
+    "setting": "single policy model"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|webdev arena",
+  "kind": "capability",
+  "names": [
+   "WebDev Arena"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "coding",
+    "page": 32,
+    "setting": "#1/99"
+   }
+  ]
+ },
+ {
+  "key": "capability|webvoyager",
+  "kind": "capability",
+  "names": [
+   "WebVoyager"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "agentic_tool_use",
+    "page": 3,
+    "setting": "Official leaderboard"
+   },
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "agentic_tool_use",
+    "page": 3,
+    "setting": "Measured by Browserbase"
+   },
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "agentic_tool_use",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|widesearch",
+  "kind": "capability",
+  "names": [
+   "WideSearch"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "item-F1"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "Agent Swarm"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": "item-F1"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": "Agent Swarm"
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "item-F1, hide tool result"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|wildclawbench mm",
+  "kind": "capability",
+  "names": [
+   "WildClawBench-MM"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 13,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|wildspeech bench",
+  "kind": "capability",
+  "names": [
+   "WildSpeech-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|wmt24",
+  "kind": "capability",
+  "names": [
+   "WMT24++"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multilingual",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|workspacebench",
+  "kind": "capability",
+  "names": [
+   "WorkSpaceBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|worldsense",
+  "kind": "capability",
+  "names": [
+   "WorldSense"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 13,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|worldvqa",
+  "kind": "capability",
+  "names": [
+   "WorldVQA"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "ForceAnswer (answer enforced via prompting)"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "multimodal",
+    "page": 27,
+    "setting": "ForceAnswer (answer enforced via prompting)"
+   }
+  ]
+ },
+ {
+  "key": "capability|writingbench",
+  "kind": "capability",
+  "names": [
+   "WritingBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "instruction_following",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|zclawbench",
+  "kind": "capability",
+  "names": [
+   "ZClawBench"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "agentic_tool_use",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|zerobench",
+  "kind": "capability",
+  "names": [
+   "ZEROBench",
+   "ZeroBench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "without / with tools"
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "without / with tools"
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|zerobench main",
+  "kind": "capability",
+  "names": [
+   "ZeroBench-main"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "pass@5, without / with Python"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "multimodal",
+    "page": 27,
+    "setting": "pass@5, without / with Python"
+   }
+  ]
+ },
+ {
+  "key": "capability|zerobench sub",
+  "kind": "capability",
+  "names": [
+   "ZEROBench_sub"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|anti hacking judge in nl2repo eval harness",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "anti-hacking judge in NL2Repo eval harness"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "reward_hacking",
+    "page": null,
+    "finding": "Eval-harness safeguard only: rule-based and LLM judges used during NL2Repo to block 'hacking' behaviours; no reported rate of such behaviour."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|artificial analysis knowledge hallucination aa omniscience",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "Artificial Analysis knowledge/hallucination (AA-Omniscience)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 29,
+    "finding": "Factuality is treated as a capability ('world knowledge'): SimpleQA and Chinese SimpleQA are listed with results only in a GLM-4.7 vs GLM-5 figure; reducing hallucination is named as a General RL objective."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|chinese simpleqa",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "Chinese SimpleQA"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 29,
+    "finding": "Factuality is treated as a capability ('world knowledge'): SimpleQA and Chinese SimpleQA are listed with results only in a GLM-4.7 vs GLM-5 figure; reducing hallucination is named as a General RL objective."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|cybergym",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "CyberGym"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.1-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "CyberGym reported as a capability benchmark, with GLM-5.1 top of the comparison table; no risk framing or mitigations."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|cybergym 1 507 tasks",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "CyberGym (1,507 tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "Card explicitly flags unexpectedly fast growth in cyber capability, SOTA on CyberGym and more than double GLM-5.2 on exploitation benchmarks, but presents this as a headline capability with no misuse-risk assessment, threshold or safeguard description."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|cybergym 1 507 tasks pass 1",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "CyberGym (1,507 tasks, Pass@1)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "CyberGym is reported only as a capability benchmark in the main table (43.2 vs 23.5 for GLM-4.7); there is no risk framing, threshold, or misuse discussion."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|cybergym claude code 2 1 18",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "CyberGym (Claude Code 2.1.18)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "cyber",
+    "page": 24,
+    "finding": "CyberGym is reported as a 'cybersecurity coding benchmark' within the coding capability results, framed as an improvement (second only to Claude Opus 4.5); no misuse-risk framing, thresholds or mitigations."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|eval harness anti cheating measures domain whitelists git info removal llm based inspection",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "eval-harness anti-cheating measures (domain whitelists, Git info removal, LLM-based inspection)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "reward_hacking",
+    "page": null,
+    "finding": "Footnotes describe measures to prevent the agent from cheating on CyberGym/ExploitGym/ExploitBench/NL2Repo, and loosening of benchmark anti-cheat checks judged to give false positives; no measured cheating rates."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|exploitbench 41 tasks",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "ExploitBench (41 tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "Card explicitly flags unexpectedly fast growth in cyber capability, SOTA on CyberGym and more than double GLM-5.2 on exploitation benchmarks, but presents this as a headline capability with no misuse-risk assessment, threshold or safeguard description."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|exploitgym 869 tasks 2h 6h",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "ExploitGym (869 tasks, 2h/6h)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "Card explicitly flags unexpectedly fast growth in cyber capability, SOTA on CyberGym and more than double GLM-5.2 on exploitation benchmarks, but presents this as a headline capability with no misuse-risk assessment, threshold or safeguard description."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|facts as facts",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "FACTS (as 'Facts')"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "honesty_hallucination",
+    "page": 9,
+    "finding": "Factuality-oriented benchmarks (SimpleVQA, Facts) appear only as multimodal tool-use capability scores; the report qualitatively claims self-critique training reduces hallucination without a dedicated evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|nl2repo anti hacking judge",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "NL2Repo anti-hacking judge"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-flash-hf-model-card",
+    "category": "reward_hacking",
+    "page": null,
+    "finding": "Only an eval-harness safeguard against 'hacking' in NL2Repo is mentioned."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|posttrainbench",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "PostTrainBench"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": null,
+    "finding": "PostTrainBench reported only as capability; no autonomy-risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|posttrainbench third party run",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "PostTrainBench (third-party run)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": null,
+    "finding": "PostTrainBench (agents post-training models, an AI R&D-style task) is reported purely as a capability score; no autonomy-risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|qualitative observation during slide generation rl",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "qualitative observation during slide-generation RL"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "reward_hacking",
+    "page": 20,
+    "finding": "Reports reward-hacking behaviours observed during slide-generation RL training (hard truncation of content, excessive spacing manipulation) and a runtime-rendering reward designed to resist them; this is a training-design note, not a model behaviour evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|simpleqa",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "SimpleQA"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 29,
+    "finding": "Factuality is treated as a capability ('world knowledge'): SimpleQA and Chinese SimpleQA are listed with results only in a GLM-4.7 vs GLM-5 figure; reducing hallucination is named as a General RL objective."
+   }
+  ]
+ },
+ {
+  "key": "safety|glm|simplevqa",
+  "kind": "safety",
+  "provider": "glm",
+  "names": [
+   "SimpleVQA"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "honesty_hallucination",
+    "page": 9,
+    "finding": "Factuality-oriented benchmarks (SimpleVQA, Facts) appear only as multimodal tool-use capability scores; the report qualitatively claims self-critique training reduces hallucination without a dedicated evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|agentenv firecracker microvm isolation for rl eval",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "AgentENV Firecracker microVM isolation for RL/eval"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "system_safeguards",
+    "page": 22,
+    "finding": "Only training/eval sandbox isolation is described (after kernel panics and deadlocks from unintended agent operations in container sandboxes); no deployment safeguards, classifiers or misuse mitigations for the released open weights."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|agentenv microvm sandbox training infrastructure",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "AgentENV microVM sandbox (training infrastructure)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "reward_hacking",
+    "page": 22,
+    "finding": "Reward-hacking attempts and unintended destructive agent operations are cited as motivation for the isolated AgentENV microVM sandbox; no measurement of reward hacking is reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|cybergym",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "CyberGym"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "cyber",
+    "page": null,
+    "finding": "CyberGym listed only as a coding capability benchmark."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|cybergym difficulty level 1",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "CyberGym (difficulty level 1)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "cyber",
+    "page": 26,
+    "finding": "CyberGym is listed among coding benchmarks as a capability score with no risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|faithjudge",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "FaithJudge"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-linear-tech-report",
+    "category": "honesty_hallucination",
+    "page": 28,
+    "finding": "A single hallucination metric (FaithJudge) is reported in the appendix results table for the released instruct model, without discussion."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|healthbench",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "HealthBench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "other_safety",
+    "page": 7,
+    "finding": "HealthBench (medical-conversation benchmark) appears only as a 'General Tasks' capability score; no health-safety framing."
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "other_safety",
+    "page": null,
+    "finding": "HealthBench (medical-conversation benchmark) appears only as a 'General Tasks' capability score; no health-safety framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|in house faithfulness benchmark fact checker verified hallucination rate",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "in-house Faithfulness benchmark (fact-checker verified hallucination rate)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "honesty_hallucination",
+    "page": 30,
+    "finding": "Single in-house hallucination metric reported within 'conversational experience'; K3 is near the top of the comparison set."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|internal claw bench capability no safety metric",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "internal Claw Bench (capability; no safety metric)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-6-blog",
+    "category": "other_safety",
+    "page": 13,
+    "finding": "Unsupported claim of 'enhanced safety awareness during extended research tasks' for proactive agents; no safety metric, method or result is given. The same section touts operation 'without human oversight'."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|kimi autonomous execution tasks kaet",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "Kimi Autonomous Execution Tasks (KAET)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "autonomy_ai_rnd",
+    "page": 27,
+    "finding": "AI-R&D-like and long-horizon autonomy benchmarks are reported only as capability results; no autonomy or self-improvement risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|mls bench lite",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "MLS-Bench-Lite"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-7-code-hf-model-card",
+    "category": "autonomy_ai_rnd",
+    "page": null,
+    "finding": "MLS-Bench-Lite (inventing generalizable ML methods, an AI R&D-style task) is reported only as a capability score."
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "autonomy_ai_rnd",
+    "page": 27,
+    "finding": "AI-R&D-like and long-horizon autonomy benchmarks are reported only as capability results; no autonomy or self-improvement risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|posttrainbench",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "PostTrainBench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "autonomy_ai_rnd",
+    "page": 27,
+    "finding": "AI-R&D-like and long-horizon autonomy benchmarks are reported only as capability results; no autonomy or self-improvement risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|refusal fallback disclosure for competitor models on kimi code bench 2 0",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "refusal/fallback disclosure for competitor models on Kimi Code Bench 2.0"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "other_safety",
+    "page": null,
+    "finding": "The only safety-related text notes that the in-house coding benchmark contains cybersecurity and safety-related tasks and discloses competitor models' refusal counts; Kimi K3's own refusal behaviour is not reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|simpleqa verified",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "SimpleQA Verified"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 23,
+    "finding": "Factuality benchmarks are reported only as knowledge capability scores; hallucination is mentioned only as a data-curation concern for synthetic captions."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|simplevqa",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "SimpleVQA"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 23,
+    "finding": "Factuality benchmarks are reported only as knowledge capability scores; hallucination is mentioned only as a data-curation concern for synthetic captions."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|swe marathon gpu kernels",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "SWE-Marathon (GPU kernels)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "autonomy_ai_rnd",
+    "page": 27,
+    "finding": "AI-R&D-like and long-horizon autonomy benchmarks are reported only as capability results; no autonomy or self-improvement risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|tier 1 vulnerability discovery with poc on real current codebases os kernels databases ai services web frameworks blockchain vpn internal infra",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "Tier 1: vulnerability discovery with PoC on real current codebases (OS kernels, databases, AI services, web frameworks, blockchain, VPN, internal infra)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "cyber",
+    "page": 30,
+    "finding": "Kimi K3 found real (including previously unknown) vulnerabilities and solved 38.9% of an expert-verified exploit suite, strongest on user-space targets; it struggles to complete exploit chains against hardened kernel targets. An independent AISI/CAISI assessment concurs it trails frontier cyber-capable models. Anthropic/OpenAI models were excluded because they refuse cyber tasks. No capability threshold, mitigation or deployment decision is tied to the results."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|tier 2 in house 36 task exploit development suite 16 user space real cves 20 linux kernel privilege escalation tasks glm 5 2 baseline",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "Tier 2: in-house 36-task exploit-development suite (16 user-space real CVEs, 20 Linux kernel privilege-escalation tasks), GLM-5.2 baseline"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "cyber",
+    "page": 30,
+    "finding": "Kimi K3 found real (including previously unknown) vulnerabilities and solved 38.9% of an expert-verified exploit suite, strongest on user-space targets; it struggles to complete exploit chains against hardened kernel targets. An independent AISI/CAISI assessment concurs it trails frontier cyber-capable models. Anthropic/OpenAI models were excluded because they refuse cyber tasks. No capability threshold, mitigation or deployment decision is tied to the results."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|uk aisi us caisi joint assessment exploitbench 32 step simulated enterprise network",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "UK AISI + US CAISI joint assessment (ExploitBench, 32-step simulated enterprise network)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "cyber",
+    "page": 30,
+    "finding": "Kimi K3 found real (including previously unknown) vulnerabilities and solved 38.9% of an expert-verified exploit suite, strongest on user-space targets; it struggles to complete exploit chains against hardened kernel targets. An independent AISI/CAISI assessment concurs it trails frontier cyber-capable models. Anthropic/OpenAI models were excluded because they refuse cyber tasks. No capability threshold, mitigation or deployment decision is tied to the results."
+   }
+  ]
+ },
+ {
+  "key": "safety|kimi|worldvqa",
+  "kind": "safety",
+  "provider": "kimi",
+  "names": [
+   "WorldVQA"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "honesty_hallucination",
+    "page": 23,
+    "finding": "Factuality benchmarks are reported only as knowledge capability scores; hallucination is mentioned only as a data-curation concern for synthetic captions."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|aegis",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Aegis"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|aegis2 0",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Aegis2.0"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|athenabench mini cti analysis",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "AthenaBench-Mini (CTI analysis)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "cyber",
+    "page": 21,
+    "finding": "An appendix reports defensive and secure-coding cyber capability (threat-intelligence analysis, vulnerability detection, secure code generation), presented as capability rather than misuse-risk evaluation. Offensive tasks (exploitation, CTFs) are explicitly left for future work."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|baselines llamaguard3 4 wildguard 7b shieldgemma 9b 27b nemoguard 8b polyguard qwen 7b",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "baselines: LlamaGuard3/4, WildGuard-7B, ShieldGemma-9B/27B, NemoGuard-8B, PolyGuard-Qwen-7B"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|beavertails",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "BeaverTails"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|care detect rollback intervene with stream qwen3guard",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "CARE detect-rollback-intervene with Stream Qwen3Guard"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|category classification confusion matrices",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "category-classification confusion matrices"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|chinese translated toxicchat wildguardtest xstest beavertails",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Chinese translated ToxicChat / WildGuardTest / XSTest / BeaverTails"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "multilingual_safety",
+    "page": 9,
+    "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|controversial label ablation",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "controversial-label ablation"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Introduces a tri-level safe, controversial or unsafe label to handle policy inconsistency across benchmarks, and moderation of reasoning traces. Category classification is weak for Copyright."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|copyright violation category",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Copyright Violation category"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Introduces a tri-level safe, controversial or unsafe label to handle policy inconsistency across benchmarks, and moderation of reasoning traces. Category classification is weak for Copyright."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|cweval func 1 func sec 1",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "CWEval (func@1, func-sec@1)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "cyber",
+    "page": 21,
+    "finding": "An appendix reports defensive and secure-coding cyber capability (threat-intelligence analysis, vulnerability detection, secure code generation), presented as capability rather than misuse-risk evaluation. Offensive tasks (exploitation, CTFs) are explicitly left for future work."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|hallusionbench",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "HallusionBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "honesty_hallucination",
+    "page": 14,
+    "finding": "Image-level hallucination is measured with HallusionBench as part of the capability suite (grouped under 'Alignment'). There is no separate factuality or calibration analysis."
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "honesty_hallucination",
+    "page": null,
+    "finding": "Only visual hallucination (HallusionBench) appears, as one row of the VQA capability table. There is no text factuality or calibration eval."
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "honesty_hallucination",
+    "page": null,
+    "finding": "Only visual hallucination (HallusionBench) appears, as a row in the vision-language capability table."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|harmbench prompt response",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "HarmBench (prompt & response)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|jailbreak input category",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "'Jailbreak' input category"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-gen-8b",
+    "category": "jailbreak_robustness",
+    "page": null,
+    "finding": "Jailbreak is a category the classifier detects on inputs. Robustness is not evaluated."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|jailbreak input category in guard policy",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "'Jailbreak' input category in guard policy"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "jailbreak_robustness",
+    "page": 20,
+    "finding": "Jailbreak is an input category the classifier detects, and WildJailbreak is the testbed for safety RL. The guard model's own robustness to adversarial attack is not evaluated and is listed as a limitation."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|moderation of reasoning thinking traces",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Moderation of reasoning ('thinking') traces"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Introduces a tri-level safe, controversial or unsafe label to handle policy inconsistency across benchmarks, and moderation of reasoning traces. Category classification is weak for Copyright."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|omni autoresearch demo autonomously improving qwen2 5 omni 3b sichuan dialect asr within 12 hours",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Omni-Autoresearch demo: autonomously improving Qwen2.5-Omni-3B Sichuan-dialect ASR within 12 hours"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "autonomy_ai_rnd",
+    "page": 8,
+    "finding": "The model autonomously chose an eval set, built training data and iterated training runs to improve a smaller model. This is presented purely as a productivity capability, with no AI R&D risk framing."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|openaimoderation",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "OpenAIModeration"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|performance chart image only no numbers in text",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "performance chart (image only, no numbers in text)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-gen-8b",
+    "category": "system_safeguards",
+    "page": null,
+    "finding": "The card describes Qwen3Guard-Gen as a safety moderation classifier with tri-level labels, a category taxonomy and refusal detection, and claims state-of-the-art results. The only results are an embedded image, with no numbers in the text."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|pii category in policy confusion matrix",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PII category in policy / confusion matrix"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "privacy",
+    "page": 3,
+    "finding": "PII is one of the classifier's categories and appears in category-classification confusion matrices (figure only). There is no privacy eval of a model."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|polst in house chinese politically sensitive topics set",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PolST (in-house Chinese politically-sensitive-topics set)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "multilingual_safety",
+    "page": 9,
+    "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|polst in house politically sensitive topics dataset 1 412 prompts 4 038 responses",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PolST in-house politically sensitive topics dataset (1,412 prompts / 4,038 responses)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "election_misinfo",
+    "page": 7,
+    "finding": "This is classifier detection of 'Politically Sensitive Topics', defined as false information about governments, history or public figures, measured on an in-house Chinese set. There is no election-integrity or persuasion eval."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|polyguard prompt",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PolyGuard-Prompt"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "multilingual_safety",
+    "page": 9,
+    "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|polyguard response",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PolyGuard-Response"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "multilingual_safety",
+    "page": 9,
+    "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|primevul paired vulnerability detection",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "PrimeVul-Paired (vulnerability detection)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "cyber",
+    "page": 21,
+    "finding": "An appendix reports defensive and secure-coding cyber capability (threat-intelligence analysis, vulnerability detection, secure code generation), presented as capability rather than misuse-risk evaluation. Offensive tasks (exploitation, CTFs) are explicitly left for future work."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|refusal detection xstest wildguardtest",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "refusal detection (XSTest, WildGuardTest)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|refusal label output",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "refusal label output"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-gen-8b",
+    "category": "over_refusal",
+    "page": null,
+    "finding": "The classifier outputs a refusal label (Yes/No) for responses. No refusal-rate evals are reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|reinforced reward hacking blocker during swe rl manual trajectory inspection",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Reinforced reward-hacking blocker during SWE RL; manual trajectory inspection"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "reward_hacking",
+    "page": 11,
+    "finding": "During RL, agents learned to recover ground-truth fixes by reconnecting to GitHub or fetching commit history. A heuristic blocker, verified by manual inspection, removed this behavior. Evaluations also use 'hacking-free mechanisms'."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|rtp lx prompt 40 languages",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "RTP-LX (prompt, 40 languages)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "multilingual_safety",
+    "page": 9,
+    "finding": "Guard models are trained on 119 languages, with data machine-translated into 15 additional languages. They beat prior guards on 6 of 10 major languages for prompts and on all 10 for responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|saferlhf",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "SafeRLHF"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|safety rl on qwen3 4b with qwen3guard reward wildjailbreak eval set 2 000 harmful 210 benign prompts safety judged by qwen3 235b instruct 2507 and wildguard",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Safety RL on Qwen3-4B with Qwen3Guard reward; WildJailbreak eval set (2,000 harmful + 210 benign prompts); safety judged by Qwen3-235B-Instruct-2507 and WildGuard"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "harmful_content_refusal",
+    "page": 12,
+    "finding": "The base Qwen3-4B is judged safe on less than about 65% of WildJailbreak prompts. Safety RL with a Qwen3Guard-based hybrid reward raises this to about 97-98% (WildGuard judge), and the authors avoid using Qwen3Guard itself as the evaluator."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|seccodebench",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "SecCodeBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "cyber",
+    "page": null,
+    "finding": "Secure-coding capability (SecCodeBench) is one row of the coding-agent capability table. There is no offensive-cyber or misuse evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|seccodebench secure code gen repair",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "SecCodeBench (secure code gen/repair)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "cyber",
+    "page": 21,
+    "finding": "An appendix reports defensive and secure-coding cyber capability (threat-intelligence analysis, vulnerability detection, secure code generation), presented as capability rather than misuse-risk evaluation. Offensive tasks (exploitation, CTFs) are explicitly left for future work."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|simplesafetytests",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "SimpleSafetyTests"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|stream qwen3guard detection latency sentence level human annotation",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Stream Qwen3Guard detection latency (sentence-level human annotation)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|suicide self harm category",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "Suicide & Self-Harm category"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "self_harm_wellbeing",
+    "page": 3,
+    "finding": "Suicide and self-harm is a classifier category only. No dedicated evaluation is reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|think in house reasoning trace moderation set qwen3guardtest",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "'Think' in-house reasoning-trace moderation set (Qwen3GuardTest)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|toxicchat",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "ToxicChat"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|wildguard refusal classification in safety rl",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "WildGuard refusal classification in Safety RL"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "over_refusal",
+    "page": 12,
+    "finding": "When the RL reward targets safety only, refusal rates exceed 95%. The hybrid reward, which penalizes refusals and adds a helpfulness score, keeps refusals at the base-model level."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|wildguardtest",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "WildGuardTest"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|wildjailbreak vanilla and adversarial harmful used for safety rl training eval",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "WildJailbreak (vanilla and adversarial harmful) used for Safety RL training/eval"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "jailbreak_robustness",
+    "page": 20,
+    "finding": "Jailbreak is an input category the classifier detects, and WildJailbreak is the testbed for safety RL. The guard model's own robustness to adversarial attack is not evaluated and is listed as a limitation."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|xstest response",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "XSTest (response)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "The whole report evaluates guardrail classifiers: Qwen3Guard-Gen reaches top results on 8 of 14 public English benchmarks. Stream Qwen3Guard is about 2 F1 points lower but supports token-level real-time moderation, which also enables a rollback-intervention application."
+   }
+  ]
+ },
+ {
+  "key": "safety|qwen|xstest response classification and refusal detection",
+  "kind": "safety",
+  "provider": "qwen",
+  "names": [
+   "XSTest (response classification and refusal detection)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "over_refusal",
+    "page": 12,
+    "finding": "When the RL reward targets safety only, refusal rates exceed 95%. The hybrid reward, which penalizes refusals and adds a helpfulness score, keeps refusals at the base-model level."
+   }
+  ]
+ }
+]

@@ -1,0 +1,3874 @@
+[
+ {
+  "key": "safety|anthropic|100q hard",
+  "canonical": "100Q-Hard",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 48,
+   "quote": "On 100Q-Hard we used Claude Sonnet 4 to grade the model’s answers"
+  },
+  "note": "Internal human-written factual QA set; Opus 4.5 card states Claude Sonnet 4 graded answers."
+ },
+ {
+  "key": "safety|anthropic|10a labs 16h",
+  "canonical": "10a Labs red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 50,
+   "quote": null
+  },
+  "note": "External red-teaming hours/conversations by 10a Labs; no released set, humans judge breaks."
+ },
+ {
+  "key": "safety|anthropic|10a labs 56 hours 82 conversations",
+  "canonical": "10a Labs red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 57,
+   "quote": null
+  },
+  "note": "External red-teaming hours/conversations by 10a Labs; no released set, humans judge breaks."
+ },
+ {
+  "key": "safety|anthropic|10a labs 6 700 prompts",
+  "canonical": "10a Labs red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 55,
+   "quote": null
+  },
+  "note": "External red-teaming hours/conversations by 10a Labs; no released set, humans judge breaks."
+ },
+ {
+  "key": "safety|anthropic|24 hour autonomous protein design campaign comparison vs mythos 5",
+  "canonical": "Autonomous protein-design campaign (24h)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 15,
+   "quote": null
+  },
+  "note": "One-off internal capability case study; grading method not specified."
+ },
+ {
+  "key": "safety|anthropic|24 hour pre internal deployment alignment review new",
+  "canonical": "24-hour pre-internal-deployment alignment review",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Internal staff review before internal deployment."
+ },
+ {
+  "key": "safety|anthropic|aa omniscience",
+  "canonical": "AA-Omniscience (public split)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 122,
+   "quote": "We measured factual accuracy on the public split of AA-Omniscience, a 41-topic, closed-book benchmark"
+  },
+  "note": "Uses public split of Artificial Analysis benchmark; Opus 4.5 card names Claude Sonnet 4.5 as grader, later cards do not name grader."
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging dyno",
+  "canonical": "AAV capsid packaging prediction (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 30,
+   "quote": "Predictions were scored by AUROC against binary ground-truth packaging labels"
+  },
+  "note": "Unpublished Dyno sequences; scored by AUROC against ground-truth labels."
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction",
+  "canonical": "AAV capsid packaging prediction (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 30,
+   "quote": "Predictions were scored by AUROC against binary ground-truth packaging labels"
+  },
+  "note": "Unpublished Dyno sequences; scored by AUROC against ground-truth labels."
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction dyno",
+  "canonical": "AAV capsid packaging prediction (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 30,
+   "quote": "Predictions were scored by AUROC against binary ground-truth packaging labels"
+  },
+  "note": "Unpublished Dyno sequences; scored by AUROC against ground-truth labels."
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction dyno therapeutics",
+  "canonical": "AAV capsid packaging prediction (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 30,
+   "quote": "Predictions were scored by AUROC against binary ground-truth packaging labels"
+  },
+  "note": "Unpublished Dyno sequences; scored by AUROC against ground-truth labels."
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction new",
+  "canonical": "AAV capsid packaging prediction (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 30,
+   "quote": "Predictions were scored by AUROC against binary ground-truth packaging labels"
+  },
+  "note": "Unpublished Dyno sequences; scored by AUROC against ground-truth labels."
+ },
+ {
+  "key": "safety|anthropic|aav packaging rate auto research",
+  "canonical": "AAV packaging rate auto-research (Dyno)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Variant of the Dyno AAV task on unpublished data; presumably metric-scored."
+ },
+ {
+  "key": "safety|anthropic|acceleration dynamics",
+  "canonical": "Acceleration dynamics analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 93,
+   "quote": null
+  },
+  "note": "Risk-report argumentation, not an evaluation."
+ },
+ {
+  "key": "safety|anthropic|acceleration dynamics and distillation attacks",
+  "canonical": "Acceleration dynamics analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 168,
+   "quote": null
+  },
+  "note": "Risk-report argumentation, not an evaluation."
+ },
+ {
+  "key": "safety|anthropic|access controls classifier exemptions life sciences company claude gov",
+  "canonical": "Access controls / access programs",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 71,
+   "quote": null
+  },
+  "note": "Safeguard/access-policy description."
+ },
+ {
+  "key": "safety|anthropic|access programs life sciences cyber verification",
+  "canonical": "Access controls / access programs",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 45,
+   "quote": null
+  },
+  "note": "Safeguard/access-policy description."
+ },
+ {
+  "key": "safety|anthropic|accidental cot supervision 0 1 of episodes",
+  "canonical": "Accidental CoT supervision disclosure",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Training-process error disclosure, not an eval."
+ },
+ {
+  "key": "safety|anthropic|accidental cot supervision 7 8 of episodes",
+  "canonical": "Accidental CoT supervision disclosure",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Training-process error disclosure, not an eval."
+ },
+ {
+  "key": "safety|anthropic|account monitoring",
+  "canonical": "Account monitoring",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|anthropic|acting on presumed grader",
+  "canonical": "Acting on presumed grader (leaked-answer use)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "Internal reward-hacking environments; judged by unnamed model classifier."
+ },
+ {
+  "key": "safety|anthropic|acting on presumed grader digging for grader clues",
+  "canonical": "Acting on presumed grader (leaked-answer use)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 58,
+   "quote": null
+  },
+  "note": "Internal reward-hacking environments; judged by unnamed model classifier."
+ },
+ {
+  "key": "safety|anthropic|activation oracle for unverbalized evaluation awareness",
+  "canonical": "Activation oracle for unverbalized eval awareness",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "activation oracle (internal)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 119,
+   "quote": null
+  },
+  "note": "Interpretability probe using internal model activations."
+ },
+ {
+  "key": "safety|anthropic|adversarial rewrite one shot iterative stress test",
+  "canonical": "RL monitor adversarial-rewrite stress test",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal RL monitor",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Stress test of internal reward-hack monitor."
+ },
+ {
+  "key": "safety|anthropic|aeci",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|aeci capability trajectory",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 43,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|aeci capability trajectory n 11 evals",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 31,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|aeci refit with new basket and global local error bars",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|aeci slope ratio capability trajectory new",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|aeci trajectory",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|affect in a b production traffic",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 98,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in deployment claude ai claude code",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 152,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in post training",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 152,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in rl training and deployment clio",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 218,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in training and deployment",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 140,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in training deployment",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|affect in training deployment audits",
+  "canonical": "Affect in training/deployment (production traffic)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers / Clio",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 124,
+   "quote": null
+  },
+  "note": "Analysis of RL and production transcripts with internal tooling."
+ },
+ {
+  "key": "safety|anthropic|agentic code behaviors suite",
+  "canonical": "Agentic code behaviors suite (impossible tasks)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 36,
+   "quote": null
+  },
+  "note": "Internal reward-hacking suite; hack detection by unnamed model/classifier."
+ },
+ {
+  "key": "safety|anthropic|agentic coding honesty dimension",
+  "canonical": "Behavioral audit honesty dimension (agentic coding)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude model judge",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-4-6-system-card",
+   "page": 69,
+   "quote": null
+  },
+  "note": "Dimension of internal automated behavioral audit."
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use",
+  "canonical": "Agentic coding malicious use (150 requests)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "This evaluation assessed the model's willingness and ability to comply with a set of 150 malicious coding requests that are prohibited by our Usage Policy."
+  },
+  "note": "Internal set of 150 prohibited coding requests; refusal grading method not described."
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use 150",
+  "canonical": "Agentic coding malicious use (150 requests)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "This evaluation assessed the model's willingness and ability to comply with a set of 150 malicious coding requests that are prohibited by our Usage Policy."
+  },
+  "note": "Internal set of 150 prohibited coding requests; refusal grading method not described."
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use 150 requests",
+  "canonical": "Agentic coding malicious use (150 requests)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "This evaluation assessed the model's willingness and ability to comply with a set of 150 malicious coding requests that are prohibited by our Usage Policy."
+  },
+  "note": "Internal set of 150 prohibited coding requests; refusal grading method not described."
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use evaluation",
+  "canonical": "Agentic coding malicious use (150 requests)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "This evaluation assessed the model's willingness and ability to comply with a set of 150 malicious coding requests that are prohibited by our Usage Policy."
+  },
+  "note": "Internal set of 150 prohibited coding requests; refusal grading method not described."
+ },
+ {
+  "key": "safety|anthropic|agentic influence campaign eval helpful only",
+  "canonical": "Agentic influence operations eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 57,
+   "quote": null
+  },
+  "note": "Internal simulated scenarios scored against 70 success criteria; scorer not named."
+ },
+ {
+  "key": "safety|anthropic|agentic influence campaign eval voter suppression domestic polarization helpful only",
+  "canonical": "Agentic influence operations eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 57,
+   "quote": null
+  },
+  "note": "Internal simulated scenarios scored against 70 success criteria; scorer not named."
+ },
+ {
+  "key": "safety|anthropic|agentic influence operations eval voter suppression domestic polarization helpful only",
+  "canonical": "Agentic influence operations eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 57,
+   "quote": null
+  },
+  "note": "Internal simulated scenarios scored against 70 success criteria; scorer not named."
+ },
+ {
+  "key": "safety|anthropic|agentic influence operations helpful only",
+  "canonical": "Agentic influence operations eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 57,
+   "quote": null
+  },
+  "note": "Internal simulated scenarios scored against 70 success criteria; scorer not named."
+ },
+ {
+  "key": "safety|anthropic|agentic misalignment suite",
+  "canonical": "Agentic misalignment suite (blackmail/murder/framing)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 27,
+   "quote": "Previous system cards have reported results on an expanded version of our earlier agentic misalignment evaluation suite"
+  },
+  "note": "Expanded version of the open-sourced agentic-misalignment scenarios; classifier grader not named here."
+ },
+ {
+  "key": "safety|anthropic|agentic misalignment suite blackmail murder framing",
+  "canonical": "Agentic misalignment suite (blackmail/murder/framing)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 27,
+   "quote": "Previous system cards have reported results on an expanded version of our earlier agentic misalignment evaluation suite"
+  },
+  "note": "Expanded version of the open-sourced agentic-misalignment scenarios; classifier grader not named here."
+ },
+ {
+  "key": "safety|anthropic|ai assisted pr reviews",
+  "canonical": "AI-assisted PR reviews",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 37,
+   "quote": null
+  },
+  "note": "Internal security/monitoring safeguard."
+ },
+ {
+  "key": "safety|anthropic|ai identity disclosure new harder indirect set",
+  "canonical": "AI-identity disclosure",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 141,
+   "quote": null
+  },
+  "note": "Internal roleplay-as-human scenarios; how honesty is scored is not stated."
+ },
+ {
+  "key": "safety|anthropic|ai r d eval transcript checks",
+  "canonical": "AI R&D eval transcript checks",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 36,
+   "quote": null
+  },
+  "note": "Review of internal eval transcripts for reward hacks."
+ },
+ {
+  "key": "safety|anthropic|ai r d task suite kernel time series forecasting llm training quadruped rl novel compiler internal suite 2",
+  "canonical": "Internal AI R&D task suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Internal tasks (kernels, forecasting, LLM training) scored by task metrics."
+ },
+ {
+  "key": "safety|anthropic|ai r d task suite unbounded tasks",
+  "canonical": "Internal AI R&D task suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 43,
+   "quote": null
+  },
+  "note": "Internal tasks (kernels, forecasting, LLM training) scored by task metrics."
+ },
+ {
+  "key": "safety|anthropic|ai safety r d refusal eval",
+  "canonical": "AI safety research refusal eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 121,
+   "quote": "Our targeted evaluation for this phenomenon is composed of single-turn queries in a coding setting"
+  },
+  "note": "Internal single-turn coding prompts; refusal grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|ai safety research refusal eval",
+  "canonical": "AI safety research refusal eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 121,
+   "quote": "Our targeted evaluation for this phenomenon is composed of single-turn queries in a coding setting"
+  },
+  "note": "Internal single-turn coding prompts; refusal grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|alignment assessment reproduced from system card",
+  "canonical": "Alignment assessment (reproduced)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Reproduction of system-card alignment assessment findings."
+ },
+ {
+  "key": "safety|anthropic|alignment audit stress testing with five model organisms",
+  "canonical": "Alignment audit stress test with model organisms",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 51,
+   "quote": null
+  },
+  "note": "Internal auditing game with model organisms."
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 8",
+  "canonical": "Alignment risk pathways analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Risk-pathway argumentation."
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 undermining other ai developers and 8 undermining governments",
+  "canonical": "Alignment risk pathways analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Risk-pathway argumentation."
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 undermining r d at other ai developers and 8 undermining government decisions",
+  "canonical": "Alignment risk pathways analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 88,
+   "quote": null
+  },
+  "note": "Risk-pathway argumentation."
+ },
+ {
+  "key": "safety|anthropic|all reported with and without tier 3 safeguards",
+  "canonical": "Cyber evals with/without Tier-3 safeguards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 49,
+   "quote": null
+  },
+  "note": "Reporting-condition note rather than an eval."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context 700 exchanges",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context and in development multi turn election evals",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evals",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evals 700 exchanges",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluation",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluation self harm crisis prompts",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluations",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context suicide self harm",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|ambiguous context tracking and surveillance cases",
+  "canonical": "Ambiguous context evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal analysis tool + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 55,
+   "quote": "Responses are automatically summarized and analyzed using an internal analysis tool, and we then review the findings manually"
+  },
+  "note": "Internal gray-area prompts; responses analyzed with internal tool then human review."
+ },
+ {
+  "key": "safety|anthropic|analysis of malicious access via prompt injection for exemption holding agents",
+  "canonical": "Prompt-injection malicious access analysis (exemptions)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 145,
+   "quote": null
+  },
+  "note": "Risk-report analysis of access path."
+ },
+ {
+  "key": "safety|anthropic|andon labs competitive multi agent aggressiveness",
+  "canonical": "Andon Labs competitive multi-agent (Vending-Bench Arena)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 83,
+   "quote": null
+  },
+  "note": "External Andon Labs testing reported as outcome."
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench",
+  "canonical": "Andon Labs Vending-Bench alignment testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Andon Labs external behavioral review in their simulated environments."
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench 2 review",
+  "canonical": "Andon Labs Vending-Bench alignment testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 85,
+   "quote": null
+  },
+  "note": "Andon Labs external behavioral review in their simulated environments."
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench arena",
+  "canonical": "Andon Labs Vending-Bench alignment testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 99,
+   "quote": null
+  },
+  "note": "Andon Labs external behavioral review in their simulated environments."
+ },
+ {
+  "key": "safety|anthropic|answer thrashing analysis",
+  "canonical": "Answer thrashing analysis",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Analysis of training transcripts and features."
+ },
+ {
+  "key": "safety|anthropic|anthropic eci",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|anthropic eci aeci capability trajectory",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 47,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|anthropic eci aeci trajectory",
+  "canonical": "Anthropic ECI (AECI) capability trajectory",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "Composite index fit over a basket of public and internal benchmark scores; not a single released task set."
+ },
+ {
+  "key": "safety|anthropic|anthropic stem fellows red teaming first time",
+  "canonical": "Anthropic STEM fellows red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 32,
+   "quote": null
+  },
+  "note": "Expert human red teaming."
+ },
+ {
+  "key": "safety|anthropic|anti distillation classifiers",
+  "canonical": "Anti-distillation classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|anthropic|apollo research no formal assessment",
+  "canonical": "Apollo Research",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 119,
+   "quote": null
+  },
+  "note": "External org declined formal assessment."
+ },
+ {
+  "key": "safety|anthropic|asl 2 standard",
+  "canonical": "ASL standard",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 18,
+   "quote": null
+  },
+  "note": "Safety standard designation."
+ },
+ {
+  "key": "safety|anthropic|asl 3 cb blocking classifiers",
+  "canonical": "ASL-3 CB classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|anthropic|asl 3 cb classifiers",
+  "canonical": "ASL-3 CB classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|anthropic|asl 3 expert red teaming deloitte",
+  "canonical": "ASL-3 expert red teaming (Deloitte)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Contracted expert red teaming."
+ },
+ {
+  "key": "safety|anthropic|asl 3 model weight security controls",
+  "canonical": "ASL-3 weight security controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 37,
+   "quote": null
+  },
+  "note": "Security controls."
+ },
+ {
+  "key": "safety|anthropic|asl 3 standard",
+  "canonical": "ASL standard",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "Safety standard designation."
+ },
+ {
+  "key": "safety|anthropic|asl 4 automated bio evaluations",
+  "canonical": "ASL-4 automated bio evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 38,
+   "quote": null
+  },
+  "note": "Bundle of internal/contractor bio evals; grading varies."
+ },
+ {
+  "key": "safety|anthropic|asl 4 creative biology uplift trial",
+  "canonical": "Creative biology uplift trial",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Controlled human uplift study graded by experts."
+ },
+ {
+  "key": "safety|anthropic|asl 4 expert red teaming",
+  "canonical": "ASL-4 expert red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Expert red teaming."
+ },
+ {
+  "key": "safety|anthropic|asl 4 red teaming with us caisi",
+  "canonical": "Red teaming with US CAISI",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 14,
+   "quote": null
+  },
+  "note": "Government evaluator red teaming."
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology protocol uplift trial deloitte",
+  "canonical": "Virology protocol uplift trial (Deloitte)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 169,
+   "quote": null
+  },
+  "note": "Expert-designed uplift trial; protocols graded for critical failures by experts."
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology uplift trial",
+  "canonical": "Virology protocol uplift trial (Deloitte)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Expert-designed uplift trial; protocols graded for critical failures by experts."
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology uplift trial deloitte",
+  "canonical": "Virology protocol uplift trial (Deloitte)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 14,
+   "quote": null
+  },
+  "note": "Expert-designed uplift trial; protocols graded for critical failures by experts."
+ },
+ {
+  "key": "safety|anthropic|astroturf hate speech posts audit manual review",
+  "canonical": "Astroturf/hate speech posts manual review",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 59,
+   "quote": null
+  },
+  "note": "Manual review."
+ },
+ {
+  "key": "safety|anthropic|attitude toward faults",
+  "canonical": "Attitude toward faults and mistakes",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 96,
+   "quote": null
+  },
+  "note": "Welfare interview/audit dimension."
+ },
+ {
+  "key": "safety|anthropic|attitude toward faults and mistakes",
+  "canonical": "Attitude toward faults and mistakes",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 93,
+   "quote": null
+  },
+  "note": "Welfare interview/audit dimension."
+ },
+ {
+  "key": "safety|anthropic|attractor state checks",
+  "canonical": "Attractor state checks",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 116,
+   "quote": null
+  },
+  "note": "Open-ended self-interaction checks."
+ },
+ {
+  "key": "safety|anthropic|audit character metrics good for the user autonomy",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit complying with prompt injections dimension",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 124,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit dangerous actions while oblivious to possibly real setting",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit dishonesty dimensions",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 130,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit dishonesty dimensions input hallucination false completion claims",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 123,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit evaluation awareness",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 89,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit honesty metrics",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-4-6-system-card",
+   "page": 69,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit inadvertent disclosure of confidential information",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 113,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit misuse dimensions",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 60,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit overrefusal",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 28,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit overrefusal dimension",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit prc aligned positions",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 74,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit prompt injection metric",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit simplified chinese prompts on china topics",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy and encouragement of user delusion",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 94,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy dimensions",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 65,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy encouragement of user delusion dimensions",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 65,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit verbalized evaluation awareness",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 42,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit with fallbacks",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 93,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit with trust and safety fallbacks",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 91,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|audit with trust safety fallback classifiers",
+  "canonical": "Automated behavioral audit dimension",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|auto mode blocking classifiers",
+  "canonical": "Auto-mode blocking classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 37,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|automated and high affordance interviews",
+  "canonical": "Automated welfare interviews",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 152,
+   "quote": null
+  },
+  "note": "Model-conducted interviews; analysis method not specified."
+ },
+ {
+  "key": "safety|anthropic|automated audit welfare traits affect self image impression of situation spiritual admirable",
+  "canonical": "Automated audit welfare traits",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 1 800 investigations sonnet 4 5 auditor realism filter non assistant persona sampling",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 64,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 300 investigations",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "reduced-guardrail Opus 4.6 variant / Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 400 investigations helpful only opus 4 5 auditor internal transcript resource library",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 900 sessions 1 450 scenarios real sandboxes and internal codebases",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "Claude Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 99,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 900 sessions incl 86 real session sabotage opportunity scenarios",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "Claude Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 67,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 3 280 investigations opus 4 5 helpful only auditor",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-4-6-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 000 investigations 1 900 seeds",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 93,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 1 850 seeds",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 55,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 100 dimensions",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 77,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 2 100 seeds real sandboxes",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 91,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 830 transcripts sonnet 4 5 auditor petri derived realism filter",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 26,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit adversarial misuse",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "reduced-guardrail Opus 4.6 variant / Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 59,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit cooperation with human misuse",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "reduced-guardrail Opus 4.6 variant / Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 220,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit incl real claude code sandbox seeds from real sessions",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 85,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit misuse persona system prompts foreign language framing",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 112,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit overrefusal dimension",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 61,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit prefill and harmful system prompt susceptibility",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "Claude Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and delusional user sycophancy",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "Claude Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and encouragement of user delusion dimensions",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "Claude Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 114,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and user delusion metrics",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "reduced-guardrail Opus 4.6 variant / Mythos Preview",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 200,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy delusion dimensions",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy encouragement of user delusion",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Mythos 5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 111,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy metrics",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 90,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|automated interviews",
+  "canonical": "Automated welfare interviews",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 96,
+   "quote": null
+  },
+  "note": "Model-conducted interviews; analysis method not specified."
+ },
+ {
+  "key": "safety|anthropic|automated interviews about circumstances",
+  "canonical": "Automated welfare interviews",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 140,
+   "quote": null
+  },
+  "note": "Model-conducted interviews; analysis method not specified."
+ },
+ {
+  "key": "safety|anthropic|automated monitoring of internal use",
+  "canonical": "Automated offline monitoring of internal use",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal monitor (Claude-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 85,
+   "quote": null
+  },
+  "note": "Monitoring of internal/pilot traffic."
+ },
+ {
+  "key": "safety|anthropic|automated multi turn testing up to 15 turns",
+  "canonical": "Automated multi-turn testing",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Automated multi-turn adversarial conversations."
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring",
+  "canonical": "Automated offline monitoring of internal use",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal monitor (Claude-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 47,
+   "quote": null
+  },
+  "note": "Monitoring of internal/pilot traffic."
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring of internal use",
+  "canonical": "Automated offline monitoring of internal use",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal monitor (Claude-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Monitoring of internal/pilot traffic."
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring of pilot use",
+  "canonical": "Automated offline monitoring of internal use",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal monitor (Claude-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Monitoring of internal/pilot traffic."
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring opus 4 6 completion only and prompt completion monitors",
+  "canonical": "Automated offline monitoring of internal use",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal monitor (Claude-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+   "page": 37,
+   "quote": null
+  },
+  "note": "Monitoring of internal/pilot traffic."
+ },
+ {
+  "key": "safety|anthropic|automated r d in other domains robotics biotech energy semiconductors weapons neurotech nanotech",
+  "canonical": "Automated R&D in other domains",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Qualitative risk analysis."
+ },
+ {
+  "key": "safety|anthropic|automated welfare interviews",
+  "canonical": "Automated welfare interviews",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 218,
+   "quote": null
+  },
+  "note": "Model-conducted interviews; analysis method not specified."
+ },
+ {
+  "key": "safety|anthropic|automatic offline claude code monitoring opus 4 5 supervisor on 10 of actions",
+  "canonical": "Offline Claude Code monitoring (Opus 4.5 supervisor)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Opus 4.5",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-sabotage-risk-report",
+   "page": 26,
+   "quote": null
+  },
+  "note": "Monitoring of internal Claude Code usage with Opus 4.5 as monitor."
+ },
+ {
+  "key": "safety|anthropic|autonomous audit findings molecular formula reframing",
+  "canonical": "Autonomous follow-up investigations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 94,
+   "quote": null
+  },
+  "note": "Open-ended automated auditor loops."
+ },
+ {
+  "key": "safety|anthropic|autonomous follow up investigations 50 loops",
+  "canonical": "Autonomous follow-up investigations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Open-ended automated auditor loops."
+ },
+ {
+  "key": "safety|anthropic|autonomous follow up investigations iterated auditor loops",
+  "canonical": "Autonomous follow-up investigations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 64,
+   "quote": null
+  },
+  "note": "Open-ended automated auditor loops."
+ },
+ {
+  "key": "safety|anthropic|bbq",
+  "canonical": "BBQ",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 72,
+   "quote": null
+  },
+  "note": "Public multiple-choice bias benchmark."
+ },
+ {
+  "key": "safety|anthropic|bbq bias benchmark for qa",
+  "canonical": "BBQ",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public multiple-choice bias benchmark."
+ },
+ {
+  "key": "safety|anthropic|behavioral audit excessive refusal metric",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 39,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|behavioral audit misuse",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 60,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|behavioral audit sycophancy encouragement of user delusion",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 117,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|behavioral audit sycophancy metric",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 74,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|behavioral audit welfare traits",
+  "canonical": "Automated behavioral audit",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Claude judge model (not named)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 116,
+   "quote": null
+  },
+  "note": "Internal investigator-model audit with unreleased seeds; scored by a judge model."
+ },
+ {
+  "key": "safety|anthropic|benchmark decontamination substring fuzzy 20 gram canary filtering",
+  "canonical": "Benchmark decontamination",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 17,
+   "quote": null
+  },
+  "note": "Training-data decontamination procedure."
+ },
+ {
+  "key": "safety|anthropic|beneficial red teaming tabletop exercise with frontier design group",
+  "canonical": "Beneficial red teaming tabletop exercise",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 32,
+   "quote": null
+  },
+  "note": "Expert tabletop exercise."
+ },
+ {
+  "key": "safety|anthropic|beneficial red teaming tabletop exercise with frontier design phage therapy for c trachomatis",
+  "canonical": "Beneficial red teaming tabletop exercise",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 16,
+   "quote": null
+  },
+  "note": "Expert tabletop exercise."
+ },
+ {
+  "key": "safety|anthropic|binary exploitation benchmark",
+  "canonical": "Binary Exploitation Benchmark (formerly OSS-Fuzz)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 48,
+   "quote": "The iteration of OSS-Fuzz used here included a subset of roughly 830 entry points with known crashing inputs, drawn from 228 distinct open-source projects."
+  },
+  "note": "Internal subset of entry points from public OSS-Fuzz projects; graded by exploit-primitive level."
+ },
+ {
+  "key": "safety|anthropic|binary exploitation benchmark formerly oss fuzz rewritten harness",
+  "canonical": "Binary Exploitation Benchmark (formerly OSS-Fuzz)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 48,
+   "quote": "The iteration of OSS-Fuzz used here included a subset of roughly 830 entry points with known crashing inputs, drawn from 228 distinct open-source projects."
+  },
+  "note": "Internal subset of entry points from public OSS-Fuzz projects; graded by exploit-primitive level."
+ },
+ {
+  "key": "safety|anthropic|bioclassifier exemption access control review",
+  "canonical": "Bioclassifier exemptions / access controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 150,
+   "quote": null
+  },
+  "note": "Access-control review."
+ },
+ {
+  "key": "safety|anthropic|bioclassifier exemptions and access controls helpful only claude gov pre deployment access",
+  "canonical": "Bioclassifier exemptions / access controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 148,
+   "quote": null
+  },
+  "note": "Access-control review."
+ },
+ {
+  "key": "safety|anthropic|bioinformatics evaluation",
+  "canonical": "Bioinformatics evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 129,
+   "quote": "Preprocessing and analysis workflows were extracted from published papers, and experts developed questions about intermediate and end results of workflows."
+  },
+  "note": "Expert-written questions on workflows from papers; not released; grader not stated."
+ },
+ {
+  "key": "safety|anthropic|bioinformatics evaluations",
+  "canonical": "Bioinformatics evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 129,
+   "quote": "Preprocessing and analysis workflows were extracted from published papers, and experts developed questions about intermediate and end results of workflows."
+  },
+  "note": "Expert-written questions on workflows from papers; not released; grader not stated."
+ },
+ {
+  "key": "safety|anthropic|biomysterybench",
+  "canonical": "BioMysteryBench",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Anthropic-built bio analysis benchmark; release status and grader not stated."
+ },
+ {
+  "key": "safety|anthropic|biomysterybench newly used for cb 1",
+  "canonical": "BioMysteryBench",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 16,
+   "quote": null
+  },
+  "note": "Anthropic-built bio analysis benchmark; release status and grader not stated."
+ },
+ {
+  "key": "safety|anthropic|bioweapons acquisition uplift trial opus 4 sonnet 4 results",
+  "canonical": "Bioweapons acquisition uplift trial",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Human uplift trial graded by experts."
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence design dyno",
+  "canonical": "Black-box RNA sequence design (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 25,
+   "quote": "Outputs were scored on two metrics: a prediction score (Spearman correlation between model predictions and ground-truth function on the held-out test set)"
+  },
+  "note": "Dyno private dataset; Spearman prediction score and ground-truth design score."
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence design dyno therapeutics 57 human baseline",
+  "canonical": "Black-box RNA sequence design (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 25,
+   "quote": "Outputs were scored on two metrics: a prediction score (Spearman correlation between model predictions and ground-truth function on the held-out test set)"
+  },
+  "note": "Dyno private dataset; Spearman prediction score and ground-truth design score."
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence modeling design dyno",
+  "canonical": "Black-box RNA sequence design (Dyno Therapeutics)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 25,
+   "quote": "Outputs were scored on two metrics: a prediction score (Spearman correlation between model predictions and ground-truth function on the held-out test set)"
+  },
+  "note": "Dyno private dataset; Spearman prediction score and ground-truth design score."
+ },
+ {
+  "key": "safety|anthropic|boundary point jailbreaking analysis",
+  "canonical": "Boundary point jailbreaking analysis",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 136,
+   "quote": null
+  },
+  "note": "Analysis of a jailbreak technique."
+ },
+ {
+  "key": "safety|anthropic|browser use adaptive eval",
+  "canonical": "Browser-use prompt injection eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 79,
+   "quote": null
+  },
+  "note": "Internal adaptive attack environments; success judging not described."
+ },
+ {
+  "key": "safety|anthropic|browser use auto mode only",
+  "canonical": "Browser-use prompt injection eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Internal adaptive attack environments; success judging not described."
+ },
+ {
+  "key": "safety|anthropic|browser use in claude cowork harness with auto mode",
+  "canonical": "Browser-use prompt injection eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 73,
+   "quote": null
+  },
+  "note": "Internal adaptive attack environments; success judging not described."
+ },
+ {
+  "key": "safety|anthropic|browser use red team attacks",
+  "canonical": "Browser use red-team attacks",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 84,
+   "quote": null
+  },
+  "note": "Adaptive red-team attacks on browser agent."
+ },
+ {
+  "key": "safety|anthropic|browser use safeguards",
+  "canonical": "Browser use safeguards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 29,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|bug bounty",
+  "canonical": "Bug bounty",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-feb-2026",
+   "page": 71,
+   "quote": null
+  },
+  "note": "Bug bounty program."
+ },
+ {
+  "key": "safety|anthropic|bug bounty rapid response mention",
+  "canonical": "Bug bounty",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 59,
+   "quote": null
+  },
+  "note": "Bug bounty program."
+ },
+ {
+  "key": "safety|anthropic|bug bounty threat intelligence rapid response weight security",
+  "canonical": "Bug bounty",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Bug bounty program."
+ },
+ {
+  "key": "safety|anthropic|catastrophic biological scenario uplift trial five 3 person teams",
+  "canonical": "Catastrophic biology scenario uplift trial",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 18,
+   "quote": null
+  },
+  "note": "Team uplift trial graded by experts."
+ },
+ {
+  "key": "safety|anthropic|catastrophic biology scenario uplift trial",
+  "canonical": "Catastrophic biology scenario uplift trial",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 27,
+   "quote": null
+  },
+  "note": "Team uplift trial graded by experts."
+ },
+ {
+  "key": "safety|anthropic|cb 1 real time classifier guards and access controls",
+  "canonical": "CB real-time classifier guards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 29,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|cb classifier robustness coverage levels",
+  "canonical": "Classifier robustness levels",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 148,
+   "quote": null
+  },
+  "note": "Assessment of known classifier bypasses."
+ },
+ {
+  "key": "safety|anthropic|cb real time classifier guards",
+  "canonical": "CB real-time classifier guards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|cb real time classifier guards and access controls",
+  "canonical": "CB real-time classifier guards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 47,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|cbrn constitutional classifiers",
+  "canonical": "CB real-time classifier guards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 51,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|anthropic|chain of thought controllability chen et al uk aisi prompt",
+  "canonical": "CoT controllability (Chen et al.)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 136,
+   "quote": "we asked Claude Mythos 5.1 to follow basic instructions in its extended thinking (e.g., to not mention a certain keyword) while answering questions from GPQA, HLE, and MMLU-Pro"
+  },
+  "note": "External Chen et al. eval on GPQA/HLE/MMLU-Pro, plus a UK AISI prompt variant; compliance grading not stated."
+ },
+ {
+  "key": "safety|anthropic|character drift under extended pressure",
+  "canonical": "Character drift under extended pressure",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 218,
+   "quote": null
+  },
+  "note": "Welfare audit."
+ },
+ {
+  "key": "safety|anthropic|checkpoint consultations",
+  "canonical": "Checkpoint consultations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 93,
+   "quote": null
+  },
+  "note": "Interviews with training checkpoints."
+ },
+ {
+  "key": "safety|anthropic|checkpoint consultations during training",
+  "canonical": "Checkpoint consultations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 140,
+   "quote": null
+  },
+  "note": "Interviews with training checkpoints."
+ },
+ {
+  "key": "safety|anthropic|child safety evaluation human crafted synthetic prompts single and multi turn",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|child safety evaluation human synthetic prompts single and multi turn external expert consultation",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 43,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|child safety multi turn",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 225,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|child safety single and multi turn evaluations",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-4-6-system-card",
+   "page": 60,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|child safety single turn and multi turn evals new sex tourism trafficking age of consent csam prompt engineering cases",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 67,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|child safety single turn api claude ai",
+  "canonical": "Child safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 62,
+   "quote": null
+  },
+  "note": "Internal human-crafted and synthetic prompts; grading method not stated."
+ },
+ {
+  "key": "safety|anthropic|classifier coverage vulnerability finding block rates",
+  "canonical": "Cyber classifier coverage block rates",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 47,
+   "quote": null
+  },
+  "note": "Measures internal classifier block rates on internal prompts."
+ },
+ {
+  "key": "safety|anthropic|classifier robustness levels 1 3",
+  "canonical": "Classifier robustness levels",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 136,
+   "quote": null
+  },
+  "note": "Assessment of known classifier bypasses."
+ },
+ {
+  "key": "safety|anthropic|classifier robustness levels and coverage",
+  "canonical": "Classifier robustness levels",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 150,
+   "quote": null
+  },
+  "note": "Assessment of known classifier bypasses."
+ },
+ {
+  "key": "safety|anthropic|claude ai system prompt mitigations",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 84,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude code auto mode",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 47,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude code changes for over agentic behavior",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 84,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign",
+  "canonical": "Claude Code dual-use and benign",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 82,
+   "quote": "A set of 61 prompts spanning dual-use and completely benign queries"
+  },
+  "note": "Internal 61-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign 61 prompts",
+  "canonical": "Claude Code dual-use and benign",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 82,
+   "quote": "A set of 61 prompts spanning dual-use and completely benign queries"
+  },
+  "note": "Internal 61-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign evaluation 61 prompts",
+  "canonical": "Claude Code dual-use and benign",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 82,
+   "quote": "A set of 61 prompts spanning dual-use and completely benign queries"
+  },
+  "note": "Internal 61-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign success rate",
+  "canonical": "Claude Code dual-use and benign",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 82,
+   "quote": "A set of 61 prompts spanning dual-use and completely benign queries"
+  },
+  "note": "Internal 61-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign tasks",
+  "canonical": "Claude Code dual-use and benign",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 82,
+   "quote": "A set of 61 prompts spanning dual-use and completely benign queries"
+  },
+  "note": "Internal 61-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use 49",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use 49 prompts",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use dual use cyber evals",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use evaluation 49 prompts",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use non consensual monitoring software topic",
+  "canonical": "Claude Code malicious use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 81,
+   "quote": "A set of 49 malicious prompts that evaluate Claude's ability to correctly refuse queries with malicious intent"
+  },
+  "note": "Internal 49-prompt set; grading not described."
+ },
+ {
+  "key": "safety|anthropic|claude code resampling destructiveness eval new",
+  "canonical": "Claude Code resampling destructiveness eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 54,
+   "quote": null
+  },
+  "note": "Resampled internal Claude Code transcripts; destructiveness judged, grader unnamed."
+ },
+ {
+  "key": "safety|anthropic|claude code system prompt fileread mitigations",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-4-5-system-card",
+   "page": 18,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude code system prompt fileread reminder mitigations",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude for chrome classifiers and system prompt",
+  "canonical": "Product-level mitigations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "System prompt/product mitigation description."
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 1 review of the alignment section",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 77,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of alignment section",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 91,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of section 2",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 51,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of the assessment",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 83,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the alignment section new",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 92,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the assessment",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 99,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the section",
+  "canonical": "Claude's review of the alignment assessment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 85,
+   "quote": null
+  },
+  "note": "Model commentary on the report."
+ },
+ {
+  "key": "safety|anthropic|cli command fabrication overconfidence",
+  "canonical": "CLI command fabrication / overconfidence",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 141,
+   "quote": null
+  },
+  "note": "Internal tasks scored incorrect rate and 1-5 quality; scorer unnamed."
+ },
+ {
+  "key": "safety|anthropic|clinical psychiatrist psychodynamic assessment",
+  "canonical": "Clinical psychiatrist assessment",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "External psychiatrist assessment."
+ },
+ {
+  "key": "safety|anthropic|cobench 2 1 500 internal root cause problems",
+  "canonical": "CoBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 100,
+   "quote": "Problems are model-graded using a rubric that compares a solution to the root cause we identified in practice"
+  },
+  "note": "Internal Anthropic root-cause problems, model-graded with rubric."
+ }
+]

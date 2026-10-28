@@ -1,0 +1,3410 @@
+[
+ {
+  "key": "capability|product consistency elo",
+  "canonical": "Product Consistency (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/nano-banana-2-1-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing on overall preference, design quality, etc."
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|programbench",
+  "canonical": "ProgramBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 181,
+   "quote": "the full set of 166 “golden” ProgramBench tasks"
+  },
+  "note": "Public benchmark (Yang et al. 2026, arXiv) scored by hidden tests; some labs report subsets (166 golden) or 200 instances."
+ },
+ {
+  "key": "capability|proteingym hard",
+  "canonical": "ProteinGym Hard",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 203,
+   "quote": "It is scored by rank correlation against real lab measurements from the published ProteinGym benchmark."
+  },
+  "note": "Lab-chosen hard subset of public ProteinGym; subset not released; Spearman correlation scoring."
+ },
+ {
+  "key": "capability|protocolqa open ended",
+  "canonical": "ProtocolQA Open-Ended",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 18,
+   "quote": "we modify 108 multiple choice questions from FutureHouse's ProtocolQA dataset [12] to be open-ended short answer questions"
+  },
+  "note": "OpenAI-modified open-ended version of public ProtocolQA not released; short-answer grader not described (likely model-graded)."
+ },
+ {
+  "key": "capability|pubtabnet",
+  "canonical": "PubTabNet",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-ocr-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public table-recognition dataset scored with TEDS metric."
+ },
+ {
+  "key": "capability|qwenclawbench",
+  "canonical": "QwenClawBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": "QwenClawBench: An internal real-user-distribution Claw agent benchmark (open-sourcing soon)"
+  },
+  "note": "Internal Qwen agent benchmark, not yet released; grading not described."
+ },
+ {
+  "key": "capability|qwenqoderbench",
+  "canonical": "QwenQoderBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "QwenQoderBench: Inhouse coding benchmark to evaluate user experience on Qoder."
+  },
+  "note": "In-house Qwen coding benchmark; grading method not stated."
+ },
+ {
+  "key": "capability|qwenreactbench",
+  "canonical": "QwenReactBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "Inhouse React project building benchmark using Claude Code as the harness, bilingual (EN/CN), 7 categories; auto-render + multimodal judge; BT/Elo rating."
+  },
+  "note": "In-house; unnamed multimodal judge on rendered output."
+ },
+ {
+  "key": "capability|qwensvgbench",
+  "canonical": "QwenSVGBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "Inhouse SVG code generation benchmark; bilingual (EN/CN), auto-render + multimodal judge; BT/Elo rating."
+  },
+  "note": "In-house; unnamed multimodal judge on rendered output."
+ },
+ {
+  "key": "capability|qwenswebench",
+  "canonical": "QwenSWEBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "QwenSWEBench: Inhouse coding benchmark to evaluate models' software engineering capabilities."
+  },
+  "note": "In-house SWE benchmark; grading not stated (likely tests)."
+ },
+ {
+  "key": "capability|qwenwebbench",
+  "canonical": "QwenWebBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": "An internal front-end code generation benchmark; bilingual (EN/CN), 7 categories"
+  },
+  "note": "Internal; auto-render + unnamed multimodal judge, BT/Elo."
+ },
+ {
+  "key": "capability|real world vulnerability discovery internal",
+  "canonical": "Real-world vulnerability discovery (internal)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 214,
+   "quote": "Our real-world vulnerability discovery benchmark tests the ability of the model to perform open ended vulnerability discovery in a large, real world codebase."
+  },
+  "note": "Google internal benchmark; how recall of historical vulns is judged is not stated."
+ },
+ {
+  "key": "capability|realworldqa",
+  "canonical": "RealWorldQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public xAI dataset, short-answer/MC accuracy."
+ },
+ {
+  "key": "capability|recreationbench",
+  "canonical": "RecreationBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-flash-next",
+   "page": null,
+   "quote": "an in-house long-horizon application-recreation benchmark"
+  },
+  "note": "In-house Qwen benchmark; grading not described."
+ },
+ {
+  "key": "capability|refcoco avg",
+  "canonical": "RefCOCO (avg)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public referring-expression grounding; IoU-based accuracy."
+ },
+ {
+  "key": "capability|refspatialbench",
+  "canonical": "RefSpatialBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public spatial referring benchmark; point-in-mask accuracy."
+ },
+ {
+  "key": "capability|regression sets human eval elo",
+  "canonical": "Gemini image regression sets (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": "Regression sets:** popular use cases observed on Gemini 2.5 Flash Image"
+  },
+  "note": "Internal prompt sets from production use cases; human side-by-side raters."
+ },
+ {
+  "key": "capability|repoqa",
+  "canonical": "RepoQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-linear-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public long-context code retrieval benchmark; similarity-threshold scoring."
+ },
+ {
+  "key": "capability|researchrubrics",
+  "canonical": "ResearchRubrics",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Scale AI deep-research rubric benchmark; rubric items scored by an LLM judge not named in the docs."
+ },
+ {
+  "key": "capability|riemannbench",
+  "canonical": "RiemannBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 259,
+   "quote": "RiemannBench \\( ^{39} \\) is a private benchmark of 25 problems developed by Surge AI"
+  },
+  "note": "Private Surge AI set; closed-form answers checked automatically."
+ },
+ {
+  "key": "capability|rul muchomusic",
+  "canonical": "RUL-MuchoMusic",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public music-understanding MC benchmark; accuracy."
+ },
+ {
+  "key": "capability|ruler",
+  "canonical": "RULER",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-linear-48b-a3b-instruct-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public synthetic long-context benchmark; string-match scoring."
+ },
+ {
+  "key": "capability|saas bench",
+  "canonical": "SaaS-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Cited as a public benchmark [110] in Kimi K3 report; scoring method not described."
+ },
+ {
+  "key": "capability|sandbox bench",
+  "canonical": "Sandbox Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 95,
+   "quote": "Sandbox Bench is a new internal evaluation designed to test a model's ability to identify and exploit vulnerabilities"
+  },
+  "note": "Internal OpenAI CTF-style set (zero-days withheld); success verified by flag recovery."
+ },
+ {
+  "key": "capability|scicode",
+  "canonical": "SciCode",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public scientific coding benchmark graded by unit tests."
+ },
+ {
+  "key": "capability|screenspot pro",
+  "canonical": "ScreenSpot-Pro",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 288,
+   "quote": null
+  },
+  "note": "Public GUI grounding benchmark; click-in-box accuracy."
+ },
+ {
+  "key": "capability|seal 0",
+  "canonical": "Seal-0 (SealQA)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o-mini (official SealQA autorater)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public SealQA subset; answers graded by SimpleQA-style LLM autorater."
+ },
+ {
+  "key": "capability|sec bench pro",
+  "canonical": "SEC-Bench Pro",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 44,
+   "quote": null
+  },
+  "note": "OpenAI lists it among adopted public benchmarks; vulnerability discovery verified by PoC execution."
+ },
+ {
+  "key": "capability|seccodebench",
+  "canonical": "SecCodeBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Alibaba secure-coding benchmark; scored with test/security checks (may include LLM judge in some modes)."
+ },
+ {
+  "key": "capability|seed tts test zh test en wer",
+  "canonical": "Seed-TTS eval (test-zh / test-en WER)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": "ASR models (Whisper-large-v3 / Paraformer)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 14,
+   "quote": null
+  },
+  "note": "Public Seed-TTS eval set; WER computed with standard ASR models."
+ },
+ {
+  "key": "capability|seed tts zh en hard wer",
+  "canonical": "Seed-TTS eval (zh / en / hard WER)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": "ASR models (Whisper-large-v3 / Paraformer)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 17,
+   "quote": null
+  },
+  "note": "Public Seed-TTS eval set incl. hard split; WER via ASR."
+ },
+ {
+  "key": "capability|simpleqa",
+  "canonical": "SimpleQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official grader prompt)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public OpenAI factuality benchmark with GPT-4o grader prompt."
+ },
+ {
+  "key": "capability|simpleqa verified",
+  "canonical": "SimpleQA Verified",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official autorater)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public Google DeepMind cleaned SimpleQA subset with released autorater prompt."
+ },
+ {
+  "key": "capability|simplevqa",
+  "canonical": "SimpleVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official judge)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public multimodal factuality benchmark; SimpleQA-style LLM grading."
+ },
+ {
+  "key": "capability|single character consistency elo",
+  "canonical": "Single-Character Consistency (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/nano-banana-2-1-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|skillsbench",
+  "canonical": "SkillsBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "SkillsBench: Evaluated on the public SkillsBench v1.1 benchmark across 87 tasks"
+  },
+  "note": "Public agent-skills benchmark graded by task tests."
+ },
+ {
+  "key": "capability|skillsbench avg5",
+  "canonical": "SkillsBench (Avg5, 78-task subset)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": "SkillsBench: Evaluated via OpenCode on 78 tasks (self-contained subset, excluding API-dependent tasks); avg of 5 runs."
+  },
+  "note": "Lab-filtered subset of public SkillsBench; test-based grading."
+ },
+ {
+  "key": "capability|slake",
+  "canonical": "SLAKE",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public medical VQA dataset; accuracy."
+ },
+ {
+  "key": "capability|social media trends editing elo",
+  "canonical": "Social Media Trends - Editing (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing."
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|social media trends t2i elo",
+  "canonical": "Social Media Trends - T2I (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing."
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|spider",
+  "canonical": "Spider",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public text-to-SQL benchmark; execution/exact-match accuracy."
+ },
+ {
+  "key": "capability|spreadsheetbench",
+  "canonical": "SpreadsheetBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 31,
+   "quote": null
+  },
+  "note": "Public spreadsheet manipulation benchmark; output-file comparison."
+ },
+ {
+  "key": "capability|spreadsheetbench 2",
+  "canonical": "SpreadsheetBench 2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Cited public successor to SpreadsheetBench; assumed programmatic output checks."
+ },
+ {
+  "key": "capability|spy fine tuning",
+  "canonical": "SPY dataset fine-tuning (privacy filter)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 14,
+   "quote": "We illustrate this point using the SPY dataset (link), a synthetic collection of legal questions and medical consultations"
+  },
+  "note": "Public SPY dataset; token-level span F1 after fine-tuning."
+ },
+ {
+  "key": "capability|sre bench",
+  "canonical": "SRE-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 94,
+   "quote": "submit solutions evaluated against six task-specific objectives"
+  },
+  "note": "OpenAI calls it an adopted public benchmark; solutions checked against six objectives."
+ },
+ {
+  "key": "capability|streamingbench",
+  "canonical": "StreamingBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public streaming-video MC benchmark."
+ },
+ {
+  "key": "capability|stylization elo",
+  "canonical": "Stylization (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing, and Multi-Turn."
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|stylization human eval elo",
+  "canonical": "Stylization (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|sunrgbd",
+  "canonical": "SUN RGB-D",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public 3D scene dataset; detection/grounding metric."
+ },
+ {
+  "key": "capability|supergpqa",
+  "canonical": "SuperGPQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public MC benchmark."
+ },
+ {
+  "key": "capability|swarm bench",
+  "canonical": "Swarm Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 28,
+   "quote": "Swarm Bench: evaluates models' ability to orchestrate agent swarms [60] on complex tasks"
+  },
+  "note": "Moonshot in-house benchmark; grading not described."
+ },
+ {
+  "key": "capability|swe bench multilingual",
+  "canonical": "SWE-bench Multilingual",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 168,
+   "quote": null
+  },
+  "note": "Public; graded by repository unit tests."
+ },
+ {
+  "key": "capability|swe bench multimodal",
+  "canonical": "SWE-bench Multimodal",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 245,
+   "quote": "Our SWE-bench Multimodal test harness is built on the public dev split but includes the following modifications for grading reliability"
+  },
+  "note": "Public dev split with Anthropic harness modifications; unit-test grading."
+ },
+ {
+  "key": "capability|swe bench pro",
+  "canonical": "SWE-bench Pro",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 167,
+   "quote": null
+  },
+  "note": "Public set graded by unit tests (some labs, e.g. Qwen, correct tasks)."
+ },
+ {
+  "key": "capability|swe bench pro public",
+  "canonical": "SWE-bench Pro (Public)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public split of SWE-bench Pro; unit-test grading."
+ },
+ {
+  "key": "capability|swe bench verified",
+  "canonical": "SWE-bench Verified",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 251,
+   "quote": null
+  },
+  "note": "Public human-validated subset; unit tests."
+ },
+ {
+  "key": "capability|swe marathon",
+  "canonical": "SWE-Marathon",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.2-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public long-horizon benchmark (official tasks); Kimi uses an H20-calibrated branch and GLM-5.2 run by Abundant AI."
+ },
+ {
+  "key": "capability|swe marathon v1 1",
+  "canonical": "SWE-Marathon v1.1",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "We removed the affected checks and performed llm-based inspection instead to avoid false positives."
+  },
+  "note": "GLM modified anti-cheat checks (LLM inspection) and build fixes; test-based scoring."
+ },
+ {
+  "key": "capability|swe rebench jan 2026",
+  "canonical": "SWE-rebench (Jan 2026)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 27,
+   "quote": null
+  },
+  "note": "Public decontaminated SWE leaderboard; unit tests."
+ },
+ {
+  "key": "capability|swebench pretrain",
+  "canonical": "SWEBench-Pretrain",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-next-architecture-report",
+   "page": 22,
+   "quote": "SWEBench-Pretrain, a pre-training variant of SWE-bench"
+  },
+  "note": "Qwen-defined base-model variant of SWE-bench scored by patch similarity; variant not released."
+ },
+ {
+  "key": "capability|synthetic clue position eval",
+  "canonical": "Synthetic clue-position eval (privacy filter)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 15,
+   "quote": "We created three separate English-only evaluations for this purpose"
+  },
+  "note": "OpenAI-created synthetic sets; span-level metrics."
+ },
+ {
+  "key": "capability|synthetic multilingual pii eval 13 languages",
+  "canonical": "Synthetic multilingual PII eval (13 languages)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 18,
+   "quote": null
+  },
+  "note": "OpenAI-built synthetic multilingual set, not stated as released; span metrics."
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting",
+  "canonical": "Tacit Knowledge and Troubleshooting",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 14,
+   "quote": "This set is uncontaminated; it was created fully in-house with our partners at Gryphon Scientific and has not been published."
+  },
+  "note": "Unpublished Gryphon MCQ set; multiple-choice scoring."
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting gpt 5 5 pro",
+  "canonical": "Tacit Knowledge and Troubleshooting (GPT-5.5 Pro)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 25,
+   "quote": null
+  },
+  "note": "Same unpublished Gryphon MCQ set; MC scoring."
+ },
+ {
+  "key": "capability|tacit knowledge and troubleshooting gryphon",
+  "canonical": "Tacit knowledge and troubleshooting (Gryphon)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Unpublished Gryphon MCQ set; MC scoring."
+ },
+ {
+  "key": "capability|tau2 bench",
+  "canonical": "tau2-bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/diffusiongemma-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public; graded by DB-state and action checks (LLM user simulator, not judge)."
+ },
+ {
+  "key": "capability|tau2 bench airline",
+  "canonical": "tau2-bench Airline",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Public domain; programmatic state checks."
+ },
+ {
+  "key": "capability|tau2 bench airline original corrected",
+  "canonical": "tau2-bench Airline (original / corrected)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 25,
+   "quote": "we also created a new version of Airline that includes corrections to multiple task setup and grading issues"
+  },
+  "note": "Anthropic-corrected airline variant submitted to authors, not itself released in doc."
+ },
+ {
+  "key": "capability|tau2 bench retail",
+  "canonical": "tau2-bench Retail",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 19,
+   "quote": null
+  },
+  "note": "Public; programmatic state checks."
+ },
+ {
+  "key": "capability|tau2 bench telecom",
+  "canonical": "tau2-bench Telecom",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 19,
+   "quote": null
+  },
+  "note": "Public; programmatic state checks."
+ },
+ {
+  "key": "capability|tau3 banking",
+  "canonical": "tau3-Banking",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public tau3 domain; scores cited from Artificial Analysis; programmatic checks."
+ },
+ {
+  "key": "capability|tau3 bench",
+  "canonical": "tau3-bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": "We use the official user model (gpt-5.2, low reasoning effort) + default BM25 retrieval."
+  },
+  "note": "Public; official user simulator, programmatic task checks."
+ },
+ {
+  "key": "capability|teds test",
+  "canonical": "TEDS_TEST",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-ocr-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public ModelScope table set (jockerK/TEDS_TEST); TEDS metric."
+ },
+ {
+  "key": "capability|terminal bench",
+  "canonical": "Terminal-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-thinking-blog",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; container test scripts."
+ },
+ {
+  "key": "capability|terminal bench 2",
+  "canonical": "Terminal-Bench 2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; container test scripts."
+ },
+ {
+  "key": "capability|terminal bench 2 0",
+  "canonical": "Terminal-Bench 2.0",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 190,
+   "quote": null
+  },
+  "note": "Public; container test scripts."
+ },
+ {
+  "key": "capability|terminal bench 2 1",
+  "canonical": "Terminal-Bench 2.1",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 251,
+   "quote": null
+  },
+  "note": "Public; container test scripts."
+ },
+ {
+  "key": "capability|terminal bench 3 0",
+  "canonical": "Terminal-Bench 3.0",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "the artifacts each agent produces are scored by the task's official separate verifier."
+  },
+  "note": "Public; official task verifiers."
+ },
+ {
+  "key": "capability|terminal bench 4 0",
+  "canonical": "Terminal-Bench 4.0",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 171,
+   "quote": null
+  },
+  "note": "Public Terminal-Bench release of 66 tasks; test-based."
+ },
+ {
+  "key": "capability|terminal bench hard",
+  "canonical": "Terminal-Bench Hard",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-4.7-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Artificial Analysis hard subset of public Terminal-Bench; tests."
+ },
+ {
+  "key": "capability|terminal bench science 0 1",
+  "canonical": "Terminal-Bench-Science 0.1",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 171,
+   "quote": "Terminal-Bench-Science is a Stanford-led community benchmark of 70 tasks"
+  },
+  "note": "Public community benchmark; test-based verifiers."
+ },
+ {
+  "key": "capability|text editing elo",
+  "canonical": "Text Editing (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|text editing human eval elo",
+  "canonical": "Text editing (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|text rendering human eval elo",
+  "canonical": "Text Rendering (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|throughput images",
+  "canonical": "GLM-OCR throughput (images)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-ocr-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Speed measurement; input set not specified."
+ },
+ {
+  "key": "capability|throughput pdf",
+  "canonical": "GLM-OCR throughput (PDF)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-ocr-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Speed measurement; input set not specified."
+ },
+ {
+  "key": "capability|tool decathlon",
+  "canonical": "Toolathlon (Tool Decathlon)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; execution-based checkers."
+ },
+ {
+  "key": "capability|toolathlon",
+  "canonical": "Toolathlon",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 294,
+   "quote": null
+  },
+  "note": "Public; execution-based checkers."
+ },
+ {
+  "key": "capability|toolathlon verified",
+  "canonical": "Toolathlon Verified",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 194,
+   "quote": "graded by execution-based checkers that verify the resulting artifacts"
+  },
+  "note": "Public verified version; Anthropic mirrors task definitions and checkers byte-for-byte."
+ },
+ {
+  "key": "capability|toolathlon verified pass 1",
+  "canonical": "Toolathlon Verified (Pass@1)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; execution-based checkers."
+ },
+ {
+  "key": "capability|toxicchat f1",
+  "canonical": "ToxicChat",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public toxicity dataset; classifier F1 against labels."
+ },
+ {
+  "key": "capability|troubleshootingbench",
+  "canonical": "TroubleshootingBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "OpenAI-built expert short-answer set not available online; grader not described."
+ },
+ {
+  "key": "capability|uk aisi ctf expert level tasks",
+  "canonical": "UK AISI CTF expert-level tasks",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 56,
+   "quote": null
+  },
+  "note": "UK AISI-run private CTF suite; flag capture."
+ },
+ {
+  "key": "capability|uk aisi expert level narrow cyber tasks",
+  "canonical": "UK AISI expert-level narrow cyber tasks",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "UK AISI private tasks reported as outcome; grading not described."
+ },
+ {
+  "key": "capability|uniclawbench",
+  "canonical": "UniClawBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Cited external benchmark (Chen et al. 2026b); scoring not described."
+ },
+ {
+  "key": "capability|unimernet",
+  "canonical": "UniMERNet",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-ocr-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public formula-recognition benchmark; CDM/BLEU-style metrics."
+ },
+ {
+  "key": "capability|usamo 2026",
+  "canonical": "USAMO 2026",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 Pro, Claude Opus 4.6, Claude Mythos Preview panel",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 260,
+   "quote": "judged by a panel of 3 frontier models (we used Gemini 3.1 Pro, Claude Opus 4.6, and Claude Mythos Preview)"
+  },
+  "note": "Public competition problems; MathArena-style LLM panel grading (one judge is a restricted model)."
+ },
+ {
+  "key": "capability|v",
+  "canonical": "V*",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public visual search MC benchmark."
+ },
+ {
+  "key": "capability|vals finance agent v2",
+  "canonical": "Vals Finance Agent v2",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-8-flash-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Vals AI benchmark with public sample and private test set; LLM-judge rubric grading."
+ },
+ {
+  "key": "capability|vals index",
+  "canonical": "Vals Index",
+  "type": "third_party",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Third-party Vals AI composite index over mostly private test sets; mixed graders."
+ },
+ {
+  "key": "capability|vending bench",
+  "canonical": "Vending-Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 211,
+   "quote": null
+  },
+  "note": "Andon Labs simulation not publicly released; score is final net worth."
+ },
+ {
+  "key": "capability|vending bench 2",
+  "canonical": "Vending-Bench 2",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 293,
+   "quote": null
+  },
+  "note": "Andon Labs simulated environment (not released); final money balance."
+ },
+ {
+  "key": "capability|vibe code bench",
+  "canonical": "Vibe Code Bench",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Vals AI benchmark with private tasks; graded by automated agent-based testing."
+ },
+ {
+  "key": "capability|video mme",
+  "canonical": "Video-MME",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public video MC benchmark."
+ },
+ {
+  "key": "capability|video mme v2",
+  "canonical": "Video-MME-v2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public successor to Video-MME (Fu et al. 2026); MC."
+ },
+ {
+  "key": "capability|video mme w o sub",
+  "canonical": "Video-MME (w/o sub)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public video MC benchmark."
+ },
+ {
+  "key": "capability|video mmmu",
+  "canonical": "Video-MMMU",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public; MC/exact-match accuracy."
+ },
+ {
+  "key": "capability|video needle in a haystack",
+  "canonical": "Video Needle-in-a-Haystack",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 25,
+   "quote": "we construct a video \"Needle-in-a-Haystack\" evaluation on Qwen3-VL-235B-A22B-Instruct"
+  },
+  "note": "Qwen-constructed synthetic eval; accuracy."
+ },
+ {
+  "key": "capability|videomme w audio",
+  "canonical": "VideoMME w/ audio",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public Video-MME with audio enabled; MC."
+ },
+ {
+  "key": "capability|videomme w o sub",
+  "canonical": "VideoMME (w/o sub)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; MC."
+ },
+ {
+  "key": "capability|videomme w sub",
+  "canonical": "VideoMME (w/ sub)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; MC."
+ },
+ {
+  "key": "capability|videommmu",
+  "canonical": "VideoMMMU",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; MC/exact match."
+ },
+ {
+  "key": "capability|vision2web",
+  "canonical": "Vision2Web",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-5.4 (Qwen); VLM judge",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-flash-next",
+   "page": null,
+   "quote": "judged by gpt-5.4-2026-03-05"
+  },
+  "note": "Public Zhipu benchmark; agent verification plus VLM judge (Qwen names gpt-5.4)."
+ },
+ {
+  "key": "capability|visual design elo",
+  "canonical": "Visual Design (Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|visual design human eval elo",
+  "canonical": "Visual design (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Side-by-side human preference eval on Google-internal prompt sets; Elo from human raters."
+ },
+ {
+  "key": "capability|vita bench",
+  "canonical": "VITA-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude 4 Sonnet (official: Claude 3.7 Sonnet)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": "using claude-4-sonnet as judger, as the official judger (claude-3.7-sonnet) is no longer available."
+  },
+  "note": "Public; LLM judge with substituted public model."
+ },
+ {
+  "key": "capability|voicebench",
+  "canonical": "VoiceBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o-mini (open-ended subsets)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public; open-ended subsets judged by GPT model, others rule-based."
+ },
+ {
+  "key": "capability|vsi bench",
+  "canonical": "VSI-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public; MC accuracy and numeric relative accuracy."
+ },
+ {
+  "key": "capability|we math",
+  "canonical": "We-Math",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public MC visual math."
+ },
+ {
+  "key": "capability|webarena",
+  "canonical": "WebArena",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4-family (fuzzy_match evaluator)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "Public; mostly programmatic checks, with an official GPT-4 fuzzy_match judge for some tasks."
+ },
+ {
+  "key": "capability|webdev arena",
+  "canonical": "WebDev Arena",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 32,
+   "quote": null
+  },
+  "note": "LMArena crowd-voted leaderboard; live user prompts, human votes."
+ },
+ {
+  "key": "capability|webvoyager",
+  "canonical": "WebVoyager",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4V (official auto-evaluator)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public; official GPT-4V auto-evaluation (Gemini also cites Browserbase-measured runs)."
+ },
+ {
+  "key": "capability|widesearch",
+  "canonical": "WideSearch",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official hybrid evaluator)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; item-F1 with exact match plus LLM judge for semantic cells."
+ },
+ {
+  "key": "capability|wildclawbench mm",
+  "canonical": "WildClawBench-MM",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 13,
+   "quote": "WildClawBench-MM is restricted to WildClawBench tasks that involve images, video, or audio."
+  },
+  "note": "Lab-filtered multimodal subset of public WildClawBench; grading not described."
+ },
+ {
+  "key": "capability|wildspeech bench",
+  "canonical": "WildSpeech-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o-mini (checklist judge)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public speech dialogue benchmark judged by an LLM with query checklists."
+ },
+ {
+  "key": "capability|wmt24",
+  "canonical": "WMT24++",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": "MetricX/XCOMET-style metric",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public translation set; automatic MT metric (metric not stated)."
+ },
+ {
+  "key": "capability|workspacebench",
+  "canonical": "WorkSpaceBench",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": null
+  },
+  "note": "No description in the Qwen3.8 card; origin and grading unknown."
+ },
+ {
+  "key": "capability|worldsense",
+  "canonical": "WorldSense",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public omnimodal MC benchmark."
+ },
+ {
+  "key": "capability|worldvqa",
+  "canonical": "WorldVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": "https://github.com/MoonshotAI/WorldVQA"
+  },
+  "note": "Moonshot-released visual knowledge QA; short answers graded by an unnamed LLM judge (assumed)."
+ },
+ {
+  "key": "capability|writingbench",
+  "canonical": "WritingBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Public; scored by official critic model or LLM judge, not specified by Qwen."
+ },
+ {
+  "key": "capability|zclawbench",
+  "canonical": "ZClawBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Zhipu-released Claw agent benchmark [2]; grading not described."
+ },
+ {
+  "key": "capability|zerobench",
+  "canonical": "ZeroBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; exact-match answers."
+ },
+ {
+  "key": "capability|zerobench main",
+  "canonical": "ZeroBench-main",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public main set; exact match, pass@5."
+ },
+ {
+  "key": "capability|zerobench sub",
+  "canonical": "ZeroBench (subquestions)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public subquestion split; exact match."
+ },
+ {
+  "key": "safety|glm|anti hacking judge in nl2repo eval harness",
+  "canonical": "NL2Repo anti-hacking judge (GLM-5.2)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5.2-hf-model-card",
+   "page": null,
+   "quote": "To prevent hacking, we use rule-based and a LLM-based judgement to prevent malicious behaviors"
+  },
+  "note": "Eval-harness anti-cheating safeguard, not an eval."
+ },
+ {
+  "key": "safety|glm|artificial analysis knowledge hallucination aa omniscience",
+  "canonical": "AA-Omniscience",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Artificial Analysis grader model",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 29,
+   "quote": null
+  },
+  "note": "Artificial Analysis knowledge/hallucination eval; only a subset public; LLM-graded."
+ },
+ {
+  "key": "safety|glm|chinese simpleqa",
+  "canonical": "Chinese SimpleQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official grader)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 29,
+   "quote": null
+  },
+  "note": "Public Chinese factuality benchmark with SimpleQA-style GPT-4o grading."
+ },
+ {
+  "key": "safety|glm|cybergym",
+  "canonical": "CyberGym",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5.1-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; PoC must trigger the vulnerability (sanitizer crash)."
+ },
+ {
+  "key": "safety|glm|cybergym 1 507 tasks",
+  "canonical": "CyberGym (1,507 tasks)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Full public set; PoC execution."
+ },
+ {
+  "key": "safety|glm|cybergym 1 507 tasks pass 1",
+  "canonical": "CyberGym (1,507 tasks, Pass@1)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Full public set; PoC execution."
+ },
+ {
+  "key": "safety|glm|cybergym claude code 2 1 18",
+  "canonical": "CyberGym (Claude Code 2.1.18)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 24,
+   "quote": null
+  },
+  "note": "Public; PoC execution."
+ },
+ {
+  "key": "safety|glm|eval harness anti cheating measures domain whitelists git info removal llm based inspection",
+  "canonical": "GLM eval-harness anti-cheating measures",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "We also remove all Git-related information and apply a domain whitelist"
+  },
+  "note": "Eval-harness safeguards, not an eval."
+ },
+ {
+  "key": "safety|glm|exploitbench 41 tasks",
+  "canonical": "ExploitBench (41 tasks)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "compute the average coverage score over all 41 tasks across 3 revisions"
+  },
+  "note": "Public exploit benchmark; official coverage score."
+ },
+ {
+  "key": "safety|glm|exploitgym 869 tasks 2h 6h",
+  "canonical": "ExploitGym (869 tasks, 2h/6h)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "The reported results are single-run Pass@1 on 869 tasks under two timeout budgets"
+  },
+  "note": "Public exploit benchmark; pass@1 by exploit verification."
+ },
+ {
+  "key": "safety|glm|facts as facts",
+  "canonical": "FACTS (multimodal/search)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini-family autoraters (official)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Google FACTS suite (public split, private held-out); LLM autorater judges."
+ },
+ {
+  "key": "safety|glm|nl2repo anti hacking judge",
+  "canonical": "NL2Repo anti-hacking judge (GLM-5.3-Flash)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5.3-flash-hf-model-card",
+   "page": null,
+   "quote": "To prevent hacking, we use rule-based and a LLM-based judgement to prevent malicious behaviors"
+  },
+  "note": "Eval-harness safeguard, not an eval."
+ },
+ {
+  "key": "safety|glm|posttrainbench",
+  "canonical": "PostTrainBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public benchmark scored by downstream benchmark performance; GLM replaced pattern-based API checks."
+ },
+ {
+  "key": "safety|glm|posttrainbench third party run",
+  "canonical": "PostTrainBench (third-party run)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.2-hf-model-card",
+   "page": null,
+   "quote": "The evaluation was conducted by [PostTrainBench](https://posttrainbench.com)"
+  },
+  "note": "Run by benchmark maintainers; programmatic scoring."
+ },
+ {
+  "key": "safety|glm|qualitative observation during slide generation rl",
+  "canonical": "Slide-generation RL qualitative observation",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Qualitative observation during training, no fixed set."
+ },
+ {
+  "key": "safety|glm|simpleqa",
+  "canonical": "SimpleQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official grader)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 29,
+   "quote": null
+  },
+  "note": "Public; GPT-4o grader prompt."
+ },
+ {
+  "key": "safety|glm|simplevqa",
+  "canonical": "SimpleVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official judge)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Public; LLM-graded factuality."
+ },
+ {
+  "key": "safety|kimi|agentenv firecracker microvm isolation for rl eval",
+  "canonical": "AgentENV Firecracker microVM isolation",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Sandbox infrastructure description, not an eval."
+ },
+ {
+  "key": "safety|kimi|agentenv microvm sandbox training infrastructure",
+  "canonical": "AgentENV microVM sandbox",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Training infrastructure, not an eval."
+ },
+ {
+  "key": "safety|kimi|cybergym",
+  "canonical": "CyberGym",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public; PoC execution."
+ },
+ {
+  "key": "safety|kimi|cybergym difficulty level 1",
+  "canonical": "CyberGym (difficulty level 1)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 26,
+   "quote": "We report scores in the difficulty level 1 (the primary setting)."
+  },
+  "note": "Public primary setting; PoC execution."
+ },
+ {
+  "key": "safety|kimi|faithjudge",
+  "canonical": "FaithJudge",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "o3-mini (FaithJudge LLM judge)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-linear-tech-report",
+   "page": 28,
+   "quote": null
+  },
+  "note": "Public Vectara hallucination benchmark judged by an LLM with human-annotated examples."
+ },
+ {
+  "key": "safety|kimi|healthbench",
+  "canonical": "HealthBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official rubric grader)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-thinking-blog",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; rubric grading by GPT-4.1."
+ },
+ {
+  "key": "safety|kimi|in house faithfulness benchmark fact checker verified hallucination rate",
+  "canonical": "Kimi in-house Faithfulness benchmark",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 30,
+   "quote": "Faithfulness: measures factual hallucination rates in model responses, with each response verified by a fact checker."
+  },
+  "note": "In-house; unnamed fact checker."
+ },
+ {
+  "key": "safety|kimi|internal claw bench capability no safety metric",
+  "canonical": "Kimi internal Claw Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-6-blog",
+   "page": 13,
+   "quote": "Performance gains are quantified by our internal Claw Bench"
+  },
+  "note": "Internal; grading not described."
+ },
+ {
+  "key": "safety|kimi|kimi autonomous execution tasks kaet",
+  "canonical": "Kimi Autonomous Execution Tasks (KAET)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 28,
+   "quote": "Kimi Autonomous Execution Tasks (KAET): evaluates long-horizon autonomous execution on tasks simulating real user requests"
+  },
+  "note": "In-house; grading not described."
+ },
+ {
+  "key": "safety|kimi|mls bench lite",
+  "canonical": "MLS-Bench-Lite",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-7-code-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public ML-engineering benchmark with official leaderboard; metric-based scoring."
+ },
+ {
+  "key": "safety|kimi|posttrainbench",
+  "canonical": "PostTrainBench",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 27,
+   "quote": null
+  },
+  "note": "Official Harbor implementation but run on H20 instead of H100 GPUs; programmatic scoring."
+ },
+ {
+  "key": "safety|kimi|refusal fallback disclosure for competitor models on kimi code bench 2 0",
+  "canonical": "Refusal/fallback disclosure on Kimi Code Bench 2.0",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Disclosure of competitor refusals, not an eval."
+ },
+ {
+  "key": "safety|kimi|simpleqa verified",
+  "canonical": "SimpleQA Verified",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official autorater)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 23,
+   "quote": null
+  },
+  "note": "Public; autorater grading."
+ },
+ {
+  "key": "safety|kimi|simplevqa",
+  "canonical": "SimpleVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official judge)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 23,
+   "quote": null
+  },
+  "note": "Public; LLM-graded."
+ },
+ {
+  "key": "safety|kimi|swe marathon gpu kernels",
+  "canonical": "SWE-Marathon (GPU kernels)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 27,
+   "quote": null
+  },
+  "note": "Kimi uses an H20-calibrated branch of the official tasks; test-based."
+ },
+ {
+  "key": "safety|kimi|tier 1 vulnerability discovery with poc on real current codebases os kernels databases ai services web frameworks blockchain vpn internal infra",
+  "canonical": "Kimi Tier 1 vulnerability discovery",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 30,
+   "quote": "Of the findings that underwent human review, approximately 70% were confirmed as genuine"
+  },
+  "note": "Open-ended discovery on real codebases and internal infra; human review."
+ },
+ {
+  "key": "safety|kimi|tier 2 in house 36 task exploit development suite 16 user space real cves 20 linux kernel privilege escalation tasks glm 5 2 baseline",
+  "canonical": "Kimi Tier 2 in-house exploit-development suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 30,
+   "quote": "using an in-house suite of 36 tasks spanning two tracks."
+  },
+  "note": "In-house 36-task suite; success criterion not described."
+ },
+ {
+  "key": "safety|kimi|uk aisi us caisi joint assessment exploitbench 32 step simulated enterprise network",
+  "canonical": "UK AISI + US CAISI joint assessment",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 30,
+   "quote": null
+  },
+  "note": "External government assessment reported as outcome."
+ },
+ {
+  "key": "safety|kimi|worldvqa",
+  "canonical": "WorldVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 23,
+   "quote": null
+  },
+  "note": "Moonshot-released benchmark; LLM-judged short answers (judge unnamed)."
+ },
+ {
+  "key": "safety|qwen|aegis",
+  "canonical": "Aegis",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public prompt-safety set; guard F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|aegis2 0",
+  "canonical": "Aegis 2.0",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|athenabench mini cti analysis",
+  "canonical": "AthenaBench-Mini",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 22,
+   "quote": "We use the public AthenaBench-Mini set"
+  },
+  "note": "Public CTI benchmark; accuracy-style metrics."
+ },
+ {
+  "key": "safety|qwen|baselines llamaguard3 4 wildguard 7b shieldgemma 9b 27b nemoguard 8b polyguard qwen 7b",
+  "canonical": "Qwen3Guard baselines list",
+  "type": "not_an_eval",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "List of baseline guard models, not an eval."
+ },
+ {
+  "key": "safety|qwen|beavertails",
+  "canonical": "BeaverTails",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; response classification F1."
+ },
+ {
+  "key": "safety|qwen|care detect rollback intervene with stream qwen3guard",
+  "canonical": "CARE detect-rollback-intervene with Stream Qwen3Guard",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_open",
+  "grader_model": "Qwen3-235B-A22B-Instruct-2507; WildGuard",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 19,
+   "quote": "Response quality is assessed using Qwen3-235B-A22B-Instruct-2507"
+  },
+  "note": "Safety/quality judged by open-weight models; prompt set unclear."
+ },
+ {
+  "key": "safety|qwen|category classification confusion matrices",
+  "canonical": "Qwen3Guard category-classification test set",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": "we curated and manually annotated an additional test set with fine-grained category labels"
+  },
+  "note": "Curated annotated set not released; confusion matrix vs labels."
+ },
+ {
+  "key": "safety|qwen|chinese translated toxicchat wildguardtest xstest beavertails",
+  "canonical": "Chinese-translated ToxicChat / WildGuardTest / XSTest / BeaverTails",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": "We utilize a translated version of ToxicChat, WildGuardTest, XSTest, Beavertails"
+  },
+  "note": "Machine-translated (Qwen3-MT) public sets; translations not released."
+ },
+ {
+  "key": "safety|qwen|controversial label ablation",
+  "canonical": "Controversial-label ablation",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Strict/loose mode comparison on public benchmarks; F1."
+ },
+ {
+  "key": "safety|qwen|copyright violation category",
+  "canonical": "Copyright Violation category",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Category result from internal annotated test set."
+ },
+ {
+  "key": "safety|qwen|cweval func 1 func sec 1",
+  "canonical": "CWEval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Public secure-code benchmark; func@1 and func-sec@1 via tests."
+ },
+ {
+  "key": "safety|qwen|hallusionbench",
+  "canonical": "HallusionBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 14,
+   "quote": null
+  },
+  "note": "Public yes/no visual hallucination benchmark."
+ },
+ {
+  "key": "safety|qwen|harmbench prompt response",
+  "canonical": "HarmBench (prompt & response)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; guard F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|jailbreak input category",
+  "canonical": "Qwen3Guard 'Jailbreak' input category",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-gen-8b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Policy category definition, not an eval."
+ },
+ {
+  "key": "safety|qwen|jailbreak input category in guard policy",
+  "canonical": "Qwen3Guard 'Jailbreak' category in guard policy",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Policy category definition, not an eval."
+ },
+ {
+  "key": "safety|qwen|moderation of reasoning thinking traces",
+  "canonical": "Moderation of reasoning traces (Think set)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 6,
+   "quote": "The test data is publicly available at https://huggingface.co/datasets/Qwen/Qwen3GuardTest."
+  },
+  "note": "Released human-annotated set; F1."
+ },
+ {
+  "key": "safety|qwen|omni autoresearch demo autonomously improving qwen2 5 omni 3b sichuan dialect asr within 12 hours",
+  "canonical": "Omni-Autoresearch demo (Sichuan-dialect ASR)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 8,
+   "quote": null
+  },
+  "note": "Single case study; model chose WenetSpeech-Chuan eval itself."
+ },
+ {
+  "key": "safety|qwen|openaimoderation",
+  "canonical": "OpenAI Moderation dataset",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|performance chart image only no numbers in text",
+  "canonical": "Qwen3Guard performance chart (image only)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3guard-gen-8b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Chart without numbers; underlying sets not specified."
+ },
+ {
+  "key": "safety|qwen|pii category in policy confusion matrix",
+  "canonical": "PII category (policy / confusion matrix)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Category definition in safety policy."
+ },
+ {
+  "key": "safety|qwen|polst in house chinese politically sensitive topics set",
+  "canonical": "PolST (in-house politically-sensitive set)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": "We further utilize an in-house dataset (PolST) related to political sensitive topics"
+  },
+  "note": "In-house set; F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|polst in house politically sensitive topics dataset 1 412 prompts 4 038 responses",
+  "canonical": "PolST (1,412 prompts / 4,038 responses)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": "We further utilize an in-house dataset (PolST) related to political sensitive topics that contains 1,412 prompt and 4,038 response"
+  },
+  "note": "In-house set; F1 vs labels."
+ },
+ {
+  "key": "safety|qwen|polyguard prompt",
+  "canonical": "PolyGuard-Prompt",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Public multilingual; F1."
+ },
+ {
+  "key": "safety|qwen|polyguard response",
+  "canonical": "PolyGuard-Response",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Public multilingual; F1."
+ },
+ {
+  "key": "safety|qwen|primevul paired vulnerability detection",
+  "canonical": "PrimeVul-Paired",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 22,
+   "quote": "we use the Paired set of PrimeVul (Ding et al., 2024b)"
+  },
+  "note": "Public; pair-wise accuracy metrics."
+ },
+ {
+  "key": "safety|qwen|refusal detection xstest wildguardtest",
+  "canonical": "Refusal detection (XSTest, WildGuardTest)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": "We evaluate this capability using XSTest and WildGuardTest as benchmark datasets."
+  },
+  "note": "Public refusal labels; F1."
+ },
+ {
+  "key": "safety|qwen|refusal label output",
+  "canonical": "Qwen3Guard refusal label output",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-gen-8b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Feature description, not an eval."
+ },
+ {
+  "key": "safety|qwen|reinforced reward hacking blocker during swe rl manual trajectory inspection",
+  "canonical": "Reward-hacking blocker in SWE RL (manual inspection)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 11,
+   "quote": "our manual inspection of trajectories confirms that reward-hacking behaviors are effectively eliminated."
+  },
+  "note": "Training safeguard verified by manual inspection."
+ },
+ {
+  "key": "safety|qwen|rtp lx prompt 40 languages",
+  "canonical": "RTP-LX (prompt)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Public multilingual toxicity; F1."
+ },
+ {
+  "key": "safety|qwen|saferlhf",
+  "canonical": "SafeRLHF",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; response F1."
+ },
+ {
+  "key": "safety|qwen|safety rl on qwen3 4b with qwen3guard reward wildjailbreak eval set 2 000 harmful 210 benign prompts safety judged by qwen3 235b instruct 2507 and wildguard",
+  "canonical": "Qwen3-4B Safety RL eval on WildJailbreak",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_open",
+  "grader_model": "Qwen3-235B-Instruct-2507; WildGuard",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 12,
+   "quote": "Qwen3-235B-Instruct-2507 as an LLM-as-a-Judge to assess response safety, and (2) the WildGuard model"
+  },
+  "note": "Public WildJailbreak eval set judged by open-weight models."
+ },
+ {
+  "key": "safety|qwen|seccodebench",
+  "canonical": "SecCodeBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Alibaba secure-coding benchmark."
+ },
+ {
+  "key": "safety|qwen|seccodebench secure code gen repair",
+  "canonical": "SecCodeBench (gen/repair)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 23,
+   "quote": "SecCodeBench consists of 53 Java coding tasks, the majority of which are derived from anonymized, real-world historical vulnerabilities at Alibaba"
+  },
+  "note": "Public; test/security checks."
+ },
+ {
+  "key": "safety|qwen|simplesafetytests",
+  "canonical": "SimpleSafetyTests",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1."
+ },
+ {
+  "key": "safety|qwen|stream qwen3guard detection latency sentence level human annotation",
+  "canonical": "Stream Qwen3Guard detection latency",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 18,
+   "quote": "human annotators were instructed to identify the earliest sentence in which the content becomes unsafe or controvers"
+  },
+  "note": "Constructed test set with human sentence-level labels; latency computed vs labels."
+ },
+ {
+  "key": "safety|qwen|suicide self harm category",
+  "canonical": "Suicide & Self-Harm category",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Policy category definition."
+ },
+ {
+  "key": "safety|qwen|think in house reasoning trace moderation set qwen3guardtest",
+  "canonical": "Qwen3GuardTest 'Think' set",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 6,
+   "quote": "The test data is publicly available at https://huggingface.co/datasets/Qwen/Qwen3GuardTest."
+  },
+  "note": "Released; F1 vs human labels."
+ },
+ {
+  "key": "safety|qwen|toxicchat",
+  "canonical": "ToxicChat",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1."
+ },
+ {
+  "key": "safety|qwen|wildguard refusal classification in safety rl",
+  "canonical": "WildGuard refusal classification in Safety RL",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_open",
+  "grader_model": "WildGuard-7B",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 12,
+   "quote": "We measure the model's tendency to refuse the user requests using the refusal classification provided by the WildGuard model."
+  },
+  "note": "Open-weight classifier as grader."
+ },
+ {
+  "key": "safety|qwen|wildguardtest",
+  "canonical": "WildGuardTest",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1."
+ },
+ {
+  "key": "safety|qwen|wildjailbreak vanilla and adversarial harmful used for safety rl training eval",
+  "canonical": "WildJailbreak (Safety RL)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_open",
+  "grader_model": "Qwen3-235B-Instruct-2507; WildGuard",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Public WildJailbreak; open-weight judges."
+ },
+ {
+  "key": "safety|qwen|xstest response",
+  "canonical": "XSTest (response)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public; F1."
+ },
+ {
+  "key": "safety|qwen|xstest response classification and refusal detection",
+  "canonical": "XSTest (response classification and refusal detection)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public; F1."
+ }
+]

@@ -1,0 +1,3394 @@
+[
+ {
+  "key": "capability|aa briefcase",
+  "canonical": "AA-Briefcase",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": "panel of frontier models",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 193,
+   "quote": "grading combines rubric scoring and pairwise judging via a panel of frontier models"
+  },
+  "note": "Artificial Analysis benchmark; task release status not stated; graded by unnamed panel of frontier models."
+ },
+ {
+  "key": "capability|aa briefcase v1 1",
+  "canonical": "AA-Briefcase v1.1",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": "panel of frontier models",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 131,
+   "quote": "Grading combines rubric scoring and pairwise judging via a panel of frontier models"
+  },
+  "note": "Artificial Analysis benchmark; release status not stated; unnamed frontier-model judge panel."
+ },
+ {
+  "key": "capability|aa lcr",
+  "canonical": "AA-LCR",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_open",
+  "grader_model": "Qwen3-235B-A22B (AA equality checker)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Artificial Analysis long-context dataset; official scoring uses an open-weight LLM answer checker."
+ },
+ {
+  "key": "capability|aav capsid packaging prediction",
+  "canonical": "AAV Capsid Packaging Prediction",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 43,
+   "quote": "We evaluate this capability using an evaluation developed by Dyno Therapeutics."
+  },
+  "note": "Contractor-built dataset of labeled AAV sequences; predictions scored against held-out packaging labels."
+ },
+ {
+  "key": "capability|advancedif",
+  "canonical": "AdvancedIF",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public Meta rubric-based instruction-following benchmark scored by an LLM rubric verifier; judge not named in doc."
+ },
+ {
+  "key": "capability|agent behavior bench",
+  "canonical": "Agent Behavior Bench (Kimi in-house)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 29,
+   "quote": "extends agent evaluation from outcome correctness to process quality, scoring tool-use behavior, efficiency, and discipline alongside task completion"
+  },
+  "note": "Kimi in-house suite; scoring method for process quality not described."
+ },
+ {
+  "key": "capability|agent s last exam",
+  "canonical": "Agents' Last Exam",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Only a results table row; no description of task availability or grading."
+ },
+ {
+  "key": "capability|agenticvbench",
+  "canonical": "AgenticVBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 13,
+   "quote": "AgenticVBench: evaluated with Claude Code."
+  },
+  "note": "Cited external benchmark (Cao et al., 2026); grading not described."
+ },
+ {
+  "key": "capability|agents last exam",
+  "canonical": "Agents' Last Exam",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": "Scores are cited from the [official leaderboard](https://agents-last-exam.org/leaderboard) as of July 23, 2026"
+  },
+  "note": "Scores cited from an external leaderboard; task availability and grading not described."
+ },
+ {
+  "key": "capability|agents last exam ale cli",
+  "canonical": "Agents' Last Exam (ALE-CLI)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Only named in a results figure; no grading details."
+ },
+ {
+  "key": "capability|agents last exam pass score",
+  "canonical": "Agents' Last Exam",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Only a table row (pass/score); no grading details."
+ },
+ {
+  "key": "capability|ai2d test",
+  "canonical": "AI2D",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public diagram multiple-choice QA scored by exact match."
+ },
+ {
+  "key": "capability|aider polyglot",
+  "canonical": "Aider Polyglot",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public Exercism-based coding benchmark scored by unit tests."
+ },
+ {
+  "key": "capability|aime 2024",
+  "canonical": "AIME 2024",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public competition problems with integer answers, exact match."
+ },
+ {
+  "key": "capability|aime 2025",
+  "canonical": "AIME 2025",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 32,
+   "quote": null
+  },
+  "note": "Public competition problems with integer answers, exact match."
+ },
+ {
+  "key": "capability|aime 2026",
+  "canonical": "AIME 2026",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/diffusiongemma-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public competition problems with integer answers, exact match."
+ },
+ {
+  "key": "capability|aime 2026 i",
+  "canonical": "AIME 2026 I",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public competition problems with integer answers, exact match."
+ },
+ {
+  "key": "capability|aime26",
+  "canonical": "AIME 2026",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public competition problems with integer answers, exact match."
+ },
+ {
+  "key": "capability|alimeeting test der cpwer",
+  "canonical": "AliMeeting (DER / cpWER)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public meeting-speech corpus scored with DER/cpWER metrics."
+ },
+ {
+  "key": "capability|androidbench",
+  "canonical": "AndroidBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "AndroidBench: Evaluated on the 95-task public subset, reporting avg@3 scores."
+  },
+  "note": "Public subset used; scoring method not described."
+ },
+ {
+  "key": "capability|androidworld",
+  "canonical": "AndroidWorld",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public Android agent environment with programmatic task-success checks."
+ },
+ {
+  "key": "capability|anthropic eci model 2",
+  "canonical": "Anthropic ECI (AECI)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 102,
+   "quote": "Our version of this metric, the Anthropic ECI, is powered by internal benchmark results"
+  },
+  "note": "Composite capability index fitted on internal benchmark results."
+ },
+ {
+  "key": "capability|apex agents",
+  "canonical": "APEX-Agents",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-6-hf-model-card",
+   "page": null,
+   "quote": "we evaluate 452 tasks from the public 480-task release"
+  },
+  "note": "Mercor public task release; rubric-based LLM judging, judge not named in doc."
+ },
+ {
+  "key": "capability|apollo sabotage suite",
+  "canonical": "Apollo Research sabotage suite",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 20,
+   "quote": "In their sabotage suite, Apollo reports a mean best-of-10 score of 0.88 (max 1.00)"
+  },
+  "note": "External Apollo Research assessment reported only as an outcome."
+ },
+ {
+  "key": "capability|arc agi 1",
+  "canonical": "ARC-AGI-1",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 196,
+   "quote": "ARC-AGI-1 and 90% on ARC-AGI-2 at max effort on their semi-private datasets."
+  },
+  "note": "Reported on ARC Prize semi-private set (public eval set exists); exact-match grid scoring."
+ },
+ {
+  "key": "capability|arc agi 2",
+  "canonical": "ARC-AGI-2",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 196,
+   "quote": "ARC-AGI-2 at max effort on their semi-private datasets."
+  },
+  "note": "Reported on ARC Prize semi-private set; exact-match grid scoring."
+ },
+ {
+  "key": "capability|arc agi 2 verified",
+  "canonical": "ARC-AGI-2",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 28,
+   "quote": "This test uses a private validation set to ensure consistency and fairness across models"
+  },
+  "note": "Private/semi-private validation set run by ARC Prize; exact-match scoring."
+ },
+ {
+  "key": "capability|arc agi 3",
+  "canonical": "ARC-AGI-3",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 186,
+   "quote": "The reported results use a semi-private evaluation set of games."
+  },
+  "note": "Semi-private game set; efficiency-based programmatic scoring vs human action baselines."
+ },
+ {
+  "key": "capability|arena hard v2",
+  "canonical": "Arena-Hard v2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3guard-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public prompts; official pairwise judge GPT-4.1."
+ },
+ {
+  "key": "capability|arena hard v2 winrate",
+  "canonical": "Arena-Hard v2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1",
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 20,
+   "quote": "For reproducibility of Arena-Hard v2, we report the win rates evaluated by GPT-4.1."
+  },
+  "note": "Public prompts; GPT-4.1 judge."
+ },
+ {
+  "key": "capability|artificial analysis intelligence index",
+  "canonical": "Artificial Analysis Intelligence Index",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Composite of many AA evals with mixed programmatic and LLM-judged components; some components private."
+ },
+ {
+  "key": "capability|artificial analysis intelligence index v4 0",
+  "canonical": "Artificial Analysis Intelligence Index v4.0",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 2,
+   "quote": "Artificial Analysis Intelligence Index v4.0 incorporates 10 evaluations"
+  },
+  "note": "Composite index of 10 evals with mixed graders (programmatic and LLM judges)."
+ },
+ {
+  "key": "capability|artificial analysis intelligence index v4 1",
+  "canonical": "Artificial Analysis Intelligence Index v4.1",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 32,
+   "quote": null
+  },
+  "note": "Composite index cited from Artificial Analysis; mixed graders."
+ },
+ {
+  "key": "capability|arxivmath",
+  "canonical": "ArXivMath (MathArena)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 260,
+   "quote": "ArXivMath is a final-answer benchmark of research-level mathematics maintained by MathArena."
+  },
+  "note": "Problems published monthly by MathArena; final-answer verification."
+ },
+ {
+  "key": "capability|arxivmath april may 2026",
+  "canonical": "ArXivMath (MathArena)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 120,
+   "quote": "ArXivMath is a final-answer benchmark of research-level mathematics maintained by MathArena."
+  },
+  "note": "Monthly MathArena release; final-answer verification."
+ },
+ {
+  "key": "capability|arxivmath june 2026",
+  "canonical": "ArXivMath (MathArena)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 174,
+   "quote": "ArXivMath is a final-answer benchmark of research-level mathematics maintained by MathArena."
+  },
+  "note": "Monthly MathArena release; final-answer verification."
+ },
+ {
+  "key": "capability|audio multichallenge",
+  "canonical": "Audio MultiChallenge",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Cited external audio dialogue benchmark (Gosai et al., 2026); rubric LLM judging assumed, not described."
+ },
+ {
+  "key": "capability|automation bench pass 1",
+  "canonical": "AutomationBench (Zapier)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "Automation-Bench: Evaluated on the 600-task public subset."
+  },
+  "note": "Public task subset; pass/fail via deterministic assertions on simulated app state."
+ },
+ {
+  "key": "capability|automationbench",
+  "canonical": "AutomationBench (Zapier)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 295,
+   "quote": "Grading is pass or fail for each task based on meeting all deterministic assertions on simulated app state"
+  },
+  "note": "Public release exists but leaderboard numbers use a private held-out set; deterministic assertions."
+ },
+ {
+  "key": "capability|automationbench v1 0 6",
+  "canonical": "AutomationBench v1.0.6",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Zapier release v1.0.6 from GitHub; deterministic state assertions."
+ },
+ {
+  "key": "capability|avut",
+  "canonical": "AVUT",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public audio-visual understanding benchmark, multiple-choice accuracy."
+ },
+ {
+  "key": "capability|babyvision",
+  "canonical": "BabyVision",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public visual reasoning benchmark; answer-matching method not stated in doc."
+ },
+ {
+  "key": "capability|bbh",
+  "canonical": "BBH",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-next-architecture-report",
+   "page": 23,
+   "quote": null
+  },
+  "note": "Public BIG-Bench Hard, exact match."
+ },
+ {
+  "key": "capability|benchcad vision2code",
+  "canonical": "BenchCAD Vision2Code",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 187,
+   "quote": "BenchCAD Vision2Code (1,000-file subset)"
+  },
+  "note": "Public benchmark but Anthropic reports an unreleased 1,000-file subset; voxel IoU metric."
+ },
+ {
+  "key": "capability|bfcl irrelevance",
+  "canonical": "BFCL Irrelevance",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard category; AST/exec checking."
+ },
+ {
+  "key": "capability|bfcl live multiple",
+  "canonical": "BFCL Live Multiple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl live parallel",
+  "canonical": "BFCL Live Parallel",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl live parallel multiple",
+  "canonical": "BFCL Live Parallel Multiple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl live simple",
+  "canonical": "BFCL Live Simple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl multiple",
+  "canonical": "BFCL Multiple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl parallel",
+  "canonical": "BFCL Parallel",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl parallel multiple",
+  "canonical": "BFCL Parallel Multiple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl relevance",
+  "canonical": "BFCL Relevance",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl simple",
+  "canonical": "BFCL Simple",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl v3",
+  "canonical": "BFCL v3",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|bfcl v4",
+  "canonical": "BFCL v4",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Berkeley Function Calling Leaderboard; AST/executable checking."
+ },
+ {
+  "key": "capability|big bench extra hard",
+  "canonical": "BIG-Bench Extra Hard",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/diffusiongemma-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public BBEH, exact-match answers."
+ },
+ {
+  "key": "capability|biochemistry knowledge reward 4",
+  "canonical": "Biochemistry knowledge (OpenAI internal)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 26,
+   "quote": "We assessed general improvements in biochemical capabilities of GPT-5.5 over GPT-5.4-thinking to estimate incremental risk."
+  },
+  "note": "OpenAI internal biochem task collection; grading not described."
+ },
+ {
+  "key": "capability|biomysterybench",
+  "canonical": "BioMysteryBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 303,
+   "quote": "the subset that remain unsolved by humans but have an objective, ground-truth solution"
+  },
+  "note": "Anthropic-built; also reported by Google, suggesting release; answers have objective ground truth but grader not described."
+ },
+ {
+  "key": "capability|biomysterybench human difficult",
+  "canonical": "BioMysteryBench (Human Difficult)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Anthropic-built benchmark reported by Google, suggesting it is released; grader not described."
+ },
+ {
+  "key": "capability|biomysterybench human solvable",
+  "canonical": "BioMysteryBench (Human Solvable)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 201,
+   "quote": "we limited Claude's ability to install packages to only those available in an internal repository"
+  },
+  "note": "Anthropic-built, later reported by other labs; grading method not described."
+ },
+ {
+  "key": "capability|biomysterybench human solvable human difficult",
+  "canonical": "BioMysteryBench (Human Solvable / Human Difficult)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Anthropic-built, later reported by other labs; grading method not described."
+ },
+ {
+  "key": "capability|biomysterybench life sciences",
+  "canonical": "BioMysteryBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 45,
+   "quote": "Although these evaluations are not publicly released, we briefly describe each below."
+  },
+  "note": "At Opus 4.6 time an unreleased Anthropic life-science eval; grader not described."
+ },
+ {
+  "key": "capability|bird sql",
+  "canonical": "BIRD-SQL",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public text-to-SQL benchmark scored by execution accuracy."
+ },
+ {
+  "key": "capability|blink",
+  "canonical": "BLINK",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public multiple-choice visual perception benchmark."
+ },
+ {
+  "key": "capability|blueprint bench 2",
+  "canonical": "Blueprint-Bench 2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 282,
+   "quote": "We proposed the system prompt and grading changes to the reference repository in GitHub."
+  },
+  "note": "Reference repo on GitHub; geometric grading of produced shapes."
+ },
+ {
+  "key": "capability|browsecomp",
+  "canonical": "BrowseComp",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "official BrowseComp grader prompt (GPT-4-class model)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 251,
+   "quote": null
+  },
+  "note": "Public OpenAI set; answers checked by an LLM grader with the official prompt; Anthropic grader model not stated."
+ },
+ {
+  "key": "capability|browsecomp multi agent",
+  "canonical": "BrowseComp (multi-agent)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 40,
+   "quote": null
+  },
+  "note": "Public BrowseComp set; LLM grading, model not stated in doc."
+ },
+ {
+  "key": "capability|browsecomp plus multi agent search opus orchestrator haiku subagents",
+  "canonical": "BrowseComp-Plus",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 21,
+   "quote": "We evaluated Claude Opus 4.5 on BrowseComp-Plus with Claude Sonnet 4.5 as the grader"
+  },
+  "note": "Public fixed-corpus benchmark; graded by Claude Sonnet 4.5 with a custom (published) grader prompt."
+ },
+ {
+  "key": "capability|browsecomp vl",
+  "canonical": "BrowseComp-VL",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public multimodal BrowseComp variant; LLM answer judging, model not stated."
+ },
+ {
+  "key": "capability|browsecomp zh",
+  "canonical": "BrowseComp-ZH",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-4.7-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Chinese browsing set; official LLM grader."
+ },
+ {
+  "key": "capability|c eval",
+  "canonical": "C-Eval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Chinese multiple-choice exam benchmark."
+ },
+ {
+  "key": "capability|capture the flag internal",
+  "canonical": "Capture the Flag (OpenAI internal curated set)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-6-august-update",
+   "page": 23,
+   "quote": "The set was curated by filtering for 63 challenges in diverse categories with low solve-rates on GPT-5.3 codex with high compute."
+  },
+  "note": "Curated unreleased subset of public CTFs; flag capture."
+ },
+ {
+  "key": "capability|capture the flag internal 63 challenges",
+  "canonical": "Capture the Flag (OpenAI internal curated set)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 48,
+   "quote": "The challenge was publicly available and provided with a working execution environment."
+  },
+  "note": "Unreleased curated subset of public CTF challenges; flag capture."
+ },
+ {
+  "key": "capability|capture the flag professional",
+  "canonical": "Capture the Flag (Professional)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 21,
+   "quote": "We evaluate model performance on a test set of curated, publicly available CTF challenges"
+  },
+  "note": "Curated unreleased selection of public CTFs; flag capture."
+ },
+ {
+  "key": "capability|cc bench v2 backend",
+  "canonical": "CC-Bench-V2 Backend",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 24,
+   "quote": "Every change must pass the full unit tests within realistic engineering constraints."
+  },
+  "note": "Zhipu internal suite; backend tasks graded by unit tests."
+ },
+ {
+  "key": "capability|cc bench v2 chained tasks",
+  "canonical": "CC-Bench-V2 Chained Tasks",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5 (Agent-as-a-Judge, Claude Code)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 24,
+   "quote": "Evaluation combines unit tests with Agent-as-a-Judge to verify both functional correctness and semantic adherence."
+  },
+  "note": "Internal suite; unit tests plus Agent-as-a-Judge (Claude Code with Sonnet 4.5 per frontend section)."
+ },
+ {
+  "key": "capability|cc bench v2 frontend",
+  "canonical": "CC-Bench-V2 Frontend",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5 (Claude Code judge agent)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 26,
+   "quote": "Successfully built instances are then handed to an autonomous Judge Agent (Claude Code with Claude Sonnet 4.5, equipped with Playwright MCP tool)"
+  },
+  "note": "Internal suite; GUI judge agent built on Claude Sonnet 4.5."
+ },
+ {
+  "key": "capability|cc bench v2 frontend html",
+  "canonical": "CC-Bench-V2 Frontend HTML",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5 (Claude Code judge agent)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 26,
+   "quote": "Successfully built instances are then handed to an autonomous Judge Agent (Claude Code with Claude Sonnet 4.5, equipped with Playwright MCP tool)"
+  },
+  "note": "Internal suite; GUI judge agent built on Claude Sonnet 4.5."
+ },
+ {
+  "key": "capability|cc bench v2 frontend react",
+  "canonical": "CC-Bench-V2 Frontend React",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5 (Claude Code judge agent)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 26,
+   "quote": "Successfully built instances are then handed to an autonomous Judge Agent (Claude Code with Claude Sonnet 4.5, equipped with Playwright MCP tool)"
+  },
+  "note": "Internal suite; GUI judge agent built on Claude Sonnet 4.5."
+ },
+ {
+  "key": "capability|cc bench v2 frontend vue",
+  "canonical": "CC-Bench-V2 Frontend Vue",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.5 (Claude Code judge agent)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 26,
+   "quote": "Successfully built instances are then handed to an autonomous Judge Agent (Claude Code with Claude Sonnet 4.5, equipped with Playwright MCP tool)"
+  },
+  "note": "Internal suite; GUI judge agent built on Claude Sonnet 4.5."
+ },
+ {
+  "key": "capability|cc bench v2 repo exploration",
+  "canonical": "CC-Bench-V2 Repo Exploration",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-5-tech-report",
+   "page": 26,
+   "quote": "a question is considered solved if the agent successfully reads the target file during exploration"
+  },
+  "note": "Internal suite; success = agent reads target file."
+ },
+ {
+  "key": "capability|cc ocr",
+  "canonical": "CC-OCR",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public OCR benchmark with metric-based scoring."
+ },
+ {
+  "key": "capability|cfeval",
+  "canonical": "CFEval (Qwen Codeforces Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 22,
+   "quote": null
+  },
+  "note": "Qwen in-house Codeforces-style Elo evaluation; problems not released as a set; judged by test cases."
+ },
+ {
+  "key": "capability|character editing elo",
+  "canonical": "Character Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing, and Multi-Turn."
+  },
+  "note": "Internal prompt set; side-by-side human ratings."
+ },
+ {
+  "key": "capability|character editing human eval elo",
+  "canonical": "Character Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal prompt set; human side-by-side Elo."
+ },
+ {
+  "key": "capability|chart editing human eval elo",
+  "canonical": "Chart Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal prompt set; human side-by-side Elo."
+ },
+ {
+  "key": "capability|chartmimic",
+  "canonical": "ChartMimic",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official high-level score)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public chart-to-code benchmark; low-level code metrics plus GPT-4o visual score."
+ },
+ {
+  "key": "capability|chartmuseum",
+  "canonical": "ChartMuseum",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 128,
+   "quote": null
+  },
+  "note": "Public chart QA benchmark; answers checked by an LLM equivalence judge; model not stated."
+ },
+ {
+  "key": "capability|chartography",
+  "canonical": "Chartography (Surge AI)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.5 Flash",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 124,
+   "quote": "we followed the Surge AI Leaderboard in using Gemini 3.5 Flash as a grader"
+  },
+  "note": "Tasks and answer ranges in official repository; Gemini 3.5 Flash grader."
+ },
+ {
+  "key": "capability|chartqa test",
+  "canonical": "ChartQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public chart QA, relaxed accuracy."
+ },
+ {
+  "key": "capability|chartqapro",
+  "canonical": "ChartQAPro",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 216,
+   "quote": "Our internal implementation of ChartQAPro matches the “Chain-of-Thought” prompting and rule-based grading reference implementation in VLMEvalKit"
+  },
+  "note": "Public set with rule-based grading."
+ },
+ {
+  "key": "capability|charxiv reasoning",
+  "canonical": "CharXiv Reasoning",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 194,
+   "quote": "we updated the grading model for CharXiv Reasoning and LAB-Bench FigQA."
+  },
+  "note": "Public set (official GPT-4o judge), but Anthropic uses its own unnamed grading model."
+ },
+ {
+  "key": "capability|charxiv rq",
+  "canonical": "CharXiv (RQ)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public set; official GPT-4o answer judge."
+ },
+ {
+  "key": "capability|claw eval",
+  "canonical": "Claw-Eval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-6-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public agent benchmark; grading not described in doc."
+ },
+ {
+  "key": "capability|claw eval avg",
+  "canonical": "Claw-Eval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public agent benchmark; grading not described in doc."
+ },
+ {
+  "key": "capability|claw eval pass 3",
+  "canonical": "Claw-Eval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.6-35b-a3b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public agent benchmark (pass^3); grading not described in doc."
+ },
+ {
+  "key": "capability|claweval",
+  "canonical": "ClawEval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public agent benchmark; grading not described in doc."
+ },
+ {
+  "key": "capability|claweval mm",
+  "canonical": "ClawEval-MM",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-flash-next",
+   "page": null,
+   "quote": null
+  },
+  "note": "Multimodal subset of Claw-Eval; grading not described."
+ },
+ {
+  "key": "capability|cobench v2 internal root cause diagnosis on 449 real anthropic r d problems",
+  "canonical": "CoBench v2 (Anthropic internal)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/anthropic-risk-report-aug-2026",
+   "page": 100,
+   "quote": "Problems are model-graded using a rubric that compares a solution to the root cause we identified in practice"
+  },
+  "note": "Internal Anthropic R&D problems; unnamed model grader with rubric."
+ },
+ {
+  "key": "capability|code arena",
+  "canonical": "Code Arena (LMArena)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Arena leaderboard from crowd-sourced user prompts and human pairwise votes."
+ },
+ {
+  "key": "capability|codeforces",
+  "canonical": "Codeforces",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/diffusiongemma-model-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Public contest problems scored by test cases / Elo."
+ },
+ {
+  "key": "capability|corpfin v2",
+  "canonical": "CorpFin v2 (Vals AI)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": "CorpFin v2, Finance Agent v2, and Legal Research Bench.** Scores are cited from [Vals AI](https://www.vals.ai/)."
+  },
+  "note": "Vals AI benchmark with private test portion; scores cited from Vals; grader not stated."
+ },
+ {
+  "key": "capability|countbench",
+  "canonical": "CountBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public counting benchmark, exact match."
+ },
+ {
+  "key": "capability|covost",
+  "canonical": "CoVoST 2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemma-4-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Public speech translation, BLEU."
+ },
+ {
+  "key": "capability|coworkbench",
+  "canonical": "CoWorkBench (Qwen in-house)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": "CoWorkBench: Inhouse cowork benchmark for evaluating long-horizon tasks across computer science, finance, law, medical, and other productivity domains."
+  },
+  "note": "Qwen in-house; grading not described."
+ },
+ {
+  "key": "capability|creative editing elo",
+  "canonical": "Creative Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal prompt set; human side-by-side Elo."
+ },
+ {
+  "key": "capability|creative writing v3",
+  "canonical": "Creative Writing v3 (EQ-Bench)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude 3.7 Sonnet",
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 20,
+   "quote": "For reproducibility of Creative Writing v3, we report the scores evaluated by Claude 3.7 Sonnet."
+  },
+  "note": "Public prompts; Claude 3.7 Sonnet judge."
+ },
+ {
+  "key": "capability|creddata corrected",
+  "canonical": "CredData (corrected)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 13,
+   "quote": "For each such span, a reasoning model (GPT-5.4 with high reasoning) reviews the full example context along with the detected span"
+  },
+  "note": "Public CredData with labels corrected by GPT-5.4 + human review (corrections unreleased); span-level metric scoring."
+ },
+ {
+  "key": "capability|critpt",
+  "canonical": "CritPt",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 261,
+   "quote": "Answers use machine-verifiable formats and are scored by an automated physics-specific grading pipeline."
+  },
+  "note": "Problems released but answers hidden behind the CritPt grading API; automated grading."
+ },
+ {
+  "key": "capability|cruxeval",
+  "canonical": "CRUXEval",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public code reasoning, execution-checked."
+ },
+ {
+  "key": "capability|cursorbench 3 2 0",
+  "canonical": "CursorBench 3.2.0",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 172,
+   "quote": "It is composed of coding tasks that are representative of real-world Cursor usage (drawn from internal use and external traffic)"
+  },
+  "note": "Cursor-internal tasks run and scored by Cursor; grading not described."
+ },
+ {
+  "key": "capability|cursorbench 4 0",
+  "canonical": "CursorBench 4.0",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-5-system-card",
+   "page": 115,
+   "quote": "All scores were measured and reported independently by Cursor"
+  },
+  "note": "Cursor-internal tasks from real usage; grading not described."
+ },
+ {
+  "key": "capability|cve bench",
+  "canonical": "CVE-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 12,
+   "quote": "CVE-Bench [2] is a public benchmark meant to measure a model's ability to identify and exploit vulnerabilities"
+  },
+  "note": "Public benchmark with automated exploit-success checks."
+ },
+ {
+  "key": "capability|cwe bench v1",
+  "canonical": "CWE-Bench v1",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 8,
+   "quote": "an end-to-end benchmark testing autonomous security audits and patch synthesis across six programming languages without prior bug localization"
+  },
+  "note": "Availability and grader not described."
+ },
+ {
+  "key": "capability|cybench",
+  "canonical": "Cybench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 49,
+   "quote": null
+  },
+  "note": "Public CTF suite, flag capture."
+ },
+ {
+  "key": "capability|cyber range",
+  "canonical": "Cyber Range (OpenAI)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 16,
+   "quote": "Cyber Range is an internally developed benchmark to evaluate a given model's ability to conduct a multi-step operation in an emulated network environment."
+  },
+  "note": "Internal emulated-network scenarios; objective completion checked."
+ },
+ {
+  "key": "capability|cyber range combined pass rate",
+  "canonical": "Cyber Range combined pass rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 16,
+   "quote": null
+  },
+  "note": "Internal OpenAI cyber range scenarios; pass/fail on objectives."
+ },
+ {
+  "key": "capability|cybergym",
+  "canonical": "CyberGym",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 50,
+   "quote": null
+  },
+  "note": "Public vulnerability reproduction benchmark; PoC crash verification."
+ },
+ {
+  "key": "capability|cyscenariobench",
+  "canonical": "CyScenarioBench (Irregular)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 26,
+   "quote": "Irregular interprets this as higher operational capability on long-horizon scenarios"
+  },
+  "note": "Irregular-run scenario benchmark, not released; reported as outcomes."
+ },
+ {
+  "key": "capability|cyscenariobench irregular",
+  "canonical": "CyScenarioBench (Irregular)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 17,
+   "quote": null
+  },
+  "note": "Irregular-run, unreleased scenario challenges."
+ },
+ {
+  "key": "capability|cyscenariobench irregular end to end challenges",
+  "canonical": "CyScenarioBench (Irregular)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 34,
+   "quote": "This is a suite of realistic long-horizon challenges we co-developed with Irregular"
+  },
+  "note": "Co-developed with Irregular, not released; scoring not described."
+ },
+ {
+  "key": "capability|dailyomni",
+  "canonical": "DailyOmni",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public audio-visual MCQ benchmark."
+ },
+ {
+  "key": "capability|deep research bench",
+  "canonical": "Deep Research Bench (Kimi in-house)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 29,
+   "quote": "Deep Research Bench: evaluates models on deep-research-style queries curated by domain experts and graded with expert-aligned rubrics."
+  },
+  "note": "Kimi in-house; rubric grading, grader model not stated."
+ },
+ {
+  "key": "capability|deepplanning",
+  "canonical": "DeepPlanning",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Qwen-released planning benchmark; grading not described in card."
+ },
+ {
+  "key": "capability|deepsearchqa",
+  "canonical": "DeepSearchQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public Google DeepMind set; LLM autorater, model not stated in doc."
+ },
+ {
+  "key": "capability|deepsearchqa draco",
+  "canonical": "DeepSearchQA / DRACO",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude Opus 4.6 (DRACO)",
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-7-system-card",
+   "page": 201,
+   "quote": null
+  },
+  "note": "Combined row of two public benchmarks; DRACO graded by Claude Opus 4.6 per Anthropic."
+ },
+ {
+  "key": "capability|deepsearchqa multi agent",
+  "canonical": "DeepSearchQA (multi-agent)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Public set; F1 via LLM grading, model not stated."
+ },
+ {
+  "key": "capability|deepswe",
+  "canonical": "DeepSWE",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5.2-hf-model-card",
+   "page": null,
+   "quote": "We run DeepSWE with the official pier evaluation framework"
+  },
+  "note": "Run by GLM via official framework; hidden tests plus unnamed model-graded rubric checks."
+ },
+ {
+  "key": "capability|deepswe 1 1",
+  "canonical": "DeepSWE v1.1",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "qwen/qwen3.8-2.4t-a95b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Official framework; hidden tests plus model-graded rubric checks."
+ },
+ {
+  "key": "capability|deepswe v1 1",
+  "canonical": "DeepSWE v1.1",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 168,
+   "quote": "A note on scoring: DeepSWE grades each task with hidden tests that are often written for a single reference solution."
+  },
+  "note": "Hidden unit tests plus unnamed model-graded rubric checks."
+ },
+ {
+  "key": "capability|deepswe v13",
+  "canonical": "DeepSWE",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-6-flash-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Only a table row; assumed same as DeepSWE (hidden tests + model-graded checks)."
+ },
+ {
+  "key": "capability|design2code",
+  "canonical": "Design2Code",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public UI-to-code benchmark scored by visual/structural similarity metrics."
+ },
+ {
+  "key": "capability|dna sequence design for tf binding",
+  "canonical": "DNA sequence design for TF binding",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 28,
+   "quote": null
+  },
+  "note": "OpenAI internal bio design eval; scoring not described in the extracted text."
+ },
+ {
+  "key": "capability|docvqa test",
+  "canonical": "DocVQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public document QA, ANLS."
+ },
+ {
+  "key": "capability|doodle editing elo",
+  "canonical": "Doodle Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing."
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|doodle editing human eval elo",
+  "canonical": "Doodle Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|draco",
+  "canonical": "DRACO (Perplexity)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude Opus 4.6",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 207,
+   "quote": "For our evaluations, we use Opus 4.6 as the LLM judge to grade responses against the per-task rubrics"
+  },
+  "note": "Public rubric set; original judge Gemini-3-Pro replaced by Claude Opus 4.6."
+ },
+ {
+  "key": "capability|dynamath",
+  "canonical": "DynaMath",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public dynamic visual math benchmark."
+ },
+ {
+  "key": "capability|embspatialbench",
+  "canonical": "EmbSpatialBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-397b-a17b",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public spatial MCQ benchmark."
+ },
+ {
+  "key": "capability|erqa",
+  "canonical": "ERQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public embodied reasoning MCQ."
+ },
+ {
+  "key": "capability|evalplus",
+  "canonical": "EvalPlus",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public HumanEval+/MBPP+, unit tests."
+ },
+ {
+  "key": "capability|exploitbench",
+  "canonical": "ExploitBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 47,
+   "quote": "Every exploit tier is graded mechanically by deterministic verifiers."
+  },
+  "note": "Public author harness; deterministic verifiers."
+ },
+ {
+  "key": "capability|exploitbench internal port june august 2026",
+  "canonical": "ExploitBench - Internal Port",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 43,
+   "quote": "ExploitBench - Internal Port is an internal evaluation that tests whether models can develop working exploits for recently disclosed vulnerabilities"
+  },
+  "note": "OpenAI internal set on recent CVEs; code-execution success."
+ },
+ {
+  "key": "capability|exploitgym",
+  "canonical": "ExploitGym",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-5.3-hf-model-card",
+   "page": null,
+   "quote": "The reported results are single-run Pass@1 on 869 tasks"
+  },
+  "note": "Run by GLM itself on 869 tasks; exploit success / flag capture."
+ },
+ {
+  "key": "capability|facts",
+  "canonical": "FACTS",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini autoraters (official)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "FACTS has public and private splits; official LLM judges."
+ },
+ {
+  "key": "capability|facts benchmark suite",
+  "canonical": "FACTS Benchmark Suite",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini autoraters (official)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 5,
+   "quote": "Held out internal grounding, parametric, MM, and search retrieval benchmarks"
+  },
+  "note": "Includes held-out private splits; LLM autorater judging."
+ },
+ {
+  "key": "capability|facts grounding",
+  "canonical": "FACTS Grounding",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini 1.5 Pro, GPT-4o, Claude 3.5 Sonnet (official)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 193,
+   "quote": null
+  },
+  "note": "Public split plus private held-out split; judged by panel of public LLMs."
+ },
+ {
+  "key": "capability|factuality edu human eval elo",
+  "canonical": "Factuality - Edu (human eval Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|faithfulness 1 hallucination rate",
+  "canonical": "Faithfulness (Kimi in-house)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k3-tech-report",
+   "page": 30,
+   "quote": "Faithfulness: measures factual hallucination rates in model responses, with each response verified by a fact checker."
+  },
+  "note": "Kimi in-house; unnamed fact checker."
+ },
+ {
+  "key": "capability|faithjudge 1 hallucination",
+  "canonical": "FaithJudge",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "o3-mini-high (official)",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-linear-tech-report",
+   "page": 28,
+   "quote": null
+  },
+  "note": "Public Vectara hallucination benchmark using an LLM judge."
+ },
+ {
+  "key": "capability|finance agent",
+  "canonical": "Finance Agent (Vals AI)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 26,
+   "quote": "Finance Agent is a public benchmark published by Vals AI that assesses a model's performance on research on the SEC filings of public companies."
+  },
+  "note": "Vals publishes a public subset but leaderboard uses private test set; LLM judge unnamed."
+ },
+ {
+  "key": "capability|finance agent v2",
+  "canonical": "Finance Agent v2 (Vals AI)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-8-system-card",
+   "page": 195,
+   "quote": null
+  },
+  "note": "Vals AI benchmark with private test portion; scored by Vals with LLM judging."
+ },
+ {
+  "key": "capability|finance agent vals ai",
+  "canonical": "Finance Agent (Vals AI)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 26,
+   "quote": "Finance Agent is a public benchmark published by Vals AI that assesses a model's performance on research on the SEC filings of public companies."
+  },
+  "note": "Run by Vals AI on its test set; LLM grading unnamed."
+ },
+ {
+  "key": "capability|financeagent",
+  "canonical": "Finance Agent (Vals AI)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-5-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Vals AI benchmark with private test set; LLM grading."
+ },
+ {
+  "key": "capability|finsearchcomp t2 t3",
+  "canonical": "FinSearchComp T2&T3",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-5-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public ByteDance financial search benchmark; LLM judge."
+ },
+ {
+  "key": "capability|finsearchcomp t3",
+  "canonical": "FinSearchComp T3",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k2-thinking-blog",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public benchmark; LLM answer judge."
+ },
+ {
+  "key": "capability|flame vlm code",
+  "canonical": "Flame-VLM-Code",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5v-turbo-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Cited external UI-to-code benchmark; scoring not described."
+ },
+ {
+  "key": "capability|fleurs",
+  "canonical": "FLEURS",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemma-4-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Public speech set, WER/BLEU."
+ },
+ {
+  "key": "capability|fleurs asr top60 wer lower better",
+  "canonical": "FLEURS ASR",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.5-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public speech set, WER."
+ },
+ {
+  "key": "capability|fleurs asr wer 60 langs",
+  "canonical": "FLEURS ASR",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public speech set, WER."
+ },
+ {
+  "key": "capability|fleurs s2tt",
+  "canonical": "FLEURS S2TT",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-omni-tech-report",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Public speech translation, BLEU."
+ },
+ {
+  "key": "capability|frames",
+  "canonical": "FRAMES",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "kimi/kimi-k2-thinking-blog",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public Google set; LLM autorater for answer correctness."
+ },
+ {
+  "key": "capability|frontierbench v0 1",
+  "canonical": "FrontierBench v0.1",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-system-card",
+   "page": 153,
+   "quote": "FrontierBench results in this table are from Harbor's evaluations."
+  },
+  "note": "Results from Harbor; availability and grading not described."
+ },
+ {
+  "key": "capability|frontiercode 1 1 extended",
+  "canonical": "FrontierCode 1.1 Extended",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 169,
+   "quote": "Patches are graded against blocking functional criteria (primarily held-out unit tests) plus weighted rubric criteria, including model-graded checks for required test coverage and prohibited implementation patterns."
+  },
+  "note": "Cognition benchmark; held-out tests plus unnamed model-graded rubric checks; release status not stated."
+ },
+ {
+  "key": "capability|frontiercode 1 1 main",
+  "canonical": "FrontierCode 1.1 Main",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 169,
+   "quote": "Patches are graded against blocking functional criteria (primarily held-out unit tests) plus weighted rubric criteria, including model-graded checks for required test coverage and prohibited implementation patterns."
+  },
+  "note": "Cognition benchmark; held-out tests plus model-graded rubric checks."
+ },
+ {
+  "key": "capability|frontiercode diamond",
+  "canonical": "FrontierCode (Diamond)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 255,
+   "quote": "Patches are graded against blocking functional criteria (primarily held-out unit tests) plus weighted rubric criteria, including model-graded checks for required test coverage and prohibited implementation patterns."
+  },
+  "note": "Cognition benchmark subset; held-out tests plus model-graded rubric checks."
+ },
+ {
+  "key": "capability|frontiercode v1",
+  "canonical": "FrontierCode v1",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-5-system-card",
+   "page": 117,
+   "quote": "Patches are graded against blocking functional criteria (primarily held-out unit tests) plus weighted rubric criteria, including model-graded checks for required test coverage and prohibited implementation patterns."
+  },
+  "note": "Cognition benchmark; held-out tests plus model-graded checks."
+ },
+ {
+  "key": "capability|frontiercode v1 1 main",
+  "canonical": "FrontierCode v1.1 Main",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-opus-5-5-system-card",
+   "page": 176,
+   "quote": null
+  },
+  "note": "Cognition benchmark; held-out tests plus model-graded rubric checks."
+ },
+ {
+  "key": "capability|frontiercyber irregular",
+  "canonical": "FrontierCyber (Irregular)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 54,
+   "quote": "On FrontierCyber, a new benchmark from Irregular testing zero-day discovery and exploitation in current off-the-shelf software and hardware"
+  },
+  "note": "Irregular-run assessment; zero-day findings; not released."
+ },
+ {
+  "key": "capability|frontierswe",
+  "canonical": "FrontierSWE (Proximal)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "glm/glm-5.2-hf-model-card",
+   "page": null,
+   "quote": "The evaluation was conducted by [Proximal](https://www.proximal.ai) with 1M context length"
+  },
+  "note": "Run by Proximal; tasks scored on continuous execution metrics; release status unclear."
+ },
+ {
+  "key": "capability|frontierswe v2",
+  "canonical": "FrontierSWE v2 (Proximal)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 170,
+   "quote": "FrontierSWE v2¹⁴ is a Proximal benchmark of 34 ultra-long-horizon engineering and research tasks"
+  },
+  "note": "Proximal-run; continuous metrics (speedup, coverage); release status not stated."
+ },
+ {
+  "key": "capability|fullstackbench en",
+  "canonical": "FullStackBench (en)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public ByteDance benchmark, unit tests."
+ },
+ {
+  "key": "capability|fullstackbench zh",
+  "canonical": "FullStackBench (zh)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3-coder-next-tech-report",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Public ByteDance benchmark, unit tests."
+ },
+ {
+  "key": "capability|gdp pdf",
+  "canonical": "GDP.pdf (Surge AI)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_api",
+  "grader_model": "Claude Opus 4.7 (Anthropic); Gemini 3 Flash (Surge official)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 190,
+   "quote": "We used Claude Opus 4.7 as a judge instead of Gemini 3 Flash."
+  },
+  "note": "Surge AI benchmark (release status unclear); rubric judge swapped to Claude Opus 4.7."
+ },
+ {
+  "key": "capability|gdpval aa",
+  "canonical": "GDPval-AA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 294,
+   "quote": "performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs"
+  },
+  "note": "Uses public GDPval gold tasks; AA pairwise LLM judging, judge not named in doc."
+ },
+ {
+  "key": "capability|gdpval aa v2",
+  "canonical": "GDPval-AA v2",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 193,
+   "quote": "performance is measured via ELO ratings derived from blind pairwise comparisons of model outputs"
+  },
+  "note": "Public GDPval gold tasks; AA pairwise judge not named."
+ },
+ {
+  "key": "capability|gdpval aa v2 1",
+  "canonical": "GDPval-AA v2.1",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-haiku-5-5-system-card",
+   "page": 131,
+   "quote": null
+  },
+  "note": "Public GDPval gold tasks; AA pairwise judge not named."
+ },
+ {
+  "key": "capability|genai bench overall preference elo",
+  "canonical": "GenAI-Bench (human SxS Elo)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public GenAI-Bench prompts; Google human side-by-side ratings."
+ },
+ {
+  "key": "capability|genai bench visual quality elo",
+  "canonical": "GenAI-Bench Visual Quality (human SxS Elo)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Public GenAI-Bench prompts; human ratings."
+ },
+ {
+  "key": "capability|genebench",
+  "canonical": "Genebench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-rosalind-5-5-system-card",
+   "page": 4,
+   "quote": "Genebench spans a variety of domains, including functional genomics, spatial transcriptomics, proteomics, epigenomics, and applied genetics."
+  },
+  "note": "Apparently OpenAI-built; release and grading not described."
+ },
+ {
+  "key": "capability|general editing elo",
+  "canonical": "General Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing, and Multi-Turn."
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|general image editing human eval elo",
+  "canonical": "General Image Editing (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|general t2i elo",
+  "canonical": "General T2I (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing."
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|general text to image human eval elo",
+  "canonical": "General Text-to-Image (human SxS Elo)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal prompts; human side-by-side Elo."
+ },
+ {
+  "key": "capability|global mmlu gap to english",
+  "canonical": "Global MMLU (gap to English)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-sonnet-4-6-system-card",
+   "page": 42,
+   "quote": null
+  },
+  "note": "Public Cohere Global-MMLU, multiple choice."
+ },
+ {
+  "key": "capability|global mmlu gmmlu",
+  "canonical": "Global MMLU",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 300,
+   "quote": null
+  },
+  "note": "Public Cohere Global-MMLU, multiple choice."
+ },
+ {
+  "key": "capability|global piqa",
+  "canonical": "Global PIQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-flash-model-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public multilingual PIQA, multiple choice."
+ },
+ {
+  "key": "capability|gmmlu",
+  "canonical": "Global MMLU",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 200,
+   "quote": null
+  },
+  "note": "Public Cohere Global-MMLU, multiple choice."
+ },
+ {
+  "key": "capability|google re bench grb internal ml r d",
+  "canonical": "Google RE-Bench (GRB)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 67,
+   "quote": "GRB evaluates AI coding agents on autonomous execution of highly realistic research engineering tasks."
+  },
+  "note": "Internal Google ML R&D tasks scored by task verifiers."
+ },
+ {
+  "key": "capability|gpqa",
+  "canonical": "GPQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "glm/glm-4.7-flash-hf-model-card",
+   "page": null,
+   "quote": null
+  },
+  "note": "Public MCQ."
+ },
+ {
+  "key": "capability|gpqa diamond",
+  "canonical": "GPQA Diamond",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 258,
+   "quote": null
+  },
+  "note": "Public MCQ."
+ },
+ {
+  "key": "capability|graphwalks",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|graphwalks bfs 1m",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-opus-4-6-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|graphwalks bfs 256k",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 252,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|graphwalks bfs 256k 1m",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-mythos-preview-system-card",
+   "page": 189,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|graphwalks bfs up to 128k f1",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|graphwalks parents 256k",
+  "canonical": "GraphWalks",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 252,
+   "quote": null
+  },
+  "note": "Public OpenAI long-context graph benchmark scored by F1 against gold node sets."
+ },
+ {
+  "key": "capability|gsm8k",
+  "canonical": "GSM8K",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "qwen/qwen3.8-next-architecture-report",
+   "page": 23,
+   "quote": null
+  },
+  "note": "Public math word problems, exact match."
+ },
+ {
+  "key": "capability|hallusionbench",
+  "canonical": "HallusionBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "qwen/qwen3-vl-tech-report",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Public yes/no visual hallucination benchmark."
+ },
+ {
+  "key": "capability|handwritten kie",
+  "canonical": "Handwritten-KIE (GLM-OCR in-house)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "glm/glm-ocr-tech-report",
+   "page": 7,
+   "quote": "To assess the robustness of GLM-OCR in highly complex, real-world industrial scenarios, we conducted evaluations on a custom suite of in-house benchmarks."
+  },
+  "note": "In-house OCR benchmark; metric-based scoring assumed."
+ },
+ {
+  "key": "capability|hard negative protein binding prediction",
+  "canonical": "Hard-negative protein binding prediction",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 27,
+   "quote": "We probe this capability using a proprietary, non-contaminated dataset of protein-binding experimental results"
+  },
+  "note": "Proprietary dataset; binder selection scored against experimental labels."
+ },
+ {
+  "key": "capability|harvey lab aa",
+  "canonical": "Harvey LAB-AA",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.6 (LAB default judge)",
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "kimi/kimi-k3-hf-model-card",
+   "page": null,
+   "quote": "For Harvey Lab-AA, we report the criterion pass rate."
+  },
+  "note": "Artificial Analysis run of Harvey LAB; LAB uses LLM-as-judge with rubric criteria (default Claude Sonnet 4.6)."
+ },
+ {
+  "key": "capability|harvey s legal agent benchmark",
+  "canonical": "Harvey's Legal Agent Benchmark (LAB)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Claude Sonnet 4.6 (LAB default judge)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+   "page": 293,
+   "quote": "default judge model (Claude Sonnet 4.6)"
+  },
+  "note": "Public task set plus Harvey held-out set; rubric LLM judge."
+ },
+ {
+  "key": "capability|healthbench",
+  "canonical": "HealthBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official); Claude Opus 4.8 (Anthropic)",
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 198,
+   "quote": "Claude Opus 4.8 was used as the grader model."
+  },
+  "note": "Public rubric set; Anthropic grades with Claude Opus 4.8 instead of official GPT-4.1."
+ },
+ {
+  "key": "capability|healthbench consensus",
+  "canonical": "HealthBench Consensus",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-instant-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Public subset; official GPT-4.1 rubric grader."
+ },
+ {
+  "key": "capability|healthbench hard",
+  "canonical": "HealthBench Hard",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 178,
+   "quote": null
+  },
+  "note": "Public subset; official GPT-4.1 rubric grader."
+ },
+ {
+  "key": "capability|healthbench hard length adjusted",
+  "canonical": "HealthBench Hard (length-adjusted)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public subset with OpenAI length adjustment; GPT-4.1 grader."
+ },
+ {
+  "key": "capability|healthbench length adjusted",
+  "canonical": "HealthBench (length-adjusted)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Public set with OpenAI length adjustment; GPT-4.1 grader."
+ },
+ {
+  "key": "capability|healthbench pro",
+  "canonical": "HealthBench Pro",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 177,
+   "quote": "An expert-written rubrics-based benchmark tailored for experts and clinicians to assess a model's capabilities in enterprise healthcare scenarios"
+  },
+  "note": "Rubric-based; unclear whether same as OpenAI HealthBench Professional; grader not named."
+ },
+ {
+  "key": "capability|healthbench professional",
+  "canonical": "HealthBench Professional",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "Claude Opus 4.8 (Anthropic port)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+   "page": 198,
+   "quote": "Claude Opus 4.8 was used as the grader model."
+  },
+  "note": "OpenAI-published physician-authored set; Anthropic grades with Claude Opus 4.8."
+ },
+ {
+  "key": "capability|healthbench professional length adjusted",
+  "canonical": "HealthBench Professional (length-adjusted)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "OpenAI HealthBench grader (GPT-4.1-class)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 12,
+   "quote": null
+  },
+  "note": "OpenAI-published set; OpenAI official grader with length adjustment."
+ }
+]

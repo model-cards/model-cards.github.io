@@ -44,6 +44,7 @@ function header(active) {
     ["index.html", "Catalog"],
     ["compare.html", "Compare evals"],
     ["safety.html", "Safety evals"],
+    ["replicability.html", "Replicability"],
     ["about.html", "About"],
   ];
   const el = document.createElement("header");

@@ -1,0 +1,4 @@
+{
+ "safety|anthropic|multimodal virology vct securebio": {"data": "partial", "note": "SecureBio VCT; access-gated release to vetted researchers, so not openly available."},
+ "safety|anthropic|multimodal virology vct": {"data": "partial", "note": "SecureBio VCT; access-gated release to vetted researchers, so not openly available."}
+}

@@ -11,6 +11,8 @@ document is available as a PDF and as markdown, with extracted evaluations and a
 - `scripts/convert.py`: PDF/HTML → markdown via Mistral OCR. It needs `MISTRAL_API_KEY` in `.env`, which is git-ignored.
 - `scripts/build_site.py`: copies documents into `site/` and writes `site/data/cards.json` and `evals.json`.
 - `scripts/analyze.py`: writes `site/data/safety_stats.json`.
+- `scripts/replicability_inventory.py` → `data/replicability/batches/`; agents label them per `scripts/replicability_schema.md` into `data/replicability/labels/`
+  (manual fixes in `overrides.json`); `scripts/replicability.py` writes `site/data/replicability.json`.
 - `scripts/find.py`: grep a document with page numbers (used to verify citations).
 
 ## Rebuild
@@ -18,7 +20,7 @@ document is available as a PDF and as markdown, with extracted evaluations and a
 ```bash
 uv venv .venv && uv pip install --python .venv/bin/python requests
 .venv/bin/python -I scripts/convert.py        # only new docs; cached otherwise
-python3 -I scripts/build_site.py && python3 -I scripts/analyze.py
+python3 -I scripts/build_site.py && python3 -I scripts/analyze.py && python3 -I scripts/replicability.py
 cd site && python3 -m http.server 8000
 ```
 

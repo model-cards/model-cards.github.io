@@ -20,6 +20,7 @@
     <li><b>Conversion.</b> PDFs were converted to markdown with <a href="https://docs.mistral.ai/capabilities/document_ai/basic_ocr/">Mistral OCR</a>. Page markers are kept so that every citation can link back to a page. Documents that exist only as HTML or Hugging Face READMEs were rendered to PDF with headless Chrome. Those PDFs are marked “rendered”.</li>
     <li><b>Extraction.</b> Each document was read against a fixed schema: headline capability benchmarks, a safety framework determination, and 21 safety areas. Every safety area was rated <i>not covered / mentioned / light / substantial</i> and backed by a verbatim quote and a page number. The extraction was done by an LLM (Claude) working directly from the markdown. It can contain errors, so treat the PDF as authoritative.</li>
     <li><b>Analysis.</b> The <a href="safety.html">safety page</a> combines the per-document extractions into trends and gaps. Each claim on it links to the page that supports it.</li>
+    <li><b>Replicability.</b> Every named eval was labelled for whether its data is public and whether its judge is public (programmatic, open-weight or a named API model). The <a href="replicability.html">replicability page</a> aggregates the labels.</li>
   </ol>
   <h2>Caveats</h2>
   <ul>

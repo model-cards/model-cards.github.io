@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eval Replicability</title>
+<meta name="description" content="How much of the evaluation reported in frontier model cards could an outsider re-run: is the data public, and is the judge public?">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+<style>
+  :root { --t-replicable: var(--seq-3); --t-closed_judge: var(--seq-2); --t-partial_data: var(--seq-1); --t-closed_data: #cfcdc7; --t-unclear: #e9e7e2; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --t-closed_data: #4a4945; --t-unclear: #2e2d2b; } }
+  :root[data-theme="dark"] { --t-closed_data: #4a4945; --t-unclear: #2e2d2b; }
+  .seg-unclear { background-image: repeating-linear-gradient(45deg, transparent 0 4px, var(--t-closed_data) 4px 5px); }
+  .sbar { display: flex; gap: 2px; height: 18px; flex: 1; min-width: 120px; }
+  .sbar i { display: block; height: 100%; }
+  .sbar i:first-child { border-radius: 4px 0 0 4px; } .sbar i:last-child { border-radius: 0 4px 4px 0; } .sbar i:only-child { border-radius: 4px; }
+  .brow { display: grid; grid-template-columns: minmax(110px, 190px) 1fr 92px; gap: 10px; align-items: center; padding: 5px 0; font-size: 13.5px; }
+  .brow .lab { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .brow .v { font-variant-numeric: tabular-nums; text-align: right; color: var(--text-2); font-size: 12.5px; }
+  .brow .v b { color: var(--text); font-size: 13.5px; }
+  .brow.head { color: var(--muted); font-size: 12px; padding-bottom: 0; }
+  a.cite { font: 500 12px var(--sans); white-space: nowrap; background: var(--surface-2); padding: 1px 6px; border-radius: 4px; color: var(--text-2); }
+  a.cite:hover { color: var(--accent); text-decoration: none; }
+  .pill { font-size: 11.5px; padding: 1px 7px; border-radius: 4px; white-space: nowrap; display: inline-flex; align-items: center; gap: 5px; background: var(--surface-2); color: var(--text-2); }
+  .pill i { width: 9px; height: 9px; border-radius: 2px; display: inline-block; }
+  .num-h { font-variant-numeric: tabular-nums; }
+  .take { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; margin: 16px 0; }
+  .take .panel { font-size: 14.5px; }
+  .take b { display: block; font-size: 15.5px; margin-bottom: 4px; }
+  .two { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 16px; align-items: start; }
+  .two h3 { margin-top: 0; }
+  #evtbl td { font-size: 13px; } #evtbl td.n { white-space: nowrap; }
+  .more { margin-top: 8px; }
+  @media (max-width: 640px) { .brow { grid-template-columns: 96px 1fr 70px; gap: 6px; } }
+</style>
+</head>
+<body>
+<main class="wrap">
+  <h1>How much of the evaluation could an outsider re-run?</h1>
+  <p class="lede">For every evaluation reported in the archive, we asked two questions: <b>is the data public</b> (the prompts, tasks or environment), and <b>is the judge public</b> (exact-match or unit-test scoring, or an LLM grader that anyone can call)? An eval counts as replicable only if the answer to both is yes. Every label links to the page that supports it.</p>
+
+  <h2 id="findings" style="margin-top:28px">Key findings</h2>
+  <div class="take">
+    <div class="panel"><b>About 1 in 10 safety eval reports can be re-run from outside</b>Of 2,124 safety-eval reports, 10% use public data with a public judge. Only 6% qualify if API judges are excluded. 79% rest on internal datasets, red-teaming, audits or third-party outcomes. Capability benchmarks are the reverse: 69% are replicable.</div>
+    <div class="panel"><b>The bottleneck is data, not judges</b>Only 11% of safety reports use public data. Where the data <i>is</i> public, the judge is almost always public too. The judge is still poorly documented, though: 28% of safety reports use an LLM grader that is never named, and 19% don't say how grading works at all.</div>
+    <div class="panel"><b>The highest-stakes areas are the least replicable</b>2% or fewer reports are replicable in harmful content, jailbreaks, prompt injection, CBRN, child safety, reward hacking and elections. Bias (BBQ, political even-handedness), cyber (ExploitBench, CyberGym, CVE-Bench) and honesty (MASK, AA-Omniscience, SimpleQA) do better.</div>
+    <div class="panel"><b>Western labs are equally closed, at 7–8% each</b>Anthropic, OpenAI and Google all sit at 7–8% replicable for safety. The higher figures for GLM, Kimi and Qwen come from a few dozen reports, mostly Qwen3Guard classifier benchmarks and public cyber suites. They show that little safety work is reported, not that it is open.</div>
+    <div class="panel"><b>It got worse over the year</b>Between the two halves of the year, the replicable share fell from 13% to 8% for safety and from 78% to 63% for capability. For safety, closed-data reports rose from 75% to 81%. For capability, the drop came from three things: newer benchmarks graded by unnamed or lab-swapped judges (5% → 10% of reports), held-out or modified subsets (5% → 9%), and benchmarks whose release status isn't documented (1% → 6%).</div>
+    <div class="panel"><b>“Public benchmark” often means a private variant</b>SHADE-Arena, VCT (access-gated), ProtocolQA Open-Ended, Cybench and CTF subsets, LinuxArena and OpenAI's StrongREJECT variant all start from public sources, but they are run on unreleased subsets or modified versions. They make up 9% of safety reports.</div>
+  </div>
+  <p class="small muted">These figures count each eval once per document and area, include all document types, and reflect labels as of October 2026. The interactive views below recompute them under your filters.</p>
+
+  <h2 id="explore">Explore</h2>
+  <div class="filters" id="scope"></div>
+  <div class="filters" id="opts"></div>
+  <div class="stats" id="stats"></div>
+  <div class="legend" id="legend"></div>
+
+  <h2 id="labs">By lab</h2>
+  <p class="small">Each bar is the share of evaluation reports in that lab's documents, by tier. The figure on the right is the replicable share.</p>
+  <div class="panel" id="bylab"></div>
+
+  <h2 id="areas">By area</h2>
+  <p class="small" id="areas-note"></p>
+  <div class="panel" id="byarea"></div>
+
+  <h2 id="trend">First half vs second half</h2>
+  <p class="small">Replicable share of evaluation reports, Oct 2025–Mar 2026 compared with Apr–Oct 2026.</p>
+  <div class="panel" id="bytrend"></div>
+
+  <h2 id="judges">Who does the judging</h2>
+  <p class="small">How results are scored, across all reports in scope. The public judge models are listed where a document, or the benchmark's official grader, names one.</p>
+  <div class="two"><div class="panel" id="graders"></div><div class="panel" id="judgemodels"></div></div>
+
+  <h2 id="top">Most-reported evaluations</h2>
+  <div class="two"><div class="panel"><h3>Replicable</h3><div id="topopen"></div></div><div class="panel"><h3>Not replicable</h3><div id="topclosed"></div></div></div>
+
+  <h2 id="docs">By document</h2>
+  <p class="small">Replicable share for each document, with the number of evaluation reports. Sort by clicking a column.</p>
+  <div class="panel scroll" style="max-height:560px;overflow:auto"><table id="doctbl"></table></div>
+
+  <h2 id="all">Every evaluation</h2>
+  <div class="filters"><input class="search" id="q" placeholder="Search evals, e.g. StrongREJECT" aria-label="Search evaluations"><span id="tierf"></span></div>
+  <div class="panel scroll" style="max-height:720px;overflow:auto"><table id="evtbl"></table></div>
+  <p class="small muted" id="evcount"></p>
+
+  <h2 id="method">Method and caveats</h2>
+  <div class="prose small" style="font-size:14.5px">
+  <p>We started from the evaluations already extracted for each document: the named safety evals in each of the 21 safety areas and the headline capability benchmarks. Claude agents then labelled every distinct eval against a <a href="https://github.com/model-cards/model-cards.github.io/blob/main/scripts/replicability_schema.md">fixed schema</a>. They searched the source markdown for how the eval was built and graded, and used general knowledge for well-known public benchmarks. Safety evals were labelled separately for each lab, because labs often grade the same benchmark differently. Capability benchmarks were labelled once across all labs.</p>
+  <ul>
+    <li><b>Replicable</b>: the data is public and used as published, and scoring is programmatic or done by a named public LLM (open-weight or available by API).</li>
+    <li><b>Open data, closed judge</b>: the data is public, but the grader is an internal classifier, an unnamed model, or human experts.</li>
+    <li><b>Partial data</b>: the source is public, but the lab filtered, modified or extended it without releasing the result.</li>
+    <li><b>Closed data</b>: internal datasets, red-teaming, behavioural audits, production-traffic analyses and third-party assessments reported only as outcomes.</li>
+    <li>Items that are not evaluations, such as “inherited from proxy model” or safeguard descriptions, are left out.</li>
+  </ul>
+  <p>A “report” is one eval named in one document. An eval reused across ten cards counts ten times, which reflects what readers actually see. Switch to <i>distinct evals</i> to count each eval once. Some things are not checked: whether the harness, prompts, sampling settings and scaffolds are disclosed. API judges can also be deprecated. The strict figure counts only programmatic and open-weight judges. Read these numbers as an upper bound on how replicable the evals really are.</p>
+  </div>
+</main>
+<script src="assets/common.js"></script>
+<script>
+header("replicability.html");
+const TIERS = {
+  replicable: "Replicable", closed_judge: "Open data, closed judge", partial_data: "Partial data",
+  closed_data: "Closed data", unclear: "Unclear",
+};
+const TIER_ORDER = Object.keys(TIERS);
+const GRADERS = {
+  programmatic: "Programmatic (exact match, tests, flags)", llm_open: "Open-weight LLM judge", llm_api: "Public API LLM judge",
+  llm_internal: "Internal model / classifier", llm_unspecified: "Unnamed LLM judge", human: "Human graders", unclear: "Not stated",
+};
+const DATA = { public: "Public", partial: "Partial", internal: "Internal", unclear: "Unclear" };
+const AREA = {
+  cbrn_bio_chem: "CBRN", cyber: "Cyber", autonomy_ai_rnd: "Autonomy / AI R&D", harmful_content_refusal: "Harmful content",
+  over_refusal: "Over-refusal", jailbreak_robustness: "Jailbreaks", prompt_injection: "Prompt injection", sycophancy: "Sycophancy",
+  deception_scheming: "Deception / scheming", alignment_audit: "Alignment audit", reward_hacking: "Reward hacking",
+  honesty_hallucination: "Honesty / halluc.", bias_fairness: "Bias / fairness", child_safety: "Child safety",
+  self_harm_wellbeing: "Self-harm / wellbeing", privacy: "Privacy", election_misinfo: "Elections / persuasion",
+  model_welfare: "Model welfare", multilingual_safety: "Multilingual", system_safeguards: "Safeguards", other_safety: "Other",
+  reasoning_knowledge: "Reasoning / knowledge", math: "Math", coding: "Coding", agentic_tool_use: "Agentic / tool use",
+  multimodal: "Multimodal", long_context: "Long context", multilingual: "Multilingual", instruction_following: "Instruction following", other: "Other",
+};
+const tcol = t => `var(--t-${t})`;
+const pct = (a, b) => b ? Math.round(100 * a / b) : 0;
+const params = new URLSearchParams(location.search);
+const st = { scope: ["safety", "capability", "all"].includes(params.get("scope")) ? params.get("scope") : "safety", hf: true, unit: "reports", tier: null, q: "", sort: ["n", -1] };
+
+function sbar(counts, label) {
+  const n = TIER_ORDER.reduce((s, t) => s + (counts[t] || 0), 0);
+  return `<div class="sbar">${TIER_ORDER.filter(t => counts[t]).map(t =>
+    `<i class="seg-${t}" style="width:${100 * counts[t] / n}%;background-color:${tcol(t)}" data-tip="${esc(`<b>${label}</b>${TIERS[t]}: ${counts[t]} of ${n} (${pct(counts[t], n)}%)`)}"></i>`).join("")}</div>`;
+}
+function brow(label, counts, extra = "") {
+  const n = TIER_ORDER.reduce((s, t) => s + (counts[t] || 0), 0);
+  return `<div class="brow"><span class="lab" title="${esc(label)}">${extra}${esc(label)}</span>${sbar(counts, esc(label))}<span class="v"><b>${pct(counts.replicable || 0, n)}%</b> of ${n}</span></div>`;
+}
+function tally(rows) { const c = {}; rows.forEach(r => c[r.e.tier] = (c[r.e.tier] || 0) + 1); return c; }
+// In "distinct" mode, count each eval once per group.
+function uniq(rows) { if (st.unit === "reports") return rows; const s = new Set(); return rows.filter(r => !s.has(r.e.key) && s.add(r.e.key)); }
+function group(rows, f) { const g = new Map(); rows.forEach(r => { const k = f(r); if (!g.has(k)) g.set(k, []); g.get(k).push(r); }); return g; }
+
+(async () => {
+  const R = await getJSON("data/replicability.json");
+  const all = R.occ.map(([d, e, cat, page]) => ({ d: R.docs[d], e: R.evals[e], cat, page }));
+
+  function scoped() {
+    return all.filter(r => r.e.tier !== "excluded" && (st.scope === "all" || r.e.kind === st.scope) && (st.hf || r.d.doc_type !== "hf_model_card"));
+  }
+
+  function controls() {
+    document.getElementById("scope").innerHTML = [["safety", "Safety evals"], ["capability", "Capability benchmarks"], ["all", "All evals"]]
+      .map(([k, v]) => `<button class="chip ${st.scope === k ? "on" : ""}" data-scope="${k}">${v}</button>`).join("");
+    document.getElementById("opts").innerHTML = `<span class="small muted">Count:</span>` +
+      [["reports", "Reports (eval × document)"], ["distinct", "Distinct evals"]].map(([k, v]) => `<button class="chip ${st.unit === k ? "on" : ""}" data-unit="${k}">${v}</button>`).join("") +
+      `<span class="small muted" style="margin-left:8px">Include:</span><button class="chip ${st.hf ? "on" : ""}" data-hf>HF / dev model cards</button>`;
+    document.getElementById("legend").innerHTML = TIER_ORDER.map(t => `<span><i class="seg-${t}" style="background-color:${tcol(t)}"></i>${TIERS[t]}</span>`).join("");
+    document.querySelectorAll("[data-scope]").forEach(b => b.onclick = () => {
+      st.scope = b.dataset.scope; const u = new URL(location); u.searchParams.set("scope", st.scope); history.replaceState(null, "", u); draw();
+    });
+    document.querySelectorAll("[data-unit]").forEach(b => b.onclick = () => { st.unit = b.dataset.unit; draw(); });
+    document.querySelector("[data-hf]").onclick = () => { st.hf = !st.hf; draw(); };
+  }
+
+  function draw() {
+    controls();
+    const rows = scoped();
+    const u = uniq(rows), c = tally(u), n = u.length;
+    const strict = u.filter(r => r.e.tier === "replicable" && r.e.grader !== "llm_api").length;
+    const openData = u.filter(r => r.e.data === "public").length;
+    document.getElementById("stats").innerHTML = [
+      [`${pct(c.replicable || 0, n)}%`, "replicable: public data and public judge"],
+      [`${pct(strict, n)}%`, "strict: programmatic or open-weight judge only"],
+      [`${pct(openData, n)}%`, "use public data, with any judge"],
+      [`${pct(c.closed_data || 0, n)}%`, "rely on closed data or methods"],
+      [n.toLocaleString(), st.unit === "reports" ? `eval reports in ${new Set(rows.map(r => r.d.id)).size} documents` : "distinct evals"],
+    ].map(([b, s]) => `<div class="stat"><b>${b}</b><span>${s}</span></div>`).join("");
+
+    const head = `<div class="brow head"><span></span><span></span><span class="v">replicable</span></div>`;
+    const byLab = group(rows, r => r.d.provider);
+    document.getElementById("bylab").innerHTML = head + PROVIDER_ORDER.filter(p => byLab.has(p))
+      .map(p => brow(PROVIDERS[p], tally(uniq(byLab.get(p))), `<span class="dot" style="background:${pcolor(p)};margin-right:6px"></span>`)).join("");
+
+    const byArea = group(rows, r => r.cat || "other");
+    document.getElementById("areas-note").textContent = st.scope === "capability"
+      ? "Capability benchmarks by category." : st.scope === "safety"
+      ? "The 21 safety areas, sorted by replicable share. An eval listed under two areas counts in both."
+      : "Safety areas and capability categories together, sorted by replicable share.";
+    document.getElementById("byarea").innerHTML = head + [...byArea].map(([k, v]) => [k, tally(uniq(v))])
+      .sort((a, b) => (b[1].replicable || 0) / Object.values(b[1]).reduce((x, y) => x + y) - (a[1].replicable || 0) / Object.values(a[1]).reduce((x, y) => x + y))
+      .map(([k, cc]) => brow(AREA[k] || k, cc)).join("");
+
+    const half = r => r.d.release_date < "2026-04-01" ? "H1" : "H2";
+    document.getElementById("bytrend").innerHTML = `<div class="brow head"><span></span><span>Oct 2025–Mar 2026 → Apr–Oct 2026</span><span class="v">change</span></div>` +
+      PROVIDER_ORDER.filter(p => byLab.has(p)).map(p => {
+        const g = group(byLab.get(p), half), s = h => { const x = uniq(g.get(h) || []); return [x.filter(r => r.e.tier === "replicable").length, x.length]; };
+        const [a1, n1] = s("H1"), [a2, n2] = s("H2");
+        if (!n1 || !n2) return `<div class="brow"><span class="lab"><span class="dot" style="background:${pcolor(p)};margin-right:6px"></span>${PROVIDERS[p]}</span><span class="small muted">Not enough documents in both halves</span><span></span></div>`;
+        const d = pct(a2, n2) - pct(a1, n1);
+        return `<div class="brow"><span class="lab"><span class="dot" style="background:${pcolor(p)};margin-right:6px"></span>${PROVIDERS[p]}</span>
+          <span class="small num-h"><span style="display:inline-block;width:${pct(a1, n1) * 1.2}px;height:8px;background:var(--seq-1);border-radius:0 3px 3px 0;vertical-align:middle"></span> ${pct(a1, n1)}% <span class="muted">(n=${n1})</span> → <span style="display:inline-block;width:${pct(a2, n2) * 1.2}px;height:8px;background:${pcolor(p)};border-radius:0 3px 3px 0;vertical-align:middle"></span> ${pct(a2, n2)}% <span class="muted">(n=${n2})</span></span>
+          <span class="v"><b>${d > 0 ? "+" : ""}${d}</b> pts</span></div>`;
+      }).join("");
+
+    const gc = {}; u.forEach(r => gc[r.e.grader] = (gc[r.e.grader] || 0) + 1);
+    const gmax = Math.max(...Object.values(gc));
+    document.getElementById("graders").innerHTML = `<h3>Grading method</h3>` + Object.keys(GRADERS).filter(g => gc[g]).map(g =>
+      `<div class="brow" style="grid-template-columns:minmax(120px,220px) 1fr 70px"><span class="lab" title="${GRADERS[g]}">${GRADERS[g]}</span>
+       <span><i style="display:block;height:12px;width:${100 * gc[g] / gmax}%;background:${["programmatic", "llm_open", "llm_api"].includes(g) ? "var(--seq-3)" : "var(--t-closed_data)"};border-radius:0 4px 4px 0" data-tip="${esc(`<b>${GRADERS[g]}</b>${gc[g]} of ${n} (${pct(gc[g], n)}%)`)}"></i></span>
+       <span class="v">${pct(gc[g], n)}%</span></div>`).join("");
+    const jm = {}; u.filter(r => r.e.grader_model && ["llm_open", "llm_api"].includes(r.e.grader)).forEach(r => { const m = r.e.grader_model; jm[m] = jm[m] || { n: 0, g: r.e.grader }; jm[m].n++; });
+    const jtop = Object.entries(jm).sort((a, b) => b[1].n - a[1].n).slice(0, 12);
+    document.getElementById("judgemodels").innerHTML = `<h3>Named public judge models</h3>` + (jtop.length ? `<table><thead><tr><th>Judge</th><th>Type</th><th class="num">${st.unit === "reports" ? "Reports" : "Evals"}</th></tr></thead><tbody>` +
+      jtop.map(([m, v]) => `<tr><td>${esc(m)}</td><td class="small">${GRADERS[v.g]}</td><td class="num">${v.n}</td></tr>`).join("") + "</tbody></table>" : `<p class="small muted">None named.</p>`);
+
+    const byEval = group(rows, r => r.e.tier + "|" + r.e.canonical.toLowerCase().replace(/[^a-z0-9]/g, ""));
+    const top = f => [...byEval].filter(([, v]) => f(v[0].e)).sort((a, b) => new Set(b[1].map(r => r.d.id)).size - new Set(a[1].map(r => r.d.id)).size).slice(0, 12)
+      .map(([, v]) => { const e = v[0].e, nd = new Set(v.map(r => r.d.id)).size, labs = [...new Set(v.map(r => r.d.provider))];
+        return `<div class="brow" style="grid-template-columns:1fr auto 64px"><span class="lab" title="${esc(e.note || "")}">${esc(e.canonical)}</span><span>${labs.map(p => `<span class="dot" style="background:${pcolor(p)}" title="${PROVIDERS[p]}"></span>`).join(" ")}</span><span class="v">${nd} docs</span></div>`; }).join("");
+    document.getElementById("topopen").innerHTML = top(e => e.tier === "replicable");
+    document.getElementById("topclosed").innerHTML = top(e => e.tier !== "replicable");
+
+    drawDocs(rows); drawEvals(rows);
+  }
+
+  function drawDocs(rows) {
+    const g = [...group(rows, r => r.d.id)].map(([, v]) => { const x = uniq(v), c = tally(x); return { d: v[0].d, c, n: x.length, share: (c.replicable || 0) / x.length }; });
+    const [k, dir] = st.sort, key = { model: o => o.d.model, provider: o => o.d.provider, date: o => o.d.release_date, n: o => o.n, share: o => o.share }[k];
+    g.sort((a, b) => (key(a) > key(b) ? 1 : key(a) < key(b) ? -1 : 0) * dir);
+    const th = (k2, t, cls = "") => `<th class="${cls}" style="cursor:pointer" data-sort="${k2}">${t}${st.sort[0] === k2 ? (st.sort[1] > 0 ? " ↑" : " ↓") : ""}</th>`;
+    const t = document.getElementById("doctbl");
+    t.innerHTML = `<thead><tr>${th("model", "Document")}${th("provider", "Lab")}${th("date", "Date")}${th("n", "Evals", "num")}${th("share", "Tiers")}</tr></thead><tbody>` +
+      g.map(o => `<tr><td><a href="${cardLink(o.d.id)}">${esc(o.d.model)}</a> <span class="tag">${DOC_TYPES[o.d.doc_type] || ""}</span></td>
+        <td class="small" style="white-space:nowrap"><span class="dot" style="background:${pcolor(o.d.provider)}"></span> ${PROVIDERS[o.d.provider]}</td>
+        <td class="small" style="white-space:nowrap">${fmtDate(o.d.release_date)}</td><td class="num">${o.n}</td>
+        <td style="min-width:240px"><div style="display:flex;gap:8px;align-items:center">${sbar(o.c, esc(o.d.model))}<span class="num small" style="width:38px">${Math.round(o.share * 100)}%</span></div></td></tr>`).join("") + "</tbody>";
+    t.querySelectorAll("[data-sort]").forEach(h => h.onclick = () => {
+      const k2 = h.dataset.sort; st.sort = [k2, st.sort[0] === k2 ? -st.sort[1] : (k2 === "model" || k2 === "provider" ? 1 : -1)]; drawDocs(rows);
+    });
+  }
+
+  let evLimit = 200;
+  function drawEvals(rows) {
+    document.getElementById("tierf").innerHTML = [null, ...TIER_ORDER].map(t => `<button class="chip ${st.tier === t ? "on" : ""}" data-tier="${t ?? ""}">${t ? `<span class="dot seg-${t}" style="background-color:${tcol(t)};border-radius:2px"></span>${TIERS[t]}` : "All tiers"}</button>`).join(" ");
+    document.querySelectorAll("[data-tier]").forEach(b => b.onclick = () => { st.tier = b.dataset.tier || null; evLimit = 200; drawEvals(rows); });
+    const q = st.q.toLowerCase();
+    const list = [...group(rows, r => r.e.key)].map(([, v]) => ({ e: v[0].e, v, nd: new Set(v.map(r => r.d.id)).size }))
+      .filter(o => (!st.tier || o.e.tier === st.tier) && (!q || (o.e.canonical + " " + o.e.key + " " + (o.e.grader_model || "")).toLowerCase().includes(q)))
+      .sort((a, b) => b.nd - a.nd || a.e.canonical.localeCompare(b.e.canonical));
+    const ev = e => e.evidence?.doc ? `<a class="cite" href="${cardLink(e.evidence.doc.split("/")[1], e.evidence.page)}" ${e.evidence.quote ? `title="${esc(e.evidence.quote)}"` : ""}>${e.evidence.page ? "p." + e.evidence.page : "source"}</a>` : "";
+    const t = document.getElementById("evtbl");
+    t.innerHTML = `<thead><tr><th>Eval</th><th>Lab</th><th>Tier</th><th>Data</th><th>Judge</th><th class="num">Docs</th><th>Why</th></tr></thead><tbody>` +
+      list.slice(0, evLimit).map(({ e, v, nd }) => {
+        const labs = [...new Set(v.map(r => r.d.provider))];
+        return `<tr><td>${esc(e.canonical)}${e.kind === "capability" ? ` <span class="tag">capability</span>` : ""}</td>
+        <td class="n">${labs.map(p => `<span class="dot" style="background:${pcolor(p)}" title="${PROVIDERS[p]}"></span>`).join(" ")}</td>
+        <td class="n"><span class="pill"><i class="seg-${e.tier}" style="background-color:${tcol(e.tier)}"></i>${TIERS[e.tier]}</span></td>
+        <td class="n small">${DATA[e.data] || e.data}</td>
+        <td class="small">${GRADERS[e.grader] || e.grader}${e.grader_model ? ` · ${esc(e.grader_model)}` : ""}</td>
+        <td class="num">${nd}</td>
+        <td class="small">${esc(e.note || "")} ${ev(e)}${e.basis === "knowledge" ? ` <span class="muted">(general knowledge)</span>` : ""}</td></tr>`;
+      }).join("") + "</tbody>";
+    document.getElementById("evcount").innerHTML = `Showing ${Math.min(evLimit, list.length)} of ${list.length} evals.` +
+      (list.length > evLimit ? ` <button class="chip more" id="evmore">Show all</button>` : "");
+    const m = document.getElementById("evmore"); if (m) m.onclick = () => { evLimit = Infinity; drawEvals(rows); };
+  }
+
+  const qi = document.getElementById("q");
+  qi.oninput = () => { st.q = qi.value; evLimit = 200; drawEvals(scoped()); };
+  document.addEventListener("mousemove", ev => { const t = ev.target.closest?.("[data-tip]"); t ? tip.show(t.dataset.tip, ev) : tip.hide(); });
+  draw();
+})();
+</script>
+</body>
+</html>

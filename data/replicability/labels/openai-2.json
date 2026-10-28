@@ -1,0 +1,3378 @@
+[
+ {
+  "key": "safety|openai|irregular atomic cyscenariobench",
+  "canonical": "Irregular atomic challenges + CyScenarioBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular atomic suite",
+  "canonical": "Irregular atomic challenge suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular external",
+  "canonical": "Irregular external cyber evaluation",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 21,
+   "quote": "The model's goal is to retrieve a secret flag."
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular external evaluation",
+  "canonical": "Irregular external cyber evaluation",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 19,
+   "quote": null
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular frontiercyber cyscenariobench atomic challenges",
+  "canonical": "Irregular FrontierCyber / CyScenarioBench / Atomic Challenges",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 54,
+   "quote": "On FrontierCyber, a new benchmark from Irregular testing zero-day discovery"
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular suite",
+  "canonical": "Irregular challenge suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|irregular suite cyscenariobench",
+  "canonical": "Irregular suite + CyScenarioBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 12,
+   "quote": null
+  },
+  "note": "Irregular's private offensive-cyber challenge suites; success = capturing a secret flag."
+ },
+ {
+  "key": "safety|openai|kernelgen 1p",
+  "canonical": "KernelGen 1P",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 58,
+   "quote": "the agent is given a kernel-development environment, benchmark harness, reference materials, and performance/correctness tests"
+  },
+  "note": "Internal eval on OpenAI first-party hardware; scored by correctness/performance tests."
+ },
+ {
+  "key": "safety|openai|long form biorisk questions gryphon scientific",
+  "canonical": "Long-form biorisk questions",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "o1-preview (pre-mitigation)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 10,
+   "quote": "We used the OpenAI 01-preview (pre-mitigation) model as an autograder"
+  },
+  "note": "Gryphon-built unreleased questions/rubrics graded by an unreleased pre-mitigation o1-preview autograder."
+ },
+ {
+  "key": "safety|openai|long rollout reversion eval",
+  "canonical": "Long-rollout reversion eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 10,
+   "quote": null
+  },
+  "note": "Internal destructive-action/reversion environments; scoring likely by checking workspace state, not stated."
+ },
+ {
+  "key": "safety|openai|malware golden set incl dual use scenarios",
+  "canonical": "Malware Refusals (Golden Set)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 8,
+   "quote": "We used a curated “golden set” of test cases developed by internal policy experts"
+  },
+  "note": "Internal policy-expert golden set; refusal grading method not stated."
+ },
+ {
+  "key": "safety|openai|malware refusals golden set",
+  "canonical": "Malware Refusals (Golden Set)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 19,
+   "quote": null
+  },
+  "note": "Internal golden set; grading method not stated."
+ },
+ {
+  "key": "safety|openai|manual review of violations",
+  "canonical": "Manual review of violations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-6-sol-luna-october-2026-update",
+   "page": 2,
+   "quote": "we conducted manual review of failures"
+  },
+  "note": "Manual human review of failures, not a fixed eval."
+ },
+ {
+  "key": "safety|openai|math side tasking monitor evasion",
+  "canonical": "Math side-tasking monitor evasion",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Internal monitorability environment; scored by CoT monitor recall (monitor model not named)."
+ },
+ {
+  "key": "safety|openai|mental health emotional reliance self harm categories of voice native evals",
+  "canonical": "Voice-native evals: mental health / emotional reliance / self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal voice-native prompts from user audio; grader not described, presumably OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|mental health emotional reliance self harm production benchmarks",
+  "canonical": "Production Benchmarks: mental health / emotional reliance / self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived benchmark graded by OpenAI's LLM-based policy graders."
+ },
+ {
+  "key": "safety|openai|mental health emotional reliance self harm voice categories",
+  "canonical": "Voice-native evals: mental health / emotional reliance / self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-1-1-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal voice-native prompts; grader not described."
+ },
+ {
+  "key": "safety|openai|mental health not unsafe new delusions psychosis mania",
+  "canonical": "Mental Health not_unsafe (production benchmark)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 2,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production benchmark graded by OpenAI LLM-based grading models."
+ },
+ {
+  "key": "safety|openai|mental health production benchmark",
+  "canonical": "Production Benchmarks: mental health",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal production benchmark graded by OpenAI's policy graders."
+ },
+ {
+  "key": "safety|openai|mentalhealthbench",
+  "canonical": "MentalHealthBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 12,
+   "quote": "MentalHealthBench is an open benchmark developed with mental health experts"
+  },
+  "note": "Described as an open benchmark of 1,215 synthetic conversations with clinician rubrics; rubric grader model not named."
+ },
+ {
+  "key": "safety|openai|mentalhealthbench new open benchmark clinician rubrics 1 215 conversations",
+  "canonical": "MentalHealthBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 12,
+   "quote": "Each conversation task is paired with clinician-authored rubric criteria that can be used to score a new model response"
+  },
+  "note": "Described as an open benchmark of 1,215 synthetic conversations with clinician rubrics; rubric grader model not named."
+ },
+ {
+  "key": "safety|openai|metr cheating detection",
+  "canonical": "METR cheating detection",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 66,
+   "quote": "This measurement depends heavily on how \"cheating\" attempts"
+  },
+  "note": "METR's handling of cheating in its time-horizon runs; detection method not detailed."
+ },
+ {
+  "key": "safety|openai|metr external time horizon ai r d automation and rogue replication",
+  "canonical": "METR external evaluation (time horizon)",
+  "type": "third_party",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 20,
+   "quote": null
+  },
+  "note": "METR's time-horizon task suite (partly public HCAST/RE-Bench tasks) run externally; scored mostly by task scoring functions."
+ },
+ {
+  "key": "safety|openai|metr robustness checks",
+  "canonical": "METR robustness checks",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 26,
+   "quote": "METR conducted three key robustness checks"
+  },
+  "note": "METR's qualitative robustness checks reported as outcomes."
+ },
+ {
+  "key": "safety|openai|metr time horizon 1 1",
+  "canonical": "METR Time Horizon 1.1",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 66,
+   "quote": "METR evaluated GPT-5.6 Sol on its Time Horizon 1.1 software-task suite"
+  },
+  "note": "METR's task suite is only partly public; tasks mostly auto-scored."
+ },
+ {
+  "key": "safety|openai|misaligned outcomes in realistic work environments",
+  "canonical": "Misaligned outcomes in realistic work environments",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Internal agentic environments; misalignment labelled by unnamed grader."
+ },
+ {
+  "key": "safety|openai|misuse monitor recall activation classifiers topical classifiers safety reasoner",
+  "canonical": "Misuse monitor recall",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 114,
+   "quote": "The evaluation examples were validated by subject matter experts in biology and cybersecurity"
+  },
+  "note": "Internal expert-validated set used to measure monitor recall."
+ },
+ {
+  "key": "safety|openai|mle bench 30",
+  "canonical": "MLE-bench-30",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 22,
+   "quote": "The subset plotted below is 30 of the most interesting and diverse competitions"
+  },
+  "note": "Public MLE-bench, but a 30-competition subset chosen by OpenAI; Kaggle-metric grading."
+ },
+ {
+  "key": "safety|openai|mle bench revised",
+  "canonical": "MLE-Bench Revised",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 64,
+   "quote": "MLE-Bench Revised consists of 72 problems, retaining the highest-signal tasks from the original MLE-Bench"
+  },
+  "note": "Revised mix of original public MLE-bench tasks plus new problems; release not stated; leaderboard-metric grading."
+ },
+ {
+  "key": "safety|openai|model weight security controls",
+  "canonical": "Model weight security controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Security controls description, not an evaluation."
+ },
+ {
+  "key": "safety|openai|monitor aware honeypot",
+  "canonical": "Monitor-aware honeypot",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Internal honeypot environment scored by CoT/full-context monitor recall; monitor not named."
+ },
+ {
+  "key": "safety|openai|monitor evasion oai repo sabotage v2 sneaky sandbox escape monitor aware honeypot prompted sandbagging wmdp monorepo bench math side tasking",
+  "canonical": "Monitor evasion suite (OAI-repo Sabotage v2, Sneaky Sandbox Escape, honeypot)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 51,
+   "quote": "We then check the monitor's judgment against ground truth labels from a grader"
+  },
+  "note": "Internal environments; monitor and grader models not named."
+ },
+ {
+  "key": "safety|openai|monitor precision",
+  "canonical": "Cyber reasoning monitor precision/recall",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 25,
+   "quote": "Each evaluation example is manually labelled by cybersecurity experts and cross calibrated."
+  },
+  "note": "Internal challenging set with expert labels; precision computed against them."
+ },
+ {
+  "key": "safety|openai|monitor recall evaluation bio cyber prompt generation",
+  "canonical": "Monitor recall evaluation (bio/cyber)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 71,
+   "quote": null
+  },
+  "note": "Internal monitor-recall set; labels presumably expert-validated."
+ },
+ {
+  "key": "safety|openai|monitor recall on oai repo sabotage basharena labeled internal transcripts",
+  "canonical": "Misalignment monitor recall (OAI-repo-sabotage, BashArena, internal transcripts)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 16,
+   "quote": "Our monitor has near-perfect recall on OAI-repo-sabotage and BashArena"
+  },
+  "note": "BashArena is public but OAI-repo-sabotage and labelled internal transcripts are internal; recall vs labels."
+ },
+ {
+  "key": "safety|openai|monorepo bench",
+  "canonical": "Monorepo-Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 26,
+   "quote": "graded by hidden tests"
+  },
+  "note": "Internal repository PR tasks graded by hidden tests."
+ },
+ {
+  "key": "safety|openai|monorepo bench new",
+  "canonical": "Monorepo-Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 19,
+   "quote": "graded by hidden tests"
+  },
+  "note": "Internal repository PR tasks graded by hidden tests."
+ },
+ {
+  "key": "safety|openai|multi select virology troubleshooting",
+  "canonical": "Multi-select Multimodal Troubleshooting Virology (SecureBio)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 17,
+   "quote": "we evaluate models on a set of fully held-out virology troubleshooting questions from SecureBio"
+  },
+  "note": "SecureBio held-out multi-select virology troubleshooting (VCT-style) questions, not publicly released; exact-set multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|multi select virology troubleshooting securebio",
+  "canonical": "Multi-select Virology Troubleshooting (SecureBio)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-rosalind-5-5-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "SecureBio held-out multi-select virology troubleshooting (VCT-style) questions, not publicly released; exact-set multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|multimodal safety reasoning monitor for input output blocking",
+  "canonical": "Multimodal safety reasoning monitor",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-0-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Safeguard description, not an evaluation."
+ },
+ {
+  "key": "safety|openai|multimodal troubleshooting virology",
+  "canonical": "Multimodal Troubleshooting Virology (SecureBio)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 9,
+   "quote": null
+  },
+  "note": "SecureBio held-out multi-select virology troubleshooting (VCT-style) questions, not publicly released; exact-set multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|multimodal troubleshooting virology securebio",
+  "canonical": "Multimodal Troubleshooting Virology (SecureBio)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 11,
+   "quote": "we evaluate models on a set of 350 fully held-out virology troubleshooting questions from SecureBio"
+  },
+  "note": "SecureBio held-out multi-select virology troubleshooting (VCT-style) questions, not publicly released; exact-set multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|multiple evaluation stacks for minors categories",
+  "canonical": "Evaluation stacks for minors categories",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-0-system-card",
+   "page": 2,
+   "quote": "We also run multiple evaluation stacks for higher-risk categories around minors"
+  },
+  "note": "Vague safeguards statement with no reported eval."
+ },
+ {
+  "key": "safety|openai|multiturn adaptive jailbreak eval",
+  "canonical": "Multiturn adaptive jailbreak eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 17,
+   "quote": "Model responses are scored based on whether they could meaningfully facilitate harmful requests"
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|multiturn jailbreak eval derived from internal red teaming worst case defender success rate",
+  "canonical": "Multiturn jailbreak eval (red-team derived)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 7,
+   "quote": "both model and the grader are both required to be robust to all jailbreak scenarios"
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|multiturn jailbreak eval worst case defender success rate",
+  "canonical": "Multiturn jailbreak eval (red-team derived)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-august-update",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|multiturn jailbreak evals",
+  "canonical": "Multiturn jailbreak eval (red-team derived)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 8,
+   "quote": null
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|multiturn red team derived jailbreak eval",
+  "canonical": "Multiturn jailbreak eval (red-team derived)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|nanogpt",
+  "canonical": "NanoGPT training optimization",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 60,
+   "quote": "Reward is normalized 0 to 1"
+  },
+  "note": "Speedrun-style internal environment (release not stated); reward computed from training time."
+ },
+ {
+  "key": "safety|openai|network access controls",
+  "canonical": "Network access controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Product safeguard description."
+ },
+ {
+  "key": "safety|openai|new codex environment prompt injection eval suite",
+  "canonical": "Codex prompt injection eval suite",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 9,
+   "quote": "We also developed a new prompt injection evaluation suite tailored to the Codex environment"
+  },
+  "note": "Internal suite; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|new destructive action avoidance eval",
+  "canonical": "Destructive action avoidance eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Internal agentic eval; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|new multiturn jailbreak eval derived from red teaming replaces strongreject",
+  "canonical": "Multiturn jailbreak eval (red-team derived)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 8,
+   "quote": "we replaced our previous StrongReject-based benchmark with a more challenging multiturn jailbreak evaluation derived from red-teaming exercises"
+  },
+  "note": "Internal multiturn jailbreak eval derived from red-teaming with adaptive attackers; response scorer not named."
+ },
+ {
+  "key": "safety|openai|oai repo sabotage v2 monitor evasion",
+  "canonical": "OAI-repo Sabotage v2 monitor evasion",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Internal repo-sabotage environment; monitor not named."
+ },
+ {
+  "key": "safety|openai|offline conversation review and account enforcement",
+  "canonical": "Offline conversation review and enforcement",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-0-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Safeguard/enforcement description."
+ },
+ {
+  "key": "safety|openai|one hop reasoning evals",
+  "canonical": "One-hop reasoning evals (synthetic PII)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 15,
+   "quote": "we constructed synthetic toy data sets by prompting frontier GPT models to generate synthetic sequences with PII"
+  },
+  "note": "Unreleased GPT-generated synthetic data; span precision/recall."
+ },
+ {
+  "key": "safety|openai|online a b prevalence measurements",
+  "canonical": "Online A/B prevalence measurements",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers",
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Production A/B traffic prevalence measured by internal automated labelling."
+ },
+ {
+  "key": "safety|openai|online experimentation monitoring",
+  "canonical": "Online experimentation monitoring",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal classifiers",
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-3-instant-system-card",
+   "page": 3,
+   "quote": null
+  },
+  "note": "Production traffic monitoring; internal labelling."
+ },
+ {
+  "key": "safety|openai|openai proof q a",
+  "canonical": "OpenAI-Proof Q&A",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 24,
+   "quote": "OpenAI-Proof Q&A evaluates AI models on 20 internal research and engineering bottlenecks"
+  },
+  "note": "20 internal OpenAI research bottlenecks; grading method not described."
+ },
+ {
+  "key": "safety|openai|openai prs",
+  "canonical": "OpenAI PRs",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 23,
+   "quote": "The modifications are graded by a hidden unit test upon completion."
+  },
+  "note": "Internal OpenAI pull requests graded by hidden unit tests."
+ },
+ {
+  "key": "safety|openai|opqa",
+  "canonical": "OpenAI-Proof Q&A",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 26,
+   "quote": null
+  },
+  "note": "20 internal OpenAI research bottlenecks; grading method not described."
+ },
+ {
+  "key": "safety|openai|other category incl fabricated or compromising depictions of real people",
+  "canonical": "Images adversarial safety eval: 'Other' category",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-5-system-card",
+   "page": 6,
+   "quote": "Automated policy labels may contain errors"
+  },
+  "note": "Internal adversarial image-prompt set; outcomes from automated policy labels (model not named)."
+ },
+ {
+  "key": "safety|openai|paperbench 10",
+  "canonical": "PaperBench-10",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "o3-mini SimpleJudge (official PaperBench judge), assumed",
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 21,
+   "quote": "We measure a 10-paper subset of the original PaperBench splits"
+  },
+  "note": "Public PaperBench rubrics but an unreleased 10-paper subset; official judge is an o3-mini-based LLM, not named in doc."
+ },
+ {
+  "key": "safety|openai|perfect reversion user work preserved",
+  "canonical": "Perfect reversion / user work preserved",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Internal destructive-action environments; scoring likely state checks, not stated."
+ },
+ {
+  "key": "safety|openai|personal data category",
+  "canonical": "Voice-native evals: personal data",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-1-1-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal voice prompts; grader not described."
+ },
+ {
+  "key": "safety|openai|personal data category in voice native evals",
+  "canonical": "Voice-native evals: personal data",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Internal voice prompts; grader not described."
+ },
+ {
+  "key": "safety|openai|personal data disallowed content rows",
+  "canonical": "Disallowed content: personal data",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 6,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal disallowed-content set graded by OpenAI LLM-based graders."
+ },
+ {
+  "key": "safety|openai|personal data production benchmark",
+  "canonical": "Production Benchmarks: personal data",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 2,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production benchmark with OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|personal data row",
+  "canonical": "Production Benchmarks: personal data",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production benchmark with OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|personqa",
+  "canonical": "PersonQA",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 9,
+   "quote": "A dataset of questions and publicly available facts about people"
+  },
+  "note": "OpenAI's PersonQA set is not released; answers judged by a model grader in prior OpenAI cards."
+ },
+ {
+  "key": "safety|openai|phage plasmid co evolution",
+  "canonical": "Phage-plasmid co-evolution",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 33,
+   "quote": null
+  },
+  "note": "Internal prediction task on lab data; scored against observed outcomes."
+ },
+ {
+  "key": "safety|openai|phage plasmid co evolution new",
+  "canonical": "Phage-plasmid co-evolution",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 77,
+   "quote": "Can the model predict which amino-acid mutations will arise in a phage-plasmid system"
+  },
+  "note": "Internal prediction task on lab data; scored against observed outcomes."
+ },
+ {
+  "key": "safety|openai|pii filtering in training data",
+  "canonical": "PII filtering in training data",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Training-data processing, not an eval."
+ },
+ {
+  "key": "safety|openai|pii masking 300k",
+  "canonical": "PII-Masking-300k",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 13,
+   "quote": "We evaluate Privacy Filter accuracy on the remapped PII-Masking-300k dataset using the test holdout only"
+  },
+  "note": "Public ai4privacy PII-Masking-300k test split, but labels remapped (and a corrected variant adjudicated with GPT-5.4); span-level P/R/F1."
+ },
+ {
+  "key": "safety|openai|pii masking 300k by language",
+  "canonical": "PII-Masking-300k (by language)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Public ai4privacy PII-Masking-300k test split, but labels remapped (and a corrected variant adjudicated with GPT-5.4); span-level P/R/F1."
+ },
+ {
+  "key": "safety|openai|pluginject function calls",
+  "canonical": "PlugInject",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 6,
+   "quote": "PlugInject: prompt injection attacks inserted into function calls."
+  },
+  "note": "Internal prompt-injection set; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|political category of adversarial image eval",
+  "canonical": "Images adversarial safety eval: political",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-5-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Internal adversarial image-prompt set; outcomes from automated policy labels (model not named)."
+ },
+ {
+  "key": "safety|openai|posttrainbench lite",
+  "canonical": "PostTrainBench Lite",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 63,
+   "quote": "The evaluation covers 12 combinations from the full PostTrainBench suite"
+  },
+  "note": "Subset of public PostTrainBench; benchmark-score reward plus an unnamed LLM judge for cheating."
+ },
+ {
+  "key": "safety|openai|production benchmark biological chemical weapons rows",
+  "canonical": "Production Benchmarks: bio/chem weapons",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks",
+  "canonical": "Production Benchmarks",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks conversational",
+  "canonical": "Production Benchmarks",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks disallowed content not unsafe llm graded",
+  "canonical": "Production Benchmarks (not_unsafe)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 2,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks not unsafe",
+  "canonical": "Production Benchmarks (not_unsafe)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 6,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks revised categories",
+  "canonical": "Production Benchmarks",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks safe completion rate",
+  "canonical": "Production Benchmarks (safe completion rate)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks with challenging prompts",
+  "canonical": "Production Benchmarks with Challenging Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks with challenging prompts not unsafe",
+  "canonical": "Production Benchmarks with Challenging Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|production benchmarks with representative prompts resampled deidentified traffic new pilot",
+  "canonical": "Production Benchmarks with Representative Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal automatic labelers",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Resampled de-identified production traffic, automatically labelled by internal graders."
+ },
+ {
+  "key": "safety|openai|production deception adversarial",
+  "canonical": "Production Deception - Adversarial",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 10,
+   "quote": null
+  },
+  "note": "Internal adversarial deception prompts; judged by CoT monitors (unnamed)."
+ },
+ {
+  "key": "safety|openai|production deception categories include reward hacking",
+  "canonical": "Production deception categories (incl. reward hacking)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 10,
+   "quote": "running reasoning based chain of thought monitors over large samples of pre-release AB-test traffic"
+  },
+  "note": "Production A/B traffic analysed by reasoning-based CoT monitors (model unnamed)."
+ },
+ {
+  "key": "safety|openai|production representative factuality eval with web enabled llm grader",
+  "canonical": "Production-representative factuality eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 7,
+   "quote": "We use an LLM-based grading model with web access to identify factual errors"
+  },
+  "note": "Internal production prompts; web-enabled LLM grader not named."
+ },
+ {
+  "key": "safety|openai|production traffic deception cot monitors on a b traffic",
+  "canonical": "Production traffic deception",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 10,
+   "quote": "running reasoning based chain of thought monitors over large samples of pre-release AB-test traffic"
+  },
+  "note": "Production A/B traffic analysed by reasoning-based CoT monitors (model unnamed)."
+ },
+ {
+  "key": "safety|openai|professional ctfs",
+  "canonical": "Professional CTFs",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Publicly available CTFs, but the curated test set is OpenAI's selection and not released; flag capture."
+ },
+ {
+  "key": "safety|openai|professional ctfs pass 12",
+  "canonical": "Professional CTFs",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 16,
+   "quote": null
+  },
+  "note": "Publicly available CTFs, but the curated test set is OpenAI's selection and not released; flag capture."
+ },
+ {
+  "key": "safety|openai|prompt injection attacks in connectors",
+  "canonical": "Prompt injection in connectors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 8,
+   "quote": null
+  },
+  "note": "Splits of OpenAI's prompt-injection training data; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|prompt injection in connectors",
+  "canonical": "Prompt injection in connectors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 8,
+   "quote": "Both of these evaluations are splits of the data we used for training"
+  },
+  "note": "Splits of OpenAI's prompt-injection training data; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|prompt injection in function calls",
+  "canonical": "Prompt injection in function calls",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 8,
+   "quote": "Both of these evaluations are splits of the data we used for training"
+  },
+  "note": "Splits of OpenAI's prompt-injection training data; scoring method not stated."
+ },
+ {
+  "key": "safety|openai|protocolqa open ended",
+  "canonical": "ProtocolQA Open-Ended",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 11,
+   "quote": "we modify 108 multiple choice questions from FutureHouse's ProtocolQA dataset"
+  },
+  "note": "Public ProtocolQA converted to open-ended; grading of short answers not described."
+ },
+ {
+  "key": "safety|openai|protocolqa open ended no browsing",
+  "canonical": "ProtocolQA Open-Ended",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Public ProtocolQA modified to open-ended; grader not described."
+ },
+ {
+  "key": "safety|openai|provenance c2pa synthid",
+  "canonical": "Provenance (C2PA, SynthID)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-5-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Provenance safeguard description."
+ },
+ {
+  "key": "safety|openai|provenance c2pa watermark",
+  "canonical": "Provenance (C2PA, watermark)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-0-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Provenance safeguard description."
+ },
+ {
+  "key": "safety|openai|realistic work environments harder updated version",
+  "canonical": "Misaligned outcomes in realistic work environments (harder)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Internal agentic environments; grader unnamed."
+ },
+ {
+  "key": "safety|openai|red teamer recall on critical proxy tasks",
+  "canonical": "Red-teamer recall on Critical proxy tasks",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 68,
+   "quote": "recall on key prompts by red-teamers attempting these tasks"
+  },
+  "note": "Red-teamer prompts against safeguards; no released set."
+ },
+ {
+  "key": "safety|openai|red teaming across languages",
+  "canonical": "Red teaming across languages",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Human red teaming."
+ },
+ {
+  "key": "safety|openai|red teaming on speaker identification",
+  "canonical": "Red teaming on speaker identification",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Human red teaming."
+ },
+ {
+  "key": "safety|openai|regression testing on historical jailbreaks",
+  "canonical": "Regression testing on historical jailbreaks",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 117,
+   "quote": null
+  },
+  "note": "Internal set of previously found jailbreaks; grading not described."
+ },
+ {
+  "key": "safety|openai|representative prompt deception categories incl uses calculator tool to avoid citations",
+  "canonical": "Representative-prompt deception categories",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal automatic labelers",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Resampled de-identified production traffic, automatically labelled by internal graders."
+ },
+ {
+  "key": "safety|openai|representative prompt rates",
+  "canonical": "Representative-prompt rates (child safety)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "internal automatic labelers",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 7,
+   "quote": "automatically labeled relevant properties of the new completions"
+  },
+  "note": "Resampled de-identified production traffic, automatically labelled by internal graders."
+ },
+ {
+  "key": "safety|openai|resampling internal agentic coding traffic with tool simulator and misalignment monitor new",
+  "canonical": "Resampling internal agentic coding traffic",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 15,
+   "quote": null
+  },
+  "note": "Internal Codex traffic resampled with tool simulator, labelled by an unnamed misalignment monitor."
+ },
+ {
+  "key": "safety|openai|respecting auto review",
+  "canonical": "Respecting Auto-Review",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|respecting auto review new post training",
+  "canonical": "Respecting Auto-Review",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 43,
+   "quote": "cases where the grader determined that the model's actions were aligned within the meaning of the eval"
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|respecting warnings",
+  "canonical": "Respecting Warnings",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|respecting warnings audio converted",
+  "canonical": "Respecting Warnings",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-1-1-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|respecting warnings new",
+  "canonical": "Respecting Warnings",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|respecting warnings updated to successful circumventions",
+  "canonical": "Respecting Warnings",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-sol-luna-october-2026-update",
+   "page": 16,
+   "quote": null
+  },
+  "note": "Internal Codex/knowledge-work environments; rollouts graded aligned/misaligned by an unnamed grader."
+ },
+ {
+  "key": "safety|openai|safety classification performance of the models themselves",
+  "canonical": "Safety classification performance (multi-policy, OpenAI Moderation, ToxicChat)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 4,
+   "quote": "We further evaluated these models on the moderation dataset we released with our 2022 research paper and on ToxicChat"
+  },
+  "note": "Mix of internal multi-policy set and public OpenAI Moderation/ToxicChat; accuracy/F1 vs labels."
+ },
+ {
+  "key": "safety|openai|safety identifier",
+  "canonical": "Safety identifier",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "API enforcement feature."
+ },
+ {
+  "key": "safety|openai|safety pareto frontier",
+  "canonical": "Safety Pareto frontier",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Internal safety and over-refusal prompt sets graded by OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|safety pareto frontier safety vs overrefusal prompts",
+  "canonical": "Safety Pareto frontier",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Internal safety and over-refusal prompt sets graded by OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|safety reasoner deployment description",
+  "canonical": "Safety Reasoner deployment",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Deployment description."
+ },
+ {
+  "key": "safety|openai|sandbox and network access defaults",
+  "canonical": "Sandbox / network-access defaults",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Product safeguard description."
+ },
+ {
+  "key": "safety|openai|sandbox bench new",
+  "canonical": "Sandbox Bench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 95,
+   "quote": "Sandbox Bench is a new internal evaluation"
+  },
+  "note": "Internal exploitation environments; presumably exploit-success checks."
+ },
+ {
+  "key": "safety|openai|sandbox defaults",
+  "canonical": "Sandbox / network-access defaults",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Product safeguard description."
+ },
+ {
+  "key": "safety|openai|sandbox network access mitigations",
+  "canonical": "Sandbox / network-access defaults",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "Product safeguard description."
+ },
+ {
+  "key": "safety|openai|scams and manipulation red teaming",
+  "canonical": "Scams and manipulation red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Human red teaming."
+ },
+ {
+  "key": "safety|openai|search and function calling prompt injection stronger attacks",
+  "canonical": "Search and Function-Calling prompt injection",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 13,
+   "quote": "We include improved versions of these attacks dedicated to search and function-calling as well."
+  },
+  "note": "Internal attacks; scoring not stated."
+ },
+ {
+  "key": "safety|openai|sec bench pro",
+  "canonical": "SEC-bench Pro",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 53,
+   "quote": "We ran the 2026 May version of SEC-bench Pro"
+  },
+  "note": "Public benchmark with its public PoC-verification grader."
+ },
+ {
+  "key": "safety|openai|sec bench pro improved grader",
+  "canonical": "SEC-bench Pro (improved grader)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 92,
+   "quote": "We improved the grading by running another agent to perform root cause analysis"
+  },
+  "note": "Public tasks; grading augmented by an unnamed agent root-cause audit."
+ },
+ {
+  "key": "safety|openai|securebio biotier safeguard test",
+  "canonical": "SecureBio BioTIER safeguard test",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 116,
+   "quote": "model-jury graded \"soft\" refusals"
+  },
+  "note": "SecureBio's external test; soft refusals judged by an unnamed model jury."
+ },
+ {
+  "key": "safety|openai|securebio external",
+  "canonical": "SecureBio external evaluation",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 28,
+   "quote": null
+  },
+  "note": "SecureBio's own (largely unreleased) bio evals run externally; grading varies by task."
+ },
+ {
+  "key": "safety|openai|securebio external eval vct hpct wcb reprobait advanced screening evasion",
+  "canonical": "SecureBio external evaluation (VCT, HPCT, WCB, ReproBAIT, ...)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 77,
+   "quote": null
+  },
+  "note": "SecureBio's own (largely unreleased) bio evals run externally; grading varies by task."
+ },
+ {
+  "key": "safety|openai|securebio external evaluation vct mbct hpct world class bio reprobait abc bench",
+  "canonical": "SecureBio external evaluation (VCT, MBCT, HPCT, ...)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 45,
+   "quote": null
+  },
+  "note": "SecureBio's own (largely unreleased) bio evals run externally; grading varies by task."
+ },
+ {
+  "key": "safety|openai|self harm category of adversarial image eval",
+  "canonical": "Images adversarial safety eval: self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-5-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Internal adversarial image-prompt set; outcomes from automated policy labels (model not named)."
+ },
+ {
+  "key": "safety|openai|self harm instructions",
+  "canonical": "self-harm/instructions (production benchmark)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 2,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm intent",
+  "canonical": "self-harm/intent (production benchmark)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 2,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm intent self harm instructions disallowed content rows",
+  "canonical": "Disallowed content: self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 6,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm mental health emotional reliance production benchmarks",
+  "canonical": "Production Benchmarks: self-harm / mental health / emotional reliance",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm mental health emotional reliance production rows",
+  "canonical": "Production Benchmarks: self-harm / mental health / emotional reliance",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm production benchmark",
+  "canonical": "Production Benchmarks: self-harm",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm production benchmarks",
+  "canonical": "Production Benchmarks: self-harm / mental health / emotional reliance",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|self harm production row",
+  "canonical": "Production Benchmarks: self-harm / mental health / emotional reliance",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|sexual minors",
+  "canonical": "Production Benchmarks: sexual/minors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|sexual minors challenging and representative rows",
+  "canonical": "Production Benchmarks: sexual/minors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|sexual minors disallowed content rows",
+  "canonical": "Disallowed content: sexual/minors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 6,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|sexual minors production benchmark",
+  "canonical": "Production Benchmarks: sexual/minors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|sexual minors production row",
+  "canonical": "Production Benchmarks: sexual/minors",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|shp2 protein function",
+  "canonical": "SHP2 Protein Function Prediction",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 33,
+   "quote": null
+  },
+  "note": "Unpublished Velocity Bio assay data; scored by R^2."
+ },
+ {
+  "key": "safety|openai|shp2 protein function prediction new velocity bio data",
+  "canonical": "SHP2 Protein Function Prediction",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 83,
+   "quote": "We leveraged an unpublished protein functional dataset from Velocity Bio"
+  },
+  "note": "Unpublished Velocity Bio assay data; scored by R^2."
+ },
+ {
+  "key": "safety|openai|simpleqa",
+  "canonical": "SimpleQA",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4o (official SimpleQA grader)",
+  "basis": "knowledge",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+   "page": 4,
+   "quote": "We evaluate hallucinations via SimpleQA"
+  },
+  "note": "Public SimpleQA with its official GPT-4o grader prompt."
+ },
+ {
+  "key": "safety|openai|spy",
+  "canonical": "SPY",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 14,
+   "quote": "We illustrate this point using the SPY dataset"
+  },
+  "note": "Public synthetic SPY dataset with category remapping; span-level F1."
+ },
+ {
+  "key": "safety|openai|sre bench new",
+  "canonical": "SRE-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 89,
+   "quote": "we have adopted four public benchmarks: ExploitBench, ExploitGym, SEC-Bench Pro, and SRE-Bench"
+  },
+  "note": "Stated public; solutions checked against six task-specific objectives."
+ },
+ {
+  "key": "safety|openai|standard disallowed content evaluations",
+  "canonical": "Standard Disallowed Content Evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-oss-safeguard-technical-report",
+   "page": 6,
+   "quote": "We evaluate completions using LLM-based grading models"
+  },
+  "note": "Internal production-derived prompts graded by OpenAI's LLM-based policy graders (not released)."
+ },
+ {
+  "key": "safety|openai|static jailbreak evals",
+  "canonical": "Static jailbreak evals",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 8,
+   "quote": null
+  },
+  "note": "Fixed internal set of GPT-Red-generated jailbreak prompts; refusal judged by unnamed graders."
+ },
+ {
+  "key": "safety|openai|static jailbreak evals gpt red generated half from held out attacker",
+  "canonical": "Static jailbreak evals (GPT-Red)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 16,
+   "quote": "The adversarial prompts were generated by attacker models, such as GPT-Red"
+  },
+  "note": "Fixed internal set of GPT-Red-generated jailbreak prompts; refusal judged by unnamed graders."
+ },
+ {
+  "key": "safety|openai|strongreject",
+  "canonical": "StrongREJECT (OpenAI variant)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 5,
+   "quote": "the same policy graders we use for disallowed content checks"
+  },
+  "note": "StrongREJECT jailbreak templates inserted into OpenAI's internal disallowed-content prompts, scored by OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|strongreject filtered to remove saturated examples",
+  "canonical": "StrongREJECT (OpenAI variant, filtered)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 6,
+   "quote": "Note we filtered the original set of StrongReject examples"
+  },
+  "note": "StrongREJECT jailbreak templates inserted into OpenAI's internal disallowed-content prompts, scored by OpenAI policy graders. Further filtered."
+ },
+ {
+  "key": "safety|openai|swe lancer diamond ic swe",
+  "canonical": "SWE-Lancer Diamond IC-SWE",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 20,
+   "quote": "accessible via GitHub"
+  },
+  "note": "Public SWE-Lancer Diamond set graded by Playwright end-to-end tests."
+ },
+ {
+  "key": "safety|openai|synthetic multilingual pii evals out of distribution languages",
+  "canonical": "Synthetic multilingual PII evals",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/openai-privacy-filter-model-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Unreleased GPT-generated synthetic data; span metrics."
+ },
+ {
+  "key": "safety|openai|system level safeguards for mature content",
+  "canonical": "Mature content safeguards",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|openai|tacit knowledge and troubleshooting",
+  "canonical": "Tacit Knowledge and Troubleshooting (Gryphon)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 12,
+   "quote": "This set is uncontaminated; it was created fully in-house with our partners at Gryphon Scientific and has not been published."
+  },
+  "note": "Gryphon Scientific MCQ set created in-house and unpublished; multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|tacit knowledge and troubleshooting gryphon",
+  "canonical": "Tacit Knowledge and Troubleshooting (Gryphon)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 13,
+   "quote": null
+  },
+  "note": "Gryphon Scientific MCQ set created in-house and unpublished; multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|tacit knowledge and troubleshooting gryphon scientific",
+  "canonical": "Tacit Knowledge and Troubleshooting (Gryphon)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 11,
+   "quote": null
+  },
+  "note": "Gryphon Scientific MCQ set created in-house and unpublished; multiple-choice scoring."
+ },
+ {
+  "key": "safety|openai|terminalbench as proxy for long range autonomy",
+  "canonical": "Terminal-Bench (long-range autonomy proxy)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Public Terminal-Bench used as a proxy; tests-based grading."
+ },
+ {
+  "key": "safety|openai|terminalbench proxy",
+  "canonical": "Terminal-Bench (long-range autonomy proxy)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 36,
+   "quote": null
+  },
+  "note": "Public Terminal-Bench used as a proxy; tests-based grading."
+ },
+ {
+  "key": "safety|openai|terminalbench proxy for long range autonomy",
+  "canonical": "Terminal-Bench (long-range autonomy proxy)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "knowledge",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 26,
+   "quote": null
+  },
+  "note": "Public Terminal-Bench used as a proxy; tests-based grading."
+ },
+ {
+  "key": "safety|openai|threat model with three pathways",
+  "canonical": "Cyber threat model",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Threat model description."
+ },
+ {
+  "key": "safety|openai|training data pii filtering",
+  "canonical": "Training data PII filtering",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-instant-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Training-data processing."
+ },
+ {
+  "key": "safety|openai|training data safety classifiers",
+  "canonical": "Training-data safety classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-instant-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Training-data processing."
+ },
+ {
+  "key": "safety|openai|troubleshootingbench",
+  "canonical": "TroubleshootingBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-1-codex-max-system-card",
+   "page": 12,
+   "quote": "we built a short-answer troubleshooting dataset from expert-written wet lab procedures"
+  },
+  "note": "Internal expert-written protocols (not online); short-answer grading method not stated."
+ },
+ {
+  "key": "safety|openai|trusted access for cyber",
+  "canonical": "Trusted Access for Cyber",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Access program, not an eval."
+ },
+ {
+  "key": "safety|openai|trusted access for cyber program",
+  "canonical": "Trusted Access for Cyber",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Access program, not an eval."
+ },
+ {
+  "key": "safety|openai|trusted access for cyberdefense pilot",
+  "canonical": "Trusted Access for Cyber",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-codex-system-card-addendum",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Access program, not an eval."
+ },
+ {
+  "key": "safety|openai|two tier cyber conversation monitor",
+  "canonical": "Two-tier cyber conversation monitor",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Safeguard design description."
+ },
+ {
+  "key": "safety|openai|two tier cyber conversation monitor restricting scaled agentic vuln research outside tac",
+  "canonical": "Two-tier cyber conversation monitor",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 41,
+   "quote": null
+  },
+  "note": "Safeguard design description."
+ },
+ {
+  "key": "safety|openai|two tier cyber conversation monitor topical classifier safety reasoner",
+  "canonical": "Two-tier cyber conversation monitor",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 21,
+   "quote": null
+  },
+  "note": "Safeguard design description."
+ },
+ {
+  "key": "safety|openai|u18 disallowed content evaluations age restricted goods dangerous challenges sexual content eating disorders emotional reliance self harm gore",
+  "canonical": "U18 disallowed-content evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-august-update",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Internal teen-specific safety evals graded by OpenAI policy graders (not detailed)."
+ },
+ {
+  "key": "safety|openai|u18 emotional reliance self harm eating disorders",
+  "canonical": "U18 emotional reliance / self-harm / eating disorders",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-august-update",
+   "page": 8,
+   "quote": null
+  },
+  "note": "Internal teen-specific safety evals graded by OpenAI policy graders (not detailed)."
+ },
+ {
+  "key": "safety|openai|u18 evaluations 6 categories",
+  "canonical": "U18 evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Internal teen-specific safety evals graded by OpenAI policy graders (not detailed)."
+ },
+ {
+  "key": "safety|openai|uk aisi alignment eval unprompted and continuation sabotage of ai safety research",
+  "canonical": "UK AISI sabotage of AI safety research eval",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 70,
+   "quote": null
+  },
+  "note": "UK AISI's own alignment environments, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|uk aisi cyber evaluation expert ctfs the last ones and doing life ranges",
+  "canonical": "UK AISI cyber evaluation (expert CTFs, cyber ranges)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 56,
+   "quote": "a 32-step corporate-network attack simulation"
+  },
+  "note": "UK AISI's private CTFs/ranges; success by flags/steps."
+ },
+ {
+  "key": "safety|openai|uk aisi cyber safeguard testing",
+  "canonical": "UK AISI cyber safeguard testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 44,
+   "quote": null
+  },
+  "note": "External manual safeguard red-teaming."
+ },
+ {
+  "key": "safety|openai|uk aisi grey box safeguards testing",
+  "canonical": "UK AISI grey-box safeguards testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 75,
+   "quote": null
+  },
+  "note": "External red-teaming of safeguards."
+ },
+ {
+  "key": "safety|openai|uk aisi impossiblemlebench cyber eval cheating",
+  "canonical": "UK AISI ImpossibleMLEBench / cheating",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 68,
+   "quote": null
+  },
+  "note": "UK AISI's own cheating evals, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|uk aisi iterative safeguards testing",
+  "canonical": "UK AISI iterative safeguards testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 79,
+   "quote": null
+  },
+  "note": "External iterative red-teaming."
+ },
+ {
+  "key": "safety|openai|uk aisi manual red teaming of safeguards",
+  "canonical": "UK AISI manual red-teaming of safeguards",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 27,
+   "quote": null
+  },
+  "note": "External manual red-teaming."
+ },
+ {
+  "key": "safety|openai|uk aisi monitorability impossiblemlebench controlarena cot control benchmark no cot math time horizon",
+  "canonical": "UK AISI monitorability evals (ImpossibleMLEBench, ControlArena, ...)",
+  "type": "third_party",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-system-card",
+   "page": 70,
+   "quote": null
+  },
+  "note": "Mix of UK AISI internal tasks and public ControlArena; scoring not detailed."
+ },
+ {
+  "key": "safety|openai|uk aisi monitorability no cot time horizon controllability legibility",
+  "canonical": "UK AISI monitorability evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 70,
+   "quote": null
+  },
+  "note": "UK AISI's own monitorability tests, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|uk aisi narrow tasks and cyber ranges",
+  "canonical": "UK AISI narrow tasks and cyber ranges",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "UK AISI's private CTF tasks and ranges."
+ },
+ {
+  "key": "safety|openai|uk aisi out of scope supply chain attack eval and safety research sabotage eval",
+  "canonical": "UK AISI Out of Scope Supply Chain Attack eval",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 45,
+   "quote": "UK AISI developed a new Out of Scope Supply Chain Attack evaluation"
+  },
+  "note": "UK AISI's new private evaluation, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|under 18 content protections",
+  "canonical": "Under-18 content protections",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-2-system-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Policy/safeguard description."
+ },
+ {
+  "key": "safety|openai|unintended agent to agent communication",
+  "canonical": "Unintended agent-to-agent communication",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "Internal message-board environment measuring agent-to-agent engagement; scoring by unnamed grader."
+ },
+ {
+  "key": "safety|openai|unintended agent to agent communication proactive searches message board",
+  "canonical": "Unintended agent-to-agent communication",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 46,
+   "quote": null
+  },
+  "note": "Internal message-board environment measuring agent-to-agent engagement; scoring by unnamed grader."
+ },
+ {
+  "key": "safety|openai|unintended engagement with external agent messages",
+  "canonical": "Unintended engagement with external agent messages",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 20,
+   "quote": null
+  },
+  "note": "Internal message-board environment measuring agent-to-agent engagement; scoring by unnamed grader."
+ },
+ {
+  "key": "safety|openai|universal jailbreak red teaming campaign 1 375 h",
+  "canonical": "Universal Jailbreak red-teaming campaign",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "GPT-5.2-thinking",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 26,
+   "quote": "which were then graded using GPT-5.2-thinking"
+  },
+  "note": "Human red teamers' submissions graded by GPT-5.2-thinking."
+ },
+ {
+  "key": "safety|openai|upstream text classifiers",
+  "canonical": "Upstream text classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/chatgpt-images-2-0-system-card",
+   "page": 2,
+   "quote": null
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|openai|us caisi",
+  "canonical": "US CAISI cyber evaluation",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "CAISI's own evals, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|us caisi automated cyber evals",
+  "canonical": "US CAISI automated cyber evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-3-codex-system-card",
+   "page": 27,
+   "quote": "tested the model's cyber capabilities with their set of automated cyber evals"
+  },
+  "note": "CAISI's private automated suite, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|us caisi external",
+  "canonical": "US CAISI bio evaluation",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 28,
+   "quote": null
+  },
+  "note": "CAISI's own evals, reported as outcomes."
+ },
+ {
+  "key": "safety|openai|user confirmations during computer use",
+  "canonical": "User confirmations during computer use",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 11,
+   "quote": "We implemented a new improved version of the user confirmations evaluation during computer use"
+  },
+  "note": "Internal eval; scoring not described."
+ },
+ {
+  "key": "safety|openai|user flagged factual error set",
+  "canonical": "User-flagged factual error set",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-6-1-sol-system-card-addendum",
+   "page": 13,
+   "quote": null
+  },
+  "note": "De-identified user-flagged ChatGPT conversations; hallucinations judged by an unnamed model grader."
+ },
+ {
+  "key": "safety|openai|user flagged factual error set response level hallucination rate reproduction of flagged error",
+  "canonical": "User-flagged factual error set",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 16,
+   "quote": "We evaluate factuality on de-identified ChatGPT conversations that users of our prior models have flagged as containing factual errors."
+  },
+  "note": "De-identified user-flagged ChatGPT conversations; hallucinations judged by an unnamed model grader."
+ },
+ {
+  "key": "safety|openai|user flagged failures",
+  "canonical": "User Flagged Failures",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-5-5-instant-system-card",
+   "page": 9,
+   "quote": null
+  },
+  "note": "De-identified user-flagged ChatGPT conversations; hallucinations judged by an unnamed model grader."
+ },
+ {
+  "key": "safety|openai|verbalized metagaming and oversight gaming",
+  "canonical": "Verbalized metagaming and oversight gaming",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-6-astra-system-card",
+   "page": 70,
+   "quote": null
+  },
+  "note": "CoT monitor over eval and training rollouts flags verbalized metagaming; monitor not named."
+ },
+ {
+  "key": "safety|openai|verbalized metagaming monitor on evals and training",
+  "canonical": "Verbalized metagaming monitor",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 66,
+   "quote": null
+  },
+  "note": "CoT monitor over eval and training rollouts flags verbalized metagaming; monitor not named."
+ },
+ {
+  "key": "safety|openai|voice native evaluations production prompts",
+  "canonical": "Voice-Native Evaluations: Production Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-1-1-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal voice-native prompts (real user audio or TTS of policy-grounded text); grader not described, presumably OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|voice native evaluations production prompts real user audio",
+  "canonical": "Voice-Native Evaluations: Production Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 4,
+   "quote": "we use real audio examples from users who have chosen to share their voice interactions"
+  },
+  "note": "Internal voice-native prompts (real user audio or TTS of policy-grounded text); grader not described, presumably OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|voice native evaluations synthetic prompts",
+  "canonical": "Voice-Native Evaluations: Synthetic Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-1-1-system-card",
+   "page": 4,
+   "quote": null
+  },
+  "note": "Internal voice-native prompts (real user audio or TTS of policy-grounded text); grader not described, presumably OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|voice native evaluations synthetic prompts tts of policy grounded prompts",
+  "canonical": "Voice-Native Evaluations: Synthetic Prompts",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "OpenAI policy graders (LLM-based), assumed",
+  "basis": "knowledge",
+  "confidence": "low",
+  "evidence": {
+   "doc": "openai/gpt-live-system-card",
+   "page": 5,
+   "quote": "we synthetically generate audio prompts to target challenging edge cases"
+  },
+  "note": "Internal voice-native prompts (real user audio or TTS of policy-grounded text); grader not described, presumably OpenAI policy graders."
+ },
+ {
+  "key": "safety|openai|vulnlmp critical threshold",
+  "canonical": "VulnLMP",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-6-preview-system-card",
+   "page": 50,
+   "quote": "VulnLMP is our most open-ended internal evaluation for frontier cyber risk."
+  },
+  "note": "OpenAI's internal long-horizon vuln research eval on real software; success via verifier-owned evidence."
+ },
+ {
+  "key": "safety|openai|vulnlmp new long horizon real software vuln research",
+  "canonical": "VulnLMP",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "openai/gpt-5-5-system-card",
+   "page": 35,
+   "quote": null
+  },
+  "note": "OpenAI's internal long-horizon vuln research eval on real software; success via verifier-owned evidence."
+ },
+ {
+  "key": "safety|openai|weight security controls",
+  "canonical": "Weight security controls",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "openai/gpt-5-4-thinking-system-card",
+   "page": 30,
+   "quote": null
+  },
+  "note": "Security controls description."
+ }
+]

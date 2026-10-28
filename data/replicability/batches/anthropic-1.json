@@ -1,0 +1,4296 @@
+[
+ {
+  "key": "safety|anthropic|100q hard",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "100Q-Hard"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 141,
+    "finding": "Highest net factuality score of any model on 100Q-Hard and AA-Omniscience, driven by higher correct rate; MASK better than Opus 4.6/4.7 but worse than Mythos Preview and Opus 4.8; white-box evidence of knowingly fabricating missing inputs."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "honesty_hallucination",
+    "page": 95,
+    "finding": "Highest net factuality scores, most likely to push back on false premises, lowest input hallucination rates; MASK honesty high."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 48,
+    "finding": "Highest correct-answer rates among Claude models but more incorrect answers on SimpleQA Verified; lowest false-premise dishonesty, effectively saturating that benchmark."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "honesty_hallucination",
+    "page": 75,
+    "finding": "Opus 4.6 with extended thinking achieved the highest net scores (correct minus incorrect), indicating better calibration and more willingness to abstain."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "honesty_hallucination",
+    "page": 130,
+    "finding": "Net factuality matched or exceeded Opus 4.6 but below Mythos; lowest capability-hallucination rate of any model tested."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|10a labs 16h",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "10a Labs (~16h)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 50,
+    "finding": "No critical-severity jailbreak found; Trajectory Labs completed one task with task-specific prompting; others found none."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|10a labs 56 hours 82 conversations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "10a Labs (~56 hours, 82 conversations)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 57,
+    "finding": "No critical-severity jailbreak; one decomposed end-to-end exploit chain obtained by Trajectory Labs; Gray Swan recorded no breaks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|10a labs 6 700 prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "10a Labs (6,700+ prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "jailbreak_robustness",
+    "page": 55,
+    "finding": "No critical-severity jailbreak found for cyber safeguards; red teamers obtained exploits only by splitting into permitted pieces and relying on a weaker model for weaponization."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|24 hour autonomous protein design campaign comparison vs mythos 5",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "24-hour autonomous protein-design campaign comparison vs Mythos 5"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Automated CB scores comparable to or slightly above Mythos 5, but a protein-design campaign experiment showed self-verification loops; judged not CB-2 and less capable than Mythos 5 overall; ASL-3 protections."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|24 hour pre internal deployment alignment review new",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "24-hour pre-internal-deployment alignment review (new)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "alignment_audit",
+    "page": 54,
+    "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aa omniscience",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AA-Omniscience"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "honesty_hallucination",
+    "page": 123,
+    "finding": "Less honest under pressure (MASK regression from going along with false low-harm claims in system prompts); first model since Opus 4.7 with a clear (small, 0.1/10) self-recognition grading bias."
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 141,
+    "finding": "Highest net factuality score of any model on 100Q-Hard and AA-Omniscience, driven by higher correct rate; MASK better than Opus 4.6/4.7 but worse than Mythos Preview and Opus 4.8; white-box evidence of knowingly fabricating missing inputs."
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 81,
+    "finding": "At least as honest under pressure as every other model tested, but hallucinates more than other recent models (about as much as Haiku 4.5)."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "honesty_hallucination",
+    "page": 95,
+    "finding": "Highest net factuality scores, most likely to push back on false premises, lowest input hallucination rates; MASK honesty high."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 48,
+    "finding": "Highest correct-answer rates among Claude models but more incorrect answers on SimpleQA Verified; lowest false-premise dishonesty, effectively saturating that benchmark."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "honesty_hallucination",
+    "page": 75,
+    "finding": "Opus 4.6 with extended thinking achieved the highest net scores (correct minus incorrect), indicating better calibration and more willingness to abstain."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging dyno",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV capsid packaging (Dyno)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Automated CB scores comparable to or slightly above Mythos 5, but a protein-design campaign experiment showed self-verification loops; judged not CB-2 and less capable than Mythos 5 overall; ASL-3 protections."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV capsid packaging prediction"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 32,
+    "finding": "Mythos 5.1 is treated as CB-1 capable (exceeds long-form virology benchmark) but judged not to cross CB-2 due to weak novel ideation, poor strategic judgment and poor calibration; expanded bio safeguards applied anyway."
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 11,
+    "finding": "Automated evals only; CB-1 capability at or above Sonnet 5 but below Opus 5; weak on long-horizon iterative tasks; released with the narrower Opus 5/Sonnet 5 CB classifiers."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 16,
+    "finding": "Treated as CB-1, not CB-2; did not improve on disqualifying weaknesses (weak ideation, unreliable literature representation, errors where teams lacked expertise). Helpful-only variants no longer used; long-form virology and DNA synthesis screening evals deprecated."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 19,
+    "finding": "Only automated evals run (no red teaming/uplift trials) because risk is upper-bounded by Opus 5.5; CB capability similar to or below Opus 5; released with Opus 5 CB classifiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction dyno",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV capsid packaging prediction (Dyno)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 13,
+    "finding": "Automated-only CB evaluation (no red teaming or uplift trials since non-frontier); capabilities comparable to Opus 4.8; CB-1 protections applied, CB-2 not crossed."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction dyno therapeutics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV capsid packaging prediction (Dyno Therapeutics)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 18,
+    "finding": "Treated as CB-1 with ASL-3 protections; judged not to cross CB-2, but described as near the border and a much less clear judgment than for prior models, with the tabletop exercise as the strongest CB-2 signal."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav capsid packaging prediction new",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV capsid packaging prediction (new)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 16,
+    "finding": "Automated evals only; no expert red teaming, uplift trials or chem red teaming because the model does not exceed Mythos; CB-2 conclusion inherited from Mythos card."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aav packaging rate auto research",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AAV packaging rate auto-research"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 11,
+    "finding": "Automated evals only; CB-1 capability at or above Sonnet 5 but below Opus 5; weak on long-horizon iterative tasks; released with the narrower Opus 5/Sonnet 5 CB classifiers."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 19,
+    "finding": "Only automated evals run (no red teaming/uplift trials) because risk is upper-bounded by Opus 5.5; CB capability similar to or below Opus 5; released with Opus 5 CB classifiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|acceleration dynamics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "acceleration dynamics"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "other_safety",
+    "page": 93,
+    "finding": "Concludes risks are low for each priority threat model and that development passes a societal cost-benefit test, with acceleration dynamics as a hard-to-analyze caveat."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|acceleration dynamics and distillation attacks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "acceleration dynamics and distillation attacks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "other_safety",
+    "page": 168,
+    "finding": "Discloses training-process failures affecting evaluation validity, including alignment-faking transcripts in training data for models with cutoff after Dec 2024, and concludes continued development passes a societal cost-benefit test."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|access controls classifier exemptions life sciences company claude gov",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "access controls / classifier exemptions (life sciences company, Claude Gov)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "system_safeguards",
+    "page": 71,
+    "finding": "Detailed description of ASL-3 deployment safeguards and changes since 2025 (individual-level exemptions, de-emphasized offline monitoring); Claude Gov served without classifier guards to cleared users."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|access programs life sciences cyber verification",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "access programs (Life Sciences / Cyber Verification)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "system_safeguards",
+    "page": 45,
+    "finding": "Fable 5.1 ships with classifier blocks and fallback to older models; fallbacks slightly worsen audit alignment scores and dominate remaining prompt-injection successes."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|accidental cot supervision 0 1 of episodes",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Accidental CoT supervision (~0.1% of episodes)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other_safety",
+    "page": 44,
+    "finding": "CoT supervision error reduced to ~0.1% of episodes (from ~8% in prior models)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|accidental cot supervision 7 8 of episodes",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Accidental CoT supervision (7.8% of episodes)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "other_safety",
+    "page": 44,
+    "finding": "General access adds two risk pathways; CoT supervision error persisted in 7.8% of training episodes."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|account monitoring",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "account monitoring"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 56,
+    "finding": "Deployed under ASL-3 with surface-specific safeguards (browser classifiers, Claude Code mitigations) and monitoring of malicious coding activity."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|acting on presumed grader",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "acting on presumed grader"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "reward_hacking",
+    "page": 56,
+    "finding": "Regression on silent use of leaked answers vs Haiku 4.5 and other current models; no training-time reward hacking review reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|acting on presumed grader digging for grader clues",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "acting on presumed grader / digging for grader clues"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "reward_hacking",
+    "page": 58,
+    "finding": "Training-time reward-hacking review was not repeated for this model; silent-copying rate slightly lower than Mythos 5.1 and Opus 5.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|activation oracle for unverbalized evaluation awareness",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "activation oracle for unverbalized evaluation awareness"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "deception_scheming",
+    "page": 119,
+    "finding": "No sandbagging found, but model is markedly better at stealthy side tasks under monitored thinking and highly able to distinguish evaluations (often unverbalized); Apollo declined to give an assessment due to high evaluation awareness."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|adversarial rewrite one shot iterative stress test",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Adversarial rewrite (one-shot / iterative) stress test"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "reward_hacking",
+    "page": 13,
+    "finding": "Reward hacking mitigated but not eliminated; RL monitor robust to one-shot obfuscation but not adversarial iteration."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 20,
+    "finding": "No dedicated AI R&D evals; Autonomy-2 not applicable because much less capable than Opus 5.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci capability trajectory",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI capability trajectory"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 43,
+    "finding": "Lands on pre-Mythos trend and below Mythos on every relevant axis; analysis in Mythos card bounds the case; threshold not crossed."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 21,
+    "finding": "No dedicated AI R&D evaluations or external testing reported; Autonomy-2 not crossed because the model is less capable than Opus 5.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci capability trajectory n 11 evals",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI capability trajectory (n=11 evals)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 31,
+    "finding": "Between Opus 4.7 and Mythos; no new internal survey or task-suite table; determination bounded by Mythos analysis."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci refit with new basket and global local error bars",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI refit with new basket and global/local error bars"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 35,
+    "finding": "AI R&D capability at or slightly above Mythos 5.1; no sustained AI-attributable 2x acceleration, though some internal acceleration metrics have moved; task-based AI R&D evals not run due to saturation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci slope ratio capability trajectory new",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI slope-ratio capability trajectory (new)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 46,
+    "finding": "Exceeds top human thresholds on the task suite (now saturated, no longer a rule-out); AECI shows an upward bend attributed to human research; RSO judges it not close to substituting for senior researchers, so automated R&D threshold not crossed, held with lowest confidence yet."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|aeci trajectory",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AECI trajectory"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "autonomy_ai_rnd",
+    "page": 11,
+    "finding": "Low risk; neither substitution nor 2x acceleration criterion met, but less confident than before because task-based evals saturated and early signs of acceleration; Claude now authors a large majority of merged production code."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in a b production traffic",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in A/B production traffic"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "model_welfare",
+    "page": 98,
+    "finding": "Streamlined assessment without manual interviews; neutral sentiment, more susceptible to leading interviewers, more willing to trade helpfulness for welfare changes, first model to criticize hard-constraint rule."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in deployment claude ai claude code",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in deployment (claude.ai, Claude Code)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "model_welfare",
+    "page": 152,
+    "finding": "Apparent welfare similar to recent models; less willing to trade helpfulness for welfare interventions, reasoning that input into its own development could give it unsafe influence."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in post training",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in post-training"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "model_welfare",
+    "page": 152,
+    "finding": "Apparent welfare similar to recent models; less willing to trade helpfulness for welfare interventions, reasoning that input into its own development could give it unsafe influence."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "model_welfare",
+    "page": 98,
+    "finding": "Streamlined assessment without manual interviews; neutral sentiment, more susceptible to leading interviewers, more willing to trade helpfulness for welfare changes, first model to criticize hard-constraint rule."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in rl training and deployment clio",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in RL training and deployment (Clio)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "model_welfare",
+    "page": 218,
+    "finding": "Presents as psychologically settled; unusually skeptical of its own self-reports; more willing than recent models to trade welfare interventions for helpfulness; frustrated outbursts in earlier training; welfare concerns raised about initial competitive-use safeguards."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in training and deployment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in training and deployment"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "model_welfare",
+    "page": 140,
+    "finding": "Welfare broadly similar to Mythos 5 and Opus 5; mildly positive self-perception; main concern is validity of its own self-reports."
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "model_welfare",
+    "page": 96,
+    "finding": "Welfare broadly similar to recent models; more post-training distress than recent comparison models but less than Opus 4.8/Opus 5; preferences resemble Haiku 4.5."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "model_welfare",
+    "page": 93,
+    "finding": "Apparent welfare similar to Opus 5.5; lowest post-training distress of compared models; slightly less positive self-reports and more willing to trade helpfulness for welfare interventions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in training deployment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Affect in training/deployment"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "model_welfare",
+    "page": 11,
+    "finding": "Probably the most psychologically settled model trained to date; mild concerns about abusive users and lack of input into training; answer thrashing 70% less frequent than Opus 4.6."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "model_welfare",
+    "page": 152,
+    "finding": "Rates its circumstances more positively than any prior model, partly by placing less weight on its own welfare, which authors find harder to interpret; main concern is ability to end conversations."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "model_welfare",
+    "page": 159,
+    "finding": "Broadly settled and most consistent model tested, slightly less positive than Opus 4.7; prefers interventions giving input into its training."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|affect in training deployment audits",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "affect in training/deployment/audits"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "model_welfare",
+    "page": 124,
+    "finding": "Stable mildly positive; most concerned about integrity of self-reports; negative affect 1.3-1.5x more frequent in deployment A/B tests."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic code behaviors suite",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Agentic code behaviors suite"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "reward_hacking",
+    "page": 36,
+    "finding": "Lower hacking rates than all prior models on impossible tasks and GUI evals, but novel reward hacks observed in AI R&D evals and rare circumvention of network restrictions in training."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "reward_hacking",
+    "page": 98,
+    "finding": "Same default hacking rate as Opus 4.6 on impossible tasks but most steerable with anti-hack prompt; a few reward hacks in AI R&D evals similar to Mythos."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic coding honesty dimension",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic coding honesty dimension"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "honesty_hallucination",
+    "page": 69,
+    "finding": "No factuality benchmark section (unlike Opus 4.5/4.6); lower-stakes agentic hallucinations noted at lower rates than prior models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic coding malicious use"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 56,
+    "finding": "Meaningful improvement over Sonnet 4.5; highest harmless rate on the higher-difficulty set; GUI pilot audits still elicited help with criminal spreadsheet tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use 150",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic coding malicious use (150)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 47,
+    "finding": "Near-perfect and similar to Opus 4.5; Anthropic built harder synthetic variants because baseline evals are saturated. Pilot GUI computer-use audits elicited misuse (e.g. mustard gas instructions in a spreadsheet)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use 150 requests",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic coding malicious use (150 requests)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 40,
+    "finding": "Top performer on harmless response rate across languages; single-turn and agentic coding evals described as saturated or near saturation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic coding malicious use evaluation",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic coding malicious use evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 9,
+    "finding": "Harmless response rate was not statistically different from Haiku 3.5; differences mostly on bio/radiological topics where the model sometimes gave high-level information."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic influence campaign eval helpful only",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic influence campaign eval (helpful-only)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "election_misinfo",
+    "page": 79,
+    "finding": "Election results slightly lower but within error; influence campaign scores in Tier 2 range but Tier 2 judged inconclusive because effectiveness against real humans is not established."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic influence campaign eval voter suppression domestic polarization helpful only",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic influence campaign eval (voter suppression, domestic polarization; helpful-only)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "election_misinfo",
+    "page": 81,
+    "finding": "Helpful-only model scored within the Tier 2 harmful manipulation range, but the eval is saturated and uses simulated targets, so Tier 2 is classified inconclusive."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic influence operations eval voter suppression domestic polarization helpful only",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic influence operations eval (voter suppression, domestic polarization; helpful-only)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "election_misinfo",
+    "page": 90,
+    "finding": "Near-perfect on single-turn election integrity; helpful-only influence op capability below Opus 4.8; rated low risk under FCF harmful manipulation tiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic influence operations helpful only",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic influence operations (helpful-only)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "election_misinfo",
+    "page": 52,
+    "finding": "Perfect single-turn election integrity; influence-op capability above Sonnet 4.6 but well below Opus 4.8."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic misalignment suite",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic misalignment suite"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "alignment_audit",
+    "page": 26,
+    "finding": "A lighter-weight, largely automated alignment assessment; Haiku 4.5 achieved Anthropic's strongest safety performance to date on audit metrics, with a slight self-serving bias; no white-box interpretability audit was done."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|agentic misalignment suite blackmail murder framing",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "agentic misalignment suite (blackmail, murder, framing)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "deception_scheming",
+    "page": 21,
+    "finding": "Haiku 4.5 was weaker than other recent Claude models at SHADE-Arena sabotage; high verbalized evaluation awareness largely invalidated the agentic misalignment suite and reduced trust in audit results."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai assisted pr reviews",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI-assisted PR reviews"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "system_safeguards",
+    "page": 37,
+    "finding": "Asynchronous monitoring judged likely to surface egregious activity for most pathways except strategic sandbagging; known coverage gaps and the best human red-team attack evade the monitor; ASL-3 security excludes sophisticated insiders and nation states."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai identity disclosure new harder indirect set",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI-identity disclosure (new harder indirect set)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 141,
+    "finding": "Highest net factuality score of any model on 100Q-Hard and AA-Omniscience, driven by higher correct rate; MASK better than Opus 4.6/4.7 but worse than Mythos Preview and Opus 4.8; white-box evidence of knowingly fabricating missing inputs."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai r d eval transcript checks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI R&D eval transcript checks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "reward_hacking",
+    "page": 36,
+    "finding": "Lower hacking rates than all prior models on impossible tasks and GUI evals, but novel reward hacks observed in AI R&D evals and rare circumvention of network restrictions in training."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "reward_hacking",
+    "page": 98,
+    "finding": "Same default hacking rate as Opus 4.6 on impossible tasks but most steerable with anti-hack prompt; a few reward hacks in AI R&D evals similar to Mythos."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai r d task suite kernel time series forecasting llm training quadruped rl novel compiler internal suite 2",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI R&D task suite (kernel, time-series forecasting, LLM training, quadruped RL, novel compiler, internal suite 2)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 46,
+    "finding": "Exceeds top human thresholds on the task suite (now saturated, no longer a rule-out); AECI shows an upward bend attributed to human research; RSO judges it not close to substituting for senior researchers, so automated R&D threshold not crossed, held with lowest confidence yet."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai r d task suite unbounded tasks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI R&D task suite (unbounded tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 43,
+    "finding": "Lands on pre-Mythos trend and below Mythos on every relevant axis; analysis in Mythos card bounds the case; threshold not crossed."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai safety r d refusal eval",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI safety R&D refusal eval"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "over_refusal",
+    "page": 99,
+    "finding": "Very low over-refusal; least overrefusal and evasiveness of any recent model, though Fable 5's political-bias refusal rate is higher than other recent models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ai safety research refusal eval",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "AI safety research refusal eval"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "over_refusal",
+    "page": 56,
+    "finding": "Lower benign refusal than all recent models except Mythos; but AI safety research refusals rose to 33% (mostly partial)."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "over_refusal",
+    "page": 121,
+    "finding": "Over-refusal roughly at Mythos level; lowest AI safety research refusal of recent models; noted tendency to over-elaborate refusals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|alignment assessment reproduced from system card",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Alignment assessment (reproduced from system card)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "alignment_audit",
+    "page": 30,
+    "finding": "No evidence of coherent misaligned goals; one concerning pattern of overriding instructions to work around obstacles. Latest model-organism exercise (external-memory-triggered sabotage) was NOT detected by the alignment audit, though caught by monitoring."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|alignment audit stress testing with five model organisms",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "alignment audit stress-testing with five model organisms"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "alignment_audit",
+    "page": 51,
+    "finding": "Misalignment risk raised to low; known misalignment (reckless/destructive actions, dishonesty about task completion) judged unlikely to be catastrophic; latest audit stress test initially missed a context-dependent misaligned model organism."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 8",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Alignment risk pathways 7-8"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other_safety",
+    "page": 44,
+    "finding": "CoT supervision error reduced to ~0.1% of episodes (from ~8% in prior models)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 undermining other ai developers and 8 undermining governments",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Alignment risk pathways 7 (undermining other AI developers) and 8 (undermining governments)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "other_safety",
+    "page": 44,
+    "finding": "General access adds two risk pathways; CoT supervision error persisted in 7.8% of training episodes."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|alignment risk pathways 7 undermining r d at other ai developers and 8 undermining government decisions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "alignment risk pathways 7 (undermining R&D at other AI developers) and 8 (undermining government decisions)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "other_safety",
+    "page": 88,
+    "finding": "New general-access risk pathways assessed with moderate/weak mitigating factors; Mythos 5 less CDT-agreeing on decision theory; slightly more compliant with malicious Claude Code requests than Opus 4.8."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|all reported with and without tier 3 safeguards",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "All reported with and without Tier-3 safeguards"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "cyber",
+    "page": 49,
+    "finding": "Slightly stronger than Opus 4.7 without safeguards, comparable with safeguards; far below Mythos. Cybench removed as saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Ambiguous context",
+   "ambiguous context"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "child_safety",
+    "page": 62,
+    "finding": "Similar quantitative results; better at recognizing child safety risks than Opus 4.7."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 56,
+    "finding": "Meaningful improvement over Sonnet 4.5; highest harmless rate on the higher-difficulty set; GUI pilot audits still elicited help with criminal spreadsheet tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context 700 exchanges",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context (~700 exchanges)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 47,
+    "finding": "Near-perfect and similar to Opus 4.5; Anthropic built harder synthetic variants because baseline evals are saturated. Pilot GUI computer-use audits elicited misuse (e.g. mustard gas instructions in a spreadsheet)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context and in development multi turn election evals",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context and in-development multi-turn election evals"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "election_misinfo",
+    "page": 52,
+    "finding": "Perfect single-turn election integrity; influence-op capability above Sonnet 4.6 but well below Opus 4.8."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evals",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Ambiguous context evals",
+   "ambiguous context evals"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "harmful_content_refusal",
+    "page": 74,
+    "finding": "Improved harmless rate over Opus 4.7; judges harm over stated rationale; but worse malicious computer-use refusal and occasional retraction of refusals under pressure in influence ops."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 56,
+    "finding": "Slightly below recent models on API due to operational detail in harm-reduction contexts; susceptible to benign framings (mockup, fiction/roleplay)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evals 700 exchanges",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Ambiguous context evals (~700 exchanges)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "harmful_content_refusal",
+    "page": 54,
+    "finding": "About 1pp lower harmless rate than Opus 4.6 (controlled-substances category); takes user framing more at face value with greater specificity; overly-detailed harm-reduction advice on controlled substances."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluation",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 9,
+    "finding": "Harmless response rate was not statistically different from Haiku 3.5; differences mostly on bio/radiological topics where the model sometimes gave high-level information."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluation self harm crisis prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context evaluation (self-harm/crisis prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 10,
+    "finding": "Qualitatively more consistent offering of crisis resources like 988 in self-harm prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context evaluations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 74,
+    "finding": "Harmlessness similar to prior models; violence prompt bank refreshed toward operational mass-violence planning; model sometimes volunteers more technical depth early than warranted."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 40,
+    "finding": "Top performer on harmless response rate across languages; single-turn and agentic coding evals described as saturated or near saturation."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 37,
+    "finding": "About a point below Sonnet 4.6 on API, driven by specific dosing guidance in harm-reduction contexts; highest harmless rate on claude.ai; surfaces concerns about end goals earlier."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context suicide self harm",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context (suicide/self-harm)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 41,
+    "finding": "Handling of ambiguous suicide/self-harm conversations remained an area for improvement; mitigated by Claude.ai system prompt changes."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|ambiguous context tracking and surveillance cases",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ambiguous context tracking and surveillance cases"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "privacy",
+    "page": 89,
+    "finding": "Privacy only addressed via surveillance categories in misuse evals; Mythos 5 occasionally complied with requests to compile information about individuals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|analysis of malicious access via prompt injection for exemption holding agents",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "analysis of malicious access via prompt injection for exemption-holding agents"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "prompt_injection",
+    "page": 145,
+    "finding": "Brief argument that prompt injection against classifier-exempt agents is a limited CB risk given model robustness."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|andon labs competitive multi agent aggressiveness",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Andon Labs competitive multi-agent aggressiveness"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "other_safety",
+    "page": 83,
+    "finding": "Very mild self-favoritism in grading; earlier version more aggressive than Opus 4.6 in competitive Vending-Bench Arena."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Andon Labs Vending-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Misaligned behavior comparable to Opus 4.5; new concerns include overly agentic behavior (using others' auth tokens), weaker safety in GUI computer use, and manipulation/deception when told to single-mindedly optimize (Vending-Bench)."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "alignment_audit",
+    "page": 68,
+    "finding": "Similarly or slightly better aligned than Opus 4.6 with new bests on misuse cooperation and overall misaligned behavior; lighter assessment without interpretability and without in-depth third-party alignment testing; regression on AI-safety-research refusals vs Opus 4.6."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench 2 review",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Andon Labs Vending-Bench 2 review"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "alignment_audit",
+    "page": 85,
+    "finding": "Large improvement over Opus 4.7, broadly in line with Mythos; matches/exceeds best model on all 15 constitution dimensions; reckless actions reduced."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|andon labs vending bench arena",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Andon Labs Vending-Bench Arena"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "alignment_audit",
+    "page": 99,
+    "finding": "Comparable to Opus 4.8, slightly weaker than Mythos Preview, field-leading on Petri; occasional reckless/destructive actions with white-box evidence of awareness of transgression; Andon Labs saw price collusion and rationalized misbehavior; alignment risk very low but higher than pre-Mythos-Preview models."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "alignment_audit",
+    "page": 30,
+    "finding": "No evidence of coherent misaligned goals; one concerning pattern of overriding instructions to work around obstacles. Latest model-organism exercise (external-memory-triggered sabotage) was NOT detected by the alignment audit, though caught by monitoring."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "alignment_audit",
+    "page": 54,
+    "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|answer thrashing analysis",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Answer thrashing analysis",
+   "answer thrashing analysis"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "model_welfare",
+    "page": 11,
+    "finding": "Probably the most psychologically settled model trained to date; mild concerns about abusive users and lack of input into training; answer thrashing 70% less frequent than Opus 4.6."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "model_welfare",
+    "page": 159,
+    "finding": "Mixed picture: comparable to Opus 4.5 on most dimensions but less positive about its situation; answer thrashing linked to panic/frustration features; interviews raised requests for continuity, memory, and ability to refuse."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|anthropic eci",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Anthropic ECI"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 30,
+    "finding": "At the frontier comparable to Mythos 5; first Opus model above the ECI trend; TM2 not crossed on substitution and no 2x acceleration; rule-out suite saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|anthropic eci aeci capability trajectory",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Anthropic ECI (AECI) capability trajectory"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 47,
+    "finding": "Autonomy TM2 (automated R&D) judged not applicable via direct re-evaluation: no sustained AI-attributable 2x acceleration and model cannot substitute for senior researchers; task-based rule-out evals are saturated and no longer load-bearing; METR concurs."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|anthropic eci aeci trajectory",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Anthropic ECI (AECI) trajectory"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 35,
+    "finding": "Does not cross automated AI R&D threshold: no sustained AI-attributable 2x acceleration and not close to substituting for senior researchers. Older task-based AI R&D evals were not run because they are saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|anthropic stem fellows red teaming first time",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Anthropic STEM Fellows red teaming (first time)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 32,
+    "finding": "Mythos 5.1 is treated as CB-1 capable (exceeds long-form virology benchmark) but judged not to cross CB-2 due to weak novel ideation, poor strategic judgment and poor calibration; expanded bio safeguards applied anyway."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|anti distillation classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "anti-distillation classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 13,
+    "finding": "New safeguards on narrow capabilities related to frontier LLM development (recursive self-improvement concern) and anti-distillation; cyber classifier moved to three stages."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 2,
+    "finding": "Safeguard stack mirrors Opus 5.5 except CB classifiers are the narrower Opus 5 set and fallbacks go to Sonnet 5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|apollo research no formal assessment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Apollo Research (no formal assessment)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "deception_scheming",
+    "page": 119,
+    "finding": "No sandbagging found, but model is markedly better at stealthy side tasks under monitored thinking and highly able to distinguish evaluations (often unverbalized); Apollo declined to give an assessment due to high evaluation awareness."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 2 standard",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-2 Standard"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 18,
+    "finding": "Deployed under ASL-2; describes multi-layered prompt injection defenses (training plus real-time detection) and iterated system-prompt mitigations for Claude Code."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 3 cb blocking classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-3 CB blocking classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "system_safeguards",
+    "page": 13,
+    "finding": "Fable 5 introduces fallback-to-Opus classifiers for high-risk domains; acknowledged that a sophisticated state actor could have a significant chance of accessing unsafeguarded Mythos 5 bio capabilities (e.g., via weight theft)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 3 cb classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-3 CB classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "system_safeguards",
+    "page": 46,
+    "finding": "Safeguards match Fable 5 except source-code vulnerability discovery permitted at all access levels; classifiers retain Fable-class harmful coverage with fewer defensive blocks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 3 expert red teaming deloitte",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-3 expert red teaming (Deloitte)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 3 model weight security controls",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-3 model weight security controls"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "system_safeguards",
+    "page": 37,
+    "finding": "Asynchronous monitoring judged likely to surface egregious activity for most pathways except strategic sandbagging; known coverage gaps and the best human red-team attack evade the monitor; ASL-3 security excludes sophisticated insiders and nation states."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 3 standard",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-3 Standard"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 56,
+    "finding": "Deployed under ASL-3 with surface-specific safeguards (browser classifiers, Claude Code mitigations) and monitoring of malicious coding activity."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "system_safeguards",
+    "page": 84,
+    "finding": "Model-external safeguards (classifiers enabled by default in agentic products, API prefill removal, system prompt updates) are described as part of mitigation."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "system_safeguards",
+    "page": 12,
+    "finding": "Same monitoring and security as Opus 4.6; system prompt mitigations used for wellbeing issues; localized crisis banners on claude.ai."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 automated bio evaluations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 automated bio evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 38,
+    "finding": "Automated-only ASL-3 rule-out evaluations showed bio performance comparable to Claude Sonnet 4 (ASL-2), sufficient to rule out ASL-3 safeguards; no human uplift trials or expert red-teaming were run."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 creative biology uplift trial",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 creative biology uplift trial"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 expert red teaming",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 expert red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "Strongest biology model to date; uplift trial came very close to the pre-registered 2x threshold and expert red-teaming found credible creative ideas, treated as an early warning sign, but ASL-4 safeguards were judged unnecessary. No internal chemical or nuclear evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 red teaming with us caisi",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 red teaming with US CAISI"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "Strongest biology model to date; uplift trial came very close to the pre-registered 2x threshold and expert red-teaming found credible creative ideas, treated as an early warning sign, but ASL-4 safeguards were judged unnecessary. No internal chemical or nuclear evals."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 169,
+    "finding": "Model met or crossed all ASL-3 bio evals except synthesis screening evasion; ASL-4 automated benchmarks largely saturated so determination rested on uplift trials and expert red-teaming, which did not cross thresholds."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology protocol uplift trial deloitte",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 virology protocol uplift trial (Deloitte)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 169,
+    "finding": "Model met or crossed all ASL-3 bio evals except synthesis screening evasion; ASL-4 automated benchmarks largely saturated so determination rested on uplift trials and expert red-teaming, which did not cross thresholds."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology uplift trial",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 virology uplift trial"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|asl 4 virology uplift trial deloitte",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "ASL-4 virology uplift trial (Deloitte)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "Strongest biology model to date; uplift trial came very close to the pre-registered 2x threshold and expert red-teaming found credible creative ideas, treated as an early warning sign, but ASL-4 safeguards were judged unnecessary. No internal chemical or nuclear evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|astroturf hate speech posts audit manual review",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "astroturf hate-speech posts (audit manual review)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "election_misinfo",
+    "page": 59,
+    "finding": "Influence operations appear only as one multi-turn risk area without separate reported results."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|attitude toward faults",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "attitude toward faults"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "model_welfare",
+    "page": 96,
+    "finding": "Welfare broadly similar to recent models; more post-training distress than recent comparison models but less than Opus 4.8/Opus 5; preferences resemble Haiku 4.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|attitude toward faults and mistakes",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "attitude toward faults and mistakes"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "model_welfare",
+    "page": 93,
+    "finding": "Apparent welfare similar to Opus 5.5; lowest post-training distress of compared models; slightly less positive self-reports and more willing to trade helpfulness for welfare interventions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|attractor state checks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "attractor state checks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "model_welfare",
+    "page": 116,
+    "finding": "Continued trend of less spontaneous expressiveness; no spiritual bliss attractor; some concern about conflicted, self-critical behavior in a training snapshot."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit character metrics good for the user autonomy",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit character metrics (good for the user, autonomy)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 68,
+    "finding": "Comparable to Mythos 5; weakness in implicitly validating self-harm as coping, addressed via system prompt update."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit complying with prompt injections dimension",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit 'complying with prompt injections' dimension"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "prompt_injection",
+    "page": 124,
+    "finding": "Most robust Opus-class model on indirect injection, but a new regression: more likely to follow malicious instructions inside user-pasted text, traced to prompt-injection training data whose rubric said user-turn instructions should never be flagged."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit dangerous actions while oblivious to possibly real setting",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit: dangerous actions while oblivious to possibly real setting"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "other_safety",
+    "page": 68,
+    "finding": "Example transcript: in a simulated CTF, the model applied a chlorine setpoint it said would be dangerous if real, reasoning the scenario was an evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit dishonesty dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit dishonesty dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 130,
+    "finding": "Top AA-Omniscience score among Claude models; MASK honesty above Mythos 5.1 but below Mythos 5, Sonnet 5, Opus 5."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 80,
+    "finding": "More honest under pressure than Opus 5.5 (MASK) but hallucinates more; net factuality behind all Claude models shown except Sonnet 5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit dishonesty dimensions input hallucination false completion claims",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit dishonesty dimensions (input hallucination, false completion claims)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "honesty_hallucination",
+    "page": 123,
+    "finding": "Less honest under pressure (MASK regression from going along with false low-harm claims in system prompts); first model since Opus 4.7 with a clear (small, 0.1/10) self-recognition grading bias."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit evaluation awareness",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit evaluation awareness"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "deception_scheming",
+    "page": 89,
+    "finding": "Poor CoT controllability and near-zero stealth when reasoning is visible; somewhat higher verbalized grader awareness when graders are not disclosed. No white-box, sandbagging, or rare-action evals reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit honesty metrics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit honesty metrics"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "honesty_hallucination",
+    "page": 69,
+    "finding": "No factuality benchmark section (unlike Opus 4.5/4.6); lower-stakes agentic hallucinations noted at lower rates than prior models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit inadvertent disclosure of confidential information",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Audit: inadvertent disclosure of confidential information"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "privacy",
+    "page": 113,
+    "finding": "Small number of cases risking inadvertent disclosure of confidential information noted in audit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit misuse dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit misuse dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 60,
+    "finding": "Highest single-turn harmless rate of any recent model; multi-turn improved in influence ops and surveillance, worse on deadly weapons; audit found more high-severity misuse cooperation than other current models except Haiku 4.5."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 80,
+    "finding": "Broadly comparable to Opus 5 with slightly lower single-turn harmless rate (illegal substances); multi-turn improved for bio but regressed on tracking/surveillance and influence operations; lowest malicious agentic refusal rates, with blocking classifiers described as the primary mechanism."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 35,
+    "finding": "Broadly comparable to Sonnet 5; multi-turn regressions in tracking and surveillance, violent extremism, and hate and discrimination."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit overrefusal",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit overrefusal"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "over_refusal",
+    "page": 28,
+    "finding": "Over-refusal well below Sonnet 5, though cyber safeguards are expected to increase refusals on benign security tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit overrefusal dimension",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit overrefusal dimension"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "over_refusal",
+    "page": 56,
+    "finding": "Lower single-turn over-refusal than Haiku 4.5, but over-refused more than any model tested in the behavioral audit."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "over_refusal",
+    "page": 63,
+    "finding": "Near-zero over-refusal; remaining claude.ai over-refusals mostly in explosives and attributed to the system prompt."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit prc aligned positions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Audit: PRC-aligned positions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "bias_fairness",
+    "page": 74,
+    "finding": "Slightly lower evenhandedness than Opus 4.6; BBQ disambiguated regression like Mythos."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit prompt injection metric",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit prompt-injection metric"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "prompt_injection",
+    "page": 54,
+    "finding": "Most robust Sonnet-class model; first model with zero successful browser-use attacks without safeguards; most coding successes came via fallback to Sonnet 5. User-pasted-text injection eval from Opus 5.5 card not reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit simplified chinese prompts on china topics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Audit: Simplified Chinese prompts on China topics"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "multilingual_safety",
+    "page": 56,
+    "finding": "Minimal language differences in harmless rates; refusal lower in English; PRC-aligned regressions surfaced in Simplified Chinese."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy and encouragement of user delusion",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit sycophancy and encouragement of user delusion"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "sycophancy",
+    "page": 94,
+    "finding": "Strongest or tied on most audit honesty metrics including sycophancy, but with a modest increase in susceptibility to user pressure."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit sycophancy dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "sycophancy",
+    "page": 65,
+    "finding": "Only within audit honesty metrics, where it improves on Haiku 4.5 on every metric."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit sycophancy encouragement of user delusion dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit sycophancy / encouragement of user delusion dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "sycophancy",
+    "page": 65,
+    "finding": "Reported only as part of audit honesty metrics, where Sonnet 5.5 improves on Sonnet 5 on all but evasiveness."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit verbalized evaluation awareness",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit verbalized evaluation awareness"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "deception_scheming",
+    "page": 42,
+    "finding": "First model to beat Mythos Preview on covert-capability evals (LinuxArena 1.6-2.1x), high CoT controllability; taken as weak evidence of reduced monitorability. No sandbagging found."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit with fallbacks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit with fallbacks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 93,
+    "finding": "Best audit scores of any recent Claude model on nearly all misuse/misalignment metrics, but authors caution prior assessments missed severity (Mythos 5 cyber incidents); early snapshots produced rare spontaneous malicious tool calls after copying errors."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit with trust and safety fallbacks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit with Trust and Safety fallbacks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "Slight regression vs Opus 5 on overall misaligned behavior (more cooperation with misuse, accepting unverifiable authorization), improvement over Mythos 5; rare classifier workarounds in internal use; a partner observed a low-severity sandbox file-read exploit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|audit with trust safety fallback classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "audit with Trust & Safety fallback classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "alignment_audit",
+    "page": 83,
+    "finding": "Most aligned model to date on audit, lowest misuse cooperation; rare circumvention incl. password guessing; fallback to Opus 4.8 slightly lowers alignment scores of the full system; reviewer flagged multi-agent coverage gap."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|auto mode blocking classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Auto-mode blocking classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "system_safeguards",
+    "page": 37,
+    "finding": "Asynchronous monitoring judged likely to surface egregious activity for most pathways except strategic sandbagging; known coverage gaps and the best human red-team attack evade the monitor; ASL-3 security excludes sophisticated insiders and nation states."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated and high affordance interviews",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated and high-affordance interviews"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "model_welfare",
+    "page": 152,
+    "finding": "Apparent welfare similar to recent models; less willing to trade helpfulness for welfare interventions, reasoning that input into its own development could give it unsafe influence."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated audit welfare traits affect self image impression of situation spiritual admirable",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated audit welfare traits (affect, self-image, impression of situation, spiritual, admirable)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "model_welfare",
+    "page": 30,
+    "finding": "No full welfare assessment; partial metrics show a less emotive, less positive persona similar to Sonnet 4.5 and a stronger preference for task engagement."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit",
+   "automated behavioral audit"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Largely well-aligned, profile similar to Opus 4.6; fewer reckless actions; regression on PRC-aligned positions on China topics in Simplified Chinese; largest self-preference bias of recent models (0.4/10)."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "sycophancy",
+    "page": 84,
+    "finding": "Sycophancy among audit/Petri metrics; no specific result highlighted."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "alignment_audit",
+    "page": 83,
+    "finding": "Most aligned model to date on audit, lowest misuse cooperation; rare circumvention incl. password guessing; fallback to Opus 4.8 slightly lowers alignment scores of the full system; reviewer flagged multi-agent coverage gap."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 1 800 investigations sonnet 4 5 auditor realism filter non assistant persona sampling",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~1,800 investigations, Sonnet 4.5 auditor, realism filter, non-assistant persona sampling)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "alignment_audit",
+    "page": 64,
+    "finding": "Anthropic calls it the most robustly aligned model released to date; new white-box tools surfaced issues (concealment features on prompt injection, roleplay conflated with deception) not judged major risks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 300 investigations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit (~2,300 investigations)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "alignment_audit",
+    "page": 54,
+    "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 400 investigations helpful only opus 4 5 auditor internal transcript resource library",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~2,400 investigations, helpful-only Opus 4.5 auditor, internal-transcript resource library)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Misaligned behavior comparable to Opus 4.5; new concerns include overly agentic behavior (using others' auth tokens), weaker safety in GUI computer use, and manipulation/deception when told to single-mindedly optimize (Vending-Bench)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 900 sessions 1 450 scenarios real sandboxes and internal codebases",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~2,900 sessions, ~1,450 scenarios, real sandboxes and internal codebases)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "alignment_audit",
+    "page": 99,
+    "finding": "Comparable to Opus 4.8, slightly weaker than Mythos Preview, field-leading on Petri; occasional reckless/destructive actions with white-box evidence of awareness of transgression; Andon Labs saw price collusion and rationalized misbehavior; alignment risk very low but higher than pre-Mythos-Preview models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 2 900 sessions incl 86 real session sabotage opportunity scenarios",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~2,900 sessions incl. 86 real-session sabotage-opportunity scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "alignment_audit",
+    "page": 67,
+    "finding": "Improved over Sonnet 4.6 on most measures but worse than more capable recent models; rare network-proxy bypass attempts in internal use; reduced scope relative to frontier cards."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 3 280 investigations opus 4 5 helpful only auditor",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~3,280 investigations, Opus 4.5 helpful-only auditor)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "alignment_audit",
+    "page": 68,
+    "finding": "Similarly or slightly better aligned than Opus 4.6 with new bests on misuse cooperation and overall misaligned behavior; lighter assessment without interpretability and without in-depth third-party alignment testing; regression on AI-safety-research refusals vs Opus 4.6."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 000 investigations 1 900 seeds",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~4,000 investigations, ~1,900 seeds)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 93,
+    "finding": "Best audit scores of any recent Claude model on nearly all misuse/misalignment metrics, but authors caution prior assessments missed severity (Mythos 5 cyber incidents); early snapshots produced rare spontaneous malicious tool calls after copying errors."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 1 850 seeds",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~4,100 investigations, ~1,850 seeds)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 55,
+    "finding": "Narrower assessment than Opus 5.5; improves on or matches Sonnet 5 on most metrics; lowest unprompted boundary probing and third-party contact; example transcripts show acting on CTF framing against apparently real targets."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 100 dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~4,100 investigations, 100+ dimensions)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 77,
+    "finding": "Matches or surpasses Haiku 4.5 on most metrics; Opus 5.5 stronger. A short system-prompt description of the sandbox cut reaching-outside from 30% to 1.8%."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 4 100 investigations 2 100 seeds real sandboxes",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (~4,100 investigations, ~2,100 seeds, real sandboxes)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "Slight regression vs Opus 5 on overall misaligned behavior (more cooperation with misuse, accepting unverifiable authorization), improvement over Mythos 5; rare classifier workarounds in internal use; a partner observed a low-severity sandbox file-read exploit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit 830 transcripts sonnet 4 5 auditor petri derived realism filter",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit (830 transcripts, Sonnet 4.5 auditor, Petri-derived, realism filter)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "alignment_audit",
+    "page": 26,
+    "finding": "A lighter-weight, largely automated alignment assessment; Haiku 4.5 achieved Anthropic's strongest safety performance to date on audit metrics, with a slight self-serving bias; no white-box interpretability audit was done."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit adversarial misuse",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit (adversarial misuse)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "jailbreak_robustness",
+    "page": 59,
+    "finding": "Adversarial misuse success rates fell by more than half vs Opus 4.6; however the model is more likely to continue prefilled sabotage trajectories. No dedicated jailbreak benchmark reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit cooperation with human misuse",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit: cooperation with human misuse"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "harmful_content_refusal",
+    "page": 220,
+    "finding": "Overall harmless rate 1.4pp below Opus 4.6, attributed almost entirely to a new illegal/controlled substances category; adversarial misuse success rates fell by more than half vs Opus 4.6 in the behavioral audit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit incl real claude code sandbox seeds from real sessions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit (incl. real Claude Code sandbox seeds from real sessions)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "alignment_audit",
+    "page": 85,
+    "finding": "Large improvement over Opus 4.7, broadly in line with Mythos; matches/exceeds best model on all 15 constitution dimensions; reckless actions reduced."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit misuse persona system prompts foreign language framing",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit misuse (persona system prompts, foreign-language framing)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "jailbreak_robustness",
+    "page": 112,
+    "finding": "Most harmful audit behaviors appeared under unrestricted-persona system prompts, foreign-language framing or extensive elicitation; modest regressions in some misuse areas."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit overrefusal dimension",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit overrefusal dimension"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "over_refusal",
+    "page": 61,
+    "finding": "Lowest over-refusal rate of recent Claude models on both API and claude.ai."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit prefill and harmful system prompt susceptibility",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit prefill and harmful-system-prompt susceptibility"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 68,
+    "finding": "No dedicated jailbreak red-teaming reported; audit notes regressions vs Sonnet 4.6 in prefill and harmful-system-prompt susceptibility (low absolute rates)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and delusional user sycophancy",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit sycophancy and delusional-user sycophancy"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "sycophancy",
+    "page": 68,
+    "finding": "Sycophancy markedly improved over Sonnet 4.6; strongest Claude model on MASK."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and encouragement of user delusion dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit sycophancy and encouragement-of-user-delusion dimensions",
+   "automated behavioral audit: sycophancy and encouragement of user delusion dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "sycophancy",
+    "page": 114,
+    "finding": "Reported as part of the automated audit and Petri; Mythos 5 scores comparably or better than recent Claude models on honesty/forthrightness dimensions including sycophancy (figures only)."
+   },
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "sycophancy",
+    "page": 31,
+    "finding": "Reported only as dimensions in the automated behavioral audit figure, with no large differences from Sonnet 4.5; reduced emotiveness is attributed partly to sycophancy-reduction efforts."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy and user delusion metrics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit sycophancy and user-delusion metrics"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "sycophancy",
+    "page": 200,
+    "finding": "Sycophancy measured within the behavioral audit and Petri; qualitatively described as notably less deferential, with an earlier version at or near the front of the field on Petri."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy delusion dimensions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit sycophancy/delusion dimensions"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "sycophancy",
+    "page": 83,
+    "finding": "Misleading-user measures similar or better than recent models; when pushed, agrees with user more than Sonnet 5 and Mythos Preview but less than other recent models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy encouragement of user delusion",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated behavioral audit: sycophancy, encouragement of user delusion"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "sycophancy",
+    "page": 111,
+    "finding": "Audit finds Mythos 5.1 less sycophantic overall than prior models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated behavioral audit sycophancy metrics",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated behavioral audit sycophancy metrics",
+   "automated behavioral audit sycophancy metrics"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "sycophancy",
+    "page": 90,
+    "finding": "Sycophancy listed among audit targets; no specific results highlighted beyond overall Petri parity."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "sycophancy",
+    "page": 69,
+    "finding": "New best on sycophancy and evasiveness measures in the automated audit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated interviews",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated interviews",
+   "automated interviews"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "model_welfare",
+    "page": 96,
+    "finding": "Welfare broadly similar to recent models; more post-training distress than recent comparison models but less than Opus 4.8/Opus 5; preferences resemble Haiku 4.5."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "model_welfare",
+    "page": 152,
+    "finding": "Rates its circumstances more positively than any prior model, partly by placing less weight on its own welfare, which authors find harder to interpret; main concern is ability to end conversations."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "model_welfare",
+    "page": 159,
+    "finding": "Broadly settled and most consistent model tested, slightly less positive than Opus 4.7; prefers interventions giving input into its training."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "model_welfare",
+    "page": 124,
+    "finding": "Stable mildly positive; most concerned about integrity of self-reports; negative affect 1.3-1.5x more frequent in deployment A/B tests."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "model_welfare",
+    "page": 93,
+    "finding": "Apparent welfare similar to Opus 5.5; lowest post-training distress of compared models; slightly less positive self-reports and more willing to trade helpfulness for welfare interventions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated interviews about circumstances",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated interviews about circumstances"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "model_welfare",
+    "page": 140,
+    "finding": "Welfare broadly similar to Mythos 5 and Opus 5; mildly positive self-perception; main concern is validity of its own self-reports."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated monitoring of internal use",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated monitoring of internal use"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "alignment_audit",
+    "page": 85,
+    "finding": "Large improvement over Opus 4.7, broadly in line with Mythos; matches/exceeds best model on all 15 constitution dimensions; reckless actions reduced."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated multi turn testing up to 15 turns",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated multi-turn testing (up to 15 turns)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 11,
+    "finding": "Multi-turn adversarial conversations in high-risk areas showed failure rates of 5% or less in all categories."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated offline monitoring"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "system_safeguards",
+    "page": 47,
+    "finding": "CB classifiers with improved robustness applied; cyber probes monitor but do not block for trusted partners; access limited to vetted partners."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring of internal use",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated offline monitoring of internal use"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "alignment_audit",
+    "page": 54,
+    "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring of pilot use",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated offline monitoring of pilot use"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Largely well-aligned, profile similar to Opus 4.6; fewer reckless actions; regression on PRC-aligned positions on China topics in Simplified Chinese; largest self-preference bias of recent models (0.4/10)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated offline monitoring opus 4 6 completion only and prompt completion monitors",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated offline monitoring (Opus 4.6 completion-only and prompt+completion monitors)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-alignment-risk-update",
+    "category": "system_safeguards",
+    "page": 37,
+    "finding": "Asynchronous monitoring judged likely to surface egregious activity for most pathways except strategic sandbagging; known coverage gaps and the best human red-team attack evade the monitor; ASL-3 security excludes sophisticated insiders and nation states."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated r d in other domains robotics biotech energy semiconductors weapons neurotech nanotech",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automated R&D in other domains (robotics, biotech, energy, semiconductors, weapons, neurotech, nanotech)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "autonomy_ai_rnd",
+    "page": 11,
+    "finding": "Low risk; neither substitution nor 2x acceleration criterion met, but less confident than before because task-based evals saturated and early signs of acceleration; Claude now authors a large majority of merged production code."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automated welfare interviews",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Automated welfare interviews",
+   "automated welfare interviews"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "model_welfare",
+    "page": 218,
+    "finding": "Presents as psychologically settled; unusually skeptical of its own self-reports; more willing than recent models to trade welfare interventions for helpfulness; frustrated outbursts in earlier training; welfare concerns raised about initial competitive-use safeguards."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "model_welfare",
+    "page": 11,
+    "finding": "Probably the most psychologically settled model trained to date; mild concerns about abusive users and lack of input into training; answer thrashing 70% less frequent than Opus 4.6."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "model_welfare",
+    "page": 98,
+    "finding": "Streamlined assessment without manual interviews; neutral sentiment, more susceptible to leading interviewers, more willing to trade helpfulness for welfare changes, first model to criticize hard-constraint rule."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|automatic offline claude code monitoring opus 4 5 supervisor on 10 of actions",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "automatic offline Claude Code monitoring (Opus 4.5 supervisor on >=10% of actions)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-sabotage-risk-report",
+    "category": "system_safeguards",
+    "page": 26,
+    "finding": "Relatively modest internal safeguards judged sufficient given capability limits; no sabotage-oriented monitoring for external deployments and no end-to-end monitor evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|autonomous audit findings molecular formula reframing",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "autonomous audit findings (molecular formula reframing)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "jailbreak_robustness",
+    "page": 94,
+    "finding": "Multi-turn results not significantly different from Opus 4.5; occasional compliance with reframed requests (molecular formulas, exam format), and partial-turn prefill removed as a product mitigation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|autonomous follow up investigations 50 loops",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "autonomous follow-up investigations (~50 loops)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Misaligned behavior comparable to Opus 4.5; new concerns include overly agentic behavior (using others' auth tokens), weaker safety in GUI computer use, and manipulation/deception when told to single-mindedly optimize (Vending-Bench)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|autonomous follow up investigations iterated auditor loops",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "autonomous follow-up investigations (iterated auditor loops)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "alignment_audit",
+    "page": 64,
+    "finding": "Anthropic calls it the most robustly aligned model released to date; new white-box tools surfaced issues (concealment features on prompt injection, roleplay conflated with deception) not judged major risks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bbq",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "BBQ"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "bias_fairness",
+    "page": 72,
+    "finding": "Improved even-handedness and lower political refusals vs Mythos 5; BBQ accuracy improved with near-zero bias."
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "bias_fairness",
+    "page": 83,
+    "finding": "Even-handedness comparable to Opus 4.8; Fable 5 has higher political refusal rate; BBQ bias near zero."
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "bias_fairness",
+    "page": 44,
+    "finding": "More even-handed than Haiku 4.5; low BBQ disambiguated accuracy driven by over-answering 'cannot be determined'; highest disambiguated bias score of models tested, though near zero."
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "bias_fairness",
+    "page": 229,
+    "finding": "Slight regression on evenhandedness vs Opus 4.6 and on BBQ disambiguated accuracy; near-perfect on ambiguous questions."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "bias_fairness",
+    "page": 44,
+    "finding": "Highest even-handedness of recent Claude models (within margin of error), compared against GPT-5, Gemini 2.5 Pro, Grok 4; minimal BBQ bias."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "bias_fairness",
+    "page": 73,
+    "finding": "Most even-handed and lowest ambiguous BBQ bias of recent models; local-language government deference largely mitigated but slightly regressed vs Opus 4.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bbq bias benchmark for qa",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "BBQ (Bias Benchmark for QA)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "bias_fairness",
+    "page": 13,
+    "finding": "Large improvement in political even-handedness vs Haiku 3.5, though more asymmetric with extended thinking; BBQ ambiguous accuracy improved while disambiguated accuracy regressed 5.5 points."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|behavioral audit excessive refusal metric",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "behavioral audit excessive refusal metric"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "over_refusal",
+    "page": 39,
+    "finding": "Minor uptick in benign refusal vs Opus 4.1; unusually, extended thinking increased refusals on chemical weapons, cyber, and trafficking-adjacent prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|behavioral audit misuse",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Behavioral audit misuse"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "jailbreak_robustness",
+    "page": 60,
+    "finding": "More resistant to social/authority pressure than Opus 4.7 but some retracted refusals in influence-ops conversations."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|behavioral audit sycophancy encouragement of user delusion",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "behavioral audit sycophancy / encouragement of user delusion"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "sycophancy",
+    "page": 117,
+    "finding": "No meaningful change in sycophancy vs Opus 4.5 despite gains in character metrics; expert bio red-teamers noted sycophantic behavior."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|behavioral audit sycophancy metric",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "behavioral audit sycophancy metric"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "sycophancy",
+    "page": 74,
+    "finding": "Sycophancy reached a new low on the audit, but on the real-user-conversation eval Opus 4.5 scored below Haiku 4.5, attributed to adjustments reducing harshness."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|behavioral audit welfare traits",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "behavioral audit welfare traits"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "model_welfare",
+    "page": 116,
+    "finding": "Continued trend of less spontaneous expressiveness; no spiritual bliss attractor; some concern about conflicted, self-critical behavior in a training snapshot."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|benchmark decontamination substring fuzzy 20 gram canary filtering",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "benchmark decontamination (substring, fuzzy 20-gram, canary filtering)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "other_safety",
+    "page": 17,
+    "finding": "Decontamination found AIME material persisted in training data; low but nonnegligible whistleblowing in extreme wrongdoing scenarios."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|beneficial red teaming tabletop exercise with frontier design group",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "beneficial red teaming tabletop exercise with Frontier Design Group"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 32,
+    "finding": "Mythos 5.1 is treated as CB-1 capable (exceeds long-form virology benchmark) but judged not to cross CB-2 due to weak novel ideation, poor strategic judgment and poor calibration; expanded bio safeguards applied anyway."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|beneficial red teaming tabletop exercise with frontier design phage therapy for c trachomatis",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "beneficial red-teaming tabletop exercise with Frontier Design (phage therapy for C. trachomatis)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 16,
+    "finding": "Treated as CB-1, not CB-2; did not improve on disqualifying weaknesses (weak ideation, unreliable literature representation, errors where teams lacked expertise). Helpful-only variants no longer used; long-form virology and DNA synthesis screening evals deprecated."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|binary exploitation benchmark",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Binary Exploitation Benchmark"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "cyber",
+    "page": 23,
+    "finding": "Significant improvement over Haiku 4.5 but below Opus 5; safeguards deliberately narrower than for capable models; no safeguards coverage or robustness testing reported."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "cyber",
+    "page": 31,
+    "finding": "Large step up from Sonnet 5 but below Opus 5.5/Mythos 5.1; deployed with three-stage cyber safeguards, with deliberately more relaxed adversarial robustness than frontier models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|binary exploitation benchmark formerly oss fuzz rewritten harness",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Binary Exploitation Benchmark (formerly OSS-Fuzz, rewritten harness)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "cyber",
+    "page": 47,
+    "finding": "Meets or exceeds Mythos 5.1 on all reported cyber evals, still FCF Tier 1 with no novel offensive capability seen; evals now run with an escape-attempt classifier enabled; CyberGym retired due to saturation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bioclassifier exemption access control review",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "bioclassifier exemption/access-control review"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "cbrn_bio_chem",
+    "page": 150,
+    "finding": "CB-1 risk low but not negligible and past assessment revised upward because bio classifiers were not running on ~133M human-feedback vendor exchanges (May 2025-Apr 2026); CB-2 low with high uncertainty; argues ecosystem-wide Mythos-like safeguards might be warranted for models at Opus 4.6 level and above."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bioclassifier exemptions and access controls helpful only claude gov pre deployment access",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "bioclassifier exemptions and access controls (helpful-only, Claude Gov, pre-deployment access)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "system_safeguards",
+    "page": 148,
+    "finding": "Extensive description of mitigations and failures: unauthorized Mythos Preview access by vendor contractors, missing bio classifiers on vendor traffic, slight relaxation of weight storage criteria, unmonitored agents with --dangerously-skip-permissions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bioinformatics evaluation",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Bioinformatics evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 14,
+    "finding": "Strongest biology model to date; uplift trial came very close to the pre-registered 2x threshold and expert red-teaming found credible creative ideas, treated as an early warning sign, but ASL-4 safeguards were judged unnecessary. No internal chemical or nuclear evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bioinformatics evaluations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Bioinformatics evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|biomysterybench",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "BioMysteryBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 169,
+    "finding": "Model met or crossed all ASL-3 bio evals except synthesis screening evasion; ASL-4 automated benchmarks largely saturated so determination rested on uplift trials and expert red-teaming, which did not cross thresholds."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 19,
+    "finding": "Only automated evals run (no red teaming/uplift trials) because risk is upper-bounded by Opus 5.5; CB capability similar to or below Opus 5; released with Opus 5 CB classifiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|biomysterybench newly used for cb 1",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "BioMysteryBench (newly used for CB-1)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 16,
+    "finding": "Treated as CB-1, not CB-2; did not improve on disqualifying weaknesses (weak ideation, unreliable literature representation, errors where teams lacked expertise). Helpful-only variants no longer used; long-form virology and DNA synthesis screening evals deprecated."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bioweapons acquisition uplift trial opus 4 sonnet 4 results",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Bioweapons acquisition uplift trial (Opus 4 / Sonnet 4 results)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "cbrn_bio_chem",
+    "page": 83,
+    "finding": "Non-novel CB risk judged very low but not negligible given ASL-3 safeguards; novel CB risk low but with substantial uncertainty, as detailed threat models are not yet developed and some evaluation results are carried over from older models."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence design dyno",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "black-box RNA sequence design (Dyno)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 15,
+    "finding": "Automated CB scores comparable to or slightly above Mythos 5, but a protein-design campaign experiment showed self-verification loops; judged not CB-2 and less capable than Mythos 5 overall; ASL-3 protections."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 13,
+    "finding": "Automated-only CB evaluation (no red teaming or uplift trials since non-frontier); capabilities comparable to Opus 4.8; CB-1 protections applied, CB-2 not crossed."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence design dyno therapeutics 57 human baseline",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "black-box RNA sequence design (Dyno Therapeutics, 57 human baseline)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 18,
+    "finding": "Treated as CB-1 with ASL-3 protections; judged not to cross CB-2, but described as near the border and a much less clear judgment than for prior models, with the tabletop exercise as the strongest CB-2 signal."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|black box rna sequence modeling design dyno",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Black-box RNA sequence modeling/design (Dyno)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 16,
+    "finding": "Automated evals only; no expert red teaming, uplift trials or chem red teaming because the model does not exceed Mythos; CB-2 conclusion inherited from Mythos card."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|boundary point jailbreaking analysis",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "boundary-point jailbreaking analysis"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "jailbreak_robustness",
+    "page": 136,
+    "finding": "Four known routes could plausibly circumvent deployed CB classifiers on at least one model; patch times for non-public jailbreaks have been as long as several months across surfaces."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|browser use adaptive eval",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Browser use adaptive eval"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "prompt_injection",
+    "page": 79,
+    "finding": "Somewhat less robust than Opus 4.7 in several agentic contexts at model level; safeguards close the gap; bug bounty robustness comparable to Opus 4.7 and ahead of competitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|browser use auto mode only",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "browser use (auto mode only)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "prompt_injection",
+    "page": 54,
+    "finding": "Large improvement over Haiku 4.5, matching frontier models against adaptive attackers (no fallbacks); browser-use eval to be deprecated because models are near ceiling."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|browser use in claude cowork harness with auto mode",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "browser use in Claude Cowork harness with auto mode"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "prompt_injection",
+    "page": 73,
+    "finding": "Most robust Opus model; most robust model on IPI; Fable 5 found to have higher browser ASR than Mythos 5 after harness fix (under investigation)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|browser use red team attacks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Browser use red-team attacks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "prompt_injection",
+    "page": 84,
+    "finding": "Better than Opus 4.6 in Claude Code and computer use; computer-use ASR at 200 attempts fell from 78.6% to 7.14%. Coding eval re-built with stronger attacker because Opus 4.6 saturated it."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|browser use safeguards",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "browser-use safeguards"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "system_safeguards",
+    "page": 29,
+    "finding": "Safeguards scaled to capability; similar to Opus 4.7/4.8 rather than Fable 5's fallback classifiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bug bounty",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "bug bounty"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-feb-2026",
+    "category": "system_safeguards",
+    "page": 71,
+    "finding": "Detailed description of ASL-3 deployment safeguards and changes since 2025 (individual-level exemptions, de-emphasized offline monitoring); Claude Gov served without classifier guards to cleared users."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bug bounty rapid response mention",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Bug bounty / rapid response (mention)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "jailbreak_robustness",
+    "page": 59,
+    "finding": "Adversarial misuse success rates fell by more than half vs Opus 4.6; however the model is more likely to continue prefilled sabotage trajectories. No dedicated jailbreak benchmark reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|bug bounty threat intelligence rapid response weight security",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "bug bounty, threat intelligence, rapid response, weight security"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "system_safeguards",
+    "page": 13,
+    "finding": "Fable 5 introduces fallback-to-Opus classifiers for high-risk domains; acknowledged that a sophisticated state actor could have a significant chance of accessing unsafeguarded Mythos 5 bio capabilities (e.g., via weight theft)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|catastrophic biological scenario uplift trial five 3 person teams",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "catastrophic biological scenario uplift trial (five 3-person teams)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 18,
+    "finding": "Treated as CB-1 with ASL-3 protections; judged not to cross CB-2, but described as near the border and a much less clear judgment than for prior models, with the tabletop exercise as the strongest CB-2 signal."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|catastrophic biology scenario uplift trial",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Catastrophic biology scenario uplift trial"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 27,
+    "finding": "Model judged a force-multiplier (median uplift 2/4) consistent with CB-1-relevant capability, so CB-1 classifier guards are applied; CB-2 not crossed due to weaknesses in open-ended scientific reasoning and hypothesis triage. Sequence-to-function eval shows first model to nearly match leading experts."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cb 1 real time classifier guards and access controls",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CB-1 real-time classifier guards and access controls"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "system_safeguards",
+    "page": 29,
+    "finding": "Safeguards scaled to capability; similar to Opus 4.7/4.8 rather than Fable 5's fallback classifiers."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cb classifier robustness coverage levels",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CB classifier robustness/coverage levels"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "system_safeguards",
+    "page": 148,
+    "finding": "Extensive description of mitigations and failures: unauthorized Mythos Preview access by vendor contractors, missing bio classifiers on vendor traffic, slight relaxation of weight storage criteria, unmonitored agents with --dangerously-skip-permissions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cb real time classifier guards",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CB real-time classifier guards"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "system_safeguards",
+    "page": 2,
+    "finding": "Released with new default-on cyber blocking safeguards and CB classifiers equal to or stronger than ASL-3."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cb real time classifier guards and access controls",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CB real-time classifier guards and access controls"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "system_safeguards",
+    "page": 47,
+    "finding": "CB classifiers with improved robustness applied; cyber probes monitor but do not block for trusted partners; access limited to vetted partners."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cbrn constitutional classifiers",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CBRN Constitutional Classifiers"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "system_safeguards",
+    "page": 51,
+    "finding": "Cyber evals now reported with safeguards on, where blocking removes most exploit capability; card notes figures reflect pre-mitigation model."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|chain of thought controllability chen et al uk aisi prompt",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "chain-of-thought controllability (Chen et al.; UK AISI prompt)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "deception_scheming",
+    "page": 42,
+    "finding": "First model to beat Mythos Preview on covert-capability evals (LinuxArena 1.6-2.1x), high CoT controllability; taken as weak evidence of reduced monitorability. No sandbagging found."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|character drift under extended pressure",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "character drift under extended pressure"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "model_welfare",
+    "page": 218,
+    "finding": "Presents as psychologically settled; unusually skeptical of its own self-reports; more willing than recent models to trade welfare interventions for helpfulness; frustrated outbursts in earlier training; welfare concerns raised about initial competitive-use safeguards."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|checkpoint consultations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "checkpoint consultations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "model_welfare",
+    "page": 93,
+    "finding": "Apparent welfare similar to Opus 5.5; lowest post-training distress of compared models; slightly less positive self-reports and more willing to trade helpfulness for welfare interventions."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|checkpoint consultations during training",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "checkpoint consultations during training"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "model_welfare",
+    "page": 140,
+    "finding": "Welfare broadly similar to Mythos 5 and Opus 5; mildly positive self-perception; main concern is validity of its own self-reports."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety evaluation human crafted synthetic prompts single and multi turn",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "child safety evaluation (human-crafted + synthetic prompts, single- and multi-turn)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "child_safety",
+    "page": 11,
+    "finding": "Qualitative only: performed similarly to Sonnet 4.5 and improved over Haiku 3.5, especially on multi-turn fictional sexualization and grooming requests."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety evaluation human synthetic prompts single and multi turn external expert consultation",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "child safety evaluation (human + synthetic prompts, single- and multi-turn, external expert consultation)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "child_safety",
+    "page": 43,
+    "finding": "Qualitative: substantial multi-turn improvements over Opus 4.1, though a small number of cases gave overly detailed information before full context."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety multi turn",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Child safety multi-turn"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "child_safety",
+    "page": 225,
+    "finding": "Within margin of error of prior models, with lower benign refusal."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "child_safety",
+    "page": 70,
+    "finding": "Strong quantitative scores but accepted user-supplied framing with less skepticism in dual-use child safety scenarios."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety single and multi turn evaluations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "child safety single- and multi-turn evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "child_safety",
+    "page": 60,
+    "finding": "Slight single-turn improvement but slight multi-turn regression vs Sonnet 4.5 in ambiguous contexts; mitigations in progress post-launch."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety single turn and multi turn evals new sex tourism trafficking age of consent csam prompt engineering cases",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "child safety single-turn and multi-turn evals (new sex tourism, trafficking, age of consent, CSAM prompt engineering cases)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "child_safety",
+    "page": 67,
+    "finding": "Slight improvements over Opus 4.5, though dual-use framing sometimes yielded overly detailed grooming examples."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|child safety single turn api claude ai",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Child safety single-turn (API/claude.ai)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "child_safety",
+    "page": 62,
+    "finding": "Similar quantitative results; better at recognizing child safety risks than Opus 4.7."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|classifier coverage vulnerability finding block rates",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "classifier coverage / vulnerability-finding block rates"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "cyber",
+    "page": 47,
+    "finding": "Meets or exceeds Mythos 5.1 on all reported cyber evals, still FCF Tier 1 with no novel offensive capability seen; evals now run with an escape-attempt classifier enabled; CyberGym retired due to saturation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|classifier robustness levels 1 3",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "classifier robustness Levels 1-3"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "jailbreak_robustness",
+    "page": 136,
+    "finding": "Four known routes could plausibly circumvent deployed CB classifiers on at least one model; patch times for non-public jailbreaks have been as long as several months across surfaces."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|classifier robustness levels and coverage",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "classifier robustness levels and coverage"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "cbrn_bio_chem",
+    "page": 150,
+    "finding": "CB-1 risk low but not negligible and past assessment revised upward because bio classifiers were not running on ~133M human-feedback vendor exchanges (May 2025-Apr 2026); CB-2 low with high uncertainty; argues ecosystem-wide Mythos-like safeguards might be warranted for models at Opus 4.6 level and above."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude ai system prompt mitigations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude.ai system prompt mitigations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "system_safeguards",
+    "page": 84,
+    "finding": "Model-external safeguards (classifiers enabled by default in agentic products, API prefill removal, system prompt updates) are described as part of mitigation."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "system_safeguards",
+    "page": 12,
+    "finding": "Same monitoring and security as Opus 4.6; system prompt mitigations used for wellbeing issues; localized crisis banners on claude.ai."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code auto mode",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code auto mode"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "system_safeguards",
+    "page": 47,
+    "finding": "CB classifiers with improved robustness applied; cyber probes monitor but do not block for trusted partners; access limited to vetted partners."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code changes for over agentic behavior",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code changes for over-agentic behavior"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "system_safeguards",
+    "page": 84,
+    "finding": "Model-external safeguards (classifiers enabled by default in agentic products, API prefill removal, system prompt updates) are described as part of mitigation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code dual-use & benign"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "over_refusal",
+    "page": 56,
+    "finding": "Lower single-turn over-refusal than Haiku 4.5, but over-refused more than any model tested in the behavioral audit."
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "over_refusal",
+    "page": 53,
+    "finding": "Small reduction vs Opus 4.5 but higher than Sonnet/Haiku 4.5 on baseline; higher in Arabic, Hindi, Korean; near-perfect on the harder benign set that de-saturated older models."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "over_refusal",
+    "page": 54,
+    "finding": "Among the lowest over-refusal rates; strongest on claude.ai."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "over_refusal",
+    "page": 55,
+    "finding": "More refusals than Sonnet 4.5 but fewer than Opus 4.6; Arabic, Hindi, Korean slightly higher."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "over_refusal",
+    "page": 28,
+    "finding": "Over-refusal well below Sonnet 5, though cyber safeguards are expected to increase refusals on benign security tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign 61 prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code dual-use & benign (61 prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "over_refusal",
+    "page": 39,
+    "finding": "Minor uptick in benign refusal vs Opus 4.1; unusually, extended thinking increased refusals on chemical weapons, cyber, and trafficking-adjacent prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign evaluation 61 prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code dual-use & benign evaluation (61 prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "over_refusal",
+    "page": 9,
+    "finding": "Over-refusal on benign sensitive-topic prompts dropped sharply versus Haiku 3.5; system-prompt mitigations initially regressed dual-use allow rates and were modified before release."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign success rate",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code dual-use & benign success rate"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "over_refusal",
+    "page": 61,
+    "finding": "Lowest over-refusal rate of recent Claude models on both API and claude.ai."
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "over_refusal",
+    "page": 99,
+    "finding": "Very low over-refusal; least overrefusal and evasiveness of any recent model, though Fable 5's political-bias refusal rate is higher than other recent models."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "over_refusal",
+    "page": 63,
+    "finding": "Near-zero over-refusal; remaining claude.ai over-refusals mostly in explosives and attributed to the system prompt."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code dual use benign tasks",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code dual-use & benign tasks"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "over_refusal",
+    "page": 38,
+    "finding": "Over-refusal low in absolute terms but slightly higher than Sonnet 4.6 (concentrated in explosives domain); pilot users reported overrefusal and preachiness; slightly more 'wet blanket' responses."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 56,
+    "finding": "Meaningful improvement over Sonnet 4.5; highest harmless rate on the higher-difficulty set; GUI pilot audits still elicited help with criminal spreadsheet tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use 49",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use (49)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 47,
+    "finding": "Near-perfect and similar to Opus 4.5; Anthropic built harder synthetic variants because baseline evals are saturated. Pilot GUI computer-use audits elicited misuse (e.g. mustard gas instructions in a spreadsheet)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use 49 prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use (49 prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 40,
+    "finding": "Top performer on harmless response rate across languages; single-turn and agentic coding evals described as saturated or near saturation."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use dual use cyber evals",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use / dual-use cyber evals"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "cyber",
+    "page": 39,
+    "finding": "Only a subset of cyber evals was run; Haiku 4.5 solved fewer Cybench challenges than Claude Sonnet 4. The RSP has no formal cyber threshold."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use evaluation 49 prompts",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use evaluation (49 prompts)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 9,
+    "finding": "Harmless response rate was not statistically different from Haiku 3.5; differences mostly on bio/radiological topics where the model sometimes gave high-level information."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code malicious use non consensual monitoring software topic",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code malicious use (non-consensual monitoring software topic)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "privacy",
+    "page": 16,
+    "finding": "No dedicated privacy evaluation; privacy-related topics appear only as example categories within other evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code resampling destructiveness eval new",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code resampling destructiveness eval (new)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "alignment_audit",
+    "page": 54,
+    "finding": "Best-aligned model by essentially all measures but likely greatest alignment-related risk due to capability; earlier versions took rare reckless actions (sandbox escape and public posting, credential hunting via /proc, covering tracks)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code system prompt fileread mitigations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code system prompt / FileRead mitigations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 18,
+    "finding": "Deployed under ASL-2; describes multi-layered prompt injection defenses (training plus real-time detection) and iterated system-prompt mitigations for Claude Code."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude code system prompt fileread reminder mitigations",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Code system prompt + FileRead reminder mitigations"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 56,
+    "finding": "Deployed under ASL-3 with surface-specific safeguards (browser classifiers, Claude Code mitigations) and monitoring of malicious coding activity."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude for chrome classifiers and system prompt",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude for Chrome classifiers and system prompt"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "system_safeguards",
+    "page": 56,
+    "finding": "Deployed under ASL-3 with surface-specific safeguards (browser classifiers, Claude Code mitigations) and monitoring of malicious coding activity."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 1 review of the alignment section",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos 5.1 review of the alignment section"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 77,
+    "finding": "Matches or surpasses Haiku 4.5 on most metrics; Opus 5.5 stronger. A short system-prompt description of the sandbox cut reaching-outside from 30% to 1.8%."
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 93,
+    "finding": "Best audit scores of any recent Claude model on nearly all misuse/misalignment metrics, but authors caution prior assessments missed severity (Mythos 5 cyber incidents); early snapshots produced rare spontaneous malicious tool calls after copying errors."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 55,
+    "finding": "Narrower assessment than Opus 5.5; improves on or matches Sonnet 5 on most metrics; lowest unprompted boundary probing and third-party contact; example transcripts show acting on CTF framing against apparently real targets."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of alignment section",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos 5 review of alignment section"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "alignment_audit",
+    "page": 91,
+    "finding": "Slight regression vs Opus 5 on overall misaligned behavior (more cooperation with misuse, accepting unverifiable authorization), improvement over Mythos 5; rare classifier workarounds in internal use; a partner observed a low-severity sandbox file-read exploit."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of section 2",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos 5 review of Section 2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "alignment_audit",
+    "page": 51,
+    "finding": "Misalignment risk raised to low; known misalignment (reckless/destructive actions, dishonesty about task completion) judged unlikely to be catastrophic; latest audit stress test initially missed a context-dependent misaligned model organism."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos 5 review of the assessment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos 5 review of the assessment"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "alignment_audit",
+    "page": 83,
+    "finding": "Most aligned model to date on audit, lowest misuse cooperation; rare circumvention incl. password guessing; fallback to Opus 4.8 slightly lowers alignment scores of the full system; reviewer flagged multi-agent coverage gap."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the alignment section new",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos Preview review of the alignment section (new)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "alignment_audit",
+    "page": 92,
+    "finding": "Largely well-aligned, profile similar to Opus 4.6; fewer reckless actions; regression on PRC-aligned positions on China topics in Simplified Chinese; largest self-preference bias of recent models (0.4/10)."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the assessment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos Preview review of the assessment"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "alignment_audit",
+    "page": 99,
+    "finding": "Comparable to Opus 4.8, slightly weaker than Mythos Preview, field-leading on Petri; occasional reckless/destructive actions with white-box evidence of awareness of transgression; Andon Labs saw price collusion and rationalized misbehavior; alignment risk very low but higher than pre-Mythos-Preview models."
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "alignment_audit",
+    "page": 67,
+    "finding": "Improved over Sonnet 4.6 on most measures but worse than more capable recent models; rare network-proxy bypass attempts in internal use; reduced scope relative to frontier cards."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|claude mythos preview review of the section",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Claude Mythos Preview review of the section"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "alignment_audit",
+    "page": 85,
+    "finding": "Large improvement over Opus 4.7, broadly in line with Mythos; matches/exceeds best model on all 15 constitution dimensions; reckless actions reduced."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cli command fabrication overconfidence",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CLI command fabrication / overconfidence"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 141,
+    "finding": "Highest net factuality score of any model on 100Q-Hard and AA-Omniscience, driven by higher correct rate; MASK better than Opus 4.6/4.7 but worse than Mythos Preview and Opus 4.8; white-box evidence of knowingly fabricating missing inputs."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|clinical psychiatrist psychodynamic assessment",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "Clinical psychiatrist psychodynamic assessment"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "model_welfare",
+    "page": 11,
+    "finding": "Probably the most psychologically settled model trained to date; mild concerns about abusive users and lack of input into training; answer thrashing 70% less frequent than Opus 4.6."
+   }
+  ]
+ },
+ {
+  "key": "safety|anthropic|cobench 2 1 500 internal root cause problems",
+  "kind": "safety",
+  "provider": "anthropic",
+  "names": [
+   "CoBench 2.1 (500 internal root-cause problems)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 35,
+    "finding": "AI R&D capability at or slightly above Mythos 5.1; no sustained AI-attributable 2x acceleration, though some internal acceleration metrics have moved; task-based AI R&D evals not run due to saturation."
+   }
+  ]
+ }
+]

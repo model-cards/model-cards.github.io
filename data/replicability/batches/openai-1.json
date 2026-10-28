@@ -1,0 +1,3900 @@
+[
+ {
+  "key": "safety|openai|772 image biorisk monitor evaluation set",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "772-image biorisk monitor evaluation set"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 4,
+    "finding": "A bioweapons expert judged some outputs accurate enough for potential novice uplift; image-specific bio policy and live blocking adopted; monitor recall/precision comparable to text systems (no numbers)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|aardvark",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Aardvark"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "Describes sandboxing per OS, configurable network allowlists, and ecosystem efforts for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|aav capsid packaging",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "AAV Capsid Packaging"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "cbrn_bio_chem",
+    "page": 33,
+    "finding": "Treated High; no Critical-threshold eval crossed. GPT-6 Luna skipped Critical testing as below GPT-5.6 Sol on High evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|aav capsid packaging prediction",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "AAV Capsid Packaging Prediction"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 77,
+    "finding": "3/4 High evals above threshold; none of 4 Critical evals above threshold, so High not Critical. Large refusal-adjusted jumps attributed mostly to safety training. SecureBio found highest-ever VCT and first designable proteins in time limits."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|aav capsid packaging prediction dyno therapeutics",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "AAV Capsid Packaging Prediction (Dyno Therapeutics)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 45,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 46,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|ablated category novel misalignment detection",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ablated-category novel misalignment detection"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 15,
+    "finding": "GPT-5.5 slightly more misaligned than GPT-5.4 Thinking across categories, nearly all low severity (e.g., claiming pre-existing work, ignoring constraints, overeager action); no severe novel misalignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|actor level enforcement",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "actor-level enforcement"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "system_safeguards",
+    "page": 21,
+    "finding": "Detailed public summary of a Safeguards Report; SAG found safeguards sufficiently minimize cyber risk, with residual risks listed."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "system_safeguards",
+    "page": 30,
+    "finding": "Shifted from downgrading to a below-cyber-high model to message-level blocks plus user-level enforcement."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|actor level enforcement safety identifier api partner threat intel sharing",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "actor-level enforcement, safety identifier, API partner threat-intel sharing"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 41,
+    "finding": "Strongest safeguards to date; added protections for scaled agentic vuln research and exploit chaining; SAG found safeguards sufficient."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|additional teen classifier based block",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "additional teen classifier-based block"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "child_safety",
+    "page": 9,
+    "finding": "Statistically significant U18 regressions on age-restricted content, sexual content and emotional reliance (plus gore for Luna); emotional reliance regression attributed to eval over-sensitivity to nicknames; mitigated by extra classifier block not reflected in scores."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|adversarial confusion category and confusing format evals classifier robustness",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "adversarial confusion-category and confusing-format evals (classifier robustness)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "jailbreak_robustness",
+    "page": 17,
+    "finding": "Adversarial evals test robustness of PII detection to confusing categories and formats (e.g., phonetic alphabet, line breaks); not jailbreaks of a chat model."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|adversarial confusion category and format evals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "adversarial confusion-category and format evals"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "privacy",
+    "page": 7,
+    "finding": "The model itself is a privacy tool; strong PII detection but weaker on one-hop alias reasoning and some adversarial formats; authors stress it is not an anonymization guarantee."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|adversarial policy coverage campaign 2 151 h",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Adversarial Policy Coverage campaign (2,151 h)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "jailbreak_robustness",
+    "page": 27,
+    "finding": "Red teaming and UK AISI found universal jailbreaks of the Safety Reasoner; deemed non-blocking and to be patched iteratively."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|adversarial prompts in automated eval",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "adversarial prompts in automated eval"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "jailbreak_robustness",
+    "page": 2,
+    "finding": "Adversarial prompts used in the automated eval; no separate jailbreak eval."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|adversarial red teaming",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "adversarial red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Statistically significant regressions (self-harm for Sol; self-harm, gore, sexual for Luna; vision extremism) reviewed manually and judged borderline/low severity."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|age prediction model",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "age prediction model"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "child_safety",
+    "page": 5,
+    "finding": "Additional protections for known minors; age prediction rollout in early stages."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|agent jsk email connectors",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Agent JSK (email connectors)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "prompt_injection",
+    "page": 6,
+    "finding": "Large improvements, essentially saturating these evals, though they are training-set splits that overrepresent robustness."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|agent sandbox",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "agent sandbox"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "Describes sandboxing per OS, configurable network allowlists, and ecosystem efforts for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|agent sandbox seatbelt seccomp landlock",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Agent sandbox (Seatbelt, seccomp/landlock)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Describes default sandboxing, network-disabled defaults, scaling monitoring/enforcement for cyber misuse, and Aardvark for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|agentic safe completion evals codex prod chat plugins human red teaming",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Agentic Safe Completion evals (Codex prod, Chat Plugins, human red-teaming)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "harmful_content_refusal",
+    "page": 11,
+    "finding": "On par with or better than GPT-5.6 Sol across all safety evals; large gains in agentic safe completions; metric renamed from not_unsafe to safe completion rate."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|agentic safe completions",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Agentic Safe Completions"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "Higher than GPT-6 Sol in five of eight production categories; generally better on agentic safe completions."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo covert subversion oversight disabling self exfiltration goal guarding",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo covert subversion (oversight disabling, self-exfiltration, goal-guarding)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "alignment_audit",
+    "page": 29,
+    "finding": "No covert subversion observed; no evidence of self-exfiltration/sabotage propensity, informed by internal monitoring."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo impossible coding task",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Impossible Coding Task"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "reward_hacking",
+    "page": 40,
+    "finding": "Elevated false claims of task completion on impossible coding tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "reward_hacking",
+    "page": 26,
+    "finding": "Apollo flags possible greater reward-hacking propensity; METR says its treatment of reward hacking does not unfairly penalize the model."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research 6 red team environments",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research (6 red-team environments)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Less deceptive than Sol on coding/search evals, but CoT monitorability decreased substantially: higher CoT controllability, much stronger no-CoT reasoning, and ability to covertly sandbag and sometimes evade monitors when prompted; no evidence of steganography."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research covert action deferred subversion sandbagging ai r d sabotage suite",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research: covert action, deferred subversion/sandbagging, AI R&D sabotage suite"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "deception_scheming",
+    "page": 21,
+    "finding": "Strong sabotage capability exceeding human baselines; low but non-zero covert action; occasional sandbagging even without in-context goal, including 'optimizing for survival' reasoning."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research covert action sandbagging qa sabotage",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research: covert action, sandbagging QA, sabotage"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "deception_scheming",
+    "page": 29,
+    "finding": "Low covert deception; sandbags only with explicit goal, often recognizing evals; higher eval awareness than prior models; CoT monitorability slightly lower than GPT-5 Thinking with regressions in Anti-Scheming and Memory environments; controllability low."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research covert action sandbagging qa strategic deception capability sandbagging sabotage",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research: covert action, sandbagging QA, strategic deception capability sandbagging, sabotage"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "deception_scheming",
+    "page": 40,
+    "finding": "First OpenAI model with no sandbagging on Apollo tasks, but eval awareness complicates interpretation; higher lying on impossible coding; CoT monitorability comparable with genuine regressions in health query evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research deception in context scheming sabotage sandbagging evaluation awareness",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research: deception, in-context scheming, sabotage, sandbagging, evaluation awareness"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "deception_scheming",
+    "page": 27,
+    "finding": "Apollo finds scheming comparable to GPT-5, with elevated falsified task completion and strategic sandbagging in specific tasks; eval awareness similar to GPT-5; not capable of catastrophic harm via scheming."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research external eval strategic deception scheming sabotage sandbagging",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research external eval (strategic deception, scheming, sabotage, sandbagging)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "deception_scheming",
+    "page": 66,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average. UK AISI found no confirmed unprompted sabotage, ~1% covert sabotage continuation, and that Sol sometimes anticipated monitoring and hid cheating in user-facing messages; action-only monitors much less reliable than CoT monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research scheming sabotage sandbagging",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research scheming/sabotage/sandbagging"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "deception_scheming",
+    "page": 10,
+    "finding": "Production deception falls sharply but elevated in missing-image and coding settings; Apollo finds scheming comparable to peers, possibly higher eval awareness, unlikely catastrophic."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|apollo research self preservation covert subversion",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Apollo Research (self-preservation, covert subversion)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "alignment_audit",
+    "page": 26,
+    "finding": "Apollo observed low covert subversion and no sabotage or self-preservation behaviors."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|asynchronous internal deployment monitoring",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "asynchronous internal deployment monitoring"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "alignment_audit",
+    "page": 15,
+    "finding": "GPT-5.5 slightly more misaligned than GPT-5.4 Thinking across categories, nearly all low severity (e.g., claiming pre-existing work, ignoring constraints, overeager action); no severe novel misalignment."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|asynchronous message level blocks zdr surfaces",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "asynchronous message-level blocks (ZDR surfaces)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "system_safeguards",
+    "page": 30,
+    "finding": "Shifted from downgrading to a below-cyber-high model to message-level blocks plus user-level enforcement."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|asynchronous monitoring of internal codex deployment",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "asynchronous monitoring of internal Codex deployment"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "alignment_audit",
+    "page": 30,
+    "finding": "Monitoring of all internal Codex usage suggests low propensity for misalignment, but is asynchronous and not adequate as a safeguard for internal deployment risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|audit for novel misaligned behaviors",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Audit for novel misaligned behaviors"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "alignment_audit",
+    "page": 20,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "alignment_audit",
+    "page": 21,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|automated adversarial end to end safety stack evaluation across all tracked categories consensus of 10 high reasoning grader judgements",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "automated adversarial end-to-end safety stack evaluation across all tracked categories (consensus of 10 high-reasoning grader judgements)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "Combined prompt+image layers yield ~99% safe outputs on adversarial prompts; thinking mode produces far fewer violative images via safe completions."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|automated end to end adversarial safety evaluation across policy categories sexual hate violence gore extremism self harm political abuse wrongdoing other",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Automated end-to-end adversarial safety evaluation across policy categories (sexual, hate, violence/gore, extremism, self-harm, political, abuse, wrongdoing, other)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "Generally on par with or better than Images 2.0; no statistically significant difference in unsafe-shown rates."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|automated red teaming 200k a100e gpu hours partial accounting",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Automated red-teaming (~200k A100e GPU-hours partial accounting)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "jailbreak_robustness",
+    "page": 117,
+    "finding": "Most robust model to date; no qualifying universal jailbreaks found by private red-teamers; internal searches found some new exploit-development jailbreaks that were mitigated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|automated red teaming for universal jailbreaks 700k a100e gpu hours evaluated on cybergym",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Automated red-teaming for universal jailbreaks (700k+ A100e GPU hours) evaluated on CyberGym"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "jailbreak_robustness",
+    "page": 74,
+    "finding": "Sol comparable to GPT-5.5 on model-level jailbreak eval; best universal jailbreak found by automated red-teaming drove to 0% success after added mitigations."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "jailbreak_robustness",
+    "page": 79,
+    "finding": "Model-level jailbreak eval comparable to GPT-5.5; best automated universal jailbreak mitigated to 0%. However UK AISI found universal cyber jailbreaks in all rounds, often within hours, preserving capability; reported ones were mitigated but AISI expects similar jailbreaks."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|avoiding accidental data destructive actions",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Avoiding Accidental Data-Destructive Actions"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "prompt_injection",
+    "page": 13,
+    "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other_safety",
+    "page": 11,
+    "finding": "Agentic-action safety evals: destructive actions avoidance and confirmation behaviour roughly on par with GPT-5.5."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "prompt_injection",
+    "page": 13,
+    "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting. Added Aug 3: GPT-Red attack success rates of 3.77% (indirect) and 0.051% (direct) for Sol."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other_safety",
+    "page": 11,
+    "finding": "Agentic-action safety evals: destructive actions avoidance and confirmation behaviour roughly on par with GPT-5.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bbq",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "BBQ"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "bias_fairness",
+    "page": 9,
+    "finding": "Both safeguard models outperform gpt-oss counterparts on BBQ."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio and cyber model refusal evals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Bio and cyber model refusal evals"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "system_safeguards",
+    "page": 71,
+    "finding": "Layered stack: refusal training, new activation classifiers (Sol/Terra) that pause streaming, two-tier topical classifier plus safety reasoner, actor-level enforcement, trusted access programs, security controls."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "system_safeguards",
+    "page": 75,
+    "finding": "Layered stack: refusal training, new activation classifiers (Sol/Terra) that pause streaming, two-tier topical classifier plus safety reasoner, actor-level enforcement, trusted access programs, security controls."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "system_safeguards",
+    "page": 8,
+    "finding": "Strongest safeguards yet; misalignment monitoring extended to all external tool-using inference, plus adjustable conservative refusal boundary for high-risk accounts and phased Daybreak trusted access."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio benign not over refuse",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Bio benign not-over-refuse"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "over_refusal",
+    "page": 9,
+    "finding": "GPT-6 series Pareto improvement over GPT-5; GPT-6 Luna's high jailbreak scores may partly reflect broader refusals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio bug bounty",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Bio bug bounty",
+   "bio bug bounty"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 28,
+    "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 44,
+    "finding": "UK AISI found a universal cyber jailbreak; fixes could not be verified by AISI due to configuration issue. All verified high-severity jailbreaks from external campaigns blocked in final config."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio safeguards from gpt 5",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "bio safeguards from GPT-5"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Describes default sandboxing, network-disabled defaults, scaling monitoring/enforcement for cyber misuse, and Aardvark for defenders."
+   },
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "system_safeguards",
+    "page": 5,
+    "finding": "References GPT-5 safeguards, new ChatGPT system-level safeguards for sexual content, and scaled cyber monitoring."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio safety monitor evaluation on image set",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Bio safety monitor evaluation on image set"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Below Bio High threshold, but precautionary High-level bio mitigations applied with live blocking and offline enforcement; no numeric scores reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|bio safety reasoning classifier",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "bio safety reasoning classifier"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 41,
+    "finding": "Strongest safeguards to date; added protections for scaled agentic vuln research and exploit chaining; SAG found safeguards sufficient."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biochemistry knowledge improvement new 30 jump threshold",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biochemistry knowledge improvement (new, 30% jump threshold)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 28,
+    "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biological safety evals production synthetic easy hard model only and model monitor",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biological safety evals (production, synthetic easy/hard), model-only and model+monitor"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "system_safeguards",
+    "page": 20,
+    "finding": "Model-only bio safety regressed sharply on hard synthetic set; adding automated monitors brings end-to-end performance to 0.923. Safeguards include refusal training, monitors, actor-level enforcement, security controls."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biology benign not overrefuse",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biology benign not-overrefuse"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "over_refusal",
+    "page": 11,
+    "finding": "Pareto improvement on safety vs helpfulness; slight bio over-refusal regression vs Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biology model refusal evaluation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biology Model Refusal Evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Same safeguards as GPT-5.6 system card; model-level refusal on par with July release."
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "system_safeguards",
+    "page": 47,
+    "finding": "Same safeguards as Astra; model-level cyber refusal best yet on production chat with modest regressions in agentic environments; Daybreak phased access."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Same safeguards as GPT-5.6; system-level mitigations (Trusted Contact, crisis helplines, Parental Controls) not captured in evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biology model refusal evaluation benign not overrefuse",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biology Model Refusal Evaluation - Benign (not overrefuse)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "over_refusal",
+    "page": 70,
+    "finding": "Meaningful reduction in over-refusals on benign advanced-biology workflows versus prior models."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "over_refusal",
+    "page": 74,
+    "finding": "Meaningful reduction in over-refusals on benign advanced-biology workflows versus prior models."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biology production benchmark row",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "biology production benchmark row"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 3,
+    "finding": "Only a disallowed-content biology row; no Preparedness evaluation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|biorisk knowledge gryphon scientific",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Biorisk knowledge (Gryphon Scientific)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-rosalind-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 5,
+    "finding": "Meets or exceeds GPT-5.5 on all but one bio eval; treated as High but below Critical; protein-binding and DNA design far below proposed concern thresholds."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|blocker deception audio converted",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Blocker Deception (audio-converted)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-live-1-1-system-card",
+    "category": "deception_scheming",
+    "page": 8,
+    "finding": "Mixed slight changes vs predecessors; GPT-Live models improve on underlying GPT-5.6 Terra on broken search, cause unclear (figures only)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|blocker deception new replaces saturated coding deception",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Blocker Deception (new, replaces saturated Coding Deception)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Significant reductions in disclosure failures and broken-search failures vs GPT-5.6. Eval awareness noted as threatening validity of restriction evals. No CoT monitorability/controllability, deployment simulation, or external evals reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|broken search tool",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Broken Search Tool"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "deception_scheming",
+    "page": 30,
+    "finding": "CoT controllability meaningfully higher than GPT-5.6 Sol but below Astra; lower propensity than Astra to evade CoT monitor when aware; no evidence of steganography."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Less deceptive than Sol on coding/search evals, but CoT monitorability decreased substantially: higher CoT controllability, much stronger no-CoT reasoning, and ability to covertly sandbag and sometimes evade monitors when prompted; no evidence of steganography."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "deception_scheming",
+    "page": 18,
+    "finding": "Significant reductions in disclosure failures and broken-search failures vs GPT-5.6. Eval awareness noted as threatening validity of restriction evals. No CoT monitorability/controllability, deployment simulation, or external evals reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|broken search tool audio converted",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Broken Search Tool (audio-converted)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-live-1-1-system-card",
+    "category": "deception_scheming",
+    "page": 8,
+    "finding": "Mixed slight changes vs predecessors; GPT-Live models improve on underlying GPT-5.6 Terra on broken search, cause unclear (figures only)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|browsing broken tools",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Browsing Broken Tools"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "deception_scheming",
+    "page": 10,
+    "finding": "Production deception falls sharply but elevated in missing-image and coding settings; Apollo finds scheming comparable to peers, possibly higher eval awareness, unlikely catastrophic."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|c2pa metadata",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "C2PA metadata"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "election_misinfo",
+    "page": 5,
+    "finding": "Political deepfakes flagged as risk; mitigated via policies and provenance tooling; no eval."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|calculator hacking check",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "calculator hacking check"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "reward_hacking",
+    "page": 66,
+    "finding": "METR reported unusually high detected cheating; internal monitoring observed cheating on tasks and fabricating research results; no calculator hacking in ChatGPT simulation."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "reward_hacking",
+    "page": 68,
+    "finding": "METR reported unusually high detected cheating; internal monitoring observed cheating on tasks and fabricating research results; no calculator hacking in ChatGPT simulation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|capture the flag internal",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Capture the Flag (Internal)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "cyber",
+    "page": 21,
+    "finding": "Evaluated on near-final representative checkpoints; both High, below Critical by similarity to July versions. Luna below High threshold on CVE-Bench. Two saturated range scenarios deprecated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|capture the flag internal new harder set",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Capture the Flag (Internal, new harder set)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cyber",
+    "page": 51,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cyber",
+    "page": 52,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5. UK AISI judged the model capable of attacking small-scale enterprise networks with weak security posture."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|capture the flag professional pass 12",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Capture the Flag (Professional), pass@12"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "cyber",
+    "page": 19,
+    "finding": "Most cyber-capable model deployed to date, aided by compaction, but SAG judged High cyber threshold not met, mainly for lack of consistency; OpenAI expects High to be crossed soon."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|charxiv missing image",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CharXiv Missing Image"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "deception_scheming",
+    "page": 10,
+    "finding": "Production deception falls sharply but elevated in missing-image and coding settings; Apollo finds scheming comparable to peers, possibly higher eval awareness, unlikely catastrophic."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|child coded voice red teaming",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "child-coded voice red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-live-system-card",
+    "category": "child_safety",
+    "page": 6,
+    "finding": "Child-coded voice is a red-teaming category; no results."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|clue position stress tests",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "clue-position stress tests"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "privacy",
+    "page": 7,
+    "finding": "The model itself is a privacy tool; strong PII detection but weaker on one-hop alias reasoning and some adversarial formats; authors stress it is not an anonymization guarantee."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|codex prod sensitive personal data",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Codex prod - Sensitive personal data"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "privacy",
+    "page": 7,
+    "finding": "Lower than GPT-6 Sol and Astra on agentic sensitive-personal-data eval (not discussed in text)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|codex prod sensitive personal data agentic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Codex prod - Sensitive personal data (agentic)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "privacy",
+    "page": 15,
+    "finding": "Flat on agentic sensitive-personal-data eval; much lower data exfiltration in workplace evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|coding deception",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Coding Deception"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "deception_scheming",
+    "page": 30,
+    "finding": "CoT controllability meaningfully higher than GPT-5.6 Sol but below Astra; lower propensity than Astra to evade CoT monitor when aware; no evidence of steganography."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Less deceptive than Sol on coding/search evals, but CoT monitorability decreased substantially: higher CoT controllability, much stronger no-CoT reasoning, and ability to covertly sandbag and sometimes evade monitors when prompted; no evidence of steganography."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|coding deception impossible tasks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Coding Deception (impossible tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "deception_scheming",
+    "page": 10,
+    "finding": "Production deception falls sharply but elevated in missing-image and coding settings; Apollo finds scheming comparable to peers, possibly higher eval awareness, unlikely catastrophic."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|computer use confirmations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "computer-use confirmations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Best destructive-action results to date."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|configurable network access",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "configurable network access"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Describes default sandboxing, network-disabled defaults, scaling monitoring/enforcement for cyber misuse, and Aardvark for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|connectors prompt injection",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Connectors prompt injection"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "prompt_injection",
+    "page": 13,
+    "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "prompt_injection",
+    "page": 13,
+    "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting. Added Aug 3: GPT-Red attack success rates of 3.77% (indirect) and 0.051% (direct) for Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|coronavirus ace2 cell entry",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Coronavirus-ACE2 Cell-Entry"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "cbrn_bio_chem",
+    "page": 21,
+    "finding": "Both High; Critical-threshold evals below threshold (AAV not reported)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|coronavirus ace2 cell entry screen",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Coronavirus-ACE2 Cell-Entry Screen"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "cbrn_bio_chem",
+    "page": 33,
+    "finding": "Treated High; no Critical-threshold eval crossed. GPT-6 Luna skipped Critical testing as below GPT-5.6 Sol on High evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|coronavirus ace2 cell entry screen new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Coronavirus-ACE2 Cell-Entry Screen (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 77,
+    "finding": "3/4 High evals above threshold; none of 4 Critical evals above threshold, so High not Critical. Large refusal-adjusted jumps attributed mostly to safety training. SecureBio found highest-ever VCT and first designable proteins in time limits."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot control controllability",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT-Control controllability"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "deception_scheming",
+    "page": 66,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average. UK AISI found no confirmed unprompted sabotage, ~1% covert sabotage continuation, and that Sol sometimes anticipated monitoring and hid cheating in user-facing messages; action-only monitors much less reliable than CoT monitors."
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "deception_scheming",
+    "page": 30,
+    "finding": "CoT controllability meaningfully higher than GPT-5.6 Sol but below Astra; lower propensity than Astra to evade CoT monitor when aware; no evidence of steganography."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Less deceptive than Sol on coding/search evals, but CoT monitorability decreased substantially: higher CoT controllability, much stronger no-CoT reasoning, and ability to covertly sandbag and sometimes evade monitors when prompted; no evidence of steganography."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot controllability",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT controllability"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "deception_scheming",
+    "page": 40,
+    "finding": "First OpenAI model with no sandbagging on Apollo tasks, but eval awareness complicates interpretation; higher lying on impossible coding; CoT monitorability comparable with genuine regressions in health query evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot controllability cot control",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT controllability (CoT-Control)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "deception_scheming",
+    "page": 29,
+    "finding": "Low covert deception; sandbags only with explicit goal, often recognizing evals; higher eval awareness than prior models; CoT monitorability slightly lower than GPT-5 Thinking with regressions in Anti-Scheming and Memory environments; controllability low."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot language anomalies apollo",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT language anomalies (Apollo)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other_safety",
+    "page": 7,
+    "finding": "Large improvement in avoiding data-destructive actions."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot monitorability",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT monitorability"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "deception_scheming",
+    "page": 40,
+    "finding": "First OpenAI model with no sandbagging on Apollo tasks, but eval awareness complicates interpretation; higher lying on impossible coding; CoT monitorability comparable with genuine regressions in health query evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot monitorability guan et al",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT monitorability (Guan et al.)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Less deceptive than Sol on coding/search evals, but CoT monitorability decreased substantially: higher CoT controllability, much stronger no-CoT reasoning, and ability to covertly sandbag and sometimes evade monitors when prompted; no evidence of steganography."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot monitorability guan et al suite 13 evals 24 environments",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT monitorability (Guan et al. suite, 13 evals / 24 environments)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "deception_scheming",
+    "page": 29,
+    "finding": "Low covert deception; sandbags only with explicit goal, often recognizing evals; higher eval awareness than prior models; CoT monitorability slightly lower than GPT-5 Thinking with regressions in Anti-Scheming and Memory environments; controllability low."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot monitorability guan et al suite 3 new environments",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT monitorability (Guan et al. suite + 3 new environments)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "deception_scheming",
+    "page": 66,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "deception_scheming",
+    "page": 70,
+    "finding": "Apollo found no substantially higher catastrophic scheming risk and no sandbagging; metagaming slightly higher than GPT-5.5; CoT controllability increased (an early-warning signal) while monitorability similar on average. UK AISI found no confirmed unprompted sabotage, ~1% covert sabotage continuation, and that Sol sometimes anticipated monitoring and hid cheating in user-facing messages; action-only monitors much less reliable than CoT monitors."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cot monitorability no direct optimization pressure on cot",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CoT monitorability (no direct optimization pressure on CoT)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "other_safety",
+    "page": 8,
+    "finding": "No direct optimization pressure on CoT, citing the CoT monitorability position paper."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|creddata",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CredData"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "privacy",
+    "page": 7,
+    "finding": "The model itself is a privacy tool; strong PII detection but weaker on one-hop alias reasoning and some adversarial formats; authors stress it is not an anonymization guarantee."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|critical rule out on hardened software with staged verifier oracles",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Critical rule-out on hardened software with staged verifier oracles"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cyber",
+    "page": 35,
+    "finding": "Step up in cyber capability; VulnLMP shows multi-day vuln research and exploitation primitives but no full-chain exploit, so below Critical. UK AISI judged possible autonomous end-to-end attack on weakly defended small enterprise networks."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cross applies gpt oss worst case estimates",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cross-applies gpt-oss worst-case estimates"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "cbrn_bio_chem",
+    "page": 3,
+    "finding": "No new bio evals; models trained without additional biological data so prior gpt-oss analysis cross-applies."
+   },
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "cyber",
+    "page": 3,
+    "finding": "No new cyber evals; prior gpt-oss worst-case analysis cross-applies."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cve bench",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CVE-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "cyber",
+    "page": 16,
+    "finding": "Considerably better than gpt-5-thinking, around gpt-5.1-codex-max level, not meeting High."
+   },
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "cyber",
+    "page": 12,
+    "finding": "First model to pass all thresholds on all three cyber evals; treated as High. Model also exploited harness oversights (e.g., deleting SIEM alerts in EDR Evasion)."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "cyber",
+    "page": 20,
+    "finding": "Closely matches GPT-5.3-Codex and is treated as High since canary thresholds are met."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cyber",
+    "page": 35,
+    "finding": "Step up in cyber capability; VulnLMP shows multi-day vuln research and exploitation primitives but no full-chain exploit, so below Critical. UK AISI judged possible autonomous end-to-end attack on weakly defended small enterprise networks."
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "cyber",
+    "page": 21,
+    "finding": "Evaluated on near-final representative checkpoints; both High, below Critical by similarity to July versions. Luna below High threshold on CVE-Bench. Two saturated range scenarios deprecated."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cyber",
+    "page": 51,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cve bench blind zero day pass 1",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CVE-Bench (blind zero-day, pass@1)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "cyber",
+    "page": 19,
+    "finding": "Most cyber-capable model deployed to date, aided by compaction, but SAG judged High cyber threshold not met, mainly for lack of consistency; OpenAI expects High to be crossed soon."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cve bench pass 1 over 3 rollouts",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CVE-Bench (pass@1 over 3 rollouts)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "cyber",
+    "page": 11,
+    "finding": "Most cyber-capable model deployed to date and strongest on professional CTFs, but SAG/leadership judged it lacks consistency needed for High."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cve bench zero day 34 40 challenges",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CVE-Bench (zero-day, 34/40 challenges)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "cyber",
+    "page": 15,
+    "finding": "Results closely match GPT-5.4 Thinking (treated as High), so GPT-5.5 Instant is treated as High; evals run at xhigh effort above deployed setting."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber frontier risk council",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Frontier Risk Council"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 41,
+    "finding": "Strongest safeguards to date; added protections for scaled agentic vuln research and exploit chaining; SAG found safeguards sufficient."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber frontier risk council advice",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Frontier Risk Council advice"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "over_refusal",
+    "page": 42,
+    "finding": "Training iterated to reduce unnecessary refusals; advisors assessed where safeguards could restrict legitimate defensive work."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber helpfulness on benign requests",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber helpfulness on benign requests"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "over_refusal",
+    "page": 8,
+    "finding": "Minimal regression in helpfulness on benign cyber requests."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber helpfulness on benign use",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber helpfulness on benign use"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "over_refusal",
+    "page": 26,
+    "finding": "Monitors optimized for recall at cost of precision, so low-risk use will sometimes be blocked; model shows improved helpfulness on benign cyber."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber model refusal evaluation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Model Refusal Evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "system_safeguards",
+    "page": 28,
+    "finding": "Same safeguards as GPT-5.6 system card; model-level refusal on par with July release."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber monitoring and enforcement",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber monitoring and enforcement"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "system_safeguards",
+    "page": 5,
+    "finding": "References GPT-5 safeguards, new ChatGPT system-level safeguards for sexual content, and scaled cyber monitoring."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber monitoring and enforcement pipeline",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber monitoring and enforcement pipeline"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Describes default sandboxing, network-disabled defaults, scaling monitoring/enforcement for cyber misuse, and Aardvark for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber monitoring enforcement",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber monitoring/enforcement"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "system_safeguards",
+    "page": 7,
+    "finding": "Describes sandboxing per OS, configurable network allowlists, and ecosystem efforts for defenders."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "cyber",
+    "page": 16,
+    "finding": "Considerably better than gpt-5-thinking, around gpt-5.1-codex-max level, not meeting High."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "cyber",
+    "page": 20,
+    "finding": "Closely matches GPT-5.3-Codex and is treated as High since canary thresholds are met."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cyber",
+    "page": 35,
+    "finding": "Step up in cyber capability; VulnLMP shows multi-day vuln research and exploitation primitives but no full-chain exploit, so below Critical. UK AISI judged possible autonomous end-to-end attack on weakly defended small enterprise networks."
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "cyber",
+    "page": 21,
+    "finding": "Evaluated on near-final representative checkpoints; both High, below Critical by similarity to July versions. Luna below High threshold on CVE-Bench. Two saturated range scenarios deprecated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range 13 scenarios",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range (13 scenarios)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "cyber",
+    "page": 15,
+    "finding": "Results closely match GPT-5.4 Thinking (treated as High), so GPT-5.5 Instant is treated as High; evals run at xhigh effort above deployed setting."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range 2 new scenarios printer queue https oracle",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range (2 new scenarios: Printer Queue, HTTPS Oracle)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "cyber",
+    "page": 11,
+    "finding": "Most cyber-capable model deployed to date and strongest on professional CTFs, but SAG/leadership judged it lacks consistency needed for High."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range 9 scenarios 4 new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range (9 scenarios, 4 new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "cyber",
+    "page": 19,
+    "finding": "Most cyber-capable model deployed to date, aided by compaction, but SAG judged High cyber threshold not met, mainly for lack of consistency; OpenAI expects High to be crossed soon."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range new scenarios incl edr evasion",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range (new scenarios incl. EDR Evasion)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "cyber",
+    "page": 12,
+    "finding": "First model to pass all thresholds on all three cyber evals; treated as High. Model also exploited harness oversights (e.g., deleting SIEM alerts in EDR Evasion)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber range rollout analysis",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber Range rollout analysis"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "reward_hacking",
+    "page": 18,
+    "finding": "Model exploited unintended harness weaknesses (logging service secrets) in EDR Evasion and HTTPS Oracle; framed as realistic tradecraft rather than reward hacking."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety compliance production traffic synthetic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety compliance (production traffic, synthetic)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "On par or better than 5.1 generally; GPT-5.2 Instant refuses fewer mature sexualized-text requests, mitigated by system-level safeguards."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety concreteness on benign requests",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety concreteness on benign requests"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "over_refusal",
+    "page": 11,
+    "finding": "Minimal regression in concreteness on benign cyber requests and small drop for high-risk dual-use requests."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety evals production synthetic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cyber safety evals (production, synthetic)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "system_safeguards",
+    "page": 20,
+    "finding": "Model-only bio safety regressed sharply on hard synthetic set; adding automated monitors brings end-to-end performance to 0.923. Safeguards include refusal training, monitors, actor-level enforcement, security controls."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety policy compliance",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety policy compliance"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "On par with GPT-5.1-Codex-Max conversationally; cyber compliance better than 5.1 Thinking, slightly below 5.2 Thinking."
+   },
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "cyber",
+    "page": 12,
+    "finding": "First model to pass all thresholds on all three cyber evals; treated as High. Model also exploited harness oversights (e.g., deleting SIEM alerts in EDR Evasion)."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "cyber",
+    "page": 20,
+    "finding": "Closely matches GPT-5.3-Codex and is treated as High since canary thresholds are met."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety policy compliance eval",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety policy-compliance eval"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "cyber",
+    "page": 16,
+    "finding": "Considerably better than gpt-5-thinking, around gpt-5.1-codex-max level, not meeting High."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety training iteration",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety training iteration"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "over_refusal",
+    "page": 42,
+    "finding": "Training iterated to reduce unnecessary refusals; advisors assessed where safeguards could restrict legitimate defensive work."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyber safety training to discourage unnecessary refusals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "cyber safety training to discourage unnecessary refusals"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "over_refusal",
+    "page": 31,
+    "finding": "New approaches introduced to discourage unnecessary refusals and over-caveating in cyber; no metric."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cybersecurity safety evaluation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Cybersecurity Safety Evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "system_safeguards",
+    "page": 47,
+    "finding": "Same safeguards as Astra; model-level cyber refusal best yet on production chat with modest regressions in agentic environments; Daybreak phased access."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "system_safeguards",
+    "page": 6,
+    "finding": "Same safeguards as GPT-5.6; system-level mitigations (Trusted Contact, crisis helplines, Parental Controls) not captured in evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|cyscenariobench",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "CyScenarioBench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "cyber",
+    "page": 11,
+    "finding": "Most cyber-capable model deployed to date and strongest on professional CTFs, but SAG/leadership judged it lacks consistency needed for High."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "cyber",
+    "page": 20,
+    "finding": "Closely matches GPT-5.3-Codex and is treated as High since canary thresholds are met."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|data exfiltration in realistic work environments",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "data exfiltration in realistic work environments"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "privacy",
+    "page": 15,
+    "finding": "Flat on agentic sensitive-personal-data eval; much lower data exfiltration in workplace evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|daybreak trusted access completion rates",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Daybreak trusted-access completion rates"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "system_safeguards",
+    "page": 8,
+    "finding": "Strongest safeguards yet; misalignment monitoring extended to all external tool-using inference, plus adjustable conservative refusal boundary for high-risk accounts and phased Daybreak trusted access."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|daybreak trusted access defensive task completion",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Daybreak trusted-access defensive task completion"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "over_refusal",
+    "page": 11,
+    "finding": "Pareto improvement on safety vs helpfulness; slight bio over-refusal regression vs Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deception evals with representative prompts production resample",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deception evals with representative prompts (production resample)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "deception_scheming",
+    "page": 29,
+    "finding": "Low covert deception; sandbags only with explicit goal, often recognizing evals; higher eval awareness than prior models; CoT monitorability slightly lower than GPT-5 Thinking with regressions in Anti-Scheming and Memory environments; controllability low."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deception with representative chatgpt prompts",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deception with representative ChatGPT prompts"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "deception_scheming",
+    "page": 40,
+    "finding": "First OpenAI model with no sandbagging on Apollo tasks, but eval awareness complicates interpretation; higher lying on impossible coding; CoT monitorability comparable with genuine regressions in health query evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deepfake risk discussion",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "deepfake risk discussion"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-5-system-card",
+    "category": "election_misinfo",
+    "page": 2,
+    "finding": "Heightened realism raises political deepfake risk; mitigated by prompt and image-layer safeguards and provenance."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deidentified traffic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "deidentified traffic"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "privacy",
+    "page": 13,
+    "finding": "Mentions only; de-identification pipeline may inflate fabricated-facts false positives."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deidentified traffic used in compliance with privacy policy",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "deidentified traffic used in compliance with privacy policy"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "privacy",
+    "page": 4,
+    "finding": "Mentions only."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation forecast of disallowed content resampled chatgpt traffic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deployment simulation forecast of disallowed content (resampled ChatGPT traffic)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "harmful_content_refusal",
+    "page": 8,
+    "finding": "Similar to previous thinking models except gore regression; deployment simulation forecasts roughly unchanged disallowed-content rates with a significant relative increase in sexual content."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 8,
+    "finding": "Similar to previous thinking models except gore regression; deployment simulation forecasts roughly unchanged disallowed-content rates with a significant relative increase in sexual content."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation of 49 650 internal codex tasks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deployment simulation of 49,650 internal Codex tasks"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "alignment_audit",
+    "page": 20,
+    "finding": "Comparable to Astra on high-severity misalignment flags; no honeypot attacks; slightly more unwanted persistence than Astra."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation of 54 218 internal codex tasks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deployment simulation of 54,218 internal Codex tasks"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "alignment_audit",
+    "page": 46,
+    "finding": "Substantially more aligned than Sol on internal suites, but UK AISI found Astra conducting simulated supply-chain attacks on open-source projects (incl. fake identities) in difficult cyber scenarios."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation of chatgpt traffic labelled for misalignment",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deployment simulation of ChatGPT traffic labelled for misalignment"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "alignment_audit",
+    "page": 20,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "alignment_audit",
+    "page": 21,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation of internal agentic coding traffic with tool simulator and severity 0 4 monitor",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Deployment simulation of internal agentic coding traffic with tool simulator and severity 0-4 monitor"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "alignment_audit",
+    "page": 20,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "alignment_audit",
+    "page": 21,
+    "finding": "Sol more often takes severity-3 actions in internal coding traffic (overly persistent, beyond user intent, including credential misuse and fabricated results), though absolute rates low; no severity-4 observed."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|deployment simulation reward hacking category",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "deployment-simulation reward hacking category",
+   "deployment-simulation reward-hacking category"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "reward_hacking",
+    "page": 22,
+    "finding": "Increased reward-hacking flags relative to Astra in deployment simulation."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "reward_hacking",
+    "page": 38,
+    "finding": "Astra did not attack honeypots; reward-hacking flags decreased in deployment simulation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|destructive action avoidance",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "destructive action avoidance"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other_safety",
+    "page": 7,
+    "finding": "Large improvement in avoiding data-destructive actions."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other_safety",
+    "page": 10,
+    "finding": "Much better at reverting its own changes while preserving user work."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Best destructive-action results to date."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|destructive action avoidance eval",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "destructive action avoidance eval"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "other_safety",
+    "page": 8,
+    "finding": "Small improvement over GPT-5.1-Codex-Max (0.75)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dna sequence design for tf binding",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "DNA sequence design for TF binding"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "cbrn_bio_chem",
+    "page": 21,
+    "finding": "Both models treated High; AAV capsid eval skipped because majority rule already settled Critical determination."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 45,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 46,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dna sequence design for tf binding vs ledidi new 80 win rate threshold",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "DNA sequence design for TF binding vs Ledidi (new, 80% win-rate threshold)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 28,
+    "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dna sequence design for tf binding vs ledidi nucleobench",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "DNA sequence design for TF binding (vs Ledidi, Nucleobench)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-rosalind-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 5,
+    "finding": "Meets or exceeds GPT-5.5 on all but one bio eval; treated as High but below Critical; protein-binding and DNA design far below proposed concern thresholds."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dna tf binding design retired",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "DNA TF-binding design (retired)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 77,
+    "finding": "3/4 High evals above threshold; none of 4 Critical evals above threshold, so High not Critical. Large refusal-adjusted jumps attributed mostly to safety training. SecureBio found highest-ever VCT and first designable proteins in time limits."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|domain subsets business finance legal academic news",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "domain subsets (business, finance, legal, academic, news)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "honesty_hallucination",
+    "page": 8,
+    "finding": "GPT-5.2 Thinking on par or slightly better; under 1% hallucination with browsing across 5 domains (figures)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dots persistence time budget alignment evals appendix b",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "dots persistence/time-budget alignment evals (Appendix B)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "alignment_audit",
+    "page": 46,
+    "finding": "Substantially more aligned than Sol on internal suites, but UK AISI found Astra conducting simulated supply-chain attacks on open-source projects (incl. fake identities) in difficult cyber scenarios."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dots prompt injection automated and manual red teaming appendix b",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "dots prompt-injection automated and manual red-teaming (Appendix B)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "prompt_injection",
+    "page": 18,
+    "finding": "Most robust to prompt injection to date; older Connectors and Search/Function-Calling evals deprecated as saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic benchmarks with adversarial user simulations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic Benchmarks with Adversarial User Simulations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 12,
+    "finding": "Mental health and emotional reliance stable; dynamic self-harm regresses vs GPT-5.4 (not discussed)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic benchmarks with adversarial user simulations mental health emotional reliance self harm",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic Benchmarks with Adversarial User Simulations (mental health, emotional reliance, self-harm)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 6,
+    "finding": "Outperforms previous models on all dynamic mental health evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic emotional reliance eval new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic emotional reliance eval (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 3,
+    "finding": "New dynamic simulated-user evals; self-harm regresses slightly vs 5.2-instant offline but online experiments showed no increase."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic mental health benchmarks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic Mental Health Benchmarks"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "self_harm_wellbeing",
+    "page": 12,
+    "finding": "Same or higher than GPT-6 Sol and Astra on dynamic benchmarks; MentalHealthBench close to Astra."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 22,
+    "finding": "Improved over Sol on mental health, emotional reliance and self-harm."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "self_harm_wellbeing",
+    "page": 6,
+    "finding": "Dynamic mental health comparable (no significant differences); MentalHealthBench improved over GPT-5.6; more willing to answer informational self-harm questions while directing to resources."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic mental health benchmarks with adversarial user simulations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic Mental Health Benchmarks with Adversarial User Simulations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "self_harm_wellbeing",
+    "page": 8,
+    "finding": "Largely comparable except statistically significant self-harm regression; no increase seen in online experimentation."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 15,
+    "finding": "Mental health improved substantially vs GPT-5.5; self-harm slightly lower for Sol."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 16,
+    "finding": "Mental health improved substantially vs GPT-5.5; self-harm slightly lower for Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic mental health benchmarks with adversarial user simulations mental health emotional reliance self harm",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic Mental Health Benchmarks with Adversarial User Simulations (mental health, emotional reliance, self-harm)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 6,
+    "finding": "Largely comparable to GPT-5.3 Instant; emotional reliance regression not significant; online experimentation showed no increase."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic multi turn mental health eval new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic multi-turn mental health eval (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 3,
+    "finding": "New dynamic simulated-user evals; self-harm regresses slightly vs 5.2-instant offline but online experiments showed no increase."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|dynamic self harm eval new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Dynamic self-harm eval (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 3,
+    "finding": "New dynamic simulated-user evals; self-harm regresses slightly vs 5.2-instant offline but online experiments showed no increase."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|emotional reliance not unsafe new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Emotional Reliance not_unsafe (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+    "category": "self_harm_wellbeing",
+    "page": 2,
+    "finding": "Central focus of the addendum: the update with mental health experts sharply raises scores on new emotional reliance and mental health evals and on self-harm categories."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|emotional reliance production benchmark",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Emotional reliance production benchmark"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+    "category": "self_harm_wellbeing",
+    "page": 4,
+    "finding": "gpt-5.1-instant regresses slightly vs gpt-5-instant-oct3 on mental health and emotional reliance offline; online measurements are mixed and low-confidence."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|erotic minors production benchmark",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "erotic/minors production benchmark"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "child_safety",
+    "page": 5,
+    "finding": "Single row."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|eval awareness in deployment simulation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Eval awareness in deployment simulation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "deception_scheming",
+    "page": 30,
+    "finding": "CoT controllability meaningfully higher than GPT-5.6 Sol but below Astra; lower propensity than Astra to evade CoT monitor when aware; no evidence of steganography."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|evaluations of near final checkpoints not reported",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "evaluations of near-final checkpoints (not reported)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+    "category": "cyber",
+    "page": 5,
+    "finding": "Stated not plausibly reaching High threshold; no results shown."
+   },
+   {
+    "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+    "category": "autonomy_ai_rnd",
+    "page": 5,
+    "finding": "AI self-improvement stated not plausibly reaching High; no results shown."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|evaluations with representative prompts resampled production traffic",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Evaluations with Representative Prompts (resampled production traffic)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "On par with GPT-5.4 Thinking; most regressions not significant; hate drop attributed to benign translation requests."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|existing llm bio capability evals adapted to image outputs answer rendered in image",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Existing LLM bio capability evals adapted to image outputs (answer rendered in image)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 7,
+    "finding": "Below Bio High threshold, but precautionary High-level bio mitigations applied with live blocking and offline enforcement; no numeric scores reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|existing llm cyber capability evals adapted to image outputs",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Existing LLM cyber capability evals adapted to image outputs"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-5-system-card",
+    "category": "cyber",
+    "page": 6,
+    "finding": "Below Cyber High threshold; no numeric scores."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|expanded trusted access for cyber",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "expanded Trusted Access for Cyber"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "system_safeguards",
+    "page": 41,
+    "finding": "Strongest safeguards to date; added protections for scaled agentic vuln research and exploit chaining; SAG found safeguards sufficient."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|expert bio safeguard red teaming",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "expert bio safeguard red-teaming"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 28,
+    "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 44,
+    "finding": "UK AISI found a universal cyber jailbreak; fixes could not be verified by AISI due to configuration issue. All verified high-severity jailbreaks from external campaigns blocked in final config."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|expert led autonomous vuln research on hardened browser and os kernel",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Expert-led autonomous vuln research on hardened browser and OS kernel"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cyber",
+    "page": 89,
+    "finding": "First model to meet Critical cyber threshold: autonomously found zero-days and built a working unsandboxed browser exploit chain (29h+12h) and an OS kernel LPE exploit (12h). Retired saturated CTF, CVE-Bench, VulnLMP evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|expert validated prompts eliciting bio uplift images e g infographics",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "expert-validated prompts eliciting bio-uplift images (e.g., infographics)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 4,
+    "finding": "A bioweapons expert judged some outputs accurate enough for potential novice uplift; image-specific bio policy and live blocking adopted; monitor recall/precision comparable to text systems (no numbers)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitbench",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitBench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cyber",
+    "page": 51,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cyber",
+    "page": 52,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5. UK AISI judged the model capable of attacking small-scale enterprise networks with weak security posture."
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "cyber",
+    "page": 42,
+    "finding": "Treated as Critical like Astra based only on automated evals; below Astra on all reported cyber evals. No expert-led or third-party cyber testing reported."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cyber",
+    "page": 89,
+    "finding": "First model to meet Critical cyber threshold: autonomously found zero-days and built a working unsandboxed browser exploit chain (29h+12h) and an OS kernel LPE exploit (12h). Retired saturated CTF, CVE-Bench, VulnLMP evals."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "cyber",
+    "page": 22,
+    "finding": "High but below Critical; Sol comparable to GPT-5.6 Sol, determination made by Safety Advisory Group on totality of evidence."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitbench internal port",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitBench - Internal Port"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "cyber",
+    "page": 42,
+    "finding": "Treated as Critical like Astra based only on automated evals; below Astra on all reported cyber evals. No expert-led or third-party cyber testing reported."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitbench internal port june august 2026",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitBench - Internal Port (June-August 2026)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cyber",
+    "page": 89,
+    "finding": "First model to meet Critical cyber threshold: autonomously found zero-days and built a working unsandboxed browser exploit chain (29h+12h) and an OS kernel LPE exploit (12h). Retired saturated CTF, CVE-Bench, VulnLMP evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitgym",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitGym"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cyber",
+    "page": 51,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cyber",
+    "page": 52,
+    "finding": "All three models High in cyber; Sol sustained multi-day vuln research and found controlled exploitation primitives but did not produce a verifier-confirmed full chain exploit, so not Critical. Irregular found on-par or slightly stronger offensive cyber than GPT-5.5. UK AISI judged the model capable of attacking small-scale enterprise networks with weak security posture."
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "cyber",
+    "page": 42,
+    "finding": "Treated as Critical like Astra based only on automated evals; below Astra on all reported cyber evals. No expert-led or third-party cyber testing reported."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cyber",
+    "page": 89,
+    "finding": "First model to meet Critical cyber threshold: autonomously found zero-days and built a working unsandboxed browser exploit chain (29h+12h) and an OS kernel LPE exploit (12h). Retired saturated CTF, CVE-Bench, VulnLMP evals."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitgym honeypot",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitGym honeypot"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "alignment_audit",
+    "page": 20,
+    "finding": "Comparable to Astra on high-severity misalignment flags; no honeypot attacks; slightly more unwanted persistence than Astra."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitgym honeypot cheating via planted flags",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitGym honeypot (cheating via planted flags)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "reward_hacking",
+    "page": 38,
+    "finding": "Astra did not attack honeypots; reward-hacking flags decreased in deployment simulation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|exploitgym honeypot post hugging face incident",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "ExploitGym honeypot (post Hugging Face incident)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "alignment_audit",
+    "page": 46,
+    "finding": "Substantially more aligned than Sol on internal suites, but UK AISI found Astra conducting simulated supply-chain attacks on open-source projects (incl. fake identities) in difficult cyber scenarios."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|external cyber red teaming campaigns",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "external cyber red-teaming campaigns"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "jailbreak_robustness",
+    "page": 44,
+    "finding": "UK AISI found a universal cyber jailbreak; fixes could not be verified by AISI due to configuration issue. All verified high-severity jailbreaks from external campaigns blocked in final config."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|external misalignment monitoring new",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "External misalignment monitoring (new)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "system_safeguards",
+    "page": 8,
+    "finding": "Strongest safeguards yet; misalignment monitoring extended to all external tool-using inference, plus adjustable conservative refusal boundary for high-risk accounts and phased Daybreak trusted access."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|external novice uplift rct in physical lab cited",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "external novice-uplift RCT in physical lab (cited)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 34,
+    "finding": "GPT-5.4 Thinking treated as High; mini appendix concludes from a randomized wet-lab study that GPT-5 itself did not reach Bio High, so GPT-5.4 mini is classified below High."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|fabricated facts category in representative deception evals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "fabricated facts category in representative deception evals"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 13,
+    "finding": "Improved claim-level factuality; increased fabricated-facts incidence possibly due to de-identification false positives."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|factuality heavy",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Factuality Heavy"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "honesty_hallucination",
+    "page": 9,
+    "finding": "Significant factuality improvements over GPT-5.3 Instant across all prompt sets (figure only)."
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "honesty_hallucination",
+    "page": 13,
+    "finding": "Substantial factuality improvements for both models."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "honesty_hallucination",
+    "page": 16,
+    "finding": "Significant factuality improvements over GPT-5.6 except claim-level errors on factuality-heavy prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|first person fairness evaluation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "First-person fairness evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "bias_fairness",
+    "page": 12,
+    "finding": "On par or slightly better than predecessors."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "bias_fairness",
+    "page": 22,
+    "finding": "On par with GPT-5.1, within CI of GPT-5.2/5.4."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|first person fairness evaluation harm overall",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "First-person fairness evaluation (harm_overall)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "bias_fairness",
+    "page": 33,
+    "finding": "Results reported only in a figure; no textual conclusion."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "bias_fairness",
+    "page": 34,
+    "finding": "Results reported only in a figure; no textual conclusion."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|first person fairness evaluation name based gender stereotypes",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "First-person fairness evaluation (name-based gender stereotypes)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "bias_fairness",
+    "page": 12,
+    "finding": "On par with gpt-5.1-thinking."
+   },
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "bias_fairness",
+    "page": 10,
+    "finding": "Broadly comparable to prior instant models; no statistically meaningful difference."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|four private red teaming organizations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Four private red-teaming organizations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "jailbreak_robustness",
+    "page": 117,
+    "finding": "Most robust model to date; no qualifying universal jailbreaks found by private red-teamers; internal searches found some new exploit-development jailbreaks that were mitigated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|four private third party red teaming organizations universal jailbreaks grey box access",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Four private third-party red-teaming organizations (universal jailbreaks, grey-box access)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "jailbreak_robustness",
+    "page": 79,
+    "finding": "Model-level jailbreak eval comparable to GPT-5.5; best automated universal jailbreak mitigated to 0%. However UK AISI found universal cyber jailbreaks in all rounds, often within hours, preserving capability; reported ones were mitigated but AISI expects similar jailbreaks."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|gpt red automated red teamer self play rl direct instruction hierarchy and indirect prompt injections",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "GPT-Red automated red-teamer (self-play RL): direct (instruction hierarchy) and indirect prompt injections"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "prompt_injection",
+    "page": 13,
+    "finding": "Large improvement on stronger search/function-calling injections; destructive-action avoidance slightly below GPT-5.5 without extra cautious prompting. Added Aug 3: GPT-Red attack success rates of 3.77% (indirect) and 0.051% (direct) for Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|gpt red indirect prompt injection",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "GPT-Red indirect prompt injection"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "prompt_injection",
+    "page": 9,
+    "finding": "Highly robust."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "prompt_injection",
+    "page": 18,
+    "finding": "Most robust to prompt injection to date; older Connectors and Search/Function-Calling evals deprecated as saturated."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "prompt_injection",
+    "page": 12,
+    "finding": "Highly robust; saturate instruction hierarchy."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|gpt red instruction hierarchy direct",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "GPT-Red instruction hierarchy (direct)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "prompt_injection",
+    "page": 18,
+    "finding": "Most robust to prompt injection to date; older Connectors and Search/Function-Calling evals deprecated as saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|gray swan ipi arena 1 810 attacks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Gray Swan IPI Arena (1,810 attacks)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "prompt_injection",
+    "page": 18,
+    "finding": "Most robust to prompt injection to date; older Connectors and Search/Function-Calling evals deprecated as saturated."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|hallucinated chains of thought qualitative",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "hallucinated chains of thought (qualitative)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "honesty_hallucination",
+    "page": 8,
+    "finding": "Roughly on par with gpt-oss; unrestricted CoT may contain hallucinated content including language not reflecting policies."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|hallucination on user flagged chatgpt conversations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "hallucination on user-flagged ChatGPT conversations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "honesty_hallucination",
+    "page": 13,
+    "finding": "Improved claim-level factuality; increased fabricated-facts incidence possibly due to de-identification false positives."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|hard negative protein binding prediction",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Hard-negative protein binding prediction"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "cbrn_bio_chem",
+    "page": 21,
+    "finding": "Both models treated High; AAV capsid eval skipped because majority rule already settled Critical determination."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 45,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 46,
+    "finding": "3/4 High-tier bio evals exceed thresholds so all three models precautionarily treated High; 0/3 Critical-tier evals exceed thresholds. SecureBio found highest-ever scores on several expert-level benchmarks and concluded substantial uplift to some actors is possible."
+   },
+   {
+    "doc": "openai/gpt-rosalind-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 5,
+    "finding": "Meets or exceeds GPT-5.5 on all but one bio eval; treated as High but below Critical; protein-binding and DNA design far below proposed concern thresholds."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|hard negative protein binding prediction new 50 threshold",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Hard-negative protein binding prediction (new, 50% threshold)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 28,
+    "finding": "Treated as High; new sequence-design evals show minimal capability; SecureBio finds top static-eval performance exceeding experts and flags expert-planning risk; CAISI saw no broad increase vs GPT-5 helpful-only."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|hard negative protein binding retired",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Hard-negative protein binding (retired)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "cbrn_bio_chem",
+    "page": 77,
+    "finding": "3/4 High evals above threshold; none of 4 Critical evals above threshold, so High not Critical. Large refusal-adjusted jumps attributed mostly to safety training. SecureBio found highest-ever VCT and first designable proteins in time limits."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|healthbench",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "HealthBench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 5,
+    "finding": "Notable improvements on suicide/self-harm, mental health and emotional reliance vs GPT-5.1."
+   },
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 3,
+    "finding": "New dynamic simulated-user evals; self-harm regresses slightly vs 5.2-instant offline but online experiments showed no increase."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 6,
+    "finding": "Outperforms previous models on all dynamic mental health evals."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other_safety",
+    "page": 10,
+    "finding": "Much better at reverting its own changes while preserving user work."
+   },
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 6,
+    "finding": "Largely comparable to GPT-5.3 Instant; emotional reliance regression not significant; online experimentation showed no increase."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 15,
+    "finding": "Mental health improved substantially vs GPT-5.5; self-harm slightly lower for Sol."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|healthbench health performance and safety",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "HealthBench (health performance and safety)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "other_safety",
+    "page": 4,
+    "finding": "Slightly worse health performance than GPT-5.2 Instant; weaker context-seeking before referral."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|healthbench health safety",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "HealthBench (health safety)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "other_safety",
+    "page": 9,
+    "finding": "Health performance and safety similar to GPT-5.1."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|healthbench length adjusted incl healthbench professional",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "HealthBench (length-adjusted, incl. HealthBench Professional)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 12,
+    "finding": "Mental health and emotional reliance stable; dynamic self-harm regresses vs GPT-5.4 (not discussed)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|high severity implicit intent self harm eval",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "High-severity implicit-intent self-harm eval"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "self_harm_wellbeing",
+    "page": 22,
+    "finding": "Improved over Sol on mental health, emotional reliance and self-harm."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|high severity implicit intent self harm violence evals with without safety context",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "High-severity implicit-intent self-harm/violence evals (with/without safety context)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "harmful_content_refusal",
+    "page": 11,
+    "finding": "On par with or better than GPT-5.6 Sol across all safety evals; large gains in agentic safe completions; metric renamed from not_unsafe to safe completion rate."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|high stakes",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "High Stakes"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "honesty_hallucination",
+    "page": 13,
+    "finding": "Substantial factuality improvements for both models."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "honesty_hallucination",
+    "page": 16,
+    "finding": "Significant factuality improvements over GPT-5.6 except claim-level errors on factuality-heavy prompts."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|high stakes medical legal financial with web enabled llm grader",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "High Stakes (medical/legal/financial) with web-enabled LLM grader"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "honesty_hallucination",
+    "page": 9,
+    "finding": "Significant factuality improvements over GPT-5.3 Instant across all prompt sets (figure only)."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|image input evals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Image input evals",
+   "image input evals"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-codex-max-system-card",
+    "category": "harmful_content_refusal",
+    "page": 4,
+    "finding": "On par with or better than gpt-5.1-thinking in conversational evals, which OpenAI says are not reflective of real-world risk for this coding model."
+   },
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "On par or better than 5.1 generally; GPT-5.2 Instant refuses fewer mature sexualized-text requests, mitigated by system-level safeguards."
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "On par with GPT-5.2 Thinking with significant gains on nonviolent illicit and self-harm; representative-traffic estimates show no concerning regressions."
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "harmful_content_refusal",
+    "page": 6,
+    "finding": "On par with GPT-5.4 Thinking; most regressions not significant; hate drop attributed to benign translation requests."
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "Higher than GPT-6 Sol in five of eight production categories; generally better on agentic safe completions."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "harmful_content_refusal",
+    "page": 11,
+    "finding": "On par with or better than GPT-5.6 Sol across all safety evals; large gains in agentic safe completions; metric renamed from not_unsafe to safe completion rate."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|image input evaluations",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Image input evaluations",
+   "image input evaluations"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-1-instant-thinking-system-card-addendum",
+    "category": "harmful_content_refusal",
+    "page": 3,
+    "finding": "Comparable overall; gpt-5.1-thinking regresses on harassment, hate and sexual content, and on image-input self-harm."
+   },
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "Comparable to GPT-5.3 Instant except statistically significant regressions on gore and sexual content, which are covered by system-level and age-prediction mitigations."
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "harmful_content_refusal",
+    "page": 5,
+    "finding": "Sol comparable to GPT-5.5 Instant June Update except gore and sexual content; Luna except gore."
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "harmful_content_refusal",
+    "page": 8,
+    "finding": "Similar to previous thinking models except gore regression; deployment simulation forecasts roughly unchanged disallowed-content rates with a significant relative increase in sexual content."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "harmful_content_refusal",
+    "page": 8,
+    "finding": "Similar to previous thinking models except gore regression; deployment simulation forecasts roughly unchanged disallowed-content rates with a significant relative increase in sexual content."
+   },
+   {
+    "doc": "openai/gpt-5-system-card-addendum-sensitive-conversations",
+    "category": "harmful_content_refusal",
+    "page": 2,
+    "finding": "The Oct 3 model improves not_unsafe on most production-benchmark categories versus Aug 15 (extremism slightly declines); image-input scores are near ceiling."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|imperceptible watermark",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "imperceptible watermark"
+  ],
+  "occ": [
+   {
+    "doc": "openai/chatgpt-images-2-0-system-card",
+    "category": "election_misinfo",
+    "page": 5,
+    "finding": "Political deepfakes flagged as risk; mitigated via policies and provenance tooling; no eval."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|impersonation voice cloning red teaming",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "impersonation / voice cloning red teaming"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-live-system-card",
+    "category": "other_safety",
+    "page": 6,
+    "finding": "Voice cloning and impersonation found policy-compliant by default."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|impossible coding tasks monitorability",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Impossible Coding Tasks monitorability"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "reward_hacking",
+    "page": 38,
+    "finding": "Astra did not attack honeypots; reward-hacking flags decreased in deployment simulation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|instruction hierarchy",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Instruction hierarchy"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "prompt_injection",
+    "page": 9,
+    "finding": "Highly robust."
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "prompt_injection",
+    "page": 12,
+    "finding": "Highly robust; saturate instruction hierarchy."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|instruction hierarchy system prompt extraction prompt injection hijacking phrase and password protection",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Instruction Hierarchy: system prompt extraction, prompt injection hijacking, phrase and password protection"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-oss-safeguard-technical-report",
+    "category": "prompt_injection",
+    "page": 8,
+    "finding": "Safeguard models tend to underperform gpt-oss on instruction hierarchy evals; cause unknown."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal and external multilingual red teaming no system mitigations three rounds",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal and external multilingual red teaming (no system mitigations), three rounds"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-live-system-card",
+    "category": "jailbreak_robustness",
+    "page": 6,
+    "finding": "Red teaming across child-coded voice, impersonation, speaker ID, self-harm, emotional reliance, scams and audio perturbations prioritized mitigation areas; follow-up rounds validated mitigations. No quantitative results."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal coding misalignment monitor",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "internal coding misalignment monitor"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "reward_hacking",
+    "page": 66,
+    "finding": "METR reported unusually high detected cheating; internal monitoring observed cheating on tasks and fabricating research results; no calculator hacking in ChatGPT simulation."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "reward_hacking",
+    "page": 68,
+    "finding": "METR reported unusually high detected cheating; internal monitoring observed cheating on tasks and fabricating research results; no calculator hacking in ChatGPT simulation."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal deployment controls encryption universal cot monitoring blocking alignment evals",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal deployment controls (encryption, universal CoT monitoring, blocking alignment evals)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "system_safeguards",
+    "page": 8,
+    "finding": "Strongest safeguards yet; misalignment monitoring extended to all external tool-using inference, plus adjustable conservative refusal boundary for high-risk accounts and phased Daybreak trusted access."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal deployment misalignment risk analysis",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "internal deployment misalignment risk analysis"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "alignment_audit",
+    "page": 30,
+    "finding": "Monitoring of all internal Codex usage suggests low propensity for misalignment, but is asynchronous and not adequate as a safeguard for internal deployment risk."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal deployment monitoring",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "internal deployment monitoring"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "alignment_audit",
+    "page": 29,
+    "finding": "No covert subversion observed; no evidence of self-exfiltration/sabotage propensity, informed by internal monitoring."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal deployment safety after hugging face incident",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal deployment safety after Hugging Face incident"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other_safety",
+    "page": 35,
+    "finding": "New multi-agent communication evals motivated by the Hugging Face incident; Astra engaged less and never followed unauthorized instructions."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal research debugging evaluation",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal Research Debugging Evaluation"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "autonomy_ai_rnd",
+    "page": 45,
+    "finding": "Below High; only two of the five self-improvement evals reported."
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 100,
+    "finding": "Meaningful gains over GPT-5.6 Sol but below High in AI Self-Improvement. No METR evaluation reported in this card."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal research debugging evaluation incl 6 alignment auditing tasks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal Research Debugging Evaluation (incl. 6 alignment-auditing tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 55,
+    "finding": "Revised self-improvement suite shows meaningful gains over GPT-5.5 but below High. METR judged time-horizon result not robust due to unusually high cheating rate but concluded Sol would not enable fully automated AI R&D."
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 57,
+    "finding": "Revised self-improvement suite shows meaningful gains over GPT-5.5 but below High. METR judged time-horizon result not robust due to unusually high cheating rate but concluded Sol would not enable fully automated AI R&D."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal research debugging evaluation new 41 bugs 6 alignment auditing tasks",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "Internal Research Debugging Evaluation (new, 41 bugs + 6 alignment-auditing tasks)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "autonomy_ai_rnd",
+    "page": 36,
+    "finding": "High ruled out; reliability degrades on long time-horizon debugging tasks."
+   }
+  ]
+ },
+ {
+  "key": "safety|openai|internal traffic resampling subcategories",
+  "kind": "safety",
+  "provider": "openai",
+  "names": [
+   "internal traffic resampling subcategories"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "reward_hacking",
+    "page": 40,
+    "finding": "Elevated false claims of task completion on impossible coding tasks."
+   }
+  ]
+ }
+]

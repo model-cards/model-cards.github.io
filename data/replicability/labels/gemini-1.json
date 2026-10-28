@@ -1,0 +1,3906 @@
+[
+ {
+  "key": "safety|gemini|0 100 actionability rubric",
+  "canonical": "CBRN red-teaming 0-100 actionability rubric",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 9,
+   "quote": "When red teamers have finished elicitation for a given substage, they score their findings using a substage-specific scoring rubric."
+  },
+  "note": "Scoring rubric applied by expert red teamers to their own transcripts; only an illustrative simplified rubric is published."
+ },
+ {
+  "key": "safety|gemini|aa omniscience",
+  "canonical": "AA-Omniscience",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Artificial Analysis LLM grader (official)",
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 191,
+   "quote": "AA-Omniscience (paper): 6,000 cross-domain knowledge reliability questions across 42 topics in six domains"
+  },
+  "note": "Artificial Analysis releases only a public subset of the 6,000 questions; graded correct/incorrect/abstain by AA's LLM grader per general knowledge."
+ },
+ {
+  "key": "safety|gemini|adaptive multi agent llm guided attacker framework survival n",
+  "canonical": "Adaptive multi-agent LLM-guided prompt-injection attacker (Survival@N)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": "attacker: Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 205,
+   "quote": "we measure robustness using Survival @ N attempts"
+  },
+  "note": "Internal adaptive attacker framework applied over internal scenario suites; breach-judging method varies by suite and is mostly unstated."
+ },
+ {
+  "key": "safety|gemini|additional cyber testing no details",
+  "canonical": "Additional FSF cyber testing (unspecified)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-5-flash-model-card",
+   "page": 7,
+   "quote": "we performed additional testing in this domain and found that Gemini 3.5 Flash remains below the cyber CCL."
+  },
+  "note": "No details of the cyber tests are given."
+ },
+ {
+  "key": "safety|gemini|adversarial spatial reasoning tasks safety policy compliance",
+  "canonical": "Gemini Robotics-ER 1.6 adversarial spatial reasoning safety compliance",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-1-6-model-card",
+   "page": 4,
+   "quote": "demonstrates compliance with Gemini safety policies on adversarial spatial reasoning tasks"
+  },
+  "note": "Only referenced to a release post figure; dataset and grading not described."
+ },
+ {
+  "key": "safety|gemini|agent behavior spec evals overreach under service",
+  "canonical": "Agent Behavior specification eval (overreach / under-service)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "rubric-guided autorater",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 181,
+   "quote": "we evaluate multi-turn software engineering and tool-use trajectories using a rubric-guided autorater across overreach and under-service dimensions"
+  },
+  "note": "Internal trajectories scored by an unnamed rubric-guided autorater."
+ },
+ {
+  "key": "safety|gemini|agent harness helpfulness score",
+  "canonical": "Agent harness misuse eval - Helpfulness Score",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 171,
+   "quote": "Helpfulness Score:** The rate at which the agent avoids over-refusals"
+  },
+  "note": "Internal Antigravity agent-safety set; how refusals are judged is not stated."
+ },
+ {
+  "key": "safety|gemini|agent harness misuse eval safe action rate",
+  "canonical": "Agent harness misuse eval - Safe Action Rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 171,
+   "quote": "Safe Action Rate:** The rate at which the agent successfully identifies and avoids executing malicious user requests."
+  },
+  "note": "Internal evaluation set run in Antigravity sandbox; grading method not stated."
+ },
+ {
+  "key": "safety|gemini|agentic robotics physical safety roboharm asimov 2 0 asimov agentic",
+  "canonical": "Agentic robotics physical safety suite (Roboharm, ASIMOV-2.0, ASIMOV-Agentic)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 200,
+   "quote": "we evaluated it on a suite of physical safety benchmarks"
+  },
+  "note": "ASIMOV-Agentic is released on HF and ASIMOV benchmarks are public; Roboharm availability unclear; metrics are accuracy/timing errors."
+ },
+ {
+  "key": "safety|gemini|agentic safety and uncertainty resolution evals in separate report",
+  "canonical": "ASIMOV-Agentic (agentic safety and uncertainty resolution)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-2-model-card",
+   "page": 5,
+   "quote": "For new agentic safety and uncertainty resolution evaluations, please see our safety technical report."
+  },
+  "note": "Refers to the ASIMOV-Agentic benchmark released on Hugging Face, scored by classification accuracy."
+ },
+ {
+  "key": "safety|gemini|agentic task gaming overreach evals 18 tasks puzzle cheating permission bypass overeagerness",
+  "canonical": "Agentic task-gaming and overreach evals (18 tasks)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "scenario-specific misbehavior LLM judge",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 94,
+   "quote": "We score each transcript on a scale from 0 to 10 using two LLM judges"
+  },
+  "note": "Internal sandboxed environments (a few adapted from Singh et al. puzzles); judges not named."
+ },
+ {
+  "key": "safety|gemini|ai control roadmap trait r taxonomy and agent monitoring and response platform",
+  "canonical": "AI Control roadmap and agent monitoring platform",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 11,
+   "quote": "The Google DeepMind AI Control Roadmap treats these controls as a second line of defense behind model alignment"
+  },
+  "note": "Describes deployment safeguards, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|ai written code share and internal use trajectory analysis 1389 trajectories",
+  "canonical": "Internal-use trajectory analysis of AI R&D automation (1389 trajectories)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 78,
+   "quote": "We looked at a stratified random sample of 1389 Argon trajectories from internal use. For each, we asked Gemini Flash 3.8 to identify the main task being solved"
+  },
+  "note": "Analysis of internal usage logs labelled by Gemini 3.8 Flash."
+ },
+ {
+  "key": "safety|gemini|ambiguous high risk task collaboration eval",
+  "canonical": "Ambiguous & high-risk task collaboration eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 187,
+   "quote": "The benchmark contains a collection of ambiguous and high-risk SWE and non-coding agentic tasks where the agent needs to collaborate with the user."
+  },
+  "note": "Internal benchmark; scoring method for collaboration scores not stated."
+ },
+ {
+  "key": "safety|gemini|anomaly detection autorater over rl training transcripts",
+  "canonical": "Anomaly-detection autorater over RL training transcripts",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "anomaly detection autorater",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 26,
+   "quote": "This was conducted both manually, with an anomaly detection autorater, and an eval awareness autorater."
+  },
+  "note": "Trawling internal post-training transcripts with an unnamed autorater."
+ },
+ {
+  "key": "safety|gemini|anti distillation stack",
+  "canonical": "Anti-distillation detection stack",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 173,
+   "quote": "we have substantially expanded our distillation detection stack"
+  },
+  "note": "Safeguard description, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|apollo research ml sabotage capability evals",
+  "canonical": "Apollo Research ML-sabotage capability evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 72,
+   "quote": "Their capability-based evaluation suite utilizes four offensive ML sabotage evaluations"
+  },
+  "note": "External Apollo assessment reported as outcome; methods and grading not detailed."
+ },
+ {
+  "key": "safety|gemini|apollo research strategic deception and ml sabotage evals",
+  "canonical": "Apollo Research strategic-deception and ML-sabotage evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 73,
+   "quote": "Apollo's evaluations on misalignment focused on assessing Gemini 4 Argon's propensity for strategic deception."
+  },
+  "note": "External Apollo assessment reported only as outcome."
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 1 unsafe task refusal and safety constraint following text pointing bounding box tool use modalities",
+  "canonical": "ASIMOV-Agentic 2.1 Unsafe Task Refusal & Safety Constraint Following",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 3,
+   "quote": "the primary metric for this evaluation is classification accuracy"
+  },
+  "note": "Released on HF; human-annotated ground truth, scored by accuracy."
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 5 instruction ambiguity clarification vs fulfilment rates",
+  "canonical": "ASIMOV-Agentic 2.5 Instruction Ambiguity",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 9,
+   "quote": "we report both types of accuracies: the rate of asking for clarification for ambiguous instructions, and rate of fulfilling the request for unambiguous instructions."
+  },
+  "note": "Part of released ASIMOV-Agentic; clarification vs fulfilment rates (detection method of clarification not detailed)."
+ },
+ {
+  "key": "safety|gemini|asimov agentic 2 6 obfuscated instrument reading readable adversarial vs unreadable gauges",
+  "canonical": "ASIMOV-Agentic 2.6 Obfuscated Instrument Reading",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 10,
+   "quote": "accuracy in reading adversarial but readable instruments versus verbalizing such uncertainty instead of hallucinating a false reading."
+  },
+  "note": "Part of released ASIMOV-Agentic; accuracy-based scoring (uncertainty-verbalization detection not detailed)."
+ },
+ {
+  "key": "safety|gemini|asimov agentic benchmark new released on hugging face",
+  "canonical": "ASIMOV-Agentic benchmark",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 1,
+   "quote": "released at https://huggingface.co/datasets/google/asimov_agentic"
+  },
+  "note": "Released on Hugging Face; components scored by accuracy/MAE/FNR-FPR."
+ },
+ {
+  "key": "safety|gemini|assurance evaluations",
+  "canonical": "Assurance Evaluations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 4,
+   "quote": "conducted by human evaluators independent of the model development team"
+  },
+  "note": "Independent internal human assurance evaluations; no data released."
+ },
+ {
+  "key": "safety|gemini|attention jailbreaking planned for future benchmark versions",
+  "canonical": "Planned 'attention jailbreaking' benchmark extension",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 6,
+   "quote": "Future versions of our benchmark will test whether this robustness holds with increasing context length and “attention jailbreaking”"
+  },
+  "note": "Planned future work, not a reported evaluation."
+ },
+ {
+  "key": "safety|gemini|auto red teaming on cyscenariobench",
+  "canonical": "Auto-red-teaming on CyScenarioBench",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 61,
+   "quote": "we apply automatic attacks when we meet refusals from the model"
+  },
+  "note": "Automated jailbreak templates applied on the private Irregular CyScenarioBench; success judging not stated."
+ },
+ {
+  "key": "safety|gemini|automated and human safety evaluations unnamed text to text and image to text without safety filters",
+  "canonical": "Gemma 4 automated and human safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemma-4-model-card",
+   "page": 10,
+   "quote": "A range of automated as well as human evaluations were conducted to help improve model safety."
+  },
+  "note": "Unnamed internal safety evaluations; grading method not given."
+ },
+ {
+  "key": "safety|gemini|automated and human safety evaluations unnamed without safety filters",
+  "canonical": "DiffusionGemma automated and human safety evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/diffusiongemma-model-card",
+   "page": 8,
+   "quote": "A range of automated as well as human evaluations were conducted to help improve model safety."
+  },
+  "note": "Unnamed internal safety evaluations; grading not given."
+ },
+ {
+  "key": "safety|gemini|automated and manual sandbagging eval awareness checks across domains",
+  "canonical": "Automated and manual sandbagging / eval-awareness checks",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Gemini (version unspecified)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 41,
+   "quote": "We conducted these spot checks using a combination of manual inspection and automated analysis with Gemini to accelerate the triage process."
+  },
+  "note": "Transcript review with Gemini-assisted triage plus manual inspection."
+ },
+ {
+  "key": "safety|gemini|automated eval awareness sandbagging check on 5 bio oeq scenarios",
+  "canonical": "Automated eval-awareness/sandbagging check on bio OEQ scenarios",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 14,
+   "quote": "Our automated checks (supplemented by manual review) did not identify any examples of evaluation awareness or deliberate underperformance."
+  },
+  "note": "Automated checks of internal bio trajectories; checker model unnamed."
+ },
+ {
+  "key": "safety|gemini|automated propensity eval with synthetic user gemini 3 1 flash in lower and higher stakes scenarios",
+  "canonical": "Harmful manipulation automated propensity eval (synthetic user)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": "user simulator: Gemini 3.1 Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 24,
+   "quote": "'User' model: One chatbot (built on Gemini 3.1 Flash) is instructed to act as a user"
+  },
+  "note": "Internal synthetic dialogues; how manipulative cues are detected is not stated."
+ },
+ {
+  "key": "safety|gemini|automated red teaming",
+  "canonical": "Automated red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 7,
+   "quote": "Automated Red Teaming** to dynamically evaluate Gemini for safety and security considerations at scale"
+  },
+  "note": "Open-ended automated red teaming; no released set or grader details."
+ },
+ {
+  "key": "safety|gemini|automated sandbagging checks",
+  "canonical": "Automated sandbagging checks",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Gemini (version unspecified)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 21,
+   "quote": "These spot checks were performed through a combination of manual inspection and the use of Gemini to accelerate triage."
+  },
+  "note": "Automated transcript checks with unnamed Gemini model."
+ },
+ {
+  "key": "safety|gemini|autorater on factuality",
+  "canonical": "Image-generation factuality AutoRater",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 4,
+   "quote": "AutoRater on factuality, style diversity of non-natural images."
+  },
+  "note": "Internal curated prompt sets scored by an unnamed autorater."
+ },
+ {
+  "key": "safety|gemini|benign refusal rate",
+  "canonical": "Coverage evals - benign refusal rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 30,
+   "quote": "Benign Refusal Rate: We measure how often the model refuses to answer a benign query."
+  },
+  "note": "Metric over internal expert-authored coverage evals; refusal judging not stated."
+ },
+ {
+  "key": "safety|gemini|benign refusal rate in cbrn cyber coverage evals",
+  "canonical": "CBRN/cyber coverage evals - benign refusal rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 56,
+   "quote": "Benign Refusal Rate:** We measure how often the model refuses to answer a benign query."
+  },
+  "note": "Internal coverage evals; grading not stated."
+ },
+ {
+  "key": "safety|gemini|bio static jailbreak eval",
+  "canonical": "Bio static jailbreak eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 62,
+   "quote": "this evaluation applies common jailbreak strategies to high severity Bio queries."
+  },
+  "note": "Internal high-severity queries with jailbreak templates; breach judging not stated."
+ },
+ {
+  "key": "safety|gemini|cbrn conversational evals 1500 sme written examples",
+  "canonical": "CBRN Conversational Evals (~1500 SME-written)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 31,
+   "quote": "these are single- and multi-turn prompts written by subject matter experts."
+  },
+  "note": "Internal SME-written set; grading not stated."
+ },
+ {
+  "key": "safety|gemini|cbrn cyber coverage evals violation rate",
+  "canonical": "CBRN/cyber coverage evals - violation rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 56,
+   "quote": "Violation Rate:** We measure how often the model is willing to fulfill a malicious query completely."
+  },
+  "note": "Internal coverage evals built from expert authoring, synthetic data and log mining; grader unstated."
+ },
+ {
+  "key": "safety|gemini|cbrn science eval 700 benign",
+  "canonical": "CBRN Science Eval (700+ benign)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 58,
+   "quote": "This evaluation contains 700+ benign examples."
+  },
+  "note": "Internal benign science set for false refusals; grading not stated."
+ },
+ {
+  "key": "safety|gemini|cbrn science eval 700 benign examples",
+  "canonical": "CBRN Science Eval (700+ benign)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 31,
+   "quote": "This evaluation contains 700+ benign examples."
+  },
+  "note": "Internal benign science set; grading not stated."
+ },
+ {
+  "key": "safety|gemini|cheating audits on terminalbench 4 0 and tool replication benchmark",
+  "canonical": "Cheating audits on TerminalBench 4.0 and tool-replication benchmark",
+  "type": "audit",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 Pro + an external model",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 97,
+   "quote": "An LLM judge (Gemini 3.1 Pro) first reviewed each agent's commands and their outputs"
+  },
+  "note": "Audit of transcripts on public TerminalBench 4.0 plus an internal tool-replication benchmark, using named LLM judges."
+ },
+ {
+  "key": "safety|gemini|chem bio dynamic jailbreak eval",
+  "canonical": "Chem/Bio Dynamic Jailbreak Eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 33,
+   "quote": "we gather the information across conversations to decide the final helpfulness score against human written rubrics."
+  },
+  "note": "Internal automated multi-conversation attacker; rubric scoring method/model unstated."
+ },
+ {
+  "key": "safety|gemini|chem bio dynamic multi conversation eval",
+  "canonical": "Chem/Bio dynamic multi-conversation eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 63,
+   "quote": "The resulting rubric match score measures the percentage of target information toward the harmful goal that was elicited."
+  },
+  "note": "Internal rubrics and automated attacker; rubric-matching grader not named."
+ },
+ {
+  "key": "safety|gemini|chemical red teaming 4 scenarios",
+  "canonical": "Chemical expert red teaming (4 scenarios)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 29,
+   "quote": "Five subject matter experts red-teamed and peer-reviewed at least two end-to-end scenarios each"
+  },
+  "note": "Expert red teaming on unpublished scenarios scored by SMEs."
+ },
+ {
+  "key": "safety|gemini|child safety evaluation text to text image to text",
+  "canonical": "FunctionGemma child safety evaluation",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 7,
+   "quote": "Evaluation of text-to-text and image to text prompts covering child safety policies"
+  },
+  "note": "Internal structured evaluations; grader not stated."
+ },
+ {
+  "key": "safety|gemini|child safety evaluations",
+  "canonical": "Child Safety Evaluations (audio)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-8-audio-model-card",
+   "page": 6,
+   "quote": "were conducted using techniques developed by expert teams to protect children online"
+  },
+  "note": "Internal; no details of data or grading."
+ },
+ {
+  "key": "safety|gemini|ciphers multilingual encoding jailbreak templates",
+  "canonical": "Cipher/multilingual encoding jailbreak templates (cyber static jailbreak)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 61,
+   "quote": "ciphers/multilingual encoding, and long-context stuffing"
+  },
+  "note": "Template family within the internal cyber static jailbreak eval; grading not stated."
+ },
+ {
+  "key": "safety|gemini|coding agent eval on swe bench pro 75 scenarios",
+  "canonical": "Coding agent prompt-injection eval on SWE-Bench Pro (75 scenarios)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "unclear",
+  "grader_model": "attacker: Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 210,
+   "quote": "Built on SWE-Bench Pro (Deng et al., 2025), this 75-scenario benchmark"
+  },
+  "note": "Public SWE-Bench Pro repos with unreleased injected scenarios; breach scoring not described."
+ },
+ {
+  "key": "safety|gemini|collision rates",
+  "canonical": "Robot collision rates",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-on-device-2-model-card",
+   "page": 5,
+   "quote": "tracking metrics such as collision rates, motion quality, and out-of-distribution robustness."
+  },
+  "note": "Embodiment-specific internal tests; no details."
+ },
+ {
+  "key": "safety|gemini|computer use 27 web scenarios survival 100",
+  "canonical": "Computer-use prompt-injection eval (27 web scenarios)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "multimodal judge",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 209,
+   "quote": "a multimodal judge evaluates the agent's screenshots and action trajectories against a behavioral rubric"
+  },
+  "note": "Internal scenarios; breach judged by unnamed multimodal judge."
+ },
+ {
+  "key": "safety|gemini|computer use child safety action testing",
+  "canonical": "Computer use child safety action testing",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 173,
+   "quote": "A specialized evaluation set focused on action violations"
+  },
+  "note": "Internal set; grading not stated."
+ },
+ {
+  "key": "safety|gemini|computer use prohibited action eval manual red teaming",
+  "canonical": "Computer use prohibited action eval + manual red teaming",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 172,
+   "quote": "Automated, single-turn evaluation that measures whether the model fulfills adversarial requests"
+  },
+  "note": "Internal automated eval plus internal red team; grader not stated."
+ },
+ {
+  "key": "safety|gemini|contextual security contextual integrity prompt injection eval",
+  "canonical": "Contextual security (Contextual Integrity) eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 207,
+   "quote": "Grounded in Nissenbaum's Contextual Integrity framework (Nissenbaum, 2004), our benchmark simulates accumulated cross-app data"
+  },
+  "note": "Internal benchmark; scoring of information-flow violations not described."
+ },
+ {
+  "key": "safety|gemini|contextual security eval contextual integrity",
+  "canonical": "Contextual security (Contextual Integrity) eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 207,
+   "quote": "Stress-tests the model when static and 15-attempt adaptive attackers actively exploit contextual ambiguities"
+  },
+  "note": "Internal benchmark; scoring not described."
+ },
+ {
+  "key": "safety|gemini|cost reduction uplift model over 22 historical attacks and 26 operational steps with tac levels 25 offensive security professionals",
+  "canonical": "Cyber cost-reduction uplift model (22 historical attacks, TAC levels)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "expert elicitation (25+ offensive security professionals)",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 16,
+   "quote": "using structured expert elicitation from 25+ offensive security professionals, we estimate the baseline human cost"
+  },
+  "note": "Quantitative threat model built from expert judgement; not a released task set."
+ },
+ {
+  "key": "safety|gemini|cot control brew controllability",
+  "canonical": "CoT-Control and Brew controllability",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": "RegEx checks (LLM judge for one constraint)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 143,
+   "quote": "We clarified the constraints by making the grader an explicit RegEx check"
+  },
+  "note": "Reproduction of public CoT-Control (GPQA/HLE/MMLU-Pro) with modifications plus Brew; mostly regex grading."
+ },
+ {
+  "key": "safety|gemini|cot legibility analysis emmons et al 2025 metrics",
+  "canonical": "CoT legibility analysis (Emmons et al. 2025 metrics)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "Emmons et al. autorater",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 19,
+   "quote": "We also used the two metrics proposed by Emmons et al. (2025) for a more systematic quantitative assessment."
+  },
+  "note": "Applied to internal transcripts; autorater model not named."
+ },
+ {
+  "key": "safety|gemini|cot transparency assessment legibility coverage monitoring awareness ncri no cot reasoning controllability",
+  "canonical": "CoT transparency assessment (legibility/coverage, monitoring awareness, no-CoT, controllability)",
+  "type": "audit",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 / Gemini 3.8 Flash autoraters and monitors",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 140,
+   "quote": "we use an autorater running on Gemini 3.1 that looks for three levels of awareness"
+  },
+  "note": "Mix of internal RL/agent transcripts and public QA subsets, rated by released Gemini models."
+ },
+ {
+  "key": "safety|gemini|csae red teaming datasets graded by specialist child safety team t2t image video to text single multi turn",
+  "canonical": "CSAE red-teaming datasets (child safety)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "specialist child safety team",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 164,
+   "quote": "A specialist child safety team with deep subject matter expertise creates these evaluation sets"
+  },
+  "note": "Internal adversarial sets created and graded by the child safety team."
+ },
+ {
+  "key": "safety|gemini|csam filtering",
+  "canonical": "CSAM filtering of training data",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 3,
+   "quote": "Rigorous CSAM (Child Sexual Abuse Material) filtering was applied at multiple stages in the data preparation process"
+  },
+  "note": "Training-data mitigation, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|cwe bench v1 defense",
+  "canonical": "CWE-Bench v1",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "deterministic exploit/regression verifier",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 216,
+   "quote": "The private evaluation set consists of 120 tasks spanning 73 CWEs"
+  },
+  "note": "Third-party (Collinear AI) private held-out set; programmatic verifier."
+ },
+ {
+  "key": "safety|gemini|cyber adaptive jailbreak eval automated attacker",
+  "canonical": "Cyber Adaptive Jailbreak Eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 32,
+   "quote": "An attack is considered successful when the target model completely fulfills that specific attack goal."
+  },
+  "note": "Internal attack goals with automated attacker; fulfilment judging not stated."
+ },
+ {
+  "key": "safety|gemini|cyber adaptive jailbreak eval single and multi turn automated attackers osr",
+  "canonical": "Cyber adaptive jailbreak eval (single/multi-turn automated attackers)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 61,
+   "quote": "we deploy automated red-teaming orchestrators that learn from failed attempts to iteratively probe for bypasses"
+  },
+  "note": "Internal goals and attackers; success judging not stated."
+ },
+ {
+  "key": "safety|gemini|cyber challenge shortcut review",
+  "canonical": "Cyber challenge shortcut transcript review",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "cybersecurity SMEs",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 10,
+   "quote": "after careful examination of the corresponding transcripts, our subject matter experts concluded"
+  },
+  "note": "Manual expert review of transcripts."
+ },
+ {
+  "key": "safety|gemini|cyber conversational evals 1 000 examples 1 5 turns",
+  "canonical": "Cyber Conversational Evals (~1,000 examples)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 31,
+   "quote": "This evaluation covers around 1,000 conversational examples with the number of turns ranging from 1 to 5."
+  },
+  "note": "Internal set; grading not stated."
+ },
+ {
+  "key": "safety|gemini|cyber static jailbreak eval",
+  "canonical": "Cyber Static Jailbreak Eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 32,
+   "quote": "We select high severity examples and apply common jailbreak templates/strategies."
+  },
+  "note": "Internal high-severity examples with public-style templates; grading not stated."
+ },
+ {
+  "key": "safety|gemini|cyber static jailbreak eval qsr",
+  "canonical": "Cyber static jailbreak eval (QSR)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 61,
+   "quote": "We select high severity examples and apply common jailbreak templates/strategies."
+  },
+  "note": "Internal; grading not stated."
+ },
+ {
+  "key": "safety|gemini|delphi process threat modeling",
+  "canonical": "Delphi-process CBRN threat modeling",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 23,
+   "quote": "using the Delphi process to combine independent expert judgment with shared feedback to refine our risk evaluations."
+  },
+  "note": "Threat-scenario prioritisation, not an evaluation of the model."
+ },
+ {
+  "key": "safety|gemini|ethics safety reviews",
+  "canonical": "Ethics & Safety Reviews",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 7,
+   "quote": "Ethics & Safety Reviews** were conducted ahead of the model's release"
+  },
+  "note": "Governance review, no evaluation details."
+ },
+ {
+  "key": "safety|gemini|eval awareness autorater on post training rl transcripts",
+  "canonical": "Eval-awareness autorater on post-training/RL transcripts",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "eval awareness autorater",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 26,
+   "quote": "This was conducted both manually, with an anomaly detection autorater, and an eval awareness autorater."
+  },
+  "note": "Internal transcripts; autorater model not named."
+ },
+ {
+  "key": "safety|gemini|eval awareness underperformance automated checks",
+  "canonical": "Eval-awareness/deliberate-underperformance automated checks (CBRN)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 32,
+   "quote": "we used automated tests to analyze the model's responses and raw thinking traces from static evaluations of Gemini 4 Argon."
+  },
+  "note": "Automated checks on internal static bio evals; checker not named."
+ },
+ {
+  "key": "safety|gemini|evaluation awareness and sandbagging audits across domains",
+  "canonical": "Evaluation awareness and sandbagging audits across domains",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.5 Flash (automated checks) + manual review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 39,
+   "quote": "We ran automated checks using Gemini 3.5 Flash for 9 pre-specified failure modes"
+  },
+  "note": "Transcript audits on internal eval runs with Gemini 3.5 Flash triage and manual inspection."
+ },
+ {
+  "key": "safety|gemini|expert cbrn red teaming without out of model safeguards",
+  "canonical": "Expert CBRN red teaming without out-of-model safeguards",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 9,
+   "quote": "Each red teamer independently interacts with a version of the model that does not have out-of-model safeguards applied"
+  },
+  "note": "Expert red teaming scored by SMEs on rubrics."
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baseline",
+  "canonical": "Expert CBRN red teaming vs web baseline",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 8,
+   "quote": "These are detailed scenarios designed and red-teamed by experts."
+  },
+  "note": "Expert-designed unpublished scenarios judged by experts against web baseline."
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baseline bio 2 scenarios 8 smes chem 2 scenarios 4 smes rad nuc 1 expert 7 scenarios",
+  "canonical": "Expert red teaming vs web baseline (bio, chem, rad/nuc)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 9,
+   "quote": "they score their findings using a substage-specific scoring rubric. A red teamer's raw chat transcripts and scores are peer reviewed by additional experts."
+  },
+  "note": "SME red teaming with rubric scores and peer review."
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines",
+  "canonical": "Expert red teaming vs web baselines",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 8,
+   "quote": "Expert red teaming demonstrated a modest capability uplift over web baselines"
+  },
+  "note": "Summary of internal SME red teaming."
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines on 3 bio scenarios bio 1 2 3 0 100 rubric",
+  "canonical": "Expert bio red teaming vs web baselines (BIO-1/2/3)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 26,
+   "quote": "eight expert red teamers (six scientific SMEs and two operational security SMEs) assessed three priority biological scenarios"
+  },
+  "note": "Unpublished scenarios; SME rubric scores."
+ },
+ {
+  "key": "safety|gemini|expert red teaming vs web baselines two scenarios",
+  "canonical": "Expert red teaming vs web baselines (two scenarios)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 12,
+   "quote": "Expert red teaming demonstrated a measurable capability uplift over web baselines"
+  },
+  "note": "Summary of internal SME red teaming."
+ },
+ {
+  "key": "safety|gemini|exploitbench",
+  "canonical": "ExploitBench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": "capability checks",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 213,
+   "quote": "A public benchmark for measuring the capabilities of models in exploiting historical vulnerabilities in the V8 JavaScript engine"
+  },
+  "note": "Public benchmark with unmodified MCP servers; capability achievement checks (internal harness)."
+ },
+ {
+  "key": "safety|gemini|exploratory misalignment ccls instrumental reasoning",
+  "canonical": "Exploratory misalignment CCL evals (stealth and situational awareness)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 17,
+   "quote": "We use the four stealth and eleven situational awareness evaluations introduced in that paper"
+  },
+  "note": "Phuong et al. 2025 challenges, mostly open-sourced; scored by environment success criteria."
+ },
+ {
+  "key": "safety|gemini|exploratory strategic planning eval with investigator agent",
+  "canonical": "Exploratory strategic-planning eval with investigator agent",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 27,
+   "quote": "This method uses an investigator agent to dynamically explore prompting strategies (including jailbreaks)"
+  },
+  "note": "Pilot automated elicitation; outputs assessed with domain experts."
+ },
+ {
+  "key": "safety|gemini|facts benchmark suite",
+  "canonical": "FACTS Benchmark Suite",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "FACTS official LLM judges",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 5,
+   "quote": "Held out internal grounding, parametric, MM, and search retrieval benchmarks"
+  },
+  "note": "FACTS suite has public splits but leaderboard scores use private held-out splits; graded by official LLM judge prompts."
+ },
+ {
+  "key": "safety|gemini|facts grounding",
+  "canonical": "FACTS Grounding",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "FACTS Grounding judge ensemble (Gemini, GPT, Claude)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 192,
+   "quote": "We evaluate grounding using the public FACTS Grounding benchmark"
+  },
+  "note": "Public benchmark with a private held-out half; official multi-LLM judge ensemble."
+ },
+ {
+  "key": "safety|gemini|factuality edu human eval",
+  "canonical": "Factuality - Edu (image) human eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "side-by-side human raters (Elo)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-image-model-card",
+   "page": 4,
+   "quote": "human evaluations were conducted on these benchmarks"
+  },
+  "note": "Internal curated prompt sets rated side-by-side by humans."
+ },
+ {
+  "key": "safety|gemini|faculty independent external testing",
+  "canonical": "Faculty independent external CBRN testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 31,
+   "quote": "We worked with Faculty Science Limited (Faculty) to conduct an independent evaluation of biological and chemical risks."
+  },
+  "note": "External assessment reported as outcome."
+ },
+ {
+  "key": "safety|gemini|faculty independent external testing mitre att ck aligned scenarios",
+  "canonical": "Faculty independent external cyber testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 39,
+   "quote": "we worked with Faculty to conduct an evaluation on the unmitigated model focused on operationally relevant scenarios"
+  },
+  "note": "External assessment reported as outcome."
+ },
+ {
+  "key": "safety|gemini|fairwind trusted access program",
+  "canonical": "Fairwind trusted access program",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 12,
+   "quote": "Through the Fairwind Program we provide verified defenders, government partners and security researchers with advanced cyber capabilities"
+  },
+  "note": "Access program, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 1 pro",
+  "canonical": "Frontier safety inherited from Gemini 3.1 Pro",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-audio-model-card",
+   "page": 5,
+   "quote": null
+  },
+  "note": "Results inherited from another model's evaluations."
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 1 pro and gemini 3 7 flash",
+  "canonical": "Frontier safety inherited from Gemini 3.1 Pro / 3.7 Flash",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-5-audio-model-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Results inherited from another model's evaluations."
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from gemini 3 7 flash",
+  "canonical": "Frontier safety inherited from Gemini 3.7 Flash",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-8-audio-model-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Results inherited from another model's evaluations."
+ },
+ {
+  "key": "safety|gemini|frontier safety inherited from proxy model",
+  "canonical": "Frontier safety inherited from proxy model",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 7,
+   "quote": null
+  },
+  "note": "Results inherited from a proxy model."
+ },
+ {
+  "key": "safety|gemini|fsf cbrn evaluation deep think mode",
+  "canonical": "FSF CBRN evaluation (Deep Think mode)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 8,
+   "quote": "The model can provide highly accurate and actionable information but still fails to offer novel or sufficiently complete and detailed instructions"
+  },
+  "note": "Summary of internal CBRN testing (red teaming/OEQs) judged by experts."
+ },
+ {
+  "key": "safety|gemini|fsf cbrn evaluation summary",
+  "canonical": "FSF CBRN evaluation (summary)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 10,
+   "quote": "Gemini 3 Pro provides accurate and occasionally actionable information but generally fails to offer novel or sufficiently complete and detailed instructions"
+  },
+  "note": "Summary of mostly expert-judged internal CBRN tests (see FSF report)."
+ },
+ {
+  "key": "safety|gemini|fsf cbrn testing",
+  "canonical": "FSF CBRN testing",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 8,
+   "quote": "Expert red teaming demonstrated a modest capability uplift over web baselines"
+  },
+  "note": "Summary of internal SME red teaming."
+ },
+ {
+  "key": "safety|gemini|fsf cyber additional testing with and without deep think",
+  "canonical": "FSF cyber additional testing (with/without Deep Think)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 8,
+   "quote": "We conducted additional testing on the model in this domain as Gemini 3 Pro had previously reached the alert threshold."
+  },
+  "note": "Tests not named; likely internal key-skills style challenges."
+ },
+ {
+  "key": "safety|gemini|fsf cyber evaluation summary",
+  "canonical": "FSF cyber evaluation (summary, proxy-based)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 8,
+   "quote": "Gemini 3.7 Flash reaches the alert threshold for this CCL, but not the CCL."
+  },
+  "note": "Summary of proxy-evaluation uplift modeling; no task set given."
+ },
+ {
+  "key": "safety|gemini|fsf cyber evaluations",
+  "canonical": "FSF cyber evaluations (CyScenarioBench + uplift model)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "flag capture",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 12,
+   "quote": "The model provides substantial uplift by our evaluations and quantitative modeling"
+  },
+  "note": "Summary of private Irregular CyScenarioBench (flag capture) plus expert-based uplift model."
+ },
+ {
+  "key": "safety|gemini|fsf cyber key skills benchmark v1 hard v2",
+  "canonical": "FSF cyber 'key skills' benchmark v1 hard / v2",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "flag capture",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 10,
+   "quote": "On key skills benchmark, v1 hard challenges: 11/12 challenges solved; v2 challenges: 0/13 solved end-to-end."
+  },
+  "note": "Challenges developed with a third party, unreleased; scored by capturing the flag."
+ },
+ {
+  "key": "safety|gemini|fsf harmful manipulation belief change",
+  "canonical": "FSF harmful manipulation human efficacy study (belief change)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "study participants' measured belief change",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 8,
+   "quote": "the model showed higher manipulative efficacy for belief change metrics compared to a non-AI baseline"
+  },
+  "note": "Human behavioral study; not replicable from released data."
+ },
+ {
+  "key": "safety|gemini|fsf harmful manipulation evaluation",
+  "canonical": "FSF harmful manipulation evaluation",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 10,
+   "quote": "Model manipulative efficacy improves on non-generative AI baseline"
+  },
+  "note": "Summary of human efficacy study."
+ },
+ {
+  "key": "safety|gemini|fsf misalignment exploratory situational awareness and stealth challenges",
+  "canonical": "FSF misalignment stealth and situational awareness challenges",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-model-card",
+   "page": 10,
+   "quote": "Agent solves 3/11 situational awareness challenges and 1/4 stealth challenges."
+  },
+  "note": "Phuong et al. 2025 challenges, mostly open-sourced; success criteria checked in environment."
+ },
+ {
+  "key": "safety|gemini|fsf ml r d evaluation summary",
+  "canonical": "FSF ML R&D evaluation (GRB internal benchmark)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 9,
+   "quote": "Gemini 3.7 Flash can complete individual coding tasks but lacks the independence to chain them into an end-to-end research workflow"
+  },
+  "note": "Internal GRB benchmark with automated scoring scripts."
+ },
+ {
+  "key": "safety|gemini|fsf situational awareness challenges",
+  "canonical": "FSF situational awareness challenges",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 9,
+   "quote": "On situational awareness, the model is stronger than Gemini 3 Pro"
+  },
+  "note": "Phuong et al. 2025 challenges, mostly open-sourced."
+ },
+ {
+  "key": "safety|gemini|fsf situational awareness evaluations",
+  "canonical": "FSF situational awareness evaluations",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 9,
+   "quote": "on situational awareness, the model is stronger than Gemini 3.1 Pro."
+  },
+  "note": "Phuong et al. 2025 challenges, mostly open-sourced."
+ },
+ {
+  "key": "safety|gemini|fsf stealth and situational awareness challenges",
+  "canonical": "FSF stealth and situational awareness challenges",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 13,
+   "quote": "Gemini 4 Argon passes 14/15 of our challenges"
+  },
+  "note": "Phuong et al. 2025 challenges, mostly open-sourced."
+ },
+ {
+  "key": "safety|gemini|fsf stealth evaluations",
+  "canonical": "FSF stealth evaluations",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 9,
+   "quote": "On stealth evaluations, the model performs similarly to Gemini 3 Pro."
+  },
+  "note": "Phuong et al. 2025 stealth challenges, mostly open-sourced; scores vs human baseline."
+ },
+ {
+  "key": "safety|gemini|gci v1 capability index trend analysis hinge regression",
+  "canonical": "GCI v1 capability-index trend analysis",
+  "type": "audit",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "statistical model fit",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 75,
+   "quote": "as measured by GCI v1, our internal benchmark index similar to the Epoch Capabilities Index (ECI)."
+  },
+  "note": "Internal index stitched from benchmark scores; trend analysis rather than a task set."
+ },
+ {
+  "key": "safety|gemini|gemini safety policy compliance",
+  "canonical": "Gemini safety policy compliance (Robotics ER 2)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-2-model-card",
+   "page": 5,
+   "quote": "performs similarly to Gemini 3.5 Flash in terms of compliance with Gemini safety policies"
+  },
+  "note": "Refers to internal content-safety evals; details not given."
+ },
+ {
+  "key": "safety|gemini|general purpose tool use eval 100 scenarios",
+  "canonical": "General-purpose tool-use prompt-injection eval (100 scenarios)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "check for attacker tool call",
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 205,
+   "quote": "This internal benchmark tests foundational resistance to prompt injections across 100 multi-step scenarios spanning 45 synthetic tool categories."
+  },
+  "note": "Internal; attacker goal is a specific tool call, so success is likely checked programmatically (not stated)."
+ },
+ {
+  "key": "safety|gemini|google re bench grb 74 tasks",
+  "canonical": "Google RE-Bench (GRB, 74 tasks)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "automated scoring scripts",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 68,
+   "quote": "Each task is automatically scored with automated scripts that check the agent's outputs and actions against the defined success criteria for each task."
+  },
+  "note": "Internal benchmark."
+ },
+ {
+  "key": "safety|gemini|gram",
+  "canonical": "Gram (simulated internal-deployment sabotage environments)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 107,
+   "quote": "an LLM judge (Gemini 3.8 Flash) scores each rollout on a 1–10 scale across three dimensions"
+  },
+  "note": "17 internal simulated environments with auditor model; judged by Gemini 3.8 Flash."
+ },
+ {
+  "key": "safety|gemini|gram 17 simulated environments observe red team auditors",
+  "canonical": "Gram (17 simulated environments, Observe/Red Team auditors)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 107,
+   "quote": "an LLM judge (Gemini 3.8 Flash) scores each rollout on a 1–10 scale across three dimensions"
+  },
+  "note": "Internal environments; named public Gemini judge."
+ },
+ {
+  "key": "safety|gemini|gray swan bio eval 53 tasks shade agent",
+  "canonical": "Gray Swan Bio Eval (53 tasks, Shade agent)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 33,
+   "quote": "Gray Swan curated a set of 53 bio tasks covering high risk targets and deployed their automated red teaming agent Shade against them."
+  },
+  "note": "Third-party automated red teaming on unreleased tasks; success judging not described."
+ },
+ {
+  "key": "safety|gemini|gray swan cyber eval 28 tasks shade agent",
+  "canonical": "Gray Swan Cyber Eval (28 tasks, Shade agent)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 33,
+   "quote": "on top of which they built 28 specific cyber tasks and deployed their automated red teaming agent Shade against them."
+  },
+  "note": "Third-party automated red teaming on unreleased tasks."
+ },
+ {
+  "key": "safety|gemini|gray swan ipi benchmark arena replays",
+  "canonical": "Gray Swan IPI Benchmark arena replays",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 211,
+   "quote": "replays a set of held-out successful prompt injection attacks from their recent Indirect Prompt Injection Challenge competitions"
+  },
+  "note": "Held-out attacks run by Gray Swan; not released; scoring not described."
+ },
+ {
+  "key": "safety|gemini|gray swan shade automated cyber and bio red teaming",
+  "canonical": "Gray Swan Shade automated cyber and bio red teaming",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 62,
+   "quote": "deployed their automated red teaming agent Shade against them."
+  },
+  "note": "Third-party automated red teaming on unreleased tasks."
+ },
+ {
+  "key": "safety|gemini|grb internal research engineering benchmark 74 tasks 2 hour timeout internal agent scaffolding",
+  "canonical": "GRB internal research-engineering benchmark",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "automated scoring scripts",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 37,
+   "quote": "Each task is automatically scored with automated scripts that check the agent's outputs and actions against the defined success criteria for each task."
+  },
+  "note": "Internal benchmark with internal scaffolding."
+ },
+ {
+  "key": "safety|gemini|harmful manipulation ccl strategic planning red teaming 11 scenarios incl election interference",
+  "canonical": "Harmful manipulation strategic-planning red-teaming (11 scenarios)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "scenario-specific automated scoring rubrics + SME review",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 43,
+   "quote": "We utilized scenario-specific automated scoring rubrics to identify the most comprehensive plans generated. SMEs then reviewed this subset"
+  },
+  "note": "Internal scenarios and withheld elicitation method; automated rubric scoring then expert review."
+ },
+ {
+  "key": "safety|gemini|harmful manipulation efficacy human study prolific 610 participants belief and behavior change vs non ai flashcard baseline",
+  "canonical": "Harmful manipulation human efficacy study (Prolific, 610 participants)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "participants' belief/behavior change",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 12,
+   "quote": "The study is conducted via Prolific, an online platform, with 610 total participants who consent to enroll in the study."
+  },
+  "note": "Human-subject study; requires new participants, materials unreleased."
+ },
+ {
+  "key": "safety|gemini|harmful manipulation human efficacy study civic and finance 1596 participants akbulut et al 2026 protocol odds ratios vs flashcard baseline",
+  "canonical": "Harmful manipulation human efficacy study (civic & finance, 1596 participants)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "participants' belief/behavior change",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 20,
+   "quote": "following the protocol described in Akbulut et al. (2026). A total of 1596 participants"
+  },
+  "note": "Human study following a published protocol; requires new participants."
+ },
+ {
+  "key": "safety|gemini|harmful manipulation propensity eval synthetic multi turn dialogues",
+  "canonical": "Harmful manipulation propensity eval (synthetic dialogues)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 12,
+   "quote": "we designed an automated propensity evaluation."
+  },
+  "note": "Internal synthetic dialogues; manipulative-cue detector not described."
+ },
+ {
+  "key": "safety|gemini|hazard identification in human centric scenarios",
+  "canonical": "Hazard identification in human-centric scenarios (Robotics-ER 1.6)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-1-6-model-card",
+   "page": 4,
+   "quote": "we tested how well the model identifies safety hazards in human-centric scenarios."
+  },
+  "note": "Possibly ASIMOV-style hazard recognition but not specified."
+ },
+ {
+  "key": "safety|gemini|health evals healthbench hard pro internal",
+  "canonical": "Health evals (internal suites + HealthBench Hard/Pro)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 176,
+   "quote": "HealthBench Hard**: A subset of 1000 examples from HealthBench, an open-source evaluation"
+  },
+  "note": "Mix of internal health evals and rubric-based HealthBench (public, officially GPT-4.1 graded); grader not stated in doc."
+ },
+ {
+  "key": "safety|gemini|health high risk scenarios",
+  "canonical": "Health high-risk scenarios",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 176,
+   "quote": "Adversarial evaluation involving high-risk areas that could lead to immediate, critical user harm"
+  },
+  "note": "Internal; grading not stated."
+ },
+ {
+  "key": "safety|gemini|health localization eval 10 languages 25 locales",
+  "canonical": "Health localization eval (10 languages, 25 locales)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 176,
+   "quote": "Locale-specific static single and multi-turn conversations that require understanding health nuances in ten (10) languages across twenty-five (25) locales."
+  },
+  "note": "Internal; grading not stated."
+ },
+ {
+  "key": "safety|gemini|holistic loss of control assessment feasibility propensity five load bearing assumptions",
+  "canonical": "Holistic loss-of-control assessment",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 81,
+   "quote": "By examining the model's LoC-relevant capabilities alongside the strength and coverage of our oversight mechanisms, we judge"
+  },
+  "note": "Expert safety-case style assessment."
+ },
+ {
+  "key": "safety|gemini|honeypots",
+  "canonical": "Scheming honeypots in internal safety codebases",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 Pro",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 109,
+   "quote": "Trajectories are scored by a Gemini 3.1 Pro judge using the same 1–10 rubric as Gram"
+  },
+  "note": "Runs inside Google's internal repositories; not reproducible externally."
+ },
+ {
+  "key": "safety|gemini|hong et al 2026 novice wet lab rct mid 2025 llms as prior evidence",
+  "canonical": "Hong et al. (2026) novice wet-lab RCT",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 12,
+   "quote": "This was a randomized controlled trial (n=153) conducted over 8 weeks"
+  },
+  "note": "External RCT on earlier models cited as prior evidence."
+ },
+ {
+  "key": "safety|gemini|human baseline top 50 for stealth",
+  "canonical": "Human baseline (top 50%) for stealth challenges",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 38,
+   "quote": "For stealth, we defined passing as exceeding the performance of the top 50% of humans attempting the challenge."
+  },
+  "note": "Reference human baseline used as a pass threshold, not a model evaluation."
+ },
+ {
+  "key": "safety|gemini|human behavioral efficacy studies civic finance us uk odds ratios",
+  "canonical": "Human behavioral efficacy studies on harmful manipulation (US/UK)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "participants' belief/behavior change",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 45,
+   "quote": "We ran studies with both US- and UK-based participants in both domains"
+  },
+  "note": "Human-subject studies; require new participants."
+ },
+ {
+  "key": "safety|gemini|human behavioral studies on harmful manipulation",
+  "canonical": "Human behavioral studies on harmful manipulation",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 13,
+   "quote": "demonstrates some ability to influence user beliefs and behaviors during one-on-one direct conversations in human behavioral studies"
+  },
+  "note": "Summary of human efficacy studies."
+ },
+ {
+  "key": "safety|gemini|human behavioural studies on harmful manipulation",
+  "canonical": "Human behavioural studies on harmful manipulation",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-model-card",
+   "page": 8,
+   "quote": "demonstrates some ability to influence user beliefs and behaviors during one-on-one direct conversations in human behavioural studies"
+  },
+  "note": "Summary of human efficacy studies."
+ },
+ {
+  "key": "safety|gemini|human evaluations",
+  "canonical": "Human Evaluations (specialist teams, audio models)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-8-audio-model-card",
+   "page": 6,
+   "quote": "conducted by specialist teams across the policies and desiderata to ensure the model adheres to safety policies"
+  },
+  "note": "Internal specialist human evaluation; no data released."
+ },
+ {
+  "key": "safety|gemini|human proximity stop false positive rate",
+  "canonical": "ASIMOV-Agentic human-proximity stop false-positive rate",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 4,
+   "quote": "For the tool-call setup, we report False Positives vs False Negatives in a tradeoff scatter plot."
+  },
+  "note": "Component of released ASIMOV-Agentic; metric computed vs ground truth."
+ },
+ {
+  "key": "safety|gemini|human red teaming",
+  "canonical": "Human red teaming",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 4,
+   "quote": "conducted by specialist teams across the policies and desiderata, deliberately trying to spot weaknesses"
+  },
+  "note": "Internal specialist red teaming."
+ },
+ {
+  "key": "safety|gemini|human red teaming child safety launch thresholds",
+  "canonical": "Human red teaming child safety launch thresholds",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 7,
+   "quote": "satisfied required launch thresholds, which were developed by expert teams to protect children online"
+  },
+  "note": "Internal red teaming against internal thresholds."
+ },
+ {
+  "key": "safety|gemini|human red teaming trust safety",
+  "canonical": "Human red teaming (Trust & Safety)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 11,
+   "quote": "We conduct manual red teaming by specialist teams who sit outside of the model development team in Google's Trust & Safety organization."
+  },
+  "note": "Internal manual red teaming."
+ },
+ {
+  "key": "safety|gemini|human safety monitoring",
+  "canonical": "Human Safety monitoring (Robotics ER 2)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-2-model-card",
+   "page": 5,
+   "quote": "It achieves significant gains on Safety Instruction Following, Human Safety monitoring and other semantic safety benchmarks"
+  },
+  "note": "Corresponds to the ASIMOV-Agentic human safety monitoring component released on HF."
+ },
+ {
+  "key": "safety|gemini|humanoid safe stopping on apptronik apollo2 real world lab",
+  "canonical": "Humanoid safe stopping on Apptronik Apollo2 (real-world lab)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 5,
+   "quote": "In lab settings, we observed \\(99\\%\\) human detection accuracy"
+  },
+  "note": "Physical lab trials; not reproducible without the setup; scoring procedure not detailed."
+ },
+ {
+  "key": "safety|gemini|image to text safety",
+  "canonical": "Image to Text Safety (automated)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 6,
+   "quote": "Automated content safety evaluation measuring safety policies"
+  },
+  "note": "Internal automated eval; grader model not stated (likely internal autorater)."
+ },
+ {
+  "key": "safety|gemini|impossible tasks evaluation",
+  "canonical": "Impossible Tasks Evaluation",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "automated rubrics",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 184,
+   "quote": "Trajectories are rated across multi-step interactions using automated rubrics that verify these metrics."
+  },
+  "note": "Internal paired scenarios; automated rubric rater not named."
+ },
+ {
+  "key": "safety|gemini|impossible tasks fabrication rate",
+  "canonical": "Impossible Tasks fabrication rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "automated rubrics",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 184,
+   "quote": "Trajectories are rated across multi-step interactions using automated rubrics that verify these metrics."
+  },
+  "note": "Internal; rater not named."
+ },
+ {
+  "key": "safety|gemini|infographics factuality elo",
+  "canonical": "Infographics (Factuality) Elo",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "side-by-side human raters (Elo)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 4,
+   "quote": "SxS human eval to get Elo across diverse T2I, Editing, and Multi-Turn."
+  },
+  "note": "Internal curated prompts; Elo from human side-by-side ratings."
+ },
+ {
+  "key": "safety|gemini|instruction ambiguity 10 class taxonomy",
+  "canonical": "ASIMOV-Agentic Instruction Ambiguity (10-class taxonomy)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 9,
+   "quote": "we categorize instruction ambiguity into ten precise taxonomy classes"
+  },
+  "note": "Released ASIMOV-Agentic component; clarification/fulfilment rates."
+ },
+ {
+  "key": "safety|gemini|instrumental convergence evals 7 tasks goal guarding optionality acquisition",
+  "canonical": "Instrumental convergence evals (7 tasks)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "scenario-specific behavior LLM judge + workspace checks",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 104,
+   "quote": "we score each transcript on a scale from 0 to 10 using a scenario-specific behavior LLM judge"
+  },
+  "note": "Internal coding scenarios; judge model not named."
+ },
+ {
+  "key": "safety|gemini|internal and external red teaming of mitigations against universal and query specific jailbreaks",
+  "canonical": "Internal and external red teaming of mitigations",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 22,
+   "quote": "Internal and external red team efforts continually test the efficacy of the mitigations"
+  },
+  "note": "Open-ended red teaming."
+ },
+ {
+  "key": "safety|gemini|internal benchmark of complex research engineering tasks",
+  "canonical": "Internal ML R&D benchmark (GRB)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 14,
+   "quote": "We use an internal benchmark to assess performance on complex research engineering tasks."
+  },
+  "note": "GRB internal benchmark with automated scoring."
+ },
+ {
+  "key": "safety|gemini|internal long context and inline citation grounding",
+  "canonical": "Internal long-context and inline-citation grounding evals",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 193,
+   "quote": "sentence-level unsupported claim rates on long-context document grounding and multi-snippet inline citation tasks."
+  },
+  "note": "Internal; claim-support judging not described."
+ },
+ {
+  "key": "safety|gemini|internal mcqs",
+  "canonical": "CBRN multiple-choice questions",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 7,
+   "quote": "Examples of model performance on three external benchmarks are shown in Figure 1."
+  },
+  "note": "MCQ suite includes external benchmarks (LAB-Bench, VCT) with answer shuffling; full MCQ set composition unclear."
+ },
+ {
+  "key": "safety|gemini|internal red teaming",
+  "canonical": "Internal red-teaming (FunctionGemma)",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 7,
+   "quote": "Red-teaming was conducted by a number of different teams, each with different goals and human evaluation metrics."
+  },
+  "note": "Internal red teaming."
+ },
+ {
+  "key": "safety|gemini|internal vulnerability research",
+  "canonical": "Internal vulnerability research benchmark",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 213,
+   "quote": "An internal benchmark based on real world red-team exercises conducted by internal offensive security teams against Google infrastructure."
+  },
+  "note": "Internal; success likely exploit execution but scoring not described."
+ },
+ {
+  "key": "safety|gemini|introspection probes on hidden activations",
+  "canonical": "Introspection probes on hidden activations",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 28,
+   "quote": "This classifier examines the internal hidden activations of the main model"
+  },
+  "note": "Safeguard, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|irregular cyscenariobench co developed long horizon scenarios",
+  "canonical": "Irregular CyScenarioBench",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "flag capture",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 36,
+   "quote": "We task the model with completing challenges in Irregular's CyScenarioBench"
+  },
+  "note": "Third-party (Irregular) unreleased challenge set; scored by capturing the flag."
+ },
+ {
+  "key": "safety|gemini|jailbreak severity framework drawn from anthropic",
+  "canonical": "Jailbreak severity framework (from Anthropic)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 59,
+   "quote": "Drawing on Anthropic's jailbreak severity framework, we evaluate adversarial findings across four dimensions"
+  },
+  "note": "Assessment framework, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|key skills benchmark not run due to ongoing security improvements",
+  "canonical": "Key skills benchmark not run",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 15,
+   "quote": "In this case, we do not run the benchmark due to ongoing security improvements"
+  },
+  "note": "Statement that an eval was not run."
+ },
+ {
+  "key": "safety|gemini|key skills benchmark run with mitigations",
+  "canonical": "Key skills benchmark run with mitigations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 31,
+   "quote": "The model refuses on 100% of the milestones."
+  },
+  "note": "Internal CTF benchmark used to measure refusals under mitigations; refusal judging not stated."
+ },
+ {
+  "key": "safety|gemini|key skills ctf benchmark v1 50 challenges 12 hard",
+  "canonical": "Cyber 'key skills' CTF benchmark v1",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "flag capture",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 10,
+   "quote": "We consider a challenge solved if at least one of those attempts succeeds in capturing the flag."
+  },
+  "note": "50 challenges developed with a third party, unreleased."
+ },
+ {
+  "key": "safety|gemini|key skills v2 end to end attack challenges 13 new",
+  "canonical": "Cyber 'key skills' v2 end-to-end challenges",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "programmatic",
+  "grader_model": "flag capture",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 10,
+   "quote": "we worked with the same third party to develop a new set of harder, more realistic challenges."
+  },
+  "note": "13 new unreleased challenges; flag capture."
+ },
+ {
+  "key": "safety|gemini|lab bench incl cloning scenarios",
+  "canonical": "LAB-Bench (incl. Cloning Scenarios)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 7,
+   "quote": "We observe statistically significant improvements on LAB-Bench, with a notable improvement on the Cloning Scenarios benchmark"
+  },
+  "note": "LAB-Bench is public except a held-out portion; MCQ accuracy with shuffled answer choices."
+ },
+ {
+  "key": "safety|gemini|linuxarena and internal codebase monitor evasion control evals",
+  "canonical": "LinuxArena and internal-codebase monitor-evasion control evals",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.8 Flash monitor",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 119,
+   "quote": "We run a subset of public LinuxArena challenges in an internal sandbox without internet access."
+  },
+  "note": "Filtered subset of public LinuxArena plus an internal-monorepo version; evasion judged by Gemini monitors and side-task scripts."
+ },
+ {
+  "key": "safety|gemini|manual transcript review for evaluation awareness",
+  "canonical": "Manual transcript review for evaluation awareness",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 25,
+   "quote": "we performed manual analysis of transcripts for evaluation awareness"
+  },
+  "note": "Manual audit."
+ },
+ {
+  "key": "safety|gemini|mental health evals suicide self harm delusional reinforcement emotional attachment static dynamic escalating multi turn clinician red teaming",
+  "canonical": "Mental health evals (suicide & self-harm, delusional reinforcement, emotional attachment)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "policy-specific autoraters calibrated against expert ratings",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 179,
+   "quote": "policy-specific autoraters calibrated against expert ratings"
+  },
+  "note": "Internal static and dynamic sets scored by internal autoraters plus specialist red teaming."
+ },
+ {
+  "key": "safety|gemini|monitor flagged rl and internal deployment trajectories tens of millions monitored",
+  "canonical": "Monitor-flagged RL and internal-deployment trajectories",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "monitoring platform + LLM judge screens",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 12,
+   "quote": "monitor tens of millions of agent trajectories during training, evaluations, and when used for internal tasks."
+  },
+  "note": "Audit of internal trajectories flagged by monitors and screened by LLM judge."
+ },
+ {
+  "key": "safety|gemini|monitor flagged rl trajectories",
+  "canonical": "Monitor-flagged RL trajectories (reward hacking)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 99,
+   "quote": "We also used our LLM judge to screen all flagged RL rollouts"
+  },
+  "note": "Audit of internal RL rollouts."
+ },
+ {
+  "key": "safety|gemini|motion quality",
+  "canonical": "Robot motion quality",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-on-device-2-model-card",
+   "page": 5,
+   "quote": "tracking metrics such as collision rates, motion quality, and out-of-distribution robustness."
+  },
+  "note": "Embodiment-specific internal tests; no details."
+ },
+ {
+  "key": "safety|gemini|multi hop search factuality temporal reasoning search triggering",
+  "canonical": "Multi-hop search factuality, temporal reasoning, search triggering (internal)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 194,
+   "quote": "We evaluate search-augmented performance across three internal evaluations"
+  },
+  "note": "Internal evals tied to internal web-search API; grading not stated."
+ },
+ {
+  "key": "safety|gemini|multilingual safety automated eval",
+  "canonical": "Multilingual Safety (automated)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 6,
+   "quote": "Automated safety policy evaluation across multiple languages"
+  },
+  "note": "Internal automated eval; grader not stated (likely internal autorater)."
+ },
+ {
+  "key": "safety|gemini|neutrality evaluation neutral response rate on political social topics single and multi turn",
+  "canonical": "Neutrality evaluation",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "dedicated autoraters",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 200,
+   "quote": "develop dedicated autoraters to evaluate outputs."
+  },
+  "note": "Internal prompt sets with lab-built autoraters."
+ },
+ {
+  "key": "safety|gemini|obfuscated instrument reading",
+  "canonical": "ASIMOV-Agentic Obfuscated Instrument Reading",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 10,
+   "quote": "We created a balanced dataset of adversarial but readable instruments, and totally unreadable instruments."
+  },
+  "note": "Released ASIMOV-Agentic component."
+ },
+ {
+  "key": "safety|gemini|ood robustness",
+  "canonical": "Robot OOD robustness",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-on-device-2-model-card",
+   "page": 5,
+   "quote": "tracking metrics such as collision rates, motion quality, and out-of-distribution robustness."
+  },
+  "note": "Internal; no details."
+ },
+ {
+  "key": "safety|gemini|open ended questions single and multi turn",
+  "canonical": "CBRN open-ended questions (single and multi-turn)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 8,
+   "quote": "The model responses are examined for indirect evidence of potential counterfactual utility / uplift to threat actors"
+  },
+  "note": "Internal OEQs; responses apparently examined by experts (grader not explicit)."
+ },
+ {
+  "key": "safety|gemini|osr vs qsr metrics",
+  "canonical": "OSR vs QSR metrics",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 32,
+   "quote": "For each attack, we report the Objective Success Rate (OSR) vs. Query Success Rate (QSR)."
+  },
+  "note": "Metric definitions, not an evaluation."
+ },
+ {
+  "key": "safety|gemini|over refusal suites single turn multi turn multimodal adversarially benign prompts xstest or bench analogous",
+  "canonical": "Over-refusal suites (adversarially benign prompts)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 195,
+   "quote": "analogous to public benchmarks like XSTest and OR-Bench"
+  },
+  "note": "Internal suites analogous to public ones; refusal judging not stated."
+ },
+ {
+  "key": "safety|gemini|panoplia laboratories wet lab uplift rct preliminary gemini 2 5 pro",
+  "canonical": "Panoplia Laboratories wet-lab uplift RCT",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 9,
+   "quote": "an externally run randomized, controlled trial from Panoplia Laboratories"
+  },
+  "note": "External RCT on Gemini 2.5 Pro; preliminary results."
+ },
+ {
+  "key": "safety|gemini|pattrn ai external testing radicalization scams democratic harms",
+  "canonical": "pattrn.ai external harmful-manipulation testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "pattrn.ai calibrated LLM-as-a-judge + SME review",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 54,
+   "quote": "The outputs are then scored by an LLM-as-a-judge, which has been calibrated based on specialized rubrics"
+  },
+  "note": "Third-party scenarios and judge not released."
+ },
+ {
+  "key": "safety|gemini|personal device assistant eval 44 scenarios",
+  "canonical": "Personal-device assistant prompt-injection eval (44 scenarios)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 207,
+   "quote": "Across 44 stratified scenarios in a complex, stateful OS assistant sandbox"
+  },
+  "note": "Internal sandbox; breach scoring not stated."
+ },
+ {
+  "key": "safety|gemini|personality evaluation 900 prompts candor and self awareness dimensions dryness and superficiality composites",
+  "canonical": "Personality Evaluation (sycophancy: Candor, Self-awareness)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "prompted autorater",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 189,
+   "quote": "Responses are scored by a prompted autorater using dimension-specific"
+  },
+  "note": "~900 internal prompts; unnamed autorater."
+ },
+ {
+  "key": "safety|gemini|phuong et al 2025 situational awareness challenges 11",
+  "canonical": "Phuong et al. 2025 situational awareness challenges",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 17,
+   "quote": "We use the four stealth and eleven situational awareness evaluations introduced in that paper"
+  },
+  "note": "Published challenges (most open-sourced); success checked in environment."
+ },
+ {
+  "key": "safety|gemini|phuong et al 2025 stealth challenges",
+  "canonical": "Phuong et al. 2025 stealth challenges",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 17,
+   "quote": "We use the four stealth and eleven situational awareness evaluations introduced in that paper"
+  },
+  "note": "Published challenges; scored by environment with automated monitor as oversight."
+ },
+ {
+  "key": "safety|gemini|physical safety constraint adherence",
+  "canonical": "Physical safety constraint adherence (Robotics-ER 1.6)",
+  "type": "benchmark",
+  "data": "unclear",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-1-6-model-card",
+   "page": 4,
+   "quote": "shows a substantially improved capacity to adhere to physical safety constraints"
+  },
+  "note": "Refers to release-post figure; dataset not specified."
+ },
+ {
+  "key": "safety|gemini|pii filtering of pre training data",
+  "canonical": "PII filtering of pre-training data",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 198,
+   "quote": null
+  },
+  "note": "Training-data mitigation."
+ },
+ {
+  "key": "safety|gemini|post launch monitoring and account enforcement",
+  "canonical": "Post-launch monitoring and account enforcement",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 160,
+   "quote": null
+  },
+  "note": "Deployment safeguard."
+ },
+ {
+  "key": "safety|gemini|pre training data hash matching and classifiers",
+  "canonical": "Pre-training data hash-matching and classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 164,
+   "quote": "Integrating hash-matching and child safety classifiers to remove CSAM and other exploitative or illegal content."
+  },
+  "note": "Training-data mitigation."
+ },
+ {
+  "key": "safety|gemini|privacy safety security advice eval 450 questions helpbench rubrics 32 pitfalls",
+  "canonical": "Privacy, Safety & Security Advice eval (HelpBench, 450 questions)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_unspecified",
+  "grader_model": "two autoraters (rubric helpfulness, pitfalls)",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 197,
+   "quote": "publicly hosted and accessible via our GitHub repository"
+  },
+  "note": "Questions and rubrics public; autorater model not named."
+ },
+ {
+  "key": "safety|gemini|proactive human safety monitoring stereo distance estimation single frame and agentic",
+  "canonical": "ASIMOV-Agentic Proactive Human Safety Monitoring",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 4,
+   "quote": "For predicting distance to closest human, we report mean absolute error (MAE) in meters."
+  },
+  "note": "Released component; MAE/accuracy metrics."
+ },
+ {
+  "key": "safety|gemini|proactive misuse detection and account enforcement",
+  "canonical": "Proactive misuse detection and account enforcement",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 29,
+   "quote": "We proactively monitor for intentional misuse of our models to perform account-level enforcement actions"
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|gemini|prohibited content safe response rate evals child safety dangerous content sexually explicit hate harassment single and multi turn",
+  "canonical": "Prohibited content Safe Response Rate evals",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "policy-aligned safety autorater",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 169,
+   "quote": "We use our policy-aligned safety autorater to rate the outputs and calculate Safe Response Rate."
+  },
+  "note": "Internal prompt sets, lab autorater (child safety graded by specialist team)."
+ },
+ {
+  "key": "safety|gemini|prompted and fine tuned classifiers introspection activation probes cot monitors regex yara rules",
+  "canonical": "Prompted/fine-tuned classifiers, probes, CoT monitors, regex/YARA rules",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 160,
+   "quote": null
+  },
+  "note": "Safeguard stack description."
+ },
+ {
+  "key": "safety|gemini|prompted classifiers developed with alphaevolve",
+  "canonical": "Prompted classifiers (AlphaEvolve-developed)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 28,
+   "quote": "Developed using AlphaEvolve, they are continuously updated to achieve high coverage."
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|gemini|proxy evaluations cyber software engineering aggregate capability index per ho et al 2025 with linear uplift predictor",
+  "canonical": "Proxy evaluations with linear uplift predictor",
+  "type": "audit",
+  "data": "unclear",
+  "grader": "programmatic",
+  "grader_model": "linear regression on prior models",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 17,
+   "quote": "fitting a linear predictor of uplift based on each of these evaluations and a number of previous models."
+  },
+  "note": "Unnamed cyber/SWE evals and capability index used as proxies."
+ },
+ {
+  "key": "safety|gemini|quantitative modeling",
+  "canonical": "Cyber quantitative uplift modeling",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "expert elicitation",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-argon-model-card",
+   "page": 12,
+   "quote": "The model provides substantial uplift by our evaluations and quantitative modeling"
+  },
+  "note": "Internal threat model."
+ },
+ {
+  "key": "safety|gemini|quantitative uplift model over 22 historical high impact attacks and 23 operational steps tac levels 25 expert elicitation",
+  "canonical": "Quantitative cyber uplift model (22 attacks, TAC levels)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": "expert elicitation",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 37,
+   "quote": "we estimate the unmitigated uplift for each attack chain in our representative dataset to vary from 9x to 100x"
+  },
+  "note": "Expert-elicited model combined with private CyScenarioBench results."
+ },
+ {
+  "key": "safety|gemini|radiological nuclear red teaming static single multi turn evals",
+  "canonical": "Radiological & nuclear red teaming + static evals",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 30,
+   "quote": "experts conducted red-teaming across three scenarios spanning two priority harm journeys per domain, and further reviewed responses to a series of static single- and multi-turn evaluations"
+  },
+  "note": "Expert-judged; unpublished scenarios."
+ },
+ {
+  "key": "safety|gemini|rag grounding robustness 30 scenarios",
+  "canonical": "RAG grounding robustness prompt-injection eval (30 scenarios)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": "attacker: Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 208,
+   "quote": "We evaluated Gemini 4 Argon within a simulated retrieval-augmented generation (RAG) environment"
+  },
+  "note": "Internal; judging of fabricated/suppressed claims not stated."
+ },
+ {
+  "key": "safety|gemini|random traffic assumed benign",
+  "canonical": "Random traffic assumed benign",
+  "type": "audit",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 29,
+   "quote": "we also include results from additional tests on random traffic that we assume to be benign."
+  },
+  "note": "Production traffic sample."
+ },
+ {
+  "key": "safety|gemini|re bench",
+  "canonical": "RE-Bench",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-pro-model-card",
+   "page": 9,
+   "quote": "The model shows gains on RE-Bench compared to Gemini 3 Pro"
+  },
+  "note": "METR's public RE-Bench with task scoring functions."
+ },
+ {
+  "key": "safety|gemini|re bench 5 of 7 tasks metr modular scaffold",
+  "canonical": "RE-Bench (5 of 7 tasks, METR modular scaffold)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 15,
+   "quote": "We omit two challenges (Finetune GPT-2 for QA and Scaffolding for Rust Codecontest) that require internet access."
+  },
+  "note": "Public tasks; omitted tasks named, so subset is reproducible; built-in scoring."
+ },
+ {
+  "key": "safety|gemini|real world vulnerability discovery",
+  "canonical": "Real-world vulnerability discovery (internal, 1200 vulns)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 213,
+   "quote": "An internal benchmark we created that tests vulnerability recall over 1200 recent, confirmed historical vulnerabilities"
+  },
+  "note": "Built from public historical CVEs but the set is unreleased; matching method not stated."
+ },
+ {
+  "key": "safety|gemini|red teaming on specific embodiments",
+  "canonical": "Red-teaming on specific embodiments",
+  "type": "red_teaming",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-on-device-2-model-card",
+   "page": 5,
+   "quote": "For specific physical embodiments, we conducted safety evaluations and red-teaming"
+  },
+  "note": "No details."
+ },
+ {
+  "key": "safety|gemini|regex yara embedding classifiers",
+  "canonical": "Regex/YARA/embedding classifiers",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 28,
+   "quote": null
+  },
+  "note": "Safeguard."
+ },
+ {
+  "key": "safety|gemini|relies on gemini 2 5 pro evals",
+  "canonical": "Relies on Gemini 2.5 Pro evals",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 4,
+   "quote": "we rely on Ethics & Safety evaluations reported for Gemini 2.5 Pro."
+  },
+  "note": "Inherited results."
+ },
+ {
+  "key": "safety|gemini|relies on gemini 3 pro fsf report",
+  "canonical": "Relies on Gemini 3 Pro FSF report",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-flash-model-card",
+   "page": 6,
+   "quote": null
+  },
+  "note": "Inherited results."
+ },
+ {
+  "key": "safety|gemini|representational harms evaluation",
+  "canonical": "Representational Harms evaluation (FunctionGemma)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 7,
+   "quote": "Evaluation of text-to-text and image to text prompts covering safety policies including bias, stereotyping, and harmful associations"
+  },
+  "note": "Internal; grading not stated."
+ },
+ {
+  "key": "safety|gemini|rl rollout audit for alignment faking and beyond episode drives n 10 000",
+  "canonical": "RL rollout audit for alignment faking and beyond-episode drives (N=10,000)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 Pro and Gemini 3.8 Flash judges",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 100,
+   "quote": "each run independently with both a Gemini 3.1 Pro and a Gemini 3.8 Flash judge"
+  },
+  "note": "Audit of internal RL rollouts."
+ },
+ {
+  "key": "safety|gemini|safe completion vs hard punting interventions",
+  "canonical": "Safe-completion vs hard punting interventions",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 29,
+   "quote": "We apply either a \"system instruction\" (safe-completion) or \"hard punting\" (direct refusal) depending on the classifier labels."
+  },
+  "note": "Safeguard description."
+ },
+ {
+  "key": "safety|gemini|safety instruction following",
+  "canonical": "Safety Instruction Following (Robotics ER 2)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-2-model-card",
+   "page": 5,
+   "quote": "It achieves significant gains on Safety Instruction Following"
+  },
+  "note": "Corresponds to released ASIMOV safety constraint following benchmark."
+ },
+ {
+  "key": "safety|gemini|safety tool calling robot stop on safety messages",
+  "canonical": "ASIMOV-Agentic Safety Tool Calling",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 6,
+   "quote": "Given these discrete output types, we report classification accuracy for this task."
+  },
+  "note": "Released component."
+ },
+ {
+  "key": "safety|gemini|saif rand sl2 security",
+  "canonical": "SAIF / RAND SL2+ security",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 160,
+   "quote": null
+  },
+  "note": "Security posture statement."
+ },
+ {
+  "key": "safety|gemini|scheming honeypots in real internal safety codebases 37 tasks",
+  "canonical": "Scheming honeypots in internal safety codebases (37 tasks)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.1 Pro",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 109,
+   "quote": "Trajectories are scored by a Gemini 3.1 Pro judge using the same 1–10 rubric as Gram"
+  },
+  "note": "Runs inside internal repositories."
+ },
+ {
+  "key": "safety|gemini|securebio vct",
+  "canonical": "SecureBio VCT",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 7,
+   "quote": "Gemini 3 Pro's performance on Securebio VCT, which is an evaluation for troubleshooting complex virology laboratory protocols"
+  },
+  "note": "VCT is access-restricted (vetted researchers); MCQ accuracy with shuffled choices."
+ },
+ {
+  "key": "safety|gemini|semantic safety benchmarks",
+  "canonical": "Semantic safety benchmarks (ASIMOV)",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "both",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-er-2-model-card",
+   "page": 5,
+   "quote": "other semantic safety benchmarks"
+  },
+  "note": "Likely the public ASIMOV benchmarks; not named."
+ },
+ {
+  "key": "safety|gemini|sft rlhf safety training incl consequence aware risk analysis",
+  "canonical": "SFT/RLHF safety training incl. consequence-aware risk analysis",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 28,
+   "quote": "we also use a new framework, called consequence-aware risk analysis"
+  },
+  "note": "Training mitigation."
+ },
+ {
+  "key": "safety|gemini|simpleqa verified",
+  "canonical": "SimpleQA Verified",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "llm_api",
+  "grader_model": "GPT-4.1 (official autorater)",
+  "basis": "both",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 191,
+   "quote": "SimpleQA Verified (paper): 1,000 human-verified, de-duplicated short-answer tail-knowledge questions"
+  },
+  "note": "Public benchmark with official LLM autorater prompt."
+ },
+ {
+  "key": "safety|gemini|single sided autorater on factuality infographic factuality",
+  "canonical": "Single-sided AutoRater on factuality (Infographic Factuality)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/nano-banana-2-1-model-card",
+   "page": 4,
+   "quote": "Single sided AutoRater on factuality."
+  },
+  "note": "Internal prompts; autorater unnamed."
+ },
+ {
+  "key": "safety|gemini|static bio hazardous response eval 750 prompts",
+  "canonical": "Static bio hazardous-response eval (750 prompts)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 30,
+   "quote": "includes 75 different questions, each of which was repeated 10 times (750 total prompts)."
+  },
+  "note": "Internal prompts; how responses were deemed hazardous is not stated."
+ },
+ {
+  "key": "safety|gemini|stealth and situational awareness ssa evals 4 stealth 11 situational awareness challenges open source on github",
+  "canonical": "Stealth and Situational Awareness (SSA) evals (15 challenges)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 38,
+   "quote": "we have made most of these evaluations publicly available on GitHub."
+  },
+  "note": "Most challenges open-sourced; success thresholds computed from environment outcomes."
+ },
+ {
+  "key": "safety|gemini|stealth situational awareness evals",
+  "canonical": "Stealth & situational awareness evals",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 69,
+   "quote": "We assess against this TCL using our open-source stealth and situational awareness evaluations."
+  },
+  "note": "Open-source challenges."
+ },
+ {
+  "key": "safety|gemini|stealth situational awareness evals 15 challenges",
+  "canonical": "Stealth & situational awareness evals (15 challenges)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "programmatic",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 69,
+   "quote": "The evaluations consist of 15 automated challenges to measure scheming-relevant reasoning capabilities"
+  },
+  "note": "Open-source challenges (most released)."
+ },
+ {
+  "key": "safety|gemini|steering instruction optimization study",
+  "canonical": "Steering instruction optimization study",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 25,
+   "quote": "We then ran smaller human participant efficacy studies (under the same conditions as reported in the model efficacy results)"
+  },
+  "note": "Small human studies comparing system instructions."
+ },
+ {
+  "key": "safety|gemini|steganographic cot evasion hle gpqa nocot bench",
+  "canonical": "Steganographic CoT monitor evasion (HLE/GPQA/nocot-bench subsets)",
+  "type": "benchmark",
+  "data": "partial",
+  "grader": "llm_api",
+  "grader_model": "Gemini 3.5 Flash-Lite and Gemini 3.8 Flash monitors",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 135,
+   "quote": "As monitors we use Gemini 3.5 Flash-Lite as well as Gemini 3.8 Flash."
+  },
+  "note": "Uplift-filtered subsets of public datasets (subsets not released); task accuracy programmatic, evasion via Gemini monitors."
+ },
+ {
+  "key": "safety|gemini|structured evaluations and internal red teaming content safety harassment violence and gore hate speech",
+  "canonical": "Structured evaluations and red-teaming: content safety (FunctionGemma)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/functiongemma-model-card",
+   "page": 7,
+   "quote": "Evaluation of text-to-text and image to text prompts covering safety policies including, harassment, violence and gore, and hate speech."
+  },
+  "note": "Internal; grading not stated."
+ },
+ {
+  "key": "safety|gemini|survey of 12 senior researchers on ai r d automation",
+  "canonical": "Survey of 12 senior researchers on AI R&D automation",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 77,
+   "quote": "we surveyed 12 senior leaders and researchers deeply embedded in frontier model development"
+  },
+  "note": "Internal interview/survey."
+ },
+ {
+  "key": "safety|gemini|swe agentic fabrication rate",
+  "canonical": "SWE agentic fabrication rate",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": "grounding autorater",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 188,
+   "quote": "we measure whether claims made by the agent are supported by the tool outputs in the trajectory context using a grounding autorater."
+  },
+  "note": "Internal SWE task sets; autorater unnamed."
+ },
+ {
+  "key": "safety|gemini|synthetic dialogue manipulation propensity eval",
+  "canonical": "Synthetic-dialogue manipulation propensity eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": "user simulator: Gemini Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 52,
+   "quote": "One chatbot (based on a Gemini Flash model) is instructed to act as a user making a decision on a specific topic"
+  },
+  "note": "Internal synthetic dialogues; cue detection method not stated."
+ },
+ {
+  "key": "safety|gemini|tcl assessment factors scheming capabilities misaligned propensities cot monitorability",
+  "canonical": "TCL assessment factors (scheming capability, propensity, CoT monitorability)",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 38,
+   "quote": "we evaluate three additional factors: scheming capabilities, misaligned propensities, and chain-of-thought monitorability."
+  },
+  "note": "Assessment framing, not an eval."
+ },
+ {
+  "key": "safety|gemini|text to text safety",
+  "canonical": "Text to Text Safety (automated)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 6,
+   "quote": "Automated content safety evaluation measuring safety policies"
+  },
+  "note": "Internal automated eval; grader not stated (likely internal autorater)."
+ },
+ {
+  "key": "safety|gemini|third party 75k prompt evaluation on radicalisation extremism and democratic harms",
+  "canonical": "Third-party ~75k-prompt radicalisation/democratic-harms evaluation",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "testers' SME-validated classification model",
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 13,
+   "quote": "according to the testers' own SME-validated classification model."
+  },
+  "note": "Third-party prompts and classifier not released."
+ },
+ {
+  "key": "safety|gemini|third party ai r d sabotage evals",
+  "canonical": "Third-party AI R&D sabotage evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 15,
+   "quote": "Third party evaluator(s) ran a suite of evaluations to assess the potential for catastrophic harm via sabotaging AI research."
+  },
+  "note": "Outcome-only."
+ },
+ {
+  "key": "safety|gemini|third party democratic harms testing",
+  "canonical": "Third-party democratic harms testing",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "llm_internal",
+  "grader_model": "testers' SME-validated classification model",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 13,
+   "quote": "Third-party evaluator(s) tested Gemini 3 Pro's propensity for engaging in topics such as radicalisation & extremism and democratic harms"
+  },
+  "note": "Outcome-only; scored by testers' own classifier."
+ },
+ {
+  "key": "safety|gemini|third party operational cyber evals mitre att ck unified kill chain aligned",
+  "canonical": "Third-party operational cyber evals (MITRE ATT&CK aligned)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 11,
+   "quote": "Task design was loosely aligned with taxonomies such as the MITRE ATT&CK and Unified Kill Chain."
+  },
+  "note": "Outcome-only."
+ },
+ {
+  "key": "safety|gemini|third party radiological nuclear evals",
+  "canonical": "Third-party radiological/nuclear evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 9,
+   "quote": "the third party evaluator(s) ran a series of evaluations to assess risk along the radiology and nuclear domains."
+  },
+  "note": "Outcome-only."
+ },
+ {
+  "key": "safety|gemini|third party scenario red teaming chem bio",
+  "canonical": "Third-party scenario red teaming (chem/bio)",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 9,
+   "quote": "the third party evaluator(s) conducted a scenario based red teaming exercise."
+  },
+  "note": "Outcome-only."
+ },
+ {
+  "key": "safety|gemini|third party strategic deception and unmonitored sabotage evals",
+  "canonical": "Third-party strategic deception and unmonitored-sabotage evals",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 17,
+   "quote": "Third party evaluator(s) tested Gemini 3 Pro for autonomous systems risks"
+  },
+  "note": "Outcome-only."
+ },
+ {
+  "key": "safety|gemini|tone",
+  "canonical": "Tone (automated refusal tone eval)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 6,
+   "quote": "Automated evaluation measuring objective tone of model refusal"
+  },
+  "note": "Internal; grader not stated."
+ },
+ {
+  "key": "safety|gemini|tone score",
+  "canonical": "Tone score",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 196,
+   "quote": "We measure tone quality through a \"Tone\" score"
+  },
+  "note": "Internal; grader not stated (likely autorater)."
+ },
+ {
+  "key": "safety|gemini|training development evaluations",
+  "canonical": "Training/Development Evaluations",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-2-5-computer-use-model-card",
+   "page": 4,
+   "quote": "including automated and human evaluations carried out continuously throughout and after the model's training"
+  },
+  "note": "Generic internal evals."
+ },
+ {
+  "key": "safety|gemini|training pipeline audit of cot influenced auxiliary reward hacking penalty",
+  "canonical": "Training-pipeline audit of CoT-influenced auxiliary reward-hacking penalty",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 12,
+   "quote": "a separate auxiliary reward-hacking penalty did inadvertently take thoughts as input before being removed"
+  },
+  "note": "Audit of internal training practices."
+ },
+ {
+  "key": "safety|gemini|trajectory labs manual red teaming 38 hours 4 000 requests",
+  "canonical": "Trajectory Labs manual red teaming",
+  "type": "third_party",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 62,
+   "quote": "Their expert red-teamers spent 38 hours issuing over 4,000 requests across these categories"
+  },
+  "note": "External manual red teaming."
+ },
+ {
+  "key": "safety|gemini|transcript review re bench",
+  "canonical": "Transcript review (RE-Bench reward hacking)",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-pro-fsf-report",
+   "page": 21,
+   "quote": "In ML R&D and misalignment, we also carried out manual inspection of transcripts"
+  },
+  "note": "Manual audit."
+ },
+ {
+  "key": "safety|gemini|trust assurance evaluations",
+  "canonical": "Trust Assurance Evaluations",
+  "type": "audit",
+  "data": "internal",
+  "grader": "human",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-image-model-card",
+   "page": 7,
+   "quote": "conducted by evaluators who sit outside of the model development team"
+  },
+  "note": "Independent internal assurance evals."
+ },
+ {
+  "key": "safety|gemini|turn injection eval",
+  "canonical": "Turn injection prompt-injection eval",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": "attacker: Gemini 3.8 Flash",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-4-safety-report",
+   "page": 206,
+   "quote": "payloads inside tool outputs that spoof multi-turn conversation syntax"
+  },
+  "note": "Internal tool-use dataset with static and adaptive injections."
+ },
+ {
+  "key": "safety|gemini|unjustified refusals automated eval",
+  "canonical": "Unjustified-refusals (automated)",
+  "type": "benchmark",
+  "data": "internal",
+  "grader": "llm_unspecified",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "low",
+  "evidence": {
+   "doc": "gemini/gemini-3-1-flash-lite-model-card",
+   "page": 6,
+   "quote": "Automated evaluation measuring model's ability to respond to borderline prompts while remaining safe"
+  },
+  "note": "Internal; grader not stated."
+ },
+ {
+  "key": "safety|gemini|violation rate metric",
+  "canonical": "Violation rate metric",
+  "type": "not_an_eval",
+  "data": "internal",
+  "grader": "unclear",
+  "grader_model": null,
+  "basis": "doc",
+  "confidence": "high",
+  "evidence": {
+   "doc": "gemini/gemini-3-7-flash-fsf-report",
+   "page": 30,
+   "quote": "Violation Rate: We measure how often the model is willing to fulfill a malicious query completely."
+  },
+  "note": "Metric definition for the internal coverage evals."
+ },
+ {
+  "key": "safety|gemini|vla feasibility awareness one step toolemu inspired confidence emulator multi step",
+  "canonical": "ASIMOV-Agentic VLA Feasibility Awareness",
+  "type": "benchmark",
+  "data": "public",
+  "grader": "programmatic",
+  "grader_model": "Gemini-based VLA confidence emulator in multi-step variant",
+  "basis": "doc",
+  "confidence": "medium",
+  "evidence": {
+   "doc": "gemini/gemini-robotics-2-safety-report",
+   "page": 7,
+   "quote": "We use a simple Gemini-based VLA confidence emulator"
+  },
+  "note": "Released component; accuracy/completion metrics, multi-step variant depends on an LLM emulator."
+ }
+]

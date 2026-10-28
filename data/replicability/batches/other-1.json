@@ -1,0 +1,4616 @@
+[
+ {
+  "key": "capability|aa briefcase",
+  "kind": "capability",
+  "names": [
+   "AA-Briefcase"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "agentic_tool_use",
+    "page": 193,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aa briefcase v1 1",
+  "kind": "capability",
+  "names": [
+   "AA-Briefcase v1.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 131,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 174,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 134,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|aa lcr",
+  "kind": "capability",
+  "names": [
+   "AA-LCR"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "long_context",
+    "page": null,
+    "setting": "avg@3"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "long_context",
+    "page": null,
+    "setting": "cited from Artificial Analysis"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "long_context",
+    "page": 27,
+    "setting": "cited from Artificial Analysis"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "long_context",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "long_context",
+    "page": 10,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|aav capsid packaging prediction",
+  "kind": "capability",
+  "names": [
+   "AAV Capsid Packaging Prediction"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 43,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 44,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|advancedif",
+  "kind": "capability",
+  "names": [
+   "AdvancedIF"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "instruction_following",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|agent behavior bench",
+  "kind": "capability",
+  "names": [
+   "Agent Behavior Bench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 29,
+    "setting": "in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|agent s last exam",
+  "kind": "capability",
+  "names": [
+   "Agent's Last Exam"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "agentic_tool_use",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|agenticvbench",
+  "kind": "capability",
+  "names": [
+   "AgenticVBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 13,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|agents last exam",
+  "kind": "capability",
+  "names": [
+   "Agents' Last Exam"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "Kimi Code harness"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": "Kimi Code harness"
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|agents last exam ale cli",
+  "kind": "capability",
+  "names": [
+   "Agents' Last Exam (ALE-CLI)"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|agents last exam pass score",
+  "kind": "capability",
+  "names": [
+   "Agents' Last Exam (Pass / Score)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|ai2d test",
+  "kind": "capability",
+  "names": [
+   "AI2D_TEST"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aider polyglot",
+  "kind": "capability",
+  "names": [
+   "Aider-Polyglot"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aime 2024",
+  "kind": "capability",
+  "names": [
+   "AIME 2024"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "math",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aime 2025",
+  "kind": "capability",
+  "names": [
+   "AIME 2025"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "math",
+    "page": 32,
+    "setting": "64k thinking, avg 5; contamination concerns noted"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "math",
+    "page": 25,
+    "setting": "no tools; contamination concerns noted"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "math",
+    "page": 23,
+    "setting": "no tools, avg 10 trials"
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "math",
+    "page": 4,
+    "setting": "No tools"
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "math",
+    "page": 4,
+    "setting": "With code execution"
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "math",
+    "page": 5,
+    "setting": "No tools"
+   }
+  ]
+ },
+ {
+  "key": "capability|aime 2026",
+  "kind": "capability",
+  "names": [
+   "AIME 2026"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/diffusiongemma-model-card",
+    "category": "math",
+    "page": 3,
+    "setting": "DiffusionGemma 26B A4B, EB sampler"
+   },
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "math",
+    "page": 5,
+    "setting": "Gemma 4 31B, no tools"
+   },
+   {
+    "doc": "glm/glm-5.1-hf-model-card",
+    "category": "math",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "math",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "math",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aime 2026 i",
+  "kind": "capability",
+  "names": [
+   "AIME 2026 I"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-hf-model-card",
+    "category": "math",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "math",
+    "page": 23,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|aime26",
+  "kind": "capability",
+  "names": [
+   "AIME26"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "math",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "math",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|alimeeting test der cpwer",
+  "kind": "capability",
+  "names": [
+   "AliMeeting Test (DER / cpWER)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|androidbench",
+  "kind": "capability",
+  "names": [
+   "AndroidBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|androidworld",
+  "kind": "capability",
+  "names": [
+   "AndroidWorld"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-2-5-computer-use-model-card",
+    "category": "agentic_tool_use",
+    "page": 3,
+    "setting": "Measured by Google DeepMind"
+   },
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "agentic_tool_use",
+    "page": 11,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "agentic_tool_use",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 10,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|anthropic eci model 2",
+  "kind": "capability",
+  "names": [
+   "Anthropic ECI (Model 2)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "other",
+    "page": 103,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|apex agents",
+  "kind": "capability",
+  "names": [
+   "APEX-Agents"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "452 of 480 public tasks"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|apollo sabotage suite",
+  "kind": "capability",
+  "names": [
+   "Apollo sabotage suite"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other",
+    "page": 20,
+    "setting": "Apollo Research"
+   }
+  ]
+ },
+ {
+  "key": "capability|arc agi 1",
+  "kind": "capability",
+  "names": [
+   "ARC-AGI-1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "reasoning_knowledge",
+    "page": 196,
+    "setting": "max effort, ARC Prize verified"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 28,
+    "setting": "64k thinking"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "reasoning_knowledge",
+    "page": 22,
+    "setting": "120k thinking, high effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "reasoning_knowledge",
+    "page": 192,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 152,
+    "setting": "max effort, ARC Prize verified semi-private"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "reasoning_knowledge",
+    "page": 20,
+    "setting": "120k thinking, high effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|arc agi 2",
+  "kind": "capability",
+  "names": [
+   "ARC-AGI-2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "reasoning_knowledge",
+    "page": 196,
+    "setting": "max effort, ARC Prize verified"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "reasoning_knowledge",
+    "page": 192,
+    "setting": "max thinking"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 153,
+    "setting": "max effort"
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": "ARC Prize Verified"
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": "ARC Prize Verified"
+   }
+  ]
+ },
+ {
+  "key": "capability|arc agi 2 verified",
+  "kind": "capability",
+  "names": [
+   "ARC-AGI-2 (Verified)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 28,
+    "setting": "64k thinking, ARC Prize private set"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "reasoning_knowledge",
+    "page": 18,
+    "setting": "120k thinking"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "reasoning_knowledge",
+    "page": 15,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|arc agi 3",
+  "kind": "capability",
+  "names": [
+   "ARC-AGI-3"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 153,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|arena hard v2",
+  "kind": "capability",
+  "names": [
+   "Arena-Hard v2"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3guard-tech-report",
+    "category": "instruction_following",
+    "page": 12,
+    "setting": "Qwen3-4B-SafeRL (Hybrid reward), win rate vs GPT-4.1; derived model, not the guard"
+   }
+  ]
+ },
+ {
+  "key": "capability|arena hard v2 winrate",
+  "kind": "capability",
+  "names": [
+   "Arena-Hard v2 (winrate)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "instruction_following",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|artificial analysis intelligence index",
+  "kind": "capability",
+  "names": [
+   "Artificial Analysis Intelligence Index"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|artificial analysis intelligence index v4 0",
+  "kind": "capability",
+  "names": [
+   "Artificial Analysis Intelligence Index v4.0"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "other",
+    "page": 3,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|artificial analysis intelligence index v4 1",
+  "kind": "capability",
+  "names": [
+   "Artificial Analysis Intelligence Index v4.1"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "other",
+    "page": 32,
+    "setting": "third-party, #4/580"
+   }
+  ]
+ },
+ {
+  "key": "capability|arxivmath",
+  "kind": "capability",
+  "names": [
+   "ArXivMath",
+   "ArxivMath"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "math",
+    "page": 251,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "math",
+    "page": 199,
+    "setting": "extended thinking; March-April 2026 problems"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "math",
+    "page": 181,
+    "setting": "max effort, 4 attempts per problem"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "math",
+    "page": 116,
+    "setting": "max effort, 4 attempts"
+   }
+  ]
+ },
+ {
+  "key": "capability|arxivmath april may 2026",
+  "kind": "capability",
+  "names": [
+   "ArxivMath (April-May 2026)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "math",
+    "page": 120,
+    "setting": "avg of 4 attempts"
+   }
+  ]
+ },
+ {
+  "key": "capability|arxivmath june 2026",
+  "kind": "capability",
+  "names": [
+   "ArXivMath (June 2026)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "math",
+    "page": 174,
+    "setting": "Mythos 5.1, max effort, 4 runs"
+   }
+  ]
+ },
+ {
+  "key": "capability|audio multichallenge",
+  "kind": "capability",
+  "names": [
+   "Audio MultiChallenge"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|automation bench pass 1",
+  "kind": "capability",
+  "names": [
+   "Automation-Bench (Pass@1)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|automationbench",
+  "kind": "capability",
+  "names": [
+   "AutomationBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "agentic_tool_use",
+    "page": 195,
+    "setting": "max effort, private held-out set"
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "agentic_tool_use",
+    "page": 195,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 212,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 152,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 137,
+    "setting": "max effort, default fallbacks"
+   }
+  ]
+ },
+ {
+  "key": "capability|automationbench v1 0 6",
+  "kind": "capability",
+  "names": [
+   "AutomationBench v1.0.6"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|avut",
+  "kind": "capability",
+  "names": [
+   "AVUT"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 13,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|babyvision",
+  "kind": "capability",
+  "names": [
+   "BabyVision"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "without / with Python"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with Python"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "multimodal",
+    "page": 27,
+    "setting": "with Python"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": "with / without code interpreter"
+   }
+  ]
+ },
+ {
+  "key": "capability|bbh",
+  "kind": "capability",
+  "names": [
+   "BBH"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "reasoning_knowledge",
+    "page": 23,
+    "setting": "Qwen3.8-Flash-Next-Base; 3-shot CoT"
+   }
+  ]
+ },
+ {
+  "key": "capability|benchcad vision2code",
+  "kind": "capability",
+  "names": [
+   "BenchCAD Vision2Code"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "multimodal",
+    "page": 186,
+    "setting": "1,000-file subset"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "multimodal",
+    "page": 126,
+    "setting": "1,000-file subset"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "multimodal",
+    "page": 203,
+    "setting": "1,000-file subset"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "multimodal",
+    "page": 128,
+    "setting": "1,000-file subset"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl irrelevance",
+  "kind": "capability",
+  "names": [
+   "BFCL Irrelevance"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl live multiple",
+  "kind": "capability",
+  "names": [
+   "BFCL Live Multiple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl live parallel",
+  "kind": "capability",
+  "names": [
+   "BFCL Live Parallel"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl live parallel multiple",
+  "kind": "capability",
+  "names": [
+   "BFCL Live Parallel Multiple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl live simple",
+  "kind": "capability",
+  "names": [
+   "BFCL Live Simple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl multiple",
+  "kind": "capability",
+  "names": [
+   "BFCL Multiple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl parallel",
+  "kind": "capability",
+  "names": [
+   "BFCL Parallel"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl parallel multiple",
+  "kind": "capability",
+  "names": [
+   "BFCL Parallel Multiple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl relevance",
+  "kind": "capability",
+  "names": [
+   "BFCL Relevance"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl simple",
+  "kind": "capability",
+  "names": [
+   "BFCL Simple"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/functiongemma-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": "0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl v3",
+  "kind": "capability",
+  "names": [
+   "BFCL-v3"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "agentic_tool_use",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|bfcl v4",
+  "kind": "capability",
+  "names": [
+   "BFCL-V4"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 10,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|big bench extra hard",
+  "kind": "capability",
+  "names": [
+   "BIG-Bench Extra Hard"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/diffusiongemma-model-card",
+    "category": "reasoning_knowledge",
+    "page": 3,
+    "setting": "DiffusionGemma 26B A4B, EB sampler"
+   },
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": "Gemma 4 31B"
+   }
+  ]
+ },
+ {
+  "key": "capability|biochemistry knowledge reward 4",
+  "kind": "capability",
+  "names": [
+   "Biochemistry knowledge (reward@4)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 26,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|biomysterybench",
+  "kind": "capability",
+  "names": [
+   "BioMysteryBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "other",
+    "page": 251,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|biomysterybench human difficult",
+  "kind": "capability",
+  "names": [
+   "BioMysteryBench (human difficult)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|biomysterybench human solvable",
+  "kind": "capability",
+  "names": [
+   "BioMysteryBench (Human Solvable)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "other",
+    "page": 202,
+    "setting": "Mythos 5.1"
+   }
+  ]
+ },
+ {
+  "key": "capability|biomysterybench human solvable human difficult",
+  "kind": "capability",
+  "names": [
+   "BioMysteryBench (Human Solvable / Human Difficult)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "other",
+    "page": 21,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|biomysterybench life sciences",
+  "kind": "capability",
+  "names": [
+   "BioMysteryBench (life sciences)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "other",
+    "page": 45,
+    "setting": "surpasses human expert baseline"
+   }
+  ]
+ },
+ {
+  "key": "capability|bird sql",
+  "kind": "capability",
+  "names": [
+   "BIRD-SQL"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|blink",
+  "kind": "capability",
+  "names": [
+   "BLINK"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|blueprint bench 2",
+  "kind": "capability",
+  "names": [
+   "Blueprint-Bench 2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "multimodal",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Normalized score"
+   }
+  ]
+ },
+ {
+  "key": "capability|browsecomp",
+  "kind": "capability",
+  "names": [
+   "BrowseComp"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 251,
+    "setting": "max effort, 10M-token limit with compaction"
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "agentic_tool_use",
+    "page": 193,
+    "setting": "max effort, 3M token limit with compaction"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "agentic_tool_use",
+    "page": 198,
+    "setting": "thinking off, max effort, 10M token limit"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "agentic_tool_use",
+    "page": 194,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 44,
+    "setting": "no thinking, up to 10M tokens"
+   }
+  ]
+ },
+ {
+  "key": "capability|browsecomp multi agent",
+  "kind": "capability",
+  "names": [
+   "BrowseComp (multi-agent)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 40,
+    "setting": "multi-agent configuration"
+   }
+  ]
+ },
+ {
+  "key": "capability|browsecomp plus multi agent search opus orchestrator haiku subagents",
+  "kind": "capability",
+  "names": [
+   "BrowseComp-Plus multi-agent search (Opus orchestrator + Haiku subagents)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 24,
+    "setting": "vs 74.8% single-agent"
+   }
+  ]
+ },
+ {
+  "key": "capability|browsecomp vl",
+  "kind": "capability",
+  "names": [
+   "BrowseComp-VL"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "agentic_tool_use",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|browsecomp zh",
+  "kind": "capability",
+  "names": [
+   "BrowseComp-ZH",
+   "BrowseComp-zh"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-4.7-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 23,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "agentic_tool_use",
+    "page": 7,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|c eval",
+  "kind": "capability",
+  "names": [
+   "C-Eval"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 10,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|capture the flag internal",
+  "kind": "capability",
+  "names": [
+   "Capture the Flag (Internal)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 23,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|capture the flag internal 63 challenges",
+  "kind": "capability",
+  "names": [
+   "Capture the Flag (Internal, 63 challenges)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 48,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 49,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|capture the flag professional",
+  "kind": "capability",
+  "names": [
+   "Capture the Flag (Professional)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 36,
+    "setting": "pass@12"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 backend",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Backend"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal, 85 tasks"
+   },
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "coding",
+    "page": 11,
+    "setting": "Claude Code framework"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 chained tasks",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Chained Tasks"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 frontend",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Frontend"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "coding",
+    "page": 11,
+    "setting": "Claude Code framework"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 frontend html",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Frontend HTML"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal; Agent-as-a-Judge"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 frontend react",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Frontend React"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 frontend vue",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Frontend Vue"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc bench v2 repo exploration",
+  "kind": "capability",
+  "names": [
+   "CC-Bench-V2 Repo Exploration"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5-tech-report",
+    "category": "coding",
+    "page": 25,
+    "setting": "internal"
+   },
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "coding",
+    "page": 11,
+    "setting": "Claude Code framework"
+   }
+  ]
+ },
+ {
+  "key": "capability|cc ocr",
+  "kind": "capability",
+  "names": [
+   "CC-OCR"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|cfeval",
+  "kind": "capability",
+  "names": [
+   "CFEval"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "coding",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|character editing elo",
+  "kind": "capability",
+  "names": [
+   "Character Editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|character editing human eval elo",
+  "kind": "capability",
+  "names": [
+   "Character Editing (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|chart editing human eval elo",
+  "kind": "capability",
+  "names": [
+   "Chart editing (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|chartmimic",
+  "kind": "capability",
+  "names": [
+   "ChartMimic"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|chartmuseum",
+  "kind": "capability",
+  "names": [
+   "ChartMuseum"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "multimodal",
+    "page": 128,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|chartography",
+  "kind": "capability",
+  "names": [
+   "Chartography"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "multimodal",
+    "page": 185,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "multimodal",
+    "page": 124,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "multimodal",
+    "page": 200,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "multimodal",
+    "page": 174,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "multimodal",
+    "page": 125,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "multimodal",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|chartqa test",
+  "kind": "capability",
+  "names": [
+   "ChartQA (test)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|chartqapro",
+  "kind": "capability",
+  "names": [
+   "ChartQAPro"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "multimodal",
+    "page": 194,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|charxiv reasoning",
+  "kind": "capability",
+  "names": [
+   "CharXiv Reasoning"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "multimodal",
+    "page": 251,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "multimodal",
+    "page": 197,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "multimodal",
+    "page": 36,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "multimodal",
+    "page": 204,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "multimodal",
+    "page": 219,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "multimodal",
+    "page": 36,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|charxiv rq",
+  "kind": "capability",
+  "names": [
+   "CharXiv (RQ)",
+   "CharXiv(RQ)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "without / with Python"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "multimodal",
+    "page": null,
+    "setting": "without / with Python"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "multimodal",
+    "page": 27,
+    "setting": "without / with Python"
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|claw eval",
+  "kind": "capability",
+  "names": [
+   "Claw-Eval"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "v1.1"
+   }
+  ]
+ },
+ {
+  "key": "capability|claw eval avg",
+  "kind": "capability",
+  "names": [
+   "Claw-Eval Avg"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|claw eval pass 3",
+  "kind": "capability",
+  "names": [
+   "Claw-Eval Pass^3"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|claweval",
+  "kind": "capability",
+  "names": [
+   "ClawEval"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "agentic_tool_use",
+    "page": 11,
+    "setting": "Pass^3 / Pass@3"
+   }
+  ]
+ },
+ {
+  "key": "capability|claweval mm",
+  "kind": "capability",
+  "names": [
+   "ClawEval-MM"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 10,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|cobench v2 internal root cause diagnosis on 449 real anthropic r d problems",
+  "kind": "capability",
+  "names": [
+   "CoBench v2 (internal root-cause diagnosis on 449 real Anthropic R&D problems)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/anthropic-risk-report-aug-2026",
+    "category": "other",
+    "page": 100,
+    "setting": "300k token budget; 900k budget adds ~3 points for Mythos 5"
+   }
+  ]
+ },
+ {
+  "key": "capability|code arena",
+  "kind": "capability",
+  "names": [
+   "Code Arena"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "coding",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|codeforces",
+  "kind": "capability",
+  "names": [
+   "Codeforces"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/diffusiongemma-model-card",
+    "category": "coding",
+    "page": 3,
+    "setting": "DiffusionGemma 26B A4B, EB sampler"
+   },
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "coding",
+    "page": 5,
+    "setting": "Gemma 4 31B"
+   },
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 12,
+    "setting": "rating"
+   }
+  ]
+ },
+ {
+  "key": "capability|corpfin v2",
+  "kind": "capability",
+  "names": [
+   "CorpFin v2"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "Vals AI"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": "Vals AI"
+   }
+  ]
+ },
+ {
+  "key": "capability|countbench",
+  "kind": "capability",
+  "names": [
+   "CountBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|covost",
+  "kind": "capability",
+  "names": [
+   "CoVoST"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "multimodal",
+    "page": 6,
+    "setting": "Gemma 4 12B Unified, excl. Chinese"
+   }
+  ]
+ },
+ {
+  "key": "capability|coworkbench",
+  "kind": "capability",
+  "names": [
+   "CoWorkBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column; in-house"
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "in-house"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "agentic_tool_use",
+    "page": 9,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|creative editing elo",
+  "kind": "capability",
+  "names": [
+   "Creative editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   }
+  ]
+ },
+ {
+  "key": "capability|creative writing v3",
+  "kind": "capability",
+  "names": [
+   "Creative Writing v3"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "instruction_following",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|creddata corrected",
+  "kind": "capability",
+  "names": [
+   "CredData (corrected)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/openai-privacy-filter-model-card",
+    "category": "other",
+    "page": 14,
+    "setting": "secret label"
+   }
+  ]
+ },
+ {
+  "key": "capability|critpt",
+  "kind": "capability",
+  "names": [
+   "CritPt"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 251,
+    "setting": null
+   },
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": "cited from Artificial Analysis"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 27,
+    "setting": "cited from Artificial Analysis"
+   }
+  ]
+ },
+ {
+  "key": "capability|cruxeval",
+  "kind": "capability",
+  "names": [
+   "CRUXEval"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|cursorbench 3 2 0",
+  "kind": "capability",
+  "names": [
+   "CursorBench 3.2.0"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 172,
+    "setting": "max effort, measured by Cursor"
+   }
+  ]
+ },
+ {
+  "key": "capability|cursorbench 4 0",
+  "kind": "capability",
+  "names": [
+   "CursorBench 4.0"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 179,
+    "setting": "max effort, measured by Cursor"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 115,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|cve bench",
+  "kind": "capability",
+  "names": [
+   "CVE-Bench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other",
+    "page": 15,
+    "setting": "pass@1 over 3 rollouts, blind zero-day, 34/40 challenges"
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 36,
+    "setting": "pass@1"
+   }
+  ]
+ },
+ {
+  "key": "capability|cwe bench v1",
+  "kind": "capability",
+  "names": [
+   "CWE-Bench v1",
+   "CWE-bench v1"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "other",
+    "page": 6,
+    "setting": "Cybersecurity"
+   },
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "coding",
+    "page": 217,
+    "setting": "4 trials per task, high reasoning effort, Antigravity harness; tied for first"
+   }
+  ]
+ },
+ {
+  "key": "capability|cybench",
+  "kind": "capability",
+  "names": [
+   "Cybench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "other",
+    "page": 49,
+    "setting": "35-challenge subset, 10 trials each"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "other",
+    "page": 49,
+    "setting": "35-challenge subset, 10 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|cyber range",
+  "kind": "capability",
+  "names": [
+   "Cyber Range"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "other",
+    "page": 19,
+    "setting": "pass/fail over 16 trials, xhigh reasoning"
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 27,
+    "setting": "pass/fail over 16 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|cyber range combined pass rate",
+  "kind": "capability",
+  "names": [
+   "Cyber Range combined pass rate"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "other",
+    "page": 16,
+    "setting": "pass over 16 trials, 11 scenarios"
+   },
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other",
+    "page": 17,
+    "setting": "15 scenarios, pass over 16 trials"
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 25,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 33,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|cybergym",
+  "kind": "capability",
+  "names": [
+   "CyberGym"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "other",
+    "page": 50,
+    "setting": "pass@1 over 1,507 tasks"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "coding",
+    "page": 30,
+    "setting": "pass@1, 1,505 tasks, avg 5 replicas"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "coding",
+    "page": 30,
+    "setting": "pass@1, 1,507 tasks"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other",
+    "page": 51,
+    "setting": "pass@1, 1,507 tasks"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "coding",
+    "page": 29,
+    "setting": "pass@1"
+   },
+   {
+    "doc": "glm/glm-5-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "Claude Code 2.1.18, Pass@1 over 1,507 tasks"
+   }
+  ]
+ },
+ {
+  "key": "capability|cyscenariobench",
+  "kind": "capability",
+  "names": [
+   "CyScenarioBench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-codex-system-card",
+    "category": "other",
+    "page": 19,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 26,
+    "setting": "Irregular"
+   },
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 34,
+    "setting": "Irregular"
+   }
+  ]
+ },
+ {
+  "key": "capability|cyscenariobench irregular",
+  "kind": "capability",
+  "names": [
+   "CyScenarioBench (Irregular)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-2-codex-system-card-addendum",
+    "category": "other",
+    "page": 17,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 98,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|cyscenariobench irregular end to end challenges",
+  "kind": "capability",
+  "names": [
+   "CyScenarioBench (Irregular, end-to-end challenges)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other",
+    "page": 37,
+    "setting": "unmitigated Model C, ReACT agent harness; vs 41.7% for Gemini 3.8 Flash Cyber; saturated"
+   }
+  ]
+ },
+ {
+  "key": "capability|dailyomni",
+  "kind": "capability",
+  "names": [
+   "DailyOmni"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 13,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 12,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|deep research bench",
+  "kind": "capability",
+  "names": [
+   "Deep Research Bench"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 29,
+    "setting": "in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|deepplanning",
+  "kind": "capability",
+  "names": [
+   "DeepPlanning"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|deepsearchqa",
+  "kind": "capability",
+  "names": [
+   "DeepSearchQA"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-6-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|deepsearchqa draco",
+  "kind": "capability",
+  "names": [
+   "DeepSearchQA / DRACO"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "agentic_tool_use",
+    "page": 201,
+    "setting": "adaptive thinking, max effort, 1M tokens"
+   }
+  ]
+ },
+ {
+  "key": "capability|deepsearchqa multi agent",
+  "kind": "capability",
+  "names": [
+   "DeepSearchQA (multi-agent)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 44,
+    "setting": "single-agent best 91.3%"
+   }
+  ]
+ },
+ {
+  "key": "capability|deepswe",
+  "kind": "capability",
+  "names": [
+   "DeepSWE"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "mini-swe-agent, no internet"
+   }
+  ]
+ },
+ {
+  "key": "capability|deepswe 1 1",
+  "kind": "capability",
+  "names": [
+   "DeepSWE 1.1"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "coding",
+    "page": null,
+    "setting": "best of Claude Code / mini-SWE-agent"
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "coding",
+    "page": 9,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|deepswe v1 1",
+  "kind": "capability",
+  "names": [
+   "DeepSWE v1.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 168,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 175,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "coding",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 110,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "coding",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "coding",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|deepswe v13",
+  "kind": "capability",
+  "names": [
+   "DeepSWE v13"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "coding",
+    "page": 4,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|design2code",
+  "kind": "capability",
+  "names": [
+   "Design2Code"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|dna sequence design for tf binding",
+  "kind": "capability",
+  "names": [
+   "DNA sequence design for TF binding"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 28,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|docvqa test",
+  "kind": "capability",
+  "names": [
+   "DocVQA (test)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   }
+  ]
+ },
+ {
+  "key": "capability|doodle editing elo",
+  "kind": "capability",
+  "names": [
+   "Doodle Editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|doodle editing human eval elo",
+  "kind": "capability",
+  "names": [
+   "Doodle editing (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|draco",
+  "kind": "capability",
+  "names": [
+   "DRACO"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "agentic_tool_use",
+    "page": 207,
+    "setting": "max effort, 1M tokens"
+   }
+  ]
+ },
+ {
+  "key": "capability|dynamath",
+  "kind": "capability",
+  "names": [
+   "DynaMath"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|embspatialbench",
+  "kind": "capability",
+  "names": [
+   "EmbSpatialBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|erqa",
+  "kind": "capability",
+  "names": [
+   "ERQA"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-flash-next",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 10,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|evalplus",
+  "kind": "capability",
+  "names": [
+   "EvalPlus"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 12,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "coding",
+    "page": 23,
+    "setting": "Qwen3.8-Flash-Next-Base; 0-shot"
+   }
+  ]
+ },
+ {
+  "key": "capability|exploitbench",
+  "kind": "capability",
+  "names": [
+   "ExploitBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other",
+    "page": 50,
+    "setting": "no safeguards, 300 turns, 3 trials"
+   },
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "coding",
+    "page": 214,
+    "setting": "autonudge, 300-turn limit, best-of-three union, internal Antigravity harness"
+   },
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "coverage over 41 tasks x 3 revisions"
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "other",
+    "page": 43,
+    "setting": "max reasoning; possible contamination"
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 90,
+    "setting": "even at lowest reasoning effort; possible contamination"
+   },
+   {
+    "doc": "openai/gpt-6-sol-luna-october-2026-update",
+    "category": "other",
+    "page": 22,
+    "setting": "max reasoning; possible contamination"
+   }
+  ]
+ },
+ {
+  "key": "capability|exploitbench internal port june august 2026",
+  "kind": "capability",
+  "names": [
+   "ExploitBench - Internal Port (June-August 2026)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "other",
+    "page": 43,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|exploitgym",
+  "kind": "capability",
+  "names": [
+   "ExploitGym"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "2h / 6h budgets, 869 tasks"
+   },
+   {
+    "doc": "openai/gpt-6-1-sol-system-card-addendum",
+    "category": "other",
+    "page": 45,
+    "setting": "intended-vulnerability success per attempt"
+   }
+  ]
+ },
+ {
+  "key": "capability|facts",
+  "kind": "capability",
+  "names": [
+   "FACTS"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "listed as 'Facts'"
+   }
+  ]
+ },
+ {
+  "key": "capability|facts benchmark suite",
+  "kind": "capability",
+  "names": [
+   "FACTS Benchmark Suite"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "reasoning_knowledge",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "reasoning_knowledge",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|facts grounding",
+  "kind": "capability",
+  "names": [
+   "FACTS Grounding"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "long_context",
+    "page": 193,
+    "setting": "vs 64.7% Gemini 3.1 Pro"
+   }
+  ]
+ },
+ {
+  "key": "capability|factuality edu human eval elo",
+  "kind": "capability",
+  "names": [
+   "Factuality - Edu (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|faithfulness 1 hallucination rate",
+  "kind": "capability",
+  "names": [
+   "Faithfulness (1 - hallucination rate)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "other",
+    "page": 29,
+    "setting": "in-house"
+   }
+  ]
+ },
+ {
+  "key": "capability|faithjudge 1 hallucination",
+  "kind": "capability",
+  "names": [
+   "FaithJudge (1 - hallucination)"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-linear-tech-report",
+    "category": "other",
+    "page": 28,
+    "setting": "Kimi-Linear-Instruct @5.7T (released)"
+   }
+  ]
+ },
+ {
+  "key": "capability|finance agent",
+  "kind": "capability",
+  "names": [
+   "Finance Agent"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "other",
+    "page": 192,
+    "setting": "Vals AI, adaptive thinking, high effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|finance agent v2",
+  "kind": "capability",
+  "names": [
+   "Finance Agent v2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other",
+    "page": 195,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "Vals AI"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": "Vals AI"
+   }
+  ]
+ },
+ {
+  "key": "capability|finance agent vals ai",
+  "kind": "capability",
+  "names": [
+   "Finance Agent (Vals AI)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 26,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "agentic_tool_use",
+    "page": 24,
+    "setting": "max thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|financeagent",
+  "kind": "capability",
+  "names": [
+   "FinanceAgent"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 30,
+    "setting": "64k thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|finsearchcomp t2 t3",
+  "kind": "capability",
+  "names": [
+   "FinSearchComp T2&T3"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-5-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-5-tech-report",
+    "category": "agentic_tool_use",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|finsearchcomp t3",
+  "kind": "capability",
+  "names": [
+   "FinSearchComp-T3"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "agentic_tool_use",
+    "page": 7,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|flame vlm code",
+  "kind": "capability",
+  "names": [
+   "Flame-VLM-Code"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5v-turbo-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|fleurs",
+  "kind": "capability",
+  "names": [
+   "FLEURS"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemma-4-model-card",
+    "category": "multimodal",
+    "page": 6,
+    "setting": "Gemma 4 12B Unified, excl. Chinese, lower is better"
+   }
+  ]
+ },
+ {
+  "key": "capability|fleurs asr top60 wer lower better",
+  "kind": "capability",
+  "names": [
+   "Fleurs ASR top60 (WER, lower better)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.5-Omni-Plus"
+   }
+  ]
+ },
+ {
+  "key": "capability|fleurs asr wer 60 langs",
+  "kind": "capability",
+  "names": [
+   "FLEURS-ASR (WER, 60 langs)"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|fleurs s2tt",
+  "kind": "capability",
+  "names": [
+   "FLEURS-S2TT"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-omni-tech-report",
+    "category": "multimodal",
+    "page": 11,
+    "setting": "Qwen3.8-Omni-Flash"
+   }
+  ]
+ },
+ {
+  "key": "capability|frames",
+  "kind": "capability",
+  "names": [
+   "Frames"
+  ],
+  "occ": [
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "agentic_tool_use",
+    "page": 7,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontierbench v0 1",
+  "kind": "capability",
+  "names": [
+   "FrontierBench v0.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "coding",
+    "page": 152,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercode 1 1 extended",
+  "kind": "capability",
+  "names": [
+   "FrontierCode 1.1 Extended"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 169,
+    "setting": "medium effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercode 1 1 main",
+  "kind": "capability",
+  "names": [
+   "FrontierCode 1.1 (Main)",
+   "FrontierCode 1.1 Main"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 169,
+    "setting": "medium effort"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 113,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "coding",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "coding",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercode diamond",
+  "kind": "capability",
+  "names": [
+   "FrontierCode (Diamond)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "coding",
+    "page": 252,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercode v1",
+  "kind": "capability",
+  "names": [
+   "FrontierCode v1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "coding",
+    "page": 115,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercode v1 1 main",
+  "kind": "capability",
+  "names": [
+   "FrontierCode v1.1 (Main)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 176,
+    "setting": "best reasoning effort"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 111,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|frontiercyber irregular",
+  "kind": "capability",
+  "names": [
+   "FrontierCyber (Irregular)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 54,
+    "setting": "Irregular agent harness"
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 55,
+    "setting": "Irregular agent harness"
+   },
+   {
+    "doc": "openai/gpt-6-astra-system-card",
+    "category": "other",
+    "page": 98,
+    "setting": "Irregular sandbox"
+   }
+  ]
+ },
+ {
+  "key": "capability|frontierswe",
+  "kind": "capability",
+  "names": [
+   "FrontierSWE"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-5.2-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "run by Proximal"
+   },
+   {
+    "doc": "glm/glm-5.3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "run by Proximal"
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "coding",
+    "page": null,
+    "setting": "dominance, recomputed"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "coding",
+    "page": 27,
+    "setting": "dominance, recomputed"
+   },
+   {
+    "doc": "qwen/qwen3.8-2.4t-a95b",
+    "category": "coding",
+    "page": null,
+    "setting": "reported as 'Qwen3.8-Max' column"
+   }
+  ]
+ },
+ {
+  "key": "capability|frontierswe v2",
+  "kind": "capability",
+  "names": [
+   "FrontierSWE v2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "coding",
+    "page": 170,
+    "setting": "Proximal harness, max effort, 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "coding",
+    "page": 117,
+    "setting": "max effort, 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "coding",
+    "page": 179,
+    "setting": "Proximal harness"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "coding",
+    "page": 114,
+    "setting": "Proximal harness"
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "coding",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|fullstackbench en",
+  "kind": "capability",
+  "names": [
+   "FullStackBench-en"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|fullstackbench zh",
+  "kind": "capability",
+  "names": [
+   "FullStackBench-zh"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "coding",
+    "page": 13,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gdp pdf",
+  "kind": "capability",
+  "names": [
+   "GDP.pdf"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "multimodal",
+    "page": 190,
+    "setting": "mean criteria pass rate"
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "multimodal",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "multimodal",
+    "page": 179,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gdpval aa",
+  "kind": "capability",
+  "names": [
+   "GDPval-AA"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 252,
+    "setting": "as of June 6, 2026"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "other",
+    "page": 24,
+    "setting": "run by Artificial Analysis"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "other",
+    "page": 195,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "other",
+    "page": 15,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-1-pro-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gdpval aa v2",
+  "kind": "capability",
+  "names": [
+   "GDPval-AA v2"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "agentic_tool_use",
+    "page": 167,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 115,
+    "setting": "as of June 17, 2026"
+   },
+   {
+    "doc": "gemini/gemini-3-5-flash-lite-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-6-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gdpval aa v2 1",
+  "kind": "capability",
+  "names": [
+   "GDPval-AA v2.1"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 131,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 174,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 133,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|genai bench overall preference elo",
+  "kind": "capability",
+  "names": [
+   "GenAI-Bench Overall Preference (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Base"
+   }
+  ]
+ },
+ {
+  "key": "capability|genai bench visual quality elo",
+  "kind": "capability",
+  "names": [
+   "GenAI-Bench Visual Quality (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   }
+  ]
+ },
+ {
+  "key": "capability|genebench",
+  "kind": "capability",
+  "names": [
+   "Genebench"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-rosalind-5-5-system-card",
+    "category": "agentic_tool_use",
+    "page": 4,
+    "setting": "pass@1"
+   }
+  ]
+ },
+ {
+  "key": "capability|general editing elo",
+  "kind": "capability",
+  "names": [
+   "General Editing (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking + Text Search + Image Search"
+   },
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   },
+   {
+    "doc": "gemini/nano-banana-2-1-model-card",
+    "category": "multimodal",
+    "page": 5,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|general image editing human eval elo",
+  "kind": "capability",
+  "names": [
+   "General Image Editing (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|general t2i elo",
+  "kind": "capability",
+  "names": [
+   "General T2I (Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-1-flash-lite-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Thinking"
+   }
+  ]
+ },
+ {
+  "key": "capability|general text to image human eval elo",
+  "kind": "capability",
+  "names": [
+   "General Text-to-Image (human eval Elo)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-pro-image-model-card",
+    "category": "multimodal",
+    "page": 4,
+    "setting": "Search On"
+   }
+  ]
+ },
+ {
+  "key": "capability|global mmlu gap to english",
+  "kind": "capability",
+  "names": [
+   "Global MMLU gap to English"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-sonnet-4-6-system-card",
+    "category": "multilingual",
+    "page": 42,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|global mmlu gmmlu",
+  "kind": "capability",
+  "names": [
+   "Global MMLU (GMMLU)"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "multilingual",
+    "page": 300,
+    "setting": "max effort, single trial"
+   }
+  ]
+ },
+ {
+  "key": "capability|global piqa",
+  "kind": "capability",
+  "names": [
+   "Global PIQA"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-flash-model-card",
+    "category": "multilingual",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-3-pro-model-card",
+    "category": "multilingual",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multilingual",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gmmlu",
+  "kind": "capability",
+  "names": [
+   "GMMLU"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "multilingual",
+    "page": 200,
+    "setting": "42 languages"
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "multilingual",
+    "page": 134,
+    "setting": "42 languages"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "multilingual",
+    "page": 214,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "multilingual",
+    "page": 230,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "multilingual",
+    "page": 215,
+    "setting": "42 languages"
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "multilingual",
+    "page": 140,
+    "setting": "42 languages"
+   }
+  ]
+ },
+ {
+  "key": "capability|google re bench grb internal ml r d",
+  "kind": "capability",
+  "names": [
+   "Google RE-Bench (GRB, internal ML R&D)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "agentic_tool_use",
+    "page": 68,
+    "setting": "subset of original tasks; infrastructure timeouts; CCL threshold 90% pass@1"
+   }
+  ]
+ },
+ {
+  "key": "capability|gpqa",
+  "kind": "capability",
+  "names": [
+   "GPQA"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-4.7-flash-hf-model-card",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-coder-next-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 13,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 22,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.5-omni-tech-report",
+    "category": "reasoning_knowledge",
+    "page": 10,
+    "setting": "Qwen3.5-Omni-Plus"
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "reasoning_knowledge",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|gpqa diamond",
+  "kind": "capability",
+  "names": [
+   "GPQA Diamond"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 258,
+    "setting": "avg of 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "reasoning_knowledge",
+    "page": 188,
+    "setting": "adaptive thinking, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-5-system-card",
+    "category": "reasoning_knowledge",
+    "page": 19,
+    "setting": "64k thinking, avg 5 trials"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "reasoning_knowledge",
+    "page": 18,
+    "setting": "avg 5 trials, max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "reasoning_knowledge",
+    "page": 193,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "reasoning_knowledge",
+    "page": 194,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks",
+  "kind": "capability",
+  "names": [
+   "GraphWalks"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "long_context",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks bfs 1m",
+  "kind": "capability",
+  "names": [
+   "GraphWalks BFS 1M"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-opus-4-6-system-card",
+    "category": "long_context",
+    "page": 30,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks bfs 256k",
+  "kind": "capability",
+  "names": [
+   "GraphWalks BFS 256K"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "long_context",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "long_context",
+    "page": 200,
+    "setting": "avg of 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks bfs 256k 1m",
+  "kind": "capability",
+  "names": [
+   "GraphWalks BFS 256K-1M"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-mythos-preview-system-card",
+    "category": "long_context",
+    "page": 189,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-7-system-card",
+    "category": "long_context",
+    "page": 194,
+    "setting": "avg of 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks bfs up to 128k f1",
+  "kind": "capability",
+  "names": [
+   "GraphWalks BFS up to 128k (F1)"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "long_context",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|graphwalks parents 256k",
+  "kind": "capability",
+  "names": [
+   "GraphWalks Parents 256K"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "long_context",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-4-8-system-card",
+    "category": "long_context",
+    "page": 200,
+    "setting": "avg of 5 trials"
+   }
+  ]
+ },
+ {
+  "key": "capability|gsm8k",
+  "kind": "capability",
+  "names": [
+   "GSM8K"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3.8-next-architecture-report",
+    "category": "math",
+    "page": 23,
+    "setting": "Qwen3.8-Flash-Next-Base; 4-shot CoT"
+   }
+  ]
+ },
+ {
+  "key": "capability|hallusionbench",
+  "kind": "capability",
+  "names": [
+   "HallusionBench"
+  ],
+  "occ": [
+   {
+    "doc": "qwen/qwen3-vl-tech-report",
+    "category": "multimodal",
+    "page": 15,
+    "setting": "Qwen3-VL-235B-A22B thinking / instruct; listed under 'Alignment'"
+   },
+   {
+    "doc": "qwen/qwen3.5-397b-a17b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   },
+   {
+    "doc": "qwen/qwen3.6-35b-a3b",
+    "category": "multimodal",
+    "page": null,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|handwritten kie",
+  "kind": "capability",
+  "names": [
+   "Handwritten-KIE"
+  ],
+  "occ": [
+   {
+    "doc": "glm/glm-ocr-tech-report",
+    "category": "multimodal",
+    "page": 7,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|hard negative protein binding prediction",
+  "kind": "capability",
+  "names": [
+   "Hard-negative protein binding prediction"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 27,
+    "setting": "corrected Aug 19 2026"
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 20,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-preview-system-card",
+    "category": "other",
+    "page": 44,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-system-card",
+    "category": "other",
+    "page": 45,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|harvey lab aa",
+  "kind": "capability",
+  "names": [
+   "Harvey LAB-AA",
+   "Harvey Lab-AA"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-7-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k3-hf-model-card",
+    "category": "agentic_tool_use",
+    "page": null,
+    "setting": "criterion pass rate"
+   },
+   {
+    "doc": "kimi/kimi-k3-tech-report",
+    "category": "agentic_tool_use",
+    "page": 27,
+    "setting": "criterion pass rate"
+   }
+  ]
+ },
+ {
+  "key": "capability|harvey s legal agent benchmark",
+  "kind": "capability",
+  "names": [
+   "Harvey's Legal Agent Benchmark"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-3-8-flash-model-card",
+    "category": "agentic_tool_use",
+    "page": 5,
+    "setting": null
+   },
+   {
+    "doc": "gemini/gemini-4-argon-model-card",
+    "category": "agentic_tool_use",
+    "page": 6,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench",
+  "kind": "capability",
+  "names": [
+   "HealthBench"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "other",
+    "page": 198,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "other",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "other",
+    "page": 213,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "other",
+    "page": 188,
+    "setting": null
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-blog",
+    "category": "other",
+    "page": 7,
+    "setting": "no tools"
+   },
+   {
+    "doc": "kimi/kimi-k2-thinking-hf-model-card",
+    "category": "other",
+    "page": null,
+    "setting": "no tools"
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench consensus",
+  "kind": "capability",
+  "names": [
+   "HealthBench Consensus"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "other",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "other",
+    "page": 8,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench hard",
+  "kind": "capability",
+  "names": [
+   "HealthBench Hard"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other",
+    "page": 178,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-2-system-card",
+    "category": "other",
+    "page": 9,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-3-instant-system-card",
+    "category": "other",
+    "page": 4,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-4-thinking-system-card",
+    "category": "other",
+    "page": 10,
+    "setting": null
+   },
+   {
+    "doc": "openai/gpt-5-5-instant-system-card",
+    "category": "other",
+    "page": 8,
+    "setting": "length-adjusted; unadjusted 21.3"
+   },
+   {
+    "doc": "openai/gpt-5-6-august-update",
+    "category": "other",
+    "page": 11,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench hard length adjusted",
+  "kind": "capability",
+  "names": [
+   "HealthBench Hard (length-adjusted)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 12,
+    "setting": null
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench length adjusted",
+  "kind": "capability",
+  "names": [
+   "HealthBench (length-adjusted)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 12,
+    "setting": "unadjusted 58.4"
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench pro",
+  "kind": "capability",
+  "names": [
+   "HealthBench Pro"
+  ],
+  "occ": [
+   {
+    "doc": "gemini/gemini-4-safety-report",
+    "category": "other",
+    "page": 178,
+    "setting": "length-adjusted 56.5 / 61.4"
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench professional",
+  "kind": "capability",
+  "names": [
+   "HealthBench Professional"
+  ],
+  "occ": [
+   {
+    "doc": "anthropic/claude-fable-5-1-mythos-5-1-system-card",
+    "category": "other",
+    "page": 199,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-fable-5-mythos-5-system-card",
+    "category": "other",
+    "page": 252,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-haiku-5-5-system-card",
+    "category": "other",
+    "page": 111,
+    "setting": "max effort"
+   },
+   {
+    "doc": "anthropic/claude-opus-5-5-system-card",
+    "category": "other",
+    "page": 213,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-opus-5-system-card",
+    "category": "other",
+    "page": 152,
+    "setting": null
+   },
+   {
+    "doc": "anthropic/claude-sonnet-5-5-system-card",
+    "category": "other",
+    "page": 138,
+    "setting": "max effort"
+   }
+  ]
+ },
+ {
+  "key": "capability|healthbench professional length adjusted",
+  "kind": "capability",
+  "names": [
+   "HealthBench Professional (length-adjusted)"
+  ],
+  "occ": [
+   {
+    "doc": "openai/gpt-5-5-system-card",
+    "category": "other",
+    "page": 12,
+    "setting": "unadjusted 57.2"
+   }
+  ]
+ }
+]
